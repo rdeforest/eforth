@@ -34,9 +34,6 @@ sub countLines {
   my $name = $fileHandles{$fh};
   $lines{$name} += scalar(my @lines = $fh->getlines());
   print "$name: $lines{$name}\n";
-  if ($lines{$name} > 10) {
-    die "wat";
-  }
 }
 
 sub maybeAddFileWatcher {
