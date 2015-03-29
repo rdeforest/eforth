@@ -1,4 +1,4 @@
-//#!/usr/bin/nodejs
+#!/usr/bin/nodejs
 
 var fs = require('fs');
 var repl = require('repl');
@@ -65,7 +65,7 @@ function followPath(path) {
 }
 
 function makeListener(dir) {
-  return function announceEvent(e, path) {
+  return function (e, path) {
     followPath(dir + "/" + path);
   }
 }
