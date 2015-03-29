@@ -1,0 +1,271 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 115 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             7 new messages
+    *Core-DB-Issues (#8175)              12 new messages
+Last connected Tue Jun 12 08:45:18 2007 PDT from dsl081-175-048.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+< connected: Crag. Total: 116 >
+Message 1108 on *Server-Hackers (#24451):
+Date:     Sun May 27 19:17:32 2007 PDT
+From:     Ko (#113671)
+To:       *Server-Hackers (#24451)
+
+So, um, what happened?
+--------------------------
+Message 1109 on *Server-Hackers (#24451):
+Date:     Mon May 28 11:23:35 2007 PDT
+From:     Rog (#4292)
+To:       *Server-Hackers (#24451)
+
+>  So, um, what happened?
+
+we got hit again by what looks to be the same bug that nailed us in January and April.  I think I've now managed to reproduce it.  More on this story as it develops...
+--------------------------
+Message 1110 on *Server-Hackers (#24451):
+Date:     Tue May 29 05:06:19 2007 PDT
+From:     Rog (#4292)
+To:       *Server-Hackers (#24451)
+Subject:  the bug
+
+>  we got hit again by what looks to be the same bug that nailed us
+>  in January and April.  I think I've now managed to reproduce it.
+>  More on this story as it develops...
+
+Lessons for today:
+(1) If you close the network handle for a given connection,
+    you need to close the server handle, too.
+(2) If you close the server handle for a given connection,
+    you need to close the network handle, too.
+(3) Having more than one server handle in existence
+    for any given player at any given time is Bad
+    (and likewise for network handles and task queues, 
+     but I haven't seen that happening yet).
+
+And then feel free to view the neighborhood of line 1067 of server.c, keeping in mind that call_notifier() goes off and potentially does lots of shit -- in particular if any of #0:user_reconnected/etc are doing notify()s, then we get to look up the server handle for the player and then try to use the network handle therein, at which point we either get lucky and it's the *NEW* server handle that's sitting at the front of the all_shandles list,... or maybe not...
+
+I am going to bed now.
+--------------------------
+Message 1111 on *Server-Hackers (#24451):
+Date:     Tue May 29 08:51:54 2007 PDT
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+Is there a branch that contains some or all of the 1.8.3 improvements (such as backspace) and also supports WAIFs?
+--------------------------
+Message 1112 on *Server-Hackers (#24451):
+Date:     Tue May 29 15:50:20 2007 PDT
+From:     Rog (#4292)
+To:       *Server-Hackers (#24451)
+Subject:  Re: the bug
+
+It occurs to me that there's still a bit of weirdness in the case of a reconnection in which one is changing listeners from OLD_L to NEW_L.
+
+Current state of affairs -- and this has apparently been the behavior since the support for separate listeners was introduced -- is that we get an OLD_L:user_client_disconnected(P) call followed by a NEW_L:user_connected(P) call such that -- here's the kicker -- P stays "connected" the whole time.  That is P is on the connected_players() list, and likewise all of the other connection-related functions (idle_seconds(), connected_seconds(), etc) are returning values as if P were still connected.
+
+Which seems to go against the apparent intent of the code to present the illusion that the player client has broken the OLD_L connection and subsequently connected anew at NEW_L in two separate operations.  It may even be that people have written one or more P:disfunc verbs (which, in LambdaCore, are called by both :user_client_disconnected and :user_disconnected) that expect P to not be connected and will crash and burn otherwise.
+
+Now one *could* regard P remaining connected during :user_client_disconnected as being a feature so that one can recognize reconnections from the inside of the user_client_disconnected hook, however this seems to defeat the purpose of having a separate :user_reconnected hook in the first place.  That is, if you actually care about distinguishing the reconnection cases, you are now having to put that code in two separate places.
+
+So I'm currently inclined to regard this as a bug.  
+
+The fix appears to be a two-line change in server.c to temporarily set the .disconnect_me flag on the player's shandle so as to make the player appear to be logged out for the duration of (the initial pre-suspend run of) the OLD_L:user_client_disconnected() call, after which it gets reset so that the subsequent NEW_L:user_connected call sees a connected player again.  And all this happens *before* run_ready_tasks() returns to the server main_loop, the point where all of the .disconnect_me's actually get disconnected.
+
+Thoughts?
+--------------------------
+Message 1113 on *Server-Hackers (#24451):
+Date:     Tue May 29 16:12:24 2007 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+I keep the WAIF branch in sf CVS up to date from time to time.  Each time I create a WAIF_ROOT_n which is the HEAD from the merge.  So if you do 
+
+        cvs co -kk -r WAIF -j WAIF_ROOT_3 -j HEAD server
+
+You will get the changes made from WAIF_ROOT_3->HEAD on top of WAIF.  The -kk keeps the rcsid expansion from making a zillion useless conflicts.  I just ran this and there are two trivial merges to fix by hand (version.c, and execute.c) and the rest of the conflicts are in the expanded RCS log at the ends of changed files (so th emerge conflicts are actually commented out).
+
+If someone wants to upgrade, post here or email me and I'll update WAIF to match HEAD.
+--------------------------
+Message 1114 on *Server-Hackers (#24451):
+Date:     Tue May 29 21:47:40 2007 PDT
+From:     Puff (#1449)
+To:       *Server-Hackers (#24451)
+
+Just an odd question; in the past the server would bog down and lag
+badly when the number of connected players hit around 200.  I may be
+misremembering it and confusing cause and effect (or maybe just
+misperceiving what happened at the time).  If I'm remembering
+correctly, does that still happen?
+
+Not that we get near 200 that often these days...
+
+Puff
+
+--------------------------
+=> 114
+[used 5 ticks, 0 seconds.]
+Message 854 on *News (#123):
+Date:     Sun Jul  1 00:00:00 2007 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Architecture Review Board currently being held by Kagan (#102427), Profane (#30788), and Legion (#69858).  Nominations for the ballot will be accepted until Sunday, July 15, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for ARB' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 855 on *News (#123):
+Date:     Sun Jul 15 00:00:14 2007 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are two candidates which have been generated for balloting for the ARB election.  Type `@arb-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Sun Jul 29 00:00:14 2007 PDT; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 5083 on *Core-DB-Issues (#8175):
+Date:     Fri Jun  1 08:22:48 2007 PDT
+From:     Nosredna (#2487)
+To:       *Wizard-List (#6428) and *Core-DB-Issues (#8175)
+Subject:  Desire
+
+You know what I want?  I want a way to search a $generic_db for a key that doesn't start the entry.  So, like, something that loops through all the entries looking for a substring.  Grep, if you will.  Yeah, it'll be slow.  But it sorta has to be.  Anyone wanna write it/has already elsemoo?
+--------------------------
+Message 5084 on *Core-DB-Issues (#8175):
+Date:     Fri Jun  1 10:54:15 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> So, like, something that loops through all the entries looking for a substring.  Grep, if you will.
+
+@addfeature #64646
+grep "moo" in $spell
+--------------------------
+Message 5085 on *Core-DB-Issues (#8175):
+Date:     Sun Jun  3 18:57:31 2007 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+
+Um, cool, but how do I get the answer?
+>grep yduj in $registration_db
+grep: generate($registration_db) finished: 0 seconds, 0 suspends, 1 gelements.
+grep: generated 1 gelements, 92 bytes.
+grep: match finished: 0 seconds, 0 suspends.
+
+(This is a contrived example, since I already have "match beginning" but I wanted to not use the address I'm actually looking for.)  And, there are seven entries for "yduj@<various>" in $registration_db, but it only says "1 gelements", so maybe it's not looking hard enough -- ideally I'd find out all of them.
+--Nosredna
+--------------------------
+Message 5086 on *Core-DB-Issues (#8175):
+Date:     Sun Jun  3 19:17:21 2007 PDT
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Registration Db
+
+Wait--isn't the registration db a bad example cause most of the props are -r?  Or did you already copy the fo verbs and wizperm them?
+--------------------------
+Message 5087 on *Core-DB-Issues (#8175):
+Date:     Mon Jun  4 04:38:08 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+My grep can only read publically readable verbs and properties.
+
+It wouldn't be hard to modify the core @grep to look at properties.  Just a couple of design decisions to make: (1) which properties do you look at?  Mine defaults to all properties, including inherited ones, that are non-clear.  (2) how deeply do you look into values that are lists when deciding how to split them up into manageable pieces?  Mine treats a property value that's a list at its top level as multiple "lines", but does not look any deeper than that.
+--------------------------
+Message 5088 on *Core-DB-Issues (#8175):
+Date:     Mon Jun  4 16:51:09 2007 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+
+Doh.  I'll look at the verb and consider copying a wiz version.
+
+The thing about $db's is that they have structure, a key and a value, and the key is complicated.   What I want to do is grep for those keys and values not based on what exactly is in the property but what functionally is in the structured data.
+--------------------------
+Message 5090 on *Core-DB-Issues (#8175):
+Date:     Mon Jun  4 18:16:11 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+OK, looking at $registration_db, one thing we probably need to do first is to rearrange the keys and data that are in each property, because faced with property values like
+
+$registration_db.(" pav") = {"", "", {"pavel@placeware.com", "pavelc@ncc1709.starfleet.int", "pavlov@stpetersburg.edu.ru"}, {{{#2}}, {{#2245, "Reregistered at Sat Apr 4 06:56:68 2263 PST"}}, {{#1849, ""}}}}
+
+it's difficult to search through the correct things.
+
+What types of queries will you be making?  Maybe just doing this:
+
+;; for f in ($registration_db:find_all_keys("")) player:tell(f, " ", toliteral($registration_db:find_exact(f))); endfor
+
+and getting that into a $note will be enough so that the core @grep can find what you want.
+--------------------------
+Message 5091 on *Core-DB-Issues (#8175):
+Date:     Mon Jun  4 18:20:23 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+Well, if the core @grep could look through $note text.
+--------------------------
+Message 5092 on *Core-DB-Issues (#8175):
+Date:     Tue Jul 10 08:09:52 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  changes/additions to $builtin_function_help
+
+#9524 includes help topics for the 1.8.3 versions of crypt(), add_verb(), set_connection_option(), and open_network_connection(), and for the new builtins verb_cache_stats() and log_cache_stats().  All taken verbatim from the programmer's manual.
+--------------------------
+Message 5093 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 11 03:47:52 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  timestamps in mail
+
+$mail_agent:msg_summary_line
+10:    date = player:ctime(args[1])[5..16];
+$mail_agent:to_text
+ 2:  return {"Date:     " + ctime(args[1]), "From:     " + args[2], "To:       " + args[3], @args[4] == " " ? {} | {"Subject:  " + args[4]}, @args[5..$]};
+
+Can "ctime" in $mail_agent:to_text be changed to "player:ctime"?  That way, the timestamps shown by @mail and @read will be consistent.
+--------------------------
+Message 5094 on *Core-DB-Issues (#8175):
+Date:     Fri Jul 13 15:58:48 2007 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: timestamps in mail
+
+added.
+
+p.s. I'm back.  In case you missed me.
+--------------------------
+Message 5095 on *Core-DB-Issues (#8175):
+Date:     Sun Jul 22 17:27:35 2007 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: changes/additions to $builtin_function_help
+
+OK, copied/added these texts to $builtin_function_help.  Thanks.
+--------------------------
+No News (is good news)

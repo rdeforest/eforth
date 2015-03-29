@@ -1,0 +1,1909 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+Last connected Sat Jan 29 18:08:23 2005 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 747657240 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 747657240 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 747657240 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 747657240
+-----
+GENERAL INFORMATION ON $STRING_UTILS[1]
+=======================================
+
+For a complete description of a given verb, do `help $string_utils:verbname'[2]
+
+    Conversion routines:
+
+:char_list    (string)                               => {"a", "b", "c"}
+:to_list      (string)                               => {"a", "foo", "bear"}
+ (see also :explode, below)
+
+:from_list    (list [,sep])                          => "foo1foo2foo3"
+:english_list (str-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+:title_list*c (obj-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+                                                  or => "Foo1, foo2, and foo3"
+
+:[i|d]name[c]_and_number                             => "foo (#123)"
+:[i|d]name[c]_list (obj-list, name-args)             => english list of names
+                                                        in appropriate style
+:[i|d]name[c]_and_number_list(obj-list, name-args)   => same, plus " (#123)"
+:names_of     (obj-list)  => "foo1 (#123)   foo2 (#456)   foo3 (#789)"
+
+:to_value       (string)                             => {1, value}
+                                                  or => {0, error message}
+:prefix_to_value(string)                             => {rest-of-string, value}
+                                                  or => {0, error message}
+:end_expression (string)                             => index of expression
+
+:from_value[_suspended] (value [,quoteflag [,maxlistdepth]])
+                                                     => "{foo1, foo2, foo3}"
+:print[_suspended] (value)                           => "{foo1, foo2, foo3}"
+:print_truncated   (value, length, suffix)           => "{foo1, fo.."
+:print_with_names  (value)                           => "{foo1, foo2 (#123)}"
+
+:english_number(42 [,zero])  => "forty-two"
+:english_ordinal(42)         => "forty-second"
+:ordinal(42)                 => "42nd"
+:group_number(42135 [,sep])  => "42,135"
+:from_seconds (num)          => "an hour" or "3 days" or "15 seconds"
+
+:glob_to_regexp("foo*b?r")   => "^foo.*b.r$"
+:xglob_to_regexp("f*ba[rz]") => "^f.*ba[rz]$"
+
+    Type checking:
+
+:is_numeric   (string) => return true if string is composed entirely of digits
+
+    String Matching:
+
+:match_string(string, pattern, options) => * wildcard matching
+:find_prefix(prefix, string-list)       => list index of element starting
+                                           with prefix
+:match_stringlist(string, string-list)  => index/$ambiguous_match/$failed_match
+:index_delimited(string,target[, case]) => index of delimited string occurrence
+:index_all(string, target[, delimited]) => all occurrences of target in string
+:next_index(str1, str2, prev[, case])   => index, after index `prev'
+
+    Object Matching (see also $command_utils):
+
+:literal_object(string)                        => object match independent
+                                                  of location
+:match        (string, [obj-list, prop-name]+) => matching object
+:match_player (string-list[,me-object])        => list of matching players
+:match_object (string, location)               => default object match
+:match_player_or_object(@string-list)          => matching object or player
+:match_room   (string)                         => matching room object
+
+    Parsing:
+
+:explode (string,char) -- string => list of words delimited by char
+ (see also :to_list, above)
+:words   (string)      -- string => list of words (as with command line parser)
+:word_start (string)   -- string => list of start-end pairs.
+:first_word (string)   -- string => {first word, rest of string} or {}
+
+:parse_command(cmd_line[, player]) -- string => parsed command info
+
+    Pretty printing:
+
+:space         (n/string[,filler])     => n spaces
+:left          (string,width[,filler]) => left justified string in field 
+:right         (string,width[,filler]) => right justified string in field
+:center/re     (string,width[,filler]) => centered string in field
+:columnize/se[_suspended](list,n[,width])
+                                       => list of strings in n columns
+:columnize/se_no_truncate(list,n[,linelen])
+                                       => same, but will not truncate items
+:columnize/se_with_headers(headers, fields) => columnize, plus headers
+
+    Substitutions
+
+:substitute (string, subst_list [,case])  -- general substitutions.
+:substitute_delimited(...)                -- same, but with word boundaries.
+:pronoun_sub (string/list[,who[,thing[,location]]])
+                                          -- pronoun substitutions.
+:pronoun_sub_secure (string[,who[,thing[,location]]],default)
+                                          -- substitute and check for names.
+:pronoun_quote (string/list/subst_list)   -- quoting for pronoun substitutions.
+:regexp_quote(string)                     -- quoting for regexps.
+
+    Miscellaneous string munging:
+
+:trim         (string)       => string with outside whitespace removed.
+:triml        (string)       => string with leading whitespace removed.
+:trimr        (string)       => string with trailing whitespace removed.
+:strip_chars  (string,chars) => string with all chars in `chars' removed.
+:strip_all_but(string,chars) => string with all chars not in `chars' removed.
+:capitalize/se(string)       => string with first letter capitalized.
+:uppercase/lowercase(string) => string with all letters upper or lowercase.
+:reverse      (string)       => string, backwards.
+
+:common(string1, string2)    => length of longest common prefix.
+:is_uppercase (string)       => true iff no lowercase letters in string
+:is_lowercase (string)       => true iff no uppercase letters in string
+:nonblank     (string)       => true iff any non-whitespace characters
+
+:connection_hostname(string) => hostname part of connection identifier.
+
+    Conversions to and from common string formats:
+
+:character_to_ascii(char)    => integer ASCII rep of char
+:character_to_hex_ascii(char) => two-digit hexadecimal string ASCII rep of char
+:ascii_to_character(num)     => character represented in ASCII by num
+:hex_ascii_to_character(hex) => ASCII character represented by two-character hexadecimal string hex
+
+    A few useful properties:
+
+alphabet                    => "abcdefghijklmnopqrstuvwxyz"
+tab                         => a single tab character
+
+=> "\"a\""
+-----
+GENERAL INFORMATION ON $STRING_UTILS[1]
+=======================================
+
+For a complete description of a given verb, do `help $string_utils:verbname'[2]
+
+    Conversion routines:
+
+:char_list    (string)                               => {"a", "b", "c"}
+:to_list      (string)                               => {"a", "foo", "bear"}
+ (see also :explode, below)
+
+:from_list    (list [,sep])                          => "foo1foo2foo3"
+:english_list (str-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+:title_list*c (obj-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+                                                  or => "Foo1, foo2, and foo3"
+
+:[i|d]name[c]_and_number                             => "foo (#123)"
+:[i|d]name[c]_list (obj-list, name-args)             => english list of names
+                                                        in appropriate style
+:[i|d]name[c]_and_number_list(obj-list, name-args)   => same, plus " (#123)"
+:names_of     (obj-list)  => "foo1 (#123)   foo2 (#456)   foo3 (#789)"
+
+:to_value       (string)                             => {1, value}
+                                                  or => {0, error message}
+:prefix_to_value(string)                             => {rest-of-string, value}
+                                                  or => {0, error message}
+:end_expression (string)                             => index of expression
+
+:from_value[_suspended] (value [,quoteflag [,maxlistdepth]])
+                                                     => "{foo1, foo2, foo3}"
+:print[_suspended] (value)                           => "{foo1, foo2, foo3}"
+:print_truncated   (value, length, suffix)           => "{foo1, fo.."
+:print_with_names  (value)                           => "{foo1, foo2 (#123)}"
+
+:english_number(42 [,zero])  => "forty-two"
+:english_ordinal(42)         => "forty-second"
+:ordinal(42)                 => "42nd"
+:group_number(42135 [,sep])  => "42,135"
+:from_seconds (num)          => "an hour" or "3 days" or "15 seconds"
+
+:glob_to_regexp("foo*b?r")   => "^foo.*b.r$"
+:xglob_to_regexp("f*ba[rz]") => "^f.*ba[rz]$"
+
+    Type checking:
+
+:is_numeric   (string) => return true if string is composed entirely of digits
+
+    String Matching:
+
+:match_string(string, pattern, options) => * wildcard matching
+:find_prefix(prefix, string-list)       => list index of element starting
+                                           with prefix
+:match_stringlist(string, string-list)  => index/$ambiguous_match/$failed_match
+:index_delimited(string,target[, case]) => index of delimited string occurrence
+:index_all(string, target[, delimited]) => all occurrences of target in string
+:next_index(str1, str2, prev[, case])   => index, after index `prev'
+
+    Object Matching (see also $command_utils):
+
+:literal_object(string)                        => object match independent
+                                                  of location
+:match        (string, [obj-list, prop-name]+) => matching object
+:match_player (string-list[,me-object])        => list of matching players
+:match_object (string, location)               => default object match
+:match_player_or_object(@string-list)          => matching object or player
+:match_room   (string)                         => matching room object
+
+    Parsing:
+
+:explode (string,char) -- string => list of words delimited by char
+ (see also :to_list, above)
+:words   (string)      -- string => list of words (as with command line parser)
+:word_start (string)   -- string => list of start-end pairs.
+:first_word (string)   -- string => {first word, rest of string} or {}
+
+:parse_command(cmd_line[, player]) -- string => parsed command info
+
+    Pretty printing:
+
+:space         (n/string[,filler])     => n spaces
+:left          (string,width[,filler]) => left justified string in field 
+:right         (string,width[,filler]) => right justified string in field
+:center/re     (string,width[,filler]) => centered string in field
+:columnize/se[_suspended](list,n[,width])
+                                       => list of strings in n columns
+:columnize/se_no_truncate(list,n[,linelen])
+                                       => same, but will not truncate items
+:columnize/se_with_headers(headers, fields) => columnize, plus headers
+
+    Substitutions
+
+:substitute (string, subst_list [,case])  -- general substitutions.
+:substitute_delimited(...)                -- same, but with word boundaries.
+:pronoun_sub (string/list[,who[,thing[,location]]])
+                                          -- pronoun substitutions.
+:pronoun_sub_secure (string[,who[,thing[,location]]],default)
+                                          -- substitute and check for names.
+:pronoun_quote (string/list/subst_list)   -- quoting for pronoun substitutions.
+:regexp_quote(string)                     -- quoting for regexps.
+
+    Miscellaneous string munging:
+
+:trim         (string)       => string with outside whitespace removed.
+:triml        (string)       => string with leading whitespace removed.
+:trimr        (string)       => string with trailing whitespace removed.
+:strip_chars  (string,chars) => string with all chars in `chars' removed.
+:strip_all_but(string,chars) => string with all chars not in `chars' removed.
+:capitalize/se(string)       => string with first letter capitalized.
+:uppercase/lowercase(string) => string with all letters upper or lowercase.
+:reverse      (string)       => string, backwards.
+
+:common(string1, string2)    => length of longest common prefix.
+:is_uppercase (string)       => true iff no lowercase letters in string
+:is_lowercase (string)       => true iff no uppercase letters in string
+:nonblank     (string)       => true iff any non-whitespace characters
+
+:connection_hostname(string) => hostname part of connection identifier.
+
+    Conversions to and from common string formats:
+
+:character_to_ascii(char)    => integer ASCII rep of char
+:character_to_hex_ascii(char) => two-digit hexadecimal string ASCII rep of char
+:ascii_to_character(num)     => character represented in ASCII by num
+:hex_ascii_to_character(hex) => ASCII character represented by two-character hexadecimal string hex
+
+    A few useful properties:
+
+alphabet                    => "abcdefghijklmnopqrstuvwxyz"
+tab                         => a single tab character
+
+=> "{\"a\", #2 (GhostOfTheManor)}"
+-----
+STATEMENTS
+==========
+
+The following kinds of statements exist in the MOO programming language:
+
+Null
+====
+
+        ;
+
+The null statement does nothing.
+
+Expressions
+===========
+
+        expression ;
+
+The expression statement evaluates the expression and then discards the value.
+
+Conditional
+===========
+
+        IF ( expression ) statements ENDIF
+        IF ( expression ) statements ELSE statements ENDIF
+        IF ( expression )
+          statements
+        ELSEIF ( expression )
+          statements
+        ...
+        ELSE
+          statements
+        ENDIF
+
+The conditional statement evaluates each expression in turn and executes the statements associated with the first one to return a true value; the ELSE statements are executed if none of the expressions returns a true value.  There can be any number of ELSEIF clauses and the ELSE part is optional.  See `help truth'[1] for the definition of 'true value'.
+
+List iteration
+==============
+
+        FOR name IN ( expression ) statements ENDFOR
+
+The list iteration statement first evaluates the expression, which must return a list.  It then executes the statements once for each element of that list, each time with the named variable having the value of the corresponding list element.
+
+Numeric iteration
+=================
+
+        FOR name IN [ expression .. expression ] statements ENDFOR
+
+The numeric iteration statement first evaluates the two expressions, both of which must return numbers; call those numbers N1 and N2, respectively.  The statements are then executed once for each integer I such that N1 <= I <= N2, in increasing order; each time, the named variable has the corresponding value of I.
+
+Indefinite iteration
+====================
+
+        WHILE ( expression ) statements ENDWHILE
+
+The indefinite iteration statement repeatedly evaluates the expression and, each time it returns a true value, executes the statements.  The loop stops the first time that the expression returns a false value.  The definitions of 'true' and 'false' values is in `help truth'[2].
+
+Return
+======
+
+        RETURN ;
+        RETURN expression ;
+
+The return statement evalautes the expression, if any, and returns the resulting value (or 0 if there is no expression) to the verb that called the current one.  Execution of the current verb is immediately terminated.
+
+Fork
+====
+
+        FORK ( expression ) statements ENDFORK
+        FORK name ( expression ) statements ENDFORK
+
+The fork statement first executes the expression, which must return a number; call that number N.  It then creates a new MOO task that will, after at least N seconds, execute the statements.  When the new task begins, all variables will have the values they had at the time the FORK statement was executed.  The task executing the FORK statement immediately continues execution.  If a variable name is given after the FORK keyword, then it is assigned the 'queue ID' of the newly-created task.  The value of this variable is visible both to the task executing the fork statement and to the statements in the newly-created task.  See `help tasks'[3] for more information about forked tasks.
+
+-----
+`HELP BREAK' NOT FOUND
+======================
+
+Sorry, but no help is available on `break'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+Line 1:  Unknown built-in function: type
+1 error.
+=> 0
+=> 0
+=> 0
+=> 2
+=> {"stabbed", #829, 1054159383, #887}
+=> #887 (Parlor)
+=> "{\"stabbed\", #829 (Binder), 1054159383, #887 (Parlor)}"
+=> "{\"\", #768 (east), 1055357760, #912 (East Elevator First Floor Stop), #73 (Generic Pronoun_sub Translator), 52, \"dodgy\", #836 (xantha), 1055357821, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"dodgy\", #836 (xantha), 1055357833, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"stabbed\", #829 (Binder), 1055357847, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"you're right, you're always right\"}"
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+=> #7 (generic exit)
+=> "{\"dodgy\", #836 (xantha), 1055357821, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"dodgy\", #836 (xantha), 1055357833, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"stabbed\", #829 (Binder), 1055357847, #878 (The Gingerbread House Foyer), #49 (list utilities), 4, \"you're right, you're always right\", #829 (Binder), 1055358542, #878 (The Gingerbread House Foyer), #49 (list utilities), 0, 0, 0, 0, 116, #57 (Mail Options), 5, \"difficult\", #829 (Binder), 1055439406, #879 (Forest Clearing), 1, \"105\", 116, #57 (Mail Options), 5, \"dodgy\", #836 (xantha), 1055458133, #879 (Forest Clearing), 0, #57 (Mail Options), 5, \"dodgy\", #836 (xantha), 1055458146, #879 (Forest Clearing), 0, {\"dodgy\", #836 (xantha), 1055357833, #878 (The Gingerbread House Foyer)}}"
+-----
+LISTAPPEND()
+============
+
+Syntax:  listinsert (list <list>, <value> [, int <index>])   => list
+         listappend (list <list>, <value> [, int <index>])   => list
+
+These functions return a copy of <list> with <value> added as a new element.  `listinsert()' and `listappend()' add <value> before and after (respectively) the existing element with the given <index>, if provided.
+
+The following three expressions always have the same value:
+
+    listinsert(<list>, <element>, <index>)
+    listappend(<list>, <element>, <index> - 1)
+    {@<list>[1..<index> - 1], <element>, @<list>[<index>..length(<list>)]}
+
+If <index> is not provided, then `listappend()' adds the <value> at the end of the list and `listinsert()' adds it at the beginning; this usage is discouraged, however, since the same intent can be more clearly expressed using the list-construction expression, as shown in the examples below.
+
+    x = {1, 2, 3};
+    listappend(x, 4, 2)   =>   {1, 2, 4, 3}
+    listinsert(x, 4, 2)   =>   {1, 4, 2, 3}
+    listappend(x, 4)      =>   {1, 2, 3, 4}
+    listinsert(x, 4)      =>   {4, 1, 2, 3}
+    {@x, 4}               =>   {1, 2, 3, 4}
+    {4, @x}               =>   {4, 1, 2, 3}
+
+The root class(#1) has 47 kids.
+Login Commands (#10)   Player Last_huh Verbs (#11)   Guest Log (#12)   Limbo (#15)   Generic Help Database (#30)   New Generic Database (#79)   Generic Mail Recipient (#41)   Mail Distribution Center (#42)   generic thing (#5)   Generic Option Package (#60)   Error Generator (#66)   Generic Feature Object (#65)   pronoun substitution (#69)   everything (#139)   all (#103)   generic admin group (#163)   generic event dispatching object (#110)   generic utilities (#146)   generic event handler (#133)   generic gender object (#64)   administration (#170)   server options (#188)   checkpointer (#175)   startup handler (#189)   syslog (#183)   Generic BigList Resident (#75)   http (#87)   generic property farm (#206)   SMTP (#212)   Cord Dispatcher (#223)   MCP 2.1 (#213)   FTP (#229)   link dispatcher tag (#123)   Generic Pronoun_sub Translator (#73)   here (#180)   Tag Root (#91)   Address Root (#109)   name-subbing dummy object (#132)   generic cord stub (#222)   generic MCP 2.1 session (#204)   MCP package registry (#209)   MCP 2.1 parser (#221)   generic source or sink (#196)   generic message dispatch object (#219)   generic listener (#224)   generic daemon service handler (#210)   Score Database (#1183)
+string utilities (#18)   generic utilities (#146)   root class (#1)
+The generic utilities(#146) has 23 kids.
+Generic BigList Utilities (#13)   wizard utilities (#24)   math utilities (#26)   set utilities (#27)   sequence utilities (#32)   gender utilities (#38)   time utilities (#39)   object utilities (#47)   lock utilities (#48)   list utilities (#49)   command utilities (#50)   code utilities (#53)   permissions utilities (#130)   building utilities (#19)   string utilities (#18)   English Utilities (#72)   integration utils (#74)   Name Utilities (#177)   Parsing Utilities (#117)   walking utils (#182)   room matching utilities (#190)   Generic Quota Utils Parent (#88)   Conversion Utilities (#834)
+-----
+GENERAL INFORMATION ON $LIST_UTILS[1]
+=====================================
+
+append            (list,list,..) => result of concatenating the given lists
+flatten           (list of lists)=> list of all non-list elements
+reverse           (list)         => reversed list
+remove_duplicates (list)         => list with all duplicates removed
+compress          (list)         => list with consecutive duplicates removed
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+iassoc       (targ,alist[,i]) => index of same.
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+iassoc_prefix(targ,alist[,i]) => index of same.
+slice             (alist[,i]) => list of i-th elements
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+=> {}
+=> {}
+=> {}
+=> {}
+=> {{1, 2}}
+=> {{1, 0}}
+=> {{1, 0, 0}}
+#49:"slice" this none this
+ 1:  // slice(alist[,index]) returns a list of the index-th elements of the elements of alist, e.g., 
+ 2:  //     slice({{"z",1},{"y",2},{"x",5}},2) => {1,2,5}.
+ 3:  // index defaults to 1 and may also be a nonempty list, e.g., 
+ 4:  //     slice({{"z",1,3},{"y",2,4}},{2,1}) => {{1,"z"},{2,"y"}}
+ 5:  slice = {};
+ 6:  ind = {@args, 1}[2];
+ 7:  if (typeof(ind) == LIST)
+ 8:    for elt in (args[1])
+ 9:      s = {elt[ind[1]]};
+10:      for i in (listdelete(ind, 1))
+11:        s = {@s, elt[i]};
+12:      endfor
+13:      slice = {@slice, s};
+14:    endfor
+15:  else
+16:    for elt in (args[1])
+17:      slice = {@slice, elt[ind]};
+18:    endfor
+19:  endif
+20:  return slice;
+#49:assoc, line 4:  Type mismatch
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+#49:assoc, line 4:  Type mismatch
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+-----
+$LIST_UTILS:ASSOC
+=================
+
+assoc(target,list[,index]) returns the first element of `list' whose own index-th element is target.  Index defaults to 1.
+
+returns {} if no such element is found
+
+=> {}
+#49:"slice" this none this
+ 1:  // slice(alist[,index]) returns a list of the index-th elements of the elements of alist, e.g., 
+ 2:  //     slice({{"z",1},{"y",2},{"x",5}},2) => {1,2,5}.
+ 3:  // index defaults to 1 and may also be a nonempty list, e.g., 
+ 4:  //     slice({{"z",1,3},{"y",2,4}},{2,1}) => {{1,"z"},{2,"y"}}
+ 5:  slice = {};
+ 6:  ind = {@args, 1}[2];
+ 7:  if (typeof(ind) == LIST)
+ 8:    for elt in (args[1])
+ 9:      s = {elt[ind[1]]};
+10:      for i in (listdelete(ind, 1))
+11:        s = {@s, elt[i]};
+12:      endfor
+13:      slice = {@slice, s};
+14:    endfor
+15:  else
+16:    for elt in (args[1])
+17:      slice = {@slice, elt[ind]};
+18:    endfor
+19:  endif
+20:  return slice;
+-----
+GENERAL INFORMATION ON $LIST_UTILS[1]
+=====================================
+
+append            (list,list,..) => result of concatenating the given lists
+flatten           (list of lists)=> list of all non-list elements
+reverse           (list)         => reversed list
+remove_duplicates (list)         => list with all duplicates removed
+compress          (list)         => list with consecutive duplicates removed
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+iassoc       (targ,alist[,i]) => index of same.
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+iassoc_prefix(targ,alist[,i]) => index of same.
+slice             (alist[,i]) => list of i-th elements
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+list utilities (#49) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic utilities (#146).
+   #49:make                     unknown hacker (#35) rxd    this none this
+   #49:range                    unknown hacker (#35) rxd    this none this
+   #49:map_prop*erty            Core-Wizard (#184)   rxd    this none this
+   #49:map_verb                 Core-Wizard (#184)   rx     this none this
+   #49:map_arg                  Core-Wizard (#184)   rxd    this none this
+   #49:map_builtin              Core-Wizard (#184)   rxd    this none this
+   #49:find_insert              unknown hacker (#35) rx     this none this
+   #49:remove_duplicates        unknown hacker (#35) rxd    this none this
+   #49:arrayset                 unknown hacker (#35) rxd    this none this
+   #49:setremove_all            unknown hacker (#35) rxd    this none this
+   #49:append                   unknown hacker (#35) rxd    this none this
+   #49:reverse                  unknown hacker (#35) rxd    this none this
+   #49:_reverse                 unknown hacker (#35) rxd    this none this
+   #49:compress                 unknown hacker (#35) rxd    this none this
+   #49:sort                     unknown hacker (#35) rxd    this none this
+   #49:slice                    unknown hacker (#35) rxd    this none this
+   #49:assoc                    unknown hacker (#35) rxd    this none this
+   #49:iassoc                   unknown hacker (#35) rxd    this none this
+   #49:iassoc_suspended         Core-Wizard (#184)   rxd    this none this
+   #49:assoc_prefix             unknown hacker (#35) rxd    this none this
+   #49:iassoc_prefix            unknown hacker (#35) rxd    this none this
+   #49:iassoc_sorted            unknown hacker (#35) rxd    this none this
+   #49:sort_alist               unknown hacker (#35) rxd    this none this
+   #49:sort_alist_suspended     Core-Wizard (#184)   rxd    this none this
+   #49:randomly_permute         unknown hacker (#35) rxd    this none this
+   #49:passoc                   unknown hacker (#35) rxd    this none this
+   #49:check_type               unknown hacker (#35) rxd    this none this
+   #49:random_permutation       Core-Wizard (#184)   rxd    this none this
+   #49:max_length               unknown hacker (#35) rxd    this none this
+   #49:any_of                   Core-Wizard (#184)   rxd    this none this
+   #49:flatten                  unknown hacker (#35) rxd    this none this
+   #49:grep_l                   Core-Wizard (#184)   rxd    this none this
+   #49:grep_ll                  Core-Wizard (#184)   rxd    this none this
+   #49:slice_suspended          unknown hacker (#35) rxd    this none this
+   #49:sort_suspended           Core-Wizard (#184)   rxd    this none this
+   #49:make_alist               Core-Wizard (#184)   rxd    this none this
+   #49:"longest shortest"       unknown hacker (#35) rxd    this none this
+   #49:count                    unknown hacker (#35) rxd    this none this
+   #49:map_verb_safe            Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Wed Aug 28 13:58:34 2002 PDT by Xeric (#999) (on Waterpoint).
+#49:"assoc" this none this
+ 1:  // assoc(target,list[,index]) returns the first element of `list' whose own index-th element is target.  Index defaults to 1.
+ 2:  // returns {} if no such element is found
+ 3:  {target, lst, ?indx = 1} = args;
+ 4:  for t in (lst)
+ 5:    if (`t[indx] == target ! E_TYPE, E_RANGE')
+ 6:      return t;
+ 7:    endif
+ 8:  endfor
+ 9:  return {};
+You now have ListOfList Utilities with object number #1185 and parent generic utilities (#146).
+The created object is now your current object.
+Verb added [1] (0).
+Verb added [2] (1).
+Verb added [3] (2).
+Verb arguments unchanged.
+generic utilities (#146) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+  Location generic containing object (#145).
+.indef_art               unknown hacker (#35)  r c    "some"
+-------------------------------- finished ---------------------------------
+  ** property not found, "help" **
+-------------------------------- finished ---------------------------------
+-----
+HELP ON THE GENERIC UTILITIES
+=============================
+
+No help found.
+
+You see no "#146:" here.
+;verbs(#146) => {}
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:assign                   GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+-------------------------------- finished ---------------------------------
+Alias set added to verb ListOfList Utilities(#1185):assign
+Verbname is now ListOfList Utilities(#1185):"assign set"
+The Verb Editor
+
+Do a 'look' to get the list of commands, or 'help' for assistance.
+
+Now editing #1185:"assign set" this none this.
+That is not a valid command.
+No changes to throw away.  Editor cleared.
+Current misc options:
+
+-public-email  Your email address is known only to you and administrators
+-expert-user   You will receive normal prompting and usage information
+-brief         You will receive long descriptions upon entering a room.
++page-dwim     The ' command will whisper if the recipient is in the current room.
++third-person  You will see your name instead of `you'.
+-tstamp        Don't time stamp.
+ fstamp        Format string: [ $o:$M $p ]
+               looks like: [ 6:51 am ]
+-public-connectYour total connection time is private.
+That is not a valid command.
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current edit options:
+
+-quiet-insert       Report line numbers on insert or append.
+-eval-subs          Ignore .eval_subs when compiling verbs.
+-local              Use in-MOO text editors.
++local              Ship text to client for local editing.
+Current client options:
+
++edit          Your client can do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
++mcp-edit      Your client can do MCP standard editing.
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:assign ()" name: "MOO verb: #1185:assign ()" type: moo-code content*: "" _data-tag: 122182530743
+#$#: 122182530743
+Last modified Wed Aug 28 13:58:34 2002 PDT by Xeric (#999) (on Waterpoint).
+#49:"assoc" this none this
+ 1:  // assoc(target,list[,index]) returns the first element of `list' whose own index-th element is target.  Index defaults to 1.
+ 2:  // returns {} if no such element is found
+ 3:  {target, lst, ?indx = 1} = args;
+ 4:  for t in (lst)
+ 5:    if (`t[indx] == target ! E_TYPE, E_RANGE')
+ 6:      return t;
+ 7:    endif
+ 8:  endfor
+ 9:  return {};
+0 errors.
+Verb programmed.
+=> #0 (System Object)
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+Syntax error in initial value:  `_' unexpected
+Property added with value #1185.
+=> #1185 (ListOfList Utilities)
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+-------------------------------- finished ---------------------------------
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign set"             GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Thu Mar  2 06:57:56 2006 PST by GhostOfTheManor (#2).
+#1185:"assign set" this none this
+ 1:  // :set(list,key,values[,key_column]) => newlist
+ 2:  {LIST, key, values, ?col = 1} = args;
+ 3:  {meta, data} = LIST;
+ 4:  row = key in data[col];
+ 5:  if (!row)
+ 6:    return this:append(LIST, value);
+ 7:  else
+ 8:    return this:modify(LIST, row, values);
+ 9:  endif
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:assign this none this" name: "MOO verb: #1185:assign this none this" type: moo-code content*: "" _data-tag: 168572794744
+#$#* 168572794744 content: // :set(list,key,values[,key_column]) => newlist
+#$#* 168572794744 content: {LIST, key, values, ?col = 1} = args;
+#$#* 168572794744 content: {meta, data} = LIST;
+#$#* 168572794744 content: row = key in data[col];
+#$#* 168572794744 content: if (!row)
+#$#* 168572794744 content:   return this:append(LIST, value);
+#$#* 168572794744 content: else
+#$#* 168572794744 content:   return this:modify(LIST, row, values);
+#$#* 168572794744 content: endif
+#$#: 168572794744
+0 errors.
+Verb programmed.
+#1185:"lookup" ()
+That verb has not been programmed.
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:lookup ()" name: "MOO verb: #1185:lookup ()" type: moo-code content*: "" _data-tag: 118442321845
+#$#: 118442321845
+0 errors.
+Verb programmed.
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:lookup ()" name: "MOO verb: #1185:lookup ()" type: moo-code content*: "" _data-tag: 133933985746
+#$#* 133933985746 content: // :lookup(lol, key[, key_column]) => {values}
+#$#: 133933985746
+0 errors.
+Verb programmed.
+Last modified Thu Mar  2 07:03:19 2006 PST by GhostOfTheManor (#2).
+#1185:"lookup" ()
+ 1:  // :lookup(lol, key[, key_column]) => {values}
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:assign this none this" name: "MOO verb: #1185:assign this none this" type: moo-code content*: "" _data-tag: 52966334947
+#$#* 52966334947 content: // :set(list,key,values[,key_column]) => newlist
+#$#* 52966334947 content: {lst, key, values, ?col = 1} = args;
+#$#* 52966334947 content: {meta, data} = lst;
+#$#* 52966334947 content: row = key in data[col];
+#$#* 52966334947 content: if (!row)
+#$#* 52966334947 content:   return this:append(lst, value);
+#$#* 52966334947 content: else
+#$#* 52966334947 content:   return this:modify(lst, row, values);
+#$#* 52966334947 content: endif
+#$#: 52966334947
+0 errors.
+Verb programmed.
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:lookup ()" name: "MOO verb: #1185:lookup ()" type: moo-code content*: "" _data-tag: 108180264048
+#$#* 108180264048 content: // :lookup(lol, key[, key_column]) => {values}
+#$#: 108180264048
+0 errors.
+Verb programmed.
+Verb added [4] (3).
+Verb added [5] (4).
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign set"             GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+ #1185:append                   GhostOfTheManor (#2) rxd    this none this
+ #1185:modify                   GhostOfTheManor (#2) rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Thu Mar  2 07:09:28 2006 PST by GhostOfTheManor (#2).
+#1185:"assign set" this none this
+ 1:  // :set(list,values[,key_column]) => newlist
+ 2:  {lst, values, ?col = 1} = args;
+ 3:  key = values[col];
+ 4:  {meta, data} = lst;
+ 5:  row = key in data[col];
+ 6:  if (!row)
+ 7:    return this:append(lst, value);
+ 8:  else
+ 9:    return this:set_indexed(lst, row, values);
+10:  endif
+Verb #1185:modify [5] {this none this} removed.
+Verb added [5] (4).
+-----
+HELP
+====
+
+Syntax:  help
+         help <topic>
+         help index
+
+Print out entries from the online documentation system.  The commands `?' and `information' (usually abbreviated `info') are synonyms for `help'.
+
+The first form prints out a summary table of contents for the entire help system.  
+
+The second form prints out the documentation available on the given topic.  Many help system entries contain references to other entries accessible in this way.  The topic name may be abbreviated; if there is no topic exactly matching the name you give, the help system checks for topics for which the name is a prefix, perhaps with the addition or omission of an initial `@', or perhaps with some confusion beween dashes (-) and underscores (_), e.g., 
+
+      `bui' instead of `building', 
+      `who' instead of `@who', 
+     `@wri' instead of `write',
+  `add_ent' instead of `@add-entrance',
+ `unlock-'  instead of `@unlock_for_open'
+
+If the abbreviation you give is ambiguous, you will be presented with a list of the matching complete topic names.
+
+The `help index'[1] commands prints out a list of indices for the various help databases.  Each index gives a list of topics available on that database.  It is sometimes easier to find the topics you're interested in this way, rather than tracing through the chain of cross references.
+
+For programmers, the help system provides the following additional forms:
+
+  help object:verbname   -- prints any documentation strings that are present
+                            at the beginning of the program for that verb.
+  help $<whatever>_utils -- prints general information about one of the 
+                            $..._utils objects (e.g., $string_utils, 
+                            $list_utils, etc...), which are all libraries 
+                            of generally used verbs.
+  help builtin()         -- prints documentation from the programmers manual
+                            about the named primitive, for example length()
+
+For information about how the help system itself works and about how to associate local help databases with specific rooms or player classes, see `help $help'[2].
+
+-----
+Available Help Indices
+======================
+
+wiz-index[1]
+      Wizard Help Topics
+prog-index[2]
+      Programmer Help Topics
+builtin-index[3]
+      Server Built-in Functions
+core-index[4]
+      Core Utility Help Topics
+jtext-index[5]
+      Jtext Help Topics
+mcp-index[6]
+      MCP help topics
+tkmoo-index[7]
+      tkmoo help topics
+policy-index[8]
+      policy help database
+admin-index[9]
+      administration group help
+edit-index[10]
+      Editor Help Topics
+gen-index[11]
+      General Help Topics
+
+full-index[12]
+      EVERYTHING
+
+-----
+JTEXT HELP TOPICS
+=================
+
+coordinators[1]         dispatchers[2]          jaddress-types[3]
+jaddresses[4]           jtext[5]                jtext-addressing[6]
+jtext-construction[7]   jtext-document[8]       jtext-forms[9]
+jtext-index[10]         jtext-input[11]         jtext-intro[12]
+jtext-output[13]        jtext-timeline[14]      tagged-lists[15]
+targets[16]             
+
+Property added with value "".
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "str:#1185.help" name: "ListOfList Utilities.help" type: string content*: "" _data-tag: 78733399349
+#$#* 78733399349 content: 
+#$#: 78733399349
+Object #2 does not define that verb, but its ancestor #6 does.
+Last modified Thu Sep 18 12:27:14 1997 PDT by Erik (#74) (on JHM).
+#6:"help ?*" any any any
+ 1:  set_task_perms(callers() ? caller_perms() | player);
+ 2:  // ...this code explicitly relies on being !d in several places...
+ 3:  if (index(verb, "?") != 1 || length(verb) <= 1)
+ 4:    what = $string_utils:trimr(argstr);
+ 5:  elseif (argstr)
+ 6:    what = tostr(verb[2..$], " ", $string_utils:trimr(argstr));
+ 7:  else
+ 8:    what = verb[2..length(verb)];
+ 9:  endif
+10:  nstr = "";
+11:  if (match(what, "^[0-9]+$"))
+12:    nstr = what;
+13:  elseif (s = match(what, "%[%([0-9]+%)%]$"))
+14:    nstr = substitute("%1", s);
+15:  endif
+16:  if (nstr)
+17:    n = tonum(nstr);
+18:    if (n >= 1 && n <= (l = length(player.contributed_links)))
+19:      jaddress = player.contributed_links[n];
+20:    else
+21:      player:notify(l ? tostr("Current links range from 1 to ", l, ".") | "There are no help links to follow right now.");
+22:    endif
+23:  else
+24:    // ...find a db that claims to know about `what'...
+25:    dblist = $code_utils:help_db_list();
+26:    result = $code_utils:help_db_search(what, dblist);
+27:    if (result[1] == $failed_help && result[2][1..7] == "failed ")
+28:      // ... note: all of the last-resort stuff...
+29:      // ... is now located on $help:find_topics/get_topic...
+30:      // ... Ew, no, it's not, it means that $help has to go mucking about with player:match_object making our nice database into a huge monstrosity.
+31:      o = this:match_help_object(what);
+32:      if (valid(o))
+33:        result = {$object_help, tostr(o)};
+34:      endif
+35:    endif
+36:    if (player.focus_object != player)
+37:      if (valid(player.focus_object))
+38:        player:notify("[Changing your focus object to yourself.]");
+39:      endif
+40:      player:set_focus_object(player);
+41:    endif
+42:    help = result[1];
+43:    topic = result[2];
+44:    if (typeof(topic) == STR)
+45:      jaddress = $jaddress.resolved_help:from_db_and_topic_and_dblist(help, topic, dblist);
+46:    else
+47:      jaddress = topic[2];
+48:    endif
+49:  endif
+50:  if (jaddress)
+51:    this:receive_document(jaddress, this);
+52:  endif
+53:  return;
+-----
+GENERAL INFORMATION ON $LIST_UTILS[1]
+=====================================
+
+append            (list,list,..) => result of concatenating the given lists
+flatten           (list of lists)=> list of all non-list elements
+reverse           (list)         => reversed list
+remove_duplicates (list)         => list with all duplicates removed
+compress          (list)         => list with consecutive duplicates removed
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+iassoc       (targ,alist[,i]) => index of same.
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+iassoc_prefix(targ,alist[,i]) => index of same.
+slice             (alist[,i]) => list of i-th elements
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+-----
+LIST UTILITIES (#49): BROWSER VIEW
+==================================
+
+append            (list,list,..) => result of concatenating the given lists
+
+flatten           (list of lists)=> list of all non-list elements
+
+reverse           (list)         => reversed list
+
+remove_duplicates (list)         => list with all duplicates removed
+
+compress          (list)         => list with consecutive duplicates removed
+
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+
+iassoc       (targ,alist[,i]) => index of same.
+
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+
+iassoc_prefix(targ,alist[,i]) => index of same.
+
+slice             (alist[,i]) => list of i-th elements
+
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+Attributes
+      readable 
+Owned by
+      hacker (#35)[1]
+Child of
+      generic utilities (#146)[2]
+Location
+      <void> (#-1)[3]
+
+VERBS
+-----
+
+#49:make[4]
+      hacker (#35)[5] rxd this none this
+#49:range[6]
+      hacker (#35)[7] rxd this none this
+#49:map_prop*erty[8]
+      Core-Wizard (#184)[9] rxd this none this
+#49:map_verb[10]
+      Core-Wizard (#184)[11] rx this none this
+#49:map_arg[12]
+      Core-Wizard (#184)[13] rxd this none this
+#49:map_builtin[14]
+      Core-Wizard (#184)[15] rxd this none this
+#49:find_insert[16]
+      hacker (#35)[17] rx this none this
+#49:remove_duplicates[18]
+      hacker (#35)[19] rxd this none this
+#49:arrayset[20]
+      hacker (#35)[21] rxd this none this
+#49:setremove_all[22]
+      hacker (#35)[23] rxd this none this
+#49:append[24]
+      hacker (#35)[25] rxd this none this
+#49:reverse[26]
+      hacker (#35)[27] rxd this none this
+#49:_reverse[28]
+      hacker (#35)[29] rxd this none this
+#49:compress[30]
+      hacker (#35)[31] rxd this none this
+#49:sort[32]
+      hacker (#35)[33] rxd this none this
+#49:slice[34]
+      hacker (#35)[35] rxd this none this
+#49:assoc[36]
+      hacker (#35)[37] rxd this none this
+#49:iassoc[38]
+      hacker (#35)[39] rxd this none this
+#49:iassoc_suspended[40]
+      Core-Wizard (#184)[41] rxd this none this
+#49:assoc_prefix[42]
+      hacker (#35)[43] rxd this none this
+#49:iassoc_prefix[44]
+      hacker (#35)[45] rxd this none this
+#49:iassoc_sorted[46]
+      hacker (#35)[47] rxd this none this
+#49:sort_alist[48]
+      hacker (#35)[49] rxd this none this
+#49:sort_alist_suspended[50]
+      Core-Wizard (#184)[51] rxd this none this
+#49:randomly_permute[52]
+      hacker (#35)[53] rxd this none this
+#49:passoc[54]
+      hacker (#35)[55] rxd this none this
+#49:check_type[56]
+      hacker (#35)[57] rxd this none this
+#49:random_permutation[58]
+      Core-Wizard (#184)[59] rxd this none this
+#49:max_length[60]
+      hacker (#35)[61] rxd this none this
+#49:any_of[62]
+      Core-Wizard (#184)[63] rxd this none this
+#49:flatten[64]
+      hacker (#35)[65] rxd this none this
+#49:grep_l[66]
+      Core-Wizard (#184)[67] rxd this none this
+#49:grep_ll[68]
+      Core-Wizard (#184)[69] rxd this none this
+#49:slice_suspended[70]
+      hacker (#35)[71] rxd this none this
+#49:sort_suspended[72]
+      Core-Wizard (#184)[73] rxd this none this
+#49:make_alist[74]
+      Core-Wizard (#184)[75] rxd this none this
+#49:longest shortest[76]
+      hacker (#35)[77] rxd this none this
+#49:count[78]
+      hacker (#35)[79] rxd this none this
+#49:map_verb_safe[80]
+      Core-Wizard (#184)[81] rxd this none this
+
+INHERITED PROPERTIES
+--------------------
+
+  o  1 property[82] inherited from generic utilities (#146)[83].
+  o  14 properties[84] inherited from root class (#1)[85].
+
+-----
+GENERAL INFORMATION ON $LIST_UTILS[1]
+=====================================
+
+append            (list,list,..) => result of concatenating the given lists
+flatten           (list of lists)=> list of all non-list elements
+reverse           (list)         => reversed list
+remove_duplicates (list)         => list with all duplicates removed
+compress          (list)         => list with consecutive duplicates removed
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+iassoc       (targ,alist[,i]) => index of same.
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+iassoc_prefix(targ,alist[,i]) => index of same.
+slice             (alist[,i]) => list of i-th elements
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign set"             GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+ #1185:append                   GhostOfTheManor (#2) rxd    this none this
+ #1185:set_indexed              GhostOfTheManor (#2) rxd    this none this
+-------------------------------- finished ---------------------------------
+Verb name changed.
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign set"             GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+ #1185:append                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign_indexed set_indexed" GhostOfTheManor (#2) rxd this none this
+-------------------------------- finished ---------------------------------
+Verb #1185:assign_indexed set_indexed [5] {this none this} removed.
+Verb added [5] (4).
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:set_indexed ()" name: "MOO verb: #1185:set_indexed ()" type: moo-code content*: "" _data-tag: 162499868550
+#$#: 162499868550
+-----
+LISTDELETE()
+============
+
+Syntax:  listdelete (list <list>, int <index>)   => list
+
+Returns a copy of <list> with the <index>th element removed.  If <index> is not in the range `[1..length(<list>)]', then `E_RANGE' is raised.
+
+    x = {"foo", "bar", "baz"};
+    listdelete(x, 2)   =>   {"foo", "baz"}
+
+0 errors.
+Verb programmed.
+ListOfList Utilities (#1185) [ readable ]
+  Child of generic utilities (#146).
+  Location GhostOfTheManor (#2).
+ #1185:lookup                   GhostOfTheManor (#2) rxd    this none this
+ #1185:"assign set"             GhostOfTheManor (#2) rxd    this none this
+ #1185:delete                   GhostOfTheManor (#2) rxd    this none this
+ #1185:append                   GhostOfTheManor (#2) rxd    this none this
+ #1185:set_indexed              GhostOfTheManor (#2) rxd    this none this
+-------------------------------- finished ---------------------------------
+Verb added [6] (5).
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:delete_indexed ()" name: "MOO verb: #1185:delete_indexed ()" type: moo-code content*: "" _data-tag: 30201104151
+#$#: 30201104151
+0 errors.
+Verb programmed.
+Verb added [7] (6).
+#$#dns-org-mud-moo-simpleedit-content 747657240 reference: "#1185:find_insert ()" name: "MOO verb: #1185:find_insert ()" type: moo-code content*: "" _data-tag: 61480612952
+#$#: 61480612952
+=> 0
+-----
+WIZARD-LIST
+===========
+
+The wizards deny everything.
+
+-----
+`HELP WIZ' AMBIGUOUS
+====================
+
+Sorry, the topic `wiz' is ambiguous.  I don't know which of the following topics you mean:
+
+`help wiz-index'[1]     `help wizard-list'[2]   `help wizards'[3]
+
+-----
+WIZARD HELP TOPICS
+==================
+
+$site_db[1]             @@who[2]                @abort-shutdown[3]
+blacklist[4]            @blacklist[5]           @chmod-raw[6]
+@chown[7]               @denewt[8]              @detoad[9]
+@dump-database[10]      @egrep[11]              @grant[12]
+graylist[13]            @graylist[14]           @grep[15]
+@grepcore[16]           @guests[17]             @log[18]
+make-core-database[19]  @make-guest[20]         @make-player[21]
+@net-who[22]            @newt[23]               @players[24]
+@programmer[25]         @quota[26]              @recycle[27]
+redlist[28]             @redlist[29]            @shout[30]
+@shutdown[31]           @toad[32]               @unnewt[33]
+@untoad[34]             @who-calls[35]          wiz-index[36]
+
+GhostOfTheManor shouts, "OoOOOOOooOoooOOO!!!!!"
+Usage:  @messages <object>
+@integrate_room me isn't set.
+@integrate_player me isn't set.
+@integrate_container me isn't set.
+@in me is "in"
+@page_absent me is "%Nd %n:(is) not currently logged in."
+@page_origin me isn't set.
+@page_echo me isn't set.
+@spoof_attribution me is "     --"
+@integrate_sep me is "  "
+@remote_emote_prefix me is "(from %li)"
+@dozing me is "idling"
+@idle me is "real life intrusion"
+@doing me is ""
+@shout me is "%Nd %n:(shouts), \"%$a\""
+@givexp me is "%Nn %n:(gives) %id an xp for '%$d'."
+@revokexp me is "%Nn %n:(docks) %id an xp for '%$d'."
+@duck me is "%Dn %d:(ducks)."
+@overduck me is "%Nn %n:(ducks) and %n:(stumbles), falling over."
+@death me is "%Dn %d:(dies) from a wound inflicted by %nn with %td."
+@newt_victim me isn't set.
+@newt me is "%Nd %n:(@newts) %dd (%d#)."
+@programmer me is "%Dd %d:(is) now a programmer."
+@programmer_victim me is "You are now a programmer."
+@toad_victim me is "Have a nice life..."
+@toad me is "%Nd %n:(@toads) %dd (%d#)."
+@boot_player me is "%Nd %n:(boots) %dd."
+GhostOfTheManor shouts, "me is "%Nd %n:(broadcasts) a psychic message: %$a""
+The verb :@shout is on   GhostOfTheManor(#2)--generic player(#6)
+-----
+MESSAGES
+========
+
+Most objects have messages that are printed when a player succeeds or fails in manipulating the object in some way.  Of course, the kinds of messages printed are specific to the kinds of manipulations and those, in turn, are specific to the kind of object.  Regardless of the kind of object, though, there is a uniform means for listing the kinds of messages that can be set and then for setting them.
+
+The '@messages' command prints out all of the messages you can set on any object you own.  Type `help @messages'[1] for details.
+
+To set a particular message on one of your objects use a command with this form:
+
+        @<message-name> <object> is "<message>"
+
+where '<message-name>' is the name of the message being set, <object> is the name or number of the object on which you want to set that message, and <message> is the actual text.
+
+For example, consider the 'leave' message on an exit; it is printed to a player when they successfully use the exit to leave a room.  To set the 'leave' message on the exit 'north' from the current room, use the command
+
+        @leave north is "You wander in a northerly way out of the room."
+
+[Note to programmers: This class of commands automatically applies to any property whose name ends in '_msg'.  Thus, in the example above, the command is setting the 'leave_msg' property of the named exit.  You can get such a command to work on new kinds of objects simply by giving the appropriate properties names that end in '_msg'.  Additionally, in many cases the _msg property is accompanied by a _msg verb, which defaultly returns the named property, but which is available to be customized in more complex ways than allowed by simple string substitution.  You should check for the particular property you're considering whether the verb form exists (typically with @list).]
+
+The following help topics describe the uses of the various messages available on standard kinds of objects:
+
+container-messages[2]
+      the messages on objects that can contain other objects
+exit-messages[3]
+      the messages on exit objects
+thing-messages[4]
+      the messages on objects that can be taken and dropped
+
+-----
+@MESSAGES
+=========
+
+Syntax:  @messages <object>
+
+List all of the messages that can be set on the named object and their current values.  See `help messages'[1] for more details.
+
+-----
+MESSAGES
+========
+
+Most objects have messages that are printed when a player succeeds or fails in manipulating the object in some way.  Of course, the kinds of messages printed are specific to the kinds of manipulations and those, in turn, are specific to the kind of object.  Regardless of the kind of object, though, there is a uniform means for listing the kinds of messages that can be set and then for setting them.
+
+The '@messages' command prints out all of the messages you can set on any object you own.  Type `help @messages'[1] for details.
+
+To set a particular message on one of your objects use a command with this form:
+
+        @<message-name> <object> is "<message>"
+
+where '<message-name>' is the name of the message being set, <object> is the name or number of the object on which you want to set that message, and <message> is the actual text.
+
+For example, consider the 'leave' message on an exit; it is printed to a player when they successfully use the exit to leave a room.  To set the 'leave' message on the exit 'north' from the current room, use the command
+
+        @leave north is "You wander in a northerly way out of the room."
+
+[Note to programmers: This class of commands automatically applies to any property whose name ends in '_msg'.  Thus, in the example above, the command is setting the 'leave_msg' property of the named exit.  You can get such a command to work on new kinds of objects simply by giving the appropriate properties names that end in '_msg'.  Additionally, in many cases the _msg property is accompanied by a _msg verb, which defaultly returns the named property, but which is available to be customized in more complex ways than allowed by simple string substitution.  You should check for the particular property you're considering whether the verb form exists (typically with @list).]
+
+The following help topics describe the uses of the various messages available on standard kinds of objects:
+
+container-messages[2]
+      the messages on objects that can contain other objects
+exit-messages[3]
+      the messages on exit objects
+thing-messages[4]
+      the messages on objects that can be taken and dropped
+
+No such verb, "shout_msg"
+-------------------------------- finished ---------------------------------
+ shout_msg               Core-Wizard (#184)    r c    {#69, "do", {"name", "player", {"dc"}}, " ", {"verb", "player", "shouts"}, ", \"", {"string", "argstr", 0}, "\""}
+-------------------------------- finished ---------------------------------
+-----
+`HELP @SET' AMBIGUOUS
+=====================
+
+Sorry, the topic `@set' is ambiguous.  I don't know which of the following topics you mean:
+
+`help set_connection_option()'[1]               `help set_player_flag()'[2]
+`help set_property_info()'[3]                   `help set_task_perms()'[4]
+`help set_verb_args()'[5]                       `help set_verb_code()'[6]
+`help set_verb_info()'[7]                       `help setadd()'[8]
+`help @setenv'[9]       `help @sethome'[10]     `help setremove()'[11]
+
+The generic utilities(#146) has 24 kids.
+Generic BigList Utilities (#13)   wizard utilities (#24)   math utilities (#26)   set utilities (#27)   sequence utilities (#32)   gender utilities (#38)   time utilities (#39)   object utilities (#47)   lock utilities (#48)   list utilities (#49)   command utilities (#50)   code utilities (#53)   permissions utilities (#130)   building utilities (#19)   string utilities (#18)   English Utilities (#72)   integration utils (#74)   Name Utilities (#177)   Parsing Utilities (#117)   walking utils (#182)   room matching utilities (#190)   Generic Quota Utils Parent (#88)   Conversion Utilities (#834)   ListOfList Utilities (#1185)
+-----
+GENERAL INFORMATION ON $STRING_UTILS[1]
+=======================================
+
+For a complete description of a given verb, do `help $string_utils:verbname'[2]
+
+    Conversion routines:
+
+:char_list    (string)                               => {"a", "b", "c"}
+:to_list      (string)                               => {"a", "foo", "bear"}
+ (see also :explode, below)
+
+:from_list    (list [,sep])                          => "foo1foo2foo3"
+:english_list (str-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+:title_list*c (obj-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+                                                  or => "Foo1, foo2, and foo3"
+
+:[i|d]name[c]_and_number                             => "foo (#123)"
+:[i|d]name[c]_list (obj-list, name-args)             => english list of names
+                                                        in appropriate style
+:[i|d]name[c]_and_number_list(obj-list, name-args)   => same, plus " (#123)"
+:names_of     (obj-list)  => "foo1 (#123)   foo2 (#456)   foo3 (#789)"
+
+:to_value       (string)                             => {1, value}
+                                                  or => {0, error message}
+:prefix_to_value(string)                             => {rest-of-string, value}
+                                                  or => {0, error message}
+:end_expression (string)                             => index of expression
+
+:from_value[_suspended] (value [,quoteflag [,maxlistdepth]])
+                                                     => "{foo1, foo2, foo3}"
+:print[_suspended] (value)                           => "{foo1, foo2, foo3}"
+:print_truncated   (value, length, suffix)           => "{foo1, fo.."
+:print_with_names  (value)                           => "{foo1, foo2 (#123)}"
+
+:english_number(42 [,zero])  => "forty-two"
+:english_ordinal(42)         => "forty-second"
+:ordinal(42)                 => "42nd"
+:group_number(42135 [,sep])  => "42,135"
+:from_seconds (num)          => "an hour" or "3 days" or "15 seconds"
+
+:glob_to_regexp("foo*b?r")   => "^foo.*b.r$"
+:xglob_to_regexp("f*ba[rz]") => "^f.*ba[rz]$"
+
+    Type checking:
+
+:is_numeric   (string) => return true if string is composed entirely of digits
+
+    String Matching:
+
+:match_string(string, pattern, options) => * wildcard matching
+:find_prefix(prefix, string-list)       => list index of element starting
+                                           with prefix
+:match_stringlist(string, string-list)  => index/$ambiguous_match/$failed_match
+:index_delimited(string,target[, case]) => index of delimited string occurrence
+:index_all(string, target[, delimited]) => all occurrences of target in string
+:next_index(str1, str2, prev[, case])   => index, after index `prev'
+
+    Object Matching (see also $command_utils):
+
+:literal_object(string)                        => object match independent
+                                                  of location
+:match        (string, [obj-list, prop-name]+) => matching object
+:match_player (string-list[,me-object])        => list of matching players
+:match_object (string, location)               => default object match
+:match_player_or_object(@string-list)          => matching object or player
+:match_room   (string)                         => matching room object
+
+    Parsing:
+
+:explode (string,char) -- string => list of words delimited by char
+ (see also :to_list, above)
+:words   (string)      -- string => list of words (as with command line parser)
+:word_start (string)   -- string => list of start-end pairs.
+:first_word (string)   -- string => {first word, rest of string} or {}
+
+:parse_command(cmd_line[, player]) -- string => parsed command info
+
+    Pretty printing:
+
+:space         (n/string[,filler])     => n spaces
+:left          (string,width[,filler]) => left justified string in field 
+:right         (string,width[,filler]) => right justified string in field
+:center/re     (string,width[,filler]) => centered string in field
+:columnize/se[_suspended](list,n[,width])
+                                       => list of strings in n columns
+:columnize/se_no_truncate(list,n[,linelen])
+                                       => same, but will not truncate items
+:columnize/se_with_headers(headers, fields) => columnize, plus headers
+
+    Substitutions
+
+:substitute (string, subst_list [,case])  -- general substitutions.
+:substitute_delimited(...)                -- same, but with word boundaries.
+:pronoun_sub (string/list[,who[,thing[,location]]])
+                                          -- pronoun substitutions.
+:pronoun_sub_secure (string[,who[,thing[,location]]],default)
+                                          -- substitute and check for names.
+:pronoun_quote (string/list/subst_list)   -- quoting for pronoun substitutions.
+:regexp_quote(string)                     -- quoting for regexps.
+
+    Miscellaneous string munging:
+
+:trim         (string)       => string with outside whitespace removed.
+:triml        (string)       => string with leading whitespace removed.
+:trimr        (string)       => string with trailing whitespace removed.
+:strip_chars  (string,chars) => string with all chars in `chars' removed.
+:strip_all_but(string,chars) => string with all chars not in `chars' removed.
+:capitalize/se(string)       => string with first letter capitalized.
+:uppercase/lowercase(string) => string with all letters upper or lowercase.
+:reverse      (string)       => string, backwards.
+
+:common(string1, string2)    => length of longest common prefix.
+:is_uppercase (string)       => true iff no lowercase letters in string
+:is_lowercase (string)       => true iff no uppercase letters in string
+:nonblank     (string)       => true iff any non-whitespace characters
+
+:connection_hostname(string) => hostname part of connection identifier.
+
+    Conversions to and from common string formats:
+
+:character_to_ascii(char)    => integer ASCII rep of char
+:character_to_hex_ascii(char) => two-digit hexadecimal string ASCII rep of char
+:ascii_to_character(num)     => character represented in ASCII by num
+:hex_ascii_to_character(hex) => ASCII character represented by two-character hexadecimal string hex
+
+    A few useful properties:
+
+alphabet                    => "abcdefghijklmnopqrstuvwxyz"
+tab                         => a single tab character
+
+-----
+TWO-LETTER
+==========
+
+This help text describes the format of pronoun-substitution messages.  Other help texts on pronoun_substitution include:
+
+pronouns[1]
+      An overview.
+pronoun-substitution[2]
+      How to call pronoun_sub and how it works.
+pronoun-example[3]
+      A detailed example.
+two-letter-qr[4]
+      A quick reference guide to the format string.
+pronoun-style[5]
+      Dunno yet.
+
+Pronoun-substitution messages are entered as strings, but are usually converted to an arcane list format before they're used.  This document is about the format of the string entry; the list format may be discussed elsewhere.
+
+The information passed to :pronoun_sub() can have subsitution specifiers in it that are replaced by values that depend on the context.  The string that results after all the substitutions are made is returned.
+
+In the format string that :pronoun_sub() parses, a `%' indicates that a substition should take place.  The characters after it specify the type of substition.  Take a look at this string:
+
+  "%Td %t:(looks) at %dd oddly."
+
+It has three substitutions to be made in it:  `%Td', `%t:(looks)', and `%dd'.
+
+In most cases, a substition consists of three elements:
+
+  o  The % sign, indicating that a substitution should be made.
+  o  A symbol indicating the object that should be considered.
+  o  A symbol indicating what about that object to substitute.
+
+
+The Object Specifier
+====================
+
+The object specifier is the letter that follows the % sign.  Consider the string:
+
+    "%Td %t:(looks) at %dd oddly."
+ 
+
+In `%Td' and in `%t:', the object specifer is `t'.  In `%dd', the object specifer is `d'.
+
+The possible letters and the objects that they correspond to include:
+
+  t - represents the thing where the verb calling :pronoun_sub() is stored
+  n - represents the player that started the command
+  d - represents the direct object of the initial command
+  i - represents the indirect object of the initial command
+  l - represents the location of the player
+
+As an example, If Munchkin typed this command:
+
+  put duck in pond
+ 
+
+and the duck had this as a @put_in_water message:
+
+  "%Nd %n:(puts) %td in %id."
+ 
+
+Then:
+
+  %Nd would get the `d' information on Munchkin and capitalize it.
+
+  %n:(puts) would conjugate `puts' according to Munchkin's gender.
+
+  %td would get the `d' information from the duck.
+
+  %id would get the `d' information from the pond.
+
+
+The Information Specifier
+=========================
+
+The character following the object specifier is the information specifier.  It specifies what sort of information to get about the object.  It can be any of these characters:
+
+  n - the object's name        ("Susan",   "duck",    "king and queen")
+  d - definite-article         ("Susan",   "the duck","the king and queen")
+  i - indefinite-article       ("Susan",   "a duck",  "a king and queen")
+  o - the objective pronoun    ("her",     "him",     "them")
+  p - possessive adjective     ("her",     "his",     "their")
+  q - possessive pronoun       ("hers",    "his",     "theirs")
+  r - reflexive pronoun        ("herself", "himself", "themselves")
+  s - subjective pronoun       ("she",     "he,       "they")
+
+Sometimes, several characters follow the object specifier:
+
+  'i  - indefinite possessive  ("a duck's")
+  'd  - definite possessive    ("the duck's")
+  'n  - possessive name        ("duck's")
+
+In using any of these, you can capitalize the object specifier to have the phrase capitalize--for example, `%Nd' might become "The duck".  If you capitalize both the object specifier and the information specifier (`%ND'), you'll get all caps--"THE DUCK".
+
+Information Specifiers for Verb Conjugation
+===========================================
+
+You often want to insert a verb into a sentence, but the conjugation depends on the context that it's used in.  Give this as the information specifer in order to have pronoun_sub conjugate a verb:
+
+  :(foos) - conjugate the verb `to foo'
+
+For example:
+  "%ns %n:(runs)"
+
+will result in "he runs", "she runs", or "they run", depending on the gender of the player who called the verb.
+
+If you capitalize the verb, the result will be capitalized:
+
+  "%ns %n:(Runs)"
+  => "he Runs"
+
+
+Information Specifiers for Pluralizing Nouns
+============================================
+
+If you want to make a noun singular or plural depending on context, you can give the noun as an information specifier, and it will be pluralized if the object you specified is plural.  This is the format of the information specification:
+
+  '(noun)
+ 
+
+For example, this string:
+  "%nD %n:(shakes) %d'd %d'(hand)."
+
+may result in either:
+  "Munchkin shakes Susan's hand."
+or
+  "Munchkin shakes the king and queen's hands."
+
+Again, capitalizing the noun will result in a capitalized substitution.
+
+
+Information Specifiers for Object Data
+======================================
+
+You can also obtain information about the actual object by using these information specifiers.
+
+  #      - the object's number 
+  .(foo) - the object's "foo" property
+
+For example:
+  %t.(mood)
+would return the string in the object's `mood' property.
+
+If the proprety doesn't exist, the string `Property not found' will be returned.
+
+If you capitalize the property name, the resulting string will be capitalized.
+
+
+Information Specifiers for Odd Cases
+====================================
+
+A list of arguments enclosed in curly brackets (see `help pronoun-literals'[6]) can be used as an information specifier, e.g.:
+
+  %n{u}
+ 
+
+which produces the same result as `%NN'.  The arguments will be passed directly to :name() during substitution.  Some forms of name, such as the 'in' name, can only be obtained in this manner.  See `help #1:name'[7] for more information.
+
+
+Random Choice
+=============
+
+To add a little variety to oft-used messages, you can specify that one of several messages be chosen at random each time a message is used.  For example:
+
+  %Nd %(%n:(dives) gracefully|%n:(bellyflops) clumsily) into the water.
+ 
+
+The section in parentheses will be broken up into phrases at the vertical bars (|) and only one of these phrases, chosen at random, will be displayed.  This also works whenever an information specifier contains something enclosed in parentheses:
+
+  %Nd %n:(dives|plunges) gracefully into the water.
+ 
+
+When used with $you:say_action (see `help $you:say_action') the same alternatives will be used for everyone.  Vertical bars may be included literally by preceding them with a percent sign.
+ 
+Object Locations and Contents
+=============================
+
+Sometimes you want information about an object's location.  This can be retrieved by appending an `l' to the object specifier.  For example:
+
+  %tln - Get the `thing' this code is on, find out where it's located, and then get the name of that location. 
+
+This can be done to every kind of object specifier: %tl, %nl, %il, %dl, and %ll.
+
+Moreover, `L' and `c' may be used in the same fashion, to refer to the object's outermost location (usually a room) and its visible contents, respectively.
+
+Object Callbacks
+================
+
+The letter `x' can be used in two ways to call back to an object for specialized information.
+
+Firstly, it can be used as an object specifier, followed by another object specifier and some data in curly brackets, thusly:
+
+  %xn{foo arg1 arg2 ...}d
+
+The data in curly brackets is changed into a list, in the way specified in the next section.  Then, during substitution, the substitution mechanism will call the verb `:obj_foo(arg1, arg2, ...)' on the object(s) specified by `%n' to obtain some objects to get the `d' information of.
+
+Secondly, it can be used as an information specifier, like this:
+
+  %nx{foo arg1 arg2 ...}
+
+This case is similar to the above, only the verb called is `:sub_foo' and the mechanism expects text rather than objects.  The returned text is inserted literally for single objects, and turned into an English-style list otherwise.
+
+Other Substitutions
+===================
+
+In addition to the format of %(object specifier)(information specifier), you can also use these substitutions:
+
+  %% - A percent sign.   That is:  %
+ 
+  %$a - the argstr to the verb that called :pronoun_sub().
+  %$d - the dobjstr to the verb that called :pronoun_sub().
+  %$i - the iobjstr to the verb that called :pronoun_sub().
+  %$p - the prepstr to the verb that called :pronoun_sub().
+ 
+  %{information} 
+ 
+
+%{information} allows one to insert an arbitrary list into the data structure used for pronoun substitution.  The format in which the list is specified is discussed in `help pronoun-literals'[8]; how it is interpreted is beyond the scope of this document.
+
+Errata
+======
+
+If the information following the % isn't a valid substitution string, the % will remain a %.  This is a clue that the format string needs some work.
+
+-----
+`HELP $TWO_LETTER' NOT FOUND
+============================
+
+Sorry, but no help is available on `$two_letter'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+`HELP $TWOLETTER' NOT FOUND
+===========================
+
+Sorry, but no help is available on `$twoletter'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+HELP ON PRONOUN SUBSTITUTION
+============================
+
+No help found.
+
+pronoun substitution (#69) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+   #69:do                       Core-Wizard (#184)   rxd    this none this
+   #69:do_segment               Core-Wizard (#184)   rxd    this none this
+   #69:"sub_name sub_dname sub_iname" unknown hacker (#35) rx this none this
+   #69:do_object                unknown hacker (#35) rx     this none this
+   #69:sub_verb                 unknown hacker (#35) rxd    this none this
+   #69:sub_pronoun              Core-Wizard (#184)   rx     this none this
+   #69:sub_objnum               unknown hacker (#35) rx     this none this
+   #69:sub_property             Core-Wizard (#184)   rx     this none this
+   #69:"obj_location obj_outer_location" unknown hacker (#35) rxd this none this
+   #69:sub_noun                 unknown hacker (#35) rx     this none this
+   #69:lines                    Core-Wizard (#184)   rx     this none this
+   #69:sub_special              Core-Wizard (#184)   rxd    this none this
+   #69:parse_parties            Core-Wizard (#184)   rxd    this none this
+   #69:_listify                 Core-Wizard (#184)   rxd    this none this
+   #69:"_locations _outer_locations" Core-Wizard (#184) rxd this none this
+   #69:sub_string               unknown hacker (#35) rx     this none this
+   #69:message_empty            unknown hacker (#35) rx     this none this
+   #69:nominate_for_core        unknown hacker (#35) rxd    this none this
+   #69:sub_allcaps              unknown hacker (#35) rx     this none this
+   #69:sub_pick                 unknown hacker (#35) rx     this none this
+   #69:mentioned_parties        unknown hacker (#35) rxd    this none this
+   #69:obj_special              Core-Wizard (#184)   rx     this none this
+   #69:obj_contents             unknown hacker (#35) rx     this none this
+   #69:parse_objspec            unknown hacker (#35) r d    none none none
+   #69:flatten_message          unknown hacker (#35) rxd    this none this
+   #69:_flatten_message         unknown hacker (#35) rxd    this none this
+   #69:obj_listargs             unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------
+No such verb, "@"
+-------------------------------- finished ---------------------------------
+The verb :@ is nowhere to be found.
+The verb :@shout is on   GhostOfTheManor(#2)--generic player(#6)
+The verb :@messages is on   GhostOfTheManor(#2)--generic player(#6)
+Object #2 does not define that verb, but its ancestor #6 does.
+Last modified Sat May 11 22:31:53 1996 PDT by splat (#3024) (on JHM).
+#6:"@mess*ages" any none none
+ 1:  set_task_perms(player);
+ 2:  if (dobjstr == "")
+ 3:    player:notify(tostr("Usage:  ", verb, " <object>"));
+ 4:    return;
+ 5:  endif
+ 6:  dobj = player:my_match_object(dobjstr);
+ 7:  if ($command_utils:object_match_failed(dobj, dobjstr))
+ 8:    return;
+ 9:  endif
+10:  if (`messages = dobj:get_messages() ! E_PERM' == E_PERM)
+11:    player:notify("You can't read the messages on that.");
+12:  elseif (messages)
+13:    for message in (messages)
+14:      $command_utils:suspend_if_needed(1);
+15:      {name, value} = message;
+16:      if (value == E_PERM)
+17:        player:notify(tostr("@", name, " ", dobjstr, " isn't readable by you."));
+18:      elseif (value == E_INVARG)
+19:        player:notify(tostr("@", name, " ", dobjstr, " appears to be corrupted!"));
+20:      elseif (!value)
+21:        player:notify(tostr("@", name, " ", dobjstr, " isn't set."));
+22:      else
+23:        player:notify(tostr("@", name, " ", dobjstr, " is ", value));
+24:      endif
+25:    endfor
+26:  else
+27:    player:notify("That object doesn't have any messages to set.");
+28:  endif
+29:  return;
+=> {{"integrate_room", ""}, {"integrate_player", ""}, {"integrate_container", ""}, {"in", "\"in\""}, {"page_absent", "\"%Nd %n:(is) not currently logged in.\""}, {"page_origin", ""}, {"page_echo", ""}, {"spoof_attribution", "\"     --\""}, {"integrate_sep", "\"  \""}, {"remote_emote_prefix", "\"(from %li)\""}, {"dozing", "\"idling\""}, {"idle", "\"real life intrusion\""}, {"doing", "\"\""}, {"shout", "\"%Nd %n:(shouts), \\\"%$a\\\"\""}, {"givexp", "\"%Nn %n:(gives) %id an xp for '%$d'.\""}, {"revokexp", "\"%Nn %n:(docks) %id an xp for '%$d'.\""}, {"duck", "\"%Dn %d:(ducks).\""}, {"overduck", "\"%Nn %n:(ducks) and %n:(stumbles), falling over.\""}, {"death", "\"%Dn %d:(dies) from a wound inflicted by %nn with %td.\""}, {"newt_victim", ""}, {"newt", "\"%Nd %n:(@newts) %dd (%d#).\""}, {"programmer", "\"%Dd %d:(is) now a programmer.\""}, {"programmer_victim", "\"You are now a programmer.\""}, {"toad_victim", "\"Have a nice life...\""}, {"toad", "\"%Nd %n:(@toads) %dd (%d#).\""}, {"boot_player", "\"%Nd %n:(boots) %dd.\""}}
+-----
+STATEMENTS
+==========
+
+The following kinds of statements exist in the MOO programming language:
+
+Null
+====
+
+        ;
+
+The null statement does nothing.
+
+Expressions
+===========
+
+        expression ;
+
+The expression statement evaluates the expression and then discards the value.
+
+Conditional
+===========
+
+        IF ( expression ) statements ENDIF
+        IF ( expression ) statements ELSE statements ENDIF
+        IF ( expression )
+          statements
+        ELSEIF ( expression )
+          statements
+        ...
+        ELSE
+          statements
+        ENDIF
+
+The conditional statement evaluates each expression in turn and executes the statements associated with the first one to return a true value; the ELSE statements are executed if none of the expressions returns a true value.  There can be any number of ELSEIF clauses and the ELSE part is optional.  See `help truth'[1] for the definition of 'true value'.
+
+List iteration
+==============
+
+        FOR name IN ( expression ) statements ENDFOR
+
+The list iteration statement first evaluates the expression, which must return a list.  It then executes the statements once for each element of that list, each time with the named variable having the value of the corresponding list element.
+
+Numeric iteration
+=================
+
+        FOR name IN [ expression .. expression ] statements ENDFOR
+
+The numeric iteration statement first evaluates the two expressions, both of which must return numbers; call those numbers N1 and N2, respectively.  The statements are then executed once for each integer I such that N1 <= I <= N2, in increasing order; each time, the named variable has the corresponding value of I.
+
+Indefinite iteration
+====================
+
+        WHILE ( expression ) statements ENDWHILE
+
+The indefinite iteration statement repeatedly evaluates the expression and, each time it returns a true value, executes the statements.  The loop stops the first time that the expression returns a false value.  The definitions of 'true' and 'false' values is in `help truth'[2].
+
+Return
+======
+
+        RETURN ;
+        RETURN expression ;
+
+The return statement evalautes the expression, if any, and returns the resulting value (or 0 if there is no expression) to the verb that called the current one.  Execution of the current verb is immediately terminated.
+
+Fork
+====
+
+        FORK ( expression ) statements ENDFORK
+        FORK name ( expression ) statements ENDFORK
+
+The fork statement first executes the expression, which must return a number; call that number N.  It then creates a new MOO task that will, after at least N seconds, execute the statements.  When the new task begins, all variables will have the values they had at the time the FORK statement was executed.  The task executing the FORK statement immediately continues execution.  If a variable name is given after the FORK keyword, then it is assigned the 'queue ID' of the newly-created task.  The value of this variable is visible both to the task executing the fork statement and to the statements in the newly-created task.  See `help tasks'[3] for more information about forked tasks.
+
+The MOO is currently running version 1.8.2 of the LambdaMOO server code.
+The core is derived from a JHCore extracted on Sep 20, 2002.
+0 errors.
+Verb programmed.
+Set help property of the ListOfList Utilities (#1185).
+-----
+_
+=
+
+Your `current object' is an object that you can refer to in most commands without using its name, just by using the symbol "_".  It's intended primarily for programming.
+
+For example, you can type
+
+   @co $jtext.link
+   @d _:
+
+and get a list of verbs defined on the link dispatcher tag.
+
+In addition, if your .eval_env property (see `help eval'[1]) sets _ to player.current_object, you can use it in evaluations.  The default .eval_env includes this binding.  So, to continue the example:
+
+   >;_:dname()
+   => "the link dispatcher tag"
+
+A stack is kept of the current objects you've been using, so you can change your current object for a while and then switch back to the previous one without needing to identify it again.
+
+To find out how to set or view your current object, read the following help topics:
+
+@currentobject[2]
+      Set current object, or find out what it is.
+@pushobject[3]
+      Push a current object onto the stack.
+@popobject[4]
+      Return to the previous current object.
+@swapobject[5]
+      Switch between current and previous object.
+
+-----
+HELP ON THE LISTOFLIST UTILITIES
+================================
+
+No help found.
+

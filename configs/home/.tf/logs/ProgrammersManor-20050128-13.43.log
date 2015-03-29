@@ -1,0 +1,32 @@
+Welcome to The Programmer's Manor
+
+For help outside the MOO contact robert@defore.st.
+
+    connect user pass     - log in
+    create  user pass     - create and log in to new user
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+enceladus is here, off in another world.
+Last connected Fri Jan 28 07:51:32 2005 PST from wrack.thatsnice.org
+There is new activity on the following lists:
+    *Player-Creation-Log        1 new message
+#$#mcp-negotiate-can 750866573 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 750866573 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 750866573 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 750866573
+Message 18 on *Player-Creation-Log:
+Date:     Fri Jan 28 08:56:54 2005 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  Babs (#268)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+You say, "Welcome"
+You sit on the large maroon couch.
+You see a player who should type '@describe me as ...'.
+E is awake, but has been staring off into space for an hour.
+You say, "I'm going to be bringing up a different database tomorrow, and I'll give everyone prog bits after that."

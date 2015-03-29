@@ -1,0 +1,199 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 145 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              7 new messages
+Last connected Wed Jun 22 10:15:21 2005 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+Message 4879 on *Core-DB-Issues (#8175):
+Date:     Tue Jul 12 01:16:51 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175) and *Wizard-List (#6428)
+Subject:  Improved $you
+
+I've build an improved version of $you which recognised cases when two of the participants match. It is #67923.
+
+So if who == dobj (or who == iobj) then references to %d (%i resp.) are changed to %r. So for example:
+
+;;dobj = me; #67923:say_action("%N %<spills> coffee all over %d.")
+shows me:
+  You spill coffee all over yourself.
+and bystanders see:
+  Blob spills coffee all over emself.
+
+It also recognises cases where dobj and iobj match. So:
+;;dobj = #120318; #67923:say_action("%N %<takes> the parcel from you and %<passes> it to %i.")
+
+will show MrCurly (#120318):
+  Blob takes the parcel from you and passes it to you.
+
+which isn't great, but is better than the old:
+  Blob takes the parcel from you and passes it to MrCurly.
+
+The key changes are to :say_action() and the addition of the :reflexive() verb which makes a message reflexive. If anyone would care to copy these changes into $you, I'd be quietly pleased. ;)
+
+Blob
+--------------------------
+< connected: Crag. Total: 147 >
+Message 4880 on *Core-DB-Issues (#8175):
+Date:     Tue Jul 12 18:54:24 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175) and *Wizard-List (#6428)
+Subject:  Re: Improved $you
+
+>  The key changes are to :say_action() and the addition of the
+>  :reflexive() verb which makes a message reflexive. If anyone would
+>  care to copy these changes into $you, I'd be quietly pleased. ;)
+
+Ahem. Quietly pleased, that is, until somebody points out the embarassing bugs. It still needs a little bit of work. I'll get back to you.
+
+Blob
+--------------------------
+Message 4881 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 13 00:26:16 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175) and *Wizard-List (#6428)
+Subject:  Re: Improved $you
+
+>  Date:     Tue Jul 12 18:54:24 2005 PDT
+>  From:     Blob (#21528)
+>  To:       *Core-DB-Issues (#8175) and *Wizard-List (#6428)
+>  Subject:  Re: Improved $you
+>  
+>  >  The key changes are to :say_action() and the addition of the
+>  >  :reflexive() verb which makes a message reflexive. If anyone
+>  would
+>  >  care to copy these changes into $you, I'd be quietly pleased.
+>  ;)
+>  
+>  Ahem. Quietly pleased, that is, until somebody points out the
+>  embarassing bugs. It still needs a little bit of work. I'll get
+>  back to you.
+
+Okay, it should work. The only problem is if you try to use %d or %i as the subject of a sentence. For instance:
+
+;;dobj=me;#67923:say_action("%N %<bonks> %d. %D %<d:says> 'oif'!");
+
+will show you:
+  You bonk yourself. Yourself say 'oif'!
+
+Since there is no way to distinguish whether %d is being used as the object or subject of a verb, there is no good way to replace "Yourself" with "You" in the above.
+
+Blob
+--------------------------
+Message 4882 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 13 05:12:32 2005 PDT
+From:     Nosredna (#2487)
+To:       Blob (#21528), *Core-DB-Issues (#8175), and *Wizard-List (#6428)
+Subject:  Re: Improved $you
+
+OK, I updated $you, old code in $you:say_action(old) if we hate it.
+--------------------------
+Message 4883 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 13 16:14:06 2005 PDT
+From:     ChiaDruid (#110777)
+To:       *Core-DB-Issues (#8175)
+
+Possible bug: If dobj and iobj are both 'player', then only %i refs turn into %r. %D still returns 'you'. (It's not very likely that dobj and iobj would both be the player, but it's possible.)
+
+Another problem I have is that some messages might be set up to ignore 'player' and just focus on whatever dobj and iobj are. For example:
+
+>Green_Guest points its wooden torch at itself and shouts "Ignis!"
+>A bolt of fire strikes Green_Guest enveloping it in flame.
+>Itself collapses to the ground.
+
+The second sentence is via :pronoun_sub, so it looks fine, but the first and last sentences are via $you. The first looks fine, but the last is clearly silly.
+
+:say_action could be hacked to avoid this if no mention of %N, %s, %<verbs>, etc are found in the string.
+--------------------------
+Message 4884 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 13 17:09:40 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  Reflexive $you
+
+>  Date:     Wed Jul 13 16:14:06 2005 PDT
+>  From:     ChiaDruid (#110777)
+>  To:       *Core-DB-Issues (#8175)
+>  
+>  Possible bug: If dobj and iobj are both 'player', then only %i
+>  refs turn into %r. %D still returns 'you'. (It's not very likely
+>  that dobj and iobj would both be the player, but it's possible.)
+
+It does? Can you give an example?
+
+>  Another problem I have is that some messages might be set up to
+>  ignore 'player' and just focus on whatever dobj and iobj are. For
+>  example:
+>  
+>  >Green_Guest points its wooden torch at itself and shouts "Ignis!"
+>  >A bolt of fire strikes Green_Guest enveloping it in flame.
+>  >Itself collapses to the ground.
+>  
+>  The second sentence is via :pronoun_sub, so it looks fine, but the
+>  first and last sentences are via $you. The first looks fine, but
+>  the last is clearly silly.
+
+Yes. Like I said, I have no real way to tell if %d or %i are being used as the subject of a verb, rather than the object. 
+
+In this case, it can be avoided by setting "who = dobj" in the call to :say_action for the last sentence. Ie replace:
+
+$you:say_action("%D %<d:collapses> to the ground.");
+
+with:
+
+$you:say_action("%N %<collapses> to the ground.", dobj);
+
+>  :say_action could be hacked to avoid this if no mention of %N, %s,
+>  %<verbs>, etc are found in the string.
+
+Perhaps we could look for %<d:verb> or %<i:verb> to see what the subject of the verb is. But then it is still difficult to distinguish cases in which %d is meant as the subject from those in which it is the object.
+
+Blob
+--------------------------
+Message 4885 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 13 17:58:44 2005 PDT
+From:     ChiaDruid (#110777)
+To:       *Core-DB-Issues (#8175)
+
+>  >  Possible bug: If dobj and iobj are both 'player', then only %i
+>  >  refs turn into %r. %D still returns 'you'. (It's not very
+>  likely
+>  >  that dobj and iobj would both be the player, but it's
+>  possible.)
+>  
+>  It does? Can you give an example?
+
+;;iobj = dobj = me; $you:say_Action("%N %<smacks> %d and %i.");
+You smack you and yourself.
+
+;;iobj = me; dobj = #2; $you:say_Action("%N %<smacks> %d and %i.");
+You smack Haakon and yourself.
+
+;;iobj = #2; dobj = me; $you:say_Action("%N %<smacks> %d and %i.");
+You smack yourself and Haakon.
+--------------------------
+No News (is good news)

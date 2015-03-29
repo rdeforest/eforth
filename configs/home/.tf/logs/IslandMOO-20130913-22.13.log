@@ -1,0 +1,66 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The North Vestibule
+A smaller vestibule opening onto the Great Hall. The bones of the old castle are exposed here; the walls rough-hewn blocks of black basalt, the floor smoothly polished stone of the same.  A brown Persian rug lies soft underfoot.  Someone has artfully hung a detailed painting on a wall.  Some chaise longues sit under the windows.  A butler's desk is pushed up against one of the walls.  A demi-lune table stands between the doors, ready to receive calling cards.  A porter's chair stands in the middle of the room, facing the doors.  The tracery windows are carved into the northern wall.
+Last connected Sat Aug 31 13:13:13 2013 PDT from localhost
+#$#mcp-negotiate-can 588919606 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 588919606 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 588919606 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 588919606
+The North Vestibule
+A smaller vestibule opening onto the Great Hall. The bones of the old castle are exposed here; the walls rough-hewn blocks of black basalt, the floor smoothly polished stone of the same.  A brown Persian rug lies soft underfoot.  Someone has artfully hung a detailed painting on a wall.  Some chaise longues sit under the windows.  A butler's desk is pushed up against one of the walls.  A demi-lune table stands between the doors, ready to receive calling cards.  A porter's chair stands in the middle of the room, facing the doors.  The tracery windows are carved into the northern wall.
+Carrying:
+ a Look Command                          
+You see no "note" here.
+That is not a valid command.
+That is not a valid command.
+You see no "notes" here.
+Carrying:
+ a Look Command                          
+Usage:  @create <parent-class> named [name:]alias,...,alias
+   or:  @create <parent-class> named name-and-alias,alias,...,alias
+The generic thing(#5) has 22 kids.
+name                         dbref  #kids  #verbs  #props
+----                         -----  -----  ------  ------
+The generic note             #9     4      20      3
+The generic sittable object  #80    1      14      5
+The topic sign               #178   0      25      10
+The Generic Pilable Thing    #255   0      3       4
+The Generic Wind-Up Toy      #260   1      5       6
+The butler's key             #276   0      0       0
+The vase                     #281   0      0       0
+The microphone               #282   0      1       0
+The chandelier               #285   0      0       0
+The generic bot              #289   0      0       0
+The brass chandelier         #514   0      0       0
+The acanthus leaves          #520   0      0       0
+The frieze                   #522   0      0       0
+The cornice                  #523   0      0       0
+The basalt block             #528   0      0       0
+The flower                   #538   1      1       2
+The engraving                #556   0      0       0
+The tile                     #566   0      0       0
+The fuel                     #572   0      0       0
+The cabriole legs            #576   0      0       0
+The Clock                    #574   0      3       7
+The generic group            #244   1      0       0
+----                         -----  -----  ------  ------
+=> {}
+=> #9 (generic note)
+You now have notes with object number #579 and parent generic note (#9).
+The created object is now your current object.
+Line added to note.
+#$#dns-org-mud-moo-simpleedit-content 588919606 reference: "str:#579.text" name: notes.text type: string-list content*: "" _data-tag: 1165637649309
+#$#* 1165637649309 content: Lester S. Moore and Evaly de Witt
+#$#: 1165637649309
+Set text property of the notes (#579).
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           North Vestibule               0 seconds                         
+
+Total: 1 person, who has been active recently.
+=> 0
+*** Shutting down: shutdown() called by Crag (#243) ***

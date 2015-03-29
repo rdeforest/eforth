@@ -1,0 +1,23 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Guest Room
+Binder appears to be staying here, as his junk is piled all over.  There's a door in the north wall which exits back out into the hallway.  A hammock is here.
+You see a Lunch Bag, a rack, a Scrabble board, and a timer here.
+Binder and Devil are here, asleep.
+Last connected Sat Jun 10 08:39:19 2006 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 1828888361 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1828888361 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1828888361 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1828888361
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Guest Room                    0 seconds   virtually everything  
+
+Total: 1 person, who has been active recently.
+Crag idles: pricing replacement hd
+[Idling at 8:26 A.M. on Thu, Jul 6: pricing replacement hd]

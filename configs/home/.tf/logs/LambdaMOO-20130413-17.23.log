@@ -1,0 +1,60 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 60 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+Last connected Sun Mar 31 10:51:04 2013 PDT from 63.224.54.239
+#219:do_huh   this none this
+":do_huh(verb,args)  what :huh should do by default.";
+{verb, args} = args;
+if ($perm_utils:controls(caller_perms(), player) || caller_perms() == player)
+  this.feature_task = {task_id(), verb, args, argstr, dobj, dobjstr, prepstr, iobj, iobjstr};
+endif
+set_task_perms(cp = caller_perms());
+notify = $perm_utils:controls(cp, player) ? "notify" | "tell";
+if (verb == "")
+  "should only happen if a player types backslash";
+  player:(notify)("I don't understand that.");
+  return;
+endif
+if (player:my_huh(verb, args))
+  "... the player found something funky to do ...";
+elseif (caller:here_huh(verb, args))
+  "... the room found something funky to do ...";
+elseif (player:last_huh(verb, args))
+  "... player's second round found something to do ...";
+elseif (dobj == $ambiguous_match)
+  if (iobj == $ambiguous_match)
+    player:(notify)(tostr("I don't understand that (\"", dobjstr, "\" and \"", iobjstr, "\" are both ambiguous names)."));
+  else
+    player:(notify)(tostr("I don't understand that (\"", dobjstr, "\" is an ambiguous name)."));
+  endif
+elseif (iobj == $ambiguous_match)
+  player:(notify)(tostr("I don't understand that (\"", iobjstr, "\" is an ambiguous name)."));
+else
+  player:(notify)("I don't understand that.");
+  player:my_explain_syntax(caller, verb, args) || (caller:here_explain_syntax(caller, verb, args) || this:explain_syntax(caller, verb, args));
+endif
+No new activity on any of your lists.

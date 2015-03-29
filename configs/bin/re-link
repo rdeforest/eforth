@@ -1,0 +1,62 @@
+#!/usr/bin/perl
+
+# Update symlinks in ~ to point to $project_root/home
+
+use strict;
+use warnings;
+
+use File::Basename;
+use Cwd;
+
+my $projectRoot = getProjectRoot();
+
+relinkDir($ENV{HOME}, $projectRoot . "/home");
+
+# Assumes script is in $root/bin or something
+sub getProjectRoot {
+    return Cwd::realpath(dirname($0) . "/..");
+}
+
+sub relinkItem {
+    my ($item, $dest) = @_;
+
+    return if $item =~ qr{/\..?$};
+
+    print "relinkItem($item, $dest)\n";
+
+    if (-d $item) {
+        relinkDir($item, $dest);
+    } else {
+        relinkFile($item, $dest);
+    }
+}
+
+sub relinkFile {
+    my ($config, $real) = @_;
+
+    -e $real && !-l $real and die "file $real exists and isn't a link";
+
+    -e $real && unlink $real;
+    symlink $config, $real;
+}
+
+sub relinkDir {
+    my ($configDir, $realDir) = @_;
+
+    if (-l $realDir) {
+        unlink $realDir;
+        symlink $configDir, $realDir;
+        return;
+    }
+
+    if (!-e $realDir) {
+        mkdir $realDir;
+    }
+
+    -d $realDir or die "relinkDir called with non-directory '$realDir'";
+
+    opendir(C, $configDir);
+    while(my $item = readdir(C)) {
+        relinkItem("$configDir/$item", "$realDir/$item");
+    }
+}

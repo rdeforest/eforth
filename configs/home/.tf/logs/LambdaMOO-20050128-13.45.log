@@ -1,0 +1,227 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is approximately 2 seconds; there are 156 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             1 new message
+    *Core-DB-Issues (#8175)              8 new messages
+Last connected Fri Dec 31 11:32:49 2004 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 1012 on *Server-Hackers (#24451):
+Date:    Friday  7-Jan-05 23:19:24
+From:    qwandor (#121000)
+To:      *Server-Hackers (#24451)
+Subject: Re: list assignment bug
+
+That looks very much like the bug I submitted to the sourceforge bugtracker for lambdaMOO about a year ago. :-)
+Someone posted a followup to it which you may want to read:
+http://sourceforge.net/tracker/index.php?func=detail&aid=929609&group_id=3692&atid=103692
+--------------------------
+Message 803 on *News (#123):
+Date:    Wednesday 12-Jan-05 00:00:08
+From:    ARB Elections Core (#52221)
+To:      *News (#123)
+Subject: ARB election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Architecture Review Board has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        75        12        10   *   Legion (#69858)
+        65        17        13   *   Profane (#30788)
+        43        30        15   *   Sych (#114174)
+        40        43        11       Digbette (#121301)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+Message 4861 on *Core-DB-Issues (#8175):
+Date:    Sunday  2-Jan-05 14:00:06
+From:    Miral (#107983)
+To:      *Core-DB-Issues (#8175)
+
+>  has anyone extracted a recent core?  I did a core-db extraction in
+>  2003. anyone do one more recent then that? if you want it I do
+>  have it up for download.
+
+@peek 4819 on *core
+
+For that matter, @peek 4809 on *core too, since it talks about some cool changes to make-core-database :)
+--------------------------
+Message 4862 on *Core-DB-Issues (#8175):
+Date:    Tuesday  4-Jan-05 07:33:22
+From:    Heathcliff (#89987)
+To:      *Core-DB-Issues (#8175) and Dapple (#118034)
+Subject: $player:set_aliases versus $root_class:set_aliases
+
+$root_class:set_aliases says to return 1 for success and 0 for failure, while $player:set_aliases says to return 1 for changed aliases and 0 for unchanged aliases.   It seems to me that unchanged-aliases do not, in fact, represent failure.
+
+Should this be changed?
+--------------------------
+Message 4819 on *Core-DB-Issues (#8175):
+Date:    Tuesday 18-May-04 03:21:21
+From:    Rog (#4292)
+To:      *Core-DB-Issues (#8175)
+Subject: latest LambdaCore (second try)
+
+ftp://ftp.lambda.moo.mud.org/pub/MOO/LambdaCore-17May04.db.gz
+
+Just to get it out there, though there may one or two more things to fix (well okay, there are *always* one or two more things to fix).
+
+Anyway, have at it.
+--------------------------
+< connected: Crag. Total: 158 >
+Message 4863 on *Core-DB-Issues (#8175):
+Date:    Wednesday  5-Jan-05 03:44:22
+From:    Miral (#107983)
+To:      *Core-DB-Issues (#8175)
+Subject: Re: $player:set_aliases versus $root_class:set_aliases
+
+>  $root_class:set_aliases says to return 1 for success and 0 for
+>  failure, while $player:set_aliases says to return 1 for changed
+>  aliases and 0 for unchanged aliases.   It seems to me that
+>  unchanged-aliases do not, in fact, represent failure.
+>  
+>  Should this be changed?
+
+$player:@addalias, at least, appears to consider a return value of 0 to mean "aliases not changed as expected" (followed by a list of what the new aliases are), and a return value of 1 that didn't result in the expected change to mean "that name change is not allowed" (without the new list).
+
+Either response is potentially useful; neither seem to fit precisely in either of the documented return cases for :set_aliases...
+
+$player:@rmalias, on the other hand, treats a 1 return always as complete success, and 0 return as "not changed as expected".  This seems to better fit the $root_class's definition of the return values... at least to me, anyway :)  You just need to consider "failure" as including "only partial success".  Having it return 1 for only partial success will result in an odd message (where it states that it's removed an alias, but then displays the list of new aliases that still contains that alias).
+
+@addalias also interprets E_INVARG to mean "you can't add any more aliases", and @rmalias interprets it as "that name change is not allowed".  Yay, consistency :)
+--------------------------
+Message 4864 on *Core-DB-Issues (#8175):
+Date:    Wednesday  5-Jan-05 03:57:56
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: Re: Re: $player:set_aliases versus $root_class:set_aliases
+
+>  @addalias also interprets E_INVARG to mean "you can't add any more aliases", and @rmalias interprets it as "that name change is not allowed".  Yay, consistency :)
+
+I'd think that E_QUOTA would be an intuitively better and more accurate error for @addalias to be receiving and interpreting as "You can't add any more aliases", while similarly E_NACC would be an intuitively better and more accurate error for @rmalias to be receiving and interpreting as "That name change is not allowed"
+--------------------------
+Message 4865 on *Core-DB-Issues (#8175):
+Date:    Friday  7-Jan-05 17:20:47
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: $object_utils:accessible_verbs(), revisited
+
+While $object_utils:accessible_verbs(), in its present form, has, indeed, gotten corrected [Xref: msgs 4845, 4847, 4849 on *Core-DB-Issues], I had always thought that my version was somehow more efficient.
+I now have the numbers proving this to be true, check it out:
+
+Object                        # Verbs    Ticks w/ curr    Ticks w/ mine
+------                        -------    -------------    -------------
+The System Object (#0)             31              420              264
+Root Class (#1)                    39              524              328
+generic player (#6)               108             1421              880
+string utilities (#20)             76             1005              624
+object utilities (#3669)           39              524              328
+code utilities (#153)              61              810              504
+Adventurers Database (#46)         94             1239              768
+generic voodoo doll (#74)         100             1317              816
+object_db (#33376)                 11              160              104
+Magic Database (#328)             140             1837             1136
+Generic Zapper (#81)                3               56               40
+iron latch (#15122)                 2               43               32
+In the Well (#9962)                 1               30               24
+Note PADD (#59443)                  0               17               16
+
+
+I had hoped to add a $command_utils:suspend_if_needed(0) within the for-loop; however, that cost an extra 8 ticks or so, per verb, resulting in tick sizes that were not only not better, but, in some cases with my exemplars here, twice as bad!  :|
+So... no suspending if needed, oh well.
+
+Without further ado, here is the code for my version of $object_utils:accessible_verbs(<OBJ>)
+
+"  accessible_verbs(object)   => a list of verb names (or E_PERM) regardless of readability of object";
+{thing} = args;
+valid(thing) || raise(E_INVARG, "Invalid object argument");
+{num_verbs, verbs} = {length(verbs(thing)), {}};
+set_task_perms(caller_perms());
+"... caching num of verbs before for loop saves us ticks ...";
+for i in [1..num_verbs]
+  verbs = {@verbs, `verb_info(thing, i)[3] ! E_PERM'};
+endfor
+return verbs;
+
+--------------------------
+Message 4866 on *Core-DB-Issues (#8175):
+Date:    Friday  7-Jan-05 19:28:10
+From:    Xeric (#112019)
+To:      *Core-DB-Issues (#8175)
+
+Yeah, that's great and all, except if length(verbs(thing)) is going to work you could just put in `return verbs(thing)'...
+--------------------------
+#3669:accessible_verbs   this none this
+"  accessible_verbs(object)   => a list of verb names (or E_PERM) regardless of readability of object";
+set_task_perms(caller_perms());
+thing = args[1];
+verbs = {};
+i = 1;
+while ((info = `verb_info(thing, i) ! E_PERM, E_VERBNF') != E_VERBNF)
+  verbs = {@verbs, info ? info[3] | E_PERM};
+  i = i + 1;
+endwhile
+return verbs;
+Message 4867 on *Core-DB-Issues (#8175):
+Date:    Friday  7-Jan-05 19:32:27
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: Reply: Xeric (#112019)
+
+No, you can't.  The whole purpose of the verb is to see which verbs are accessible /to the caller-verb's programmer/.
+That's why we set_task_perms(caller_perms()), and that's why we can't just use the wizperms to return verbs(thing)
+--------------------------
+Message 4868 on *Core-DB-Issues (#8175):
+Date:    Friday  7-Jan-05 19:45:54
+From:    Xeric (#112019)
+To:      *Core-DB-Issues (#8175)
+
+G_S pointed out that I was missing the verbs() vs s_t_p() call there.  I notice on $code_utils:verbs (in jhcore) there's a try return verbs(); except (e_perm) [hard way] endtry which covers 99% of objects.
+--------------------------
+No News (is good news)
+Name          Conn Idle G Location     Pop Age
+------------- ---- ---- - ------------ --- ---
+Crag (#58746) 4m   0s   m Storage room 1   30 
+
+Total 1 player.
+Name          Conn Idle G Location     Pop Age
+------------- ---- ---- - ------------ --- ---
+Crag (#58746) 4m   0s   m Storage room 1   30 
+
+Name              Disconn   Last G Location             Pop Age
+----------------- --------- ---- - -------------------- --- ---
+Q33 (#19845)      9d ago    48s  m bottle               0   ?? 
+Edge (#75142)     14d ago   6s   m Comfortably Numb     0   33 
+Cashmere (#69437) 50d ago   3m   f ICU2wd               0   ?? 
+Chaos (#6853)     65d ago   2h   m Limbo                0   27 
+Zachary (#4670)   114d ago  17d  m Limbo                0   ?? 
+Snick (#86403)    1766d ago 40s  f The Broodroom        0   32 
+SamIAm (#41011)   2153d ago 4h   m The Conversation Pit 0   43 
+Mao (#54886)      2153d ago 4h   m Under this Red Rock  0   ?? 
+
+Total 9 players; 1 online, 8 offline.

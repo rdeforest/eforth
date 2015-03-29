@@ -1,0 +1,1461 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 145 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             9 new messages
+    *Core-DB-Issues (#8175)              95 new messages
+    *Site-Issues (#72243)                4 new messages
+Last connected Thu Mar 16 07:53:17 2006 PST from 64.81.175.9
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+< connected: Crag. Total: 146 >
+Message 1072 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:18:52 2006 PST
+From:     Anodos (#21528)
+To:       *Server-Hackers (#24451)
+Subject:  Backspace problems
+
+I often hang out in the Coat Closet and as such I meet many new guests, on the MOO for the first time. Almost uniformly, they have problems with backspace, due to using the telnet program in Windows.
+
+Now I know we're all sensible anti-Microsoft snobs, and we know the REAL solution is for MS to fix things at their end, but in the meantime a lot of potential players are suffering for no good reason. Would it be very difficult to modify the server so that it intercepts ^H's and processes the input string appropriately?
+
+Anodos
+--------------------------
+Message 1073 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:25:39 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Looks like you'd need to add an interface to server/streams.c to remove characters from a stream and code to server/net_multi.c in the non-binary case between the 'isgraph' and the newline handling which looked for del/
+h and removed characters
+--------------------------
+Message 1074 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:25:53 2006 PST
+From:     mAtTY (#113071)
+To:       *Server-Hackers (#24451)
+Subject:  Backspace problems
+
+The real trick, as long as telnet does send char-at-a-time and MOO receives likewise, would be to see if MS telnet properly supports VT move-cursor escape sequences, or something curses-like, to actually backspace what it says it's backspacing (if I recall correctly, telnet moves the cursor to the left when you hit backspace, but leaves existing characters on the screen until overwritten).
+Is there more to it that I'm missing?
+--------------------------
+Message 1075 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:28:02 2006 PST
+From:     mAtTY (#113071)
+To:       *Server-Hackers (#24451)
+
+That is, after hacking the in-MOO buffers, of course. But a clueless newbie wouldn't appreciate a buffer hack, and *would* appreciate the stuff they backspace not staying on the screen.
+--------------------------
+Message 1076 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:29:43 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Raw telnet is never going to be a nice solution.  There are java clients that are probably better than any server hacking -- short of putting a whole mud client into the server.
+--------------------------
+Message 1077 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 17:31:08 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Also, I'm trying it now, and the 
+H echos and erases the character, it just still sends the whole garbage to MOO.
+--------------------------
+Message 1078 on *Server-Hackers (#24451):
+Date:     Thu Mar  2 23:32:56 2006 PST
+From:     Loufah (#116455)
+To:       *Server-Hackers (#24451)
+
+Maybe you could link GNU readline into the server...
+--------------------------
+Message 1079 on *Server-Hackers (#24451):
+Date:     Fri Mar  3 07:28:39 2006 PST
+From:     Luke-Jr (#115349)
+To:       *Server-Hackers (#24451)
+Subject:  Backspace
+
+GammaMOO has handled backspace characters for a while, though it doesn't mess w/ the user's local echoing
+--------------------------
+Message 1080 on *Server-Hackers (#24451):
+Date:     Fri Mar  3 07:35:24 2006 PST
+From:     Luke-Jr (#115349)
+To:       *Server-Hackers (#24451)
+Subject:  Standalone MOO applications possible
+
+I've successfully compiled JHCore-DEV-2 for x86_64...
+The binary is 1.3 MB, compiled for NP_SINGLE, and parses the real argv and gives it to #0:server_started
+So theoretically, someone can now write a standalone command-line application in MOO.
+If anyone wants the demo binary (ELF 64-bit LSB executable, AMD x86-64, version 1 (SYSV), for GNU/Linux 2.6.6, dynamically linked (uses shared libs), stripped), let me know where to email it (or I can upload it somewhere and send a link)
+If anyone has a practical use, let me know and I'll see about trying to get the compilation process nicer.
+Note that the binary is *not* 100% x86_64 bytecode, but a rather a mix of native x86_64, and a x86_64-specific (type sizes, mostly) MOO bytecode.
+--------------------------
+Message 825 on *News (#123):
+Date:     Tue Jan 17 04:25:13 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243) and *News (#123)
+Subject:  mail issues
+
+Sometime this weekend, Speakeasy's outgoing mail server got marked as a spammer by some RBL (Realtime Blackhole List).  The mistake has evidently been corrected, but it's going to take another day or two for the various ISPs (including Comcast and Yahoo) to update their lists.  Until then, mail sent from here may bounce.
+
+   --Rog
+--------------------------
+Message 827 on *News (#123):
+Date:     Thu Feb 16 17:48:15 2006 PST
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Open Ballot #62497 Ready for Voting
+Sender:   Petitioner (#4)
+
+Petition #62497 has received enough signatures to transform it into open Ballot:StopReaping (#62497): `Revamp Reaper System', which is now available for voting.  Type `read #62497' to see the text of the proposal and then `vote yes on #62497' to cast your vote in favor of it, `vote no on #62497' to cast your vote against it, or `abstain on #62497' to stop hearing about it.  Voting on this ballot will close on Thursday, March  2, at 05:48 pm, LambdaMOO Standard Time; until then, you can change your vote as often as you wish.  You can read (and contribute to) commentary on this proposal on the mailing list named *Ballot:StopReaping; type `help mail' for details.
+--------------------------
+                         Revamp Reaper System (#62497)                         
+                         -----------------------------                         
+                              by MugWump (#89069)                              
+            [Last edited on Friday, November 18, 2005 at 03:52 pm]             
+
+Upon passing of this petition/ballot, reapers' tasks will be redefined to- 
+ 
+A) removing all aliases except the main name from a $player up for reaping
+ (now held in a reap-hold stage), 
+ 
+B) reaping $players who have specifically mooicided/requested to be 
+ reaped and 
+ 
+C) maintaining a maillist of objects(*Estate-Sale (#20993) available for ownership transfer from $players in reap-hold stage and those who requested a reap. 
+Objects not picked up will remain with original $player.
+ 
+No other $players will be reaped, including those in the reap process as of the time of ballot passage.
+ 
+Definition of 'reap-hold stage' -
+ 
+$players go into 'reap-hold stage' at the point in time when they would be up for reaping.
+No player objects will be reaped, but upon a certain time of inactivity, the reapers can dole out the inactive player's objects for active maintenance.
+Unclaimed objects and code owned by players in this status will be claimable at any later time. Objects stay with the owner but can be claimed at any time.
+ 
+Clarification of requested reaping - 
+ 
+Any player up for reaping shall be considered to have requested reaping if e mooicided and didn't come back before such time as e became reapable.  Mooicide shall refer to any approved method, which currently means, jumping off the edge of the world.
+A mechanism shall also be implemented whereby any player may request that, in case e becomes eligible for reaping, e wishes to be reaped.
+ 
+Petition rationale - 
+ 
+Intent and Reasoning: The reap system is ineffectual and creates more problems than it solves. Please note this is NO WAY a reflection of the reapers, as they do a fantastic job given the constructs of the SYSTEM.
+Reaping is no longer necessary to control db bloat. Note Link's evaluation tool for projections.
+Items are currently recycled which should not be recycled. Verbs and code often break.
+Items of great sentimental value have been recycled and brought back. Note the Garden of Forked Paths.
+
+(You finish reading petition #62497, *B:StopReaping)
+Sorry, but that ballot is not open for voting.
+*Ballot:StopReaping  (#62497) [Public] [Approved]
+    A proposal that was voted on by the LambdaMOO population in the period
+    ending Thursday, March  2, 2006, at 06:02 pm, LambdaMOO Standard Time.  The
+    final vote count was 147 in favor, 48 opposed, and 32 abstaining.  The
+    measure passed.
+Message 828 on *News (#123):
+Date:     Tue Feb 28 15:54:56 2006 PST
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Open Ballot #120998 Ready for Voting
+Sender:   Petitioner (#4)
+
+Petition #120998 has received enough signatures to transform it into open Ballot:toadAssman (#120998): `toadAssman', which is now available for voting.  Type `read #120998' to see the text of the proposal and then `vote yes on #120998' to cast your vote in favor of it, `vote no on #120998' to cast your vote against it, or `abstain on #120998' to stop hearing about it.  Voting on this ballot will close on Tuesday, March 14, at 03:54 pm, LambdaMOO Standard Time; until then, you can change your vote as often as you wish.  You can read (and contribute to) commentary on this proposal on the mailing list named *Ballot:toadAssman, *Ballot:toadassy, or *Ballot:tass; type `help mail' for details.
+--------------------------
+Message 829 on *News (#123):
+Date:     Wed Mar  1 00:00:00 2006 PST
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Wednesday, March  8, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 830 on *News (#123):
+Date:     Thu Mar  2 17:48:16 2006 PST
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Voting closes on ballot #62497
+Sender:   Petitioner (#4)
+
+The voting period for Ballot:StopReaping (#62497): `Revamp Reaper System' has ended.  The final vote count is as follows:
+        In favor:   147
+        Against:    48
+        Abstaining: 32
+The proposal has passed and will be implemented by the wizards as soon as possible.
+--------------------------
+Message 831 on *News (#123):
+Date:     Wed Mar  8 00:00:00 2006 PST
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are two candidates which have been generated for balloting for the Reapers election.  Type `@reaper-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Wed Mar 22 00:00:00 2006 PST; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 832 on *News (#123):
+Date:     Tue Mar 14 16:09:37 2006 PST
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Voting closes on ballot #120998
+Sender:   Petitioner (#4)
+
+The voting period for Ballot:toadAssman (#120998): `toadAssman' has ended.  The final vote count is as follows:
+        In favor:   124
+        Against:    126
+        Abstaining: 41
+The proposal has failed to get twice as many votes in favor as against and so has not passed.
+--------------------------
+Message 4922 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 13:07:03 2005 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  size return for forked tasks
+
+Nosredna asked me for that a long time ago, to find memory hogging forked tasks.  Here's the CVS log entry:
+
+revision 1.7
+date: 2001/07/27 07:29:44;  author: bjj;  state: Exp;  lines: +65 -3
+Add a 10th list element to queued_task() entries with the size in bytes
+of the forked or suspended task.
+--------------------------
+Message 4921 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 09:00:27 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+I looked through the core, and the only lines of code where the 10th element of the task info list is accessed are these:
+
+$prog:@forked
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+$prog:@forked-v*erbose
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+--------------------------
+Message 4920 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 08:34:00 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> How is `size' (the missing arg) determined?
+
+It was added to the server after version 1.8.1.
+  list.v.list[10].type = TYPE_INT;
+  list.v.list[10].v.num = suspended_task_bytes(the_vm);
+
+And similar lines for a forked task.  Change size to ?size=0, I guess.
+--------------------------
+Message 4923 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 05:18:38 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  size of forked tasks not in 1.8.1 server
+
+Thanks for confirming the server-add Diopter, Xeric. I'd been wading through the SF logs via web; not pretty.
+
+Since the change isn't supported in the released server, can $prog:@forked and :@forked-v*erbose be modified as Diopter suggested?
+
+I'd say it's sad no one caught this before now, but I've only combed through the changes between the Apr99 and May2004 cores in past couple of weeks myself.
+--------------------------
+There is new activity on the following lists:
+    *Core-DB-Issues (#8175)              93 new messages
+    *Site-Issues (#72243)                4 new messages
+-- End of listing
+15 messages on *Core-DB-Issues (#8175):
+ 5007:+ Dec 17 15:35   Diopter (#98842)       (None.)
+ 5008:+ Jan 20 03:23   Galatea (#122047)      (None.)
+ 5009:+ Jan 20 15:14   Nosredna (#2487)       (None.)
+ 5010:+ Feb  6 22:27   pranakhan (#122634)    #97251:strformat() add to core?
+ 5011:+ Feb  9 17:52   Miral (#107983)        Re: #97251:strformat() add to cor
+ 5012:+ Feb 18 04:12   Galatea (#122047)      Couple of suggestions for improve
+ 5013:+ Feb 18 07:55   Nosredna (#2487)       Re: Couple of suggestions for imp
+ 5014:+ Feb 18 12:11   Llyrica (#86080)       mail interface wishlist
+ 5015:+ Feb 18 20:02   Galatea (#122047)      Traceback in #33337:@watch
+ 5016:+ Feb 19 05:19   Nosredna (#2487)       Re: Traceback in #33337:@watch
+ 5017:+ Feb 20 21:34   niney (#90845)         Re: mail interface wishlist
+ 5018:+ Mar 15 06:58   Roebare (#109000)      Suggested addition: $local.max_li
+ 5019:+ Mar 15 15:04   Miral (#107983)        Re: Suggested addition: $local.ma
+ 5020:+ Mar 15 15:21   Diopter (#98842)       Re: Suggested addition: $local.ma
+ 5021:+ Mar 15 15:33   Galatea (#122047)      Re: Suggested addition: $local.ma
+-----+
+Message 4923 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 05:18:38 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  size of forked tasks not in 1.8.1 server
+
+Thanks for confirming the server-add Diopter, Xeric. I'd been wading through the SF logs via web; not pretty.
+
+Since the change isn't supported in the released server, can $prog:@forked and :@forked-v*erbose be modified as Diopter suggested?
+
+I'd say it's sad no one caught this before now, but I've only combed through the changes between the Apr99 and May2004 cores in past couple of weeks myself.
+--------------------------
+Message 4922 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 13:07:03 2005 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  size return for forked tasks
+
+Nosredna asked me for that a long time ago, to find memory hogging forked tasks.  Here's the CVS log entry:
+
+revision 1.7
+date: 2001/07/27 07:29:44;  author: bjj;  state: Exp;  lines: +65 -3
+Add a 10th list element to queued_task() entries with the size in bytes
+of the forked or suspended task.
+--------------------------
+Message 4921 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 09:00:27 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+I looked through the core, and the only lines of code where the 10th element of the task info list is accessed are these:
+
+$prog:@forked
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+$prog:@forked-v*erbose
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+--------------------------
+Message 4920 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 08:34:00 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> How is `size' (the missing arg) determined?
+
+It was added to the server after version 1.8.1.
+  list.v.list[10].type = TYPE_INT;
+  list.v.list[10].v.num = suspended_task_bytes(the_vm);
+
+And similar lines for a forked task.  Change size to ?size=0, I guess.
+--------------------------
+Message 4919 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 05:34:02 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @forked == E_ARGS
+
+Ran into the following on a pristine May2004 core.
+---
+-  ; $login:sample_lag()
+-  => 0
+-  @forked
+-  Queue ID    Start Time            Owner         {Size} Verb (Line) [This]
+-  --------    ----------            -----         -----------------
+-  #58:@forked (this == #2), line 30:  Incorrect number of arguments
+-  (End of traceback)
+-  ; queued_tasks()
+-  => {{1266849411, 1132319987, 0, 15000, #2, #10, "sample_lag", 22, #10}}
+---
+
+[From $prog:@forked]
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+
+How is `size' (the missing arg) determined?
+--------------------------
+Message 4924 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 06:02:39 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @forked prob reveals a couple other weirdnesses
+
+$prog:@forked-v*erbose, while it defines `size' never does anything with it.
+
+$prog:@forked relies on $building_utils:size_string(size) to return a string. $building_utils:size_string returns !size as " ???", as needed for $building_utils:object_audit_string, but a bit long in this use.
+
+I'm torn between modifying $building_utils:size_string (might shift the " <1K" to "nnnB", as so many already do, plus add a "nnnG" branch) or just firewalling a 0 value in @forked[33]. Probably both.
+--------------------------
+Message 4925 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 07:27:04 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> $prog:@forked-v*erbose, while it defines `size' never does anything with it.
+
+That could have been unintentional.  @forked was modified to display the size field, but @forked-v, which is substantially identical to @forked, was modified only enough to avoid getting an error in the scattering assignment.
+
+> $building_utils:size_string returns !size as " ???", as needed for $building_utils:object_audit_string, but a bit long in this use.
+
+The fact that :size_string always returns something 4 characters long is probably a feature. :)
+--------------------------
+Message 4927 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 07:51:24 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  @forked
+
+Here are the diffs to turn $prog:@forked into a combined @forked/@forked-v*erbose
+
+*** $prog:@forked(old)
+--- $prog:@forked @forked-v*erbose
+***************
+*** 1,5 ****
+! "Syntax:  @forked [player]";
+! "         @forked all wizards";
+  "";
+! "For a normal player, shows all the tasks you have waiting in your queue, especially those forked or suspended. A wizard will see all the tasks of all the players unless the optional argument is provided.";
+  "The second form is only usable by wizards and provides an output of all tasks owned by characters who are .wizard=1. Useful to find a task that may get put in a random queue due to $wiz_utils:random_wizard. Or even finding verbs that run with wizard permissions that shouldn't be.";
+--- 1,5 ----
+! "Syntax:  @forked[-v*erbose] [player]";
+! "         @forked[-v*erbose] all wizards";
+  "";
+! "For a normal player, shows all the tasks you have waiting in your queue, especially those forked or suspended. A wizard will see all the tasks of all the players unless the optional argument is provided. @forked-v*erbose will show the full callers() stack for each task that has suspended (not a fresh fork).";
+  "The second form is only usable by wizards and provides an output of all tasks owned by characters who are .wizard=1. Useful to find a task that may get put in a random queue due to $wiz_utils:random_wizard. Or even finding verbs that run with wizard permissions that shouldn't be.";
+***************
+*** 6,7 ****
+--- 6,8 ----
+  set_task_perms(player);
++ verbose = $code_utils:verbname_match("@forked-v*erbose", verb);
+  if (!dobjstr)
+***************
+*** 29,31 ****
+      $command_utils:suspend_if_needed(0);
+!     {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+      time = start >= now ? ctime(start)[5..24] | su:left(start == -1 ? "Reading input ..." | tostr(now - start, " seconds ago..."), 20);
+--- 30,32 ----
+      $command_utils:suspend_if_needed(0);
+!     {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, ?size = 0} = task;
+      time = start >= now ? ctime(start)[5..24] | su:left(start == -1 ? "Reading input ..." | tostr(now - start, " seconds ago..."), 20);
+***************
+*** 33,38 ****
+      player:notify(tostr(su:left(tostr(q_id), 10), "  ", time, "  ", su:left(owner_name, 12), "  {", $building_utils:size_string(size), "} ", vloc, ":", vname, " (", lineno, ")", this != vloc ? tostr(" [", this, "]") | ""));
+!     if (index(vname, "suspend") && vloc == $command_utils)
+!       "Find out the first line of the callers() list from task_stack()";
+!       {sthis, svname, sprogger, svloc, splayer, slineno} = task_stack(q_id, 1)[2];
+        player:notify(tostr("                    Called By...  ", su:left(valid(sprogger) ? sprogger.name | tostr("Dead ", sprogger), 19), "  ", svloc, ":", svname, sthis != svloc ? tostr(" [", sthis, "]") | "", " (", slineno, ")"));
+      endif
+--- 34,42 ----
+      player:notify(tostr(su:left(tostr(q_id), 10), "  ", time, "  ", su:left(owner_name, 12), "  {", $building_utils:size_string(size), "} ", vloc, ":", vname, " (", lineno, ")", this != vloc ? tostr(" [", this, "]") | ""));
+!     if (verbose || (index(vname, "suspend") && vloc == $command_utils))
+!       "Display the first (or, if verbose, every) line of the callers() list, which is gotten by taking the second through last elements of task_stack().";
+!       stack = `task_stack(q_id, 1) ! E_INVARG => {}';
+!       for frame in (stack[2..verbose ? $ | 2])
+!         {sthis, svname, sprogger, svloc, splayer, slineno} = frame;
+          player:notify(tostr("                    Called By...  ", su:left(valid(sprogger) ? sprogger.name | tostr("Dead ", sprogger), 19), "  ", svloc, ":", svname, sthis != svloc ? tostr(" [", sthis, "]") | "", " (", slineno, ")"));
++       endfor
+      endif
+--------------------------
+Message 4928 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 07:58:19 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+
+[Dang. I need me a copy of whatever you use to compile diffs.]
+
+I'd still like to see `$building_utils:size_string(size)' replaced with `size ? $building_utils:size_string(size) | size'.
+
+>  The fact that :size_string always returns something 4 characters
+>  long is probably a feature. :)
+
+Heh, ain't it just. So for today's amusement, rewrite $building_utils:size_string without breaking @audit or @prospect. Ready? Begin.
+--------------------------
+Message 4929 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 08:06:21 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> [Dang. I need me a copy of whatever you use to compile diffs.]
+
+I @list the verbs, save them as Unix files, and run diff -C 1.  Here, there's a @diff on the Version Control FO (#4454).
+--------------------------
+Message 4930 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 13:58:06 2005 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  @forked
+
+Applied Diopter's diffs to @forked.  Renamed.
+--------------------------
+Message 4931 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 14:02:37 2005 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+
+BTW, I agree with Diopter that it needs to be a 4 character string or it'll look ugly.  OR, I suppose we could make it assume that size=0 means that it NEVER got a size and omit the column.  But that could be ugly to write.  (Feel free :-)
+--------------------------
+Message 4932 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 14:24:23 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+
+>  BTW, I agree with Diopter that it needs to be a 4 character string
+>  or it'll look ugly.  OR, I suppose we could make it assume that
+>  size=0 means that it NEVER got a size and omit the column.  But
+>  that could be ugly to write.  (Feel free :-)
+
+Well I did, the code follows, but in @forked just endrun the call if !size.
+
+From:
+34:      player:notify(tostr(su:left(tostr(q_id), 10), "  ", time, "  ", su:left(owner_name, 12), "  {", $building_utils:size_string(size), "} ", vloc, ":", vname, " (", lineno, ")", this != vloc ? tostr(" [", this, "]") | ""));
+
+To:
+34:      player:notify(tostr(su:left(tostr(q_id), 10), "  ", time, "  ", su:left(owner_name, 12), "  {", size ? $building_utils:size_string(size) | size, "} ", vloc, ":", vname, " (", lineno, ")", this != vloc ? tostr(" [", this, "]") | ""));
+
+Now, the rewrite of $building_utils:size_string.... It's slightly less simple, but it's more accurate. As-is the display for $spell is 200K off; it's a bit bigger than 1M.
+
+***** $building_utils:size_string
+size = tofloat(args[1]);
+factor = 1000.0;
+threshhold = {{1000.0, "B"}, {1000000.0, "K"}, {1000000000.0, "M"}, {1000000000000.0, "G"}};
+if (!size)
+  return " ???";
+endif
+for entry in ($list_utils:slice(threshhold, 1))
+  $command_utils:suspend_if_needed(0);
+  i = $list_utils:iassoc(entry, threshhold);
+  if (size == entry)
+    return tostr("1", threshhold[i + 1][2]);
+  elseif (size < entry)
+    size = tostr(size / (entry / factor))[1..3];
+    tag = threshhold[i][2];
+    break;
+  endif
+endfor
+if (size[2..3] == ".0")
+  size = size[1];
+elseif (size[3] == ".")
+  size = size[1..2];
+endif
+return tostr($string_utils:right(size, 3), tag) || " >2G";
+.
+--------------------------
+Message 4933 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 15:19:36 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+Given that $building_utils:size_string is measuring bytes, why does it use 1K = 1000 bytes anyway, rather than the more computer-centric 1024 bytes?
+
+Aside from that, given Roebare's changes, maybe we should increase the length to 5 characters or something?  Should be fairly simple to patch the core verbs that use it, and it's probably not used in too many other places.
+--------------------------
+Message 4934 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 15:21:51 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+(Not that I'm advocating redefining 1K = 1024 bytes.  The 1000 byte figure has been too deeply entrenched in the quota system to change now, I think.  I'm just curious.)
+--------------------------
+Message 4936 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 15:33:07 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Okay 'K
+
+The K is used in the vernacular. As when someone says, "That car costs $20K," they mean twenty thousand dollars, not $20,480.
+
+You're welcome to give it a try, though.
+--------------------------
+Message 4937 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 16:16:23 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Again on $building_utils:size_string
+
+But since I had the code in scrollback....
+
+I tried it anyway and Miral's suggestion pointed out how all those decimal places make reading @audit/@pros that much harder (and less useful). So I sank the floats.
+
+Also, the difference between using multiples of 1024 rather than 1000 was negligible at one decimal place, but kept it since it's more accurate in displaying object_size of <1K.
+
+Probably the only truly useful reason for implementing the mod is its handling of large object. A pristine core doesn't have anything near 1G, of course.
+
+***** $building_utils:size_string
+size = args[1];
+factor = 1024;
+threshhold = {{1024, "B"}, {1024000, "K"}, {1024000000, "M"}, {1024000000000, "G"}};
+if (!size)
+  return "  ???";
+endif
+for entry in ($list_utils:slice(threshhold, 1))
+  $command_utils:suspend_if_needed(0);
+  i = $list_utils:iassoc(entry, threshhold);
+  if (size == entry)
+    return tostr("1", threshhold[i + 1][2]);
+  elseif (size < entry)
+    size = tostr(size / (entry / factor));
+    tag = threshhold[i][2];
+    break;
+  endif
+endfor
+return tostr($string_utils:right(size, 4), tag) || " >2G";
+.
+--------------------------
+Message 4938 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 18:31:33 2005 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  size_string
+
+I had it report bytes originally, but it's too hard to read an @audit when it says "942B" "4K" -- your mind pegs the 942b as bigger.  That's why I went with "<1K".  Maybe there could be an optional arg to allow it to be more accurate, if someone wanted to write their own non-core stuff for display of object sizes.
+--------------------------
+Message 4939 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 19:28:40 2005 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+FYI, wRog did make a release 1.8.2 which includes that change.  If you're serious about running a MOO you have to have at least one wizard who is server-savvy, and right now that means paying attention to the SF CVS.
+--------------------------
+Message 4940 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 23:47:49 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+Well, technically the threshold numbers should be 1024, 1048576, 1073741824, and 1099511627776.  The 1024s stack up :)
+
+Which is why it's probably more hassle than it's worth -- try explaining to people why their default 50000 byte quota will only let them build 48.8K of stuff ;)
+
+FWIW, I like the idea of showing decimal places in @audit.  But what we'd probably need to do is to align on the decimal point, so that it stays readable.
+
+Here's my version of $building_utils:size_string -- it has a field size of 6 characters, and can support inputs from 0 to just shy of 4 computer-GB.  It's currently set for 1000-byte K's, for consistency, and will display <1K values as fractional K rather than as bytes, to avoid confusion:
+
+@program $building:utils:size_string
+{size} = args;
+size = tofloat(size);
+if (!size)
+  return "    ???";
+elseif (size < 0.0)
+  size = size + 4294967296.0;
+endif
+factor = 1000.0;
+for unit in ({"K", "M", "G"})
+  size = size / factor;
+  if (size < factor)
+    size = tostr(size);
+    if (point = index(size, "."))
+      size = size + "00";
+      return tostr($string_utils:right(size[1..point - 1], 3), size[point..point + 2], unit);
+    else
+      return tostr($string_utils:right(size, 3), ".00", unit);
+    endif
+  endif
+endfor
+return "    ?!?";
+.
+
+(The last line is purely for paranoia reasons -- unless the size of the INT type is changed there's no way it should ever be executed.)
+(Actually, the else condition of the index call is just paranoia as well, since the tostr should never produce a string without a dot.)
+--------------------------
+Message 4941 on *Core-DB-Issues (#8175):
+Date:     Sat Nov 19 23:51:34 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+Err, s/$building:utils/$building_utils/.  Darn proofreading.
+--------------------------
+Message 4942 on *Core-DB-Issues (#8175):
+Date:     Sun Nov 20 06:09:18 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Core v Server
+
+>  FYI, wRog did make a release 1.8.2 which includes that change.
+
+While wRog incremented version.c in the CVS tree back in May 2004, the release version has not changed.
+
+Sorry, but we don't all live on the bleeding edge. Since I don't implement every checkin, I only consult SF every month or so. The project page has no Latest News proclaiming a new release and the download page still lists the 1.8.1 tarball as the release version. I presume Rog would post an announcement on *server, as well, where there was some discussion back in Feb 2005 over the confusion with LM's displayed server_version().
+--------------------------
+Message 4943 on *Core-DB-Issues (#8175):
+Date:     Sun Nov 20 15:40:48 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+>  I had it report bytes originally, but it's too hard to read an
+>  @audit when it says "942B" "4K" -- your mind pegs the 942b as
+>  bigger.  That's why I went with "<1K".  Maybe there could be an
+>  optional arg to allow it to be more accurate, if someone wanted to
+>  write their own non-core stuff for display of object sizes.
+
+Done, and agreed on the `eye is bigger' arg. Floats are harder to option out, but byte display is pretty straightforward.
+
+Though probably best placed on $builder (presumed in all that follows), it's just a flag and easily customized. Any PC owners are welcome to contact me directly.
+
+***** $building_utils:size_string
+size = args[1];
+factor = 1024;
+threshhold = {{1024, "B"}, {1048576, "K"}, {1073741824, "M"}};
+sizelen = `!player:build_option("audit_bytes") ! ANY' ? 3 | 4;
+if (!size)
+  return $string_utils:right("???", sizelen);
+elseif (size < threshhold[1][1] && sizelen == 3)
+  return " <1K";
+elseif (size > threshhold[$][1])
+  "...floats required to compute big numbers > $maxint...";
+  return tostr($string_utils:right(floatstr(tofloat(size) / (1099511627776.0 / tofloat(factor)), 0), sizelen), "G");
+endif
+for entry in ($list_utils:slice(threshhold, 1))
+  $command_utils:suspend_if_needed(0);
+  i = $list_utils:iassoc(entry, threshhold);
+  if (size == entry)
+    return tostr("1", threshhold[i + 1][2]);
+  elseif (size < entry)
+    size = tostr(size / (entry / factor));
+    tag = threshhold[i][2];
+    break;
+  endif
+endfor
+return tostr($string_utils:right(size, sizelen), tag) || " >2G";
+"Rewritten, Roebare (#109000), 051119";
+"Byte display optional, per Nosredna (#2487), 051120";
+.
+
+[6] Modify :build_option to :<package>_option or rewrite for <package>_options:get.
+
+@prop $build_options.show_audit_bytes {"@audit/@prospectus shows `<1K'", "@audit/@prospectus shows bytes"} r ~WIZARD
+
+[1] Replace $build_options with #<package_options> and WIZARD as needed.
+
+@prop $builder_help.audit_bytes {"Usage:  @build-option [+|-|!]audit_bytes", "Lets you see the actual bytes of small objects in @audit and @prospectus.", "", "  -audit_bytes     @audit/@prospectus shows `<1K'.", "  +audit_bytes     @audit/@prospectus shows bytes.", "", "Default: -audit_bytes"} r ~HACKER
+
+[1] Optional, if help is provided on individual options.
+
+;; $build_options.names = {@$build_options.names, "audit_bytes"}
+;; $build_options._namelist = $build_options._namelist + "audit_bytes!"
+
+[1,2] Replace $build_options with #<package_options> as needed.
+
+Lastly, $builder_help.("@build-options") needs modification:
+Remove line: "Currently the only builder flag option available is"
+Insert line: " -audit_bytes   @audit/@prospectus shows `<1K'"
+Insert line: " +audit_bytes   @audit/@prospectus shows bytes'"
+
+[1] Replace with `The builder flags available are', or skip if placed anywhere other than $builder.
+[1-3] Again, replace with the appropriate help and options references.
+
+Note. The threshhold numbers were derived from ((1024 * 1024) * 1024) * 1024. If that's inaccurate, by all means chime in.
+--------------------------
+Message 4944 on *Core-DB-Issues (#8175):
+Date:     Sun Nov 20 16:01:39 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  Re: size_string -- correction
+
+Sorry, a correction to the verbcode.
+
+Replace:
+ 6:   return $string_utils:right("???", sizelen);
+
+With:
+ 6:   return sizelen == 3 ? " ???" | "  ???";
+--------------------------
+Message 4945 on *Core-DB-Issues (#8175):
+Date:     Sun Nov 20 18:28:57 2005 PST
+From:     Nosredna (#2487)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string -- correction
+
+So SHOULD we switch to 1024?  I'm with whoever said non-geeks will whine that 48.8k isn't 50000 bytes.
+Is there any way for me to see the floating point in action without implementing the dang thing?  I'd like to see what it looks like.  I suppose you could paste in something from your other moo.
+--------------------------
+Message 4946 on *Core-DB-Issues (#8175):
+Date:     Sun Nov 20 18:31:25 2005 PST
+From:     DruiDoWriMo (#110777)
+To:       *Core-DB-Issues (#8175)
+
+My vote: I'd rather not switch.
+--------------------------
+Message 4947 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 01:01:24 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+I vote we not switch either (even though I'm the one who brought it up in the first place!).
+
+My version of the verb uses floating point, and you can see it in action as #107983:size (aka ~Miral:size).
+  ;#107983:size(0) => "    ???"
+  ;#107983:size(10) => "  0.01K"
+  ;#107983:size(999) => "  0.99K"
+  ;#107983:size(1000) => "  1.00K"
+  ;#107983:size(999999) => "999.99K"
+  ;#107983:size(1000000) => "  1.00M"
+  ;#107983:size(1000000000) => "  1.00G"
+  ;#107983:size($maxint) => "  2.14G"
+And, just for amusement:
+  ;#107983:size($maxint + 1000000000) => "  3.14G"
+  ;#107983:size(-1) => "  4.29G"
+--------------------------
+Message 4948 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 06:40:19 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  size_string
+
+With the numbers restored to even thousands, `sizelen' is no longer needed.
+
+***** $building_utils:size_string
+size = args[1];
+factor = 1000;
+threshhold = {{1000, "B"}, {1000000, "K"}, {1000000000, "M"}};
+if (!size)
+  return " ???";
+elseif (size < 0 || size > threshhold[$][1])
+  if (size < 0  || size > $maxint)
+    return " >2G";
+  else
+    "...floats required to factor over $maxint...";
+    return tostr($string_utils:right(floatstr(tofloat(size) / 1000000000.0, 0), 3), "G");
+  endif
+elseif (size < threshhold[1][1] && `!player:build_option("audit_bytes") ! ANY')
+  return " <1K";
+endif
+for entry in ($list_utils:slice(threshhold, 1))
+  $command_utils:suspend_if_needed(0);
+  i = $list_utils:iassoc(entry, threshhold);
+  if (size == entry)
+    size = "1";
+    try
+      tag = threshhold[i + 1][2];
+    except error (E_RANGE)
+      tag = "G";
+    endtry
+    break;
+  elseif (size < entry)
+    size = tostr(size / (entry / factor));
+    tag = threshhold[i][2];
+    break;
+  endif
+endfor
+return tostr($string_utils:right(size, 3), tag);
+"Rewritten, Roebare (#109000), 051119-21";
+"Byte display optional, per Nosredna (#2487), 051120";
+.
+
+Results with this in place elsemoo:
+ ; $building_utils:size_string(100) => " <1K" (!audit_bytes)
+ ; $building_utils:size_string(100) => "100B" (+audit_bytes)
+ ; $building_utils:size_string(1000) => "  1K"
+ ; $building_utils:size_string(100000) => "100K"
+ ; $building_utils:size_string(1000000) => "  1M"
+ ; $building_utils:size_string(100000000) => "100M"
+ ; $building_utils:size_string(1000000000) => "  1G"
+ ; $building_utils:size_string($maxint) => "  2G"
+ ; $building_utils:size_string($maxint + 1) => " >2G"
+ ; $building_utils:size_string(1000000000000) => " >2G"
+--------------------------
+Message 4949 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 06:54:04 2005 PST
+From:     Nosredna (#2487)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+What I really meant was to see it in an @pros listing, all lined up, not to just see the output of eval.
+--------------------------
+Message 4950 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 11:21:03 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+Ok, I've copied the @pros line of verbs to myself and modified them to use my version of size_string instead.  Since I'm not wizardly I had to remove the set_task_perms calls, which means that you'll have to test it only on stuff that I'm allowed to query :)
+
+The verb is #107983:pros.  It's +x so you should be able to invoke it fairly easily.  The only other modification that I did was to change 26 to 23 in line 42 of (my copy of) $building_utils:object_audit_string, to keep the entire @pros listing the same width as it was before.
+
+> pros me
+Objects owned by Miral (from #0 to #122554):
+ 20.22K  rP[ 13] #107983 Miral                  *[Mail Room]
+  1.19K  rR      #100316 The Transuniversal Voi 
+  0.82K  rR       #66773 Small Apartment        
+  0.92K  rE       #91734 east                    The Transuniversal ->Small Apa
+  0.88K  rE       #28742 west                    Small Apartment->The Transuniv
+  0.69K  rN       #95904 Note about the gateway  [Small Apartment]
+  1.99K  rE      #104753 west                    *North Corridor->Small Apartme
+  1.79K  rE       #22817 east                    Small Apartment->*North Corrid
+  1.11K  rT       #98348 MOO Crew Badge          [Miral]
+  5.60K  fT[  7]  #56258 Generic Nameable Thing  [Miral]
+  5.64K KfT[  7]  #86855 Generic Integrating We  [Miral]
+  1.15K  rT       #53891 Amulet of Parallel Dim  [Miral]
+  5.26K KfT[  3] #103450 Generic Integrating Te  [Miral]
+  0.62K   T[  1]  #89379 Echo                    [Miral]
+  0.94K   T       #80268 television              [The Transuniversal Void]
+  1.10K   T       #57900 Miral's Timecard        [Miral]
+    ???   T       #35504 Unmeasured Object       [Miral]
+-- 17 objects.  Total bytes: 49,996.------------------------------------------
+
+@audit is there as well (as #107983:audit), but its output is substantially similar to @pros, so I haven't reproduced it here.
+--------------------------
+Message 4951 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 14:24:25 2005 PST
+From:     Mandy (#93395)
+To:       *Core-DB-Issues (#8175)
+
+I implemented @audit byte reporting elsemoo, and solved the "what looks bigger" problem by just using a space instead of a "B".  "9240 " looks smaller than "10K" when scanning an @audit list.  I also went with 4 digits instead of 3, so the numbers can go up to 9999 before switching to 10K, and up to 9999K before switching to 10M.  Makes for a very accurate measure that is also very easy to read, and is only one character wider than now.  The majority of objects are less than 10K, and report accurate to one byte.  Everything else reports accurate to one K, like now (except behemoths larger than 10M).  I can find the code if there is interest, but it is really very simple to write.  I kept 1K = 1000, which makes the most sense to the most people.
+--------------------------
+Message 4952 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 16:14:13 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+>  What I really meant was to see it in an @pros listing, all lined
+>  up, not to just see the output of eval.
+
+Oh. Sorry. Below is with !audit_bytes. (A second message to follow with +audit_bytes; skip as needed.)
+
+@pros hacker
+Objects owned by Hacker (from #0 to #1001):
+ 22K  rU[ 26]   #13 Generic BigList Utilities  [Nowhere]
+ 36K kfM[ 44]   #14 Generic Large-Capacity Ma  [Nowhere]
+  7K   D[ 10]   #16 Registration Database      [Nowhere]
+  3K   M[  6]   #17 Player-Creation-Log        [Mail Distribution Center]
+  3K  r [  3]   #18 Verb Help DB               [Nowhere]
+ 95K  rH[  3]   #19 Core Utility Help          [Nowhere]
+ 88K  rH[  2]   #22 Programmer Help            [Nowhere]
+ 31K  rH        #23 Wizard Help                [Nowhere]
+ 13K   D[ 13]   #25 Site DB                    [Nowhere]
+ 35K  rU[ 46]   #26 Math Utilities             [Nowhere]
+  5K  rU[  8]   #27 Set Utilities              [Nowhere]
+ 91K  rH[  1]   #28 Builtin Function Help      [Nowhere]
+  9K KfH[ 12]   #30 Generic Help Database      [Nowhere]
+ 12K Krp[ 20]   #31 Generic Guest              [Nowhere]
+  1M  rD[ 20]   #32 Mr. Spell                  [Nowhere]
+ 17K  rU[ 21]   #33 sequence utilities         [Nowhere]
+  4K  r [  6]   #35 you                        [Nowhere]
+  2K  rP[  2]   #36 Hacker                     [Nowhere]
+ 15K KfD[ 20]   #37 Generic Database           [Nowhere]
+  5K  rP[  7]   #38 Everyman                   [Nowhere]
+  7K  rD[  9]   #39 Player Database            [Nowhere]
+ 12K  rU[  9]   #41 gender utilities           [Nowhere]
+ 20K  rU[ 22]   #43 time utilities             [Nowhere]
+ 21K  rH        #44 Editor Help                [Nowhere]
+ 35K KfM[ 42]   #45 Generic Mail Recipient     [Nowhere]
+ 55K  r [ 57]   #46 Mail Distribution Center   [Nowhere]
+ 23K  rR[ 27]   #47 Mail Room                 
+  9K  rU[  9]   #51 matching utilities         [Nowhere]
+ 28K  rU[ 41]   #55 list utilities             [Nowhere]
+ 59K  rU[ 69]   #59 code utilities             [Nowhere]
+ 80K  rH[ 10]   #60 Help Database              [Nowhere]
+ 21K  rM[ 22]   #61 News                       [Mail Distribution Center]
+  4K  rR[  6]   #62 The First Room            
+ 11K  rT[ 20]   #63 Recycling Center           [Nowhere]
+ ??? kr [  5]   #64 Generic Garbage Object     [Nowhere]
+ 12K  rO[ 21]   #65 Mail Options               [Nowhere]
+  1K  rO[  2]   #66 Edit Options               [Nowhere]
+ <1K  rO        #67 Display Options            [Nowhere]
+ 12K KfO[ 12]   #68 Generic Option Package     [Nowhere]
+  7K  r [ 20]   #69 Error Generator            [Nowhere]
+  3K  f [  8]   #73 Generic BigList Resident   [Nowhere]
+  6K KfF[ 12]   #74 Generic Feature Object     [Nowhere]
+  4K  rO[  8]   #76 Programmer Options         [Nowhere]
+  3K  rO[  5]   #77 Builder Options            [Nowhere]
+ 32K  rU[ 39]   #79 Byte Quota Utilities       [Nowhere]
+  5K  r [ 11]   #80 @paranoid database         [Nowhere]
+  6K  rU[ 15]   #81 Object Quota Utilities     [Nowhere]
+  1K  rC[  1]   #83 Feature Warehouse          [Nowhere]
+ 39K  rH[  2]   #84 Builder Help DB            [Nowhere]
+ 34K  rH        #85 Mail Commands Help Db      [Nowhere]
+ 69K Krp[ 84]   #89 Frand's player class       [Nowhere]
+  4K  fF[  6]   #90 Stage-Talk Feature         [Feature Warehouse]
+  4K  fF[  3]   #91 Pasting Feature            [Feature Warehouse]
+ 29K  rU[ 28]   #92 Vector and Matrix Utils    [Nowhere]
+ 26K  rH        #93 Frand Help DB              [Nowhere]
+ 30K  rU[ 17]   #94 Conversion Utils           [Nowhere]
+-- 56 objects.  Total bytes: 2,533,557.---------------------------------------
+--------------------------
+Message 4953 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 16:18:00 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+Below is the same, with +audit_bytes.
+
+@pros hacker
+Objects owned by Hacker (from #0 to #1001):
+ 22K  rU[ 26]   #13 Generic BigList Utilities  [Nowhere]
+ 36K kfM[ 44]   #14 Generic Large-Capacity Ma  [Nowhere]
+  7K   D[ 10]   #16 Registration Database      [Nowhere]
+  3K   M[  6]   #17 Player-Creation-Log        [Mail Distribution Center]
+  3K  r [  3]   #18 Verb Help DB               [Nowhere]
+ 95K  rH[  3]   #19 Core Utility Help          [Nowhere]
+ 88K  rH[  2]   #22 Programmer Help            [Nowhere]
+ 31K  rH        #23 Wizard Help                [Nowhere]
+ 13K   D[ 13]   #25 Site DB                    [Nowhere]
+ 35K  rU[ 46]   #26 Math Utilities             [Nowhere]
+  5K  rU[  8]   #27 Set Utilities              [Nowhere]
+ 91K  rH[  1]   #28 Builtin Function Help      [Nowhere]
+  9K KfH[ 12]   #30 Generic Help Database      [Nowhere]
+ 12K Krp[ 20]   #31 Generic Guest              [Nowhere]
+  1M  rD[ 20]   #32 Mr. Spell                  [Nowhere]
+ 17K  rU[ 21]   #33 sequence utilities         [Nowhere]
+  4K  r [  6]   #35 you                        [Nowhere]
+  2K  rP[  2]   #36 Hacker                     [Nowhere]
+ 15K KfD[ 20]   #37 Generic Database           [Nowhere]
+  5K  rP[  7]   #38 Everyman                   [Nowhere]
+  7K  rD[  9]   #39 Player Database            [Nowhere]
+ 12K  rU[  9]   #41 gender utilities           [Nowhere]
+ 20K  rU[ 22]   #43 time utilities             [Nowhere]
+ 21K  rH        #44 Editor Help                [Nowhere]
+ 35K KfM[ 42]   #45 Generic Mail Recipient     [Nowhere]
+ 55K  r [ 57]   #46 Mail Distribution Center   [Nowhere]
+ 23K  rR[ 27]   #47 Mail Room                 
+  9K  rU[  9]   #51 matching utilities         [Nowhere]
+ 28K  rU[ 41]   #55 list utilities             [Nowhere]
+ 59K  rU[ 69]   #59 code utilities             [Nowhere]
+ 80K  rH[ 10]   #60 Help Database              [Nowhere]
+ 21K  rM[ 22]   #61 News                       [Mail Distribution Center]
+  4K  rR[  6]   #62 The First Room            
+ 11K  rT[ 20]   #63 Recycling Center           [Nowhere]
+ ??? kr [  5]   #64 Generic Garbage Object     [Nowhere]
+ 12K  rO[ 21]   #65 Mail Options               [Nowhere]
+  1K  rO[  2]   #66 Edit Options               [Nowhere]
+825B  rO        #67 Display Options            [Nowhere]
+ 12K KfO[ 12]   #68 Generic Option Package     [Nowhere]
+  7K  r [ 20]   #69 Error Generator            [Nowhere]
+  3K  f [  8]   #73 Generic BigList Resident   [Nowhere]
+  6K KfF[ 12]   #74 Generic Feature Object     [Nowhere]
+  4K  rO[  8]   #76 Programmer Options         [Nowhere]
+  3K  rO[  5]   #77 Builder Options            [Nowhere]
+ 32K  rU[ 39]   #79 Byte Quota Utilities       [Nowhere]
+  5K  r [ 11]   #80 @paranoid database         [Nowhere]
+  6K  rU[ 15]   #81 Object Quota Utilities     [Nowhere]
+  1K  rC[  1]   #83 Feature Warehouse          [Nowhere]
+ 39K  rH[  2]   #84 Builder Help DB            [Nowhere]
+ 34K  rH        #85 Mail Commands Help Db      [Nowhere]
+ 69K Krp[ 84]   #89 Frand's player class       [Nowhere]
+  4K  fF[  6]   #90 Stage-Talk Feature         [Feature Warehouse]
+  4K  fF[  3]   #91 Pasting Feature            [Feature Warehouse]
+ 29K  rU[ 28]   #92 Vector and Matrix Utils    [Nowhere]
+ 26K  rH        #93 Frand Help DB              [Nowhere]
+ 30K  rU[ 17]   #94 Conversion Utils           [Nowhere]
+-- 56 objects.  Total bytes: 2,533,557.---------------------------------------
+
+Note. Sizes won't be identical to here since I backup old core verbs there before updating. If you prefer to poke at it live, that can be arranged.
+--------------------------
+Message 4954 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 21 21:51:19 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+Following some suggestions from Diopter, I've modified #107983:size.  It's basically the same, but a bit shorter.  It also now supports 64-bit MOOs, and will round rather than truncating.
+
+ie. size(999992) => "999.99K"; size(999999) => "  1.00M".
+--------------------------
+Message 4955 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 01:31:29 2005 PST
+From:     Rog (#4292)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: boring bugs
+
+>>  return tostr("The News (", this, ") has no `", $string_utils:from_list(pms[2][1..used], " "), "' messages.");
+>>
+>>  $news:_parse line 10: `used' used, not defined
+>
+Fixed this.  It was a bit of ^Y-programming gone awry, see line 25 of #100068:parse_mailread_cmd if you care deeply about where this came from.
+
+>  I poked at $news:_parse, but couldn't get it to parse all the way
+>  to the last branch in question -- what obscure mail-hole *does*
+>  that catch anyway?
+
+Try '@addnews after:1-Jan-2020 last:10 to #123'.  Not something that gets exercised very often, I'll grant. 
+--------------------------
+Message 4956 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 03:29:21 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  Re: size_string
+
+And before the typo gets propagated further and I unleash an undying beast like Seperate (ugh), s/threshhold/threshold/<everywhere>. I can only claim a temporary brain cloud. Thanks, Diopter.
+
+***** $building_utils:size_string
+size = args[1];
+factor = 1000;
+threshold = {{1000, "B"}, {1000000, "K"}, {1000000000, "M"}};
+if (!size)
+  return " ???";
+elseif (size < 0 || size > threshold[$][1])
+  if (size < 0  || size > $maxint)
+    return " >2G";
+  else
+    "...floats required to factor over $maxint...";
+    return tostr($string_utils:right(floatstr(tofloat(size) / 1000000000.0, 0), 3), "G");
+  endif
+elseif (size < threshold[1][1] && `!player:build_option("audit_bytes") ! ANY')
+  return " <1K";
+endif
+for entry in ($list_utils:slice(threshold, 1))
+  $command_utils:suspend_if_needed(0);
+  i = $list_utils:iassoc(entry, threshold);
+  if (size == entry)
+    size = "1";
+    try
+      tag = threshold[i + 1][2];
+    except error (E_RANGE)
+      tag = "G";
+    endtry
+    break;
+  elseif (size < entry)
+    size = tostr(size / (entry / factor));
+    tag = threshold[i][2];
+    break;
+  endif
+endfor
+return tostr($string_utils:right(size, 3), tag);
+"Rewritten, Roebare (#109000), 051119-22";
+"Byte display optional, per Nosredna (#2487), 051120";
+.
+--------------------------
+Message 4957 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 04:21:46 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @lastlog
+
+While I'm being annoying, let me make another plea for replacing $player:@lastlog with #109000:@lastlog. It doesn't tick out here, even with !args; it allows for a smaller packet, `the last hour'; it includes a maximum, with a wizardly override; and, it sorts the list, most recent first. It includes most of the changes in #5803:@lastlog (sorry, too many abuses of :who_location_msg).
+
+If not for $player, maybe some PC owner can pick it up.
+--------------------------
+You have requested a listing of 2876 players.  That is too long a list; specify individual players you are interested in.
+Players who have connected within the last day:
+  Crag last connected Sun Mar 19 17:03:17 2006 PST.
+Message 4958 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 04:51:23 2005 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+
+So I think I like Miral's floating point in @pros better than using integers and "<1K".  "0.82K" does look smaller than "4.1K".  What do others think?  (Is Roebare going to kill me because his is the one with integers still and he's been doing lots of work on it?)
+--------------------------
+Message 4959 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 06:03:08 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+
+>  What do others think?  (Is Roebare going to kill me because his is
+>  the one with integers still and he's been doing lots of work on
+>  it?)
+Kill? No. But I have this thing here, carved of an onion, that IS going to make knitting (well, perling at least) darn uncomfortable for the next month or so.
+
+But seriously, in Miral's code s/args/args[1]/1 to trap bad passes. And in going from a four-character string to seven, I'd rather see the diff pared off the location column than the name column. As for the busy-ness, I can train my eye to track the integer value of n.nn down a list, but I find my eye jumping to register the unit, if that makes any sense.
+--------------------------
+Message 4960 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 06:29:35 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  size_string
+
+Only @audit would need adjusting from name to location. @pros already trims location.
+
+I stuck the floats back into my code and the code works, though I'm probably spending too many cycles on traps that aren't needed.
+--------------------------
+Message 4961 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 12:33:16 2005 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+So does anyone else like/hate the floats?  I don't want to install something and have a million complaints the day after.  (Of course people who aren't reading *core won't have a vote, and they may well complain.  Maybe I'll announce it on *wizard-gazette.)
+Roebare, are your verbs all ready to @copy from somewhere?
+--------------------------
+Message 4962 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 12:44:08 2005 PST
+From:     Hydros (#106189)
+To:       *Core-DB-Issues (#8175)
+
+I'm not a big fan of floats, but I'll probably be indifferent to the change.  Float it up, floaty.
+--------------------------
+Message 4963 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 12:44:39 2005 PST
+From:     Sycholic (#114174)
+To:       *Core-DB-Issues (#8175)
+
+float away, float way.....
+--------------------------
+Message 4964 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 13:05:14 2005 PST
+From:     Kosama_Bin_Laden (#113671)
+To:       *Core-DB-Issues (#8175)
+
+I don't think you ever get a million complaints about anything these days.  Usually it's just me.
+--------------------------
+Message 4965 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 15:42:20 2005 PST
+From:     DruiDoWriMo (#110777)
+To:       *Core-DB-Issues (#8175)
+
+I like the floats. But I think it'd be nice to have a @built-opt for any whiners. (And maybe even an option to see stuff in 1024-K's for people who like that.)
+--------------------------
+Message 4966 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 19:51:16 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+>  Date:     Tue Nov 22 12:33:16 2005 PST
+>  From:     Nosredna (#2487)
+>  To:       *Core-DB-Issues (#8175)
+>  Subject:  Re: size_string
+>  
+>  So does anyone else like/hate the floats?  I don't want to install
+>  something and have a million complaints the day after.  (Of course
+>  people who aren't reading *core won't have a vote, and they may
+>  well complain.  Maybe I'll announce it on *wizard-gazette.)
+>  Roebare, are your verbs all ready to @copy from somewhere?
+>  Roebare, are your verbs all ready to @copy from somewhere?
+
+If I can have a day to wring out the unneeded traps. Two, and I'll see if I can make it swing both ways to forestall the...traditionalists.
+
+Druid, at two decimal places 1000 v 1024 makes no diff, though I'll double-check. The total bytes displayed isn't derived from this call.
+--------------------------
+Message 4967 on *Core-DB-Issues (#8175):
+Date:     Tue Nov 22 22:36:05 2005 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+
+>  But seriously, in Miral's code s/args/args[1]/1 to trap bad
+>  passes.
+
+Huh?  My version will raise E_ARGS if you pass anything other than a single parameter (because I like parameter checking).  If that's not desired behaviour, then you can disable error checking with "del 1; s/(size)/(args[1])/1".
+
+>  And in going from a four-character string to seven, I'd rather
+>  see the diff pared off the location column than the name column.
+
+Fair enough.  Though I had a cunning plan for that one too -- if people decided that the extended precision was worth it, then I was going to look at rewriting the display to take the player's linelen into account.  The whole @pros listing only uses up a third of my screen width, so it seems silly to be trimming fields :)
+
+>  Druid, at two decimal places 1000 v 1024 makes no diff, though I'll double-check.
+
+I beg to differ:
+  Bytes      @1000   @1024
+    500      0.50K   0.49K
+    512      0.51K   0.50K
+   1024      1.02K   1.00K
+  88064     88.06K  86.00K
+--------------------------
+Message 4968 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 23 08:17:20 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: size_string
+
+>  So does anyone else like/hate the floats?  I don't want to install
+>  something and have a million complaints the day after.  (Of course
+>  people who aren't reading *core won't have a vote, and they may
+>  well complain.  Maybe I'll announce it on *wizard-gazette.)
+>  Roebare, are your verbs all ready to @copy from somewhere?
+
+Here it is in total (replacing what I posted earlier, including all of 4943 on *Core-DB-Issues).
+
+Flags are included that allow:
+- Existing format, integer display such as ` <1K'
+- Integer display, such as `123B'
+- Full floating-point display, such as `  0.12K'
+
+No announcement on *wizard-gazette is needed. Defaults err to the current display, so players see no difference.
+
+
+-----BACKUP & MODIFY $building_utils:size_string
+
+@copy $building_utils:size_string to :size_string(old)
+
+@prog $building_utils:size_string
+size = args[1];
+if (typeof(size) != INT)
+  return E_INVARG;
+endif
+if (`!player:build_option("audit_float") ! ANY')
+  "...use integers to determine a four-char string...";
+  factor = 1000;
+  threshold = {{1000, "B"}, {1000000, "K"}, {1000000000, "M"}};
+  if (!size)
+    return " ???";
+  elseif (size < 0 || size > threshold[$][1])
+    if (size < 0 || size > $maxint)
+      return " >2G";
+    else
+      "...floats still required to factor over $maxint...";
+      return tostr($string_utils:right(floatstr(tofloat(size) / 1000000000.0, 0), 3), "G");
+    endif
+  elseif (size < threshold[1][1] && `!player:build_option("audit_bytes") ! ANY')
+    return " <1K";
+  endif
+  for entry in ($list_utils:slice(threshold, 1))
+    $command_utils:suspend_if_needed(0);
+    i = $list_utils:iassoc(entry, threshold);
+    if (size == entry)
+      size = "1";
+      try
+        unit = threshold[i + 1][2];
+      except error (E_RANGE)
+        unit = "G";
+      endtry
+      break;
+    elseif (size < entry)
+      size = tostr(size / (entry / factor));
+      unit = threshold[i][2];
+      break;
+    endif
+  endfor
+  return tostr($string_utils:right(size, 3), unit);
+else
+  "...use floats to determine a seven-char string...";
+  size = tofloat(size);
+  factor = 1024.0;
+  "...be precise, `((1024.00 * 1024.00) * 1024.00) * 1024.00'...";
+  threshold = {{1048576.0, "K"}, {1073741824.0, "M"}, {1099511627776.0, "G"}};
+  if (!size)
+    return "    ???";
+  elseif (size < 0.0 || size > threshold[$][1])
+    "...special handling for bad conversions & big numbers...";
+    if (size < 0.0 || size > tofloat($maxint))
+      return "    >2G";
+    else
+      return tostr($string_utils:right(floatstr(size / 1000000000.0, 2), 3), "G");
+    endif
+  endif
+  for entry in ($list_utils:slice(threshold, 1))
+    $command_utils:suspend_if_needed(0);
+    i = $list_utils:iassoc(entry, threshold);
+    if (size == entry)
+      size = "1";
+      try
+        unit = threshold[i + 1][2];
+      except error (E_RANGE)
+        "...in another decade, maybe...";
+        unit = "T";
+      endtry
+      break;
+    elseif (size < entry)
+      size = floatstr(size / (entry / factor), 2);
+      unit = threshold[i][2];
+      break;
+    endif
+  endfor
+  return tostr($string_utils:right(size, 6), unit);
+endif
+"Rewritten by Roebare (#109000), 051119-23";
+"With inspiration from Miral (#107983) and assistance from Diopter (#98842)";
+"Byte & float display optional, per Nosredna (#2487), 051120-22";
+.
+
+[5, 18] Modify :build_option to :<package>_option or rewrite for <package>_options:get.
+[*] Also available as #109000:size_string.
+
+-----ADD $build_options
+
+@prop $build_options.show_audit_bytes {"@audit/@prospectus shows `<1K'", "@audit/@prospectus shows bytes"} r ~WIZARD
+
+@prop $build_options.show_audit_float {"@audit/@prospectus shows integer sizes (1K)", "@audit/@prospectus shows floating-point sizes (1.00K)"} r ~WIZARD
+
+[*] Replace $build_options with #<package_options> and ~WIZARD as needed.
+
+-----ADD $builder_help
+
+@prop $builder_help.audit_bytes {"Usage:  @build-option [+|-|!]audit_bytes", "Lets you see the actual bytes of small objects in @audit and @prospectus.  Ignored if `audit_float' is turned on.", "", "  -audit_bytes     @audit/@prospectus shows `<1K'", "  +audit_bytes     @audit/@prospectus shows bytes.", "", "Default: -audit_bytes"} r ~HACKER
+
+@prop $builder_help.audit_float {"Usage:  @build-option [+|-|!]audit_float", "Lets you see object sizes in @audit and @prospectus as floating point numbers to two decimals.", "", "  -audit_float     @audit/@prospectus shows integer sizes (1K)", "  +audit_float     @audit/@prospectus shows floating-point sizes (1.23K)", "", "Default: -audit_bytes"} r ~HACKER
+
+[*] Optional, if help is provided on individual options.
+
+---
+
+;; $build_options.names = {@$build_options.names, "audit_bytes"}
+;; $build_options.names = {@$build_options.names, "audit_float"}
+;; $build_options._namelist = $build_options._namelist + "audit_bytes!"
+;; $build_options._namelist = $build_options._namelist + "audit_float!"
+
+[*] Replace $build_options with #<package_options> as needed.
+
+---
+
+Lastly, $builder_help.("@build-options") needs modification:
+
+Remove line: "Currently the only builder flag option available is"
+Insert line: "The available builder flags are:"
+Insert line: " -audit_bytes   @audit/@prospectus shows `<1K'; ignored if +audit_float"
+Insert line: " +audit_bytes   @audit/@prospectus shows bytes'; ignored if +audit_float"
+Insert line: " -audit_float   @audit/@prospectus shows integer sizes (1K)"
+Insert line: " +audit_float   @audit/@prospectus shows floating-point sizes (1.23K)"
+
+[1, 2] Skip if placed anywhere other than $builder.
+[*] Replace with the appropriate help and options references as needed.
+[*] Long bloody string list. You can copy it, modified as above, from #109000.("@build-options").
+
+-----END
+--------------------------
+There is new activity on the following lists:
+    *Core-DB-Issues (#8175)              50 new messages
+    *Site-Issues (#72243)                4 new messages
+-- End of listing
+Message 5021 on *Core-DB-Issues (#8175):
+Date:     Wed Mar 15 15:33:38 2006 PST
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Suggested addition: $local.max_listlen
+
+>  Date:     Wed Mar 15 15:04:12 2006 PST
+>  From:     Miral (#107983)
+>  To:       *Core-DB-Issues (#8175)
+>  Subject:  Re: Suggested addition: $local.max_listlen
+>  
+>  >  try
+>  >    max = $local.max_listlen;
+>  >  except (ANY)
+>  >    max = 100;
+>  >  endtry
+>  
+>  I would modify that to:
+>    max = `$local.max_listlen ! ANY => 100';
+>  
+>  Though I'm not convinced about the labelling here.  If you're
+>  going to do something like that, why not call it something like
+>  "max_players_displayed" and use it only in player contexts (@who,
+>  @players, etc).  Other limits should be used in other places.
+>  Otherwise it's not particularly flexible.
+
+How about, instead of referencing the prop directly, route through a verb which would determine what value, based on context, to use?
+say, some strange lookup table based on the calling verb's name (as obtained from callers())
+then indiviualistic values could be provided for different uses, such as list processing vs who listings
+i'd recommend an assoc lookup, assoc'ing the calling verb's name with a property on $local that would then store the intended value
+And have a default value also stored in a prop on $local...
+--------------------------
+Message 52 on *Site-Issues (#72243):
+Date:     Sun Dec 18 14:33:37 2005 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243) and *News (#123)
+Subject:  today's downtime
+
+Being without UPS, we're currently at the mercy of every stupid power glitch, and we had one just now.
+Sometime soonish UPS will be fixed/replaced, but until then I expect we'll be a bit less stable than usual.
+--------------------------
+Message 53 on *Site-Issues (#72243):
+Date:     Tue Jan 17 04:25:13 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243) and *News (#123)
+Subject:  mail issues
+
+Sometime this weekend, Speakeasy's outgoing mail server got marked as a spammer by some RBL.  The mistake has evidently been corrected, but it's going to take another day or two for the various ISPs (including Comcast and Yahoo) to update their lists.  Until then, mail sent from here may bounce.
+
+   --Rog
+--------------------------
+Message 54 on *Site-Issues (#72243):
+Date:     Tue Jan 17 09:17:18 2006 PST
+From:     Nosredna (#2487)
+To:       *Site-Issues (#72243)
+Subject:  Re: mail issues
+
+Unfortunately, it will bounce to a black hole.  We don't have lambdamoo bounce email go to a real person; it would be overwhelming.
+--------------------------
+Message 55 on *Site-Issues (#72243):
+Date:     Fri Mar 10 18:06:22 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243)
+Subject:  ok, I definitely need to do something about this UPS issue
+
+--------------------------
+No News (is good news)

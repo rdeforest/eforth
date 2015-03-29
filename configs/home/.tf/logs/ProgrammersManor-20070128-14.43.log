@@ -1,0 +1,21 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.
+Last connected Wed Nov 29 08:30:55 2006 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 1609038656 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1609038656 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1609038656 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1609038656
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Master Bedroom                0 seconds                         
+
+Total: 1 person, who has been active recently.
+Do you really want to shut down the server in 2 minutes? [Enter `yes' or `no']
+*** The server will be shut down by Crag (#958) in 2 minutes:  ***

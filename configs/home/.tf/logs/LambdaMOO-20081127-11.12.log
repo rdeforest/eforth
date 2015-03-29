@@ -1,0 +1,274 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 79 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             3 new messages
+    *Core-DB-Issues (#8175)              13 new messages
+Last connected Mon Oct 27 09:28:54 2008 PDT from pontius.thatsnice.org
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+< connected: Crag. Total: 80 >
+===== *Server-Hackers (#24451) (3 messages) ==
+
+Message 1120 on *Server-Hackers (#24451):
+Date:     Sun Sep 21 13:16:53 2008 PDT
+From:     Winter_Wolf (#101504)
+To:       *Server-Hackers (#24451)
+Subject:  = Does anyone know about the prop called .node on $generic_db
+
+This almost implies to me many possibilities. Multiple Front ends, Mutiple databse's linked. Many things.
+--------------------------
+Message 1121 on *Server-Hackers (#24451):
+Date:     Sun Oct 19 14:29:29 2008 PDT
+From:     Rog (#4292)
+To:       *Server-Hackers (#24451)
+Subject:  Re: = Does anyone know about the prop called .node on $generic_db
+
+reply posted to *Core-DB-Issues 
+--------------------------
+Message 1122 on *Server-Hackers (#24451):
+Date:     Tue Nov 25 03:14:49 2008 PST
+From:     Kenny (#53595)
+To:       *Server-Hackers (#24451)
+Subject:  Unicode support in MOO
+
+James, Robby, and I have been quietly building on hpa's work on libucd to bring Unicode support to MOO. It's still a work in progress, but we're at http://codepoint.the-b.org/  You can connect directly to the MOO at codepoint.the-b.org 7777, but you need a UTF-8 capable client (hint: there aren't many). The web page has more details on which clients work.
+--------------------------
+
+===== *News (#123) (2 messages) ==============
+
+Message 874 on *News (#123):
+Date:     Sat Nov  1 12:30:43 2008 PDT
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Open Ballot #21095 Ready for Voting
+Sender:   Petitioner (#4)
+
+Petition #21095 has received enough signatures to transform it into open Ballot:FreshMeat (#21095): `FixRegistration', which is now available for voting.  Type `read #21095' to see the text of the proposal and then `vote yes on #21095' to cast your vote in favor of it, `vote no on #21095' to cast your vote against it, or `abstain on #21095' to stop hearing about it.  Voting on this ballot will close on Saturday, November 15, at 11:30 am, LambdaMOO Standard Time; until then, you can change your vote as often as you wish.  You can read (and contribute to) commentary on this proposal on the mailing list named *Ballot:FreshMeat; type `help mail' for details.
+--------------------------
+Message 875 on *News (#123):
+Date:     Sat Nov 15 11:34:46 2008 PST
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Voting closes on ballot #21095
+Sender:   Petitioner (#4)
+
+The voting period for Ballot:FreshMeat (#21095): `FixRegistration' has ended.  The final vote count is as follows:
+        In favor:   128
+        Against:    11
+        Abstaining: 6
+The proposal has passed and will be implemented by the wizards as soon as possible.
+--------------------------
+
+===== *Core-DB-Issues (#8175) (13 messages) ==
+
+Message 5105 on *Core-DB-Issues (#8175):
+Date:     Tue Sep  2 00:26:50 2008 PDT
+From:     Jaysmith (#120870)
+To:       *Core-DB-Issues (#8175)
+Subject:  $recycler.lost_souls, what does it mean?
+
+I hope this is the right list for this question, as it is about LambdaCore.
+
+     I am a programmer on a newly established RPG MOO. The main players do not even have builder status, and thus, quota is a non-issue. I don't know if their measurement task is even running, although it may be. I think they're getting around the various restrictions on unmeasured objects by having all object creation for RPG players done by wizardly code, and initially owned by $hacker, then chowning the object to the intended player.
+My problem is as follows. As a programmer, I can't @create, @verb or @prop. I get a `property not found' in line 8 of $recycler:check_quota_scam. That line, as far as I can tell, goes through the lost souls' owned_objects properties. I've looked at that prop, and there are some recyclables and other non-players there, which don't have an owned_objects property.
+Questions... What causes this? Why are these objects listed there? What is the appropriate fix for the wizards to perform? E.G. is it safe to just clear $recycler.lost_souls, or does something need to be done with it?
+Thanks.
+--------------------------
+Message 5106 on *Core-DB-Issues (#8175):
+Date:     Tue Sep  2 02:00:16 2008 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> Questions... What causes this? Why are these objects listed there?
+
+A recycled object gets put in $recycler.lost_souls and remains there until the next time somebody tries to create an object.  The whole MOO-code-based create/recycle stuff relies on owners all being kids of $player and thus having a .owned_objects property, making an exception only for $hacker, because $hacker can potentially be the owner of tens of thousands of recycled objects.  If your wizards have changed that, they'll need to adjust the code that references .owned_objects.
+--------------------------
+Message 5107 on *Core-DB-Issues (#8175):
+Date:     Tue Sep  2 14:55:49 2008 PDT
+From:     Jaysmith (#120870)
+To:       *Core-DB-Issues (#8175)
+Subject:  $recycler.lost_souls, again
+
+Okay, I understand that. But these guys have lots of valid objects in their $recycler.lost_souls prop. Things like starships, misc. things players can buy, etc. and a few recyclables. I think it's getting worse. In other words, as far as I can tell, lost souls aren't being reclaimed when new stuff gets created. What's causing this? Have they done something awful to the code that would cause this?
+Thanks.
+--------------------------
+Message 5109 on *Core-DB-Issues (#8175):
+Date:     Tue Sep  2 15:29:36 2008 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> In other words, as far as I can tell, lost souls aren't being
+> reclaimed when new stuff gets created. What's causing this? Have
+> they done something awful to the code that would cause this?
+
+Probably.  If $recycler:check_quota_scam is getting an uncaught error, it's likely never going to be able to whittle $recycler.lost_souls down to {}.  Your wizards should change the code to either catch (and handle) the error there, or eliminate the error by making sure all the possible owners have a .owned_objects property, adding exceptions where necessary (like the core does with $hacker).
+--------------------------
+Message 5110 on *Core-DB-Issues (#8175):
+Date:     Tue Sep 16 18:32:43 2008 PDT
+From:     Jaysmith (#120870)
+To:       *Core-DB-Issues (#8175)
+Subject:  The minimal database to end all minimal databases
+
+You want a minimal database? I'll give you a minimal database!
+Somehow, in coding up a complete self-destruct verb for a LambdaCore-based MOO, I happened to find out what I think is the absolute minimum database the server requires. It's pasted at the end of this message, it's only 129 bytes!
+
+So what does this database contain? Well the answer is, it contains absolutely nothing! No objects, no properties, no verbs. How is such a database useful? Well, in normal mode, it isn't. But by starting in emergency mode, it will create a new object with the number #0, and give it wizard. From there, you can start building something useful... or something. Here, in fact, is my list of commands to do, once in emergency mode, before you get started building the greatest MOO completely from scratch!
+
+;#0.owner = #0
+;#0.programmer = 1
+;set_player_flag(#0,1)
+
+Now, as promised, here's the database, in its entirety! Enjoy!
+
+** LambdaMOO Database, Format Version 4 **
+0
+0
+0
+0
+0 clocks
+0 queued tasks
+0 suspended tasks
+0 active connections with listeners
+--------------------------
+Message 5111 on *Core-DB-Issues (#8175):
+Date:     Sun Oct 19 14:28:59 2008 PDT
+From:     Rog (#4292)
+To:       *Core-DB-Issues (#8175) and Winter_Wolf (#101504)
+Subject:  Re: = Does anyone know about the prop called .node on $generic_db
+
+>  This almost implies to me many possibilities. Multiple Front ends,
+>  Mutiple databse's linked. Many things.
+
+It should be noted that $generic_db has nothing to do with databases in the RDBMS sense of the word.  $generic_db is a data structure for associating arbitrary values with string keys and being able to do completion on the keys; $generic_trie would have been a better name but this is now an ancient mistake (over 15 years old).
+
+"nodes" in $generic_db are trie nodes.  For more on tries, see Knuth vol 3 ("The Art of Computer Programming:  Sorting and Searching" -- google amazon for the rest).
+--------------------------
+Message 5112 on *Core-DB-Issues (#8175):
+Date:     Sun Oct 19 16:09:33 2008 PDT
+From:     Jaysmith (#120870)
+To:       *Core-DB-Issues (#8175)
+Subject:  Delayed recycling
+
+I'm wizard on a MOO where there are a few programmers, one of whom sometimes accidentally recycles objects they didn't mean to. E.G. generics with lots of verbs, etc. Up to this point, I've been able to just restore from an earlier DB, since I'm hosting it, but I'm going out of town for about a week, and won't be able to do anything. My question is, has anybody implemented a delayed recycling center, whereby $recycler:_recycle actually just moves the item somewhere or something, then actually destroys it some time later, to allow a window of opportunity for retrieval? Failing that, I could just have the recycler throw all stuff supposedly recycled in a room somewhere, but that's bound to create lots of useless junk until we can get around to sorting through it.
+Any thoughts?
+--------------------------
+Message 5113 on *Core-DB-Issues (#8175):
+Date:     Sun Oct 19 21:01:26 2008 PDT
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: = Does anyone know about the prop called .node on $generic_db
+
+>  It should be noted that $generic_db has nothing to do with
+>  databases in the RDBMS sense of the word.  $generic_db is a data
+>  structure for associating arbitrary values with string keys and
+>  being able to do completion on the keys; $generic_trie would have
+>  been a better name but this is now an ancient mistake (over 15
+>  years old).
+
+It should also be noted that $generic_db is rather slow, in spite of using an efficient algorithm, because the code is interpreted. It is also a bit of a quota hog, as it uses lots of lists and strings which have significant memory overhead.
+
+I wrote a replacement (#21120) that uses a less fancy algorithm, but uses the builtin 'in' function to do lookup, and I found it to be much faster and more memory efficient. YMMV.
+
+Anodos
+--------------------------
+Message 5114 on *Core-DB-Issues (#8175):
+Date:     Sat Oct 25 23:39:01 2008 PDT
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Delayed recycling
+
+Well, the simplest solution for that situation is probably to add protections to $recycler:_recycle... on UNM-MOO, we had it check if an object was corified or listed in a property on $local, in which case it couldn't be @recycled without first removing them from that property... there was also a warning message for @recycle (and an @recycle! for warning message omittal)... ie. are you sure you want to recycle #1XXXXX, which contains Y properties and Z verbs?
+--------------------------
+Message 5115 on *Core-DB-Issues (#8175):
+Date:     Sun Oct 26 13:20:30 2008 PDT
+From:     Rog (#4292)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: = Does anyone know about the prop called .node on $generic_db
+
+Fair cop.  I was originally going to ask if you'd tried it on
+something large like $spell but then I noticed that $player_db is
+actually larger, which boggles me for some reason.
+
+And now I'm wondering how the predecessor code that I wrote back
+in 1991 would do on today's hardware.  That one abused index() in
+much the same way you're using 'in'.
+
+Basic idea was to put all of the keys into a single string
+separated by '|'s and do the lookup of "foo" using
+index(monster_string,"|foo"), which has the added advantage of not
+having to do anything extra to get the partial matches (... though
+there's additional crap to deal with strings containing "|" and to
+encode pointers to the data into the string as well -- amusingly
+enough this was BEFORE we had the regexp engine; I imagine the
+corresponding code using match() would be a LOT shorter...)
+
+Problem was that at some point we started getting enough players
+that the index() call was dying with "out of seconds", which was
+what spurred me to write $generic_db and which is why it's so
+property-intensive (and same story for $big_mail_recipient).
+--------------------------
+Message 5116 on *Core-DB-Issues (#8175):
+Date:     Tue Oct 28 13:29:49 2008 PDT
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+A lookup of the form o.(s) hashes s and does a linear search of properties of o looking for those with a matching hash. For a hash match, a string compare is done.  bf_index calls strindex, which now that I look at it is about the stupidest implementation of a linear string search ever.  I was ready to concede that it didn't use something clever like Boyer-Moore, but I wasn't ready for a function call per character in the target...
+--------------------------
+Message 5117 on *Core-DB-Issues (#8175):
+Date:     Sat Nov  1 13:25:17 2008 PDT
+From:     Jaysmith (#120870)
+To:       *Core-DB-Issues (#8175)
+Subject:  Sorting question
+
+Now on this same MOO, I'm wanting to change the format of some logs. I'm wanting to put them in one huge list, sorted by time. The format of the huge list would be {{time,sender,recipient,message},{time,sender,recipient,message},{time,sender,recipient,message},...}
+Currently these logs are on individual communicators, but for storage in a file I'm wanting to store them all in one huge list. But, it makes sense to sort the list by the time elements of its sublists, if that makes sense. Such that, when all is said and done, the earliest message is first, and the most recent message is last. $list_utils:sort doesn't seem to allow this. Is there a pre-coded way to do this, sorting a list by the n'th element of each sublist?
+Thanks.
+Jayson
+--------------------------
+Message 5118 on *Core-DB-Issues (#8175):
+Date:     Sat Nov  1 19:12:32 2008 PDT
+From:     Anodos (#21528)
+To:       Jaysmith (#120870) and *Core-DB-Issues (#8175)
+Subject:  Re: Sorting question
+
+>  Currently these logs are on individual communicators, but for
+>  storage in a file I'm wanting to store them all in one huge list.
+>  But, it makes sense to sort the list by the time elements of its
+>  sublists, if that makes sense. Such that, when all is said and
+>  done, the earliest message is first, and the most recent message
+>  is last. $list_utils:sort doesn't seem to allow this. Is there a
+>  pre-coded way to do this, sorting a list by the n'th element of
+>  each sublist?
+
+$list_utils:sort_alist() should do what you want.
+
+Anodos
+--------------------------
+
+===== End of new mail ========================
+Did you get all of that? [Enter `yes' or `no']
+Last-read-dates updated

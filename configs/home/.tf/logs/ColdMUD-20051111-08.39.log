@@ -1,0 +1,40 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+ERROR: No such parameter password.
+Thrown by interpreter opcode GET_OBJ_VAR.
+~paramnf in #48.check_password (defined on #41), line 3
+~methoderr in #49.connect_cmd (defined on #20), line 23
+~methoderr in #49.parse_line (defined on #20), line 23
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+* * * Connected * * *
+Nowhere
+You see nothing special.
+--> 1

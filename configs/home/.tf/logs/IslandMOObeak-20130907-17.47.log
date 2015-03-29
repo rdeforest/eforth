@@ -1,0 +1,105 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Verb Editor
+
+Do a 'look' to get the list of commands, or 'help' for assistance.
+
+Last connected Sat Sep  7 17:40:59 2013 PDT from localhost
+#$#mcp-negotiate-can 109450049 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 109450049 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 109450049 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 109450049
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+-----
+SUMMARY
+=======
+
+Help is available on the following general topics:
+
+introduction[1]
+      what's going on here and some basic commands
+index[2]
+      index into the help system
+
+characters[3]
+      setting characteristics of yourself
+movement[4]
+      moving yourself between rooms
+communication[5]
+      communicating with other players
+manipulation[6]
+      moving or using other objects
+miscellaneous[7]
+      commands that don't fit anywhere else
+
+building[8]
+      extending the MOO
+programming[9]
+      writing code in the MOO programming language
+editors[10]
+      editing text and code in the MOO
+
+@options[11]
+      customizing your MOO environment
+@pagelength[12]
+      what to do if lines scroll off your screen too fast
+@linelength[13]
+      what to do if lines are truncated
+
+Type `help <topic>' for information on a particular topic, or `pick <number>' to follow a numbered link.
+
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+The Verb Editor
+Commands:
+
+say         <text>                      w*hat       
+emote       <text>                      e*dit       <obj>:<verb>
+lis*t       [<range>] [nonum]           com*pile    [as <obj>:<verb>]
+ins*ert     [<ins>] ["<text>]           abort       
+n*ext,p*rev [n] ["<text>]               q*uit,done,pause 
+enter                                   
+del*ete     [<range>]                   
+f*ind       /<str>[/[c][<range>]]       
+s*ubst      /<str1>/<str2>[/[g][c][<range>]]
+m*ove,c*opy [<range>] to <ins>          
+j,joinl     [<range>]                   
+fill        [<range>] [@<col>]          
+
+----  Do `help <cmdname>' for help with a given command.  ----
+
+  <ins> ::= $ (the end) | [^]n (above line n) | _n (below line n) | . (current)
+<range> ::= <lin> | <lin>-<lin> | from <lin> | to <lin> | from <lin> to <lin>
+  <lin> ::= n | [n]$ (n from the end) | [n]_ (n before .) | [n]^ (n after .)
+`help insert' and `help ranges' describe these in detail.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+The North Vestibule
+A smaller vestibule opening onto the Great Hall. The bones of the old castle are exposed here; the walls rough-hewn blocks of black basalt, the floor smoothly polished stone of the same.  A brown Persian rug lies soft underfoot.  Someone has artfully hung a detailed painting on a wall.  Some chaise longues sit under the windows.  A butler's desk is pushed up against one of the walls.  A demi-lune table stands between the doors, ready to receive calling cards.  A porter's chair stands in the middle of the room, facing the doors.  The tracery windows are carved into the northern wall.
+Crag is here.
+*** Shutting down: shutdown() called by Crag (#243) ***

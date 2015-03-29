@@ -1,0 +1,182 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The North Vestibule
+A smaller vestibule opening onto the Great Hall. The bones of the old castle are exposed here; the walls rough-hewn blocks of black basalt, the floor smoothly polished stone of the same.  A brown Persian rug lies soft underfoot.  Someone has artfully hung a detailed painting on a wall.  Some chaise longues sit under the windows.  A butler's desk is pushed up against one of the walls.  A demi-lune table stands between the doors, ready to receive calling cards.  A porter's chair stands in the middle of the room, facing the doors.  The tracery windows are carved into the northern wall.
+Last connected Sat Apr 27 12:52:33 2013 PDT from localhost
+#$#mcp-negotiate-can 581282600 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 581282600 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 581282600 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 581282600
+Crag arrives from the Great Hall.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+The North Vestibule
+A smaller vestibule opening onto the Great Hall. The bones of the old castle are exposed here; the walls rough-hewn blocks of black basalt, the floor smoothly polished stone of the same.  A brown Persian rug lies soft underfoot.  Someone has artfully hung a detailed painting on a wall.  Some chaise longues sit under the windows.  A butler's desk is pushed up against one of the walls.  A demi-lune table stands between the doors, ready to receive calling cards.  A porter's chair stands in the middle of the room, facing the doors.  The tracery windows are carved into the northern wall.
+Crag is here.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+That is not a valid command.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+Last modified Sat Apr 27 17:01:52 2013 PDT by Crag (#243).
+#0:"do_command" this none this
+ 1:  "TODO: improve this snooping functionality";
+ 2:  #243.debug && #243:tell("do_command for ", player:name_and_number(), ": ", argstr);
+ 3:  try
+ 4:    return $object_utils:has_callable_verb(player, "receive_input") && player:receive_input(argstr, args);
+ 5:  except e (ANY)
+ 6:    player:notify("There was an error in the new input parsing system:");
+ 7:    player:tell_lines($string_utils:pretty_error(e));
+ 8:    player:notify("Falling back to the old one.");
+ 9:    return 0;
+10:  endtry
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+The Verb Editor
+
+Do a 'look' to get the list of commands, or 'help' for assistance.
+
+Now editing #0:"do_command" this none this.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+That is not a valid command.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+The Verb Editor
+Commands:
+
+say         <text>                      w*hat       
+emote       <text>                      e*dit       <obj>:<verb>
+lis*t       [<range>] [nonum]           com*pile    [as <obj>:<verb>]
+ins*ert     [<ins>] ["<text>]           abort       
+n*ext,p*rev [n] ["<text>]               q*uit,done,pause 
+enter                                   
+del*ete     [<range>]                   
+f*ind       /<str>[/[c][<range>]]       
+s*ubst      /<str1>/<str2>[/[g][c][<range>]]
+m*ove,c*opy [<range>] to <ins>          
+j,joinl     [<range>]                   
+fill        [<range>] [@<col>]          
+
+----  Do `help <cmdname>' for help with a given command.  ----
+
+  <ins> ::= $ (the end) | [^]n (above line n) | _n (below line n) | . (current)
+<range> ::= <lin> | <lin>-<lin> | from <lin> | to <lin> | from <lin> to <lin>
+  <lin> ::= n | [n]$ (n from the end) | [n]_ (n before .) | [n]^ (n after .)
+`help insert' and `help ranges' describe these in detail.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+That is not a valid command.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  4
+  ----                ------           -----        -------             ------         ----
+Falling back to the old one.
+No changes to throw away.  Editor cleared.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+That is not a valid command.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+The Verb Editor
+Commands:
+
+say         <text>                      w*hat       
+emote       <text>                      e*dit       <obj>:<verb>
+lis*t       [<range>] [nonum]           com*pile    [as <obj>:<verb>]
+ins*ert     [<ins>] ["<text>]           abort       
+n*ext,p*rev [n] ["<text>]               q*uit,done,pause 
+enter                                   
+del*ete     [<range>]                   
+f*ind       /<str>[/[c][<range>]]       
+s*ubst      /<str1>/<str2>[/[g][c][<range>]]
+m*ove,c*opy [<range>] to <ins>          
+j,joinl     [<range>]                   
+fill        [<range>] [@<col>]          
+
+----  Do `help <cmdname>' for help with a given command.  ----
+
+  <ins> ::= $ (the end) | [^]n (above line n) | _n (below line n) | . (current)
+<range> ::= <lin> | <lin>-<lin> | from <lin> | to <lin> | from <lin> to <lin>
+  <lin> ::= n | [n]$ (n from the end) | [n]_ (n before .) | [n]^ (n after .)
+`help insert' and `help ranges' describe these in detail.
+There was an error in the new input parsing system:
+E_VERBNF: Verb not found (0)
+  this                method           owner        definer             player         line
+  ----                ------           -----        -------             ------         ----
+  #256 (Beaker)       "match_command"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  3
+  #256 (Beaker)       "receive_input"  #243 (Crag)  #256 (Beaker)       #256 (Beaker)  2
+  #0 (System Object)  "do_command"     #243 (Crag)  #0 (System Object)  #256 (Beaker)  5
+  ----                ------           -----        -------             ------         ----
+Falling back to the old parser.
+*** Disconnected ***

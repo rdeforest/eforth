@@ -1,0 +1,459 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.
+Last connected Sun Mar 31 09:53:48 2013 PDT from localhost
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 833168731 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 833168731 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 833168731 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 833168731
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Wizard         First room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+*** Redirecting connection to new port ***
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.
+Wizard is here.
+Last connected Sun Mar 31 09:50:09 2013 PDT from localhost
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 1402078481 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1402078481 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1402078481 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1402078481
+You hear a quiet popping sound; Wizard has disconnected.
+#82:open, line 12:  Permission denied
+... called from #87:get_now_b get_now, line 11
+... called from #87:get get_cache, line 15
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+An interface to HTTP 0.9 services. HTTP 1.0 maybe coming soon.
+http (#87) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+   #87:"get get_cache"          unknown hacker (#35) rxd    this none this
+   #87:clear_cache              unknown hacker (#35) rxd    this none this
+   #87:interpret_error          unknown hacker (#35) rxd    this none this
+   #87:trusted                  unknown hacker (#35) rxd    this none this
+   #87:init_for_core            unknown hacker (#35) rxd    this none this
+   #87:parse_url                unknown hacker (#35) rxd    this none this
+   #87:escape_for_url           unknown hacker (#35) rxd    this none this
+   #87:unescape_for_url         unknown hacker (#35) rxd    this none this
+   #87:nominate_for_core        unknown hacker (#35) rxd    this none this
+   #87:init_for_module          unknown hacker (#35) rxd    this none this
+   #87:module_finish_unpack     Core-Wizard (#184)   rxd    this none this
+   #87:"post_now post"          Core-Wizard (#184)   rxd    this none this
+   #87:post_binary              Core-Wizard (#184)   rxd    this none this
+   #87:encode_fields            unknown hacker (#35) rxd    this none this
+   #87:escape_for_html          unknown hacker (#35) rxd    this none this
+   #87:escape_for_form          unknown hacker (#35) rxd    this none this
+   #87:"get_now_b get_now"      Core-Wizard (#184)   rxd    this none this
+   #87:streaming_get            Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+http (#87) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+.cache_requests          unknown hack (#35)           {}
+.cache_times             unknown hack (#35)           {}
+.cache_values            unknown hack (#35)           {}
+.limit                   unknown hack (#35)    r c    20000
+.valid_host_regexp       unknown hack (#35)    r c    "^%([0-9]+%.[0-9]+%.[0-..
+.cache_timeout           unknown hack (#35)    r      900
+.error                   unknown hack (#35)    r      "HTTP error"
+.byte_limit              unknown hack (#35)    r      3145728
+.http_proxy              unknown hack (#35)    r      0
+-------------------------------- finished ---------------------------------
+Last modified Fri Jun 26 10:21:41 2009 PDT by Xythian (#199) (on Waterpoint).
+#87:"get get_cache" this none this
+ 1:  "Usage: get(url)";
+ 2:  "returns a list of strings, or an error if it couldn't connect. Results are cached.";
+ 3:  if (!this:trusted(caller_perms()))
+ 4:    return E_PERM;
+ 5:  endif
+ 6:  request = args;
+ 7:  "15 minute timeout";
+ 8:  now = time();
+ 9:  key = {string_hash(args[1]), request};
+10:  if (index = key in this.cache_requests)
+11:    if (this.cache_times[index] > now)
+12:      return this.cache_values[index];
+13:    endif
+14:  endif
+15:  value = this:get_now(@args);
+16:  "don't want to run out of ticks while adding new value";
+17:  $command_utils:suspend_if_needed(0);
+18:  while (this.cache_times && this.cache_times[1] < now)
+19:    this.cache_times = listdelete(this.cache_times, 1);
+20:    this.cache_values = listdelete(this.cache_values, 1);
+21:    this.cache_requests = listdelete(this.cache_requests, 1);
+22:    "caution: don't want to suspend between test and removal";
+23:    $command_utils:suspend_if_needed(0);
+24:  endwhile
+25:  $command_utils:suspend_if_needed(0);
+26:  this.cache_times = {@this.cache_times, time() + (typeof(value) == ERR ? 120 | 1800)};
+27:  this.cache_values = {@this.cache_values, value};
+28:  this.cache_requests = {@this.cache_requests, key};
+29:  return value;
+#82:open, line 12:  Permission denied
+... called from #87:get_now_b get_now, line 11
+... called from #87:get get_cache, line 15
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+Last modified Wed Sep 28 23:19:28 2005 PDT by Xeric (#999) (on Waterpoint).
+#82:"open" this none this
+ 1:  ":open(address, port, [connect-connection-to])";
+ 2:  "Open a network connection to address/port.  If the connect-connection-to is passed, then the connection will be connected to that object when $login gets ahold of it.  If not, then the connection is just ignored by $login, i.e. not bothered by it with $welcome_message etc.";
+ 3:  "The object specified by connect-connection-to has to be a player (though it need not be a $player).";
+ 4:  "Either way, the return is either 1) an error or 2) a pair {invalid, valid} where <invalid> is the object the initial connection is made to, and <valid> is the object that will be logged in.  (If no third arg, <valid> will be #-1.)";
+ 5:  "";
+ 6:  {address, port, ?connect_to = $nothing} = args;
+ 7:  cp = caller_perms();
+ 8:  if (this:trusts(cp))
+ 9:    if (valid(connect_to))
+10:      "there are tests for the validity of connect_to in the called fcn";
+11:      return this:open_connect_to(address, port, connect_to);
+12:    elseif (typeof(connection = open_network_connection(address, port)) != OBJ)
+13:      return connection;
+14:    endif
+15:    this.connection_owners = {{connection, cp}, @this.connection_owners};
+16:    return {connection, connect_to};
+17:  else
+18:    raise(E_PERM);
+19:  endif
+-----
+$HTTP:GET
+=========
+
+Usage: get(url)
+
+returns a list of strings, or an error if it couldn't connect. Results are cached.
+
+http (#87) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+   #87:"get get_cache"          unknown hacker (#35) rxd    this none this
+   #87:clear_cache              unknown hacker (#35) rxd    this none this
+   #87:interpret_error          unknown hacker (#35) rxd    this none this
+   #87:trusted                  unknown hacker (#35) rxd    this none this
+   #87:init_for_core            unknown hacker (#35) rxd    this none this
+   #87:parse_url                unknown hacker (#35) rxd    this none this
+   #87:escape_for_url           unknown hacker (#35) rxd    this none this
+   #87:unescape_for_url         unknown hacker (#35) rxd    this none this
+   #87:nominate_for_core        unknown hacker (#35) rxd    this none this
+   #87:init_for_module          unknown hacker (#35) rxd    this none this
+   #87:module_finish_unpack     Core-Wizard (#184)   rxd    this none this
+   #87:"post_now post"          Core-Wizard (#184)   rxd    this none this
+   #87:post_binary              Core-Wizard (#184)   rxd    this none this
+   #87:encode_fields            unknown hacker (#35) rxd    this none this
+   #87:escape_for_html          unknown hacker (#35) rxd    this none this
+   #87:escape_for_form          unknown hacker (#35) rxd    this none this
+   #87:"get_now_b get_now"      Core-Wizard (#184)   rxd    this none this
+   #87:streaming_get            Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+http (#87) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+.cache_requests          unknown hack (#35)           {}
+.cache_times             unknown hack (#35)           {}
+.cache_values            unknown hack (#35)           {}
+.limit                   unknown hack (#35)    r c    20000
+.valid_host_regexp       unknown hack (#35)    r c    "^%([0-9]+%.[0-9]+%.[0-..
+.cache_timeout           unknown hack (#35)    r      900
+.error                   unknown hack (#35)    r      "HTTP error"
+.byte_limit              unknown hack (#35)    r      3145728
+.http_proxy              unknown hack (#35)    r      0
+-------------------------------- finished ---------------------------------
+The root class(#1) has 47 kids.
+Login Commands (#10)   Player Last_huh Verbs (#11)   Guest Log (#12)   Limbo (#15)   Generic Help Database (#30)   New Generic Database (#79)   Generic Mail Recipient (#41)   Mail Distribution Center (#42)   generic thing (#5)   Generic Option Package (#60)   Error Generator (#66)   Generic Feature Object (#65)   pronoun substitution (#69)   everything (#139)   all (#103)   generic admin group (#163)   generic event dispatching object (#110)   generic utilities (#146)   generic event handler (#133)   generic gender object (#64)   administration (#170)   server options (#188)   checkpointer (#175)   startup handler (#189)   syslog (#183)   Generic BigList Resident (#75)   http (#87)   generic property farm (#206)   SMTP (#212)   Cord Dispatcher (#223)   MCP 2.1 (#213)   FTP (#230)   link dispatcher tag (#123)   Generic Pronoun_sub Translator (#73)   here (#180)   Tag Root (#91)   Address Root (#109)   name-subbing dummy object (#132)   generic cord stub (#222)   generic MCP 2.1 session (#204)   MCP package registry (#209)   MCP 2.1 parser (#221)   generic name builder (#240)   generic source or sink (#196)   generic message dispatch object (#219)   generic listener (#224)   generic daemon service handler (#210)
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+You have no messages.
+You have no messages.
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+-------- end of @subscribe -------
+-----
+@QSEND
+======
+
+Syntax: @quicksend <recipients(s)> [subj=<text>] [<message>]
+
+Sends the recipients(s) a quick message, without having to go to the mail room. If there is more than one recipients, place them all in quotes. If the subj contains spaces, place it in quotes.
+
+To put line breaks in the message, use a caret (^).
+
+If no message is given, prompt for lines of message.
+
+Examples:
+
+        @quicksend Alice subj="Wonderland is neat!" Have you checked out the Wonderland scenario yet? I think you'd like it!
+        @quicksend "Ethel Fred" Have you seen Lucy around?^--Ricky
+
+Crag has a total building quota of 0 bytes.
+His total usage was 2,601 as of Wed Dec 31 16:00:00 1969 PST.
+Crag is over quota by 2,601 bytes.
+-----
+`HELP QUOTA' AMBIGUOUS
+======================
+
+Sorry, the topic `quota' is ambiguous.  I don't know which of the following topics you mean:
+
+`help @quota'[1]        `help quota-policy'[2]  
+
+-----
+@QUOTA
+======
+
+Usage:  @quota [<someone>]
+
+Each player has a limit as to how much database disk space e may consume with their objects, properties, and verbs.  Objects are periodically measured (and can have their measurement forced---see help @measure).  If a player is over quota after a measurement, e will not be able to @create any objects, use @copy, @verb, or @property to grow any objects.  Existing properties and verbs may be edited/changed at will, even while over quota.
+
+The @quota command prints out your current quota and measured usage.  If you have more than one character, it will summarize all your other characters' usage as well.
+
+@quota <player> will print out the quota and usage of another player.  [Note: you will not be able to obtain second character information for another player; whether primary or secondary character, the @quota display will only show one character's quota.]
+
+@quota prints a time of measurement in its display.  This is the time of the oldest measurement out of all your objects.  For example, if you @measure three of your objects right now, those individual times get updated, but if you still have a couple of objects with older measurements, that older time will be the time printed by @quota.  This is confusing to many people.
+
+If you want to get more quota, please see `help quota-policy'[1].
+
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+Syntax:  @quota <player> is <number> [<reason>]
+
+This second and more interesting form of the verb changes a player's quota to the given number.  Mail will be sent to $quota_log; the message will include the <reason> if such is given.
+
+-----
+@MEASURE
+========
+
+Syntax:
+  @measure object <object name>
+  @measure summary [player]
+  @measure new [player]
+  @measure breakdown <object name>
+
+When the MOO is under byte-quota, objects in the MOO are measured approximately once a week, and the usage tally as reported by @quota is updated.  You may wish to measure an object specially, however, without waiting for the automatic measurement to take place, or if the MOO is under object-quota.  @measure has some subcommands to handle this.
+
+@measure object will measure an individual object right now, update the usage of that object in your usage as reported by @quota, and update the date of that object's measurement.
+
+@measure summary will go through your or another player's objects and produce the summary information that is printed by @quota.  Normally this will be just the same as @quota prints out, but occasionally the addition/subtraction done to keep @quota in sync will get out of date, and @measure summary will be needed.
+
+@measure new will go through all your or another player's objects, measuring exactly those which have never been measured before (that is, are too newly @created to have any measurement data).  This is necessary as any player is only permitted to own 10 unmeasured objects, or object creation will not be permitted.
+
+@measure breakdown will give you full information on where an object's size is coming from.  It will offer to moomail you the result.  Caution: don't forget to delete this message, as it is large and takes up a lot of space!
+
+Crag statistics:
+  2,601 bytes of storage measured.
+  Oldest measurement date Sun Mar 31 09:50:09 2013 PDT (31 minutes ago) of object #243 (Crag)
+Measuring the sizes of Crag's recently created objects...
+Total bytes used in new creations: 0.
+Crag has a total building quota of 0 bytes.
+His total usage was 2,601 as of Sun Mar 31 09:50:09 2013 PDT.
+Crag is over quota by 2,601 bytes.
+Checking size of Crag (#243)...
+Size of Crag (#243) is 3387 bytes.
+Crag has a total building quota of 0 bytes.
+His total usage was 3,387 as of Sun Mar 31 09:50:09 2013 PDT.
+Crag is over quota by 3,387 bytes.
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+Line 1:  Unknown built-in function: new_waif
+1 error.
+=> {{"major", 1}, {"minor", 8}, {"release", 3}, {"ext", "+?_ad_hoc_??"}, {"string", "1.8.3+?_ad_hoc_??"}, {"features", {}}, {"options", {{"NETWORK_PROTOCOL", "NP_TCP"}, {"DEFAULT_PORT", 7777}, {"NETWORK_STYLE", "NS_BSD"}, {"MPLEX_STYLE", "MP_SELECT"}, {"OUTBOUND_NETWORK", #-1}, {"DEFAULT_CONNECT_TIMEOUT", 300}, {"MAX_QUEUED_OUTPUT", 65536}, {"MAX_QUEUED_INPUT", 65536}, {"USE_GNU_MALLOC", #-1}, {"UNFORKED_CHECKPOINTS", #-1}, {"BYTECODE_REDUCE_REF", #-1}, {"STRING_INTERNING", {0}}, {"MEMO_STRLEN", #-1}, {"LOG_COMMANDS", #-1}, {"INPUT_APPLY_BACKSPACE", {0}}, {"IGNORE_PROP_PROTECTED", #-1}, {"OUT_OF_BAND_PREFIX", "#$#"}, {"OUT_OF_BAND_QUOTE_PREFIX", "#$\""}, {"DEFAULT_MAX_STACK_DEPTH", 50}, {"DEFAULT_FG_TICKS", 30000}, {"DEFAULT_BG_TICKS", 15000}, {"DEFAULT_FG_SECONDS", 5}, {"DEFAULT_BG_SECONDS", 3}, {"PATTERN_CACHE_SIZE", 20}, {"DEFAULT_MAX_LIST_CONCAT", 4194302}, {"MIN_LIST_CONCAT_LIMIT", 1022}, {"DEFAULT_MAX_STRING_CONCAT", 33554423}, {"MIN_STRING_CONCAT_LIMIT", 1015}}}, {"source", {{"vcs", "unknown"}}}}
+Error creating topic sign: Resource limit exceeded
+topic-owner has a total building quota of 0 bytes.
+Eir total usage was 26,421 as of Sun Mar 31 09:49:23 2013 PDT.
+topic-owner is over quota by 26,421 bytes.
+"topic-owner 100000" is not the name of any player.
+[Type a reason for the quota increase or `@abort' to abort the command.]
+topic-owner's quota set to 100000.
+You summon the groundskeeper, who drops a topic sign off.  You write `Bug: proper service management needed for IslandMOO (/etc/init.d/islandmoo restart, backups, etc)' on a slip of paper and put it on the sign.
+The root class(#1) has 47 kids.
+Login Commands (#10)   Player Last_huh Verbs (#11)   Guest Log (#12)   Limbo (#15)   Generic Help Database (#30)   New Generic Database (#79)   Generic Mail Recipient (#41)   Mail Distribution Center (#42)   generic thing (#5)   Generic Option Package (#60)   Error Generator (#66)   Generic Feature Object (#65)   pronoun substitution (#69)   everything (#139)   all (#103)   generic admin group (#163)   generic event dispatching object (#110)   generic utilities (#146)   generic event handler (#133)   generic gender object (#64)   administration (#170)   server options (#188)   checkpointer (#175)   startup handler (#189)   syslog (#183)   Generic BigList Resident (#75)   http (#87)   generic property farm (#206)   SMTP (#212)   Cord Dispatcher (#223)   MCP 2.1 (#213)   FTP (#230)   link dispatcher tag (#123)   Generic Pronoun_sub Translator (#73)   here (#180)   Tag Root (#91)   Address Root (#109)   name-subbing dummy object (#132)   generic cord stub (#222)   generic MCP 2.1 session (#204)   MCP package registry (#209)   MCP 2.1 parser (#221)   generic name builder (#240)   generic source or sink (#196)   generic message dispatch object (#219)   generic listener (#224)   generic daemon service handler (#210)
+The First Room
+This is all there is right now.
+A sign here says, `Topic: Bug: proper service management needed for IslandMOO (/etc/init.d/islandmoo restart, backups, etc)'
+The generic thing(#5) has 9 kids.
+generic note (#9)   Recycling Center (#55)   network utils (#82)   generic sittable object (#80)   Registrar (#108)   topic sign (#178)   old FTP (#234)   generic module (#203)   feature object registry (#151)
+The generic sittable object(#80) has 1 kid.
+generic piece of furniture (#81)
+The generic piece of furniture(#81) has no kids.
+You now have leather couch with object number #245 and parent generic piece of furniture (#81).
+Description set.
+stormagnet has connected.
+You see no "couch" here.
+You don't have that.
+Carrying:
+ a leather couch                         
+You drop the leather couch.
+Alias "couch" added to leather couch(#245).
+Aliases for leather couch(#245) are now {"leather couch", "couch"}
+[on the leather couch]
+You sit on the leather couch.
+You are squeezed off the leather couch.
+stormagnet says, " lol"
+generic piece of furniture (#81) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic sittable object (#80).
+  Location generic room (#3).
+.squeeze                 unknown hack (#35)    r c    0
+.seats                   unknown hack (#35)    r c    0
+.sit_msg                 unknown hack (#35)    r c    {#69, "do", {"name", "p..
+.squeeze_msg             unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.stand_msg               unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.fall_msg                unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.shove_msg               unknown hack (#35)    r c    {#69, "do", {"dname", "..
+.also_shove_msg          unknown hack (#35)    r c    {#69, "do", {"dname", "..
+.nosqueeze_msg           unknown hack (#35)    r c    {#69, "do", "There's no..
+.integrate_empty_msg     unknown hack (#35)    r c    {#69, "do", {"name", "t..
+.integrate_sitters_msg   unknown hack (#35)    r c    {#69, "do", "  ", {"nam..
+.next_to_msg             unknown hack (#35)    r c    {#69, "do", " ", {"noun..
+.obvious_seat            unknown hack (#35)    r c    1
+.already_sitting_msg     unknown hack (#35)    r c    {#69, "do", "You are al..
+.move_next_to_msg        unknown hack (#35)    r c    {#69, "do", {"name", "p..
+.help_text               unknown hack (#35)    r c    {"Users can sit on, sho..
+.desc_sitting_msg        unknown hack (#35)    r c    ""
+.desc_empty_msg          unknown hack (#35)    r c    ""
+-------------------------------- finished ---------------------------------
+#245.seats set to 3.
+stormagnet sits on the leather couch.
+[on the leather couch]
+You sit on the leather couch beside stormagnet.
+stormagnet says, "hee"
+The First Room
+This is all there is right now.  A leather couch is here.  You and stormagnet are sitting on it.
+A sign here says, `Topic: Bug: proper service management needed for IslandMOO (/etc/init.d/islandmoo restart, backups, etc)'
+stormagnet is here.
+Parent changed.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           First room                    0 seconds                         
+stormagnet     First room                    9 seconds                         
+
+Total: 2 people, both of whom have been active recently.
+stormagnet (#246) [ (player) ]
+  Child of generic wizard (#51).
+  Location first room (#70).
+-------------------------------- finished ---------------------------------
+=> 1
+=> 1
+The First Room
+This is all there is right now.  A leather couch is here.  You and stormagnet are sitting on it.
+A sign here says, `Topic: Bug: proper service management needed for IslandMOO (/etc/init.d/islandmoo restart, backups, etc)'
+stormagnet is here, dozing.
+You hear a quiet popping sound; stormagnet has disconnected.
+That is not a valid command.
+That is not a valid command.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           First room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+  Player name   Last Login    From Where
+  -----------   ----------    ----------
+% Crag (#243)   Mar 31 2013   localhost
+
+ %  == programmer.
+-----
+@WHO
+====
+
+Syntax: @who
+        @who <player> [<player> ... ]
+        @who [<players>] by <order>
+
+        @who in <room>
+        @who with <player>
+
+The first form lists all of the currently-connected players, along with an indication of how long they've been idle, their present location in the MOO, and their doing/idle string (see `help doing'[1] and `help idle'[2]).
+
+The second form, in which a list of player names is given, shows information for just those players.  For any listed players that are not connected, we show the last login time instead of the idle info.
+
+The third form lets you specify a sort order.  (See `help @who-options'[3].)  You can also specify the players you want to see, or specify nothing to see everybody who's on.
+
+The fourth and fifth forms show you @who information for everybody in a given room, or everybody in the same room as a given player, respectively.
+
+@who's format and sorting order can be modified using @who-options (see `help @who-options'[4]).
+
+Note for builders:  @who refers to the @who_location message (see `help messages'[5]) on each player's location in order to determine what should be printed in the location column.  Pronoun substitutions are done on this string in the usual manner (see `help pronouns'[6]).  The default value is "%Tn" (i.e., the room name).
+
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+stormagnet     First room                    Tue Apr  2 18:21:03 2013 PDT
+
+Total: 1 person, who has not been active recently.
+The First Room
+This is all there is right now.  A leather couch is here.  You are sitting on it.
+A sign here says, `Topic: Bug: proper service management needed for IslandMOO (/etc/init.d/islandmoo restart, backups, etc)'
+-----
+TOPICS
+======
+
+A room is a place where talking can take place.  Sometimes, this talking is focused on one topic or purpose.  That is what room topic is for.  Currently, room topics show up in the "parties" list (see `help parties'[1]).
+
+SETTING TOPICS
+--------------
+
+There are two types of topics.  One is the default topic, settable by the owner of the room, and the other is a part of the topic stack.
+
+Think of it like this:  The default topic is carved into the wood of the sign while the other stack topics are slips of paper covering each other and the wood.  
+
+To create a topic sign and set the first stack topic, type: topic <topic>
+Note that this command doesn't work once a sign has been created.  Use the below commands then:
+
+To set the default topic, type: carve <topic> on sign
+To write over current stack topic, type: write <topic> on sign
+To add a slip to the stack, type: cover sign with <topic>
+To remove a slip from the stack, type: uncover sign
+To remove the sign, type: remove sign
+To clear the stack, type: shake sign
+
+You pull the top sheet off the topic sign, revealing `'.
+You cover the topic sign reading `' with a slip of paper reading `We have an IslandMOO trello board now'.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           First room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+=> 0
+*** Shutting down: shutdown() called by Crag (#243) ***

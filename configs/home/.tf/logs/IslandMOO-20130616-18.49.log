@@ -1,0 +1,109 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Front Parlour
+A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal.  An oriental rug lies soft underfoot.  A bureau a gradin stands off to the side of the room.  A desk chair is pulled up next to the desk.  A sideboard stands against the wall next to the doors to the foyer.  Across the room, some setees are drawn up in a semi-circle around a tea table.  Opposite the settees, a large marble fireplace occupies the eastern wall. In front of the hearth are a pair of wingback armchairs, with a small occasional table between them.
+Last connected Sun May 26 23:45:06 2013 PDT from localhost
+#$#mcp-negotiate-can 1412044360 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1412044360 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1412044360 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1412044360
+You now have Source control strategy with object number #504 and parent generic note (#9).
+The created object is now your current object.
+#$#dns-org-mud-moo-simpleedit-content 1412044360 reference: "str:#504.text" name: "Source control strategy.text" type: string-list content*: "" _data-tag: 404995687278
+#$#: 404995687278
+Set text property of the Source control strategy (#504).
+-----
+There appears to be some writing on the note ...
+
+SOURCE CONTROL STRATEGY
+=======================
+
+(Very much a work in progress...)
+
+= Notes on how to manage MOO source (verb code) =
+
+== Motivation ==
+
+The motivation for source control is so old it need not be discussed here.
+This isn't about that anyway. This is about a strategy for managing source in
+our MOO.
+
+The goal of this strategy is to support the rapid development cycle
+MOO/MCP/TinyFugue provides without losing the advantages of traditional source
+control.
+
+== Overall description ==
+
+The process is a largely manual one in which an editor makes changes either in
+the repository or in the MOO and then syncs them. To keep the two code sets in
+sync, the MOO will provide an audit feature. There will be a way of setting
+verb code which marks the change as "from source control" and includes a
+version number. The usual ways of editing verbs (@edit, /reedit) will clear
+the flag but leave the version number in place for diffing purposes.
+
+
+
+== Tracking deviation ==
+
+
+
+(You finish reading.)
+-----
+INTRODUCTION TO JTEXT
+=====================
+
+Jtext is a text abstraction for use in interactive sessions (like connecting to muds).  JHM people have been developing it since early in 1993.
+
+The purpose of this document (or set of documents) is to provide an overview of jtext, past, present and future.  It's directed mostly towards people who are new to jtext and would just like to understand it, but it may also be useful if you're interested in programming jtext clients and generators (or just in writing jtext documents).
+
+The jtext introduction is divided into the following sections:
+
+jtext-timeline[1]
+      A rough idea of how we got where we are.
+jtext-construction[2]
+      The components of a jtext document.
+jtext-addressing[3]
+      References between documents.
+jtext-output[4]
+      Different ways to view jtext.
+jtext-input[5]
+      Different ways to enter jtext into the database.
+
+-----
+JTEXT-TIMELINE
+==============
+
+Unfortunately, the earliest development of jtext was pretty spontaneous, and most of the discussion of it took place only in conversation, so we don't have very good records of what was done when.  Actually, we don't even have good records of progress after we started using mailing lists.
+
+Here are rough ideas of the chronology:
+
+  o  On January 14 1993, the web entrance on JHM was up and providing an HTML object browser.
+  o  On January 25, an alpha release of tkmoo (see `help tkmoo'[1]) was released for anonymous ftp at parcftp.xerox.com.  It included display of richtext.
+
+-----
+JTEXT-CONSTRUCTION
+==================
+
+Jtext documents contain many of the same elements as an HTML document.  At a minimum, a jtext document should contain a title and a body.  A short jtext document (in its native format) might look like this:
+
+{{$jtext.title, "This is a title"}, {$jtext.header, 1, "Header"}, {$jtext.paragraph, "Foo bar baz.  See `", {$jtext.link.root, {$jaddress.help. {"subject", "foo"}, "help foo"}}, "' for some information about foo."}}
+
+This document contains a title, a header, and a short paragraph including a link to a help document.  It is composed of several tagged lists (see `help tagged-lists'[1]).   Jtags have a tagged list of the form: 
+
+{$jtext.tag, arg1, arg2, ...}
+
+The arguments vary by tag, and are listed in the help about the tag or by looking at the tag.  The first tag in the document is a simple title tag, which has just the "title" argument.  The next one is a header, corrosponding to an html <H1>Header</H1>.   The link tag has a jaddress and anchor text as arguments.  In this case, the jaddress is a help address.
+
+Tagged lists like the above jtext document are generated in one of three ways.
+
+  o  Help-format conversion to jtext
+  o  manually
+  o  dynamically
+
+Help-format and manually are covered in `help jtext-input'[2].  Dynamic jtext generation is simply the construction of a jtext document in a verb.  An example of this would be an object browser or a jaddress that returned a @who style listing.
+
+=> 0
+*** Shutting down: shutdown() called by Crag (#243) ***

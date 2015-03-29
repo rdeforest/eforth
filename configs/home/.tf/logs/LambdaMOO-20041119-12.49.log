@@ -1,0 +1,178 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 139 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Site-Issues (#72243)                1 new message
+Last connected Thu Nov 18 19:34:54 2004 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+Message 47 on *Site-Issues (#72243):
+Date:    Thursday 18-Nov-04 03:37:46
+From:    Rog (#4292)
+To:      *Site-Issues (#72243)
+Subject: well, that was fun
+
+I guess the blog has some use after all...
+--------------------------
+15 messages on *Site-Issues (#72243):
+  33:  Nov  9 16:16   prak (#108489)         > Too bad Covad messed up so thoro
+  34:  Nov  9 18:44   Rog (#4292)            one other phone call
+  35:  Nov  9 18:46   Rog (#4292)            > I'm somewhat confused by this.  
+  36:  Nov 10 00:41   Kiki (#97434)          "FYI, I am still unable to connect
+  37:  Nov 10 02:20   Rog (#4292)            > FYI, I am still unable to connec
+  38:  Nov 10 14:59   Etoile (#113614)       [message 37 forwarded to Kiki via 
+  39:  Nov 10 16:17   Crag (#58746)          tangent re: icmp blocking
+  40:  Nov 10 16:59   Artagel (#54950)       Re: tangent re: icmp blocking
+  41:  Nov 11 07:59   Crag (#58746)          Re: tangent re: icmp blocking
+  42:  Nov 12 02:54   Marc (#85344)          FYI: I've been trying off and on s
+  43:  Nov 12 03:07   Rog (#4292)            The Voyage Home
+  44:  Nov 12 19:43   Rog (#4292)            outgoing mail
+  45:  Nov 12 20:39   Kiki (#97434)          For posterity, my problem was that
+  46:  Nov 12 21:58   some_name (#88206)     ECN now working again to lambda.mo
+>>47:  Nov 18 03:37   Rog (#4292)            well, that was fun
+----+
+Message 1 on *Site-Issues (#72243):
+Date:    Thursday  4-Nov-04 20:53:04
+From:    Rog (#4292)
+To:      *Site-Issues (#72243)
+Subject: about this list
+
+As the description says:
+
+    *Site-Issues
+    for discussion of anything having to do with LambdaMOO's physical server,
+    network connectivity, or ISP. 
+
+I guess I should have done this a while ago.  People have been curious about the state of things, but I didn't want to be cluttering the *News with spurious announcements of things that might or might not be happening.  And the original story was that this was just going to be an IP change that would be over and done with.  After 4 years of smooth service, I wasn't expecting Covad/IInet to make such a botch of it all.
+
+But having done a bunch of ad hoc responses in individual mail, and seeing as people are naturally curious, here we are.  I'm still going to post major events to *News so don't feel you don't actually have to follow this if you don't want to.
+
+Also, *Wizards is still the best place to report specific problems (e.g., you or someone you know can't connect even though it's known that the MOO is concurrently up).  MOOmail to Rog tends to be less effective seeing as I haven't been able to read it very often over the past few weeks, whereas Nosredna and other folks have my actual phone number (i.e., if there's something only I can deal with...).
+
+This list is more about 
+  (1) status reports that are not consequential enough to send to *News, and
+  (2) answering general questions
+
+And of course now that I've set this up, everything will be fixed in the next few days and we won't need it anymore.  Ha ha.
+--------------------------
+Message 2 on *Site-Issues (#72243):
+Date:    Thursday  4-Nov-04 20:57:16
+From:    Rog (#4292)
+To:      *Site-Issues (#72243)
+Subject: current status
+
+Last wednesday, the QWest tech came out to recondition my main phone line to qualify it for DSL.  
+He was apparently successful.  
+
+Last Friday I gave Speakeasy some $$ and they're now working to set up service.  
+QWest's installation date is tomorrow (11/5); we'll see how it goes.
+
+It should be noted that, as with all DSL installs, nobody actually promises anything.  I'm signed up for 1.5M/768K as I originally had on our second (Covad-owned dedicated-DSL) line, and according to the QWest tech (who admitted to not being a DSL guy himself) the only physical difference between the two lines was the multiplexer box on the main line that he removed last Wednesday.  QWest's db now has us listed as being 1200 feet from the CO; before, with the multiplexer box in place, it was 60,000 feet.  The real distance is something on the order of 1.5 miles, but whatever.  I don't care at this point.
+
+On the Covad line, as far as I can tell, nothing is happening.  The modem lights are all green and the modem status page reports that I have an ATM connection of some sort.  The PPP thingie sends off its initial request and it just sits there; no PPP server at the far end, apparently.  Last conversation with IInet tech support was Tuesday a week ago.  According to them they are at Covad's mercy on this.  IInet guy John has apparently been leaving voicemail all over the place at Covad and he was going to try to escalate things some more.  And it's now a week later.
+
+So it's down to a race.  Speakeasy trying to get service running on my main line vs. Covad trying to restore service on my second line.  My guess is Speakeasy is going to win this one.  (The only way they lose is if they can't bring it up at all or it turns out to be horribly slow, in which case I get to go back and yell at IInet some more; what fun...).
+
+(... Admittedly, I thought Kerry was going to win, too, so my predictions clearly aren't worth shit...)
+--------------------------
+Message 3 on *Site-Issues (#72243):
+Date:    Thursday  4-Nov-04 23:10:34
+From:    Rog (#4292)
+To:      *Site-Issues (#72243)
+Subject: dropped connections
+
+>  In our new LMOO home, we lose connection if we are idle too long. 
+
+Actually no.  The firewall software is the same as I've been using all along; it doesn't do idle timeouts.  (The modem is different and I suppose there could be something odd happening there, but I rather doubt it).
+
+What *is* happening is that the firewall and the modem have both been getting REBOOTED.  Note that if a gateway reboot happens while a connection is trying to send something, that'll cause the connection to be dropped (the packet bounces and then that side of the connection closes it down --- the other side doesn't find out until the gateway comes back up or it tries to transmit something itself).  Actually now that I think about it, since the firewall is doing NAT and connection tracking, it's likely that rebooting the firewall blows away the connection no matter what.
+
+This has nothing to do with how long the connection has been idle, so doing heartbeat thingies to send stuff every so often isn't going to help.
+
+Initially, we were rebooting the modem a LOT.  The line would get into this weird state where TCP connections stayed up but DNS lookups would timeout.  Covad kept saying, "well, the line is probably noisy, you just need to powercycle the modem to get things back in sync" --- which sort of maybe made sense (or at least I can see why TCP connections are better at dealing with noise than UDP stuff (which includes DNS); doesn't explain why pings were getting through, though).  The problem was that "every so often" went from once every few days to once every twenty minutes when we added the LambdaMOO traffic.  And they kept testing the line and not finding excessive noise.
+
+Finally, one of my more DSL-knowledgeable friends said, "Ya know, you MIGHT just have a defective modem.  That actually happens more often than you'd think."  Swapped the modem; problem went away.
+
+But there's also some hardware issue on the firewall that I can't diagnose remotely --- or at all, really.  It seems to run fine for a few days and then goes belly up.  My current guess is one of the network cards is wonky, but I'd have to take the box apart to be sure, and that would mean extended downtime,... not worth it for a box that I'm not expecting to be using again after this week (I hope)).  
+
+So, for now, figure on losing your connection at least once every few days.
+--------------------------
+Message 4 on *Site-Issues (#72243):
+Date:    Friday  5-Nov-04 13:38:52
+From:    MugWump (#89069)
+To:      *Site-Issues (#72243)
+Subject: alternate notices site
+
+Can you post on the web somewhere when the moo goes down and the specifics about why/when it will return, etc.?
+--------------------------
+Message 5 on *Site-Issues (#72243):
+Date:    Friday  5-Nov-04 18:19:44
+From:    Boonton (#76209)
+To:      *Site-Issues (#72243)
+
+ Good suggestion.  Who has www.Lambdamoo.com?  Anyway why not do Lambdamoo.blogspot.com.  Its free and the hosting is independent of the server so you'll have an easy way to communicate with the masses should we suffer another prolonged blackout.
+The Ever Wise
+Boonton
+--------------------------
+Message 6 on *Site-Issues (#72243):
+Date:    Friday  5-Nov-04 20:17:43
+From:    Nosredna (#2487)
+To:      Rog (#4292) and *Site-Issues (#72243)
+Subject: Re: dropped connections
+
+But, when I switched my heartbeat function from every 15 minutes to every 5 minutes, I immediately stopped getting disconnected.  Before that it was every time I was idle.  So SOMETHING has an idle timeout somewhere in the system.  I just tested it, and it's currently still happening, so it's not just something with an old modem.
+--Nosredna
+--------------------------
+< connected: Crag. Total: 139 >
+Message 7 on *Site-Issues (#72243):
+Date:    Saturday  6-Nov-04 00:33:48
+From:    Hydros (#106189)
+To:      *Site-Issues (#72243)
+
+I've been running a script to keep myself connected, as have at least three other players I know.
+--------------------------
+Message 8 on *Site-Issues (#72243):
+Date:    Saturday  6-Nov-04 01:12:53
+From:    Etoile (#113614)
+To:      *Site-Issues (#72243) and *blog (#77929)
+
+I was going to go reserve lambdamoo.blogspot.com for whoever wanted to use it, but I see Rog beat me to it.  I'd like to suggest LiveJournal as an alternative place for keeping us up-to-date.  It's much easier to use than Blogger - easier interaction (commenting) and easier RSS generation in particular - and there are several dozen LambdaMOOers who already have LiveJournals, so they could just add the update journal to their friends list.
+To that end, I've created a community called lambdamoo - those of you on LiveJournal will know what this means.  For others, check here:
+http://www.livejournal.com/users/lambdamoo/info
+--------------------------
+Message 9 on *Site-Issues (#72243):
+Date:    Saturday  6-Nov-04 01:16:09
+From:    Rog (#4292)
+To:      *Site-Issues (#72243)
+Subject: lambdamoo.blogspot.com
+
+>  Anyway why not do lambdamoo.blogspot.com.  
+
+Here I was beating my head against the wall pondering the various alternatives for putting up some kind of mini-webserver somewhere, and well, D'OH!  Makes TOO MUCH SENSE.  Head exploding.  
+
+So I went and did it.  Far too easy.  The name was available; the rest is history.
+
+I should point out that I'm not entirely sure how useful this will really be.  In many cases, by the time I find out, the fix is a few minutes away and the blog won't be telling you much before that.  But, we'll see.
+--------------------------

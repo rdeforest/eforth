@@ -1,0 +1,869 @@
+Waterpoint: pickled spitfires[326]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+Cape Toad
+A relatively smooth path along the coast.  The ocean rolls against the rocky coast.  One especially large, flat rock sits invitingly beside the path.  The afternoon sun shines brightly.  It is cool.  The coastal path leads north.
+Last connected Sat Apr 27 20:17:37 2013 PDT from 63.224.54.239
+#$#mcp-negotiate-can 1090757690 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1090757690 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1090757690 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1090757690 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1090757690
+-----
+`HELP DEFINE' NOT FOUND
+=======================
+
+Sorry, but no help is available on `define'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+`HELP LOOKUP' NOT FOUND
+=======================
+
+Sorry, but no help is available on `lookup'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+`HELP DICTIONARY' NOT FOUND
+===========================
+
+Sorry, but no help is available on `dictionary'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#206    PARTY TIME WOO WOO FEATURE
+#209    idling feature
+#212    Pasting Feature
+#211    Ways Feature
+#208    Rosette Feature Object
+#2726   Idle Wandering Feature
+#2013   Auto-Sitting Feature
+#2572   Acme Junior Curmudgeon Kit
+#3674   feature-o-luv
+#2515   Simple Social Feature
+------- ----
+Usage:  @add-feature <object>
+Available features not already in your feature list include:
+/.                                      MatheMOOtica feature
+@big FO                                 MCP Listener Session Management Feature
+accusation feature                      MCP package ranking feature
+Agent Eight feature                     MGI feature
+ambiguity feature                       mirth and hilarity feature
+Anti-Idle Feature                       MOO-XMPP (Jabber) feature
+Cardgame Feature                        ndiff feature
+Carpal Tunnel Feature Object            Object Tree Feature
+categorized audit feature               On Line Dictionary
+commaed paste feature                   pelting feature
+Conversion FO                           programming utilities feature
+Date Feature                            Proper Arrow Feature
+db searching fo                         property permuter
+Deinventory Feature                     ROLL CALL feature
+documentation feature                   room positioning feature
+ENABLE feature                          ROT13 feature
+feature ranking feature                 Slashdot Feature
+footnote feature                        Spontaneous Combustion Feature
+furniture talk feature                  SQL Query Feature and Utilities
+Hangout Feature                         stock market feature
+Inheritance Utilities Feature           Substituting Social FO
+interactive fiction refugee feature     Telephone Call Setup Feature
+interestingness feature                 TWin object browser feature
+IRC compatibility feature               TWin Swiss Army Knife Feature
+Kevin Bacon Feature                     Ultrasearch Feature
+kicking feature                         URL pasting feature
+lazy waving feature                     Verb Cache Stats Feature
+Lexicon game feature                    verb permuter
+lexicon pasting feature                 Weather Feature
+login watcher mark 2                    Weather XML Feature
+MacCentral                              Who's Feature
+MacNN                                   workspace eval feature
+Mapping FO                              
+alternate stage-talk feature for those who don't like - being the same as `
+collaborative interactive fiction feature
+Condescending Yet Sometimes Somewhat Nice Feature Object
+If you like arranging the verbs on your objects so that they occur in a sensible order, this feature object is for you.
+[Ported from Rog's verb permuter on JHM.]
+See `help verb permuter' for more information.
+The verb permuter (#394) added as a feature.
+-----
+HELP ON THE VERB PERMUTER
+=========================
+
+Syntax:  @permute-verbs <object>
+
+prints out a tableau whose lines you can rearrange to get the verbs of a particular object in the order that you want them.  Concatenating these lines and executing the resulting expression carries out the permutation.
+
+No help found on using.
+
+Crag (#289) [ (player) programmer ]
+  Child of generic programmer (#52).
+  Location Cape Toad (#469).
+  #289:kids                     Crag (#289)          r d    any none none
+  #289:core_objects             Crag (#289)          rx     this none this
+  #289:obj_table                Crag (#289)          rxd    this none this
+-------------------------------- finished ---------------------------------
+;#394:permute_verbs(#289, $list_utils:slice({
+{1, "kids"},
+{2, "core_objects"},
+{3, "obj_table"},
+}))
+Usage:  @add-feature <object>
+Available features not already in your feature list include:
+/.                                      Mapping FO
+@big FO                                 MatheMOOtica feature
+accusation feature                      MCP Listener Session Management Feature
+Agent Eight feature                     MCP package ranking feature
+ambiguity feature                       MGI feature
+Anti-Idle Feature                       mirth and hilarity feature
+Cardgame Feature                        MOO-XMPP (Jabber) feature
+Carpal Tunnel Feature Object            ndiff feature
+categorized audit feature               Object Tree Feature
+commaed paste feature                   On Line Dictionary
+Conversion FO                           pelting feature
+Date Feature                            programming utilities feature
+db searching fo                         Proper Arrow Feature
+Deinventory Feature                     property permuter
+documentation feature                   ROLL CALL feature
+ENABLE feature                          room positioning feature
+feature ranking feature                 ROT13 feature
+footnote feature                        Slashdot Feature
+furniture talk feature                  Spontaneous Combustion Feature
+Hangout Feature                         SQL Query Feature and Utilities
+Inheritance Utilities Feature           stock market feature
+interactive fiction refugee feature     Substituting Social FO
+interestingness feature                 Telephone Call Setup Feature
+IRC compatibility feature               TWin object browser feature
+Kevin Bacon Feature                     TWin Swiss Army Knife Feature
+kicking feature                         Ultrasearch Feature
+lazy waving feature                     URL pasting feature
+Lexicon game feature                    Verb Cache Stats Feature
+lexicon pasting feature                 Weather Feature
+login watcher mark 2                    Weather XML Feature
+MacCentral                              Who's Feature
+MacNN                                   workspace eval feature
+alternate stage-talk feature for those who don't like - being the same as `
+collaborative interactive fiction feature
+Condescending Yet Sometimes Somewhat Nice Feature Object
+That is not a valid command.
+The Cardgame Feature (#2002) added as a feature.
+-----
+HELP ON THE CARDGAME FEATURE
+============================
+
+commands:
+ - joing*ame           [<game>]
+    Join a game.  Usually the game must not have started yet.
+
+ - quitg*ame|leaveg*ame [<game>]
+    Leave a game.
+    (Depending on the game, this may cause the game to end and reset itself.)
+
+ - start*game          [<game>]
+    Start the game.
+    (Any player may do this once the game has an allowable
+    number of players joined up.)
+
+ - reset*game          [<game>]
+    End the game and revert it to "assembly" state.
+
+ - draw|take    [<count|cardlist>] [from <pile|player>] [for <pile>]
+ - play|discard [<cardlist>]       [from <pile>] [to <pile|player>]
+ - pass|give    [<cardlist>] [to <player>]
+
+    Transfer cards from one place/player to another.
+    Only some of these commands may be applicable in a given game
+    The intended default usage:
+      "draw" -- take cards from some pile on the table into your hand
+      "play" -- play cards from your hand onto some pile on the table
+      "discard" -- play cards from your hand onto some pile on the table
+                   (defaulting to a "discard" pile if there is one).
+      "take" -- defaults to taking cards from some other player's hand into your hand
+
+    For help on how to specify <cardlist> do help on that deck
+    (help on the game instance will get you to the list of decks in use).
+
+ - pass
+     This is often used for signifying the end of your turn, if, say, 
+     this game is such that a turn can have multiple or optional actions.
+
+ - bid [<bid>]
+     Enter a bid (if this is a game that has bidding).
+
+ - concede [<concession>]
+     Concede the game or some portion (e.g., a hand) thereof.
+     Whether this command is allowed and how <concession> is interpreted
+     depends on the game.
+
+ - gs*ay <string>
+   ge*mote <string>
+   g:<string>
+     Directed speech/emote to other watchers
+
+ - autoplay using <module> [in game]
+   autoplay clear
+   autoplay list
+     see 'help autoplay'
+
+Also, hands are sensitive to where they are; in order to play, you must be holding it.  If you give your hand to someone or something, that entity takes ownership and can play your cards from then on.  Dropping your hand is equivalent to quitting.
+
+No help found on using.
+
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#206    PARTY TIME WOO WOO FEATURE
+#209    idling feature
+#212    Pasting Feature
+#211    Ways Feature
+#208    Rosette Feature Object
+#2726   Idle Wandering Feature
+#2013   Auto-Sitting Feature
+#2572   Acme Junior Curmudgeon Kit
+#3674   feature-o-luv
+#2515   Simple Social Feature
+#394    verb permuter
+#2002   Cardgame Feature
+------- ----
+Cardgame Feature (#2002) [ readable ]
+  Owned by wRog (#312).
+  Child of Generic Feature Object (#65).
+  Location bag of generics (#2439).
+-------------------------------- finished ---------------------------------
+Cardgame Feature (#2002) [ readable ]
+  Owned by wRog (#312).
+  Child of Generic Feature Object (#65).
+  Location bag of generics (#2439).
+ #2002:"pass play discard draw take give" wRog (#312) rxd   any any any
+ #2002:"bid concede declare"    wRog (#312)          rxd    any any any
+ #2002:joing*ame                wRog (#312)          rxd    any any any
+ #2002:"quitg*ame leaveg*ame reset*game" wRog (#312) rxd    any any any
+ #2002:find_joinable_games      wRog (#312)          rxd    this none this
+ #2002:find_hands               wRog (#312)          rxd    this none this
+ #2002:match_command            wRog (#312)          rxd    this none this
+ #2002:lineparse                wRog (#312)          rxd    this none this
+ #2002:match_game               wRog (#312)          rxd    this none this
+ #2002:game_match_failed        wRog (#312)          rxd    this none this
+ #2002:autoplay                 wRog (#312)          rxd    any any any
+ #2002:module_list              wRog (#312)          rxd    this none this
+ #2002:"gs*ay ge*mote g:*"      wRog (#312)          rxd    any any any
+ #2002:start*game               wRog (#312)          rxd    any any any
+ #2002:init_for_module          wRog (#312)          rxd    this none this
+ #2002:@addgame                 wRog (#312)          r      any at/to this
+ #2002:@rmgame                  wRog (#312)          r      any out of/from inside/from this
+-------------------------------- finished ---------------------------------
+-----
+@BUILDING-OPTIONS
+=================
+
+Usage:  @building-options
+        @building-option <option>
+
+These options (see `help options'[1]) allow you to customize your building environment.
+
+The first form displays all of your building options.  The second shows or sets a given option.  Current building options are:
+
+  room=<object> Type of object the @dig command should create.
+ !room          Default ($room).
+
+  exit=<object> Type of exit the @dig command should create.
+ !exit          Default ($exit).
+
+The @dig command (see `help @dig'[2]) creates rooms and/or exits when you're building.  These two options let you determine what parent classes are used for the objects created.
+
+ +furnishing    @created objects are locked in the room you're in
+ -furnishing    @created objects are carried by you, unlocked
+
+By default, when @create makes an object, the object is placed in your inventory.  While this is handy for programming, it's often not what you want when you're furnishing rooms.  If you have this option set, the objects created will be placed in the room you're in, and locked down.
+
+ +create-set-co @create sets your current object to the one created.
+ -create-set-co @create doesn't change your current object.
+
+When this option is set, a @create command will set your current object (see `help current-object'[3]) to the newly created object.  This is useful primarily for porting (an object creation script can start with a @create, then refer to _ in the rest of the script), but can also be handy for general creation.
+
+ +bi-create     @create/@recycle call create()/recycle() directly.
+ -bi-create     @create/@recycle re-use object numbers.
+
+This option determines whether @create and other commands will use the server's create() and recycle() primitives or the database's $recycle.
+
+-----
+@DUMP
+=====
+
+Syntax:  @dump <object> [with [id=#<id>] [noprops] [noverbs] [create]]
+
+This spills out all the properties and verbs on an object, calling suspend at appropriate intervals.
+
+  o  id=#<id> -- specifies an idnumber to use in place of the object's actual id (for porting to another MOO)
+  o  noprops  -- don't show properties.
+  o  noverbs  -- don't show verbs.
+  o  create   -- indicates that a @create command should be generated and all of the verbs be introduced with @verb rather than @args; the default assumption is that the object already exists and you're just doing this to have a look at it.
+
+@building-option +create-set-co
+@create $feature named Cardgame Feature:Cardgame Feature,cardfeature
+@prop _."active_games" {} r
+;_.("active_games") = {#2485, #2300, #2738, #5571, #5236, #7031}
+@prop _."active_only_commands" {} r
+;_.("active_only_commands") = {"pass play discard draw take give", "gs*ay ge*mote g:*", "bid concede declare", "start*game"}
+@prop _."generic_game" #2363 r
+@prop _."generic_rules" #2321 r
+@prop _."generic_hand" #2373 r
+@prop _."generic_pile" #1980 r
+@prop _."generic_strategy" #1386 r
+@prop _."say_msg" {} rc
+@say _ is "[%$i] %Nd %n:(says), \"%$a\""
+@prop _."emote_msg" {} rc
+@emote _ is "[%$i] %Nd%$a"
+;_.("feature_ok") = 1
+;_.("commands") = {"pass play discard draw take give", "bid concede declare", "joing*ame", "quitg*ame leaveg*ame reset*game", "autoplay", "gs*ay ge*mote g:*", "start*game"}
+;_.("help_text") = {"commands:", " - joing*ame           [<game>]", "    Join a game.  Usually the game must not have started yet.", "", " - quitg*ame|leaveg*ame [<game>]", "    Leave a game.", "    (Depending on the game, this may cause the game to end and reset itself.)", "", " - start*game          [<game>]", "    Start the game.", "    (Any player may do this once the game has an allowable", "    number of players joined up.)", "", " - reset*game          [<game>]", "    End the game and revert it to \"assembly\" state.", "", " - draw|take    [<count|cardlist>] [from <pile|player>] [for <pile>]", " - play|discard [<cardlist>]       [from <pile>] [to <pile|player>]", " - pass|give    [<cardlist>] [to <player>]", "", "    Transfer cards from one place/player to another.", "    Only some of these commands may be applicable in a given game", "    The intended default usage:", "      \"draw\" -- take cards from some pile on the table into your hand", "      \"play\" -- play cards from your hand onto some pile on the table", "      \"discard\" -- play cards from your hand onto some pile on the table", "                   (defaulting to a \"discard\" pile if there is one).", "      \"take\" -- defaults to taking cards from some other player's hand into your hand", "", "    For help on how to specify <cardlist> do help on that deck", "    (help on the game instance will get you to the list of decks in use).", "", " - pass", "     This is often used for signifying the end of your turn, if, say, ", "     this game is such that a turn can have multiple or optional actions.", "", " - bid [<bid>]", "     Enter a bid (if this is a game that has bidding).", "", " - concede [<concession>]", "     Concede the game or some portion (e.g., a hand) thereof.", "     Whether this command is allowed and how <concession> is interpreted", "     depends on the game.", "", " - gs*ay <string>", "   ge*mote <string>", "   g:<string>", "     Directed speech/emote to other watchers", "", " - autoplay using <module> [in game]", "   autoplay clear", "   autoplay list", "     see 'help autoplay'", "", "Also, hands are sensitive to where they are; in order to play, you must be holding it.  If you give your hand to someone or something, that entity takes ownership and can play your cards from then on.  Dropping your hand is equivalent to quitting."}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Cardgame Feature", "cardfeature"}
+;_.("description") = "UNDER CONSTRUCTION"
+;_.("offered") = #-1
+;_.("object_size") = {22553, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+@verb _:"pass play discard draw take give" any any any rxd
+@program _:pass
+if (caller_perms() != player)
+  raise(E_PERM);
+endif
+try
+  {hand, cardstr, prepstrs} = this:lineparse(@args);
+  if ((((verb == "give") && (cardstr == "hand")) && (length(prepstrs) == 1)) && (prepstrs[1][1] == "to"))
+    dobj = hand;
+    dobjstr = cardstr;
+    iobjstr = prepstrs[1][2];
+    hand:give();
+  elseif (!hand.game.started)
+    player:tell("Game has not started yet.");
+  elseif (((verb == "pass") && (!cardstr)) && (!prepstrs))
+    hand.game:try_action(hand, "pass");
+  else
+    hand.game:try_action(hand, "move", @hand.game.rules:resolve_move_params(hand, verb, cardstr, prepstrs));
+  endif
+except (E_NONE)
+endtry
+.
+
+@verb _:"bid concede declare" any any any rxd
+@program _:bid
+if (caller_perms() != player)
+  raise(E_PERM);
+endif
+try
+  {hand, string, prepstrs} = this:lineparse(@args);
+  action = verb;
+  if (!hand.game.started)
+    player:tell("Game has not started yet.");
+  elseif (prepstrs)
+    player:tell("Unexpected clause:  ", prepstrs[1][1], " ", prepstrs[1][2]);
+  else
+    {bid, ?errmsg = ""} = hand.game.rules:("parse_" + action)(hand, string || "");
+    if (errmsg)
+      player:tell(errmsg);
+    else
+      hand.game:try_action(hand, action, bid);
+    endif
+  endif
+except (E_NONE)
+endtry
+.
+
+@verb _:"joing*ame" any any any rxd
+@program _:joingame
+if (caller != player)
+  raise(E_PERM);
+endif
+gamelist = this:find_joinable_games();
+if (!gamelist)
+  player:tell("There are currently no games that you can join.");
+  return;
+endif
+game = this:match_game(dobjstr, gamelist);
+if (this:game_match_failed(game, dobjstr, gamelist))
+  return;
+endif
+game:try_join(player, {});
+.
+
+@verb _:"quitg*ame leaveg*ame reset*game" any any any rxd
+@program _:quitgame
+if (caller != player)
+  raise(E_PERM);
+endif
+action = {"leave", "leave", "start", "reset"}[index("qlsr", verb[1])];
+hands = this:find_hands(player);
+if ((!hands) && (action != "reset"))
+  player:tell("You are not currently in any game.");
+  return;
+endif
+games = $list_utils:map_property(hands, "game");
+game = this:match_game(dobjstr, games);
+if (this:game_match_failed(game, dobjstr, games))
+  return;
+endif
+hand = hands[game in games];
+game:try_action(hand, action);
+.
+
+@verb _:"find_joinable_games" this none this
+@program _:find_joinable_games
+":find_joinable_games() => list of games that are joinable.";
+games = {};
+for g in (this.active_games)
+  if (g.join_allowed)
+    games[1..0] = {g};
+  endif
+endfor
+return games;
+.
+
+@verb _:"find_hands" this none this
+@program _:find_hands
+":find_hands(PLAYER) => list of hands belonging to PLAYER";
+{who, ?gname = ""} = args;
+hands = {};
+for g in (this.active_games)
+  h = g:player_hand(who);
+  if (h != #-1)
+    hands[1..0] = {h};
+  endif
+endfor
+return hands;
+.
+
+@verb _:"match_command" this none this
+@program _:match_command
+{vrb, dlist, plist, ilist} = args;
+info = `verb_info(this, vrb) ! E_VERBNF';
+if (!info)
+  return 0;
+elseif (info[3] in this.active_only_commands)
+  return this:find_hands(caller);
+else
+  return pass(@args);
+endif
+.
+
+@verb _:"lineparse" this none this
+@program _:lineparse
+"Parse args for cardgame actions.  Returns {#HAND,CARDSPEC,{{PREP,PREPSTRING}...}}";
+strs = {};
+seen = {};
+for i in [-length(args)..-1]
+  j = args[-i] in {"in", "from", "to", "for", "using", "with"};
+  if (j && (!((prep = args[-i]) in seen)))
+    seen[1..0] = {prep};
+    strs[$ + 1..$] = {{prep, $string_utils:from_list(args[1 - i..alen = $], " ")}};
+    if (alen == (-i))
+      player:tell(prep, " what?");
+      raise(E_NONE);
+    endif
+    args[-i..$] = {};
+  endif
+endfor
+i = $list_utils:iassoc("in", strs);
+instr = i ? strs[i][2] | "";
+strs[i..i] = {};
+hands = this:find_hands(player);
+if (!hands)
+  player:tell("You are not currently in a card game.");
+  raise(E_NONE);
+elseif (instr || (length(hands) > 1))
+  games = $list_utils:map_prop(hands, "game");
+  game = this:match_game(instr, games);
+  if (this:game_match_failed(game, instr, games, 1))
+    raise(E_NONE);
+  endif
+  hand = hands[game in games];
+else
+  hand = hands[1];
+endif
+return {hand, $string_utils:from_list(args, " "), strs};
+.
+
+@verb _:"match_game" this none this
+@program _:match_game
+{string, games} = args;
+if (!string)
+  if (length(games) == 1)
+    game = games[1];
+  else
+    game = $nothing;
+    for g in (games)
+      if (g.location != player.location)
+        continue;
+      endif
+      if (game == $nothing)
+        game = g;
+      else
+        game = $ambiguous_match;
+        break;
+      endif
+    endfor
+  endif
+elseif ($failed_match == (game = $string_utils:literal_object(string)))
+  game = $string_utils:match(string, games, "aliases", games, "name");
+endif
+return game;
+.
+
+@verb _:"game_match_failed" this none this
+@program _:game_match_failed
+"Usage: game_match_failed(object, string, games)";
+"Prints a message if string does not match some known game object.";
+"Used after object is derived from a this:match_game(string,games).";
+{match_result, string, gamelist, ?inp = 0} = args;
+if ((index(string, "#") == 1) && ($code_utils:toobj(string) != E_TYPE))
+  "...avoid the `I don't know which `#-2' you mean' message...";
+  if (!valid(match_result))
+    player:tell(tostr(string, " does not exist."));
+  elseif (!(match_result in gamelist))
+    player:tell(tostr(string, " is not a valid card game", inp ? " that you are in" | "", "."));
+  else
+    return 0;
+  endif
+elseif (match_result == $nothing)
+  player:tell(tostr("You must give the name of some card game", inp ? " that you are in" | "", "."));
+elseif (match_result == $failed_match)
+  player:tell(tostr("\"", string, "\" does not match any known card game", inp ? " that you are in" | "", "."));
+elseif (match_result == $ambiguous_match)
+  player:tell(tostr("There are a number of card games", inp ? " that you are in" | "", " that begin with \"", string, "\"."));
+elseif (!valid(match_result))
+  player:tell(tostr(match_result, " does not exist."));
+else
+  return 0;
+endif
+return 1;
+.
+
+@verb _:"autoplay" any any any rxd
+@program _:autoplay
+"autoplay list [in <game>]";
+"  List the available strategy modules for use (in <game>).";
+"autoplay show [in <game>]";
+"  List which strategy modules you are currently using (in <game>).";
+"autoplay using <module> [in <game>]";
+"  Add <module> to the list of agents that will be acting for you (in <game>).  Note that order matters (if the first agent figures out what to do in some situation, the others may not be called).";
+"autoplay clear [in <game>]";
+"  Reset the agent list for you (in <game>) so that you will be playing entirely manually.";
+"Note that changes in autoplay do not really take effect until the next time some event occurs in the game.  Thus if it is currently your turn and you invoke autoplay, you will still have to make one last move manually (... bug or feature?).";
+if (caller_perms() != player)
+  raise(E_PERM);
+endif
+try
+  {hand, cardstr, prepstrs} = this:lineparse(@args);
+  rules = hand.game.rules;
+  if ((!(cardstr in {"", "clear", "list", "show"})) || ((!cardstr) == (!prepstrs)))
+    player:tell("Should be '", verb, " clear|list|show' or '", verb, " using|with <modulename>'");
+  elseif (cardstr == "show")
+    player:tell("Modules currently in use:  ", $string_utils:dname_and_number_list(hand.agents, "(none)"));
+  elseif (!valid(rules))
+    player:tell("Need to set game rules first.");
+  elseif (cardstr == "clear")
+    try
+      for a in (hand.agents)
+        `a:stop_playing_for(player, hand.game) ! ANY';
+      endfor
+      hand.agents = {};
+      player:tell("Removing all automatic play for your hand in ", hand.game:dname(), ".");
+    except e (hand.game.user_error)
+      player:tell(e[2]);
+      raise(E_NONE);
+    endtry
+  elseif (!(modules = this:module_list(hand.game.rules)))
+    player:tell("There are no strategy modules available for this game.");
+  elseif (cardstr == "list")
+    player:tell("Available modules for this ruleset:  ", $string_utils:name_and_number_list(modules));
+  else
+    pws = {{"using", "module"}, {"with", "module"}};
+    {prep, what, string, prepstrs} = rules:extract_prepstr(prepstrs, pws);
+    if (!prep)
+      hand.game:game_error("WTF??");
+    endif
+    module = $string_utils:match(string, modules, "aliases");
+    if ($command_utils:object_match_failed(module, string))
+      raise(E_NONE);
+    endif
+    try
+      module:start_playing_for(player, hand.game);
+    except e (hand.game.user_error)
+      player:tell(e[2]);
+      raise(E_NONE);
+    endtry
+    player:tell("Now using ", $string_utils:dname_and_number_list(hand.agents), " in ", hand.game:dname());
+  endif
+except (E_NONE)
+endtry
+.
+
+@verb _:"module_list" this none this
+@program _:module_list
+{rules} = args;
+lst = {};
+for o in ($object_utils:descendants(this.generic_strategy))
+  if (o:can_handle_ruleset(rules))
+    lst[1..0] = {o};
+  endif
+endfor
+return lst;
+.
+
+@verb _:"gs*ay ge*mote g:*" any any any rxd
+@program _:gsay
+if (caller != player)
+  raise(E_PERM);
+endif
+hands = this:find_hands(player);
+if (!hands)
+  player:tell("You are not currently in any game.");
+elseif (length(hands) > 1)
+  player:tell("You are currently in more than one game.");
+else
+  game = hands[1].game;
+  iobjstr = $list_utils:shortest(setremove(game.aliases, "game"));
+  players = $list_utils:map_prop(game.hands, "player");
+  if (verb[1..2] == "ge")
+    argstr = " " + argstr;
+  elseif (verb[1..2] == "g:")
+    if ((length(verb) > 2) && (verb[3] == ":"))
+      argstr = (verb[4..$] + " ") + argstr;
+    else
+      argstr = (" " + (verb[3..$] + " ")) + argstr;
+    endif
+  else
+    game:say_to_watchers(this.say_msg, player, game, game, players, $nothing);
+    return;
+  endif
+  game:tell_watchers($string_utils:pronoun_sub(this.emote_msg, player, game, game, players, $nothing));
+endif
+.
+
+@verb _:"start*game" any any any rxd
+@program _:startgame
+if (caller != player)
+  raise(E_PERM);
+endif
+action = {"leave", "leave", "start", "reset"}[index("qlsr", verb[1])];
+hands = this:find_hands(player);
+if ((!hands) && (action != "reset"))
+  player:tell("You are not currently in any game.");
+  return;
+endif
+games = $list_utils:map_property(hands, "game");
+game = this:match_game(dobjstr, games);
+if (this:game_match_failed(game, dobjstr, games))
+  return;
+endif
+hand = hands[game in games];
+game:try_action(hand, action);
+.
+
+@verb _:"init_for_module" this none this
+@program _:init_for_module
+if ((caller != this) && (!$perm_utils:controls(caller_perms(), this)))
+  raise(E_PERM);
+endif
+this.active_games = {};
+.
+
+@verb _:"@addgame" any to this r
+@program _:@addgame
+"Usage:  @addgame <game-instance> to <feature>";
+"";
+"Adds the game instance to the list of those recognized by the various commands of this feature (joingame, etc...).";
+"Instance must be owned by the player and be a descendant of the generic game instance.";
+if (!$perm_utils:controls(player, dobj))
+  player:tell(dobjstr, " does not belong to you.");
+elseif (!$object_utils:isa(dobj, this.generic_game))
+  player:tell(dobjstr, " does not appear to be a game instance.");
+elseif (dobj in this.active_games)
+  player:tell(dobjstr, " is already an active game.");
+else
+  this.active_games = setadd(this.active_games, dobj);
+  player:tell(dobjstr, " added to the list of active games.");
+endif
+.
+
+@verb _:"@rmgame" any from this r
+@program _:@rmgame
+"Usage:  @rmgame <game-instance> from <feature>";
+"";
+"Removes the specified game instance from the list of active game instances; ";
+"the various commands of this feature (joingame, etc...) will thenceforth not recognized it.";
+if (!$perm_utils:controls(player, dobj))
+  player:tell(dobjstr, " does not belong to you.");
+elseif (!(dobj in this.active_games))
+  player:tell(dobjstr, " is not on the active games list.");
+else
+  this.active_games = setremove(this.active_games, dobj);
+  player:tell(dobjstr, " removed from the list of active games.");
+endif
+.
+
+"***finished***
+No change.
+You now have Cardgame Feature (aka cardfeature) with object number #8658 and parent Generic Feature Object (#65).
+The created object is now your current object.
+Property added with value {}.
+=> {#2485, #2300, #2738, #5571, #5236, #7031}
+Property added with value {}.
+=> {"pass play discard draw take give", "gs*ay ge*mote g:*", "bid concede declare", "start*game"}
+Property added with value #2363.
+Property added with value #2321.
+Property added with value #2373.
+Property added with value #1980.
+Property added with value #1386.
+Property added with value {}.
+You set the "say" message of the Cardgame Feature (#8658).
+Property added with value {}.
+You set the "emote" message of the Cardgame Feature (#8658).
+#-1:Input to EVAL, line 4:  Permission denied
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+#-1:Input to EVAL, line 4:  Permission denied
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+=> {"commands:", " - joing*ame           [<game>]", "    Join a game.  Usually the game must not have started yet.", "", " - quitg*ame|leaveg*ame [<game>]", "    Leave a game.", "    (Depending on the game, this may cause the game to end and reset itself.)", "", " - start*game          [<game>]", "    Start the game.", "    (Any player may do this once the game has an allowable", "    number of players joined up.)", "", " - reset*game          [<game>]", "    End the game and revert it to \"assembly\" state.", "", " - draw|take    [<count|cardlist>] [from <pile|player>] [for <pile>]", " - play|discard [<cardlist>]       [from <pile>] [to <pile|player>]", " - pass|give    [<cardlist>] [to <player>]", "", "    Transfer cards from one place/player to another.", "    Only some of these commands may be applicable in a given game", "    The intended default usage:", "      \"draw\" -- take cards from some pile on the table into your hand", "      \"play\" -- play cards from your hand onto some pile on the table", "      \"discard\" -- play cards from your hand onto some pile on the table", "                   (defaulting to a \"discard\" pile if there is one).", "      \"take\" -- defaults to taking cards from some other player's hand into your hand", "", "    For help on how to specify <cardlist> do help on that deck", "    (help on the game instance will get you to the list of decks in use).", "", " - pass", "     This is often used for signifying the end of your turn, if, say, ", "     this game is such that a turn can have multiple or optional actions.", "", " - bid [<bid>]", "     Enter a bid (if this is a game that has bidding).", "", " - concede [<concession>]", "     Concede the game or some portion (e.g., a hand) thereof.", "     Whether this command is allowed and how <concession> is interpreted", "     depends on the game.", "", " - gs*ay <string>", "   ge*mote <string>", "   g:<string>", "     Directed speech/emote to other watchers", "", " - autoplay using <module> [in game]", "   autoplay clear", "   autoplay list", "     see 'help autoplay'", "", "Also, hands are sensitive to where they are; in order to play, you must be holding it.  If you give your hand to someone or something, that entity takes ownership and can play your cards from then on.  Dropping your hand is equivalent to quitting."}
+Crag says, "_.("key") => E_PERM (Permission denied)"
+=> {"Cardgame Feature", "cardfeature"}
+=> "UNDER CONSTRUCTION"
+#-1:Input to EVAL, line 4:  Permission denied
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+#-1:Input to EVAL, line 4:  Permission denied
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+#-1:Input to EVAL, line 4:  Permission denied
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+Crag says, "_.("review_history") => E_PERM (Permission denied)"
+Verb added [1] (0).
+Now programming Cardgame Feature:pass play discard draw take give[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [2] (1).
+Now programming Cardgame Feature:bid concede declare[2](1).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [3] (2).
+Now programming Cardgame Feature:joing*ame[3](2).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [4] (3).
+Now programming Cardgame Feature:quitg*ame leaveg*ame reset*game[4](3).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [5] (4).
+Now programming Cardgame Feature:find_joinable_games[5](4).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [6] (5).
+Now programming Cardgame Feature:find_hands[6](5).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [7] (6).
+Now programming Cardgame Feature:match_command[7](6).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [8] (7).
+Now programming Cardgame Feature:lineparse[8](7).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Line 23:  syntax error
+1 error(s).
+Verb not programmed.
+Verb added [9] (8).
+Now programming Cardgame Feature:match_game[9](8).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [10] (9).
+Now programming Cardgame Feature:game_match_failed[10](9).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [11] (10).
+Now programming Cardgame Feature:autoplay[11](10).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [12] (11).
+Now programming Cardgame Feature:module_list[12](11).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [13] (12).
+Now programming Cardgame Feature:gs*ay ge*mote g:*[13](12).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [14] (13).
+Now programming Cardgame Feature:start*game[14](13).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [15] (14).
+Now programming Cardgame Feature:init_for_module[15](14).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [16] (15).
+Now programming Cardgame Feature:@addgame[16](15).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [17] (16).
+Now programming Cardgame Feature:@rmgame[17](16).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Crag says, "***finished***"
+The Cardgame Feature (#8658) has 17 verbs.  Sure you want to recycle it? [Enter `yes' or `no']
+The Cardgame Feature (#8658) recycled.

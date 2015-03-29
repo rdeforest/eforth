@@ -1,0 +1,9 @@
+ColdGOO
+
+    create  name password    To create a new character
+    connect name password    To connect to an existing character
+    @quit                    To leave
+
+*** Connected ***
+Nowhere
+You see nothing special.

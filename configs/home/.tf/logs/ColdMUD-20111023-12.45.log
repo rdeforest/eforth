@@ -1,0 +1,58 @@
+ColdGOO
+
+    create  name password    To create a new character
+    connect name password    To connect to an existing character
+    @quit                    To leave
+
+*** Connected ***
+Nowhere
+You see nothing special.
+@program $located.match_environment
+    arg s;
+    
+    if (s == "here")
+        return location;
+    else
+        return (> pass(s) <);
+.
+!I don't understand that.
+!I don't understand that.
+Caught error ~paramnf (No such parameter me.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'GET_OBJ_VAR]
+  $admin_1.tmp_eval (on $admin_1): ~paramnf
+  $root.eval (on $admin_1): ~methoderr
+--> [$admin_1, $admin, $programmer, $builder, $user, $proto_user, $person, $located, $container, $vr, $described, $has_verbs, $has_commands, $root]
+!Line 1: syntax error
+--> [$vr]
+@program $vr.match_environment
+    arg s;
+    var loc, obj, env;
+    
+    if (!s)
+        throw(~objnf, "No object \"\" in environment.", s);
+    
+    // Handle special cases.
+    if (s == "me")
+        return this();
+    if (s && s[1] == "$") {
+        obj = (| get_name(tosym(substr(s, 2))) |);
+        if (!valid(obj))
+            throw(~objnf, "No such object " + s, s);
+        return obj;
+    }
+    
+    // Look first for exact matches.
+    env = .environment();
+    for obj in (env) {
+        if (obj.vr_name() == s)
+            return obj;
+    }
+    
+    // Now look for partial matches.
+    for obj in (env) {
+        if (match_begin(obj.vr_name(), s))
+            return obj;
+    }
+    throw(~objnf, "No object " + s + " in environment.", s);
+.

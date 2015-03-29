@@ -1,0 +1,15 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Redirecting old connection to this port ***
+#$#mcp version: 2.1 to: 2.1
+Last connected Mon Aug 20 19:37:53 2007 PDT from localhost
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+You see a particularly dreary corner of the room, a Punching Bag for Binder, a bucket, a mop, a round tuit, a hunk of quartz, a cheese, a whitespace, and a Wind-Up Mariachi Band here.
+#$#mcp-negotiate-can 23038962 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 23038962 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 23038962 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 23038962

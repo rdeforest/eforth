@@ -1,0 +1,1174 @@
+Waterpoint: pickled spitfires[326]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+Cape Toad
+A relatively smooth path along the coast.  The ocean rolls against the rocky coast.  One especially large, flat rock sits invitingly beside the path.  The afternoon sun shines brightly.  It is cool.  The coastal path leads north.
+Last connected Sun Apr 28 13:16:33 2013 PDT from 63.224.54.239
+#$#mcp-negotiate-can 1435289055 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1435289055 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1435289055 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1435289055 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1435289055
+Generic Cardgame Instance (#2363) [ readable fertile ]
+  Owned by wRog (#312).
+  Child of generic spammy thing (#993).
+  Location bag of generics (#2439).
+-------------------------------- finished ---------------------------------
+Your current object is now the Generic Cardgame Instance (#2363).
+The Generic Cardgame Instance(#2363) has 7 kids.
+Hearts game (#2485)   Dalmuti Game (#2300)   Lost Cities game (#2601)   Bridge Game (#2738)   6nimmt Game (#5571)   Solo Whist Game (#5236)   Skat Game (#7031)
+@building-option +create-set-co
+@create #2363 named Hearts game:Hearts game,game,hearts
+;_.("rules") = #2520
+;_.("hands") = {}
+;_.("piles") = {}
+"_.("state") => E_PERM (Permission denied)
+;_.("tasks") = {}
+"_.("pending_notifications") => E_PERM (Permission denied)
+;_.("decks") = {#2499}
+;_.("last_remind") = 1256667653
+;_.("ignoring") = {#265, #1107, #731, #1935, #261, #232}
+;_.("watching") = {#239}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Hearts game", "game", "hearts"}
+;_.("unique") = 0
+;_.("offered") = #-1
+;_.("object_size") = {1480, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+"***finished***
+@building-option +create-set-co
+@create #2482 named Hearts ruleset:Hearts ruleset
+@prop _."hand_pending_msg" {} rc
+@hand_pending _ is "%Nn %n:(received) %%C."
+@prop _."hand_selectpass_msg" {} rc
+@hand_selectpass _ is "Select %%c to give to %dn"
+@prop _."qs_msg" {} rc
+@qs _ is "You feel this sense of impending doom..."
+@prop _."jd_msg" {} rc
+@jd _ is "A ray of sunshine angles in from above ..."
+@wintrick _ is "----------- %Nd %n:(wins) the trick!"
+;_.("initial_hand") = {1, {"sorting", "by_suit_then_number"}}
+;_.("decks") = {#2499}
+;_.("help_text") = {"Hearts is played with 3 or more players.  ", "", "A hand starts with all of the cards being dealt out.", "There is a passing round in which you select some number of cards to pass to another player.", "Then the person holding the lowest club plays it (as an \"opening lead\" to the first \"trick\").", "", "The player that you pass to changes with each successive hand; periodically there will be a hand with no passing where one goes straight from the deal into the opening lead.", "", "Whenever a card is led to a trick, each other player must, in turn, play a card of the same suit if s/he has one; otherwise, s/he may play (\"discard\") any card (*).  The highest card of the suit led (that has not been cancelled by an identical card, if you are playing with deck multiplicity > 1) wins; there are no trumps.", "", "If the trick contains scoring cards and you win it, you get points for those cards. Scoring cards are:", "  each heart         1", "  queen of spades   13", "  jack of diamonds -10", "", "The winner of each trick leads to the next.  Any card may be led, except that a heart may not be led unless one's hand consists solely of hearts or hearts have been \"broken\" (i.e., someone has already discarded one or more hearts on a previous trick).", "", "LOWEST score wins.", "", "Game continues forever until you get sick of it, at which point someone can do a reset."}
+;_.("about") = {}
+;_.("about_state") = {"HAND", "----", "score        -- (num)  points taken so far", "", "GAME", "----", "passn        -- (num)  passing interval for this hand", "firsttrick   -- (bool) set on first trick only", "heartsbroken -- (bool) set when first heart has been played", "moonshot     -- (1)    no points have been taken by anyone yet,", "                (obj)  only this player has taken points"}
+@remind_enable _ is "You still need to pick cards to pass."
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Hearts ruleset"}
+;_.("offered") = #-1
+;_.("object_size") = {14629, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+@verb _:"after_deal" this none this
+@program _:after_deal
+{game, dealer, @rest} = args;
+"what to do after the deal.";
+if (caller != this)
+  raise(E_PERM);
+endif
+dnum = (this:get_state(game, "passn", 0) + 1) % length(game.hands);
+this:set_state(game, "passn", dnum);
+if (dnum == 0)
+  this:do_first_lead(game);
+else
+  n = length(game.hands[1].cards) / 4;
+  plist = {};
+  for h in (game.hands)
+    plist[1..0] = {{h, n, game.hands[((((h in game.hands) + dnum) - 1) % $) + 1]}};
+  endfor
+  this:start_passing_round(game, plist);
+endif
+.
+
+@verb _:"end_round" this none this
+@program _:end_round
+{game, @_} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+r = pass(@args);
+"passing has finished, 2c leads";
+this:do_first_lead(game);
+return r;
+.
+
+@verb _:"do_move" this none this
+@program _:do_move
+{game, who, cards, src, dest, @_} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+if ((cards == src.deck:parse_card("Qs")[1]) && (dest == game.piles[1]))
+  game:say_to_listeners(this.qs_msg, who.player);
+  suspend(2);
+elseif ((cards == src.deck:parse_card("Jd")[1]) && (dest == game.piles[1]))
+  game:say_to_listeners(this.jd_msg, who.player);
+  suspend(2);
+endif
+return pass(@args);
+.
+
+@verb _:"score_trick" this none this
+@program _:score_trick
+{game, trick, won} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+score = hearts = qs = jd = 0;
+deck = trick.deck;
+qscard = deck:parse_card("Qs")[1][1];
+jdcard = deck:parse_card("Jd")[1][1];
+for c in (trick.cards)
+  if (deck:suit(c) == 3)
+    score = score + 1;
+    hearts = hearts + 1;
+  elseif (c == qscard)
+    "normally 13";
+    score = score + deck.cards_per_suit;
+    qs = qs + 1;
+  elseif (c == jdcard)
+    "normally -10";
+    score = score - ((deck.cards_per_suit * 5) / 6);
+    jd = jd + 1;
+  endif
+endfor
+this:set_state(game, "firsttrick", 0);
+if (hearts > 0)
+  this:set_state(game, "heartsbroken", 1);
+endif
+got = (jd == 0) ? {} | {deck:long_name(jdcard, jd)};
+got[1..0] = (qs == 0) ? {} | {deck:long_name(qscard, qs)};
+got[1..0] = (hearts == 0) ? {} | {tostr($string_utils:english_number(hearts), " heart", (hearts == 1) ? "" | "s")};
+this:set_state(won, "score", this:get_state(won, "score", 0) + score);
+if (got)
+  moon = this:get_state(game, "moonshot", 0);
+  if (moon == 1)
+    this:set_state(game, "moonshot", won);
+  elseif (moon != won)
+    this:set_state(game, "moonshot", 0);
+  endif
+  if (qs || jd)
+    game:queue_notify("nwlisteners", game, tostr(won.player:name("dc"), " gets ", $string_utils:english_list(got, " and "), "."));
+  endif
+  game:queue_notify("watchers", game, tostr("----------- ", won.player:name("dc"), " gets ", $string_utils:english_list(got, " and "), "."));
+endif
+.
+
+@verb _:"score_hand" this none this
+@program _:score_hand
+{game} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+moon = this:get_state(game, "moonshot", 0);
+this:set_state(game, "moonshot", 0);
+if (moon != 0)
+  game:queue_notify("listeners", game, tostr(moon.player:name("dc"), " successfully shot the moon!"));
+  this:set_state(moon, "score", 0);
+  for h in (setremove(game.hands, moon))
+    this:set_state(h, "score", game.decks[1].cards_per_suit * 2);
+  endfor
+endif
+game:queue_notify("listeners", game, "The hand has ended.  Current standings:");
+game:queue_notify("listeners", game, "");
+game:queue_notify("listeners", game, "Player            This Hand     Total");
+for h in (game.hands)
+  hscore = this:get_state(h, "score");
+  h.score = h.score + hscore;
+  game:queue_notify("listeners", game, tostr($string_utils:left(h.player:name("dc"), 20), $string_utils:right(tostr(hscore), 6), $string_utils:right(tostr(h.score), 10)));
+  this:set_state(h, "score", 0);
+endfor
+game:queue_notify("listeners", game, "");
+.
+
+@verb _:"min_players" this none this
+@program _:min_players
+{game} = args;
+return 3;
+.
+
+@verb _:"check_pass" this none this
+@program _:check_pass
+{game, who} = args;
+this:check_turn(game, who);
+game:user_error("You can't just pass.");
+.
+
+@verb _:"only_one_action" this none this
+@program _:only_one_action
+{game, who} = args;
+if ((!(caller in {who, @who.agents, this})) || (who.game != game))
+  raise(E_PERM);
+endif
+if (this:get_state(game, "turn") != who)
+  return 0;
+endif
+trick = game.piles[1];
+if (length(who.cards) == 1)
+  return {1, "move", who.cards[1..1], who, trick};
+endif
+tcards = this:current_trick_cards(game, trick);
+if (!tcards)
+  return 0;
+endif
+deck = game.decks[1];
+cards = deck:cards_of_suit(who.cards, deck:suit(tcards[1]));
+if (length(cards) == 1)
+  return {0, "move", cards[1..1], who, trick};
+else
+  return 0;
+endif
+.
+
+@verb _:"do_first_lead" this none this
+@program _:do_first_lead
+{game} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+c = 0;
+this:set_state(game, "moonshot", 1);
+this:set_state(game, "dests", {game.piles[1]});
+this:set_state(game, "firsttrick", 1);
+this:set_state(game, "heartsbroken", 0);
+while (1)
+  for h in (game.hands)
+    if (c in h.cards)
+      this:set_state(game, "turn", h);
+      this:set_state(game, "lead", h);
+      fork (0)
+        game:handle_action(h, "move", {c}, h, game.piles[1]);
+      endfork
+      return;
+    endif
+  endfor
+  c = c + 1;
+endwhile
+.
+
+@verb _:"check_follow_suit" this none this
+@program _:check_follow_suit
+{game, who, cards, src, dest} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+pass(@args);
+plcount = length(game.hands);
+tcards = dest.cards[(($ / plcount) * plcount) + 1..$];
+deck = dest.deck;
+card = cards[1];
+"";
+"check for trying to dump on the first trick";
+"";
+if (this:get_state(game, "firsttrick", 0) && ((deck:suit(card) == 3) || (card == deck:parse_card("Qs")[1][1])))
+  game:user_error("You cannot dump points on the first trick.");
+endif
+"";
+"check for trying to lead hearts when they have not been broken";
+"";
+if (((!tcards) && (deck:suit(cards[1]) == 3)) && (!this:get_state(game, "heartsbroken", 0)))
+  for c in (src.cards)
+    if (deck:suit(c) != 3)
+      game:user_error("You cannot lead hearts until they have been broken.");
+    endif
+  endfor
+endif
+.
+
+@verb _:"game_state_description" this none this
+@program _:game_state_description
+{game, state} = args;
+r = pass(@args);
+if (this:state_assoc(state, "turn", 0) == 1)
+  passn = this:state_assoc(state, "passn", 0);
+  pcount = length(game.hands);
+  passn = ((passn + ((pcount - 1) / 2)) % pcount) - ((pcount - 1) / 2);
+  r[$ + 1..$] = {tostr("Everyone is passing to the", (abs(passn) == 1) ? "" | (" " + $string_utils:english_ordinal(abs(passn))), (passn > 0) ? " next" | " previous", " player.")};
+endif
+if (this:state_assoc(state, "heartsbroken", 0) == 0)
+  r[$ + 1..$] = {"Hearts have not been broken."};
+endif
+moon = this:state_assoc(state, "moonshot", 0);
+if (moon == 1)
+  r[$ + 1..$] = {"No points have been taken yet."};
+elseif (moon != 0)
+  r[$ + 1..$] = {tostr(moon.player:namec(), " could conceivably shoot the moon.")};
+endif
+return r;
+.
+
+"***finished***
+@building-option +create-set-co
+@create #2363 named Bridge Game:Bridge Game,game
+;_.("rules") = #2737
+;_.("hands") = {#7624}
+;_.("piles") = {}
+"_.("state") => E_PERM (Permission denied)
+;_.("tasks") = {}
+"_.("pending_notifications") => E_PERM (Permission denied)
+;_.("decks") = {#2499}
+;_.("last_remind") = 1228561839
+;_.("ignoring") = {}
+;_.("watching") = {#312}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Bridge Game", "game"}
+;_.("offered") = #-1
+;_.("object_size") = {1401, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+"***finished***
+@building-option +create-set-co
+@create #2482 named Bridge Ruleset:Bridge Ruleset
+;_.("resolve_play") = {{"turn", {"from", "player"}}, {"pile", {"to", "pile"}}}
+;_.("initial_hand") = {1, {"sorting", "by_suit_then_number"}, {"score", {0, 0, {}, {}}}}
+;_.("decks") = {#2499}
+;_.("help_text") = {"For strategy and bidding conventions you probably want to get a good Contract Bridge book, but here are the basic rules as understood by this ruleset.", "", "This is a 4 player trick-taking game, played in hands.  Players form partnerships which are determined by the order of joining the game (1st + 3rd vs. 2nd + 4th).  On each hand, each player gets 13 cards, there is a bidding round (dealer goes first), and if there are any bids at all the hand is played out to see how many tricks of each side wins; if there are no bids, you toss in the cards and go on to the next hand.", "", "Bids have a level (number from 1 to 7) and a suit or \"no trump\".  (Type \"bid 1s\" to bid \"One Spade\", \"bid 3nt\" for \"Three No Trump\", etc...).  Each bid must be higher than the previous, either a higher level, or the same level or a later suit in the ordering:  clubs, diamonds, hearts, spades, no trump.  Players who do not wish to bid may \"pass\".  ", "", "A bid at a given level is a statement that that partnership will attempt to win 6 + that many tricks with the specified suit as trump.  E.g., bidding \"1 spade\" promises to take 7 tricks with spades as trump.  However, in practice, many bids are artificial and used primarily by players to communicate information about their hand to their partners, though the rules of the game need take no notice of this.  A member of the opposing partnership may also \"double\" (abbr. \"dbl\") a bid; in response a member of the partnership that put forth the bid may \"redouble\" (abbr. \"red\").  When a bid is followed by 3 passes the bidding ends.  The final bid becomes the \"contract\", the suit named becomes the trump suit, and the member of the partnership making that bid who first bid that suit is henceforth known as the \"declarer\", the other partnership are then \"defenders\".", "", "The opponent following the declarer leads to the first trick.  The hand of the declarer's partner, henceforth known as the \"dummy\", is then revealed to everyone.  The declarer thereafter plays both his own turns and the dummy's.  Players must, when it is their turn to play, follow suit when able to, and if unable may trump or discard; highest trump or highest card of the suit led wins the trick.", "", "In order to avoid the tedium of playing out a hand once it is obvious to both sides exactly how it's going to turn out, a player from one side may concede some or all remaining tricks not yet played (via the cardgame feature's 'concede <n>' command, <n> being the number of tricks to concede --- if this is not all of the remaining tricks, one of the opponents must indicate acceptence by conceding back any unaccounted for tricks.  So for example, if the contract is 4 spades (10 tricks), and the declarer has won 8 tricks and the opponents 2, and one of the defenders notes that the declarer has both remaining cards of the trump suit in his hand (so he is guaranteed to win 2 more tricks), the defender can 'concede 2' and if the declarer doesn't want to fight over the possible overtrick, he can 'concede 1'; the hand ends when the concessions on both sides add up to the number of remaining tricks (3, in this case).", "", "If the declarer wins the required number of tricks, he is said to have \"made\" the contract and scores for each trick bid", "", "                        Not Doubled   Doubled  Redoubled        ", "  clubs/diamonds         20            40       80", "  hearts/spades          30            60       90", "  no trump (1st trick)   40            80      120", "  no trump (rest)        30            60       90", "", "100 points in tricks bid for is called a \"game\" (minimal game contracts are 5 clubs/diamonds, 4 hearts/spads, or 3 no trump).  Points scored in this way are considered \"below the line\".  Lower contracts result in \"part scores\" below the line that can be counted towards a future \"game\", however if the opponents make a \"game\" in the meantime, all part scores move \"above the line\" and don't count towards future games (N.B. in real life, bridge players simply draw another line below the part score).  If one side has made a \"game\", that partnership is thenceforth deemed \"vulnerable\".", "", "In addition to these scores there can be various bonuses awarded \"over the line\", which do NOT count towards \"game\".  These include bonuses for overtricks (i.e., tricks beyond what you bid for),", "", "                       Not Doubled    Doubled  Redoubled", "  not vulnerable        trick value    100      200", "  vulnerable            trick value    200      400", "", "making slams (contracts at level 6 or 7 are refered to as \"small slam\" and \"grand slam\", respectively),", "", "                       Small Slam    Grand Slam", "  not vulnerable        500           1000", "  vulnerable            750           1500", "  ", "defeating contracts,", "                    Not Doubled   Doubled     Redoubled", "                      NV    V      NV     V    NV      V", "  down 1              50  100     100   200    200   400", "  down 2             100  200     300   500    600  1000", "  down 3             150  300     500   800   1000  1600", "  each additional    +50 +100    +300  +300   +600  +600", "", "making doubled/redoubled contracts,", "", "  Doubled     50", "  Redoubled  100", "", "and having in a single hand (regardless of whether the contract is made) either ", "", "  4 honors (A,K,Q,J,10) of the trump suit           100", "  5 honors of the trump suit or 4 aces at no trump  150", "", "The overall goal is to be the first side to make two \"games\" or a \"rubber\", which awards an additional bonus over the line:", "", "  700  if the opponents are completely shut out (no \"game\")", "  500  if the opponents manage to make one intervening \"game\".", "", "It is, of course, possible to win the \"rubber\" and still lose the overall game if the opponents have otherwise accumulated sufficient bonuses over the line.", "", "(N.B.:  Contract Bridge rules also allow for a 300 point bonus to a side that has made a single \"game\" in the event where the rubber cannot be completed.  This is not implemented here).", ""}
+;_.("about") = {"", "Play is always in turns.  ", "Dealer goes first to start bidding.", "When a bid is followed by 3 passes, play of the hand commences and reverts to the usual trick-taking game with the first lead going to the declarer's successor.", "", "The one major complication is that, during the play of the hand, the dummy still gets turns, but the declarer always plays for the dummy, so the turn-checking/notifications need to account for this."}
+;_.("about_state") = {"GAME", "----", "bidder       -- [bidding] (hand) player who made the last (non-(re)double) bid", "bid          -- [bidding] (bid)  the most recent bid [play] the contract", "lead         -- [bidding] (hand) player who last bid/doubled/redoubled", "                [play]    (hand) player who led to the current trick", "trump        -- [play]    (suit) trump suit (absent for no trump)", "declarer     -- [play]    (hand) identity of declarer", "", "HAND", "----", "dsuits       -- [bidding] (suit list) suits this player will play", "dummy        -- [play]    (hand) identity of declarer (set for dummy)", "honors       -- [play]    (hand) player had 100/150 honors/aces at start of play", "tricks       -- [play *]  (hand) number of tricks taken by this side", "", "[*] values/scores pertaining to the partnerships are stored on hands 1 and 2.", "", "The .score property has the format:", "", "  {#GAMES, TOTAL-CURRENT-PARTSCORE, {BONUS,...}, {CONTRACT,...}, {CONTRACT,...}}", "", "Individual scoring events are kept separate so that the game description can display a customary Bridge score-sheet.  Each BONUS is an over-the-line scoring event, each CONTRACT is an under-the-line scoring event.  A new CONTRACT list is started and TOTAL-CURRENT-PARTSCORE is reset to 0  each time one side or the other makes \"game\"."}
+;_.("about_events") = {"", "contract {SUBJ} -- bidding has ended and SUBJ is now the declarer", ""}
+;_.("notifications") = {"turn", "lead", "turn_dummy", "lead_dummy"}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Bridge Ruleset"}
+;_.("offered") = #-1
+;_.("object_size") = {36789, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+@verb _:"min_players max_players" this none this
+@program _:min_players
+{game} = args;
+return 4;
+.
+
+@verb _:"after_deal" this none this
+@program _:after_deal
+{game, dealer, @rest} = args;
+"what to do after the deal.";
+"Set up the bidding round";
+if (caller != this)
+  raise(E_PERM);
+endif
+"clean out any play state";
+this:set_state(game, "bid", 0);
+this:set_state(game, "bidder", 0);
+this:set_state(game, "trump", 0);
+this:set_state(game, "declarer", 0);
+for h in (game.hands)
+  this:set_state(h, "dummy", 0);
+  this:set_state(h, "dsuits", 0);
+  this:set_state(h, "tricks", 0);
+  h.showing = 0;
+endfor
+"set bidding state";
+this:set_state(game, "bidding", 1);
+this:set_state(game, "dests", {#-1});
+this:set_state(game, "turn", dealer);
+this:set_state(game, "lead", dealer);
+game:queue_notify("turn", dealer);
+.
+
+@verb _:"parse_bid" this none this
+@program _:parse_bid
+{hand, bidstring} = args;
+deck = hand.deck;
+"";
+"ordinary bid: 1-7 shdc|no trump";
+"";
+m = match(bidstring, tostr("%([0-9]+%) *%([", deck.suit_short_names, "]%|no? ?t?[a-z]*%)"));
+if (m && (m[1] == 1))
+  number = $code_utils:tonum(nstr = bidstring[m[3][1][1]..m[3][1][2]]);
+  suit = index(deck.suit_short_names, bidstring[m[3][2][1]..m[3][2][2]]) || (deck.suits + 1);
+  return {{deck, number, suit, 0}};
+endif
+"";
+"double or redouble";
+"";
+m = match(bidstring, "%(re%)?d%(ou%)?b?[a-z]*");
+if (m && (m[1] == 1))
+  return {{deck, 0, 0, 1 + (bidstring[1] == "r")}};
+endif
+return {bidstring, tostr("Unrecognizable bid:  ", bidstring)};
+.
+
+@verb _:"bid_long_name" this none this
+@program _:bid_long_name
+{bid, ?contract = 0} = args;
+{deck, number, suit, dbl} = bid;
+if (dbl)
+  "double or redouble";
+  if (contract)
+    return tostr(this:bid_long_name({deck, number, suit, 0}, deck), ", ", {"doubled", "redoubled"}[dbl]);
+  else
+    return {"Double", "Redouble"}[dbl];
+  endif
+elseif (suit > deck.suits)
+  return $string_utils:capitalize($string_utils:english_number(number)) + " No Trump";
+else
+  sname = deck.suit_long_names[suit];
+  return tostr($string_utils:capitalize($string_utils:english_number(number)), " ", $string_utils:capitalize((number > 1) ? sname | $english:_noun_singular(sname)));
+endif
+.
+
+@verb _:"check_bid" this none this
+@program _:check_bid
+"In GAME, raise error unless WHO's BID is legal.";
+"BID should be of the form {DECK,LEVEL,SUIT,DBL}";
+"(DBL == 0 for ordinary bid, 1 for double, 2 for redouble)";
+{game, who, bid} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+{deck, level, suit, dbl} = bid;
+{pdeck, plevel, psuit, pdbl} = this:get_state(game, "bid", {deck, 0, 0, 0});
+pwho = this:get_state(game, "lead");
+"";
+"whose turn is it?";
+"";
+this:check_turn(game, who);
+if (deck != game.decks[1])
+  game:user_error("weird deck in bid");
+elseif (dbl)
+  if (((plevel == 0) || (dbl != (pdbl + 1))) || (pwho == this:get_partner(who)))
+    game:user_error(tostr({"Double", "Redouble"}[dbl], " must be after an opponent's ", {"bid", "double"}[dbl]));
+  endif
+  bid[2..3] = {plevel, psuit};
+else
+  if ((level < 1) || (level > 7))
+    game:user_error("Level must be between 1 and 7, inclusive.");
+  elseif ((suit < 1) || (suit > (deck.suits + 1)))
+    game:game_error("Weird suit.");
+  elseif ((plevel > level) || ((plevel == level) && (psuit > suit)))
+    possibilities = {@(plevel < 7) ? {"at a higher level"} | {}, @(psuit <= deck.suits) ? {"a higher ranking suit or no trump at the same level"} | {}, @((plevel == 0) || (this:get_partner(who) == pwho)) ? {} | {{"'double'"}, {"'redouble'"}, {}}[pdbl + 1]};
+    game:user_error(possibilities ? "Bid can only be " + $string_utils:english_list(possibilities, "", " or ") | "You must pass.");
+  endif
+endif
+return {game, who, bid};
+.
+
+@verb _:"do_bid" this none this
+@program _:do_bid
+"In GAME, perform WHO's BID";
+{game, who, bid} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+{deck, level, suit, dbl} = bid;
+"";
+"remember this bid";
+"";
+this:set_state(game, "bid", bid);
+this:set_state(game, "lead", who);
+{_, __, suit, dbl} = bid;
+if (!dbl)
+  this:set_state(game, "bidder", who);
+endif
+if (!(dbl || (suit in this:get_state(this:get_partner(who), "dsuits", {}))))
+  "partner has not bid this suit yet, remember for if it becomes the contract";
+  this:set_state(who, "dsuits", setadd(this:get_state(who, "dsuits", {}), suit));
+endif
+this:end_turn(game, who);
+.
+
+@verb _:"end_trick" this none this
+@program _:end_trick
+{game, lead} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+if (!this:get_state(game, "bidding"))
+  return pass(@args);
+endif
+"";
+"end of bidding";
+"";
+this:set_state(game, "bidding", 0);
+this:set_state(game, "dests", {game.piles[1]});
+{bdeck, level, suit, dbl} = this:get_state(game, "bid", {#-1, 0, 0, 0});
+if (bdeck == #-1)
+  "passed out";
+  this:end_hand(game);
+  return;
+endif
+"";
+"we have a contract.  who gets to play it?";
+"";
+declarer = this:get_state(game, "bidder");
+dummy = this:get_partner(declarer);
+if (suit in this:get_state(dummy, "dsuits", {}))
+  {dummy, declarer} = {declarer, dummy};
+endif
+"";
+"set state for trick play";
+"";
+lead = game.hands[((declarer in game.hands) % 4) + 1];
+for h in (game.hands)
+  this:set_state(h, "dsuits", 0);
+  count = 0;
+  if (suit <= bdeck.suits)
+    for c in (bdeck:cards_of_suit(h.cards, suit))
+      if (bdeck:cnumber(c) >= 10)
+        count = count + 1;
+      endif
+    endfor
+    this:set_state(h, "honors", (count < 4) ? 0 | ((count == 4) ? 100 | 150));
+  else
+    for c in (h.cards)
+      if (bdeck:cnumber(c) == 14)
+        count = count + 1;
+      endif
+    endfor
+    this:set_state(h, "honors", (count < 4) ? 0 | 150);
+  endif
+endfor
+this:set_state(game, "trump", (suit <= bdeck.suits) && suit);
+this:set_state(game, "declarer", declarer);
+this:set_state(dummy, "dummy", declarer);
+game:queue_notify("contract", game, declarer);
+game:queue_notify("listeners", game, tostr(declarer:dname("c"), " wins the contract (", this:bid_long_name({bdeck, level, suit, dbl}, 1), ")."));
+this:set_lead(game, lead);
+.
+
+@verb _:"check_turn" this none this
+@program _:check_turn
+"In GAME, raise user_error if WHO is not allowed to act now.";
+"Handle the case where it is the dummy's turn.";
+{game, who} = args;
+turn = this:get_state(game, "turn");
+decl = (turn == -1) ? #-1 | this:get_state(turn, "dummy", #-1);
+if (decl == #-1)
+  pass(@args);
+elseif (who == decl)
+elseif (who == turn)
+  game:user_error("You are the dummy; the declarer plays your hand now.");
+else
+  game:user_error("It is not your turn.");
+endif
+"we're about to embark on something; zap any concession offers.";
+this:set_state(game, "concede", 0);
+.
+
+@verb _:"notify_turn notify_lead" this none this
+@program _:notify_turn
+{whom, @params} = args;
+"if (caller != this)";
+"  raise(E_PERM);";
+"endif";
+decl = this:get_state(whom, "dummy", #-1);
+if (decl == #-1)
+  return pass(@args);
+else
+  if (whom.showing == 0)
+    "expose the dummy";
+    whom.showing = $maxint;
+    desc = whom:piledesc_to_strings(@whom:cardview(#-1));
+    for h in (setremove(setremove(whom.game.hands, whom), decl))
+      h.player:tell_lines(desc);
+    endfor
+  endif
+  decl.player:tell("It is now the dummy's turn.");
+  decl:do_forced_actions(whom);
+  decl:do_agent_notify(verb + "_dummy", @params);
+endif
+.
+
+@verb _:"resolve_default_turn" this none this
+@program _:resolve_default_turn
+{hand, vrb} = args;
+turn = this:get_state(hand.game, "turn", hand);
+return (turn == -1) ? {hand, {}} | {turn, setadd(hand.game.piles, turn)};
+.
+
+@verb _:"end_turn" this none this
+@program _:end_turn
+{game, who} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+turn = this:get_state(game, "turn");
+return pass(game, turn);
+.
+
+@verb _:"issue_reminders" this none this
+@program _:issue_reminders
+{game} = args;
+if ((caller != game) && (caller != this))
+  raise(E_PERM);
+endif
+turn = this:get_state(game, "turn");
+if (turn == -1)
+  return;
+endif
+decl = this:get_state(turn, "dummy", #-1);
+if (decl == #-1)
+  return pass(@args);
+endif
+game.last_remind = time();
+decl.player:tell("It is still the dummy's turn.");
+.
+
+@verb _:"check_pass" this none this
+@program _:check_pass
+{game, who} = args;
+this:check_turn(game, who);
+if (!this:get_state(game, "bidding", 0))
+  game:user_error("The bidding is over; you must play a card.");
+endif
+return args;
+.
+
+@verb _:"game_state_description" this none this
+@program _:game_state_description
+{game, state} = args;
+ddesc = ldesc = vdesc = {};
+if (vuln = this:state_assoc(state, "vulnerable", 0))
+  if (vuln == 3)
+    vdesc = {"Both sides are vulnerable."};
+  else
+    vdesc = {tostr(game.hands[vuln].player:dnamec(), " and ", game.hands[((vuln + 1) % 4) + 1].player:dname(), " are vulnerable.")};
+  endif
+endif
+turn = this:state_assoc(state, "turn", 0);
+if (turn == -1)
+  return {"", "The game is over."};
+endif
+lead = this:state_assoc(state, "lead", 0);
+tdesc = tostr("It is ", turn.player:name("dp"), " turn");
+if (this:state_assoc(state, "bidding", 0))
+  dealer = this:state_assoc(state, "dealer", 0);
+  ddesc = {tostr(dealer.player:dnamec(), " dealt.")};
+  bid = this:state_assoc(state, "bid");
+  if (bid)
+    ldesc = {tostr(lead.player:dnamec(), " bid ", this:bid_long_name(bid), "."), @bid[4] ? {tostr("The contract is now ", this:bid_long_name(bid, 1), ".")} | {}};
+  else
+    ldesc = {"There have been no bids, yet."};
+  endif
+  return {"", @vdesc, @ddesc, @ldesc, "", tdesc + " to bid."};
+else
+  declarer = this:state_assoc(state, "declarer");
+  ddesc = {tostr(declarer.player:dnamec(), " is attempting to make"), "  " + this:bid_long_name(this:state_assoc(state, "bid"), 1), ""};
+  if (lead != turn)
+    ldesc = {tostr(lead.player:dnamec(), " led to the current trick.")};
+  endif
+  return {"", @vdesc, @ddesc, @ldesc, tdesc + " to play."};
+endif
+.
+
+@verb _:"game_player_description" this none this
+@program _:game_player_description
+{game} = args;
+if (!game.hands)
+  return {"There are currently no players."};
+else
+  hnames = {};
+  game.hands[hcount = $];
+  space6 = "      ";
+  heads = {"   WE ", " THEY "};
+  if (!game.started)
+    lines = 1;
+    wscores = tscores = {{}};
+    tricks = {0, 0};
+    heads = {@heads, space6, space6};
+  else
+    {we, they} = game.hands[1..2];
+    wscores = we.score[3..lines = $];
+    tscores = they.score[3..$];
+    lines = lines - 2;
+    tricks = $list_utils:map_arg(this, "get_state", game.hands[1..2], "tricks", 0);
+    "gscores1 = $list_utils:map_arg(this, \"get_state\", game.hands[1..2], \"game\", 0);";
+    "gscores2 = $list_utils:map_arg(this, \"get_state\", game.hands[1..2], \"part\", 0);";
+    heads = {@heads, we.score[1] ? "  [V] " | space6, they.score[1] ? "   [V]" | space6};
+  endif
+  space18 = $string_utils:space(18);
+  for i in [1..4]
+    hname = (i > hcount) ? "???" | game.hands[i].player:dname();
+    hnames[$ + 1..$] = {((i % 2) == 1) ? $string_utils:right(hname, 18) + heads[i] | ((heads[i] + "  ") + hname)};
+  endfor
+  playerdesc = {tostr(hnames[1], " | ", hnames[2]), tostr(hnames[3], " | ", hnames[4])};
+  space18 = $string_utils:space(18);
+  dash18 = $string_utils:space(18, "-");
+  for l in [1..lines]
+    lw = wscores[l];
+    lt = tscores[l];
+    udesc = {};
+    for i in [1..max(lwlen = length(lw), ltlen = length(lt))]
+      udesc = {@udesc, tostr(space18, (i > lwlen) ? space6 | $string_utils:right(lw[i], 6), " | ", (i > ltlen) ? "" | $string_utils:right(lt[i], 6))};
+    endfor
+    if (l == 1)
+      playerdesc = {@playerdesc, @$list_utils:reverse(udesc), tostr("    ---", dash18, "+", dash18, "---")};
+    else
+      playerdesc = {@playerdesc, @udesc, @(l == lines) ? {} | {tostr(" ", space6, dash18, "+", dash18)}};
+    endif
+  endfor
+  if (tricks != {0, 0})
+    playerdesc[$ + 1..$] = {tostr($string_utils:right(tostr("(", tricks[1], " tricks)"), 18), space6, " | ", space6, tostr("(", tricks[2], " tricks)"))};
+  endif
+  return playerdesc;
+endif
+.
+
+@verb _:"score_hand" this none this
+@program _:score_hand
+{game} = args;
+{bdeck, level, suit, dbl} = this:get_state(game, "bid", {#-1, 0, 0, 0});
+if (!level)
+  "passed out";
+  return {};
+endif
+offense = game.hands[o = (((this:get_state(game, "declarer") in game.hands) - 1) % 2) + 1];
+defense = game.hands[d = ((this:get_state(game, "declarer") in game.hands) % 2) + 1];
+onames = (offense.player:dnamec() + " and ") + game.hands[o + 2].player:dname();
+dnames = (defense.player:dnamec() + " and ") + game.hands[d + 2].player:dname();
+tricks = this:get_state(offense, "tricks", 0);
+".score format {#GAMES, PARTSCORE, {BONUS,...}, {CONTRACT,...}, {CONTRACT,...}}";
+for h in (game.hands)
+  if (honors = this:get_state(h, "honors", 0))
+    game:queue_notify("listeners", game, tostr(h.player:dnamec(), " had ", honors, (suit <= bdeck.suits) ? " honors." | " aces."));
+    hside = game.hands[(((h in game.hands) - 1) % 2) + 1];
+    hside.score[3][$ + 1..$] = {honors};
+  endif
+endfor
+vulnerable = offense.score[1];
+if ((level + 6) > tricks)
+  "went down";
+  downness = (level + 6) - tricks;
+  if (!dbl)
+    overline = (50 + (vulnerable * 50)) * downness;
+  else
+    overline = dbl * (((100 + (vulnerable * 100)) + (300 * (downness - 1))) - (((!vulnerable) * min(downness - 1, 2)) * 100));
+  endif
+  game:queue_notify("listeners", game, tostr(onames, " are down ", downness, {"", " (doubled!)", " (redoubled!)"}[dbl + 1], ".  ", dnames, " get ", overline, "."));
+  defense.score[3][$ + 1..$] = {overline};
+else
+  "made it";
+  over = tricks - (level + 6);
+  suitworth = 20 + ((suit >= 3) * 10);
+  underline = (((suit == 5) * 10) + (level * suitworth)) * (dbl ? 2 * dbl | 1);
+  overline = dbl ? ((over * 100) * dbl) * (vulnerable + 1) | (over * suitworth);
+  game:queue_notify("listeners", game, tostr(onames, " make the contract (", underline, " points)", @over ? {" with ", over, " overtricks (", overline, " points)"} | {}, @dbl ? {" plus ", dbl * 50, " for the insult"} | {}, "!"));
+  offense.score[$][$ + 1..$] = {underline};
+  "overtrick bonus + insult";
+  offense.score[3][$ + 1..$] = {@over ? {overline} | {}, @dbl ? {dbl * 50} | {}};
+  if (level >= 6)
+    "slam bonus";
+    bonus = (250 * (vulnerable + 2)) * (1 + (level == 7));
+    offense.score[3][$ + 1..$] = {bonus};
+    game:queue_notify("listeners", game, tostr(onames, " win a ", (level == 7) ? "grand" | "small", " slam!!  (", bonus, " points)"));
+  endif
+  partscore = offense.score[2] + underline;
+  if (partscore < 100)
+    offense.score[2] = partscore;
+    game:queue_notify("listeners", game, tostr(onames, " get a part score of ", underline, "."));
+  elseif (0 == offense.score[1])
+    "FIRST GAME for this side";
+    offense.score[1] = 1;
+    offense.score[2] = defense.score[2] = 0;
+    offense.score[$ + 1..$] = {{}};
+    defense.score[$ + 1..$] = {{}};
+    game:queue_notify("listeners", game, tostr(onames, " make game!  (", underline, " points)."));
+  else
+    "RUBBER!";
+    bonus = defense.score[1] ? 500 | 700;
+    offense.score[3][$ + 1..$] = {bonus};
+    game:queue_notify("listeners", game, tostr(onames, " won a ", bonus, "-point rubber!"));
+    return {#-1};
+  endif
+endif
+return {};
+.
+
+@verb _:"score_trick" this none this
+@program _:score_trick
+{game, trick, won} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+side = game.hands[(((won in game.hands) - 1) % 2) + 1];
+this:set_state(side, "tricks", 1 + this:get_state(side, "tricks", 0));
+.
+
+@verb _:"only_one_action" this none this
+@program _:only_one_action
+{game, who} = args;
+if ((!(caller in {who, @who.agents, this})) || (who.game != game))
+  raise(E_PERM);
+endif
+if (this:get_state(game, "bidding", 0))
+  return 0;
+endif
+turn = this:get_state(game, "turn");
+if (who != this:get_state(turn, "dummy", turn))
+  return 0;
+endif
+trick = game.piles[1];
+if (length(turn.cards) == 1)
+  return {1, "move", turn.cards[1..1], turn, trick};
+endif
+tcards = this:current_trick_cards(game, trick);
+if (!tcards)
+  return 0;
+endif
+deck = game.decks[1];
+cards = deck:cards_of_suit(turn.cards, deck:suit(tcards[1]));
+if (length(cards) == 1)
+  return {0, "move", cards[1..1], turn, trick};
+else
+  return 0;
+endif
+.
+
+@verb _:"get_partner" this none this
+@program _:get_partner
+"return partner for HAND";
+{hand} = args;
+hands = hand.game.hands;
+return hands[(((hand in hands) + 1) % 4) + 1];
+.
+
+@verb _:"end_game" this none this
+@program _:end_game
+{game, @rest} = args;
+if (caller != this)
+  raise(E_PERM);
+endif
+scores = names = {};
+for i in [1..2]
+  side = game.hands[i];
+  total = 0;
+  for score in ($list_utils:flatten(side.score[3..$]))
+    total = total + score;
+  endfor
+  scores[i..i - 1] = {total};
+  names[i..i - 1] = {tostr(side.player:dnamec(), " and ", game.hands[i + 2].player:dname())};
+endfor
+order = (scores[2] > scores[1]) ? {2, 1} | {1, 2};
+game:queue_notify("listeners", game, tostr("Final score:  "));
+for i in (order)
+  game:queue_notify("listeners", game, tostr($string_utils:right(scores[i], 10), "  ", names[i]));
+endfor
+this:set_state(game, "turn", -1);
+.
+
+@verb _:"debug" this none this
+@program _:debug
+{verb, @args} = args;
+if (caller_perms() != this.owner)
+  raise(E_PERM);
+endif
+return this:(verb)(@args);
+.
+
+@verb _:"parse_concede" this none this
+@program _:parse_concede
+":parse_concede(HAND,STRING)";
+"  => {STRING,ERROR_MESSAGE} if parse of BIDSTRING fails";
+"  => {FOOPARAM} where FOOPARAM is in the correct format for this game";
+"                to supply as parameter for a FOO action";
+{hand, string} = args;
+m = match(string, "^%(all%|[0-9]+%)");
+if (!m)
+  return {string, tostr("Must be 'concede all' or 'concede <number>' indicating the number of tricks being conceded.")};
+endif
+return {(string[m[1]] == "a") ? $maxint | tonum(string)};
+.
+
+@verb _:"check_concede" this none this
+@program _:check_concede
+{game, who, what} = args;
+if (this:get_state(game, "bidding", 0))
+  game:user_error("You cannot concede during the bidding.");
+endif
+ccount = length(this:get_state(game, "lead").cards) + (!(!game.piles[1].cards));
+if (ccount == 0)
+  game:user_error("There are no tricks remaining to concede.");
+endif
+if (what < 0)
+  what = what + ccount;
+elseif (what > ccount)
+  what = ccount;
+endif
+return {game, who, what};
+.
+
+@verb _:"do_concede" this none this
+@program _:do_concede
+{game, who, conceded} = args;
+"counts[s] is the number of tricks conceded to side s";
+counts = this:get_state(game, "concede", {0, 0});
+counts[((who in game.hands) % 2) + 1] = conceded;
+remaining = ((length(this:get_state(game, "lead").cards) + (!(!game.piles[1].cards))) - counts[1]) - counts[2];
+if (0 != remaining)
+  "the two sides do not yet agree";
+  this:set_state(game, "concede", counts);
+  game:queue_notify("watchers", game, tostr("There are ", remaining, " remaining trick(s).", (remaining < 0) ? "  Someone is being too generous." | ""));
+else
+  "all remaining tricks are accounted for.  End the hand.";
+  for i in [1..2]
+    side = game.hands[i];
+    this:set_state(side, "tricks", this:get_state(side, "tricks", 0) + counts[i]);
+  endfor
+  this:set_state(game, "concede", 0);
+  this:end_hand(game);
+endif
+.
+
+@verb _:"concede_msg" this none this
+@program _:concede_msg
+{game, who, conceded} = args;
+return {$pronoun_sub, "do", tostr(" ", conceded, " trick", (conceded == 1) ? "" | "s", ".")};
+.
+
+"***finished***
+@building-option +create-set-co
+@create #2503 named Bridge Deck:Bridge Deck
+@prop _."range" {} rc
+;_.("range") = {0, 52}
+@prop _."suit_short_names" "cdhs" r
+@prop _."suit_long_names" {} r
+;_.("suit_long_names") = {"clubs", "diamonds", "hearts", "spades"}
+@prop _."suits" 4 r
+@prop _."cards_per_suit" 13 r
+@prop _."number_first" 2 r
+@prop _."number_last" 10 r
+@prop _."number_short_names" "JQKA" r
+@prop _."number_long_names" {} r
+;_.("number_long_names") = {"Jack", "Queen", "King", "Ace"}
+@prop _."jokers" 0 rc
+@prop _."named_numbers" {} r
+;_.("named_numbers") = {11, 12, 13, 14}
+;_.("help_text") = {"The cards in this deck have denominations (ranging from this.number_first (2 usually) to this.number_last (10, usually) and then the named denominations Jack, Queen, King, Ace as well) and suits (Spades, Hearts, Diamonds, Clubs).", "", "Cards can be named <n><s> where <n> is a number or the first letter of a denomination name and <s> is the first letter of a suit name, e.g.,", "", "  2c     (two of clubs)", "  Ad     (ace of diamonds)", " 10h     (ten of hearts)", "", "if there are jokers in use, use", "", "  J", "", "multiple cards can be separated with commas, e.g.,", "", "  pass Ah,Kh,Qs,Jd  to  Munchkin", ""}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Bridge Deck"}
+;_.("description") = "A standard Bridge deck with the usual 52 cards."
+;_.("offered") = #-1
+;_.("object_size") = {10709, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+@verb _:"cardlist" this none this
+@program _:cardlist
+return {@$list_utils:make(this.jokers, -1), @$seq_utils:tolist({0, this.suits * this.cards_per_suit})};
+.
+
+@verb _:"short_name" this none this
+@program _:short_name
+{card} = args;
+cnum = this:cnumber(card);
+nname = (cnum <= this.number_last) ? cnum | "JQKA"[cnum - this.number_last];
+return (card < 0) ? "Joker" | tostr(nname, this.suit_short_names[this:suit(card)]);
+.
+
+@verb _:"long_name" this none this
+@program _:long_name
+{card, ?mult = 1} = args;
+mname = (typeof(mult) != NUM) ? mult | ((mult == 1) ? "the" | $string_utils:english_number(mult, "no"));
+ss = (mult == 1) ? "" | "s";
+if (card < 0)
+  return tostr(mname, " Joker", ss);
+else
+  cnum = this:cnumber(card);
+  nname = (cnum > this.number_last) ? this.number_long_names[cnum - this.number_last] | $string_utils:english_number(cnum);
+  return tostr(mname, " ", nname, ss, " of ", this.suit_long_names[this:suit(card)]);
+endif
+.
+
+@verb _:"cnumber" this none this
+@program _:cnumber
+{card} = args;
+return (card < 0) ? card | ((card % this.cards_per_suit) + this.number_first);
+.
+
+@verb _:"suit" this none this
+@program _:suit
+{card} = args;
+return (card < 0) ? card | ((card / this.cards_per_suit) + 1);
+.
+
+@verb _:"rank_by_suit_then_number" this none this
+@program _:rank_by_suit_then_number
+":rank_by_suit_and_number(options,card)";
+{options, card} = args;
+return -card;
+.
+
+@verb _:"rank_by_number" this none this
+@program _:rank_by_number
+{options, card} = args;
+return -this:cnumber(card);
+.
+
+@verb _:"rank_by_number_then_suit" this none this
+@program _:rank_by_number_then_suit
+{options, card} = args;
+return ((-this:cnumber(card)) * this.suits) + this:suit(card);
+.
+
+@verb _:"parse_card" this none this
+@program _:parse_card
+{string, ?options = {}} = args;
+m = match(string, tostr("%([-0-9]+%|[", this.number_short_names, "]%) *%([", this.suit_short_names, "]%)"));
+if (!(m && (m[1] == 1)))
+  if (index("Joker", string) != 1)
+    return {string, tostr("I don't understand '", string, "'.")};
+  elseif (this.jokers)
+    return {{0}};
+  else
+    return {string, "There are no jokers in this game."};
+  endif
+endif
+number = $code_utils:tonum(nstr = string[m[3][1][1]..m[3][1][2]]);
+if (number == E_TYPE)
+  number = this.named_numbers[index(this.number_short_names, nstr)];
+elseif (number < this.number_first)
+  return {string, tostr("Denomination must be at least ", this.number_first)};
+elseif (number > this.number_last)
+  return {string, tostr("Denomination must be no more than ", this.number_last)};
+endif
+suit = index(this.suit_short_names, string[m[3][2][1]..m[3][2][2]]);
+return {{(((suit - 1) * this.cards_per_suit) + number) - this.number_first}};
+.
+
+@verb _:"@strip" this to any
+@program _:@strip
+if ((((n = $code_utils:tonum(iobjstr)) == E_TYPE) || (n > this.number_last)) || (n < 2))
+  player:tell("Usage:  ", verb, " ", this.name, " ", prepstr, " (number from 2-", this.number_last, ")");
+  return;
+endif
+this.number_first = n;
+this.cards_per_suit = 15 - n;
+player:tell("Each suit now has ", this.cards_per_suit, " cards with the lowest denomination being ", n, ".");
+.
+
+@verb _:"cards_of_suit" this none this
+@program _:cards_of_suit
+{cards, suit} = args;
+lst = {};
+for c in (cards)
+  if (this:suit(c) == suit)
+    lst[$ + 1..$] = {c};
+  endif
+endfor
+return lst;
+.
+
+@verb _:"short_name_list" this none this
+@program _:short_name_list
+{cards, ?conj = " "} = args;
+if (!cards)
+  return "";
+endif
+string = this:short_name(cards[1]);
+suit = this:suit(cards[1]);
+for c in (cards[2..$])
+  string = tostr(string, ((s = this:suit(c)) != suit) ? "  " | " ", this:short_name(c));
+  suit = s;
+endfor
+return string;
+.
+
+@verb _:"cnumber_acelow" this none this
+@program _:cnumber_acelow
+{card} = args;
+n = this:cnumber(card);
+return (n == 14) ? 1 | n;
+.
+
+@verb _:"rank_by_number_acelow" this none this
+@program _:rank_by_number_acelow
+{options, card} = args;
+return -this:cnumber_acelow(card);
+.
+
+"***finished***
+Ragnar (#239) [ readable (player) programmer ]
+  Child of generic programmer (#52).
+  Location basement (#4455).
+-------------------------------- finished ---------------------------------
+@building-option +create-set-co
+@create #2363 named Solo Whist Game:Solo Whist Game,solog
+@prop _."standings" {} rc
+@prop _."old_tricks" {} rc
+;_.("rules") = #7599
+;_.("hands") = {#7646}
+;_.("piles") = {}
+"_.("state") => E_PERM (Permission denied)
+;_.("tasks") = {}
+"_.("pending_notifications") => E_PERM (Permission denied)
+;_.("decks") = {#7671}
+;_.("last_remind") = 1228487509
+;_.("remind_interval") = 600
+;_.("ignoring") = {}
+;_.("watching") = {#8006}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"Solo Whist Game", "solog"}
+;_.("offered") = #-1
+;_.("object_size") = {2874, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+@verb _:"description" this none this
+@program _:description
+return {"UNDER CONSTRUCTION."};
+.
+
+@verb _:"notify_bid" this none this
+@program _:notify_bid
+{who, bid} = args;
+if ((caller != this.rules) && (caller != this))
+  raise(E_PERM);
+endif
+msg = {$pronoun_sub, "do", {"name", "player", {"dc"}}, " ", {"verb", "player", "bids"}, " ", bid, "."};
+this:say_to_watchers(msg, (who in this.hands) ? who.player | player);
+this:do_agent_notify(verb, @args);
+"Copied from Generic Cardgame Instance (#2363):notify_bid by Jehk (#7075) Sun Nov 23 17:09:07 2008 PST";
+.
+
+"***finished***
+@building-option +create-set-co
+@create #2373 named hand:hand
+;_.("player") = #8006
+;_.("score") = 0
+;_.("prev_spam") = ""
+;_.("game") = #5236
+"_.("state") => E_PERM (Permission denied)
+"_.("cards") => E_PERM (Permission denied)
+;_.("viewers") = {#8006}
+"_.("key") => E_PERM (Permission denied)
+;_.("aliases") = {"hand"}
+;_.("offered") = #-1
+;_.("object_size") = {1083, 1367049600}
+;_.("review_marks") = {}
+"_.("review_history") => E_PERM (Permission denied)
+
+"***finished***

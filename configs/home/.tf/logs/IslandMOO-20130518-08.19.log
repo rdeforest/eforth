@@ -1,0 +1,19 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Front Parlour
+A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal.  An oriental rug lies soft underfoot.  A bureau a gradin stands off to the side of the room.  A desk chair is pulled up next to the desk.  A sideboard stands against the wall next to the doors to the foyer.  Across the room, some setees are drawn up in a semi-circle around a tea table.  Opposite the settees, a large marble fireplace occupies the eastern wall. In front of the hearth are a pair of wingback armchairs, with a small occasional table between them.
+Last connected Fri May 10 05:31:01 2013 PDT from localhost
+#$#mcp-negotiate-can 22946354 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 22946354 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 22946354 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 22946354
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Front Parlour                 0 seconds                         
+
+Total: 1 person, who has been active recently.
+=> 0
+*** Shutting down: shutdown() called by Crag (#243) ***

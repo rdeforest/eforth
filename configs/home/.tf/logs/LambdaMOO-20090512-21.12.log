@@ -1,0 +1,364 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 76 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              2 new messages
+Last connected Fri Mar 13 11:58:04 2009 PDT from pontius.thatsnice.org
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+===== *News (#123) (22 messages) =============
+
+Message 876 on *News (#123):
+Date:     Thu Jan  1 00:00:00 2009 PST
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Architecture Review Board currently being held by the_grinch (#116601), X (#110777), Griffen (#93228), and deLaMer (#111890).  Nominations for the ballot will be accepted until Thursday, January 15, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for ARB' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 877 on *News (#123):
+Date:     Thu Jan 15 00:00:00 2009 PST
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are five candidates which have been generated for balloting for the ARB election.  Type `@arb-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Thu Jan 29 00:00:00 2009 PST; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 878 on *News (#123):
+Date:     Thu Jan 29 00:00:00 2009 PST
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Architecture Review Board has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        40        10         4   *   deLaMer (#111890)
+        38        10         3   *   Jaybird (#105276)
+        30        14         5   *   Griffen (#93228)
+        20        10         6   *   idle_master (#116601)
+        25        16         4   *   X (#110777)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+Message 879 on *News (#123):
+Date:     Sat Feb 28 23:00:00 2009 PST
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Saturday, March  7, at 11:00 pm, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 880 on *News (#123):
+Date:     Sat Mar  7 23:03:07 2009 PST
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, March 15, at 12:03 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 881 on *News (#123):
+Date:     Sat Mar  7 23:03:07 2009 PST
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sat Mar  7 23:03:07 2009 PST failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 882 on *News (#123):
+Date:     Sun Mar 15 00:03:07 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, March 22, at 12:03 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 883 on *News (#123):
+Date:     Sun Mar 15 00:03:07 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Mar 15 00:03:07 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 884 on *News (#123):
+Date:     Sun Mar 22 00:10:17 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, March 29, at 12:10 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 885 on *News (#123):
+Date:     Sun Mar 22 00:10:17 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Mar 22 00:10:17 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 886 on *News (#123):
+Date:     Sun Mar 29 00:14:54 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, April  5, at 12:14 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 887 on *News (#123):
+Date:     Sun Mar 29 00:14:54 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Mar 29 00:14:54 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 888 on *News (#123):
+Date:     Tue Mar 31 02:15:00 2009 PDT
+From:     Nosredna (#2487)
+To:       *News (#123)
+Subject:  ECONOMIC STIMULUS
+
+DATELINE:  Seattle, WA; April 1, 2009
+
+For one day only, LambdaMOO will engage in a special endeavor to help the economy.  For every character you receive on your screen this first day of the month, we will donate ONE PENNY to a special bailout fund, which will assist those AIG executives who had to return their bonuses in recouping that money so they can continue to enjoy their accustomed standard of living.  Make sure you type a lot TODAY!
+--------------------------
+Message 889 on *News (#123):
+Date:     Sun Apr  5 00:14:55 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, April 12, at 12:14 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 890 on *News (#123):
+Date:     Sun Apr  5 00:14:57 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Apr  5 00:14:54 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 891 on *News (#123):
+Date:     Sun Apr 12 00:14:57 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, April 19, at 12:14 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 892 on *News (#123):
+Date:     Sun Apr 12 00:14:57 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Apr 12 00:14:55 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 893 on *News (#123):
+Date:     Sun Apr 12 21:57:48 2009 PDT
+From:     Rog (#4292)
+To:       *News (#123)
+Subject:  todays outage
+
+Server box got into a weird state today.  All checkpoints after 9am failed, so that's where we had to revert.  Sorry for any inconvenience.
+
+I've now decreased $dump_interval from 4 hours to 20 minutes; which most likely wouldn't actually have helped today, but it may in the future result in earlier warning and less lossage.  I also just installed a minor batch of debian updates including a kernel patch (which may or may not have anything to do with what went wrong -- my money is on *not* at this point, but we'll see...).
+
+--Rog
+--------------------------
+Message 894 on *News (#123):
+Date:     Sun Apr 19 11:16:05 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Sunday, April 26, at 11:16 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 895 on *News (#123):
+Date:     Sun Apr 19 11:16:06 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Nomination Period Yields No Candidates
+Sender:   Petitioner (#4)
+
+   The Reapers election nomination period that ended Sun Apr 19 11:16:04 2009 PDT failed to produce any candidates for the ballot, so the deadline has been extended by one more week.  See below for details.
+--------------------------
+Message 896 on *News (#123):
+Date:     Sun Apr 26 11:16:06 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There is one candidate which has been generated for balloting for the Reapers election.  Type `@reaper-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Sun May 10 11:16:06 2009 PDT; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 897 on *News (#123):
+Date:     Sun May 10 11:53:17 2009 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reapers election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Elected Undertakers and Executors has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        36        18         4   *   Elrohir (#106541)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+
+===== *Core-DB-Issues (#8175) (2 messages) ===
+
+Message 5120 on *Core-DB-Issues (#8175):
+Date:     Mon May 11 16:57:08 2009 PDT
+From:     Dread (#123097)
+To:       *Core-DB-Issues (#8175)
+Subject:  traceback in claim in #68868
+
+hey, I've been claim jumping and I have about 15 things claimed so far. I tried to claim two more things, and they both issued the following tracebacks:
+#68868:claim (this == #53333), line 13: Invalid indirection
+.. called from #111168:claim unclaim claims v4 v5, line 1
+(End of traceback)
+
+I'm not sure where I should send these things so if this isn't the appropriate place, I apologize
+
+ -- Dreadnought
+--------------------------
+Message 5121 on *Core-DB-Issues (#8175):
+Date:     Tue May 12 05:58:57 2009 PDT
+From:     Nosredna (#2487)
+To:       Dread (#123097) and *Core-DB-Issues (#8175)
+Subject:  Re: traceback in claim in #68868
+
+So, what did you try to claim?  It looks like it doesn't do good arg checking, so if you mistyped the number and got an invalid object instead, you'd get that error.  I suppose it should be better...
+--------------------------
+
+===== End of new mail ========================
+Did you get all of that? [Enter `yes' or `no']
+< connected: Crag. Total: 77 >
+Last-read-dates updated
+=> 76
+[used 5 ticks, 0 seconds.]
+Player name                     Connected    Idle time    Location
+-----------                     ---------    ---------    --------
+Crag (#58746)                   a minute     0 seconds    Storage room
+Tran (#123208)                  20 minutes   a second     Crnr Mn Strt+Qns Blvr
+Durhin (#122460)                a day        a second     Altar of the Grove
+Mahocus (#121621)               5 hours      4 seconds    Secluded grove
+m0n0r4il (#120347)              2 days       10 seconds   FunkyTown
+Dostoevsky (#99839)             57 minutes   14 seconds   La Cantina de los Blo
+Weir (#102450)                  3 minutes    18 seconds   Weir's A-Frame
+Infrared_Guest (#81173)         5 hours      19 seconds   The Coat Closet
+Marc (#85344)                   3 hours      a minute     Here
+Mordred (#116359)               5 hours      a minute     La Cantina de los Blo
+Jaybird (#105276)               27 minutes   a minute     Mariland
+Link (#122143)                  2 hours      a minute     Hiding in The Linen C
+Guest (#5704)                   7 minutes    2 minutes    Hiding in The Linen C
+Idle_Miz (#104275)              a day        2 minutes    La Cantina de los Blo
+Loufah (#116455)                5 hours      2 minutes    Sponge [editing notes
+MugWump (#89069)                23 hours     2 minutes    La Cantina de los Blo
+Teal_Guest (#5789)              an hour      3 minutes    The Coat Closet
+pfapfap (#53430)                3 minutes    3 minutes    BeelzeBus
+Bronte (#107487)                6 minutes    4 minutes    Master Bedroom - Suns
+Jayse (#111013)                 2 hours      6 minutes    The Coat Closet
+some_name (#88206)              15 minutes   7 minutes    My Place
+MagnusRex (#112208)             10 days      10 minutes   Shadows and Light
+RedFeather (#91419)             10 minutes   10 minutes   teepee
+Yemen (#122297)                 2 hours      12 minutes   Yemen's Bachelor Pad
+Tentacle_Xiu! (#109427)         6 hours      13 minutes   La Cantina de los Blo
+Rydia (#106587)                 an hour      14 minutes   Silent Waterfall
+Jackalope (#123423)             55 minutes   15 minutes   Pacifica
+Kissaki (#86510)                a day        15 minutes   Kernel source [restin
+Captain_Midnight (#102798)      an hour      19 minutes   Jeff and Liz's Castle
+Linus (#103963)                 a day        30 minutes   Growing moss on our n
+Dylan (#104059)                 11 days      42 minutes   Dylan's Den
+Mooch (#53577)                  6 days       43 minutes   La Cantina de los Blo
+Oscar (#122271)                 48 minutes   47 minutes   Hiding in The Linen C
+Puff (#1449)                    a day        47 minutes   Mirror Behind The Bar
+Mairead (#26961)                53 minutes   51 minutes   La Cantina de los Blo
+butter (#122229)                10 days      52 minutes   La Cantina de los Blo
+Blackbriar (#30119)             a day        an hour      Blackbriar's Patch
+dtBy (#118322)                  a day        an hour      FunkyTown
+Anxis (#110891)                 a day        an hour      La Cantina de los Blo
+Obvious (#54879)                14 hours     2 hours      Obvious Research Ltd
+Tamotsu (#123128)               2 hours      2 hours      To
+gozer (#116918)                 11 hours     2 hours      La Cantina de los Blo
+Sage (#74894)                   3 days       2 hours      Obvious Research Ltd
+RiotKrrn (#118488)              a day        2 hours      Hiding in The Linen C
+Nosredna (#2487)                2 hours      2 hours      Bookcase
+Energizer_Bunny (#56683)        5 hours      3 hours      Moor Wind Castle
+eep (#94285)                    10 days      4 hours      The space between
+r4di0bot (#122285)              a day        4 hours      FunkyTown
+JoD (#121920)                   6 days       6 hours      The Living Room
+neuro (#82254)                  a day        7 hours      Neuromancer's Abode
+Fasteddie (#62668)              2 days       9 hours      A Home
+Atara (#121227)                 7 days       10 hours     La Chambre des Papill
+Kenny (#53595)                  11 days      12 hours     Golden Eagle
+Teedz (#116127)                 16 hours     13 hours     Growing moss on our n
+fifel (#79261)                  21 hours     13 hours     Orlop Deck (hiccup)
+Llyrica (#86080)                a day        15 hours     Possibilities [waitin
+Kimmy (#106934)                 a day        16 hours     Kimmy's Mansion
+Erich (#58421)                  18 hours     18 hours     Giant Shoebox
+ring (#116291)                  7 days       19 hours     Bedroom #2
+Polo (#26343)                   20 hours     20 hours     Tranquil room.
+crouton (#93202)                3 days       21 hours     The space between
+ROTTING_MEAT (#54690)           2 days       a day        LIGHT CELLAR in the d
+Winter_Wolf (#101504)           10 days      a day        Ice Cave
+AcidHorse (#6924)               a day        a day        AcidHouse
+brick (#59240)                  a day        a day        Nowhere
+ShadowPouncer (#101646)         6 days       a day        Mercury's hideaway
+GrendelFish (#88093)            a day        a day        Tammany hall
+ThwartedEfforts (#69976)        10 days      a day        A vagina full of Crag
+SatanOscillateMyMet (#108696)   a day        a day        Growing moss on our n
+Martax (#101180)                a day        a day        Martax's Place
+Kerry (#117562)                 2 days       2 days       Hiding in The Linen C
+Druid (#49874)                  11 days      2 days       Hiding in The Linen C
+Rog (#4292)                     11 days      3 days       Rog's Apartment
+Lotyrin (#123574)               4 days       4 days       Guest Room
+plumduff (#92123)               7 days       4 days       Tunnel of Goats
+dustpuppy (#121539)             9 days       4 days       User friendly
+
+Total: 76 players, 19 of whom have been active recently.

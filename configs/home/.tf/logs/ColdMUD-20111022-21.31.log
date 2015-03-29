@@ -1,0 +1,11 @@
+ColdGOO
+
+    create  name password    To create a new character
+    connect name password    To connect to an existing character
+    @quit                    To leave
+
+!The user "Crag" does not exist.
+*** Connected ***
+Nowhere
+You see nothing special.
+!I don't understand that.

@@ -1,0 +1,170 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 141 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              12 new messages
+Last connected Wed Jul 13 21:48:13 2005 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+< connected: Crag. Total: 142 >
+Message 4886 on *Core-DB-Issues (#8175):
+Date:     Thu Jul 14 17:05:16 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175)
+
+>  Date:     Wed Jul 13 17:58:44 2005 PDT
+>  From:     ChiaDruid (#110777)
+>  To:       *Core-DB-Issues (#8175)
+>  
+>  ;;iobj = dobj = me; $you:say_Action("%N %<smacks> %d and %i.");
+>  You smack you and yourself.
+
+Ah. Bug in :say_action
+
+21:  if (who == dobj)
+22:    tell = this:reflexive(msg, "%d");
+23:  endif
+24:  if (who == iobj)
+25:    tell = this:reflexive(msg, "%i");
+26:  endif
+
+should be:
+
+21:  if (who == dobj)
+22:    tell = this:reflexive(tell, "%d");
+23:  endif
+24:  if (who == iobj)
+25:    tell = this:reflexive(tell, "%i");
+26:  endif
+
+Thanks for spotting this.
+
+Blob
+--------------------------
+Message 4887 on *Core-DB-Issues (#8175):
+Date:     Thu Jul 14 18:44:25 2005 PDT
+From:     Nosredna (#2487)
+To:       Blob (#21528) and *Core-DB-Issues (#8175)
+
+Implemented.
+--------------------------
+Message 4888 on *Core-DB-Issues (#8175):
+Date:     Fri Jul 15 22:47:31 2005 PDT
+From:     Ko (#113671)
+To:       *Core-DB-Issues (#8175)
+
+The two examples given where a subject pronoun is mistaken for an object pronoun ("...bonk yourself.  Yourself say.." and "Itself collapses to the ground") would both be handled by not doing the substitution on %D or %I.  I don't think %D or %I would ever be object pronouns, though I'm sure someone will correct me...
+--------------------------
+Message 4889 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 18 19:57:13 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175)
+
+>  Date:     Fri Jul 15 22:47:31 2005 PDT
+>  From:     Ko (#113671)
+>  To:       *Core-DB-Issues (#8175)
+>  
+>  The two examples given where a subject pronoun is mistaken for an
+>  object pronoun ("...bonk yourself.  Yourself say.." and "Itself
+>  collapses to the ground") would both be handled by not doing the
+>  substitution on %D or %I.  I don't think %D or %I would ever be
+>  object pronouns, though I'm sure someone will correct me...
+
+I've made this change on #67923, although I realise I've opened a bit of a can of worms here. Consider: 
+
+  "%N %<thinks> %d %<d:likes> %i."
+
+If dobj == player then you get:
+
+  "You think yourself like <someone>."
+
+If iobj == player, you get:
+
+  "You think <someone> likes yourself."
+
+Really there's no way to solve this without a lot of complicated parsing. I guess we just pick the most convenient set of tricks, and if they don't work for your particular output, then you don't get to use :say_action().
+
+Blob
+--------------------------
+Message 4890 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 18 20:07:37 2005 PDT
+From:     Harry_Potter (#110777)
+To:       *Core-DB-Issues (#8175)
+
+I'm in favor of restoring the old code, and putting the new code in something like :say_action_reflexive so it's available without breaking previous stuff.
+--------------------------
+Message 4891 on *Core-DB-Issues (#8175):
+Date:     Tue Jul 19 17:28:14 2005 PDT
+From:     Nosredna (#2487)
+To:       Harry_Potter (#110777) and *Core-DB-Issues (#8175)
+
+OK, $you adjusted:  say_action -> say_action_reflexive; say_action(old) -> say_action.
+--------------------------
+Message 4893 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 25 14:54:58 2005 PDT
+From:     Harry_Potter (#110777)
+To:       *Core-DB-Issues (#8175)
+
+There seems to be a problem. $you:say_action is not the original code. It doesn't even have the help messages it used to have.
+--------------------------
+Message 4894 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 25 20:16:31 2005 PDT
+From:     Nosredna (#2487)
+To:       Harry_Potter (#110777) and *Core-DB-Issues (#8175)
+
+>There seems to be a problem. $you:say_action is not the original code. 
+>It doesn't even have the help messages it used to have.
+
+Huh.  I thought I did @copy originally and then @copy back.  I've rebooted my machine since then so I can't check scrollback.  If you have a copy of the original, I'd be happy to reinstall.
+--------------------------
+Message 4895 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 25 20:34:10 2005 PDT
+From:     Harry_Potter (#110777)
+To:       *Core-DB-Issues (#8175)
+
+I grabbed a copy from YibMOO (and removed YibMOO-specific waif stuff) and put it on myself: #110777:say_action    (Note: the verb won't work because it tries to call me:fixpos, which doesn't exist. However, the verb will work fine when placed on $you.)
+--------------------------
+Message 4896 on *Core-DB-Issues (#8175):
+Date:     Mon Jul 25 21:20:37 2005 PDT
+From:     Nosredna (#2487)
+To:       Harry_Potter (#110777) and *Core-DB-Issues (#8175)
+
+So that is identical (except for the @copy line) to the one we already have.  I removed the @copy line from $you:say_action.  But it was already OK...
+--------------------------
+Message 4897 on *Core-DB-Issues (#8175):
+Date:     Tue Jul 26 03:32:45 2005 PDT
+From:     Harry_Potter (#110777)
+To:       *Core-DB-Issues (#8175)
+
+Oops, I thought I saw more difference than just the help text. Sorry if I got anyone riled up.  :)
+--------------------------
+Message 4898 on *Core-DB-Issues (#8175):
+Date:     Wed Jul 27 09:47:41 2005 PDT
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+
+Well, not a core issue, but FYI I'll be on vacation til August 8.  May or may not login while I'm gone.  Is there a forum I should post this info on so everyone who needs to know will get it?  Beats me.
+--------------------------
+No News (is good news)

@@ -1,0 +1,22 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.  stormagnet and you are sitting on it.
+stormagnet is here, idling.
+Last connected Fri Jul 15 10:50:36 2005 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 1129396282 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1129396282 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1129396282 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1129396282
+=> 0
+[used 2 ticks, 0 seconds.]
+*** Shutting down: shutdown() called by Crag (#958) ***

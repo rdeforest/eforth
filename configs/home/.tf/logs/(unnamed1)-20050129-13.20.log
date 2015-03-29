@@ -1,0 +1,155 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+Either that person does not exist, or has a different password.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+Last connected Tue Dec 17 06:20:19 2002 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+GhostOfTheManor (#2) [ readable (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location heavens (#850).
+-------------------------------- finished ---------------------------------
+GhostOfTheManor says, "attempting to port pasting feature..."
+No change.
+You now have Pasting Feature (aka paste) with object number #1020 and parent Generic Feature Object (#65).
+The created object is now your current object.
+=> {"|", "@paste", "@|"}
+=> 1
+=> {"|*", "@pasteto @paste @pasteto2", "@|"}
+=> "The Pasting Feature is mostly useful to people with fancy clients (such as Emacs) or who connect using a windowing system that allows them to copy text they've already seen.  It's intended to give people a way to quote verbatim text at other people in the room."
+=> {"Pasting Feature", "paste"}
+=> "Verbs useful to people using a windowing system to paste text at people."
+=> 0
+=> #-1 <$nothing>
+=> {7779, 1002603771}
+Verb added [1] (0).
+Now programming Pasting Feature:|*[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [2] (1).
+Now programming Pasting Feature:@pasteto @paste @pasteto2[2](1).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [3] (2).
+Now programming Pasting Feature:@|[3](2).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+GhostOfTheManor says, "***attempt finished***"
+Marcy arrives, freshly slain by Crag.
+Marcy eeks!
+Marcy leaves.
+Minty arrives, freshly slain by Marcy.
+Minty blinks.
+Minty leaves.
+Marcy arrives, freshly slain by Minty.
+Marcy hides.
+Marcy leaves.
+Crag arrives, freshly slain by Crag.
+Crag leaves.
+Objects owned by GhostOfTheManor (from #0 to #1163):
+  7K #1020 Pasting Feature            [GhostOfTheManor]
+-- 1 object.  Total bytes: 7,779.---------------------------------------------
+The Pasting Feature (#1020) added as a feature.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+----------------------------- GhostOfTheManor -----------------------------
+foo
+---------------------- GhostOfTheManor stops pasting ----------------------
+Done @pasting.
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#83     login watcher mark 2
+#238    Touchy Feely Socials Feature Object
+#149    Community Group Commands
+#910    Builders Tools
+#1020   Pasting Feature
+------- ----
+The Stage-Talk Feature (#67) is nowhere (#-1).
+Pasting Feature (#1020) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location GhostOfTheManor (#2).
+-------------------------------- finished ---------------------------------
+Stage-Talk Feature (#67) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of Generic Feature Object (#65).
+-------------------------------- finished ---------------------------------
+,feature_ok              unknown hacker (#35)  r      1
+-------------------------------- finished ---------------------------------
+,feature_ok              unknown hacker (#35)  r      1
+-------------------------------- finished ---------------------------------
+Usage:  @add-feature <object>
+Available features not already in your feature list include:
+documentation feature                   Working Hard Feature
+"$feature->work" is not the name of any player.
+The System Object (#0) is nowhere (#-1).
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+=> #65 (Generic Feature Object)
+The Generic Feature Object(#65) has 10 kids.
+login watcher mark 2 (#83)   Stage-Talk Feature (#67)   Thinking Feature (#68)   documentation feature (#169)   generic secure group-command-feature (#150)   Touchy Feely Socials Feature Object (#238)   Builders Tools (#910)   Sherman Legacy Funpack Features (#964)   Working Hard Feature (#1039)   Pasting Feature (#1020)
+The Working Hard Feature (#1039) is in Crag (#958).
+The Touchy Feely Socials Feature Object (#238) is in the Guest Room (#648).
+Touchy Feely Socials Feature Object (#238) [ readable ]
+  Owned by Binder (#829).
+  Child of Generic Feature Object (#65).
+  Location Guest Room (#648).
+-------------------------------- finished ---------------------------------
+Touchy Feely Socials Feature Object (#238) [ readable ]
+  Owned by Binder (#829).
+  Child of Generic Feature Object (#65).
+  Location Guest Room (#648).
+  #238:"hug bonk kick ky spin high-five lick huggle whuggle moo tickle grope caterpillar congratulate oink tease thwap eskimo snug poke slap spank stare feed shake nod tag high5 fire bite" Binder (#829) rxd any none none
+  #238:"smooch jinx kiss"       Binder (#829)        rxd    any none none
+  #238:spin                     Binder (#829)        r d    any any none
+-------------------------------- finished ---------------------------------
+The Touchy Feely Socials Feature Object (#238) is already one of your features.
+Last modified Wed Jan 29 08:19:27 2003 PST by Binder (#829).
+#238:"hug bonk kick ky spin high-five lick huggle whuggle moo tickle grope caterpillar congratulate oink tease thwap eskimo snug poke slap spank stare feed shake nod tag high5 fire bite" any none none
+ 1:  // socials v2
+ 2:  // check that I can spin
+ 3:  // check that I can target
+ 4:  // check that target will spin
+ 5:  // Negotiate messages
+The Thinking Feature (#68) is nowhere (#-1).
+Stage-Talk Feature (#67) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of Generic Feature Object (#65).
+.nothere_msg             unknown hack (#35)    r c    {#69, "do", {"dname", "..
+.to_msg                  unknown hack (#35)    r c    {#69, "do", {"name", "p..
+.toself_msg              unknown hack (#35)    r c    {#69, "do", {"name", "p..
+,feature_verbs           unknown hack (#35)    r c    {"`", "to", "[", "]"}
+,feature_ok              unknown hack (#35)    r      1
+,commands                unknown hack (#35)    r      {"`* -*", "[*", "]*", "..
+ registry                unknown hack (#35)    r      #151
+,help_text               unknown hack (#35)    r c    {"This feature contains..
+,key                     unknown hack (#35)      c    0
+,aliases                 unknown hack (#35)    r c    {"Stage-Talk Feature"}
+,description             unknown hack (#35)    r c    {"This feature contains..
+ visible                 unknown hack (#35)    r      1
+ integrate_room_msg      unknown hack (#35)    r c    ""
+ integrate_player_msg    unknown hack (#35)    r c    ""
+ integrate_container_msg unknown hack (#35)    r c    ""
+ unique                  unknown hack (#35)    r c    1
+ proper                  unknown hack (#35)    r c    0
+ integrate_in            unknown hack (#35)    r      {#145}
+ handlers                unknown hack (#35)    r      {}
+ number                  unknown hack (#35)    r      1
+,offered                 Core-Wizard (#184)    r      #-1
+,object_size             Quota (#185)          r      {6857, 1002603771}
+-------------------------------- finished ---------------------------------

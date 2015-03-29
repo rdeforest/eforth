@@ -1,0 +1,91 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+User Name          On For Idle  Doing
+Crag                00:00   0s  
+One user logged in.
+Nowhere
+You see nothing special.
+I don't understand that.
+--> [$editor_class, $verb_cache, $utils, $user_db, $sys, $verb_cache, $lock_parser, $help_node, $has_verbs, $has_commands, $frob_class]
+ERROR: Method rename not found.
+Thrown by function find_method().
+~methodnf in #1.find_method (defined on #1), line 5
+~methodnf in #39.list_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+#1.set_name() (defined on #1):
+@program #1.set_name
+    arg new_name;
+    var old_name;
+    
+    // Only accept calls from owners or admins.
+    if (!.is_owned_by(sender()))
+        throw(~perm, "Sender not an owner.");
+    
+    // Make sure first argument is a string.
+    if (type(new_name) != 'symbol)
+        throw(~type, "New name is not a symbol.");
+    
+    // Do nothing if new name isn't different.
+    if (new_name == name) {
+        return;
+    }
+    
+    // Grab the new name.
+    (> $sys.assign_name(new_name) <);
+    old_name = name;
+    name = new_name;
+    
+    // If we already had a name, get rid of the old one.
+    if (old_name)
+        $sys.deassign_name(old_name);
+.
+--> $dump
+Enter text for method new.
+Method compiled.
+Line 1: syntax error
+ERROR: Method unparse not found.
+Thrown by interpreter opcode MESSAGE.
+~methodnf in #8.unparse (defined on #8), line 40
+~methoderr in #39.eval_cmd (defined on #26), line 17
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+I don't see "$frob_class" here.
+ERROR: Can't find object name frob_class.
+Thrown by interpreter opcode NAME.
+~namenf in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+Line 1: syntax error
+--> [$editor_class, $verb_cache, $utils, $user_db, $sys, $verb_cache, $lock_parser, $help_node, $has_verbs, $has_commands, $frob_class, $dump]
+--> $frob_class
+ERROR: Name already assigned to #12
+Thrown by #0.assign_name (defined #0), line 6.
+~perm in #12.set_name (defined on #1), line 17
+~perm in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+ERROR: Can't find object name frob_class.
+Thrown by function del_name().
+~namenf in #0.deassign_name (defined on #0), line 5
+~methoderr in #12.set_name (defined on #1), line 23
+~methoderr in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12

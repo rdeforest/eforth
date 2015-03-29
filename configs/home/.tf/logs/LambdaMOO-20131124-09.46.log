@@ -1,0 +1,85 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 58 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              3 new messages
+Last connected Thu Aug 29 08:00:37 2013 PDT from 63.224.54.239
+< connected: Crag. Total: 59 >
+Message 5127 on *Core-DB-Issues (#8175):
+Date:     Sat Oct 19 09:05:10 2013 PDT
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  Incorrect search direction in $code_utils:parse_propref()
+
+I was attempting to understand the reference-parsing code of $list_editor (to understand how it :invoke()s), when I realized that $code_utils:parse_propref() is NOT parsing its argument as the server does.
+
+The server parses a property reference from the tail end of the chain:
+    <expression 1>.<name>
+or  <expression 1>.(<expression 2>)
+these call for a search of the reference backwards from the end of the reference, an rindex()
+
+... and yet, $code_utils:parse_propref()  uses a left search, index()
+4:  if (dot = index(s, "."))
+
+Suggested change:
+4:  if (dot = rindex(s, "."))
+--------------------------
+Message 5128 on *Core-DB-Issues (#8175):
+Date:     Wed Oct 23 16:45:37 2013 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+Using rindex() would make sense. But when this was discussed awhile back, it was pointed out that
+- :parse_propref is used by some major command-line verbs on $player and $prog that add, modify, and remove properties
+- simply altering :parse_propref to split the string at the last dot would probably make it impossible to add, modify, or remove properties with dots in their name using those commands
+- e.g. the @prop command. @dump expects that @prop will be able to create a property with any legal character in its name.
+- so, to make this change to :parse_propref, you'd also need to rewrite a bunch of core verbs so they don't break.
+--------------------------
+Message 5129 on *Core-DB-Issues (#8175):
+Date:     Thu Oct 24 18:02:50 2013 PDT
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  Thread: $code_utils:parse_propref()
+
+Okay, I'll push a task onto my stack to write a db-wide grep to find all the uses (especially on core verbs) of $code_utils:parse_propref()
+I'll then go through them and figure out how they hack around this improper parsing, and present suggestions to change them.
+
+The other question I should ask on this topic is:  should :parse_propref() parse the argument as if it were a raw string to the BF eval command?
+That is, looking at MOOCodeSequences.txt of the server code, to match both of these forms?  It only matches the first, as far as I can tell:
+    <expr1> . <id>
+    <expr2> . ( <expr2> )
+Where <expr1> must resolve to an object,
+... <id> is a valid variable name ("... made up entirely of letters, digits, and the underscore character ... and does not begin with a digit." ~~ LambdaMOO Programmer's Manual #TOC13 "Naming Values Within a Verb"),
+... and <expr2> must resolve to a string
+
+Matching for the second form would allow for expression of the arbitrary strings for property names, and since the (hopefully literal <expr2>) string value would be quoted, it should be quite easy to then run a quoted-checking algorithm to exclude any rindex()'s that fall within the quoted string
+
+
+Of course, all this talk about switching to rindex() also raises the spectre of this issue occuring within $code_utils:parse_verbref().  At first glance, I see the same issue, however verbrefs cannot make chains the way that property references are allowed to do within code.   Still, the verbref should be the tail call, and, as such, should still be using rindex(), and circumquoting arbitrary verb names with the parens as specified within the server's own parser documentation.
+
+Because, in the end, is not the intent of these functions to emulate, within the DB code itself, the behaviour of the server's own code parser?  It does not seem to be adhering to the same rules, and this causes and poses problems for programmers trying to get their code to work properly.
+--------------------------

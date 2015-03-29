@@ -1,0 +1,2174 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Guest Room
+Binder appears to be staying here.  A hammock is here.  Devil is lounging in it.
+You see Steve, a generic unit testable thing, a Shared Player Finder, the Touchy Feely Socials Feature Object, a Lunch Bag, a rack, a Scrabble board, a card, a timer, a Sandwich, a Binder's Eyebrow, and a Generic Wind-Up Toy here.
+Binder is here, dozing.  stormagnet and Devil are off in another world.
+Last connected Fri Mar 24 06:07:09 2006 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 811141030 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 811141030 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 811141030 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 811141030
+Crag says, "crap, restarting screen didn't fix it"
+Crag says, "oh well"
+Crag semi-idles to work
+Crag says, "wow, KEXP is playing a Willy Nelson song about gay cowboys"
+Crag says, "that's awesome"
+Binder says, "Yes."
+Binder has heard of that song.
+Binder says, "It's a backlash against the backlash against Brokeback Mountain."
+Binder says, "Devil probably knows more about it than I do, as an active Willie Nelson fan."
+Binder says, "Absolutely if screen complains about utmp, it is a system library thing and you probably need a reboot."
+Devil [to Binder]: I don't know a lot about the song, other than it was written long ago and recorded before brokeback came out and has just now been released. Or something like that
+Binder says, "That's about 20% more than I knew."
+Binder gives Devil an xp for 'knowing stuff'.
+Devil dances
+Devil immitates George C Scott's pratt fall in DR STRANGLOVE
+Binder says, "Hee."
+ wants attention.
+Devil picks up the Sandwich.
+Devil feeds Sandwich to Steve.
+Steve sighs contentedly.
+Devil says, "rebooting time!"
+do
+Devil has disconnected.
+The poopsmith arrives and drops off Sandwich.
+Devil's friends arrive to cart him off to bed.
+< Devil has connected.  Total: 4 >
+< Devil has disconnected.  Total: 3 >
+< Devil has connected.  Total: 4 >
+Crag says, "I'll reboot wrack tonight"
+Binder nods.
+Binder says, "OK."
+Devil arrives from the South Third Floor Hallway.
+Devil says, "I just realized i was talking to myself it the other room"
+Devil says, "um... how do i un-split screen? "
+Devil says, "apparently suspending and resuming will do it but i dont think that's the Right Way"
+Binder says, "Er."
+Binder says, "Hmm."
+Devil nods
+Devil says, "I pasted the error message whet i was standing alone in the entry."
+Devil says, "and now i cant get at that buffer anymore"
+Devil says, "oh wait! i can!"
+Devil | loading room 156 ... >
+Devil | loading room 157 ... FAILED!
+Devil | ERR 307 main.c main()  fatal: Failed to initialize the rooms message system
+Devil | MSG exit_program(): shutting down
+Devil says, "there"
+Binder says, "The screen option you want to unsplit is either only [attention-Q] or remove [attention-X]"
+Binder says, "Depending upon whether the focus is currently in the pane you want to keep or the pane you want to kill."
+Binder sighs.
+Binder says, "If you search the man page for all places it mentions 'split' one of them tells you that."
+Devil ahhhs
+Binder says, "And the bbs error is because /home/bbs/rooms/157 is owned by root."
+Binder says, "Because it was created during a time when the bbs was running as root."
+Binder says, "Which you should not do."
+do
+Binder says, "No, NOT do, Steve."
+Binder kicks Steve.
+Devil says, "which is why it started ok when i started it with sudo. hang on. will kill and start as bbs again"
+Devil fixes
+Binder says, "Well done."
+Devil says, "stop chown start right"
+Devil says, "weeeeeee"
+Devil goes north.
+Devil arrives from the South Third Floor Hallway.
+Binder eyes Devil.
+Devil picks up the Generic Wind-Up Toy.
+Devil winds up the Generic Wind-Up Toy.
+Devil winds up the Generic Wind-Up Toy.
+Devil winds up the Generic Wind-Up Toy.
+Devil winds up the Generic Wind-Up Toy.
+Devil winds up the Generic Wind-Up Toy.
+Binder says, "This morning in the elevator up to the office I thought about making an elevator on here."
+Devil winds up the Generic Wind-Up Toy.
+Devil drops a Generic Wind-Up Toy.
+
+Generic Wind-Up Toy 
+Binder says, "Which would be a room with an exit which sealed for a time and then reopened."
+Generic Wind-Up Toy 
+Devil [to Binder]: so we can push steve down the elevator shaft?
+Binder says, "And you could use call buttons."
+Binder says, "Oh, another good use of it."
+Binder says, "Elevator shaft death."
+Generic Wind-Up Toy 
+Binder [to Crag]: Where are the maps of PM?
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+Generic Wind-Up Toy 
+
+Steve
+Devil picks up the Binder's Eyebrow.
+Devil feeds Binder's Eyebrow to Steve.
+Steve makes a rumbling noise in its throat, reminiscent of a cat's purring.
+Binder says, "Hey!"
+Binder [to Devil]: I need that!
+Devil [to Binder]: it makes it harder to talk to you when it's laying about though
+Devil [to Binder]: `bin doesn't work.
+Binder laughs.
+
+Binder says, "It is to be construed as a feature."
+Devil . o O ( it's all features now! )
+Devil picks up the Sandwich.
+The poopsmith arrives and drops off Binder's Eyebrow.
+Binder picks up the Binder's Eyebrow.
+Binder says, "THERE."
+Binder will hold the problematic eyebrow.
+Devil cheers
+Binder picks up Steve.
+Binder picks up the Generic Wind-Up Toy.
+Binder gets the Touchy Feely Socials Feature Object.
+Binder picks up the Shared Player Finder.
+Binder gets the generic unit testable thing.
+Binder says, "There."
+Binder says, "That should leave only player safe toys."
+Binder should makes some more.
+Binder says, "Well."
+Devil says, "yays!"
+Binder says, "Not should."
+Binder says, "But I might."
+Crag looks for PM maps...
+Devil tries to put the sandwich on Crag
+Binder says, "Balance it on his haid!"
+Devil hehehes
+Devil hands stormagnet a Sandwich.
+Crag . o O ( sandwichmagnet )
+Crag says, "I don't know where the PM maps are, but I have a good memory of the topology if you want to just ask me stuff"
+Crag says, "And I remember that the original design called for three or four elevators"
+Crag says, "One on either side of the ballroom, a freight elevator through the garage, kitchen and up to the roof, and I think maybe a secret elevator at the other side of the manor"
+Binder says, "OK."
+Binder [to Crag]: Here is what I am thinking about:  elevators with timed exits, call buttons, and a FIREMAN'S POLE WHEEEE!
+Devil [to Binder]: and pushing death?
+Binder says, "Yes, yes, pushing gravity death."
+Crag [to Binder]: I'm infavor of all of that
+Binder says, "Possibly with a follow up of squished by elevator car coup de greasy."
+Crag says, "LambdaMOO has an elevator which has a certain Charlie and the Chocolate Factory feel to it."
+Devil . o O ( creeeppy )
+Binder . o O ( mm creepy chocolate )
+Binder laughs and laughs at http://greatoutdoorfight.com/index.php/Fauntleroy_Brown
+Binder especially enjoys the picture.
+Binder has disconnected.
+Binder has connected.
+Crag heh
+Crag says, "blurry photos of yawning/angry cats are funny"
+Crag says, "Almost anything with live cats is funny, cute, or both, hence the appeal of all those cat books and sites."
+Crag says, "cats are well adapted to our tastes"
+Binder says, "Yes, we have fulfilled the wishes of our feline overrace gracefully."
+Crag grins.
+Crag [to stormagnet]: I include you in that overrace
+Crag [to Binder]: Did you have a satisfactory weekend?
+Binder [to Crag]: No.
+Crag says, "damn"
+Crag says, "me either"
+Binder spent most of it sick, not getting enough sleep, trying to help Vy.
+Crag says, "ugh"
+Binder is cranky, still sick, and needing to pay attention to work because of a big release today.
+Crag says, "I'm still not completely recovered from being sick a month ago"
+Binder nods.
+Binder says, "Stressful times."
+Binder did have some fun.
+Binder went to a gameday and played an eight hour game of Descent: Journeys Into Darkness.
+Binder says, "It's like D&D as a board game.  One player is the Evil Overlord and controls the monsters and the other players are heroes."
+Binder says, "It's got plastic figs and a pretty clever dice system."
+Binder says, "Then we played Mall of Horror and I won.  Whee!"
+Crag says, "That sound nice"
+Crag says, "I miss games with your crew"
+Crag says, "Though I miss some parts less than others"
+Crag says, "What I need right now is a local reliable friend"
+Binder says, "One with a shovel and no aversion to helping you bury bodies."
+Binder just started a GURPS RPG campaign last night.
+Binder says, "Character creation took the full four hours, unsurprisingly."
+Binder attributes it to only having one copy of the book.
+Crag says, "The only Steve Jackson game experience I've had was carwars with you and Heath"
+Binder says, "Bleah."
+Binder says, "That's not completely unrepresentative of SJG -systems- but not a very good experience of them."
+Crag says, "yeah"
+Crag says, "I worry about anything which tries too hard to be generic"
+Binder says, "Yeah.  GURPS has a couple advantages for me right now."
+Binder says, "I wanted something point based so people could design the character they mean to play."
+Binder says, "I wanted something which would allow me to run multiple settings with the same characters."
+Binder says, "Because I want to start a long running campaign with lots of continuity."
+Binder says, "But not something which would bore me."
+Crag says, "Ooooooo"
+Crag says, "I like continuity"
+Binder says, "Oh, and it had to not be horror or other bleak setting with short character lifespans."
+Crag heh
+Binder says, "So I considered HERO, GURPS and Savage Worlds, three 'universal' systems I own."
+Binder says, "HERO is too mathy and SW is too unbalanced."
+Binder says, "And GURPS has an additional advantage of already having lots of material for it."
+Binder says, "So if I want to do cyberpunk with it, there's several published books plus lots of web material."
+Binder says, "If I want to do high fantasy, ditto."
+Crag says, "What, no Diceless Universal Decision Engine? :)"
+Binder says, "I wanted to stick with something with dice."
+Binder says, "It's a part of my mental mindset of what makes an RPG an RPG."
+Crag says, "I like the idea of a long-running game spanning multiple genres"
+Binder played and ran Amber [a diceless system] and ran Everway [card based] for long spans and dice seem vital.
+Crag says, "Yeah, I think dice are important"
+Crag says, "It gives an illusion of control over the randomness"
+Binder says, "And for the math inclined, gives a sense of probability."
+Binder says, "If you know, say, that you need to roll a nine or less on three six sided dice, you can decide if that's your best plan."
+Binder says, "Especially if it's a twelve or less on the same three six sided dice to run away."
+Crag nods.
+Crag says, "I also think dice work best when they're kept relatively simple"
+Binder tries to decide if explaining his metapremise would constitute a spoiler for Devil or not.
+Binder says, "Yes."
+Binder says, "Have you much familiarity with GURPS?"
+Crag says, "none"
+Binder says, "OK, I'll break it down quick and light."
+Binder says, "Pretty much only four kinds of rolls."
+Binder says, "Attack roll, that's 3d6 and you aim to get under your attack skill +/- any situational [eg, it's dark or you've surprised the foe or you're at range]."
+Binder says, "Ack."
+Binder says, "Let me back up."
+Binder says, "SKILL roll, which is 3d6 under skill +/- situational of which attack roll is an example."
+Binder says, "Also, defense rolls, task attempts and contests of skill against other people."
+Crag nods
+Binder says, "Second type of roll is reaction roll, again 3d6, plus/minus reaction modifiers characters might have [certain advantages/disadvantages modify it, such as being a world-famous vampire slayer or being the renowned traitor to humanity]."
+Binder says, "Third type of roll is damage, which is generally Xd6+/-Y and is derived ENTIRELY from your strength stat."
+Binder says, "Fourth type of roll is a straight up 3d6 v. some stat, plus/minus situational / [dis]advantage mods."
+Binder says, "That's it."
+Binder says, "So you're either picking up three dice and rolling under something or some smaller set of dice and trying to roll max."
+Binder says, "Combat goes like this:"
+Binder says, "Compare everyone's speed stat.  Initiative precedes from highest to lowest, ties broken by DX [dexterity] stat, ties there broken by DX [third type] rolls."
+Crag says, "so far so good"
+Binder returns from a SIGVY.
+Binder resumes process execution.
+Crag heh
+Binder says, "So, starting with the first character and proceeding along initiative sequence, each character chooses a manuever."
+Binder says, "Those are things like: move, change position, ready, aim, attack, all out attack, feint, wait, all out defense, concentrate, long action."
+Binder says, "In fact, those are the list of manuevers."
+Crag grins.
+Crag says, "Combat is on a grid of some sort?"
+Binder says, "They determine what kind of checks you'll have to make and what kind of defenses are available to you on this round [which is one second of time]."
+Binder says, "Not in the Basic Combat system."
+Binder says, "Movement is abstracted to GM whim."
+Binder says, "Sure you can reach him from here, yes that tree gives you cover, no you can't see over the edge from here."
+Binder says, "But there are several additional complications you can add to it and one of them is precise movement on terrain."
+Crag says, "I like scalability, especially functional scalability"
+Binder says, "If you've chosen a manuever which includes an attack, you pick a target, you ask the GM what mods might pertain, and then you roll against your own adjusted skill with your attack."
+Binder says, "Many attack skills have defaults so if you aren't trained with a weapon you can still use it with some chance of success."
+Crag says, "I like that"
+Binder says, "If you pass the check by rolling less than the target, you've achieved an attack which could hit [ie, you didn't screw it up]."
+Binder says, "Then the defender may get to check their active defense."
+Binder says, "Depending upon their last chosen manuever."
+Binder says, "Some, like all-out attack preclude any defense."
+Binder says, "Most give them a limited number of defense times/types."
+Binder says, "Say it's a defending NPC using a sword."
+Binder says, "But no shield."
+Binder says, "So the NPC could attempt to defend once per round by making a Parry."
+Binder says, "Parry skill is 1/2 their attack skill."
+Binder says, "They could try a dodge instead, which is derived from HT [health] and DX [dex]."
+Binder says, "So it's a skill check for them."
+Crag says, "that all sounds very sensible"
+Binder says, "If they succeed, they got out of the way of the attack, move on."
+Binder says, "If they fail, or opt not to or can't [because of their manuever or because they've already used the max defends], you roll damage."
+Binder says, "Damage is generally something like 1d6 + 1."
+Binder says, "At a given ST [strength] using a given weapon edge [crushing, cutting or piercing], if that's your damage, that's what it will also be."
+Binder says, "If you have a club which does 1d6 + 1 damage when you use it, a hammer will do the same, a mace will do the same, a chair will do the same."
+Binder says, "So long as it's all crushing damage."
+Binder says, "Once you've rolled damage, you subtract out any passive defense the defender has."
+Binder says, "Armor, in GURPS, soaks some hits."
+Binder says, "So if you're in plate mail, maybe you don't get hit less often than a guy in leather [and even more, perhaps, as encumbrance impairs dodge] but when you are hit, the armor absorbs more of the damage."
+Binder says, "If you're using a non-crushing weapon type [cutting or piercing] the armor is subtracted out, and THEN the remaining damage is multiplied for type of wound."
+Binder says, "Subtracted from defender's HT."
+Binder says, "Move on to the next person in the sequence."
+Binder says, "Damage has ramifications, too."
+Binder says, "If a single hit does more than half your base HT stat, you're stunned the next round."
+Binder says, "Even if it doesn't, you still take the amount of HT damage you took as a penalty on your next round action."
+Binder says, "If you were stabbed for three points, you'd be -3 on whatever you do next round."
+Binder says, "It's not cumulative, though, so if you took two points of damage on the round where you were at -3, you'd have a penalty of -2 the round after, not -5."
+Binder says, "When you have taken your HT score in hits, every round you have to make a stat check against your base HT to stay on your feet."
+Binder says, "So it reads kind of slow but I think it'll actually move pretty fast once everyone has the rhythm."
+Binder says, "Figure out your order in the round, when it's your turn, declare your manuever, roll any attack or other skill, wait for me to resolve defense, possibly roll damage."
+Binder says, "Then on my actions, wait for me to point at you, sob about the injustice of it all, choose defense, roll appropriate check, possibly suck down damage, resolve."
+Crag says, "Like car wars, it sounds like it would be a lot more fun with computer assistance"
+Binder says, "Very true."
+Binder has already found several spreadsheets/programs toa ssist.
+Crag says, "That's not surprising"
+Binder says, "Regrettably, few open source ones, but I bet they're out there."
+Binder has just not dedicated sufficient time to the search.
+Binder says, "Even better, sjgames serves as a clearinghouse for it."
+Binder says, "So the sjgames.com site has a GURPs section collecting them."
+Binder really does like how supportive SJGames is of their userbase.
+Binder says, "They're not trying to sue people who write programs to work with their games."
+Binder could probably pretty easily script up something in Perl to speed up combat.
+Crag says, "I was thinking that"
+Crag says, "I'm falling in love with Perl this year"
+Crag says, "I've been using it so much that it's really starting to make sense to me"
+Crag says, "whatever that means"
+Crag says, "I'm even using map and grep"
+Binder laughs.
+Binder says, "Nothing good can come of this!"
+Binder keeps falling back on Perl instead of learning Ruby or Python.
+Crag says, "yeah"
+Crag says, "Perl is becoming my vi of programming languages"
+Crag says, "I wish I'd started on Lisp, but now that I'm productive with Perl..."
+Binder says, "At some point, it will probably be easy to cross over into Lisp."
+Binder says, "It shares enough in common with Perl."
+Crag says, "Yeah"
+Crag says, "Reading about lips was part of what got me using map"
+Crag says, "Lisp"
+Binder mm lips
+Binder says, "Sorry, what?"
+Binder got distracted.
+Binder says, "Oh, yeah, map."
+Crag laughs
+Binder says, "Good stuff!"
+Crag says, "yeah"
+Crag says, "I'm turning into a Perl zealot"
+Crag says, "It seems like an excellent blend of shell, C and Lisp"
+Crag says, "Almost ideal"
+Binder RAAR.
+Binder says, "Perlzilla!"
+Crag says, "Prehistoric Camel - WITH TEETH!"
+Binder mm
+Binder wait
+Binder says, "Perl is good.  I especially like that it annoys so many zealots of other languages."
+Binder should probably learn Ruby and Python so he can choose the rightest tool for any job.
+Binder says, "But it's a low priority for me for the most part, except when I'm at work."
+Crag says, "I've been in that situation for almost ten years now"
+Binder laughs.
+Binder says, "Point taken."
+Binder says, "I actually regressed from Perl to bash2 for a while."
+Binder says, "Because bash2 has nicer RE and is lighter weight and more ubiquitous than Perl [slightly]."
+Crag says, "Is bash2 different from /bin/bash?"
+Binder says, "No.  Not on any system you're likely to use."
+Binder says, "It would be on older Solaris, older HP/UX, any AIX."
+Crag says, "ah"
+Crag says, "I have a weakness related to apt-get.  When dist-upgrade reports '0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded."
+Crag says, "I just want to add sources and switch to less-stable packages"
+Binder LAUGHS.
+Binder says, "Always Be Upgrading."
+Binder says, "GPL is for Closers."
+Crag idles: system bus noise from $work
+[Idling at 12:30 P.M. on Mon, Mar 27: system bus noise from $work]
+Binder says, "ARGH."
+Binder [to Crag]: So, uh, funny story.
+Binder [to Crag]: Which is to say:  I AM NOT A JERK.
+Binder [to Crag]: But I just got email notification.
+Binder [to Crag]: That the birthday present I bought you five weeks ago.
+Binder [to Crag]: Just shipped.
+Binder [to Crag]: Tonight.
+Binder sighs.
+Binder says, "Fuckheads."
+Binder [to Crag]: So maybe it'll get there by your next birthday!
+Binder grumbles.
+Crag blinks
+Crag [to Binder]: You got me a present!
+Crag says, "I'm terrible at getting people presents."
+Crag says, "I do fine if I actually do it, but I'm not consistant"
+Crag [to Binder]: Thank you in advance.  I'm looking forward to it.
+Crag [to stormagnet]: I did the chart for Renee and Jerry's baby.  It has a weak opposition a weak trine, three weak squares, four strong squares and two sextiles.  If there's anything to astrology, that kid will face a lot of challenges.
+Crag de-idles to gasp for breath
+Binder blinks.
+Crag says, "work was busy today"
+Binder says, "Wow."
+Crag says, "Here's my shift review:"
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+---------------------------------- Crag -----------------------------------
+Busyness meter hovered around 'frustrating' without pushing too close to "actually busy".
+
+There are no ongoing issues at this time.
+--------------------------- Crag stops pasting ----------------------------
+Done @pasting.
+Crag says, "And now I go to my desk to get some real work done."
+Binder hehs.
+Binder hmms.
+Binder goes north.
+Binder arrives from the South Third Floor Hallway.
+Binder goes north.
+Devil goes north.
+Devil arrives from the South Third Floor Hallway.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Guest Room                    0 seconds   being 32              
+Devil          Guest Room                    an hour                           
+Binder         South Third Floor Hallway     an hour                           
+stormagnet     Guest Room                    7 days                            
+
+Total: 4 people, 1 of whom has been active recently.
+The South Third Floor Hallway
+A tall brightly lit hallway with Gothic arches.  It continues on to the east and west and there's a door to the south.  On the opposite wall, a featureless metal door gleams beside a panel.
+Binder is here, off in another world.
+Crag has arrived.
+Crag says, "I'm awake!"
+Crag says, "more or less"
+Binder says, "Yay!"
+Binder has started poking around at the elevator puzzle.
+Crag says, "Ooo, anything I can do to help?"
+Crag says, "I think my next big MOO project will be an HTTP interface out of which I can pull MOO stuff in a version-control friendly format"
+Binder says, "Nope."
+Crag nods.
+Binder says, "I'm just fiddling at this stage."
+Binder says, "At some point I'll hit a wall in my rustiness with MOO or this core and ask you questions."
+Binder says, "But right now I was just using it to let my brain idle on my work problems."
+Binder says, "Puttering around with different ways to incorporate an elevator."
+Crag says, "Sounds like a good idea."
+Binder says, "Thanks!"
+Binder says, "I'm on a MUSH called DinoMUSH and one aspect of it is that every 'hangout' room has lots of toys to play with, there's a global exit to 'hangout' and the target rotates every day."
+Crag says, "I think I remember you mentioning that feature once before"
+Binder nods.
+Binder says, "It's pretty good for keeping people from getting bored if most people are idle."
+Binder says, "You just play with a toy."
+Crag says, "They must have been pretty good toys to still be entertaining to use alone"
+Crag says, "Was it minesweeper or solitare or something? :)"
+Binder says, "It's things like a stress ball and many of the rooms have interactive decor, like a bartender or a chef or the ability to drive the room elsewhere [it's a floating island] and push boulders off of it onto people 'below' in other rooms or taunt natives."
+Crag heh
+Binder says, "Oh, and there's an in-MUSH bot named Poonlarp."
+Crag says, "Violence is always entertaining"
+Binder says, "So lots of noise, but lots of feedback."
+Crag says, "I'd like to spruce up this place with that kind of stuff"
+Binder says, "Yeah, I noticed that when I mentioned elevators and there were immediate requests for plummeting death."
+Crag says, "I need to get version control setup before I do any serious work"
+Binder nods.
+Binder says, "Isn't there the ability to dump the db into a flatfile?"
+Binder says, "And use svn or whatever you already have to store it?"
+Crag says, "Yes, but it's not very human-friendly"
+Crag says, "I want each verb in its own file"
+Binder says, "Mm.  OK."
+Crag says, "Maybe I'm being too ambitious"
+Crag says, "it wouldn't be the first time"
+Crag says, "But I want to be able to recover bits and pieces without having to fire up another instance and copy between them"
+Binder says, "Is there some one who's solved a similar problem and put their means on the web?"
+Crag says, "I should probably put the nightly dumps in svk just to make a step forward"
+Binder <- lazy
+Crag says, "Good question"
+Crag googles moo revision control
+Crag says, "I'm not finding anything"
+Binder says, "http://neil.fraser.name/software/moobrowser/spec.html not useful?"
+Crag peers
+Crag says, "Ooo interesting"
+Crag says, "that might get me most of the way there"
+Binder used slightly different search terms.
+Binder says, "Since I figured the hard part of the problem might be moo verb extraction."
+Binder says, "Once you've dumped the verb, you can do lots of things to it of which revision control is a subset."
+Crag says, "I was more worried about the HTTP part"
+Crag says, "And I seem to recall that this core has HTTP service already, I just don't know how to use it"
+Crag says, "Once I figure that out, the rest is 'trivial' :)"
+Crag says, "But this moobrowser thing looks like the way to go"
+Crag says, "oh"
+Crag says, "I'd still need to find a way to go the other direction"
+Crag says, "But that's a lot easier"
+Crag says, "Just a little perl script which logs in to the MOO and does stuff"
+Crag says, "Dangerous, but easy :)"
+Binder says, "Or I'm sure you could do something with tf scripting."
+Binder says, "Since it's got operations and flow controls."
+Crag says, "tf scripting is hard"
+Binder says, "Let's go shopping!"
+Crag heh
+=> #958 (Crag)
+Devil arrives from the Guest Room.
+Binder does a @kids #5 and groans.
+Binder says, "It's just crying out for refactoring."
+Binder ahhs after @chparenting several obvious choices to be kids of #1084.
+Binder drops an Elevator Door.
+Binder has disconnected.
+Binder's friends arrive to cart him off to bed.
+< Binder has connected.  Total: 4 >
+Binder arrives from the Guest Room.
+Crag wakes
+=> #5 (generic thing)
+Crag says, "A few years ago I spent some time looking at re-organizing MOO and ColdMUD object hierarchies"
+Crag says, "I didn't understand delegation back then, and didn't make much progress"
+It's shiny metal.
+The Elevator Door is closed.
+Elevator Door (#1180) [ readable ]
+  Owned by Binder (#829).
+  Child of generic door (#121).
+  Location South Third Floor Hallway (#645).
+-------------------------------- finished ---------------------------------
+The South Third Floor Hallway
+A tall brightly lit hallway with Gothic arches.  It continues on to the east and west.  There's a door in the south wall.
+You see an Elevator Door here.
+Devil and Binder are here, off in another world.
+Elevator Door (#1180) [ readable ]
+  Owned by Binder (#829).
+  Child of generic door (#121).
+  Location South Third Floor Hallway (#645).
+-------------------------------- finished ---------------------------------
+Elevator Door (#1180) [ readable ]
+  Owned by Binder (#829).
+  Child of generic door (#121).
+  Location South Third Floor Hallway (#645).
+-------------------------------- finished ---------------------------------
+Objects owned by Binder (from #0 to #1185):
+ 44K  #829 Binder                    *[South Third Floor Hallway]
+ <1K  #831 card                      *[Guest Room]
+  1K  #832 generic unit testable thi  [Binder]
+  4K  #843 Generic Wind-Up Toy        [Binder]
+  1K  #844 Wind-Up Pig               *[PG]
+  1K  #827 Wind-Up Aardvark          *[Vylar]
+  5K  #846 Binder's pet rock         *[Entrance Hall]
+  1K  #852 timer                     *[Guest Room]
+  3K  #855 butcher knife              [wooden knifeblock]
+ <1K  #850 heavens                   
+  1K  #854 Shared Player Finder       [Binder]
+ <1K  #892 Butcher Knife             *[Cerebus]
+ <1K  #893 Butcher Knife             *[xantha]
+ <1K  #894 Butcher Knife             *[stormagnet]
+ <1K  #896 Butcher Knife             *[Athena]
+  2K  #891 Steve                      [Binder]
+ <1K  #883 Butcher Knife             *[Devlyn_Syde]
+ <1K  #898 Steak knife               *[xantha]
+ <1K  #895 Butcher Knife             *[xantha]
+  2K  #238 Touchy Feely Socials Feat  [Binder]
+  5K  #823 Generic Fuzzy Animal       [Binder]
+ <1K  #936 Lux's Knife               *[Lux]
+ <1K  #905 scarlet A                 *[Lux]
+  2K  #960 Wind-Up Data Frog         *[PG]
+ <1K  #904 Marcy's Butcher Knife     *[Marcy]
+  1K  #972 wooden knifeblock         *[Lux]
+ <1K  #980 Leatherman blade           [Binder]
+ <1K  #970 Bluegum Eucalyptus        *[Dense Forest]
+ <1K  #979 Thick Kamani              *[Forest Clearing]
+ <1K  #961 Thin Kamani               *[Forest Clearing]
+ <1K  #983 hammock                   *[Guest Room]
+ <1K  #845 Ladder                    *[Deruta Mug]
+ <1K #1011 Devil's Very Own Blankie  *[Lux]
+ <1K #1008 Tux Blankie               *[Vylar]
+ <1K #1014 Fresh Wit                 *[PG]
+ <1K #1019 Deadly Blade              *[Vylar]
+ <1K #1001 Gold Star                 *[Vylar]
+ <1K #1005 Cheese                    *[Vylar]
+ <1K #1006 Washing tub               *[Laundry]
+ <1K #1023 Wringer                   *[Laundry]
+ <1K #1024 Laundry Table             *[Laundry]
+ <1K #1025 Clothesline               *[Laundry]
+ <1K #1029 Gold Star of PG           *[Devil]
+ <1K #1041 Katana                    *[Samurai]
+ <1K #1042 Wakizashi                 *[Samurai]
+ <1K #1047 Something to Cry About    *[crankcase]
+ <1K #1000 Mouth                     *[PG]
+ <1K #1016 little bites              *[PG]
+ <1K #1080 rpmbuild                  *[crankcase]
+ <1K #1084 Generic Annoyance          [Binder]
+ <1K #1085 mkinitrd                  *[crankcase]
+ <1K #1086 Red Hat's Lying Manpages  *[crankcase]
+ <1K #1092 Late to the Party         *[crankcase]
+ <1K #1072 Did I Mention How Much Rp *[crankcase]
+ <1K #1094 Lunch Bag                 *[Guest Room]
+ <1K #1074 Sandwich                  *[stormagnet]
+ <1K #1095 Veggie container           [Binder]
+ <1K #1096 Apple                     *[stormagnet]
+ <1K #1097 Dressing container         [Lunch Bag]
+ <1K #1098 Bag of peanuts            *[PG]
+ <1K #1099 kernel rpms               *[crankcase]
+ <1K #1100 Container of fruit        *[stormagnet]
+ <1K #1101 Slices of nectarines      *[Lux]
+ <1K #1102 Nanner                    *[xantha]
+ <1K #1103 Entree container          *[stormagnet]
+ <1K #1104 Sandwich half             *[Lux]
+ <1K #1105 Celery sticks             *[Lux]
+ <1K #1106 Splash of Catalina         [Dressing container]
+ <1K #1107 Another Luna Bar           [Lunch Bag]
+ <1K #1091 Carrot sticks             *[Devil]
+ <1K #1113 Luna Bar                   [Lunch Bag]
+ <1K #1114 Salad container           *[The Gingerbread House Foyer]
+ <1K #1115 Salad                     *[The Gingerbread House Foyer]
+ <1K #1116 Other Half of Sandwich    *[Lux]
+ <1K #1108 Binder's Eyebrow           [Binder]
+ <1K #1117 NFS compulsively does DNS *[crankcase]
+ <1K #1125 Synchronizing configurati *[crankcase]
+ <1K #1127 hose                      *[Vylar]
+ <1K #1087 Nordstrom's Shitty Custom *[crankcase]
+ <1K #1133 Mozilla 1.4               *[crankcase]
+ <1K #1136 RPM wait state!           *[crankcase]
+ <1K #1138 NetVault                  *[crankcase]
+  1K  #950 Brain                     *[PG]
+  2K #1017 strangely alluring toad o  [Binder]
+ <1K #1143 keepalived.conf           *[crankcase]
+ <1K #1151 Multicast group membershi *[crankcase]
+ <1K #1156 Rpmbuild does not let you *[crankcase]
+ <1K #1157 TheraSense FreeStyle       [Binder]
+  2K #1007 tilebag                    [Binder]
+ <1K #1004 Guido van Rossum          *[Yurt]
+ <1K #1159 Nemesis                   *[stormagnet]
+ <1K #1003 Scrabble board            *[Guest Room]
+ <1K #1150 rack                      *[Guest Room]
+ <1K #1174 Burqa of Shame            *[Crag]
+ <1K #1181 Thick Layer of Dust       *[Yurt]
+ <1K #1182 Fluff Bunny               *[Yurt]
+  1K #1180 Elevator Door             *[South Third Floor Hallway]
+-- 97 objects.  Total bytes: 132,512.-----------------------------------------
+Crag [to Binder]: And in completely different news, thank you for the fancy pliers!
+Binder wheees!
+Binder [to Crag]: I'm glad they finally got there.  Fucking Hechinger's, man.
+Crag heh
+Crag says, "I'm looking forward to using them to replace a shower head"
+Crag says, "Everybody needs good head"
+Binder generally prefers to use pliers to get head as well.
+Binder says, "So I completely understand!"
+Binder . o O ( no. wait. )
+Crag grins.
+Binder finishes writing a LONG email response to a LONG email received and goes PHEW.
+Crag says, "Found out Friday that HP is replacing all the VBasic in OpenView with Perl"
+Binder WOOHOOS.
+Binder says, "Probably on a time line which means the Perl they're replacing it with will be obsolete by the time it's done.  :)"
+Crag :)
+Binder [to Crag]: I'm going to forward you something from the securecoding list where Crispin Cowan talks about the Apparmor which Novell is working on for their SuSE desktop.
+Binder [to Crag]: I'd like to know how much it overlaps with the work your friend has done in application sandboxing.  [Daniel?  Was that the one?]
+Binder hehs.
+Binder |
+Binder | Devlyn_Syde whispers from deep in your subconscious, "You want it to ship to the Meridian Ave N address?"
+Binder | % Activity in world dino
+Binder | You page, "No, that'd probably be both bad and surprising." to Devlyn_Syde.
+Binder | You page, "As that's where Crag lives and he'd wonder why he was getting a new computer." to Devlyn_Syde.
+Binder [to Crag]: Sorry, Crag, no new free computer for you.
+< kirsty has connected.  Total: 5 >
+< kirsty has disconnected.  Total: 4 >
+Binder whistles idly.
+Devil says, "That totally broke your chances at out idling those other two"
+Devil says, "You were up past an entire day!"
+Binder curses.
+Binder will never win at this rate!
+Binder will just have to ... STAB SOMEBODY.
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder stabs Crag with a Leatherman blade.  Neat!
+Crag dies from a wound inflicted by Binder with the Leatherman blade.
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+GhostOfTheManor is here, asleep.
+Crag blinks
+Crag says, "Who was 'kirsty'?"
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Heavens                       0 seconds   being 32              
+Binder         South Third Floor Hallway     2 hours                           
+Devil          South Third Floor Hallway     19 hours                          
+stormagnet     Guest Room                    16 days                           
+
+Total: 4 people, 1 of whom has been active recently.
+The Entrance Hall
+You see a particularly dreary corner of the room, a Punching Bag for Binder, a bucket, a mop, a Wind-Up Mariachi Band, a Binder's pet rock, a round tuit, a hunk of quartz, a cheese, and a whitespace here.
+The Ballroom
+The Grand Stair Lower Landing
+The On the Grand Stair
+The Grand Stair Upper Landing
+The Second Floor Veranda
+The North Second Floor Balcony
+The East Third Floor Hallway
+You see a west wall here.
+The South Third Floor Hallway
+A tall brightly lit hallway with Gothic arches.  It continues on to the east and west.  There's a door in the south wall.
+You see an Elevator Door here.
+Devil and Binder are here, off in another world.
+Crag has arrived.
+Crag says, "Who was 'kirsty'?"
+Crag | [09:12] < kirsty has connected.  Total: 5 >
+Crag | [09:12] < kirsty has disconnected.  Total: 4 >
+Crag wonders how to get tf to include a DATE in that timestamp...
+Crag ahh, %{time_format}
+-----
+`HELP TIME_FORMAT' NOT FOUND
+============================
+
+Sorry, but no help is available on `time_format'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+Crag [Apr 05, 09:12] < kirsty has connected.  Total: 5 >
+Crag [Apr 05, 09:12] < kirsty has disconnected.  Total: 4 >
+Crag | [Apr 05, 09:12] < kirsty has connected.  Total: 5 >
+Crag | [Apr 05, 09:12] < kirsty has disconnected.  Total: 4 >
+Crag says, "HA"
+Crag makes tf his bitch
+A 24 year old girl, from London - England. Graduated a couple of years ago with a BA (Hons) in Fine Art - specialising in photography. Designs and makes jewellery for a living, supplying to two shops situated in the Greater London area - also collects/sells vintage clothes & accessories.
+She is sleeping.
+  Player name      Last Login    From Where
+  -----------      ----------    ----------
+  kirsty (#1168)   Apr  5 2006   spr1-hers2-4-0-cust59.asfd.broadband.ntl.com
+=> {#2, #35, #36, #63, #176, #181, #184, #185, #239, #243, #245, #251, #450, #829, #836, #838, #839, #841, #847, #849, #851, #899, #909, #919, #932, #951, #954, #955, #958, #959, #966, #969, #974, #1018, #1043, #1079, #1119, #1129, #1162, #1163, #1164, #1168, #1170, #1171, #1172, #1173}
+[used 2 ticks, 0 seconds.]
+  Player name          Last Login    From Where
+  -----------          ----------    ----------
+  Ryan (#1170)         Mar  5 2006   H146.C72.B0.tor.eicat.ca
+  Linux (#1171)        Feb  5 2006   localhost
+  Windows (#1172)      Feb  7 2006   localhost
+  Confucious (#1173)   Feb 22 2006   localhost
+  Player name         Last Login    From Where
+  -----------         ----------    ----------
+% enceladus (#1164)   Jan 30 2005   cpe-065-184-156-161.ec.rr.com
+  Marcie (#1163)      Jan 29 2005   CPE001111226d19-CM000039162862.cpe.net.cabl
+
+ %  == programmer.
+Crag [to Binder]: AppArmor sounds a lot like my friend's product.  I don't know what the products name is now that McAfee has re-branded it or whatever.  It used to be called Entercept, I think.
+Crag says, "I haven't finished looking over the AppArmor thing, but what Entercept did was intercept all 'risky' system calls (open(), fork(), select(), ...) and then in learning mode it gathered stats on how they're used, and in enforcement mode it took action when the recorded policy was violated.  The user could tweak any of it, I'm sure, though I never used it myself."
+Crag says, "I'm pretty stoked to here Novell's working on a free version."
+Crag says, "It seemed like the obvious thing to work on for anyone concerned with that aspect of systems."
+Crag says, "seLinux ought to provide everything needed to do it for free in Linux"
+Crag says, "Entercept advertised a 4% overhead, but I have a theory that that is the standard difficult-to-verify claim for commercial software because it seems like VMware made the same claim."
+Crag says, "4% is less than 5%, so it's like the 9/10ths of a cent extra we all pay for gas. :P"
+Crag idles: american idle
+[Idling at 12:49 P.M. on Sat, Apr 8: american idle]
+Binder says, "Yes."
+Binder says, "I think you're right."
+Binder says, "4% is a made up number to seem plausible and bearable."
+Crag says, "While my friend Bruce at McAfee is a pretty cool guy, I don't have any reason to believe the product he sells is particularly "good".  I bet AppArmor is better."
+Crag says, "THough I still haven't looked closely into it"
+Binder says, "Yeah, it seems to be in the we've-got-it-working-for-our-target-cases-who-needs-UI? stage which most software targetting FOSS platforms attains."
+Binder says, "So not truly universal or robust but probably hits 80% of the things you'd want to do with it and a few of the higher visibility corner cases but frustrates anyone who tries to use it who doesn't already understand how it works under the hood."
+Binder would expect Entercept, as a commercial product, to perhaps handle fewer types of profiles but look slicker while doing it.
+Crag heh
+Crag says, "The old 'works for me'"
+Crag says, "I'm sure you're right about Entercept"
+Crag says, "And Bruce is a Slick Guy"
+Crag says, "So that just adds to the slick factor"
+Binder nods.
+Crag says, "I've got a second phone screen with Amazon next Friday."
+Crag says, "I didn't mention the first one because I wasn't very optamistic about it"
+Crag says, ""
+Crag says, "The in-house recruiter tried to impress apon me today that the manager I spoke with last week was unusually impressed with me."
+Crag says, "I'm trying not to take that too seriuosly, but... it's hard not to."
+Binder high5s Crag!
+Crag grins.
+Binder wonders idly if Amazon still runs their production environment entirely from ldap.
+Crag says, "That's a good question"
+Binder says, "All the install configs, system pushes and user auth used to be ldap, years ago."
+Crag says, "hm"
+Binder says, "So you might want to ask them how they manage their enormous infrastructure."
+Crag says, "Yeah"
+Binder says, "If only to sate my curiousity.  :)"
+Crag says, "ldap would be a huge improvement over DIG's various methods"
+Crag says, "What I have heard is that their production environment is predominantly Perl and Linux"
+Crag says, "With exceptions driven by requirements having to do with working with third parties."
+Binder says, "Stupid, stupid rat^Wthird party creatures."
+Crag says, "The position I'm interviewing for seems to be a senior programming position in a group maintaining parts of their online refund mechanisms"
+Crag says, "heh, yeah"
+Crag says, "I'll make mincemeat out of that beat mouse."
+Crag says, "Now I REALLY need to get Perl installed on my Zaurus. :)"
+Crag says, "As part of the initial phone screen my screener assigned me a tiny project to create sample code for, and the results are http://defore.st/perl/Lingua-EN-Money-0.50.tar.gz, my first ExtUtils::MakeMaker package."
+Crag says, "I spent most of the time learning to use Test::More, MakeMaker, and stuff."
+Binder says, "Neat."
+Binder grabs.
+Crag says, "But what I'm most proud of is that I extended someone else's module"
+Crag says, "Doing that 'see if someone else has already solved the problem' thing you keep mentioning"
+Crag says, "The whole time I was working on the project I was asking myself, "what would Shannon do?" :)"
+Binder spams Crag's error_log by copying a bonus comma.
+Crag heh
+Binder grins.
+Crag says, "If you see any bugs or anything, I'll happily patch it and release a 0.51 version."
+Crag says, "And add you to the credits if you like"
+Binder says, "OK."
+Binder can't promise he'll get to it soon.
+Crag says, "of course"
+Crag says, "It seems the module is sufficient for the purposes of getting me a second phone interview already, so you should only look at it for your own amusment anyway."
+Binder  :)
+Crag says, "I'm very excited"
+Binder says, "Understandably."
+Crag says, "You may recall that I applied with Amazon three times in 2001 and never heard back from them at all."
+Binder says, "Yes."
+Binder recalls.
+Crag hee!
+Crag says, "One funny bit is that my boss (Allison Lekas, the tiny fireball at DIG) is married to a guy who JUST switched from Microsoft to Amazon."
+Binder says, "oooh, a beachhead."
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   being 32              
+Binder         South Third Floor Hallway     a day                             
+Devil          South Third Floor Hallway     8 days                            
+stormagnet     Guest Room                    24 days                           
+
+Total: 4 people, 1 of whom has been active recently.
+You page stormagnet, "join us....be one of us...."
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   being 32              
+Binder         South Third Floor Hallway     4 hours                           
+Devil          South Third Floor Hallway     a day                             
+stormagnet     Guest Room                    30 days                           
+
+Total: 4 people, 1 of whom has been active recently.
+< GhostOfTheManor has connected.  Total: 5 >
+< GhostOfTheManor has disconnected.  Total: 4 >
+Binder shivers.
+Crag heh
+Crag says, "Was triggering the ssh un-blocking script"
+Crag says, "Though successful login via a cleartext protocol is probably not a good reason to open up a port to that IP"
+Crag says, "I should probably just run ssh on a non-standard port"
+Crag says, "or possibly a sherry"
+Crag says, "In-person interview with Amazon tomorrow"
+Crag says, "And I'm meeting a recruiter for InfoSpace tonight at 5:30"
+Crag says, "the Linux sysadmin market has seriously picked up"
+Binder high5s Crag.
+Devil [to Crag]: awesomeclese!
+Crag says, "Thank you both"
+Crag says, "I'm all a twitter"
+Devil says, "That is all very exciting! escape is possible!"
+Binder quietly goes augh.
+Binder just did three consecutive virus scans on a laptop.
+Binder says, "When it finally came up clean, I turned it back over to the guy."
+Binder says, "Now ... I'm beginning to wonder if it was really clean."
+Binder says, "Because I'm suspicious of the pattern of found something - found something - found nothing."
+Crag [to Binder]: That is suspicious.
+Crag says, "You need a boot CD for virus scanning"
+Crag says, "Wait, you're supporting Windows again?  Is this a non-work computer, or are they Making It Worth Your While?"
+Crag . o O ( actual waiting not necessary )
+Binder sighs.
+Binder says, "My boss started this project."
+Binder says, "He normally does all of the Windows stuff and is bringing on a guy for ten hours a week to do helpdesk stuff."
+Binder says, "But the new guy hasn't started."
+Crag says, "oh, ok"
+Binder says, "And my boss needed to leave to go to his apartment."
+Binder says, "To, uh, 'let his cleaners in'."
+Crag says, "if you know what I mean"
+Binder says, "He does this about once a week and I still think it's a nooner or something."
+Crag grins.
+Binder says, "Because the time and day seems to vary quite a bit."
+Crag says, "'cleaners'.  Getting his pipe cleaned.  Makes sense."
+Binder says, "so anyway, he started this virus scan thing, asked me to take care of it."
+Crag says, "And the rest is misery"
+Crag says, "Er, history"
+Binder says, "He started to ask me to set up a new laptop for this guy to just swap with him if the virus scan didn't succeed."
+Binder says, "But then he remembered that was a good way to get me to quit and stopped himself."
+Crag groans
+Crag says, "good"
+Binder says, "And said he'd take care of it when he got back from his apartment."
+Crag says, "So the job hasn't completely fallen into the black hole of suck"
+Binder says, "So I made a lackluster attempt at supporting Windows by running two virus scans, uninstalling and reinstalling Norton AntiVirus [because it somehow thought it had become ... unlicensed due to malware] and scanned again, shrugged, calls it good."
+Binder says, "Yeah, the job is still extremely awesome."
+Crag says, "It's just experiencing a little warping of time and space"
+Binder says, "I'm a little tired at present as I had to work Sat & Sun for an office move."
+Crag says, "goodness"
+Binder says, "but on the plus side, I'm out tomorrow as comp time and another day of my choice."
+Crag says, "excellent"
+Binder says, "With the constraint that it should be no sooner than the second Friday from now because my boss needs to take his comp time plus vacation time to go back to Italy."
+Binder says, "But I trust that I'll get to take it."
+Crag nods.
+Binder says, "Unlike some companies, this place still does right by the employees."
+Crag says, "That's what it sounds like"
+Binder says, "e.g., the fridge is currently BUSTINGLY full of company beer."
+Binder says, "People are encouraged to drink it towards the end of the day."
+Crag says, "And that was why I was surprised to hear you were doing any virus stuff"
+Binder says, "Yeah."
+Binder says, "It was a fluke."
+Binder won't let it happen again.
+Crag grins.
+Crag says, "I'm glad to hear the job is still basically awesome."
+Binder nodnodnods.
+Crag says, "I think this year I'm probably going to be in a similiar situation one way or another"
+Crag says, "I'm going to line up multiple acceptable offers and then start making some crazy demands"
+Crag says, "Put myself in one of those win-win-win-win...-win situations"
+Crag says, "And then invest heavily for the innevitable tech market winter"
+Binder hehs.
+Crag . o O ( so... cold... )
+Binder says, "Time to start salting meat!"
+Crag says, "woah, is that another euphamism?"
+Crag says, "If so, it sounds bad"
+Crag says, "Which reminds me"
+Crag says, "Raine and I went to San Diego this weekend for Cecilia and Jamin's wedding, and the exit for C&J's neighborhood is 'Barham Road' or something"
+Crag says, "And we decided that's gotta be a euphamism"
+Binder hehs.
+Binder says, "Katie, Bar the Ham!"
+Crag says, "She thought he was kinda hot until she saw his barham"
+Binder says, "MC Paul Barham."
+Crag laughs
+Crag says, "ANd on girls it's a good thing: "Woah, check out the barham on that chick!""
+Crag says, "I should probably post somewhere on Junk and let Busta have his way with the word."
+Binder thinks on girls it would be plural.  "Nice Barhams!"
+Crag says, "I thought so at first, but tits and buns already have so many euphamisms"
+Crag says, "They really don't need anymore"
+Crag says, "SO I figured 'barham' could be what girls bring to bars to offer to the carnivors"
+Crag says, "And when a guy has barham, that interferes with the process"
+Crag says, "But as far as I know, I've never successfully started a joke like that"
+Crag says, "So what do I know"
+Binder says, "..."
+Binder says, "Actually, let me spell that out."
+Binder says, "Dot dot dot"
+Binder says, "Barham.  Hmm."
+Binder says, "Meat market.  Hmm."
+Crag nodsnods.
+Binder says, "Hmm."
+Crag says, "It would be funny for me to switch from 'The Company Once Known as InfoSeek' to 'The Company Currently Known as InfoSpace'"
+Crag says, "funny to me, at least"
+Devil [to Crag]: oh! you're funny!
+Devil [to Crag]: OH! you're funny!
+Binder [to Crag]: No menu item `space` in node `(dir)Top`.
+Binder [to Crag]: No menu item `seek` in node `(dir)Top`.
+Devil [to Crag]: oh! YOU'RE funny!
+Devil [to Crag]: oh! you're FUNNY!
+Binder shakes Devil.
+Crag blinks at Devil.
+Binder suspects Devil of caffeination.
+Crag idles: meeting with recruiter!
+[Idling at 5:03 P.M. on Wed, Apr 26: meeting with recruiter!]
+Crag returns VICTORIUS
+Crag says, "details to follow after I send an email"
+Crag says, "So the position InfoSpace's recruiter is courting me for is a sysadmin/release management position.  I'd be working with customers, internal and external, writing documentation, doing Linux system administration (they're trying to get away from Windows), and automating and managing their release management/change management infrastructure"
+Crag says, "They're just now getting into ITIL, so I got bonus points in that department"
+Crag says, "The recruiter gave me the impression that the $90k I'm asking for would not only be realistic, but possibly a little low.  That is, he asked how high Disney might counter-offer."
+Crag says, "at which I was unable to contain my mirth"
+Crag says, "But he also knows I have an Amazon interview and he virtually begged me not to make any committment to them without talking to him first. :)"
+Crag says, "So that's the details for now.  More news as matters develop."
+Binder high5s.
+Binder [to Crag]: Right arm.
+Crag high5s. :)
+Crag says, "And now... I'm off!  To the in-person Amazon interview."
+Crag idles: The Amazon: river of perl and linux?
+[Idling at 9:00 A.M. on Thu, Apr 27: The Amazon: river of perl and linux?]
+Binder says, "Yay."
+Crag says, "Interview went well, I think."
+Crag says, "I didn't do well on the data structures and algorithems, but I have been clear this whole time that that's where I'm weak and that it's one of my reasons for applying for the job"
+Crag says, "But if they don't make me an offer for this job Monday I suspect they will find a Linux sysadmin job for me"
+Crag says, "They're using Xen!"
+Crag says, "hee hee"
+Crag idles: stormie time
+[Idling at 6:45 P.M. on Thu, Apr 27: stormie time]
+Binder ee
+Binder says, "XEN XEN XEN."
+Crag . o O ( that's what I'm talkin' about! )
+Binder says, "Xen."
+Crag says, "exactly"
+Binder says, "Xen should be in Edgy Eft."
+Binder says, "Among other things."
+Crag says, "Edgy Eft?"
+Crag says, "What's that?"
+Binder says, "Ubuntu's N + 1 release."
+Crag says, "Oh"
+Binder says, "Ubuntu N is Dapper Drake, out 6/1."
+Crag says, "Xen is in Etch now, I think, so that makes sense"
+Crag says, "Ubuntu is downstream from Debian, isn't it?"
+Binder says, "Dapper will have three YEARS of security support."
+Binder says, "Yes and now."
+Crag says, "sweet"
+Binder s/now/no/
+Crag says, "ah"
+Crag heh
+Crag says, "sidestream, maybe?"
+Binder says, "Ubuntu generally forks out of testing or has up until now."
+Binder says, "Then they have spent six months tidying."
+Binder says, "Trying to get some of their patches upstream to Debian or upstream past Debian to Debian's sources."
+Binder says, "Etc."
+Crag nods.
+Binder says, "But with Edgy, they are going off the reservation."
+Crag says, "I should really give ubunto and knoppix a try"
+Crag says, "A coup!"
+Binder says, "The Ubuntu devs are going to grab every crazy thing under the sun and throw it in there."
+Binder says, "It's a developer driven release."
+Crag says, "That could be good or bad"
+Binder says, "Since Dapper will be the enterprise-ready spit-and-polish good-for-three-years release."
+Binder says, "So even if it's a huge explosive radioactive turd, Edgy + 1 will be more like Dapper and release while Dapper is only 1/3 of the way towards EOL."
+Crag says, "enterprise-ready..."
+Binder says, "Dapper is targeting the multiple production server too few admins scenario."
+Crag says, "Ah"
+Binder says, "So low-attendance install, proper 'server' task package set."
+Crag says, "no X11 in the base install, perhaps?"
+Binder trusts this means the server install will finally have openssh-server as an essential...
+Crag says, "Good lord, I should hope so"
+Binder says, "xclients, though."
+Crag says, "bah"
+Crag says, "I gotcher xclient right here"
+Binder says, "Because ssh -X needs it."
+Binder shrugs.
+Crag says, "gimme a socket to connect to"
+Crag says, "Oh right"
+Binder gotcher socket right ... wait.
+Crag says, "ew"
+Crag heh
+Binder says, "There are some pieces of stuff in X11 which even nonGUI servers need."
+Crag says, "yeah, I've heard that"
+Binder says, "But mostly because X includes stuff other than GUI."
+Crag says, "imagelib stuff"
+Binder says, "Some [pretty nice, actually] rpc stuff."
+Binder says, "Some rendering pieces, yes."
+Crag says, "oh yeah, that too"
+Crag says, "I guess all that's OK"
+Binder got no beef with X11.
+Binder will probably even like it more in xorg 7.0 when it goes Properly Modular.
+Crag says, "As long the default install doesn't assume a GUI console I'm content"
+Binder says, "FINALLY I can pick and choose the stuff I want at -build- time."
+Crag says, "I don't mind X11 itself, just 'base' installs which try to setup desktop software"
+Crag nods.
+Binder says, "Default install for Dapper is probably still curses or possibly try-fbdev-fallback-curses."
+Crag says, "Fbdev+curses is OK with me, I think"
+Binder says, "Ubuntu default install up until now has aimed at desktop users."
+Crag says, "ah"
+Binder says, "So GNOMEish plus many widgets."
+Crag says, "so another case of me not being the target audience :)"
+Binder says, "In Breezy, the last release, it gained a 'server' install profile."
+Binder says, "Which was just about right other than lacking screen and openssh-server."
+Crag says, "As soon as I get Xen setup I'm totally going to check out Ubuntu"
+Binder says, "Keep checking on vmware, pretty soon they'll be paying YOU to use it."
+Crag . o O ( here's your server, it's all setup.  It's also so secure that you can't even get into it. )
+Crag heh
+Binder says, "As I had expected, MSFT announced their virtualization solution is now going to be 'free'."
+Crag says, "I'm kinda avoiding VMware on the grounds that Xen has always been free"
+Binder distinctly heard a hundred vmware employees shit their pants that day.
+Crag laughs
+Crag says, "Of course MSFT's virtualization is free, but I bet you have to pay per-instance for OS licenses"
+Binder says, "The irony of vmware, the company [among others] is that they use Linux EXTENSIVELY internally for every step of their product dev, test and build setup."
+Binder says, "But they continue to do stupid kernel tainting binary module tricks."
+Crag says, "Bastards!"
+Binder says, "To brute force support for Windows DLLs into the Linux kernel."
+Crag says, "All the more reason not to bother with VMware"
+Binder says, "They're dumb jerks who shit where they eat."
+Binder says, "Yeah."
+Crag says, "Reminds me of ColdFusion"
+Binder only bothered with them because he REQUIRES a solution which lets him run actual Windows for his job.
+Binder says, "So it was that or dual boot."
+Crag says, "ah, that's a good reason"
+Binder says, "And dual booting is for chumps."
+Crag says, "yeah"
+Binder . o O ( which is why my powerbook will soon triple boot )
+Crag says, "coLinux has been working pretty well for me"
+Binder nods.
+Binder saw you say something about that previously.
+Crag says, "I'm quite fond of it"
+Binder read stuff today about Vista making it 'difficult' to dual boot or do coLinuxy things.
+Binder says, "MSFT hates when you even LOOK at other girls."
+Crag says, "all the more reason for me to find a company to work for which does not require me to touch windows"
+Crag heh
+Binder says, "Si."
+Crag says, "I have a good feeling about my prospects on that front"
+Crag says, "I have a good feeling about this whole year"
+Binder says, "Hooray."
+Crag says, "The band is going well, I'm feeling good, the career is improving"
+Binder says, "2006: the Year Crag Achieves Total Overwhelming Victory."
+Crag says, "TOTAL VICTORY SHALL BE MINE"
+Binder says, "... and is then crushed by a blackspookymonolith."
+Crag says, "that would be OK"
+Crag says, "I'd still have won"
+Binder says, "So Dapper releases 6/1, a six week delay."
+Crag says, "six week delay from what?"
+Crag says, "From now you mean?"
+Crag looks at a calendar or something
+Binder says, "Ubuntu differs from Debian in release schedule."
+Binder says, "Ubuntu releases [nominally] on a fixed six month cycle."
+Crag says, "Debian has a release schedule?"
+Binder says, "Sure.  'When It's Ready'."
+Crag says, "ah yes, the iD Software schedule"
+Crag says, "I wonder what Carmack has been up to these days"
+Crag says, "besides rolling around naked in huge piles of money"
+Crag says, "and firing things into space"
+Binder says, "So normally Ubuntu releases and then immediately takes a snapshot of then-current Debian Testing and starts whipping it into shape and six months later, releases it."
+Crag says, "I guess I don't wonder afterall"
+Crag says, "Ahhh"
+Crag says, "Is that an explicit policy, or just their habit?"
+Binder says, "Looks like he's been blogging."
+Binder says, "And focusing on Armadillo Aerospace."
+Binder says, "That's their explicit policy."
+Binder says, "They guarantee a release every six months."
+Binder says, "But this time they delayed by six weeks."
+Crag says, "That puts them in a position to 'compete' with fedora"
+Crag says, "Is that intentional?"
+Binder says, "They had some kind of architecture turmoil."
+Crag says, "Drama!"
+Crag cues the dramatic music.
+Binder suspects it was a cascade from the amd64 transition in Debian unstable.
+Binder says, "Plus xorg."
+Binder says, "Dapper should include xorg-6.9 and -7.0."
+Crag salivates at the mention of amd64
+Binder says, "Which is nice because I REQUIRE accelerated graphic support for this stupid i915GM."
+Crag nods.
+Crag says, "I've heard many interesting things about X11R7"
+Binder says, "It will also be nice to finally get a gaim-otr plugin which supports protocol 2."
+Binder says, "So my boss will stop laughing at me."
+Crag grins.
+Binder says, "Or at least stop crashing my IM client by sending me crap."
+Crag laughs.
+Binder just hopes xorg7 [in addition to the aforementioned i915gm stuff] will make xinerama less sucky.
+Crag says, "oh, someone told me something about that..."
+Crag says, "I wonder if I can remember what they told me..."
+Crag ...
+Crag says, "it's not coming"
+Crag says, "oh well"
+Crag says, "damn, carmack's blog is giving me an itch to try to either program my phone or get a new phone I can program and program that."
+Crag says, "DAMN YOU, JOHN!"
+Crag [to Binder]: Any thoughts on Debian From Scratch?
+Binder says, "It's Debian for people who thought that the problem with Gentoo was that it was updating too quickly."
+Crag snickers.
+Crag says, "The note in one of the last two debian weekly newses was what got me asking about it"
+Crag says, "The concept of a DFS boot/rescue CD intrigues me"
+Crag says, "But it's pretty far down on my list of things to invest energy in"
+Crag says, "I'd still like to get involved in the PRJware stuff"
+Crag says, "I think you may be responsible for more than half of the technical interests I have which I don't pursue."
+Crag says, "In the sense that you got me interested in them or whatever"
+Binder muahs.
+Binder <- bad influence
+Crag says, "Bad?  Or ... GOOD?!"
+Crag heh
+Binder says, "Worse?  Or ... BETTER?"
+Binder hm.
+Crag says, "Anyway, you've sold me on the need for me to check out Ubuntu more closely."
+Binder says, "Well, for anything I would be likely to use DFS ... I use either sysrescuecd or ubuntu."
+Crag says, "or at all"
+Crag nods.
+Crag says, "I haven't checked out any of them, so it's all the same to me, which is why I asked"
+Binder strongly recommends that Crag bt the Ubuntu Live CD for <architecture of choice> for the <current release>.
+Binder says, "And that advice is so good it's forward compatible."
+Crag laughs
+Crag says, "That's fabulous advice"
+Binder says, "If you don't get to it until mid-June, hey, that's Dapper."
+Binder says, "If you get to it tomorrow, it's Breezy Badger."
+Binder says, "If you can't spare an i386 machine, try it on an AMD64 box."
+Crag says, "I probably won't get to it before Dapper"
+Binder says, "And by using the Live CD you can even do it on a hd-less box."
+Binder says, "Or on a box where you want it to go back to being a Debian or whatever box after you take it for a spin."
+Crag says, "Wrack and Raine's old workstation are both AMD64, and I'm dying to take advantage of flat address space and wider data paths"
+Binder . o O ( if i know what you mean )
+Crag laugs
+Crag laughs, even
+Binder won't tell Raine you implied her box has a flat address space.
+Crag ..
+Binder ^^
+Crag says, "that's nice"
+Crag grins.
+Binder . o O ( dot org )
+Binder says, "But if what you are looking for is a toolkit image."
+Crag says, "One of the amazon guys complemented me on my robert@defore.st address"
+Binder says, "For salvaging boxes and doing tricky work without pain, bt the sysrescuecd image for <architectures you are likely to support>."
+Crag says, "hm"
+Binder says, "That CD is FULL of little gems."
+Crag says, "I have no idea what I want right now"
+Crag says, "Except maybe a more coherent and sensible backup strategy"
+Binder says, "You want six Mac Minis packed with RAM so that your home server room looks like a discoteque."
+Binder says, "OKTMNBT."
+Crag says, "On the other hand, it might be true"
+Binder says, "Have you looked at amanda?"
+Crag says, "Not recently"
+Binder bought a dedicated server for amanda server.
+Binder is stalled on the setup, though.
+Crag says, "heh"
+Crag says, "That's backups for you"
+Binder must rework his network topology so that the amanda-server and amanda-clients can, like, SEE each other.
+Crag says, "I've got this SPARC box... sitting here..."
+Binder hates his WAP.
+Binder says, "I swear it would be done already if I had no job and no wife."
+Binder grins.
+Crag says, "Our WAP has been flakey lately"
+Binder says, "It'll have to come out!"
+Crag says, "like a rotten tooth"
+Binder is the WAAAAP SPECIAAAALIST.
+Binder will probably replace his wap with commodity x86 hardware with a pair of gig nics and a pci 802.11g card.
+Binder says, "When I bought it, I needed a way to get us on to the net from laptops and there was a strong pressure against pulling cable throughout the apartment."
+Crag nods.
+Binder says, "Therefore, quick and cheap wireless."
+Binder says, "Which turned out to be ... kind of slow and ... crappy."
+Binder hatessssss it.
+Crag says, "There are a lot of crappy WAPs on the market"
+Binder says, "Almost universally."
+Crag says, "I like your plan to build your own"
+Binder isn't really interested in frittering time away on the various linux flashable wap appliances or embedded systems [soekris, nslus2, blah].
+Crag nods.
+Binder says, "So I am positive that I could buy almost any modern system with onboard gig and put in pci gig and pci wifi and call it done."
+Crag . o O ( I could totally throw a wireless card in bouncer... )
+Binder says, "Er, with, like, a -real- operating system."
+Crag . o O ( badda bing' )
+Crag . o O ( s/'// )
+Binder says, "Yeah, and the price on that is trivial."
+Crag looks up 802.11g cards...
+Crag says, "Are there favored Linux-friendly cards?"
+Binder says, "Yeah."
+Binder digs for a url.
+Crag says, "excellent"
+Crag says, "You're way better than google"
+Crag says, "You can put that on your resume if you want"
+Crag | "Way better than google" -- Robert de Forest
+Binder says, "http://www.seattlewireless.net/index.cgi/HardwareComparison"
+Crag says, "awesome"
+Binder says, "Yeah, but anyone with whom your name pulls weight would already hire me."
+Crag grins.
+Crag says, "Heard on the radio that Segate's about to start selling 750g drives"
+Binder says, "Another reasonably good hardware compat list here:  http://awlp.sourceforge.net/hardwarecompatibility.html"
+Binder will probably hold off on buying one for two years or so.
+Binder says, "When they become affordable and gain a MTBF of > 1 year."
+Crag says, "yeah"
+Binder says, "Fucking Seagate."
+Binder says, "Actually, fucking EVERYBODY."
+Crag heh
+Crag says, "I'll drink to that"
+Crag says, "Ooo, I could actually drink when I type that..."
+Crag says, "ONly two days of vacation left!"
+Binder says, "Oo!"
+Binder is reminded he should, like, sleep.
+Crag heh
+Crag says, "I SLEEP NOW"
+Binder took comp time today from last weekend's move.
+Crag says, "good call"
+Binder goes to zzz.
+Crag says, "SLeep well"
+Binder says, "I [yes, in fact] SLEEP NOW."
+Crag says, "we'll pick this up tomorrow or something :)"
+Crag grins
+Crag . o O ( I also wonder )
+Binder wakes.
+Crag says, "Likewise, I'm sure"
+Crag says, "I'm rebuilding the host formerly known as 'navi' today"
+Crag says, "Though the weather is looking awesome, so I will probably ride a bit"
+Crag says, "Too bad I don't already have FAI setup and yadda yadda"
+Crag says, "And, yes, I am taking a look at Ubuntu"
+Crag says, "My only requirements at this point are amd64, Xen 3.0 and evms"
+Binder says, "You can get the first and third with ubuntu today."
+Binder says, "You should be able to get Xen with ubuntu in jan 2007."
+Binder says, "And the upgrade path with Ubuntu from release to release [or even from Debian to Ubuntu] is as smooth as you'd expect."
+Binder says, "You just repoint your sources.list and BRAAAP, Bob's Your Ungent."
+Crag mmm, ungent
+Crag says, "Xen 3.0 is in debian unstable now"
+Crag says, "Or I could build it from source"
+Crag says, "Not My Idea Of A Good Time (Anymore)"
+Crag says, "But probably less surprising than unstable"
+Crag says, "hm"
+Crag says, "though maybe I'm being silly thinking I need Xen at all"
+Binder shrugs.
+Crag heh
+Binder says, "It depends upon why you think you need it."
+Crag says, "I'm not known for knowing what I want"
+Binder grins.
+Crag says, "I think I need it to simplify my administration"
+Crag says, "long term"
+Binder hms.
+Binder says, "Xen would complicate my administration in the near and mid term."
+Crag says, "extra work up front, but later can migrate images between hosts and such"
+Binder is not willing to trade peace now for future peace on this.
+Binder would rather get something like FAI going for image floating.
+Crag says, "I'm also interested in the security benefits"
+Binder says, "Or systemimager."
+Crag says, "The complete jail thing"
+Binder says, "Because I'm planning to deploy something like that at work."
+Binder ehns.
+Crag says, "I want FAI too"
+Binder strongly suspects complete jail will require special hardware support.
+Binder says, "Meaning, initially, Windows-only."
+Crag says, "Ok, not _complete_..."
+Crag says, "But from an admin perspective, host-level isolation"
+Crag says, "It may be possible to comprimise the Xen interface"
+Crag says, "But I'm not worried about anyone trying to do that to me"
+Crag says, "And I don't think we'll be seeing Xen-aware worms for a while"
+Crag says, "ANd by then I can afford the latest CPU with full virtualization support"
+Crag says, "Heck, by then maybe I can afford multiple servers :)"
+Crag says, "alright, I'm going to grab an ubuntu image, install that, and by the time I'm done with that I'll have a better idea of what I REALLY want to do."
+Crag says, "I wish I had local friends I could geek out about this stuff with.  Or rather, I wish I lived local to you and Devon."
+Crag browses bay area jobs...
+Binder says, "Oh, did you know there are vmware-aware pieces of malware out there, now?"
+Crag says, "I did not"
+Crag says, "But I'm not as surprised as I thought I would be"
+Binder says, "Not many but it's out there and things like that never really go away."
+Crag says, "yeah"
+Binder says, "It's to thwart malware investigators who use vmware to sandbox the malware, obviously."
+Binder says, "Because a vmware emulated 'OS' has many many tells from a 'real' OS."
+Crag says, "As would a Xen guest"
+Binder says, "Luckily, investigators have noticed that some malware is vmware-aware and have created alternate solutions [qv TRUMAN] and if a lot of malware becomes vmware-aware, one semi-clever defense is altered your OS to look like vmware...  :)"
+Crag says, "I suppose I should be looking at the BSDs if I'm really going to take my network seriously"
+Crag says, "heh, arms race"
+Binder says, "Yeah."
+Crag says, "Do any of the BSDs have 'looks like a whole machine' jailing?"
+Binder says, "No, they're going another direction."
+Binder says, "systrace."
+Crag says, "Is that more like the seLinux approach?"
+Binder says, "They've got a tool to monitor application behavior, define a set of allowed calls, editable."
+Binder says, "Then you can use it to build a chroot space for it."
+Crag says, "ah yes, we talked about that a few weeks ago"
+Crag says, "hm"
+Binder says, "Which ONLY has the library functions it needs."
+Binder says, "Indeed."
+Crag says, "That sounds a lot more efficient than virtualization"
+Crag says, "But it sounds like more work to me, too"
+Crag says, "I like the apparent simplicity of virtualization"
+Binder says, "It would be if the oBSD guys weren't insane."
+Binder says, "so they're doing the profiling for you."
+Crag says, "Hm"
+Crag says, "That is somewhat insane"
+Binder says, "Yes."
+Crag says, "insanely great"
+Binder says, "But it covers 80% of the userbase."
+Crag says, "I also like the possibility of vm migration"
+Crag says, "And I like the idea of working on that cluster idea you and I talked about at DIG"
+Binder says, "Everybody runs qmail/postfix, so they systraced that and publish the profile."
+Binder says, "Yeah, I haven't forgotten that ha everyman cluster."
+Crag says, "Heh, they're treating it like ports then :)"
+Binder says, "It's still bubbling on my maybe/someday."
+Binder says, "Exactly."
+Crag says, "It bubbles for me as well"
+Binder says, "oBSD is a monolithic-install + ports so any dynamic parts will be off in the portsish mindset."
+Binder says, "And, hey, oBSD has Linux emulation.  :)"
+Binder says, "So if you miss any Linux-specific things, you can still do them on any BSD."
+Binder shouldn't have implied only oBSD has it.
+Binder says, "FreeBSD and NetBSD and Dragonfly BSD also have that layer."
+Binder is sticking with Debian on existing servers at home and Ubuntu on new servers at home for now.
+Crag says, "I doubt I need linux emulation"
+Binder will want to learn BSD a whole lot better before he sets it up someplace he doesn't touch it every day.
+Binder says, "But openBSD is a strong contender for my Next Favorite OS."
+Crag says, "Learning it is part of the point in this case"
+Crag says, "'it' being whatever I do install"
+Binder says, "One HUGE pull for oBSD is hardware support."
+Crag says, "amd64?"
+Binder says, "Not that it has more than Linux [it doesn't] but that there are no surprises."
+Binder says, "http://www.openbsd.org/amd64.html"
+Crag says, "excellent"
+Binder says, "That is, you can go to one place [the openbsd site] and determine EXACTLY which pieces of hardware are supported."
+Crag says, "well, maybe I should go the oBSD route then"
+Binder says, "Because they ONLY support stuff they get specs for."
+Binder says, "So if you go to openbsd.org and look around for supported RAID controllers, there's no half-way."
+Binder says, "Any card there is TOTALLY supported, anything not there, not at all."
+Crag says, "oBSD, last bastion of frothing-at-the-mouth"
+Binder hehs.
+Binder says, "Maybe not LAST but their froth is truly immense."
+Binder says, "They hate most of the things you hate."
+Binder says, "Oh, this might amuse you."
+Crag says, "I'm glad someone has the energy and strength of conviction to hold to their ideals"
+Binder says, "You know how 'everyone' [he said sloppily] hates CVS?"
+Crag nods.
+Binder says, "And lots of people talked for years about 'fixing' or 'replacing' it?"
+Crag says, "sure"
+Binder says, "The openBSD people are rewriting it from scratch.  http://72.14.203.104/search?q=cache:6Rm_P3bsksoJ:www.opencvs.org/+opencvs&hl=en&gl=us&ct=clnk&cd=1&client=firefox"
+Binder points at the cache since the actual site has been down for a week now.
+Crag peers
+Crag . o O ( MOO or tf should handle long URLs better )
+Crag says, "AM I reading this correctly: they're re-implementing CVS from scratch without fixing any of it's outdatedness?"
+Binder should handle long URLs better.
+Binder says, "Yes and no."
+Crag says, "I think this core has a way of passing URLs around smartly, but I don't know how to take advantage of it"
+Binder says, "My understanding is that they're going to remove features if they can't be securely implemented."
+Crag says, "that figures"
+Binder says, "But complete reimplementation only sharing command names, yes."
+Binder says, "Like they did with openssh."
+Crag says, "I'll see if I can get to the project goals cached page :)"
+Crag says, "Hm"
+Binder says, "Oh, another oBSD thing."
+Binder says, "Their release schedule."
+Binder says, "It has the same interval as Ubuntu.  :)"
+Binder says, "Though, obviously, different dates."
+Binder says, "So twice a year, updated oBSD release."
+Binder says, "And for the insane [qv, MY BOSS] they also have a -current CVS tree you can follow along."
+Crag says, "heh"
+Binder says, "So you can break your system daily if you miss that from Debian unstable."
+Crag says, "that's nice"
+Crag says, "I did derive a certain pleasure from tracking unstable back in the 90s"
+Binder nods.
+Binder says, "It's less fun to track Ubuntu unstable."
+Crag says, "Lately DIG and Raine soak up the energy I would have spent ont hat"
+Binder says, "Because they are not interested in bugs about unstable.  They already know about them."
+Binder hms at openbsd.org/amd64.html.
+Crag | It also runs on the Intel ia32e processors ...
+Binder says, "See, this page would TOTALLY answer questions about what-wireless-adapters are supported by the OS."
+Crag . o O ( so maybe 'amd64' isn't the best name for it... )
+Crag says, "that is a nice page"
+Crag says, "I would like for mainline Linux kernel development to take a hardline 'no specless hardware' stance like oBSD"
+Binder says, "Won't happen."
+Binder guarantees that.
+Crag says, "I know"
+Crag says, "It's just a fantasy"
+Binder says, "Linus is an opportunist."
+Crag says, "And it pays"
+Binder says, "Yes."
+Crag says, "He has done an excellent job of being Linus"
+Binder says, "It's yielding huge dividends in market gain."
+Crag says, "For his goals, he is winning, which is cool"
+Crag says, "yeah"
+Binder says, "But it means that there's a lot of semi-supported semi-broken shit."
+Crag says, "which is why I have the fantasy"
+Binder says, "Which can be a drag for some end users."
+Crag nods.
+Crag says, "And I suspect it wastes kernel dev cycles"
+Binder says, "And it explains in part why some BSD devs hate Linux devs."
+Crag says, "yeah"
+Crag says, "I can understand a lot of that"
+Binder says, "Because some Linux devs will sign NDAs and then HONOR THEM."
+Binder says, "so Linux gets binary blob drivers BSD can't."
+Crag nods.
+Crag peers at wrack suspiciously...
+Crag says, "oh right, my backup process"
+Crag heh
+Crag says, "not exactly pr0nlag"
+Binder says, "Heh."
+Crag says, "going to oBSD will be a lot of re-training for me"
+Crag says, "silly things like terminology"
+Crag says, "Maybe I should put it off until after I've re-built the server the first time."
+Binder says, "Yeah."
+Binder would not advise jumping on oBSD today.
+Crag says, "alright"
+Crag says, "I'll start with ubuntu"
+Binder says, "Get your stuff in shape now and look at oBSD for the next [re]build."
+Crag nods.
+Crag says, "If the initial ubuntu setup is sufficiently impressive or painless, I'll ponder building xen 3.0 or using user mode linux"
+Binder nods.
+Binder says, "You should find it pretty darned easy."
+Crag says, "I expect so"
+Crag says, "I'm going to play with the latest debian netinst image while I wait for the ubuntu download"
+Binder nods.
+Crag says, "If I don't switch jobs soon I'm going to do the vmware multi-OS thing on my work machines"
+Binder nods.
+Crag says, "My frustration is right up against my threshold of lazyness"
+Crag says, "You asked me earlier to ask amazon about their production environment, but I was so overwhelmed yesterday that I didn't do a good job of interrogating them"
+Crag says, "But I did find out that the only major third-party software they use is Oracle"
+Crag says, "And that the bulk of their code is C++ or Java, with Perl in third place"
+Crag says, "I also found out they have an internally developed datacenter management application"
+Crag says, "And that they use Xen (as I mentioned yesterday)"
+Crag says, "What are your latest thoughts on filesystems?  ext3 unless an application demands otherwise?"
+Binder says, "Yes."
+Binder hasn't yet seen anything he likes more than ext3 for normal sized files.
+Binder likes XFS for enormous files [ie, hdtv shows]
+Binder says, "Or FLAC rips of albums."
+Crag says, "reiserfs appealed to me in theory, but lately I don't care enough to bother"
+Crag says, "idling a bit to drive Raine to school"
+Binder says, "Yeah, I took a look at reiser4 and read some threads where Hans Reiser pissed off Linus and realized that reiser3 was so much weaker than reiser4 and that reiser4 won't be part of kernel mainline for years, if then."
+Binder says, "I don't use a distro which integrates it [SuSE] so ctrl-alt-fuckit."
+Binder idles: LUNCH NOW
+Crag returns.
+Crag says, "I went through the same thought process wrt reiser4"
+Binder nods.
+Binder says, "It was a bit like my LKCM thought process."
+Binder thought, "Oh this is neat".
+Binder then thought, "Oh, he's an ass."
+Binder then thought, "So it'll never get adopted."
+Binder finally thought, "OK, forget that."
+Crag says, "yup"
+Crag blinks
+Crag says, "It seems Ubuntu (5.10) doesn't include perl in the server install"
+Crag says, "I'm not sure whether to be impressed with their aggressive trimming or disappointed in their priorities."
+Binder doesn't believe that that's true.
+Crag says, "Hm"
+Crag says, "I could be mistaken"
+Crag says, "AH"
+Crag says, "perl-base is installed"
+Binder says, "It probably doesn't install perl-doc."
+Crag says, "but build-essential is depending on 'perl', which is ... different"
+Binder says, "But perl, itself, I would expect."
+Crag says, "yeah"
+Binder has another crazy idea for dpkg based distros to have something called perl-package which does for cpan modules what make-kpkg does for kernel source tarballs.
+Crag says, "that would be sweet"
+Binder says, "Since the java-package thingie exists for jdks."
+Crag says, "As standardized and well supported as CPAN is, something like that shouldn't be too hard"
+Binder says, "My only problem with Perl these days is that it has a packaging system which doesn't integrate well with other packaging systems."
+Crag nods.
+Crag says, "Sun released source for a Solaris port of Xen in February"
+Crag says, "somehow that seems interesting to me, but I can't think of anything interesting to say about it"
+Binder says, "Solaris is continuing their streak of making money from hardware."
+Binder says, "They're practically giving away the OS."
+Binder says, "Given the OpenSolaris stuff."
+Binder says, "Apple's been on the same path during the times when Jobs ran it."
+Binder says, "Whereas MicroSoft seems more on a path to try to get legislation passed to enforce their concept of treating data as if it had actual uniqueness and value."
+Binder says, "So the part that surprises me is that given the respective dichotomies, neither Apple nor Sun have done much to fund open source."
+Binder says, "Though IBM seems to, more or less, get it."
+Crag says, "The word from inside supports the theory that IBM gets it"
+Crag says, "I don't know what Apple and Sun are thinking."
+Binder says, "I think they think they're competing with MicroSoft."
+Binder says, "Which means they want to try to win MicroSoft's game."
+Binder says, "Which is ... how to lose MicroSoft's game."
+Binder says, "But it's easy to Monday morning backseat quarterdrive."
+Crag heh
+Crag says, "yay, I booted a Xen domain 0 under ubuntu"
+Crag says, "I did something good and smart"
+Crag says, "and now I idle to go pay a bill"
+Binder says, "de dee de DEEEE"
+Forest     --Crag
+Binder eyes Crag.
+Binder [to Crag]: http://headrush.typepad.com/creating_passionate_users/2006/03/eric_freeman_re.html
+Crag says, "Elizibeth came back too"
+Crag says, "I think"
+Crag says, "Ah, it even says so on that page, heh"
+Crag says, "I emailed Eric a week after the announcement of his return asking for help keeping the internal wiki alive, but he said he didn't think there was anything he could do."
+Binder says, "Hm."
+Binder says, "Interesting."
+Binder says, "Yeah, I guess he wouldn't have much cause to interact with Engineering if he's now over in DPRO."
+Binder keeps meaning to read the book he wrote for Head First.
+Binder says, "Because I'm sort of netcrushing on Kathy Sierra's ideals."
+Binder says, "Like a warmfuzzy I hope she's right kind of netcrush."
+Binder reads http://redeye.firstround.com/2006/04/shrink_a_market.html and goes 'hmm'.
+Crag takes a look
+Crag says, "The author has an erroneous assumption, though"
+Crag | Now if half.com didn.t exist, you can assume that the books would have been purchased through traditional channels for $30 each
+Crag says, "That's not a reasonable assumption because some of the people who paid $15 for the book might only consider the book to be worth $20 at most"
+Crag says, "AND it's even cheaper for them if half.com does re-sell the book."
+Crag says, "still, it is interesting"
+Binder says, "Yeah."
+Binder says, "The point he is making [I think] is that half.com was able to get the price point to where people would pay it AND make money AND take money away from other companies selling it."
+Crag says, "yes, that's true"
+Binder says, "His thesis being that he's most interested in disruptive technologies."
+Crag says, "I liked the encyclopedia example"
+Binder says, "Yes.  Because I'm old enough to remember a world before Encarta."
+Binder says, "And I've lived to see it go obsolete, as well."
+Crag says, "yes"
+Crag says, "And $1000 is a lot of money"
+Binder says, "That's fifty lapdances."
+Crag laughs
+Binder says, "Or two hundred lattes."
+Crag says, "That's true."
+Binder says, "The objection I have to his thesis is that I don't think it's plausible to construct, in advance, an analysis of existing markets which lets one create a disruptive technology or model."
+Binder says, "I think that he's rationalizing why half.com succeeded well after they did."
+Crag says, "yeah"
+Binder says, "I don't think he went into it thinking:  hey, if we charge half what bookstores do and get the users to -resell- it, we can still kill on this."
+Binder says, "Because the resell hook doesn't even become manifest until they have user data."
+Crag says, "On the other hand, one might find opportunities like the ones he describes by thinking in those terms."
+Crag says, "I agree with your analysis, though"
+Binder says, "Yeah.  I was thinking along those lines.  Entrenched, taken for granted static markets."
+Binder says, "Like ... commodity PC hardware."
+Binder just grabs one out of the air.
+Binder says, "You know, there are certain big players and smaller also rans and it's pretty much a known equation."
+Crag nods.
+Binder says, "A person can buy a pretty good machine for somewhere around a grand [two grand if it's got a pert little apple carved into it]."
+Binder says, "And you can even cut costs and pay less for a less polished / capable system or trade your time for cash if you have hardware skills."
+Binder says, "OK so.  Given that.  How could a company make all that ... moot?"
+Binder says, "Smart-dumb terminals which cost $20 and have always-on wireless access to big iron back ends?"
+Crag says, "hm"
+Binder says, "Infinitely upgradeable platforms where you buy your preferred pieces at $10 a piece and lego-stack them together?"
+Binder says, "Ubiquitous internet cafes by partnering with someone like Starbucks so no one 'owns' a machine anymore, they just walk into a coffee shop?"
+Binder says, "Smarterphones which run Linux?"
+Crag says, "Hm"
+Crag says, "All very interesting ideas"
+Binder says, "None of them strike me as AHAOBVIOUS choices, though."
+Crag says, "no, but they're hashed"
+Binder . o O ( mm hash )
+Crag says, "If we were to throw them around for an hour or two"
+Binder nods.
+Crag says, "maybe with some wine or something"
+Binder says, "Or maybe we'd miss the obvious-in-retrospect one until someone else got big on it."
+Crag says, "sure"
+Binder says, "Killing Dell, HP/Compaq/Intel/AMD in the process."
+Binder whoops.
+Crag heh
+Binder says, "Those last two / should be , obviously."
+Crag nods.
+Binder makes things worse by trying to clarify augh.
+Crag grins.
+Binder says, "Maybe we've got the wrong end of this stick."
+Binder says, "If the grip is 'what could be done cheaply and would get customers excited' we could see something to point it at and pull the trigger."
+Binder says, "THIS IS MY BOOOM STICK."
+Crag says, "I'd say a combination of these thought processes would yield some tasty results"
+Binder says, "or at least provide an excuse to drink."
+Binder mm drinkn
+Crag says, "always a good thing"
+Binder grins.
+Crag says, "Dropping the cost of workstations seems like a good place to start"
+Binder says, "Yeah, now that they're 'ubiquitous'."
+Crag says, "I don't think dumb terminals would catch on because people don't understand the technology enough to know what it takes to make the things secure"
+Binder says, "Within the subjset of 'people who have money to spend'."
+Crag says, "right"
+Binder completely fails to type MAN.
+Crag heh
+Binder says, "Sorry, too many carbohydrates today."
+Crag says, "No problem"
+Crag says, "I was able to boot a guest domain under xen, by the way"
+Crag says, "So that project is still underway and making progress"
+Binder says, "Riding MSFT's coattails, in effect.  One of their main motivations has been to get their grubby pseudopods into everyone's homes."
+Crag says, "yes"
+Binder says, "So they've been driving down hardware cost [directly and indirectly] and pushing uniform GUI on end users."
+Binder says, "So something which took advantage of that beachhead is halfway there."
+Binder says, "Hooray for xenproject."
+Crag says, "I see potential in disentangling people from their hardware"
+Binder says, "... kinky."
+Binder says, "Wireless interfaces?"
+Crag says, "Technology which allows people to move between hosts without thinking about it would eventually be popular"
+Binder says, "Remote interfaces?"
+Crag says, "Distributed interfaces?"
+Binder says, "Oh, like the Sun roaming profile stuff."
+Crag says, "I'm thinking of BEM, sortof"
+Binder grins.
+Crag says, "yeah, exactly"
+Crag says, "Sun's thing taken to extremes"
+Binder says, "Yes.  Further."
+Crag says, "But I don't see a way to make a product out of that"
+Binder hm.
+Binder says, "What if PDAs could be mobile ... pipes ... to a full featured workspace."
+Crag says, "If they were fast enough and reliable, yes"
+Binder says, "Like the ultrasound scanning keyboard so no real keyboard needed."
+Binder says, "some way to project a big enough screen."
+Crag says, "yeah, that would help too"
+Binder says, "Secure enough to trust it."
+Binder says, "And the same behavior where-ever you turned your 'focus'."
+Crag says, "yes"
+Binder says, "So you could treat it as an access point for your job computer, your home computer, etc."
+Binder says, "Break down the divide between computer and user."
+Crag says, "yes, that's what I was looking for"
+Crag says, "Perhaps companies could sell the connection between the PDA and the hosts"
+Crag says, "or sell virtualized host services"
+Binder nods.
+Crag says, "But that's sorta the same problem as the dumb terminals"
+Crag says, "Except people get the warm fuzzy of taking it with them"
+Binder says, "I think that perhaps the most plausible model is selling a PDA which Just Works."
+Binder says, "A device they can handle and feel solidity."
+Binder says, "And thus want to fork over money for."
+Crag says, "We're talking about two products which would work in concert"
+Binder says, "Yes."
+Binder says, "Or one vertical monopoly."
+Binder says, "From storefront / online purchase of pda up through connectivity up through service hosting up through website creation."
+Crag says, "hm"
+Binder says, "Your palmtop computer lets you instantly and painlessly start up a new company on the web and immediately begin making money."
+Binder says, "Securely, conveniently, instantly."
+Crag says, "That's an impressive sales pitch!"
+Binder says, "And the ads have hot naked people with shaved heads."
+Crag says, "you should write that down or something"
+Crag laughs
+Binder says, "When I am done being good, I plan to turn to the darkside and become a Marketeer."
+Crag says, "then you can use your powers for awesome"
+Binder says, "I can actually visualize an ad campaign."
+Binder says, "Dude A:  Hey, is that a Treo?"
+Binder says, "Dude B:  Yup, new model.  Loaded with features."
+Binder says, "Dude A:  Oh, like what?"
+Binder says, "Dude B:  I can take your picture, put it in an email, send it to my wife.  What have you got there?"
+Binder says, "Dude A:  Oh, it's a cragpad.  New company."
+Crag heh
+Binder says, "Dude B:  Can it send email?"
+Binder says, "Dude A:  Well, sure.  But mostly I use it for other stuff.  Like this <touches button> I just created a company called hotstud4less dot com and <touches button> now I've uploaded a collection of pictures of myself in more flatterig light than that one you took and <touches button> I've just gotten 1800 page views in the last ten seconds, talking to you and <touches button> oh, look, your wife likes the one where I'm not wearing pants ... oh, nice, I hope you like the poster she just bought."
+Binder says, "Dude B:  I hate you and my penis just got smaller."
+Binder says, "You get the idea."
+Crag laughs
+Crag says, "that's awesome"
+Crag idles: dinner
+[Idling at 5:59 P.M. on Sat, Apr 29: dinner]
+Binder hm.
+Binder says, "I went looking for loosely related ideas and I found a [newish] start up in Europe which is pursuing the desktop-in-a-browser-window thing."
+Binder says, "http://www.fold.com/"
+Binder says, "If nothing else, there is a cute kitty in their screenshots."
+Crag takes a look
+Crag says, "It does sound like a step in the direction we were discussing."
+Crag plays with the beta
+Crag says, "I'm impressed."
+Crag says, "It's not clear to me how to turn this thing into a product or service, but so far I like it"
+Binder says, "Yeah, it's getting a lot of buzz."
+Binder says, "It's got some modern aesthetics but it's not a new idea."
+Binder says, "It's just now more feasible to do this kind of thing."
+Binder says, "Since the supported browsers have the needed UI infrastructure."
+Binder says, "And they can find people to solve relatively tough problems."
+Crag says, "I'd be stoked if I could get it to 'integrate seemlessly' with my zaurus"
+Crag says, "Not an unrealistic hope, I'd think"
+Binder says, "No, it's probably quite plausible with a beefier zaurus or a leaner browser."
+Crag says, "Both would be of interest to me in any case"
+Binder says, "Yeah.  Better software!  Beefier hardware!"
+Binder says, "AND A PONY."
+Crag says, "A pony... with a naked chick on its back."
+Crag says, "a gymnast, perhaps"
+Binder says, "Or a lady of Godiva."
+Binder . o O ( mm chocolate truffles )
+Binder says, "It took me all day to complete my weekly review today."
+Crag says, "Perhaps a way to achieve the zaurus/fold blend would be a linux distro which consists entirely of gecko"
+Binder says, "Of course, part of that was me being a moron."
+Binder says, "Another part was that I had to skip it last weekend so I had a BIG list of things to chug through."
+Crag says, "I fell off the GTD wagon when I got sick a month or two ago"
+Binder says, "Yeah, like a kernel which is optimized for gecko and only has the pieces needed to run gecko."
+Crag says, "yeah"
+Binder says, "GTD is easy to get back into for me."
+Binder says, "I just start again at phase 1:  collection."
+Crag says, "I need to get my copy of the book back from my boss.  I'll ask her for it Monday."
+Binder says, "I still do it because it does seem to work for me."
+Binder says, "I managed to keep my projects advancing before and even during the office move."
+Binder says, "Which was a major disruption in my routines."
+Binder says, "I got little sleep, was all over the place on short notice, and worked all weekend."
+Crag says, "GTD definitely worked for me"
+Crag says, "I just need to exercise more self-discipline"
+Binder says, "It slowed me more than I would have liked but I think if I'd been more dilligent I wouldn't have even lost my stride."
+Crag nods.
+Binder says, "GTD rewards discipline."
+Binder says, "The more rigorous I am about it the bigger the rewards reaped."
+Crag says, "I can see how that would be the case"
+Binder really gets off on a long list of checked off completed next actions.
+Binder says, "Did that, did that, did that, did THAT, I am AWESOME!"
+Crag grins.
+Binder prepares to break his network.
+Binder has disconnected.
+Binder's friends arrive to cart him off to bed.
+< Binder has connected.  Total: 4 >
+Binder arrives from the Guest Room.
+Binder returns.
+Binder has disconnected.
+Binder's friends arrive to cart him off to bed.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   being 32              
+Devil          South Third Floor Hallway     4 days                            
+stormagnet     Guest Room                    39 days                           
+
+Total: 3 people, 1 of whom has been active recently.
+[doing: working?]
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   working?              
+Devil          South Third Floor Hallway     4 days                            
+stormagnet     Guest Room                    39 days                           
+
+Total: 3 people, 1 of whom has been active recently.
+< Binder has connected.  Total: 4 >
+Binder arrives from the Guest Room.
+Binder goes braaaap.
+Crag says, "Welcome back"
+Crag . o O ( twenty more minutes of crap )
+Binder emerges from the server room by way of assembling a filing cabinet for the accountant.
+Binder goes PHEW and dives right back into the server room by way of finding some decaf coffee.
+Crag says, "I have no mail from amazon.  I wonder if that means they're arguing over whose group gets me? :)"
+Binder says, "It means you should ping them again at a point which is (n+1)y from the point you last spoke to them where n is the number of time periods they told you it would be and y is the time interval units."
+Crag says, "I sent a followup email this morning."
+Binder ok.
+Crag says, "They have another position they want me in instead. :)"
+Binder ooohs.
+Crag says, "'Support Engineer', not sure if that's their version of the SOC or what"
+Crag says, "But if it gets me away from Windows and pays more than I make now, I'm stoked"
+Binder parses it as 'on-call' 'monkey' so, yeah.
+Binder says, "Plus, hey, amazon discount!"
+Crag says, "heh"
+Crag says, "And it'll be easy for me"
+Binder nods.
+Binder says, "Good luck.  Break a ... something.  Sound barrier, maybe."
+Binder says, "So what's the next step?"
+Binder says, "You go in and talk to more people about the new thing?"
+Binder says, "Or they show up with a truck full of money?"
+Binder says, "You build a tower with its heights in the heaven and you throw Sancho off of the top of it?"
+Devil says, "Cash Tower of Babel in Piza?"
+Binder mm piza.
+Binder says, "Evidently I found the magical incantation to wake the Devil after days of idle."
+Binder says, "... briefly."
+Devil says, "I peer at your talking"
+Devil says, "Most of the time I don't have anything to contribute."
+Devil says, "like now."
+Binder says, "MAN."
+Binder says, "You make it sound like I just go on and on and never say anything interesting."
+Binder . o O ( ... wait. )
+Devil says, "no, not at all. Y'all are often interesting. I just don't have anything to contribute,"
+Crag [to Binder]: you go on and on and never say anything UNinteresting
+Crag says, "Yes, the next step is for me to go in and talk with them about this other position"
+Crag says, "And I still need to interview with InfoSpace"
+Devil . o O ( SpaceInfo )
+Crag says, "InfoSpace guy called me back today to say that InfoSpace is still in the process of getting the budget for the position approved.  He didn't say whether my salary and full-time requirements were part of that."
+Binder says, "Hm."
+Binder says, "So there are two in the running, amazon & infospace?"
+Crag says, "That is correct"
+Crag says, "And if those two don't pan out I'm going to get serious about looking ni the bay area"
+Binder says, "One or both of those will."
+Binder says, "Though I bet you'd be happier if you stall amazon to see if infospace will get their shit together."
+Binder says, "The best of all possible worlds is getting to pit two potential employers against each other."
+Crag says, "yes"
+Crag says, "I fully intend to work that angle as best I can"
+Crag says, "I've already told InfoSpace that I want time to hand off my DIG projects"
+Crag says, "And I'm going to ask for the same from Amazon when I get a chance"
+Crag says, "My current job is good enough that I can afford to be very demanding."
+Crag says, "Especially now that I KNOW Amazon likes me."
+Crag says, "weekend time!"
+Crag idles: weekend!
+[Idling at 7:58 P.M. on Wed, May 3: weekend!]
+Binder dances in a slow circle.
+Binder [to Crag]: I made some config changes to qmail on wrack so it'll accept email for vylarkaftan.net as a secondary and forward it through to me under the same kind of setup manjusri.org email has there.
+Crag [to Binder]: Sounds good
+Crag [to Binder]: I'm going to be migrating Wrack from the hardware it's on to a Xen VM some night this week, but if all goes according to plan you won't be able to tell the difference.
+Crag says, "I'm pretty impressed with Xen.  It seems to be well thought out"
+Binder [to Crag]: Awesome.
+Binder notices something curious about an outlet.
+Binder says, "We've got a power outlet, with an on-off switch.  Pretty normal stuff, you've seen them before."
+Binder says, "But on this one, it appears that the flow to one of the outlets is controlled by the other outlet."
+Binder says, "So if I plug in a lamp to plug A, turn the wall switch on and lamp switch off, the fan in plug B stays inert."
+Binder says, "But if I flip wall switch on, lamp switch on, fan turns on."
+Devil has disconnected.
+Devil's friends arrive to cart him off to bed.
+< Devil has connected.  Total: 4 >
+Devil arrives from the East Third Floor Hallway.
+Binder [to Devil]: Welcome back.
+Crag [to Binder]: That could be handy, but it sounds like a wiring mistake to me.
+Crag [to Binder]: In other wrack-management news, I'm removing some packages I hope are unused in preparation for the migration later.  If it turns out I removed something you were using, feel free to re-install it and let me know you're using it so I don't do it again later.
+Binder [to Crag]: At this point, I believe that my only dependency on wrack is the system qmail configs for accepting email and my home directory .qmail-* files to deliver it back to my own domain.
+Binder [to Crag]: So get down with your bad self.
+Crag says, "I got a little too far down and uninstalled perl-suid, not realizing that some part of my mail filtering depends on it silently.  Dammit."
+Crag says, "So we're about three days behind on mail up here."
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   working?              
+Binder         South Third Floor Hallway     9 hours                           
+Devil          South Third Floor Hallway     a day                             
+stormagnet     Guest Room                    47 days                           
+
+Total: 4 people, 1 of whom has been active recently.
+Crag idles: can't MOO, clowns will eat me
+[Idling at 5:14 P.M. on Mon, May 8: can't MOO, clowns will eat me]
+Binder says, "Ooooops."
+Crag says, "We may experience some lag while a friend of mine 'steals' some music from wrack"
+Binder ok
+Crag says, "I'm sure it will be a huge intrusion into all the active discussions we have here and such"
+Binder was on the verge of going into a monologue, yo.
+Binder says, "Don't you oppress my freedom of verbose speech!"
+Crag says, "ok"
+Crag summons the groundskeeper, who drops a topic sign off.  He writes `ramble on' on a slip of paper and puts it on the sign.
+Crag grins.
+Binder grins.
+Binder idles: LUNCH NOW
+Binder [to Crag]: Oops, that didn't work.
+Binder [to Crag]: So what I'm trying to achieve is having wrack accept email for manjusri.org & vylarkaftan.net to act as a secondary mx.
+Binder [to Crag]: I thought it was set up before but now in testing I see that it's responding 'not in control/locals so I won't treat as local'
+Binder [to Crag]: Which causes an error bounce back.
+Binder [to Crag]: OK, fine.  So I added them to control/locals, test again and see now that it's accepting ... and sending to you as robert-root.
+Binder [to Crag]: So clearly I'm almost there.
+Binder [to Crag]: Everything suggested here: http://cr.yp.to/qmail/faq/incominghost.html
+Binder [to Crag]: seems to be in place.
+Crag looks at MOO
+Crag weirds
+Crag says, "I'm sure it was working before"
+Crag says, "I've seen your mail in qmail-qread"
+Crag says, "taking a look"
+Binder says, "Thank you."
+Binder says, "Sorry to be a hassle but I remember it working before, now it doesn't, and it's pertinent because for some reason some senders are choosing the higher cost MX and if it doesn't get delivered, Vy will be wroth."
+Crag says, "of course"
+Binder says, "At least now it's being accepted, it just seems to be being delivered to one of your defaults instead of mine."
+Crag says, "I don't think they're supposed to go in locals"
+Crag says, "that's only for domains not using virtualdomains, I think"
+Crag says, "as long as they're in rcpthosts and virtualdomains they should be fine"
+Binder hms.
+Crag says, "SO I just took them out"
+Binder says, "Before I put them in locals, it was responding with an error."
+Binder says, "OK."
+Binder says, "HUP qmail-send to re-read locals."
+Binder says, "What the?!"
+Binder says, "It works now."
+Crag heh
+Binder says, "just like it did before."
+Binder says, "So."
+Binder confused.
+Binder disoriented.
+Crag says, "Let's review..."
+Crag says, "The current config is the old config, right?"
+Binder is momentarily distracted by seeing hentai@stormagnet.com email flow past.
+Crag laughs
+Crag says, "you have no idea :)"
+Binder HMM.
+Binder says, "OK, I did make one salient change."
+Binder says, "I added a line to virtualdomains."
+Binder says, "Which points manjusri.org email at binder@wrack."
+Crag says, "there you go"
+Binder says, "My path to that point was:"
+Binder says, "1] got error bounces saying vylarkaftan.net was not a local for wrack."
+Binder says, "2] added vylarkaftan.net to locals, saw it accepting"
+Binder says, "3] on same faq page saw that virtualdomains should have a line for manjusri.org as well [vylarkaftan was already in there]"
+Binder says, "4] added the manjusri.org line to virtualdomains."
+Crag says, "oh"
+Crag says, "So we're not done yet, are we"
+Binder says, "So my lesson here is:  qmail did not say what it meant to say and the problem with accepting for vylarkaftan was that it didn't know that manjusri.org was a virtual domain?"
+Crag says, "Not exactly"
+Crag says, "I'll go into pi mode and restate my assumptions now :)"
+Binder hehs.
+Binder eats reheated fivespice chicken while Crag expounds.
+Crag says, "rctphosts lists domains for which qmail accepts mail blindly"
+Crag says, "locals lists domains which map directly to local users"
+Crag says, "virtualdomains provides indirect mapping to local users"
+Binder AHA.
+Crag says, "I thought that a domain in rcpthosts but not in the other two would be relayed"
+Crag says, "But maybe that's wrong"
+Binder says, "It would appear that there is a fork."
+Binder says, "Domains in rcpthosts are accepted intially but if in neither locals for virtualdomains, reject in a later stage."
+Binder says, "It seems domain must bein either locals or virtualdomains as well as in rcpthosts."
+Binder says, "rcpthosts && (locals || virtualdomains)"
+Crag says, "Then how does one do forwarding?  Is it impossible?"
+Crag says, "Er, relaying I mean"
+Binder is effectively relaying by using a virtualdomains map to binder and a ~binder/.qmail-default which contains binder@fool.manjusri.org.
+Crag says, "ah"
+Binder does not need the end effect to be user mapped.
+Crag says, "Well if you're all set, I need to head out"
+Binder says, "OK!"
+Binder says, "thanks for your help."
+Crag says, "You bet"
+Crag idles: and how!
+[Idling at 12:01 P.M. on Thu, May 11: and how!]
+Binder [to Crag]: One additional point for consideration; if you find in your received email for @vylarkaftan.net which isn't obvious test garbage, please forward it to vylar@fool.manjusri.org.
+Binder [to Crag]: s/received/received folder/
+< sheol has connected.  Total: 5 >
+< sheol has disconnected.  Total: 4 >
+Crag [to Binder]: No root or vylar mail in my procmail log
+Binder [to Crag]: That's ... odd.  Since I saw qmail saying it was delivering to root-robert.
+Crag says, "I'll look at the qmail logs"
+Crag says, "there's something terribly wrong with my mail filtering"
+Crag says, "I think in the process of setting up spamassassin I screwed stuff up for myself"
+Crag says, "Looks like I had an error in my .procmailrc where some messages were directed to a non-existant folder"
+Crag says, "I don't know what happened to those."
+Devil says, "I et them"
+Devil says, "they were tasty but i cant tell you what they said"
+Devil says, "maybe next time i belch they will be enuciated"
+Binder says, "Doubtlessly."
+Crag says, "Now that I have my head on straight, I did find three messages addressed to vy's domain, one of which was not a test, and I used mutt's bounce command to remail it to her."
+Binder [to Crag]: Gracias.
+Binder [to Crag]: And congratulations on your new cranial alignment.
+Binder sighs.
+Binder receives an email from a Clarion West person saying: please swap the pages of this PDF I created and post it to the website.
+Binder tries to find a politic way to say:  I can't do that, Dave.  Why don't you edit the PDF you fucking created the way you want it to appear and then send it back to me?
+Crag nods solemnly.
+Binder wrote some additional ~/.qmail-vylar-* files today, rebuilt her Maildir structure on fool, found a tool to turn Mail.app mailboxes into .mbox files, imported them into Thunderbird, calls it good.
+Binder proclaims Vylar's email solution implemented, celebrates with a mug of oolong tea.
+Crag says, "Bravo"
+Binder finishes the mug of oolong, sets up amanda to back up the Mac Mini via samba mounted fs.
+Crag says, "You are Getting Things Done"
+Crag says, "I just got my copy of GTD back from Allison last week.  Will begin my second pass through it this week."
+Binder says, "Nice."
+Binder will take a fourth pass through it when he gets ahead of his novel reading project.
+Binder hm mondo.
+< sheol has connected.  Total: 5 >
+< sheol has disconnected.  Total: 4 >
+Binder hm
+Crag says, "sheol is Shea, whom you may remember from such comedies as 'Shea and Nicole' and 'Shea Reinvents Everything'"
+Crag idles: Shotgun Wedding Dress Recording Session
+[Idling at 6:22 P.M. on Thu, May 18: Shotgun Wedding Dress Recording Session]
+Binder says, "Ah."
+Binder says, "That was, indeed, what I was wondering."
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           South Third Floor Hallway     0 seconds   working?              
+Binder         South Third Floor Hallway     a day                             
+Devil          South Third Floor Hallway     7 days                            
+stormagnet     Guest Room                    58 days                           
+
+Total: 4 people, 1 of whom has been active recently.
+Crag de-idles, but for how long?  Only time will tell...
+Binder hmms.  Hard to say the duration but it evidently ENDED 5 hours ago...
+Binder was off playing D&D, whee.
+Crag says, "whee!"
+Binder nods.
+Binder says, "Just like that."
+Binder was reincarnated today from his previous dead state.
+Binder died a human, was reborn a ... gray elf.
+Binder [to the DM]: Thanks.  Thanks a bunch!
+Crag [to Binder]: Anybody I know DMing?
+Binder [to Crag]: Not personally though I may have mentioned him two years ago in passing.  He's the guy who did the job I moved down here to do before I moved down here to do it.
+Crag says, "Sounds familiar"
+Crag says, "Good lord, it's after 8pm"
+Binder [to Crag]: He and I had friends in common and I got invited to a mailing list he had of gamers and from there I got an invite to his D&D game.
+Crag says, "That's excellent"
+Binder [to Crag]: He's running D&D 3.5 which is fine.  I don't have to buy any books to play it, since he's got EVERYTHING.
+Crag says, "You went a long time without anyone else DMing for you"
+Crag says, "That's a bonus"
+Crag says, "I don't see any gaming in my future for a while"
+Binder is sad for Crag.
+Crag says, "even if work didn't eat my soul"
+Crag says, "thank you"
+Binder mm souls.
+Crag says, "I will get back to it some day"
+Crag says, "You and Raine infected me with it"
+Binder has also the monthly boardgame group that randomlife organizes, the GURPS thing he runs on Sundays, and now a Burning Wheel group that's just getting started.
+Crag says, "Doug probably deserves some of the credit for his part in that first CoC game"
+Binder says, "The Burning Wheel stuff is ran by a co-worker at my present job."
+Binder says, "Yes.  He's a fun player."
+Crag says, "Sounds like you're gaming quite a bit.  With that, Vy and your job all going so well it's a wonder you don't explode"
+Binder tick tick tick BOOM.
+Crag says, "Come to think of it, the games Vy ran while she was visiting also made a great impression on me"
+Binder says, "Other than my GURPS thing, none of them meet weekly, which seems to be the trick."
+Binder says, "Vy is a stellar improv GM."
+Crag says, "Yes"
+Crag says, "In retrospect I'm amazed at her speed of thought and speach, and at her patience"
+Binder says, "She makes it look easy."
+Crag says, "Yes"
+Crag says, "My only experience GMing is that one DUDE game I ran with you and Raine"
+Crag says, "But that was enough to confirm a lot of my expectations about it"
+Binder watches an episode of Nova about a tsunami on his PVR.
+Crag says, "Nice"
+Binder says, "I'm still [of course] not entirely happy with it."
+Crag says, "I used to watch Nova regularly when I was still living with my parents."
+Crag says, "of course"
+Binder says, "Needs more RAM, and my reception is for crap."
+Crag says, "You are a perfectionist :)"
+Binder says, "But the code base is still evolving and it gets better each time I update."
+Binder says, "Yeah, sadly enough."
+Binder says, "If it's not broken, it's not been played with enough."
+Crag says, "The worst part about being a perfectionist is that one can never be a good enough perfectionist."
+Crag says, "Hm, I might make that my new .sig"
+Binder hehs.
+Binder says, "I'll give mythtv this.  When it works, it -works-."
+Binder says, "This episode of Nova looks sharp enough to cut glass with."
+Binder says, "Sound is crystal clear."
+Binder says, "You'd never believe it was from over the air signal."
+Binder says, "But I generally only get this kind of quality from KCSM, the local PBS."
+Binder says, "And not consistently depending upon all sorts of other factors."
+Binder says, "Weather, time of day, system activity, sunspots, cat crossing my path, walking under a ladder, putting a lucky penny in my shoe..."
+Crag says, "Wearing an onion on your belt"
+Binder says, "WHICH WAS THE FASHION AT THE."
+Binder chokes on his tongue.
+Crag grins.
+Binder says, "So, yeah, nonreproducible success."
+Binder says, "Whic annoys me."
+Binder plans to remedy that by upping the RAM and then looking at improving reception.
+Crag nods.
+Crag says, "Do you have cable or just broadcast?"
+Binder says, "I know it's RAM starved because under ordinary activity [logging in to the X frontend, say] it swaps multiple k/s according to iostat."
+Binder says, "NGID."
+Binder says, "Just broadcast."
+Binder says, "Once I'm comfortable with broadcast, I'm planning to build a second backend for mythtv and hang it off of a cable drop."
+Binder says, "Because cable is both easier and harder than broadcast."
+Binder says, "Easier because signal strength is boolean.  It's either great or it's gone."
+Crag says, "ooo, good idea"
+Binder says, "Harder because sometimes the signals have been modified in transit from the cable provider in ways which make it problematic to record."
+Crag . o O ( bastards! )
+Binder says, "Well, it's sometimes deliberate and sometimes not."
+Binder says, "Here's an example of deliberate:  some Chicago cable providers are known to seemingly randomize the EIT data in channels."
+Binder says, "So that your scheduler can't effectively adjust to a shifted program."
+Binder says, "If the program shows as it was scheduled to at the start of the month which schedules are published, no problem."
+Binder says, "But if a ballgame runs long, and bumps the show later, your mythtv will never catch on."
+Binder says, "Here's an example of accidental: some SF Bay area cable places actually capture shows from an alternate transponder above Hawaii."
+Binder says, "But don't time adjust the programming."
+Binder says, "So it comes in with goofy EIT data, offset by three hours."
+Binder says, "And that can make your scheduler mis-adjust."
+Crag says, "Hmph"
+Crag says, "Time to re-figure-out how to generate and manage SSL certs"
+Crag says, "Only this time I'm going to create automation"
+Binder says, "There's a good page about it in Devil's deliciousmarks."
+Crag says, "oooh, glad I mentioned it then"
+Binder says, "Specifically for courier-imap-ssl on Debian."
+Crag says, "oh"
+Binder used it to set up home TLS recently.
+Crag says, "Still"
+Binder says, "It's useful in general, as well."
+Binder says, "Very hands-on do-this do-that not a lot of theory."
+Crag says, "browsing del.icio.us/DevilCrayon now"
+Crag says, "I don't need any theory right now"
+Crag says, "What I need right now is not to have to click past the 'cert is expired' dialog every time I go to mail.thatsnice.org"
+Crag says, "I also added you and Devil to my network, so whee again."
+Crag says, "Ah, accidentally found what I wanted by searching all of del.icio.us"
+Binder grins.
+Binder says, "Happy accidents!"
+Crag says, "I think I'm going to be up late again"
+Binder uh ohs.
+Crag nods solemnly.
+Crag says, "upgrading the horde, setting up SSL cert management automation, updating wrack's cert, ..."
+Binder says, "Busybusy."
+Binder is still surprised to see some legitimate senders choosing wrack as the mx to send to vy.
+Binder says, "Well, Yahoo.  Semi-legitimate senders."
+Binder grins.
+Crag heh
+Crag says, "I wonder if it's a bug in their MTAs or if they intentionally deliver to secondaries for some reason"
+Crag says, "I should setup mail.the-kgb.com as a secondary for all my domains"
+Crag says, "but not tonight!"
+Binder says, "I suspect that it's them trying to be clever for some reason."
+Binder says, "Like load balancing their output, alternating between MXs."
+Crag says, "I haven't checked, but I bet the RFCs are pretty clear about that sort of thing"
+Binder declines to speculate.
+Crag heh
+Crag says, "I will doc Yahoo one point"
+Crag says, "They're still pretty far into the positive"
+Binder says, "Probably true."
+Binder is almost completely neutral on Yahoo.
+Crag says, "Oh, Amazon update time"
+Crag says, "Was supposed to interview with 3 folks Thursday, but ended up talking to a fourth because he heard about me and requested it late Wednesday night"
+Binder says, "Nice!"
+Binder says, "How was it?"
+Crag says, "If I don't get an offer this coming week I will be VERY surprised."
+Binder says, "WHEE."
+Crag says, "I may even get two offers"
+Binder says, "Better and better."
+Crag says, "One for each of the positions I talked with them about Thursday"
+Crag says, "totally"
+Crag says, "I'm very excited"
+Binder says, "Understandably."
+Crag says, "I doubt I'd be violating my NDA to tell you that the last-minute job is ownership of a monolithic legacy perl backend app"
+Crag says, "They want to get rid of it, but haven't been able to for four years"
+Crag says, "So they want someone to bandage it until they can get rid of it"
+Binder oohs.
+Binder says, "Fun."
+Crag says, "AND, the team I would be joining is building their centralized monitoring/support framework"
+Binder says, "Er."
+Binder says, "OK!"
+Crag says, "So we'd be building the equivalent of DIG's SiteScope & friends"
+Binder is suspicious of what sound like NIH projects.
+Binder says, "Since monitoring is a Solved Problem."
+Crag says, "Sortof"
+Crag says, "THey currently have ad hoc monitoring developed by each project for its own stuff"
+Binder says, "Yikes."
+Binder says, "But not unsurprising."
+Crag says, "So if they brought in a packaged solution it wouldn't fit"
+Crag says, "They'd be starting from scratch"
+Binder continues to hear 'subduction earthquakes' as 'seduction earthquakes' on this show.
+Binder . o O ( hubba hubba )
+Crag says, "Up until recently the jobs of dev, qa and support were handled by the same people for each 'product'"
+Binder nods.
+Crag says, "Which had all the problems you can predict"
+Crag says, "Now they want to get mature"
+Crag says, "But it's still a somewhat anarchistic environment"
+Crag says, "In the sense that there is nobody dictating tech direction"
+Binder hms.
+Binder says, "So why do they even HAVE a CTO, then?"
+Crag says, "heh"
+Binder says, "Isn't that supposed to be their JOB?"
+Crag says, "I think they're accidentally trying a concensus model of development"
+Crag says, "With their CTO operating as a figurehead or something"
+Crag says, "Perhaps I'll know a lot more in a few weeks. :)"
+Binder grins.
+Binder looks forward to future revelations.
+Binder stfws mildly and finds a current interview with Werner Vogels.
+Binder says, "Who is, in fact, amazon.com's CTO."
+Crag says, "I see"
+Crag says, "stfws?"
+Crag says, "searches the fucking web?"
+Binder nods.
+Binder says, "Just so."
+Crag says, "Say, did you know that the behavior of write() depends on the mode used with open()?"
+Crag says, "I found this out due to my interview"
+Crag says, "THough I think my answers were still good even though I hadn't known about it"
+Binder says, "Perl write() / open()?"
+Crag says, "What I didn't know was that if files are opened in append mode writes always seek the current end of the file"
+Crag says, "kernel write/open"
+Binder hms.
+Binder says, "No, I didn't know that."
+Crag says, "Good!"
+Binder hasn't done a lot of kernel hacking.
+Crag says, "me either"
+Crag says, "But it wasn't really a kernel question"
+Crag says, "The question was how to rotate a logfile without the ability to get the process writing to it to re-open it afterwords"
+Binder goes DAMN at a hot Air Force chick on TV.
+Binder ohs.
+Binder has had that one before.
+Crag says, "The answer the guy was looking for was to copy the current contents and then zero the file"
+Binder says, "In, hm, 1999."
+Binder says, "Yeah."
+Crag says, "BUT, if the file wasn't opened for append it won't work"
+Binder nods.
+Crag says, "I'm tempted to write to my interviewer about it, but I'm going to wait to see what happens first"
+Crag says, "I hate questions where the interviewer has a specific answer in mind"
+Crag says, "But I did very well on the rest of it"
+Crag says, "I think"
+Binder nods.
+Binder says, "I prefer interviews which go like this:  oh, you know <interviewer's boss>?  great, when can you start?"
+Crag grins.
+Binder idles: readin'
+Crag idles: work, sleep, whatever
+[Idling at 9:37 P.M. on Sat, May 20: work, sleep, whatever]
+Binder mm kawfee
+Binder attempts to slog his way up out of a strong resistance to completing next actions.
+Binder does something, checks it off, declares victory.
+Binder AUIGH
+Binder idles: zzz
+Binder AUIGH.
+Crag says, "Is Big Fish Games the company you work for/"
+Crag says, "?"
+Crag says, "I ask because Volt called me about a contract perl job with them"
+Binder says, "No, but we do have a biz relationship with them."
+Binder says, "We distribute and publish some of their games."
+Binder says, "Um."
+Binder [to Crag]: You didn't see that ... since, uh, it hasn't happened.
+Binder [to Crag]: And to the best of our legal knowledge, it might never happen.
+Crag says, "I didn't see anything, I was idle"
+Crag says, "if you know what I mean"
+Binder nods amiably.
+Binder has reconnected.
+Binder returns from a power outage.
+Crag says, "welcome back, cotter"
+Devil has disconnected.
+Crag [to Devil]: !
+Devil's friends arrive to cart him off to bed.
+Crag says, "no news from amazon or infospace.  I sent a followup email to infospace yesterday and I'm sending one to amazon right now."
+< Devil has connected.  Total: 4 >
+Devil arrives from the East Third Floor Hallway.
+Devil says, "power failure is awosme"
+Devil has disconnected.
+Devil has connected.
+Binder agrees with Devil.
+Binder [to Devil]: Probably with the same degree of sarcasm.
+Binder covers the topic sign reading `ramble on' with a slip of paper reading `PANTS TRAUMA'.
+Devil stabs Crag with a boney elbow.  Neat!
+Devil stabs Binder with a boney elbow.  Neat!
+Binder dies from a wound inflicted by Devil with the boney elbow.
+Binder has left.
+Binder arrives from the East Third Floor Hallway.
+Devil grins
+Devil ducks and stumbles, falling over.
+Binder laughs.
+Binder [to Devil]: Coward!
+Devil [to Binder]: Me?? Never!
+Binder stabs Devil with a Leatherman blade.  Neat!
+Devil cackles madly
+Binder goes AUIGH.
+< GhostOfTheManor has connected.  Total: 5 >
+< GhostOfTheManor has disconnected.  Total: 4 >

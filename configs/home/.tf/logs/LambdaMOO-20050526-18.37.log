@@ -1,0 +1,1234 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 154 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              2 new messages
+Last connected Thu May  5 06:26:10 2005 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 810 on *News (#123):
+Date:    Sunday 15-May-05 14:07:20
+From:    Petition/Ballot Core (#33842)
+To:      *News (#123)
+Subject: Voting closes on ballot #102412
+Sender:   Petitioner (#4)
+
+The voting period for Ballot:Lag_Is_Dead (#102412): `Lag Is Dead' has ended.  The final vote count is as follows:
+        In favor:   99
+        Against:    74
+        Abstaining: 31
+The proposal has failed to get twice as many votes in favor as against and so has not passed.
+--------------------------
+< connected: Crag. Total: 155 >
+Message 4877 on *Core-DB-Issues (#8175):
+Date:    Thursday  5-May-05 17:26:08
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: $generic_editor:parse_subst()
+
+ line 3 should be changed to reflect what's stated in Editor Help for subst, line 1 (exactly that line, in fact)
+Also, line 15:  s/fromstr == ""/!fromstr/  and  s/tostr == ""/!tostr/
+--------------------------
+                             Lag Is Dead (#102412)                             
+                             ---------------------                             
+                             by Jaybird (#105276)                              
+            [Last edited on Saturday, October  9, 2004 at 8:34 am]             
+
+The wizards will rescind *b:kill_more_lag (#92378)
+
+(You finish reading petition #102412, *B:Lag_Is_Dead)
+
+** Type `impl *B:Lag_Is_Dead' to see the wizards' implementation notes for this proposal.
+                            Kill More Lag (#92378)                             
+                            ----------------------                             
+                            by RedFeather (#91419)                             
+             [Last edited on Tuesday, October 22, 1996 at 9:56 am]             
+
+FOR NON-ANAL PEOPLE    NOTES FOR OTHERS
+-------------------    ----------------
+Large                 :Having above-average size; in the top 50%
+mailing lists         :x=$object_utils:descendants_suspended($mail_recipient)
+owned by              :Restricts the set of x's to ones with a given x.owner
+players               :Any p for which is_player(p).
+who are               :establishes a subset restriction on the x's
+way over quota        :Subjectively defined here as more than 50K over quota
+contribute to         :A causal relation is alleged; blame is assumed
+database bloat        :yduJ screaming about how the large DB can't be saved
+disproportionate with :not in keeping with or corresponding to
+a sense of            :assuming this passes, a feeling of the average voter
+fair use.             :What other users would expect in like circumstances.
+
+As such,              :Introductory term for causally related material
+when                  :at any time that
+a mail recipient      :Any y for which $object_utils:isa(y,$mail_recipient).
+'s owner              :this restricts the set of y's by reference to y.owner
+is more than          :[y.owner's quota] is not less than or equal to
+50K                   :shorthand for "50,000 bytes"
+over                  :exceeding (in this case, by 50K)
+quota,                :an instantaneous best-guess of db usage
+new mail              :mail created but not yet delivered
+shall                 :identifies an imperative condition of this petition
+not                   :reverses the imperative, requiring a non-event
+be accepted           :end up in the destination mailbox, by whatever means
+by                    :introduces the entity not to accept new mail
+that mail recipient.  :the y referred to above (exceeding the 50K bound)
+
+(You finish reading petition #92378, *B:Kill_More_Lag)
+
+** Type `impl *B:Kill_More_Lag' to see the wizards' implementation notes for this proposal.
+Crag has a total building quota of 65,000 bytes.
+His total usage was 43,279 as of Wed May 25 01:06:40 2005 PDT.
+Crag may create up to 21,721 more bytes of objects, properties, or verbs.
+Objects owned by Crag (from #0 to #122330):
+ 40K  #58746 Crag                       [Storage room]
+  3K  #27242 Storage room              
+-- 2 objects.  Total bytes: 43,279.-------------------------------------------
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.absent_list             Crag (#58746)         r c    {"You're safe for"+...}
+.check_login             Crag (#58746)         r c    0
+.assassin                Crag (#58746)         r c    0
+.no_room_check           Crag (#58746)         r c    0
+.save_players            Crag (#58746)         r c    {}
+.keep_checking           Crag (#58746)         r c    0
+.group_ka                Crag (#58746)         r c    {}
+.msg                     Crag (#58746)         r c    {"You're safe for"+...}
+.not_players             Crag (#58746)         r c    {}
+.checking_verb           Crag (#58746)         r c    0
+.check_connect_fail      Crag (#58746)         r c    0
+.check_task              Crag (#58746)         r c    0
+.saved_output            Crag (#58746)         r c    {}
+.data                    Crag (#58746)         r c    {}
+.ol                      Crag (#58746)         r c    -1
+.go                      Crag (#58746)         r c    910
+.pi_str                  Crag (#58746)         r c    "3.141592653589793"+...
+.pi_flt                  Crag (#58746)         r c    3.14159265358979
+.group_temp              Crag (#58746)         r c    {}
+.foo                     Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Syntax:  @audit [<player>] [for <string>] [from <number>] [to <number>] 
+
+`@audit'        prints a report of all of the objects you own.
+`@audit player' prints the same report for another player.
+
+The `for' string restricts the search to objects whose names begin with that string.
+It is also possible to restrict the range of object numbers to include only those above a given number (`from') or below a given number (`to').
+
+All forms of @audit print a report:
+
+   #14 Gemba                          [The Pool]
+  #144 Popgun                         [Gemba]
+ #1479 Cockatoo                      *[The Living Room]
+ #1673 Bottom of Swimming Pool       
+ #2147 Cavern                        <-*west
+ #2148 tunnel                         Bottom of Swimming ->Cavern
+
+The first column is the object's number, the second its name. The third column shows the object's location: Gemba is in The Pool, and is carrying the Popgun (#144).
+For exits, the third column shows source ->dest.
+For rooms, the third column shows any entrances owned by someone else.
+Object location, exit sources and destinations owned by another player are preceded by a *.
+
+@audit uses a property .owned_objects on the player, for speed.  This property is updated at the time of each object creation and destruction and ownership change.  The verb @auditdb (same args as @audit) actually searches through the entire database for objects.
+
+See also @verify-owned, @sort-owned, and @add-owned.
+
+See also @prospectus, which gives some additional information.
+Property removed.
+That object does not define that property.
+Property removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.absent_list             Crag (#58746)         r c    {"You're safe for"+...}
+.check_login             Crag (#58746)         r c    0
+.assassin                Crag (#58746)         r c    0
+.no_room_check           Crag (#58746)         r c    0
+.save_players            Crag (#58746)         r c    {}
+.keep_checking           Crag (#58746)         r c    0
+.group_ka                Crag (#58746)         r c    {}
+.msg                     Crag (#58746)         r c    {"You're safe for"+...}
+.not_players             Crag (#58746)         r c    {}
+.checking_verb           Crag (#58746)         r c    0
+.check_connect_fail      Crag (#58746)         r c    0
+.check_task              Crag (#58746)         r c    0
+.saved_output            Crag (#58746)         r c    {}
+.data                    Crag (#58746)         r c    {}
+.ol                      Crag (#58746)         r c    -1
+.go                      Crag (#58746)         r c    910
+.group_temp              Crag (#58746)         r c    {}
+.foo                     Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Property removed.
+Property removed.
+=> #910  (Object #910)
+[used 2 ticks, 0 seconds.]
+Property removed.
+Property removed.
+Property removed.
+Property removed.
+Usage:  @rmprop <object>.<property>
+Property removed.
+Property removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.absent_list             Crag (#58746)         r c    {"You're safe for"+...}
+.check_login             Crag (#58746)         r c    0
+.assassin                Crag (#58746)         r c    0
+.no_room_check           Crag (#58746)         r c    0
+.save_players            Crag (#58746)         r c    {}
+.keep_checking           Crag (#58746)         r c    0
+.group_ka                Crag (#58746)         r c    {}
+.msg                     Crag (#58746)         r c    {"You're safe for"+...}
+.check_connect_fail      Crag (#58746)         r c    0
+.check_task              Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+#58746:pal_group                Crag (#58746)        rxd    this none this
+#58746:pals_of                  Crag (#58746)        rxd    this none this
+#58746:group_test               Crag (#58746)        rxd    this none this
+-------------------------------- finished ---------------------------------
+#-1:Input to EVAL, line 3:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+#-1:Input to EVAL, line 3:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+-------------------------------- finished ---------------------------------
+  ** property not found, "eval_str" **
+-------------------------------- finished ---------------------------------
+  ** property not found, "eval" **
+-------------------------------- finished ---------------------------------
+#-1:Input to EVAL, line 3:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+Object #58746 does not define that verb, but its ancestor #217 does.
+#217:eval*-d   any any any
+"A MOO-code evaluator.  Type `;CODE' or `eval CODE'.";
+"Calls player:eval_cmd_string to first transform CODE in any way appropriate (e.g., prefixing .eval_env) and then do the actual evaluation.  See documentation for this:eval_cmd_string";
+"If you set your .eval_time property to 1, you find out how many ticks and seconds you used.";
+"If eval-d is used, the evaluation is performed as if the debug flag were unset.";
+if (player != this)
+  player:tell("I don't understand that.");
+  return;
+elseif (!player.programmer)
+  player:tell("You need to be a programmer to eval code.");
+  return;
+endif
+set_task_perms(player);
+result = player:eval_cmd_string(argstr, verb != "eval-d");
+if (result[1])
+  player:notify(this:eval_value_to_string(result[2]));
+  if (player:prog_option("eval_time") && !`output_delimiters(player)[2] ! ANY')
+    player:notify(tostr("[used ", result[3], " tick", result[3] != 1 ? "s, " | ", ", result[4], " second", result[4] != 1 ? "s" | "", ".]"));
+  endif
+else
+  player:notify_lines(result[2]);
+  nerrors = length(result[2]);
+  player:notify(tostr(nerrors, " error", nerrors == 1 ? "." | "s."));
+endif
+#-1:Input to EVAL, line 3:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+#-1:Input to EVAL, line 3:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+The verb :; is nowhere to be found.
+The verb :eval is on   Crag(#58746)--generic programmer(#217)
+That object does not define that verb.
+Object #58746 does not define that verb, but its ancestor #217 does.
+#217:eval_cmd_string   this none this
+":eval_cmd_string(string[,debug])";
+"Evaluates the string the way this player would normally expect to see it evaluated if it were typed on the command line.  debug (defaults to 1) indicates how the debug flag should be set during the evaluation.";
+" => {@eval_result, ticks, seconds}";
+"where eval_result is the result of the actual eval() call.";
+"";
+"For the case where string is an expression, we need to prefix `return ' and append `;' to string before passing it to eval().  However this is not appropriate for statements, where it is assumed an explicit return will be provided somewhere or that the return value is irrelevant.  The code below assumes that string is an expression unless it either begins with a semicolon `;' or one of the MOO language statement keywords.";
+"Next, the substitutions described by this.eval_subs, which should be a list of pairs {string, sub}, are performed on string";
+"Finally, this.eval_env is prefixed to the beginning while this.eval_ticks is subtracted from the eventual tick count.  This allows string to refer to predefined variables like `here' and `me'.";
+set_task_perms(caller_perms());
+{program, ?debug = 1} = args;
+program = program + ";";
+debug = debug ? 33 | 0;
+if (!match(program, "^ *%(;%|%(if%|fork?%|return%|while%|try%)[^a-z0-9A-Z_]%)"))
+  program = "return " + program;
+endif
+program = tostr(this.eval_env, ";", $code_utils:substitute(program, this.eval_subs));
+ticks = ticks_left() - 48 - this.eval_ticks + debug;
+seconds = seconds_left();
+value = debug ? eval(program) | $code_utils:eval_d(program);
+seconds = seconds - seconds_left();
+ticks = ticks - ticks_left();
+return {@value, ticks, seconds};
+,eval_env                Statistician (#64259) r      "me=player;here=me.location;data = me.data;"
+-------------------------------- finished ---------------------------------
+Property added with value 0.
+=> 0
+[used 2 ticks, 0 seconds.]
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.absent_list             Crag (#58746)         r c    {"You're safe for"+...}
+.check_login             Crag (#58746)         r c    0
+.assassin                Crag (#58746)         r c    0
+.no_room_check           Crag (#58746)         r c    0
+.save_players            Crag (#58746)         r c    {}
+.keep_checking           Crag (#58746)         r c    0
+.group_ka                Crag (#58746)         r c    {}
+.msg                     Crag (#58746)         r c    {"You're safe for"+...}
+.check_connect_fail      Crag (#58746)         r c    0
+.check_task              Crag (#58746)         r c    0
+.data                    Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Property removed.
+Property removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+#58746:pal_group                Crag (#58746)        rxd    this none this
+#58746:pals_of                  Crag (#58746)        rxd    this none this
+#58746:group_test               Crag (#58746)        rxd    this none this
+-------------------------------- finished ---------------------------------
+#58746:pal_group   this none this
+"Find pals and pals of pals and etc.";
+search = {@args};
+searched = {};
+allpals = {};
+netdata = {};
+i = 1;
+while (search)
+  dude = search[1];
+  search = setremove(search, dude);
+  hispals = `dude.pals ! ANY => {}';
+  if (typeof(hispals) != LIST)
+    hispals = {};
+  endif
+  if (!(dude in allpals))
+    allpals = {@allpals, dude};
+    netdata = {@netdata, hispals};
+  endif
+  searched = setadd(searched, dude);
+  for pal in (hispals)
+    if (!(pal in searched || !$recycler:valid(pal) || !is_player(pal)))
+      search = setadd(search, pal);
+    endif
+  endfor
+  suspend(0);
+  this:tell(i, " ", dude.name, " (", length(hispals), ", ", length(search), ")");
+  i = i + 1;
+endwhile
+return {allpals, netdata};
+Verb #58746:pal_group (1) {this none this} removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+#58746:pals_of                  Crag (#58746)        rxd    this none this
+#58746:group_test               Crag (#58746)        rxd    this none this
+-------------------------------- finished ---------------------------------
+Verb #58746:pals_of (1) {this none this} removed.
+Verb #58746:group_test (1) {this none this} removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.absent_list             Crag (#58746)         r c    {"You're safe for"+...}
+.check_login             Crag (#58746)         r c    0
+.no_room_check           Crag (#58746)         r c    0
+.keep_checking           Crag (#58746)         r c    0
+.group_ka                Crag (#58746)         r c    {}
+.msg                     Crag (#58746)         r c    {"You're safe for"+...}
+.check_connect_fail      Crag (#58746)         r c    0
+.check_task              Crag (#58746)         r c    0
+.data                    Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+.absent_list             Crag (#58746)         r c    {"You're safe for now.  Nobody here is trying to kill you."}
+-------------------------------- finished ---------------------------------
+Property removed.
+Property removed.
+Property removed.
+Property removed.
+Property removed.
+.msg                     Crag (#58746)         r c    {"You're safe for now.  Nobody here is trying to kill you."}
+-------------------------------- finished ---------------------------------
+Property removed.
+Property removed.
+Property removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.recording               Crag (#58746)         r c    0
+.data                    Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Property removed.
+Crag (#58746) [ (player) programmer ]
+  Child of Nuclear Testing Ground Player Class (#36845).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+#36845:@supersweep              Darkson (#100806)    rxd    none none none
+#36845:@lookgag                 Darkson (#100806)    r d    any none none
+#36845:inv*entory               Darkson (#100806)    rxd    none none none
+#36845:verbcount                Darkson (#100806)    rx     any none none
+#36845:smoke                    Darkson (#100806)    rxd    none none none
+#36845:confunc                  Darkson (#100806)    rxd    this none this
+#36845:disfunc                  Darkson (#100806)    rxd    this none this
+#36845:page_echo_msg            Darkson (#100806)    rxd    this none this
+#36845:help_msg                 Darkson (#100806)    rx     this none this
+#36845:heh                      Darkson (#100806)    r d    none none none
+#36845:title                    Darkson (#100806)    rxd    this none this
+#36845:@cousins                 Darkson (#100806)    r d    any none none
+#36845:"wants_clothing clothing_state clothed_msg half_naked_msg naked_msg stripped_msg stripper_msg strip_crowd_msg dressed_msg dresser_msg dress_crowd_msg osmell_msg smell_msg tell_contents_msg" Darkson (#100806) rxd this none this
+#36845:get_clothing             Darkson (#100806)    rxd    this none this
+#36845:@clothes                 Darkson (#100806)    r d    none none none
+#36845:"can_strip can_dress"    Darkson (#100806)    rxd    this none this
+#36845:"strip dress"            Darkson (#100806)    r d    this none none
+#36845:description              Darkson (#100806)    rxd    this none this
+#36845:do_strip                 Darkson (#100806)    rxd    this none this
+#36845:do_dress                 Darkson (#100806)    rxd    this none this
+#36845:"@strippers @dressers"   Darkson (#100806)    r d    any any any
+#36845:"strippers dressers"     Darkson (#100806)    rxd    this none this
+#36845:@who                     Darkson (#100806)    rxd    any any any
+#36845:"@sspc @rev*enant @ntgpc" Darkson (#100806)   rxd    none none none
+#36845:receive_page             Darkson (#100806)    rxd    this none this
+#36845:@alias-n*otification     Darkson (#100806)    r d    none none none
+#36845:smell                    Darkson (#100806)    r d    this any any
+#36845:smell_self               Darkson (#100806)    rxd    this none this
+#36845:tell_contents            Darkson (#100806)    rxd    this none this
+#36845:parse_contents           Darkson (#100806)    rxd    this none this
+-------------------------------- finished ---------------------------------
+Crag(#58746)   Nuclear Testing Ground Player Class(#36845)   Revenant Player Class(#5409)   Sick's Sick Player Class(#49900)   Sick's Slightly Sick Player Class(#40099)   Sick's Sick of Spam player class(#59900)   Global Positioning Player Class(#6225)   Detailed Player Class(#6669)   Generic Super_Huh Player(#26026)   Politically Correct Featureful Player Class Created Because Nobody Would @Copy Verbs To 8855(#33337)   Player Class hacked with eval that does substitutions and assorted stuff(#8855)   Experimental Guinea Pig Class with Even More Features of Dubious Utility(#5803)   Generic Player Class With Additional Features of Dubious Utility(#7069)   generic programmer(#217)   generic builder(#630)   Generic LambdaMOO Citizen(#322)   Frand's player class(#3133)   Generic Mail Receiving Player(#100068)   generic player(#6)   Root Class(#1)
+Parent changed.
+Crag (#58746) [ (player) programmer ]
+  Child of generic programmer (#217).
+  Location Storage room (#27242).
+  Size: 40,159 bytes at Wed May 25 01:06:40 2005 PDT
+.apolitical              Crag (#58746)         r c    1
+.data                    Crag (#58746)         r c    0
+-------------------------------- finished ---------------------------------
+Objects owned by Crag (from #0 to #122330):
+ 40K  #58746 Crag                       [Storage room]
+  3K  #27242 Storage room              
+-- 2 objects.  Total bytes: 43,279.-------------------------------------------
+Showing help on `@measure':
+----
+Syntax:
+  @measure object <object name>
+  @measure summary [player]
+  @measure new [player]
+  @measure breakdown <object name>
+  @measure recent [number of days] [player]
+
+When the MOO is under byte-quota, objects in the MOO are measured approximately once a week, and the usage tally as reported by @quota is updated.  You may wish to measure an object specially, however, without waiting for the automatic measurement to take place, or if the MOO is under object-quota.  @measure has some subcommands to handle this.
+
+@measure object will measure an individual object right now, update the usage of that object in your usage as reported by @quota, and update the date of that object's measurement.
+
+@measure summary will go through your or another player's objects and produce the summary information that is printed by @quota.  Normally this will be just the same as @quota prints out, but occasionally the addition/subtraction done to keep @quota in sync will get out of date, and @measure summary will be needed.
+
+@measure new will go through all your or another player's objects, measuring exactly those which have never been measured before (that is, are too newly @created to have any measurement data).  This is necessary as any player is only permitted to own 10 unmeasured objects, or object creation will not be permitted.
+
+@measure breakdown will give you full information on where an object's size is coming from.  It will offer to moomail you the result.  Caution: don't forget to delete this message, as it is large and takes up a lot of space!
+
+@measure recent will let you re-measure objects of yours or another player's which have not been measured in the specified number of days (the default is the ordinary cycle of the measurement task).
+Checking size of Crag (#58746)...
+Size of Crag (#58746) is 30,044 bytes.
+This might be kinda long.  Want me to mail you the result? [Enter `yes' or `no']
+Result will be mailed.
+Receiving mail from Quota (#63447) and forwarding it to your .email_address.
+15 messages on *Core-DB-Issues (#8175):
+ 4864:  Jan  5 03:57   Galatea_Stardancer (#122047)   Re: Re: $player:set_alias
+ 4865:  Jan  7 17:20   Galatea_Stardancer (#122047)   $object_utils:accessible_
+ 4866:  Jan  7 19:28   Xeric (#112019)        (None.)
+ 4867:  Jan  7 19:32   Galatea_Stardancer (#122047)   Reply: Xeric (#112019)
+ 4868:  Jan  7 19:45   Xeric (#112019)        (None.)
+ 4869:  Feb  4 11:35   Roskegg (#117100)      (None.)
+ 4870:  Feb  4 15:02   Roskegg (#117100)      (None.)
+ 4871:  Feb  6 16:55   Miral (#107983)        (None.)
+ 4872:  Apr 26 12:59   Tartan (#107618)       (None.)
+ 4873:  Apr 26 15:04   Nosredna (#2487)       (None.)
+ 4874:  Apr 29 15:54   Diopter (#98842)       $time_utils:from_day enhancement
+ 4875:  Apr 29 19:29   Nosredna (#2487)       Re: $time_utils:from_day enhancem
+ 4876:  Apr 29 20:11   Nosredna (#2487)       Re: $object_utils:accessible_verb
+>4877:  May  5 17:26   Galatea_Stardancer (#122047)   $generic_editor:parse_sub
+ 4878:+ May  5 17:37   Nosredna (#2487)       Re: $generic_editor:parse_subst()
+-----+
+Message 4878 on *Core-DB-Issues (#8175):
+Date:     Thu May  5 17:37:14 2005 PDT
+From:     Nosredna (#2487)
+To:       Galatea_Stardancer (#122047) and *Core-DB-Issues (#8175)
+Subject:  Re: $generic_editor:parse_subst()
+
+I made the help change.  Why the line 15 change?  I kinna like the == "" better -- it makes it excruciatingly clear exactly what type of false value it's looking for.
+--------------------------
+15 messages:
+  35:  Jul  9 2000    Biogeek (#58039)       surgery
+  36:  Mar 16 2001    The Birthday Machine (#5607)   Happy Birthday!
+  37:  Aug  1 2001    Rari (#119852)         Hi Robert!  It's Claire again.  I 
+  38:  Aug  1 2001    Rari (#119852)         LOL, disregard that last email
+  39:  Sep 17 2001    Monkey (#73364)        poop
+  40:  Jun  4 2002    Topher (#55250)        (None.)
+  41:  Nov 29 2003    Avenger (#50204)       my new email address is mikejoshta
+  42:  Jan 16 2004    Zelicious (#104987)    Help to raise money for college
+  43:  Jan 26 2004    Anjelina (#78546)      insaan (#64366) soon to be reaped!
+  44:  Jan 27 2004    Anjelina (#78546)      CORRECTION
+  45:  Feb 16 2004    Dulcinea (#112067)     Real Life Registry (#5365) needs a
+  46:  Mar 16 2004    The Birthday Machine (#5607)   Happy Birthday!
+  47:  Jul 12 17:20   Avenger (#50204)       my email address is mikejoshtarp71
+  48:  Sep 23 20:48   Cashmere (#69437)      hello are you robert?
+>>49:  Nov 11 14:41   niney (#90845)         Thanks, I fixed this. I turned off
+----+
+Message 49:
+Date:     Thu Nov 11 14:41:06 2004 PST
+From:     niney (#90845)
+To:       Crag (#58746)
+
+Thanks, I fixed this. I turned off something to try to avoid the timeout, but I guess it didn't work. Oh well, at least the moo gets some excitement for a bit, even if it's at my expense.
+--------------------------
+Message 1:
+Date:     Fri Aug 29 19:25:00 1997 PDT
+From:     Harper (#107252)
+To:       Crag (#58746)
+
+You can take 17 to 280 or you can just get to highway 1 and take that to 19th avenue.  take 19th to Kirkham Street (streets go in backwards alphabetical).  address if you want it (heh) is 439 Kirkham.  Phone number if you get lost is (415) 759-9447.  1-ish tomorrow ok?  We can probably just walk to the Haight, it's only 15 minutes away.
+--------------------------
+Harper
+Soft on the inside, yellow on the outside.  It seems to have a transparent shield surrounding it, rendering it impervious to food fights.
+Harper is carrying Box of Bagels?, connect the dots, Electronic Thumb, and blank construct
+,aliases                 Haakon (#2)           r      {"Harper", "wof", "wofo", "cu", "harp", "woof", "puffin", "weef"}
+-------------------------------- finished ---------------------------------
+Message 2:
+Date:     Tue Sep  9 16:27:21 1997 PDT
+From:     Plaid_Guest (#32861)
+To:       Crag (#58746)
+Subject:  hello!
+
+hi! ho w are you??
+i was thinking of you. i wanted to say hi! see what was up with you., you're not here though.. i'll check back leter!! i got sick today. it work. :( it sucked. i had to come home early. i feel bad. i've been sick 2 times now. they said it was all good. they like me there alot.
+i talked again to the army guy. i think i'm gonna go. i might not be able to get in bea..because of the whole rehab thing. i'm not sure what the deal is with that. just in case i do go, i've been running and i  think i'm gonna quit smoking. i think it's bad. (i think, i think..) me and my girlfriend ran a 1/2 mile yesterday. (it was a half or a quarter. i forgethow long it is around the track.. :)
+i have to call my army guy tonight. we're gonna get my paper work all done. please don't be sad. i can write to you and get a computer and talk to you on lambda. see if i go to the army i can get my own computer!! i want a lab top so i can go everywhere with it!! see see. good cloe. :)
+there's this neighbor that i have who's a drummer. he's almost a freak. he plays the radio kinda loud, but sings over it, but the freaky thing is he can't sing and doesn't know the words. i've always giggled when i heard him. hehehehhee freak!!
+well, i'm off to a/watch some tv and get some food. cloe's hungry!!
+byebye!!
+--------------------------
+,aliases                 Haakon (#2)           r      {"Plaid_Guest", "Plaid-Guest", "Plaid", "Guest6"}
+-------------------------------- finished ---------------------------------
+Deleted 2.
+Message 3:
+Date:     Sat Sep 13 11:47:39 1997 PDT
+From:     Statistician (#64259)
+To:       *Quota-Log (#20613), *Quota-Transfer-Log (#40431), Crag (#58746), and deLaMer (#111890)
+Subject:  Quota Transfer: Crag (#58746) to deLaMer (#111890)
+
+Manual quota transfer of 25000 from Crag (#58746) to deLaMer (#111890).
+Because she's nice
+--------------------------
+,aliases                 Haakon (#2)           r      {"deLaMer", "Blue_Guest.", "qt", "dlm", "Fishie(tm)", "Fish_Guest", "$fish", "f_", "deLaMermaid", "MOOBabe(tm)", "A_Fish!", "fishy", "marine_guest", "!d", "!f", "'b", "Calf", "MOOer", "mabelle", "dela", "GhouLaMer", "deLaMerry", "Celebrian", "Tinuvel", "Luthien", "deLaMonstre", "Lorrelei", "ocg", "deLaMorte", "Big_Soft_Rumb1y"}
+-------------------------------- finished ---------------------------------
+Player name         Last disconnect time          Location
+-----------         --------------------          --------
+deLaMer (#111890)   Mon May 23 18:15:20 2005 PDT  Secret Lagoon
+
+Total: 1 player, who has not been active recently.
+No players defined by the group "pals".
+No players to display.
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #217:eval_cmd_string (this == #58746), line 19
+... called from #217:eval*-d (this == #58746), line 13
+(End of traceback)
+Message 4:
+Date:     Sat Sep 13 15:37:55 1997 PDT
+From:     Purple_Guest (#5790)
+To:       Crag (#58746)
+Subject:  hi!!
+
+yes i would love for you to come here. when eve..ever is good for you!1 tell me when so i can work something out with my job. okay?? i miss you. i've been thinking about you too!! tell sam i said  hi!!
+byebye!1 i'm gonna watch the english pateint.
+it's one of the eb..best movies.. i loved it!1 gonna see it again. byebye!!
+--------------------------
+Deleted 4.
+Message 5:
+Date:     Wed Sep 17 15:34:43 1997 PDT
+From:     Brown_Guest (#60694)
+To:       Crag (#58746)
+
+hey!! just wanted to say hello!!
+cloe
+--------------------------
+Deleted 5.
+Message 6:
+Date:     Fri Sep 26 00:39:59 1997 PDT
+From:     Mao (#54886)
+To:       Crag (#58746)
+Subject:  Con permisso
+
+Hi, check out http://field.medicine.adelaide.edu.au/sgmlwidget.html ... it contains a record of our conversation.  Would you consent to my leaving your text there, and if so, how would you like to be attributed?
+--------------------------
+Message 7:
+Date:     Sat Sep 27 04:28:21 1997 PDT
+From:     Mao (#54886)
+To:       Crag (#58746)
+Subject:  first cut
+
+... at detailed Wym design: field.medicine.adelaide.edu.au/coldstore/design.html, comments as always.
+--------------------------
+Message 8:
+Date:     Fri Oct 10 16:39:30 1997 PDT
+From:     cloe-person (#104705)
+To:       Crag (#58746)
+
+hey!
+how are you?? i havn't sen you around in a while. i think imight be missing you.
+i was wondering how your job is coming along. hope well.
+tonight there's a gallery party. i hope i have a good time.
+not much is really going on here. just hanging out with friends. not anything really too big.
+life is dull sometimes.
+i havn't slowed down. things just are less interesting and meaningful.
+hmm. how's the dancing going??
+hope to see you soon.
+cloe
+--------------------------
+"#104705" is not the name of any player.
+Deleted 8.
+Message 9:
+Date:     Sun Dec  7 19:47:05 1997 PST
+From:     Mr-Grinch (#87010)
+To:       Crag (#58746)
+Subject:  christmas stuff
+
+" for those of you who dont know... i am no longer living in a po box...  my current snail addy is below... please no adult subject matter  or such.  cash is more than welcome tho :)  if you want a christmas card from me i need an addy
+
+Dexter R. Craig
+115 parker road
+Oak Ridge TN 37830
+
+Email is dexterx@pop.usit.net for emailcards aka search for e-cards on the net
+Merry christmas to each of you regardless of what / how you celebrate.
+
+--------------------------
+Deleted 9.
+Message 10:
+Date:     Tue Dec 23 13:08:09 1997 PST
+From:     Kiwi_Sunflower (#108517)
+To:       Crag (#58746)
+Subject:  Hi
+
+Wishing you all a great Xmas and a wild New years Eve. Hoping you all have a successful and happy 1998!.
+Love and best wishes
+Kiwi
+--------------------------
+Deleted 10.
+Message 11:
+Date:     Wed Dec 24 12:46:24 1997 PST
+From:     DukeTheHalls (#112997)
+To:       Crag (#58746)
+Subject:  .
+
+,
+--------------------------
+Deleted 11.
+Message 12:
+Date:     Wed Dec 31 05:17:02 1997 PST
+From:     little_miss_giggles (#113101)
+To:       Crag (#58746)
+
+hey you guys.. just a quick message.. this is not directed to all of you.. just those of you who live in Townsville, or somewhere between Townsville and Brisbane.. 
+
+sorry tothose of you who do't live there or abouts.. but i dind't want to filter through pals list to pick out only the ones i wanted. anyways, the purpose of this is because i wish top move outof home and need someone toshare with..
+
+so.. if anyone knows of anyone who is looking for a flatmate.. let me kno please!!! if it's not in townsviile, it would be preferred to be near a uni.. lots of thanks in advance for those who can help..
+
+sam
+
+--------------------------
+Message 13:
+Date:     Wed Dec 31 05:17:18 1997 PST
+From:     little_miss_giggles (#113101)
+To:       Crag (#58746)
+
+sorry.. did that one wrong! 
+--------------------------
+Message 14:
+Date:     Wed Dec 31 21:49:15 1997 PST
+From:     HappiestGirl (#113203)
+To:       Crag (#58746)
+Subject:  Happy New Year!
+
+--------------------------
+Player name              Last disconnect time          Location
+-----------              --------------------          --------
+HappiestGirl (#113203)   Wed May 25 22:18:13 2005 PDT  The Solarium
+
+Total: 1 player, who has not been active recently.
+HappiestGirl
+The happiest girl you ever knew. She smiles as if she hasn't a care in the world... or maybe it's because she loves to be naughty sometimes.
+
+
+She is sleeping.
+Carrying:
+ Fantastic                              
+Message 15:
+Date:     Thu Mar  5 19:26:11 1998 PST
+From:     Statistician (#64259)
+To:       *Quota-Log (#20613), *Quota-Transfer-Log (#40431), {=P (#113629), and Crag (#58746)
+Subject:  Quota Transfer: {=P (#113629) to Crag (#58746)
+
+Manual quota transfer of 20000 from {=P (#113629) to Crag (#58746).
+In payment of an old debt.
+--------------------------
+#113629 does not exist.
+Message 16:
+Date:     Mon Mar 16 00:05:30 1998 PST
+From:     The Birthday Machine (#5607)
+To:       Crag (#58746)
+Subject:  Happy Birthday!
+Sender:   Delores (#31783)
+
+Happy Birthday to you...
+Happy Birthday to you...
+Happy Birthday, dear Crag...
+Happy Birthday to you...
+    ,}  ,  ,  ,  ,                                            ,  ,  ,  , ,}
+    ;| ;} ;} ;} ;} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ;} ;} ;} ;} ;|
+    || || || || ||_;|_;|_;|.;|.;|.;|.;|.;|.;|.;|.;|.;|_;|_;|_|| || || || ||
+  __||.||-||~||~|| || || || || || || || || || || || || || || ||~||~||-||.||__
+ (  `' |; |; |; |; || || || || || || || || || || || || || || |; |; |; |; `'  )
+ |~~---....______  `' `' `' `' `' `' `' `' `' `' `' `' `' `'  ______....---~~|
+ |__             ~~~~~~~~~---------------------------~~~~~~~~~             __|
+ |  ~~~----......_________                           _________......----~~~  |
+ `..___                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   ___..'
+       ~~~~------.........___________________________.........------~~~~
+
+
+<This message brought to you by the Amazing Birthday Machine!>
+--------------------------
+Deleted 16.
+Message 17:
+Date:     Wed Aug  5 16:55:42 1998 PDT
+From:     Drucilla (#100787)
+To:       Crag (#58746)
+
+ok ok my new email addy is honeychain@juno.com throw it in your adress books
+--------------------------
+Deleted 17.
+Message 18:
+Date:     Wed Nov 18 15:42:56 1998 PST
+From:     SandStorm (#109958)
+To:       Crag (#58746)
+Subject:  anyone that has me on their watch-for things
+
+I am sending this, I HOPE to anyone that I've spoken to often enough that
+they'd want to find me.  I am turning this character over to a friend, as I will no longer have access..
+To be on the safe side, as I do not know if you will want to speak to this person
+I would suggest that you remove me from the watch-for lists...
+thank you for your friendships, and I'm sure we'll get in touch.. 
+IF you need to find me, after Friday...page Dragyn, as she will be able to 
+track me down.
+Thanks again.
+Sandstorm
+--------------------------
+Deleted 18.
+Your current message has been removed.
+Message 19:
+Date:     Tue Mar 16 00:06:03 1999 PST
+From:     The Birthday Machine (#5607)
+To:       Crag (#58746)
+Subject:  Happy Birthday!
+Sender:   Delores (#31783)
+
+Happy Birthday to you...
+Happy Birthday to you...
+Happy Birthday, dear Crag...
+Happy Birthday to you...
+                                      ,}
+                                      ;|
+                                      ||
+                                    __||__
+                                   (  `'  )
+                                   |~~~~~~|
+                                   |______|
+                                   |      |
+                                   `......'
+
+    ,}  ,  ,  ,  ,                                            ,  ,  ,  , ,}
+    ;| ;} ;} ;} ;} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ;} ;} ;} ;} ;|
+    || || || || ||_;|_;|_;|.;|.;|.;|.;|.;|.;|.;|.;|.;|_;|_;|_|| || || || ||
+  __||.||-||~||~|| || || || || || || || || || || || || || || ||~||~||-||.||__
+ (  `' |; |; |; |; || || || || || || || || || || || || || || |; |; |; |; `'  )
+ |~~---....______  `' `' `' `' `' `' `' `' `' `' `' `' `' `'  ______....---~~|
+ |__             ~~~~~~~~~---------------------------~~~~~~~~~             __|
+ |  ~~~----......_________                           _________......----~~~  |
+ `..___                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   ___..'
+       ~~~~------.........___________________________.........------~~~~
+
+
+<This message brought to you by the Amazing Birthday Machine!>
+--------------------------
+Deleted 19.
+Message 20:
+Date:     Tue May 18 04:30:19 1999 PDT
+From:     Kiwi_Sunflower (#108517)
+To:       Crag (#58746)
+Subject:  Australian Net censorship
+
+visit my site to sign the petition against net censorship in Australia - the bill goes for senate consideration at the end of the week and its draconian http://www2.dynamite.com.au/kiwisunf/index.htm
+--------------------------
+Deleted 20.
+Message 21:
+Date:     Wed Jul 21 13:32:44 1999 PDT
+From:     Reagan (#59348)
+To:       Crag (#58746)
+Subject:  that old db
+
+hey dude, what's happening?  was just reminded of that FORT db. did you ever get a hold of it?  drop me a line-- pek5@cornell.edu
+Paul
+--------------------------
+Message 22:
+Date:     Sat Dec 25 12:36:24 1999 PST
+From:     Poem (#107630)
+To:       Crag (#58746)
+Subject:  Hello all
+
+This is just to let you all know that I no longer have easy access to a computer so my visits here will be few and far between again...  It really sucks..  for those of you who may want to know more I'll send a longer letter later when I have more time.  I'll just say life really sucks right now.  Bye for now, and I hope to be on again soon, and maybe (just maybe) talk to some of you all again...
+Poem
+--------------------------
+Deleted 22.
+Message 23:
+Date:     Thu Mar  2 15:15:11 2000 PST
+From:     Calico (#69865)
+To:       Crag (#58746)
+
+Hey there!  Just wanted to let everyone know that I'm still alive and if you wanna keep in better touch, you can email me at CathyM1006@cs.com.  Hope everyone is well.  Take care  *huggz* Calico
+--------------------------
+Deleted 23.
+Message 24:
+Date:     Thu Mar  2 15:16:23 2000 PST
+From:     Calico (#69865)
+To:       Crag (#58746)
+
+sorry about that.  :)  It's been awhile since I've been on here and can't remember how to send to ppl on my pals list.
+--------------------------
+Deleted 24.
+Message 25:
+Date:     Thu Mar 16 00:05:30 2000 PST
+From:     The Birthday Machine (#5607)
+To:       Crag (#58746)
+Subject:  Happy Birthday!
+Sender:   Delores (#31783)
+
+Happy Birthday to you...
+Happy Birthday to you...
+Happy Birthday, dear Crag...
+Happy Birthday to you...
+                                     ,} ,}
+                                     ;| ;|
+                                     || ||
+                                   __||.||__
+                                  (  `' `'  )
+                                  |~~-----~~|
+                                  |__     __|
+                                  |  ~~~~~  |
+                                  `.._____..'
+
+    ,}  ,  ,  ,  ,                                            ,  ,  ,  , ,}
+    ;| ;} ;} ;} ;} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ;} ;} ;} ;} ;|
+    || || || || ||_;|_;|_;|.;|.;|.;|.;|.;|.;|.;|.;|.;|_;|_;|_|| || || || ||
+  __||.||-||~||~|| || || || || || || || || || || || || || || ||~||~||-||.||__
+ (  `' |; |; |; |; || || || || || || || || || || || || || || |; |; |; |; `'  )
+ |~~---....______  `' `' `' `' `' `' `' `' `' `' `' `' `' `'  ______....---~~|
+ |__             ~~~~~~~~~---------------------------~~~~~~~~~             __|
+ |  ~~~----......_________                           _________......----~~~  |
+ `..___                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   ___..'
+       ~~~~------.........___________________________.........------~~~~
+
+
+<This message brought to you by the Amazing Birthday Machine!>
+--------------------------
+Deleted 25.
+Message 26:
+Date:     Mon Apr  3 16:05:02 2000 PDT
+From:     Calico (#69865)
+To:       Crag (#58746)
+
+:)  It's nice that someone is glad to know I'm alive.  No one on my pals list responded to that mail.  Hope all is well with you. :)  Take care, Calico
+--------------------------
+Player name      Connected    Idle time    Location
+-----------      ---------    ---------    --------
+niney (#90845)   56 minutes   35 minutes   a void with a view
+
+Total: 1 player, who has not been active recently.
+Deleted 26.
+Message 27:
+Date:     Sun Apr 23 01:45:50 2000 PDT
+From:     Rhi (#103168)
+To:       Crag (#58746)
+Subject:  New email address
+
+Heya! Was getting too many nasty letters from my soon to be X, BTW for a laugh
+he's due to have twin girls by his mistress in July. There is a Gof..er God.
+New email is as follows emw@beachshore.net so drop a line. Miss everyone.
+--------------------------
+Deleted 27.
+Message 28:
+Date:     Fri May  5 17:35:23 2000 PDT
+From:     Calico (#69865)
+To:       Crag (#58746)
+
+I understand that. :)  That's why I found out what alias to use and resent the mail :)
+--------------------------
+Deleted 28.
+Message 29:
+Date:     Tue May  9 22:38:52 2000 PDT
+From:     Booga (#634)
+To:       Crag (#58746)
+
+Thank you for letting us know about Snick... how are you doing?  Do you happen to know if GrimReaper is aware of her passing yet?  I know they were very close for a while.
+--------------------------
+Message 30:
+Date:     Wed May 10 06:54:30 2000 PDT
+From:     Umber (#85473)
+To:       Crag (#58746)
+
+babs grim
+--------------------------
+Deleted 30.
+Message 31:
+Date:     Wed May 10 06:57:44 2000 PDT
+From:     Umber (#85473)
+To:       Crag (#58746)
+Subject:  I'm sorry about that last one..
+
+Anyway, I just subscribed, or rather resubscribed to *BAM yesterday and just noticed that you announced Snick's passing. I'm sorry it has taken me this longto get in touch with uo er you, but I too have been dealing with medical problems and just got out of the hospital yesterday. I know sandy wanted both grim and babs to know of her passing.. if you have questions for me, or maybe you would like to talk to me on the phone or something, i'd be happy to talk a bout or epla er epexplain what I know of her situation. 
+--------------------------
+Message 32:
+Date:     Wed May 10 22:17:15 2000 PDT
+From:     Irradiate (#87354)
+To:       Crag (#58746)
+
+I'm sorry to hear about snick. I used to chat with her a bunch. I'm sorry to hear that she's gone.
+Hope you're doing okay.
+--------------------------
+Message 33:
+Date:     Thu May 11 12:15:04 2000 PDT
+From:     Umber (#85473)
+To:       Crag (#58746)
+
+"Sandy wanted me to let you know what happened .. I am sorry it took me this long like i've said. If you would ever like to talk in person, as I am not really around here that much. my number is 50 sorry 617 864 2134, my real name is Kim. Whenever you are ready is fine.
+--------------------------
+Message 34:
+Date:     Fri May 12 06:41:51 2000 PDT
+From:     Umber (#85473)
+To:       Crag (#58746)
+
+I'm located in Boston.. it's a bit far to meet for coffee :) but I am planning on making a visit to sf this summer, so maybe we could meet up then sometime.. I'm planning on having a visit with Sandy's mother while I am there.
+I understand about phones.. they can be weird, it's just an easy way to get a hold of me because I don't spend as much time here as I used to.
+Anyway, all this sadness has awakened some creative energy in me.. it is really hard sometimes.. and I wouldn't be surprised if she is sep er speaking to us still :)
+--------------------------
+Message 35:
+Date:     Sun Jul  9 20:32:54 2000 PDT
+From:     Biogeek (#58039)
+To:       Crag (#58746)
+Subject:  surgery
+
+--------------------------
+Deleted 35.
+Message 36:
+Date:     Fri Mar 16 00:05:24 2001 PST
+From:     The Birthday Machine (#5607)
+To:       Crag (#58746)
+Subject:  Happy Birthday!
+Sender:   Delores (#31783)
+
+Happy Birthday to you...
+Happy Birthday to you...
+Happy Birthday, dear Crag...
+Happy Birthday to you...
+                                   ,} ,} ,}
+                                   ;| ;| ;|
+                                   || || ||
+                                 __||.||.||__
+                                (  `' `' `'  )
+                                |~~--------~~|
+                                |__        __|
+                                |  ~~~~~~~~  |
+                                `..________..'
+
+    ,}  ,  ,  ,  ,                                            ,  ,  ,  , ,}
+    ;| ;} ;} ;} ;} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ;} ;} ;} ;} ;|
+    || || || || ||_;|_;|_;|.;|.;|.;|.;|.;|.;|.;|.;|.;|_;|_;|_|| || || || ||
+  __||.||-||~||~|| || || || || || || || || || || || || || || ||~||~||-||.||__
+ (  `' |; |; |; |; || || || || || || || || || || || || || || |; |; |; |; `'  )
+ |~~---....______  `' `' `' `' `' `' `' `' `' `' `' `' `' `'  ______....---~~|
+ |__             ~~~~~~~~~---------------------------~~~~~~~~~             __|
+ |  ~~~----......_________                           _________......----~~~  |
+ `..___                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   ___..'
+       ~~~~------.........___________________________.........------~~~~
+
+
+<This message brought to you by the Amazing Birthday Machine!>
+--------------------------
+Deleted 36.
+Message 37:
+Date:     Wed Aug  1 16:38:28 2001 PDT
+From:     Rari (#119852)
+To:       Crag (#58746)
+Subject:  Hi Robert!  It's Claire again.  I lost my Velouria account, but I'm back from traveling and can be around more. Keep in touch.  Hope you are doing well.
+
+--------------------------
+Deleted 37.
+Message 38:
+Date:     Wed Aug  1 17:28:54 2001 PDT
+From:     Rari (#119852)
+To:       Crag (#58746)
+Subject:  LOL, disregard that last email
+
+HAHA, how funny, I didn't read the instructions very well, and sent you a letter on a subject line!!!   
+Anyway, this is Claire, back on the Moo under a different name: Rari.  Keep in touch!
+--------------------------
+Deleted 38.
+Message 39:
+Date:     Mon Sep 17 17:49:15 2001 PDT
+From:     Monkey (#73364)
+To:       Crag (#58746)
+
+poop
+--------------------------
+Deleted 39.
+Message 40:
+Date:     Tue Jun  4 19:17:52 2002 PDT
+From:     Topher (#55250)
+To:       Crag (#58746)
+
+
+--------------------------
+Deleted 40.
+Message 41:
+Date:     Sat Nov 29 12:02:56 2003 PST
+From:     Avenger (#50204)
+To:       Crag (#58746)
+Subject:  my new email address is mikejoshtarp71@aol.com
+
+I hope that at least some of you will keep in touch
+--------------------------
+Deleted 41.
+I don't understand that.
+Message 42:
+Date:     Fri Jan 16 13:46:44 2004 PST
+From:     Zelicious (#104987)
+To:       Crag (#58746)
+Subject:  Help to raise money for college
+
+hey
+H..This is Zelina/Zelicious
+I need your help. I wanted to come back to Baylor University but I need help raising money. 
+I would like to know or would like it if you could not only sponsor me but send this letter to others who just might do the same. 
+I have talked to the university and tha..they said that it would be okay...just as long as they know who they're sending it to. So here goes...
+You can make however much you wish and send it to:
+Loretta Villanueva 5306. (That's to ..lor for the memo.
+The che..letter would be sent to Baylor University Cashier's Office
+P.O. Box 97048
+Waco Texas 76798-7048 and in the memo wirte:
+Loretta Villanueva-5306. 
+Thank you so much
+Zelina
+--------------------------
+Deleted 42.
+Message 43:
+Date:     Mon Jan 26 20:02:43 2004 PST
+From:     Anjelina (#78546)
+To:       Crag (#58746)
+Subject:  insaan (#64366) soon to be reaped!
+Reply-to: Anjelina (#78546)
+
+Message from Anjelina (#78546) to users of Real Life Registry (#5365):
+
+You are receiving this notification that insaan (#64366) will be
+reaped soon and all items h* owns will be recycled unless suitable
+players step forward to maitain his items.  If you or anyone you
+know is interested in saving any of his items, please either:
+
+@addfeature #2544 then @claim #5336
+
+or
+
+@go #9292 and follow the instructions for claiming objects
+
+If no suitable player claims this item, then it will be placed
+in the Bag_of_Holding for 45 days.  If you have any questions,
+don't hesitate to ask me or any of your elected reapers.
+
+If you are not interested, sorry to bother you.
+
+Thank you for your time,
+Gia
+--------------------------
+Deleted 43.
+Message 44:
+Date:     Tue Jan 27 05:43:23 2004 PST
+From:     Anjelina (#78546)
+To:       Crag (#58746)
+Subject:  CORRECTION
+Reply-to: Anjelina (#78546)
+
+Message from Anjelina (#78546) to users of Real Life Registry (#5365):
+
+@claim #5365 will claim insaan's Real Life Registery
+
+instead of
+
+@claim #5336 which claims insaan's utils which are also interesting
+
+Both could use caretakers.  Sorry for the confusing typo.
+--------------------------
+Deleted 44.
+Message 45:
+Date:     Mon Feb 16 10:13:50 2004 PST
+From:     Dulcinea (#112067)
+To:       Crag (#58746)
+Subject:  Real Life Registry (#5365) needs a new owner!
+Reply-to: Dulcinea (#112067)
+
+Message from Dulcinea (#112067) to users of Real Life Registry (#5365):
+
+insaan (#64366) is being reaped, and Real Life Registry needs a new owner!  You must be a programmer and be capable of maintaining the FO if wish to become the new owner.  If you are interested, please @go #53333 and 'claim #5365'.  If you have any questions, please moomail Dulcinea.  Thanks!
+--------------------------
+Deleted 45.
+Message 46:
+Date:     Tue Mar 16 00:05:15 2004 PST
+From:     The Birthday Machine (#5607)
+To:       Crag (#58746)
+Subject:  Happy Birthday!
+Sender:   Delores (#31783)
+
+Happy Birthday to you...
+Happy Birthday to you...
+Happy Birthday, dear Crag...
+Happy Birthday to you...
+                               ,}  ,  ,  ,  , ,}
+                               ;| ;} ;} ;} ;} ;|
+                               || || || || || ||
+                             __||.||-||-||-||.||__
+                            (  `' |; |; |; |; `'  )
+                            |~~---...........---~~|
+                            |__                 __|
+                            |  ~~~-----------~~~  |
+                            `..___           ___..'
+                                  ~~~~~~~~~~~
+
+    ,}  ,  ,  ,  ,                                            ,  ,  ,  , ,}
+    ;| ;} ;} ;} ;} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ,} ;} ;} ;} ;} ;|
+    || || || || ||_;|_;|_;|.;|.;|.;|.;|.;|.;|.;|.;|.;|_;|_;|_|| || || || ||
+  __||.||-||~||~|| || || || || || || || || || || || || || || ||~||~||-||.||__
+ (  `' |; |; |; |; || || || || || || || || || || || || || || |; |; |; |; `'  )
+ |~~---....______  `' `' `' `' `' `' `' `' `' `' `' `' `' `'  ______....---~~|
+ |__             ~~~~~~~~~---------------------------~~~~~~~~~             __|
+ |  ~~~----......_________                           _________......----~~~  |
+ `..___                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~                   ___..'
+       ~~~~------.........___________________________.........------~~~~
+
+
+<This message brought to you by the Amazing Birthday Machine!>
+--------------------------
+Deleted 46.
+Message 47:
+Date:     Mon Jul 12 17:20:30 2004 PDT
+From:     Avenger (#50204)
+To:       Crag (#58746)
+Subject:  my email address is mikejoshtarp71@yahoo.com
+
+I miss you a great deal and hope to hear from you soon
+--------------------------
+Deleted 47.
+Message 48:
+Date:     Thu Sep 23 20:48:57 2004 PDT
+From:     Cashmere (#69437)
+To:       Crag (#58746)
+Subject:  hello are you robert?
+
+crag, are you who I think you are?
+if you are write me back sometime.
+peace out,
+s
+--------------------------
+Message 49:
+Date:     Thu Nov 11 14:41:06 2004 PST
+From:     niney (#90845)
+To:       Crag (#58746)
+
+Thanks, I fixed this. I turned off something to try to avoid the timeout, but I guess it didn't work. Oh well, at least the moo gets some excitement for a bit, even if it's at my expense.
+--------------------------
+Deleted 49.
+You have no next message.
+...(renumbering 2 -- 15)
+Messages on Crag (#58746) renumbered 1-15.
+Current message is now 15.
+Not a sub-command of @measure: me
+Syntax:
+  @measure object <object name>
+  @measure summary [player]
+  @measure new [player]
+  @measure breakdown <object name>
+  @measure recent [number of days] [player]
+Checking size of Crag (#58746)...
+Size of Crag (#58746) is 9,732 bytes.
+Objects owned by Crag (from #0 to #122330):
+  9K  #58746 Crag                       [Storage room]
+  3K  #27242 Storage room              
+-- 2 objects.  Total bytes: 12,852.-------------------------------------------

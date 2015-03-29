@@ -1,0 +1,30 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.
+Last connected Wed May  9 12:56:43 2007 PDT from dsl081-175-048.sea1.dsl.speakeasy.net
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Master Bedroom                0 seconds                         
+
+Total: 1 person, who has been active recently.
+Do you really want to shut down the server in 2 minutes? [Enter `yes' or `no']
+Aborted.
+-----
+@SHUTDOWN
+=========
+
+Syntax:  @shutdown [<text>]
+
+This is the friendly way to do a server shutdown; it arranges for the actual shutdown to take place two minutes hence.  Shutdown is preceded by a sequence of warnings to all connected players.  Warnings are likewise given to all players who connect during this time.  <text>, if given is included in these warning messages, perhaps as an explanation for why the server is being shut down.
+
+Shutdown may be aborted at any time by using @abort-shutdown.
+
+=> 0
+[used 2 ticks, 0 seconds.]
+*** Shutting down: shutdown() called by Crag (#958) ***

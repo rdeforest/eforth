@@ -1,0 +1,17 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A leather couch is here.
+Last connected Sun Apr  7 15:50:26 2013 PDT from localhost
+#$#mcp-negotiate-can 21889911 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 21889911 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 21889911 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 21889911
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           First room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
