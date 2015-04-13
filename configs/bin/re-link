@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 # Update symlinks in ~ to point to $project_root/home
+# Linking functions all have same arg order as ln -s, ie ln -s existingObject linkName
 
 use strict;
 use warnings;
@@ -12,7 +13,7 @@ my $verbosity = 1;
 
 my $projectRoot = getProjectRoot();
 
-relinkDir($ENV{HOME}, $projectRoot . "/home");
+relinkDir($projectRoot . "/home", $ENV{HOME});
 
 sub vLog {
   my ($level, $message) = @_;
@@ -22,7 +23,7 @@ sub vLog {
   }
 
   if ($level <= $verbosity) {
-    print $message, "\n";
+    print $message;
   }
 }
 
@@ -32,59 +33,61 @@ sub getProjectRoot {
 }
 
 sub relinkItem {
-    my ($item, $dest) = @_;
+    my ($item, $link) = @_;
 
-    return if $item =~ qr{/\..?$};
+    if ($item =~ qr{/\..?$}) {
+      vLog("Skipping item ending in one or two dots: $item\n");
+      return;
+    }
 
-    print "relinkItem($item, $dest)\n";
+    vLog(2, "relinkItem($item, $link)\n");
 
     if (-d $item) {
-        relinkDir($item, $dest);
+        relinkDir($item, $link);
     } else {
-        relinkFile($item, $dest);
+        relinkFile($item, $link);
     }
 }
 
 sub relinkFile {
-    my ($home, $src) = @_;
+    my ($file, $link) = @_;
 
-    if (-e $home && !-l $home) {
-        warn "skipping file $home: exists and isn't a link\n";
+    if (-e $link && !-l $link) {
+        warn "skipping file $link: exists and isn't a link\n";
     }
 
-    unlink $src;
-    symlink $home, $src;
+    unlink $link;
+    symlink $file, $link;
 }
 
 sub relinkDir {
-    my ($homeDir, $srcDir) = @_;
+    my ($dir, $link) = @_;
 
-    ! -d $srcDir and die "relinkDir called with non-directory '$srcDir'";
+    vLog("Updating $link from $dir\n");
 
-    vLog("Updating $homeDir from $srcDir\n");
-
-    if (-l $srcDir) {
-        if (-e $homeDir && !-l $homeDir) {
-          warn "Skipped $homeDir: expected symlink.\n";
+    if (-l $dir) {
+        if (-e $link && !-l $link) {
+          warn "Skipped $link: expected symlink.\n";
           return;
         }
 
-        unlink $srcDir;
-        symlink $homeDir, $srcDir;
+        unlink $link;
+        symlink $dir, $link;
         return;
     }
 
-    if (!-e $homeDir) {
-        mkdir $homeDir;
+    if (!-e $link) {
+        mkdir $link;
     }
 
-    if (!-d $homeDir) {
-        warn "Skipped $homeDir: expected directory.\n";
+    if (!-d $link) {
+        warn "Skipped $link: expected directory.\n";
         return;
     }
 
-    opendir(C, $srcDir);
-    while(my $item = readdir(C)) {
-        relinkItem("$homeDir/$item", "$srcDir/$item");
+    opendir(my $dh, $dir);
+    while(my $item = readdir($dh)) {
+        next if $item eq "." or $item eq "..";
+        relinkItem("$dir/$item", "$link/$item");
     }
 }
