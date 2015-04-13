@@ -8,9 +8,23 @@ use warnings;
 use File::Basename;
 use Cwd;
 
+my $verbosity = 1;
+
 my $projectRoot = getProjectRoot();
 
 relinkDir($ENV{HOME}, $projectRoot . "/home");
+
+sub vLog {
+  my ($level, $message) = @_;
+
+  if (!$message) {
+    ($level, $message) = (1, $level);
+  }
+
+  if ($level <= $verbosity) {
+    print $message, "\n";
+  }
+}
 
 # Assumes script is in $root/bin or something
 sub getProjectRoot {
@@ -32,31 +46,45 @@ sub relinkItem {
 }
 
 sub relinkFile {
-    my ($config, $real) = @_;
+    my ($home, $src) = @_;
 
-    -e $real && !-l $real and die "file $real exists and isn't a link";
+    if (-e $home && !-l $home) {
+        warn "skipping file $home: exists and isn't a link\n";
+    }
 
-    -e $real && unlink $real;
-    symlink $config, $real;
+    unlink $src;
+    symlink $home, $src;
 }
 
 sub relinkDir {
-    my ($configDir, $realDir) = @_;
+    my ($homeDir, $srcDir) = @_;
 
-    if (-l $realDir) {
-        unlink $realDir;
-        symlink $configDir, $realDir;
+    ! -d $srcDir and die "relinkDir called with non-directory '$srcDir'";
+
+    vLog("Updating $homeDir from $srcDir\n");
+
+    if (-l $srcDir) {
+        if (-e $homeDir && !-l $homeDir) {
+          warn "Skipped $homeDir: expected symlink.\n";
+          return;
+        }
+
+        unlink $srcDir;
+        symlink $homeDir, $srcDir;
         return;
     }
 
-    if (!-e $realDir) {
-        mkdir $realDir;
+    if (!-e $homeDir) {
+        mkdir $homeDir;
     }
 
-    -d $realDir or die "relinkDir called with non-directory '$realDir'";
+    if (!-d $homeDir) {
+        warn "Skipped $homeDir: expected directory.\n";
+        return;
+    }
 
-    opendir(C, $configDir);
+    opendir(C, $srcDir);
     while(my $item = readdir(C)) {
-        relinkItem("$configDir/$item", "$realDir/$item");
+        relinkItem("$homeDir/$item", "$srcDir/$item");
     }
 }
