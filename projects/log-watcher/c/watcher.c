@@ -16,15 +16,24 @@
 
 timeval timeout = { TIMEOUT, 0 };
 
-fd_set inotify_fd_set, tailing_file_fd_set, all_file_fd_set;
+typedef struct {
+  int fd;
+  char *path;
+} dir_watcher;
 
+dir_watcher log_dir_watcher;
+
+typedef struct {
+  int fd;
+  void (*parser)(&file_watcher);
+  char *name;
+  int lines_seen;
+} file_watcher;
+
+fd_set all_fds;
+
+file_watcher *file_watchers;
 int files_watched;
-char **file_names;
-int *lines_seen;
-
-void watch_dir(int inotify, char *path) {
-  inotify_add_watch(inotify, path, IN_MODIFY | IN_CREATE);
-}
 
 int watchable_file(char *path) {
   char *pos = rindex(path, '/');
@@ -97,9 +106,16 @@ void check_file(int i) {
   }
 }
 
-int main() {
-  int inotify = inotify_init1(IN_NONBLOCK);
-  FD_SET(inotify, inotify_fd_set);
+int init_dir_watcher(dir_watcher *this, char *path) {
+  this->fd = inotify_init1(IN_NONBLOCK);
+  this->path = path;
+  inotify_add_watch(inotify, path, IN_MODIFY | IN_CREATE);
+  return inotify;
+}
 
-  watch_dir(inotify, LOGDIR);
+int main() {
+  init_dir_watcher(&log_dir_watcher, LOGDIR);
+  fd_set(log_dir_watcher.fd, all_fds);
+
+  return event_loop();
 }

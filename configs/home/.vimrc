@@ -1,3 +1,6 @@
+" https://github.com/tpope/vim-pathogen
+execute pathogen#infect()
+
 set smartindent
 set autoindent
 set expandtab
