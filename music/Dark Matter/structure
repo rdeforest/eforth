@@ -6,11 +6,11 @@ Time signature 7/4 througout
 
 00:41 four measures
   +drums: 7/4 time
-    high hat 
-      on every quarter, open on 2 and 6:
-      tick open close tick tick open close
     ride on every quarter
       ting ting ting ting ting ting ting
+    high hat 
+      on every quarter:
+      tick open close tick tick open close
 
     bass bass snare bass snare
     one and (two and) three (and four) and (five and six) and (seven and)
@@ -27,6 +27,7 @@ Time signature 7/4 througout
   +synth
     Held chords
     A Gbm F G
+    A4, C#4, E4; Gb3, C#4, E4; F3, C, E4; G3, B4, E4
     Changes on start of each measure except G on 4th 'and'
 
 four measures
