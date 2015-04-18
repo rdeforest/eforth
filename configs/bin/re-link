@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 # Update symlinks in ~ to point to $project_root/home
+# Linking functions all have same arg order as ln -s, ie ln -s existingObject linkName
 
 use strict;
 use warnings;
@@ -8,9 +9,23 @@ use warnings;
 use File::Basename;
 use Cwd;
 
+my $verbosity = 1;
+
 my $projectRoot = getProjectRoot();
 
-relinkDir($ENV{HOME}, $projectRoot . "/home");
+relinkDir($projectRoot . "/home", $ENV{HOME});
+
+sub vLog {
+  my ($level, $message) = @_;
+
+  if (!$message) {
+    ($level, $message) = (1, $level);
+  }
+
+  if ($level <= $verbosity) {
+    print $message;
+  }
+}
 
 # Assumes script is in $root/bin or something
 sub getProjectRoot {
@@ -18,45 +33,61 @@ sub getProjectRoot {
 }
 
 sub relinkItem {
-    my ($item, $dest) = @_;
+    my ($item, $link) = @_;
 
-    return if $item =~ qr{/\..?$};
+    if ($item =~ qr{/\..?$}) {
+      vLog("Skipping item ending in one or two dots: $item\n");
+      return;
+    }
 
-    print "relinkItem($item, $dest)\n";
+    vLog(2, "relinkItem($item, $link)\n");
 
     if (-d $item) {
-        relinkDir($item, $dest);
+        relinkDir($item, $link);
     } else {
-        relinkFile($item, $dest);
+        relinkFile($item, $link);
     }
 }
 
 sub relinkFile {
-    my ($config, $real) = @_;
+    my ($file, $link) = @_;
 
-    -e $real && !-l $real and die "file $real exists and isn't a link";
+    if (-e $link && !-l $link) {
+        warn "skipping file $link: exists and isn't a link\n";
+    }
 
-    -e $real && unlink $real;
-    symlink $config, $real;
+    unlink $link;
+    symlink $file, $link;
 }
 
 sub relinkDir {
-    my ($configDir, $realDir) = @_;
+    my ($dir, $link) = @_;
 
-    if (-l $realDir) {
-        unlink $realDir;
-        symlink $configDir, $realDir;
+    vLog("Updating $link from $dir\n");
+
+    if (-l $dir) {
+        if (-e $link && !-l $link) {
+          warn "Skipped $link: expected symlink.\n";
+          return;
+        }
+
+        unlink $link;
+        symlink $dir, $link;
         return;
     }
 
-    if (!-e $realDir) {
-        mkdir $realDir;
+    if (!-e $link) {
+        mkdir $link;
     }
 
-    -d $realDir or die "relinkDir called with non-directory '$realDir'";
+    if (!-d $link) {
+        warn "Skipped $link: expected directory.\n";
+        return;
+    }
 
-    opendir(C, $configDir);
-    while(my $item = readdir(C)) {
-        relinkItem("$configDir/$item", "$realDir/$item");
+    opendir(my $dh, $dir);
+    while(my $item = readdir($dh)) {
+        next if $item eq "." or $item eq "..";
+        relinkItem("$dir/$item", "$link/$item");
     }
 }
