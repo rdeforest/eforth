@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/robert/DwarfFortress'
-let g:netrw_dirhist_2='/qnap/Public/DwarfFortress/df-40.13/raw/objects'
-let g:netrw_dirhist_3='/qnap/Public/DwarfFortress/df-versions/df-40.13/data/init/macros'
-let g:netrw_dirhist_4='/qnap/Public/DwarfFortress/df-versions/df-40.13/data/init'
-let g:netrw_dirhist_5='/qnap/robert/df/df-versions/df-40.13/raw/objects'
-let g:netrw_dirhist_6='/qnap/Public/DwarfFortress'
-let g:netrw_dirhist_7='/qnap/Public/DwarfFortress/df'
-let g:netrw_dirhist_8='/home/robert/.config/pianobar'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/robert/dev/jamesrom.github.io'
+let g:netrw_dirhist_2='/home/rdeforest/RightOnTime/views'
+let g:netrw_dirhist_3='/public/file/0/sandbox'
+let g:netrw_dirhist_4='/home/rdeforest/.ssh'

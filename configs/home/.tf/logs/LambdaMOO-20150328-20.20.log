@@ -1,0 +1,93 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 62 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+
+You note that the 60 watt incandescent bulb implies that the owner either doesn't care about the environment, or hasn't changed anything since compact flourestent lights became affordable.
+There is new activity on the following list:
+    *Server-Hackers (#24451)             5 new messages
+Last connected Fri Jan 30 19:02:51 2015 PST from 63.224.54.239
+===== *Server-Hackers (#24451) (5 messages) ==
+
+Message 1164 on *Server-Hackers (#24451):
+Date:     Tue Feb 10 07:08:00 2015 PST
+From:     Sycholic (#114174)
+To:       *Server-Hackers (#24451)
+
+Long time no see all, got a question.... How hard do you think it would be to code/convert the server into java? thx - Sych
+--------------------------
+Message 1165 on *Server-Hackers (#24451):
+Date:     Tue Feb 10 12:27:10 2015 PST
+From:     Puff (#1449)
+To:       *Server-Hackers (#24451)
+
+Just offhand, isn't there some sort of C++ port of the MOO server out there?
+
+That might be easier to port to Java.  Then again, it's C++, so it might be an insane mess.
+--------------------------
+Message 1166 on *Server-Hackers (#24451):
+Date:     Tue Feb 10 12:30:35 2015 PST
+From:     Sycholic (#114174)
+To:       *Server-Hackers (#24451)
+
+okay I'll check it out and good to see ya again Puff.
+--------------------------
+Message 1167 on *Server-Hackers (#24451):
+Date:     Tue Feb 17 23:19:39 2015 PST
+From:     Xythian (#24436)
+To:       Sycholic (#114174) and *Server-Hackers (#24451)
+
+>  Long time no see all, got a question.... How hard do you think it
+>  would be to code/convert the server into java? thx - Sych
+
+About as hard as writing a new server. A little harder in some ways since with a new server you'd be making up all the semantics, but if you wanted something that would run existing dbs it would need to be compatible. A little easier in some ways, since having the semantics already would skip a bunch of design work. A lot easier than it might have once been since you probably wouldn't need to do anything too heroic to get reasonable performance.
+
+I suppose you could use a suitable compiler to compile the existing server into bytecodes for the JVM but I assume the purpose of your question was to see what it'd take to have a Java version of the server to hack on rather than just running on top of the JVM for some reason.
+
+The most interesting related project I know of at the moment is https://github.com/verement/etamoo (though that's not Java). It's still incomplete but unlike the other projects I know if it introduces parallelism without changing the observed behavior for code which in theory would mean it can run existing dbs.
+
+Mostly compatible-with-LambdaMOO server rewrites are interesting (to me, at least) if they permit the reuse of the database (which is in many ways is bigger and harder to recreate from scratch than the server) while (hopefully) also introducing some new capabilities that could not be introduced with more mundane extensions to the existing C server.
+
+--------------------------
+Message 1168 on *Server-Hackers (#24451):
+Date:     Tue Mar 10 13:03:24 2015 PDT
+From:     Defender (#124347)
+To:       *Server-Hackers (#24451)
+Subject:  It's not java, but...
+
+https://github.com/astralfrontier/lambdamoo
+
+This is an attempt to code a working LambdaMOO replacement in Ruby. This could then be run in a Java process (via JRuby) if that's what people wanted to do, or plugged into a Ruby on Rails app, or whatever.
+
+I'm starting with the parser, which will return an executable program. Many common language features are implemented, along with unit tests for them.
+
+If anyone is interested in contributing, feel free to do so. I'll take pull requests on github.
+--------------------------
+
+===== End of new mail ========================
+Did you get all of that? [Enter `yes' or `no']
+< connected: Crag. Total: 63 >
+Last-read-dates updated
