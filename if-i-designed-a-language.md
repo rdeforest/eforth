@@ -24,6 +24,15 @@ For example
 
     someArray.forEach((e) := { console.log(e) }
 
+As always, Lambdas inherit the scope they are defined within.
+
+    memory = []
+
+    someArray.find((e) := { memory.push(e) if e.rememberMe; e.findMe }
+
+The outer 'memory' contains a grep of the elements with a true .rememberMe and
+the result of the find is the first e with a true .findMe.
+
 # Objects and Arrays
 
 Same as CoffeeScript.
@@ -56,7 +65,3 @@ No "unless" or "until". They're too lazy even for me. What's wrong with while (!
 
 No need for 'switch' because of functional programming.
 
-    switch(expr, cases) := {
-      fallthrough = false
-      
-      foreach (cases)
