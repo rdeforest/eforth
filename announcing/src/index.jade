@@ -1,10 +1,12 @@
-html
-  head
-    title Robert de Forest
+extends ./layout.jade
 
-  body
-    h1 Welcome, one and all.
+block title
+  title Robert de Forest
 
-    p
-      text You most likely came here for more information about my decision to 
-      a(href="alcohol/index.html") end my relationship with alcoholic beverages.
+block banner
+  h1 Welcome, one and all.
+
+block content
+  p
+    You most likely came here for more information about my decision to 
+    a(href="alcohol/index.html") end my relationship with alcoholic beverages.
