@@ -1,3 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/robert/dev/jamesrom.github.io'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/robert/dev/CORVID/app/node_modules/minimal-db/node_modules/objects/2_wiz'
+let g:netrw_dirhist_2='/home/robert/dev/CORVID/app'
+let g:netrw_dirhist_3='/home/robert/dev/CORVID/app/node_modules'
+let g:netrw_dirhist_4='/home/robert/dev/CORVID/app/node_modules/telnet-ui'
+let g:netrw_dirhist_5='/home/robert/dev/small-projects/announcing'
