@@ -112,3 +112,7 @@ export PATH=$PATH:~/bin
 export GOPATH=$HOME/goworkspace
 
 ulimit -c unlimited
+
+function retitle() {
+  screen -X title "$1"
+}
