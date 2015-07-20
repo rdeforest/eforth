@@ -10,3 +10,8 @@ set softtabstop=2
 set background=dark
 
 set linebreak
+set showbreak=\ 
+
+syntax on
+
+set modeline
