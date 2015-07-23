@@ -14,45 +14,31 @@ div {
   border: solid black 1px;
 }
   
-.titleBar {
+.banner {
   background-color: #EEF;
   text-align: center;
-  font-size: 200%;
-  padding: 1em;
-}
-
-.titleBar * {
-  vertical-align: middle;
 }
 
 .menu {
-  width: 15em;
+  width: 20%;
   border-top: none;
-  position: relative;
+  display: inline-block;
 }
 
 .content {
-  position: relative;
-  /*
-  left: 1em;
-  top: 1em;
-  right: -1em;
-  bottom: -1em;
-  border: none;
-  */
+  width: 55%;
+  display: inline-block;
 }
 
-.leftMenu {
-  float: left;
+.left-column {
   background-color: #EFE;
 }
 
-.rightMenu {
-  float: right;
-  display: none;
+.right-column {
+  background-color: #EFE;
 }
 
-.nonTitle {
+.postBanner {
   border: none;
   height: 89%;
 }

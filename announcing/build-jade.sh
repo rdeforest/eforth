@@ -1,1 +1,1 @@
-jade -w --hierarchy -o dist src
+jade -P -w --hierarchy -o dist src

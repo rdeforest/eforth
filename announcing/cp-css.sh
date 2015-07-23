@@ -1,7 +1,10 @@
-while inotifywait -mr src/css; do
+while inotifywait -mr src/css | read watched event subject; do
   rm -rf dist/css
   mkdir dist/css
 
-  find src/css -type f -name '*.css' -print0 |
-    xargs -0 -I{} cp "{}" "dist/cs/{}.text=css"
+  find src/css -type f -name '*.css' |
+    while read s; do
+      d=$(echo "$s" | sed 's/src/dist/').text=css
+      cp -v "$s" "$d"
+    done
 done

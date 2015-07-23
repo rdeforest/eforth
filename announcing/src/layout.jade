@@ -4,15 +4,20 @@ html
   head
     block title
       title No title specified in template.
+    link(rel="stylesheet" type="text/css" href="css/style.css.text=css")
+
   body
     div.banner
       block banner
         span No banner?
-    div.left-column.menu
-      include menu.jade
-    div.right-column.menu
-      block right-column
-        span No right column?
-    div.content
-      block content
-        span No content?
+
+    div.not-banner
+      div.left-column.menu
+        block left-column
+          span No left column?
+      div.right-column.menu
+        block right-column
+          span No right column?
+      div.content
+        block content
+          span No content?
