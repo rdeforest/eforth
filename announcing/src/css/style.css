@@ -26,23 +26,28 @@ div {
 }
 
 .content {
-  width: 55%;
+  border: none;
+  position: relative;
+  width: 60%;
   display: inline-block;
+  background-color: #FEE;
 }
 
 .left-column {
+  float: left;
   background-color: #EFE;
 }
 
 .right-column {
+  float: right;
   background-color: #EFE;
 }
 
 .postBanner {
-  border: none;
-  height: 89%;
+  position: relative;
+  bottom: 0px;
 }
 
-.nonTitle div {
+.postBanner div {
   height: 99%;
 }

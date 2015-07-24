@@ -1,4 +1,4 @@
-while inotifywait -mr src/css | read watched event subject; do
+inotifywait -mr -e create src/css | while read watched event subject; do
   rm -rf dist/css
   mkdir dist/css
 
@@ -7,4 +7,6 @@ while inotifywait -mr src/css | read watched event subject; do
       d=$(echo "$s" | sed 's/src/dist/').text=css
       cp -v "$s" "$d"
     done
+
+  sleep 1
 done
