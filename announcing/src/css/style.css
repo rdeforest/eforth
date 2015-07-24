@@ -10,25 +10,38 @@ body {
   bottom: 20px;
 }
 
-div {
-  border: solid black 1px;
-}
-  
 .banner {
   background-color: #EEF;
   text-align: center;
+}
+
+.not-banner {
+  height: 80%;
+}
+
+.inner {
+  border: solid black 1px;
+  height: 100%;
+}
+
+.right-column > .inner > *,
+.content > .inner > * {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .menu {
   width: 20%;
   border-top: none;
   display: inline-block;
+  height: 100%;
 }
 
 .content {
   border: none;
   position: relative;
   width: 60%;
+  height: 100%;
   display: inline-block;
   background-color: #FEE;
 }
