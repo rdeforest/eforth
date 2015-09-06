@@ -10,11 +10,44 @@
 ###
 
 Primes = require './prime'
+Euler = require './euler'
 
-pGen = Primes.generator()
-loop
-  p = pGen.next()[0]
-  candidate = p - 1
+class p357
+  constructor: ->
 
-ok = (n) ->
+  answer: (max) ->
+    sum = 1 # 1 is ok() because 1 + 1/1 = 2, which is prime
+    pGen = Primes.generator()
+    loop
+      p = pGen.next()[0]
+      if Primes.isPrime p + 2
+        candidate = p * 2
 
+        if candidate > max
+          break
+
+        if @ok candidate
+          sum += candidate
+
+    return sum
+
+  ok: (n, debug) ->
+    div = Euler.divisorsOf n
+
+    return false if n % 2
+    return false if div.length % 2
+    
+    while div.length
+      a = div.shift()
+      b = div.pop()
+      s = a + b
+      p = Primes.isPrime s
+
+      if debug
+        debug a, b, s, p
+
+      return false unless p
+
+    return true
+
+module.exports = new p357

@@ -8,7 +8,7 @@ class Primes
 
   isPrime: (n) ->
     @makeMore n
-    n is 2 or (@primes[n] and true)
+    n is 2 or (@primeIdx[n] and true or false)
 
 
   makeMore: (to = @max * 2 + 1) ->
@@ -40,6 +40,7 @@ class Primes
 
 
   discoverPrime: (p) ->
+    @primeIdx[p] = @known.length
     @known.push p
     @sieve.push p << 1
     @max = p
