@@ -1,32 +1,62 @@
-primes = [2, 3]
-isPrime = {2: true, 3: true}
+class Primes
+  constructor: ->
+    @known = []
+    @sieve = []
+    @primeIdx = {}
+    @discoverPrime p for p in [2, 3]
 
-Object.defineProperty this, 'lastKnownPrime'
-  get: -> primes[-1..][0]
 
-makeMorePrimes = (to = lastKnownPrime ** 2) ->
-  sieve = {}
+  isPrime: (n) ->
+    @makeMore n
+    n is 2 or (@primeIdx[n] and true or false)
 
-  for pi in [0 .. primes.length - 1]
-    p = primes[pi]
 
-    for q in primes[pi .. primes.length - 1]
-      pq = p*q
-      sieve[pq] = true
-      break if pq >= to
+  makeMore: (to = @max * 2 + 1) ->
+    while @max < to
+      @findNext()
 
-  for x in [lastKnownPrime + 2 .. to]
-    if not sieve[x]
-      primes.push x
-      isPrime[x] = true
 
-primeMakerMaker = ->
-  idx = 0
-  loop
-    if idx > primes.length
-      setTimeout makeMorePrimes
-    yield primes[idx++]
+  findNext: ->
+    next = @max + 2
+    done = true
 
-module.exports =
-  primeMakerMaker: primeMakerMaker
-  isPrime: (x) -> isPrime[x]
+    loop
+      done = true
+
+      for pidx in [0 .. @known.length - 1]
+        [p, m] = [@known[pidx], @sieve[pidx]]
+
+        while (diff = next - m) > 0
+          m = @sieve[pidx] += p
+
+        if diff is 0
+          next += 2
+          done = false
+          break
+
+      if done
+        @discoverPrime next
+        return next
+
+
+  discoverPrime: (p) ->
+    @primeIdx[p] = @known.length
+    @known.push p
+    @sieve.push p << 1
+    @max = p
+
+
+  generator: ->
+    idx = 0
+
+    loop
+      if idx > @known.length
+        setTimeout => @makeMore()
+
+      if idx is @known.length
+        @makeMore()
+
+      yield @known[idx++]
+
+
+module.exports = new Primes

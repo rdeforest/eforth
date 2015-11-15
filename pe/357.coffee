@@ -1,83 +1,53 @@
 ###
-Consider the divisors of 30: 1,2,3,5,6,10,15,30.
-It can be seen that for every divisor d of 30, d+30/d is prime.
 
-Find the sum of all positive integers n not exceeding 100 000 000
-such that for every divisor d of n, d+n/d is prime.
+    Consider the divisors of 30: 1,2,3,5,6,10,15,30.  It can
+    be seen that for every divisor d of 30, d + 30/d is prime.
+
+    Find the sum of all positive integers n not exceeding
+    100 000 000 such that for every divisor d of n, d+n/d is
+    prime.
+
 ###
 
-RANK_FACTOR = 3
+Primes = require './prime'
+Euler = require './euler'
 
-main = ->
-  init()
-  test()
+class p357
+  constructor: ->
 
-init = ->
-  noteNewPrimes [2, 3]
+  answer: (max) ->
+    sum = 1 # 1 is ok() because 1 + 1/1 = 2, which is prime
+    pGen = Primes.generator()
+    loop
+      p = pGen.next()[0]
+      if Primes.isPrime p + 2
+        candidate = p * 2
 
-test = ->
-  kp = knownPrimes true
+        if candidate > max
+          break
 
-  for x in [1..11]
-    console.log kp.next()
+        if @ok candidate
+          sum += candidate
 
+    return sum
 
-maxKnownPrime = 1
-primes = {}
+  ok: (n, debug) ->
+    div = Euler.divisorsOf n
 
+    return false if n % 2
+    return false if div.length % 2
+    
+    while div.length
+      a = div.shift()
+      b = div.pop()
+      s = a + b
+      p = Primes.isPrime s
 
-noteNewPrimes = (pList) ->
-  rank = RANK_FACTOR
+      if debug
+        debug a, b, s, p
 
-  for p in pList
-    rank *= RANK_FACTOR while rank < p
-    primes[rank] or= []
-    primes[rank].push p
+      return false unless p
 
-  maxKnownPrime = p
+    return true
 
-
-knownPrimes = (gen) ->
-  rank = RANK_FACTOR
-  pIdx = 0
-  needMorePrimes = false
-
-  while not needMorePrimes
-    if not primes[rank]
-      console.log primes
-      throw new Error "What happened to rank #{rank}? "
-    p = primes[rank][pIdx++]
-
-    if p is maxKnownPrime
-      if gen
-        getNextPrime()
-      else
-        needMorePrimes = true
-
-    if not pIdx < primes[rank].length
-      rank *= RANK_FACTOR
-      pIdx = 0
-
-    yield p
-
-  yield return
-
-getNextPrime = ->
-  sieve = {}
-  sieveTop = maxKnownPrime ** 2 + 1
-  kp = knownPrimes()
-  
-  while not ({value, done} = kp.next()).done
-    q = maxKnownPrime - (maxKnownPrime % value)
-
-    while q < sieveTop
-      q += value
-      sieve[q] = true
-
-  newPrimes = (p for p in [maxKnownPrime + 2 .. sieveTop] when not sieve[p])
-
-  noteNewPrimes newPrimes
-
-  return newPrimes[0]
-
-main()
+module.exports = new p357
