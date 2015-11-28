@@ -1,0 +1,21 @@
+# Project facets
+
+  - sun
+    - purpose
+    - intent
+    - motivation
+  - mercury
+    - definitions
+    - lingo
+  - venus
+    - best pratices
+    - style
+  - earth
+    - public face
+  - mars
+    - initiatives
+  - jupiter
+    - contributors
+    - shoulders of giants
+  - saturn
+    - constraints
