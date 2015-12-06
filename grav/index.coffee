@@ -14,8 +14,8 @@
   For each iteration
     calculate
       next1 = (now   + dt)
-      next2 = (next1 + dt)
-      next3 = (next2 + dt)
+      next = (next1 + dt)
+      next3 = (next + dt)
       jump3 = (now   + dt * 3)
       diff = max distance between next3 and jump3 (error accumulation)
 
@@ -23,7 +23,7 @@
       dt /= 2 
       now = next
     else if diff > minError
-      now = next2
+      now = next
     else
       dt *= 1.5
       now = next3
@@ -42,7 +42,8 @@ addBody = (added) ->
   for k, v of body
     body[k].push added[k]
 
-distanceScale = 1.5 * 10 ** 6 # km/pixel
+maxVel = 1.5 * 10 ** 6 # km (about one pixel)
+minVel = maxVel / 3
 
 addBody
   name: 'Sun'
@@ -62,31 +63,34 @@ addBody
   radius: 10
   color: [31, 191, 255]
 
+turnCrank = (bodies, dt) ->
+  next = {}
+
+  for b1, i in bodies
+    next.acc = [0,0,0]
+
+    for b2 in bodies[i + 1..]
+      f = calcForce b1, b2
+
 dt = 1
 
-trials = trial body, dt
-
-generateTrials = ->
-  trials.push trial trials[0], dt
-  trials.push trial trials[1], dt
+adjustDt = (err) ->
   jump = trial body, dt * 2
 
-calculateError = ->
-  next2 = trials[1]
+  err = calculateError jump, trials[1]
 
-  most = 0
+  if err > maxError
+    dt /= 2
+  else if err < minError
+    dt *= 1.5
+    trials = [...
+    next = trials[2]
 
-  for b, i in jump
-    for dim, di in b.loc
-      dist = abs(b.loc[di] - 
-    
-
-
-adjustDt = ->
+updateBodies = (next) ->
 
 while running
-  generateTrials()
-  calculateError()
-  adjustDt()
-  updateBodies()
-  showUpdate()
+  trials.push trial trials[0], dt
+  adjustDt err
+  updateBodies trials[0]
+  trials.shift()
+  showUpdate bodies
