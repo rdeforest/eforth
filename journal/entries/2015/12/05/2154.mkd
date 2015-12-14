@@ -1,0 +1,56 @@
+# Alright let's do this journal thing
+
+I'm feeling pretty crappy and it seems like capturing the specifics might be
+useful for diagnosis or something. First the inputs.
+
+## Status
+
+Feelings:
+
+* grumpy
+* 
+
+### Health
+
+* I've been sick for a week.
+* I haven't been eating or sleeping well.
+* STILL adjusting meds. Going up to 30mg Fluoxetine in a week.
+
+### Work
+
+Wednesday Jeff pissed me off again. Definitely changing teams ASAP but
+navigating those waters is going to be a royal PITA. Would LOVE to shift under
+Andy or something but I don't think that's going to happen any time soon.
+
+### Raine
+
+Nothing new, but I'm starting to lose patience with her through no fault of
+her own.
+
+### Friends
+
+I see them Mondays and Wednesdays but I'm not feeling connected. Folks were
+over for the holidays but I was sleep deprived.
+
+### Motorcycle
+
+In the shop to fix up all remaining issues other than the ignition switch.
+
+### Computers
+
+Just finished installing Windows 10 on my main desktop last weakend. Haven't
+gotten Linux working on it again since. Need to re-connect the old SSD and
+setup VirtualBox to boot it.
+
+Tablet is fine except that VirtualBox doesn't start any more.
+
+Neglecting authors and qnap.
+
+### Projects
+
+#### Corvid
+
+neglected
+
+#### Four corners tour
+
