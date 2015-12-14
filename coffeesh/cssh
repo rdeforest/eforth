@@ -1,0 +1,53 @@
+#!/usr/bin/env coffee
+
+[coffee, cssh, invokedAs, remainingArgs] = process.argv
+
+try
+  {perLine, withAllLines, withError} = require invokedAs
+
+  if not (perLine or withAllLines or withError)
+    console.log "WARNING: #{invokedAs} isn't using any known hooks. Input will be ignored."
+
+catch err
+  console.log "Error loading #{invokedAs}: #{err}"
+  process.exit -1
+
+buffer = ''
+allLines = []
+
+try
+  process.stdin
+    .resume()
+
+    .on 'data', (d) ->
+      buffer += d.toString 'utf-8'
+
+      if perLine
+        while (eol = buffer.indexOf '\n') > -1
+          line = buffer.substr 0, eol
+          buffer = buffer.substr eol + 1
+          allLines.push line
+
+          try
+            perLine line
+          catch e
+            if withError
+              withError e
+            else
+              throw e
+
+    .on 'end', ->
+      if withAllLines
+        withAllLines allLines
+
+    .on 'error', (e) ->
+      if withError
+        withError e
+      else
+        throw e
+
+catch e
+  if withError
+    withError e
+  else
+    throw e
