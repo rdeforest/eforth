@@ -1,0 +1,12 @@
+{
+  "name": "BEM",
+  "version": "1.0.0",
+  "description": "* Restart project  * Find old notes, post them under here * Proof of concept  * jslinux on node.js as cell - https://github.com/tlrobinson/node-jslinux  * basic cell <-> platform API  * implement requisit cell species   * service finder   * reputation tracker   * network proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
