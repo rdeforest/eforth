@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/rdeforest/small-projects/announcing/src'
 let g:netrw_dirhist_2='/home/rdeforest/small-projects/announcing/src/css'
 let g:netrw_dirhist_3='/home/rdeforest/small-projects/announcing/src/alcohol'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/home/rdeforest/small-projects/announcing/src/css'
 let g:netrw_dirhist_5='/home/rdeforest/finch/src/00-char-gen'
 let g:netrw_dirhist_6='/home/rdeforest/joust2/doc'
 let g:netrw_dirhist_7='/home/rdeforest/small-projects/music/Claustrophilia'
+let g:netrw_dirhist_8='/home/robert'
