@@ -69,3 +69,13 @@ Trying not to think about work, so logging things in hopes of getting them out o
 	- Rubric modification process
       - Processing backlog (~90 sec / ticket)
 
+Stuff from Raine:
+
+> "It's what you value, so de-valuing it is like a personal attack"
+>  - Raine
+
+She also points out that there may be a way to have this love without being vulnerable to it.
+Or maybe there's a way someone can not value it as I do and for me to not be as upset by this as I am.
+  "Decoupling" my relationship with Tier N work from my ... feelings?
+
+To address my hand-waving, ask the other party to describe back to me what I have said.
