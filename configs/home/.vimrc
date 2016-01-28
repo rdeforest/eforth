@@ -15,3 +15,6 @@ set showbreak=\
 syntax on
 
 set modeline
+set backspace=indent,eol,start
+
+au BufRead,BufNewFile,BufWrite *.md set filetype=markdown

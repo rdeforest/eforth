@@ -1,0 +1,16 @@
+{
+  "name": "stream-app",
+  "version": "1.0.0",
+  "description": "Framework for apps with stream-based interface(s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -u exports -w --compilers coffee:coffee-script/register"
+  },
+  "author": "Robert de Forest <robert@defore.st>",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
+}

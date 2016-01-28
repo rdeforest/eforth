@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ "$*" ]; then
+  words="$*"
+else
+  while read line; do
+    if [ "$line" ]; then
+      words="$words $line"
+    else
+      break
+    fi
+  done
+fi
+
+echo "$words" | coffee suggest.coffee
