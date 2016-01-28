@@ -15,3 +15,4 @@ set showbreak=\
 syntax on
 
 set modeline
+set backspace=indent,eol,start
