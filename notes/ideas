@@ -1,0 +1,61 @@
+# Inspired by Fallout 4, among other things
+
+Resource management/politics game
+
+Player has a population of workers they manage
+Workers have wants, needs, aspirations
+
+Time is the fundamentally limited resource, but there are also resources that
+have to be obtained to improve things
+
+Utilities have
+- an acquisition price
+- a depreciation rate
+- a base maintenance cost
+- additional cost based on use
+
+Numbers like costs are multi-variable functions:
+- acquisition cost
+  - how long willing to wait for a given price
+  - negotiation skill
+  - contacts
+  - ...
+- maintenance cost
+  - maintenance policy/practice
+  - maintenance skill
+  - "overrev" = pushing people and things "too hard"
+
+Information presented to the player has a confidence level which behaves like the reticles in FPS games which show approximately where bullets shot will probably go. When the player asks "how much would X decision cost" they get the answer in the form of a probabiliy graph. The higher the confidence, the narrower the bell curve.
+
+Part of the game is in coming up with good org charts
+
+It should be possible to try out the four-color management system
+
+That means NPCs need to have similiar interaction with the world to what the PC has. They have resources to allocate, goals, etc.
+
+# Examples
+
+## Bottom management
+
+PC has 3-30 direct reports who are all individual contributors. 
+
+The choices of the ICs are
+
+- Self
+  - work (execute, practice, research)
+- Peers/Superiors
+  - tell (including lying? rumors? maybe?) - costs receivers time
+  - ask (information, resource, action)
+  - listen (must allocate time to inbound communication)
+    - subscribe/unsubscribe
+    - catch-up
+  - collaborate (brainstorm, ...?)
+
+The choices of managers are the same as ICs plus
+
+- Delegates
+  - recruit
+  - develop
+  - guidance/feedback
+- Peers
+  - 
