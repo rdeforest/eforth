@@ -1,22 +1,29 @@
-# Features
+# Let's try again
 
-* decentralized / distributed
- * Secure versions of my data are held by my friends and vice-versa
-* cross platform
-* open standards
-* offline operation
-* web of trust
-* need-to-know
+```coffeescript
 
-# Terms
+  definitions =
+    secret:
+      clearText: "String"
+      recoveryMethod:
+        connectionInfo: ObjectImplementing 'fetch'
+        recoveryParameters: [ "String" ]
 
-Using 'Secret Garden' terminology (need to see if I still have those notes...)
 
-* Exhibit - a collection of secrets
-* Patron - a viewer of exhibits
-* Curator - a manager of exhibits
-* Garden - a collection of curators, patrons and exhibits
+```
 
+- Secret
+  - clearText
+  - recoveryMethod, id
+  - description
+
+- RecoveryMethod
+  - protocol
+  - connection info
+  - ...
+
+- Viewer
+  - public key
 
 # Objects
 
