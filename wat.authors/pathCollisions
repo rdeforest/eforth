@@ -1,0 +1,67 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Digest::MD5;
+
+my @dirs = split(/:/, $ENV{PATH});
+
+my $found = {};
+my %collisions = ();
+
+for my $dirName (@dirs) {
+  next unless -d $dirName;
+
+  opendir(my $d, $dirName)
+    or die "Couldn't open $dirName: $!";
+
+  while (my $entry = readdir($d)) {
+    my $fullPath = "$dirName/$entry";
+
+    next unless -x $fullPath && -f $fullPath;
+
+    my $digest = digest($fullPath);
+
+    if ($found->{$entry} && !$found->{$entry}{$digest}) {
+      $collisions{$entry}++;
+    }
+
+    $found->{$entry}{$digest} = $dirName;
+  }
+}
+
+sub digest {
+  my $fileName = shift;
+
+  open(my $fh, '<', $fileName)
+    or die "Couldn't read $fileName: $!";
+
+  #print STDERR "\r$fileName            ";
+
+  eval {
+    my $ctx = Digest::MD5->new;
+       $ctx->addfile($fh);
+    return $ctx->b64digest;
+  } or do {
+    warn "Error reading $fileName: $!";
+  };
+}
+
+my @collidingFiles =
+  sort { $collisions{$b} <=> $collisions{$a} } 
+  keys %collisions;
+
+for my $fileName (@collidingFiles) {
+  print formatCollision($fileName, $found->{$fileName});
+}
+
+sub formatCollision {
+  my ($fileName, $digests) = @_;
+
+  join("\n  ", $fileName, collisionDirs($digests), "");
+}
+
+sub collisionDirs { map { dirsFromDigest($_) } sort keys %{$_} }
+
+sub dirsFromDigest { values %$_ }

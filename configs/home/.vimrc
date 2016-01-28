@@ -12,9 +12,10 @@ set background=dark
 set linebreak
 set showbreak=\ 
 
+set backspace=indent,eol,start
+
 syntax on
 
 set modeline
-set backspace=indent,eol,start
 
-au BufRead,BufNewFile,BufWrite *.md set filetype=markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
