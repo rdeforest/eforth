@@ -101,7 +101,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export EDITOR=`which vi`
+export EDITOR=`which vim`
 export PATH=$PATH:~/bin
 
 export GOPATH=$HOME/goworkspace
@@ -112,4 +112,4 @@ function retitle() {
   screen -X title "$1"
 }
 
-alias vi=vim
+alias vi=$EDITOR
