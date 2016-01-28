@@ -79,3 +79,12 @@ Or maybe there's a way someone can not value it as I do and for me to not be as 
   "Decoupling" my relationship with Tier N work from my ... feelings?
 
 To address my hand-waving, ask the other party to describe back to me what I have said.
+
+# 2016-01-25
+
+- meeting with Erin Page
+  - Disconnect/decouple
+    - Separate ME from WORK
+    - Especially between ME and JEFF
+    - I will come back and focus on my job
+    - Email from guitar.robot@gmail.com to avoid triggering by seeing work subjects
