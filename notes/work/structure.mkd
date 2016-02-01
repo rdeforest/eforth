@@ -2,11 +2,75 @@
 
 ## Work
 
-"I'll let you know if there's a problem." / "Why aren't you excited?"
+- "I'll let you know if there's a problem." / "Why aren't you excited?"
+- "Don't worry about that."
+- I want everything explicit, but that's impractical. What if I structure the lack of structure?
 
-"Don't worry about that."
+# Tools
 
-I want everything explicit, but that's impractical. What if I structure the lack of structure?
+## Use cases
 
+### Query
 
+- "What is the deal with X?"
+- "What am I forgetting?"
+ - Burn-down lists
 
+### Input
+
+- Defining structures
+- Populating structures
+- Automation is a structure
+
+### Break the automatic cycles by creating replacement cycles
+
+- Chronological
+ - daily cycle
+ - weekly cycle
+ - monthly cycle
+ - yearly cycle
+- By subject
+ - meeting cycle
+ - project cycle
+ - program cycle
+- Processes
+ - email processing
+
+## Some sample structures
+
+- This document!
+- projects
+ - github projects
+- my relationships with
+ - people
+ - groups
+ - things
+ - places
+- Meta
+ - open binding
+  - name
+  - fitness function
+ - Structure
+  - parent structure
+  - categories
+  - definitions = open bindings
+  - data = closed bindings
+ - Structure Template
+  - parent structure
+  - input
+ - Category
+ - Project
+  - parent: Structure
+  - parameters
+   - scope: versioned 
+   - plan
+- Four-corners trip
+ - categories: trip, motorcycle
+ - structure: project
+ - parameters
+  - stages
+   - scoping
+   - execution
+   - closeout
+
+vim: syntax=markdown:sw=1

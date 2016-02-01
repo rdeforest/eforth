@@ -1,6 +1,20 @@
+# Misc notes
+
+- Completing a T with the extra turn shoes deployed does not give +2
+- Completing an L DOES seem to give +2?
+- There are definitely bugs
+  - I had an undetected match after a collapse
+
+- A match may not consume a turn if a bell is shifted as part of the move
+  - Move a bell to displace a token into position
+  - For 3 token matches the turns are unchanged
+  - For 4/5 matches with turn shoes deployed, an additional turn may be granted (or not consumed, depending on your perspective)
+
+# The FAQ or whatever
+
 "Thanks for the sex, hommie!"
 
-# Fake Tips
+## Fake Tips
 
  - The game is the most accurate, realistic dating sim ever created
   - if you win, you're entitled to real sex
@@ -25,17 +39,19 @@
   - The Middle East will have long-lasting peace
  - i hurd you liek mudkips
  - Lola is actually an international spy. If you discover her secret she kills you.
+ - Infinite HuniePop (IHP) is impossible
+   - In a universe where IHP is developed, the game is never shipped
 
-# Real Tips
+## Real Tips
 
-## Provided by game
+### Provided by game
 
  - Booze gifts raise a girl's starting sentiment if you go out with her right after
 
-## Not obvious
+### Not obvious
 
  - four and five-part combos are key
-  - better with blue and gold shoes
+  - better with blue and gold shoes, obvs
  - max token counts
   - once you have 8 broken hearts, no more will appear unless you used the purple potion
    - try to sequester them in safe configurations
@@ -43,9 +59,11 @@
  - Upgrades are a big help if you're not going for the no-upgrade cheevo
   - Talking is free Hunie, so chat away as long as you save energy for dates
    - It's usually easier to chat after a date if it's not ending in your bedroom
- - purple heart padding
-   - pink hearts when you're at max passion
-   - tear drops if you don't have any gifts
+ - purple heart management
+   - pad with pink hearts when you're at max passion
+   - pad with cyan if you're not going for sentiment or if you're getting it with blue shoes
+   - If you can get all three at the bottom you'll have more cascades AND more 4/5 opportunities
+   - If you have the leopard shoes deployed you can probably sequester the bells too for even MORE matching awesomeness - not yet verified
  - gifts
   - "Why not? It's a thing. I love things!"
   - per-date gift combos
@@ -77,15 +95,17 @@
   - ayaza: moving y or z to the side gets you an aaxa
  - When you have 20+ moves
   - focus on controlling non-affection positioning
+   - Move broken hearts to 2x2 clusters in lower corners
+   - Likewise for affection if you're maxed out
 
-## Potential Surprises
+### Potential Surprises
 
   - 4/5 set status bonuses only apply to affection
    - sentiment, passion and strife are not affection
   - 'power' tokens are not as important as they seem
   - You can give girls gifts they already have and gain more presents/hunie
 
-# Spoilers
+## Spoilers
 
  - Can't lose
   - Chat not required
@@ -97,7 +117,7 @@
  - Your parents were Santa Claus
  - The uncensored 'patch' is not nearly as exciting as it sounds
 
-## Cheevo-specific
+### Cheevo-specific
 
  - When going for 12 girls in 18 days
   - Meet all the girls as quickly as possible so you can give Kyu the tissues and magazine
@@ -107,10 +127,14 @@
   - Take care of Lola every day she's in town
  - 'no failures' is easy with save scumming
 
-# More research needed
+## More research needed
 
  - Do different girls have different board styles?
 
-# Jokes not yet worked into this .. thing
+## Jokes not yet worked into this .. thing
 
  - "If you really want to get her Rachmaninoff..."
+
+# Bug research
+
+
