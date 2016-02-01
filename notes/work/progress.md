@@ -344,4 +344,18 @@ Here is my current view:
         - I prefer to work in isolation when not actively collaborating or
           meeting
 
+# 2016-01-31
+
+## Situation
+
+- Erin told me not to come in Monday and that she would set up a meeting on
+  Wednesday.
+
+## Reaction
+
+- She's right
+- I don't like taking this time off
+
+
 # vim: nosmartindent:tw=78
+
