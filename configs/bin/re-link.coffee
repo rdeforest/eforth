@@ -7,15 +7,20 @@ if not process.env.HOME
   throw new Error "No HOME environment var? What were you hoping would happen?!"
 
 fs = require 'fs'
-path = require 'path'
 
-[interpreter, script, args...] = process.argv
-[from, to] = args
-from or= path.resolve path.dirname script, '..'
-to or= process.env.HOME
+main = ->
+  path = require 'path'
+
+  [
+    interpreter, script
+    from = path.resolve path.dirname script, '..'
+    to = process.env.HOME
+  ] = process.argv
+
+  (new TheTool).relinkDir from, to
 
 class TheTool
-  constructor: -> @verbosity = 1
+  constructor: ({@verbosity = 1}) ->
 
   relinkDir: (from, to) ->
 
@@ -65,8 +70,7 @@ class TheTool
         log "Skipping link #{dir}: destination is not also a symlink"
 
 
-
-(new TheTool).relinkDir from, to
+main()
 
 
 ###
