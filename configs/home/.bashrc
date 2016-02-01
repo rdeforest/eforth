@@ -113,3 +113,5 @@ function retitle() {
 }
 
 alias vi=vim
+
+export TERM=$(echo $TERM | sed 's/screen.//')
