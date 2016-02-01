@@ -356,6 +356,29 @@ Here is my current view:
 - She's right
 - I don't like taking this time off
 
+# 2016-02-01
+
+- I fucked up my sleep cycle: Was up until 10am yesterday, then slept 'till
+  after 17:00, was awake until about 8am today, then slept a few hours, got up
+  around 12:30, took a shower, went to Victrola.
+
+- Mind
+  - Emotions
+    - Lonely
+    - Down
+    - Unpleasantly detached
+  - Thoughts
+    - Unfocused
+    - Negative
+    - Pathetic?
+- Body
+  - Tense
+  - Slouching
+- Disposition towards work
+  - No change in assessment
+  - Prepared to work elsewhere
+  - Would rather work on TIC with Nicole but don't know how to combine that
+    with a job.
 
 # vim: nosmartindent:tw=78
 
