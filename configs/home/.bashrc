@@ -49,8 +49,11 @@ done
 
 VI=$(which vim)
 
-export EDITOR=`which vi`
+export EDITOR=$VI
 export PATH=$PATH:~/bin
+export PS1='\n\u@\h:\w\n\$ '
+
+alias vi=$EDITOR
 
 export GOPATH=$HOME/goworkspace
 
@@ -59,7 +62,5 @@ ulimit -c unlimited
 function retitle() {
   screen -X title "$1"
 }
-
-alias vi=vim
 
 export TERM=$(echo $TERM | sed 's/screen.//')
