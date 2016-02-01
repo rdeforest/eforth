@@ -2,8 +2,13 @@
 
 - Completing a T with the extra turn shoes deployed does not give +2
 - Completing an L DOES seem to give +2?
-- There may be bugs here
+- There are definitely bugs
+  - I had an undetected match after a collapse
 
+- A match may not consume a turn if a bell is shifted as part of the move
+  - Move a bell to displace a token into position
+  - For 3 token matches the turns are unchanged
+  - For 4/5 matches with turn shoes deployed, an additional turn may be granted (or not consumed, depending on your perspective)
 
 # The FAQ or whatever
 
@@ -34,6 +39,8 @@
   - The Middle East will have long-lasting peace
  - i hurd you liek mudkips
  - Lola is actually an international spy. If you discover her secret she kills you.
+ - Infinite HuniePop (IHP) is impossible
+   - In a universe where IHP is developed, the game is never shipped
 
 ## Real Tips
 
