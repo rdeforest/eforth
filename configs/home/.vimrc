@@ -19,3 +19,5 @@ syntax on
 set modeline
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+set tw=78
