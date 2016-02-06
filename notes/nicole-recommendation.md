@@ -3,7 +3,7 @@ Hello,
 I am writing to recommend Nicole Bade as instructor for EE 393.
 
 I started working in Information Technology (IT) in the spring of 1996 and am
-now in the middle of my third year at [Amazon.com](http://amazon.com). 
+now in the middle of my third year at Amazon.com. 
 
 At Disney we worked together directly in the System Operations Center and less
 directly after I transitioned to the Platform Engineering team. On that team
