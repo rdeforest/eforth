@@ -5,23 +5,15 @@ I am writing to recommend Nicole Bade as instructor for EE 393.
 I started working in Information Technology (IT) in the spring of 1996 and am
 now in the middle of my third year at [Amazon.com](http://amazon.com). 
 
-I encouraged Nicole to apply at Disney and campaigned from inside for them to
-interview her. We worked together directly in the SOC and less directly after
-I transitioned to SEMobile. On that team I relied on Nicole in her capacity as
-a member of the SOC, which supported all the System Engineering teams by
-driving adoption of ITIL processes and best practices, and by providing
-Incident Management services. Nicole moved on to FHCRC and later convinced me
-to join her there where she and her team managed the infrastructure my systems
-ran on.
-
-At Disney we worked together directly in the SOC and less directly after I
-transitioned to SEMobile. On that team I relied on Nicole in her capacity as a
-member of the SOC, which supported all the System Engineering teams by driving
-adoption of ITIL processes and best practices, and by providing Incident
-Management services. After Nicole moved on to FHCRC her influence continued to
-benefit me because the SOC used an onboarding document Nicole had written to
-train all their new team members. Nicole later convinced me to join her at
-FHCRC where she and her team managed the infrastructure my systems relied on.
+At Disney we worked together directly in the System Operations Center and less
+directly after I transitioned to the Platform Engineering team. On that team
+I relied on Nicole in her capacity as a member of the SOC, which supported all
+the System Engineering teams by driving adoption of ITIL processes and best
+practices, and by providing Incident Management services. After Nicole moved
+on to FHCRC her influence continued to benefit me because the SOC used an
+onboarding document Nicole had written to train all their new team members.
+Nicole later convinced me to join her at FHCRC where she and her team managed
+the infrastructure my systems relied on.
 
 Working with Nicole has always been a pleasure. Nicole provides a practical,
 clear, calm focus on identifying and addressing the most urgent concerns in a
