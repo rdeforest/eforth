@@ -7,22 +7,31 @@ if not process.env.HOME
   throw new Error "No HOME environment var? What were you hoping would happen?!"
 
 fs = require 'fs'
+path = require 'path'
+
+config =
+  debug: true
+  verbose: 1
+  dryRun: true
 
 main = ->
-  path = require 'path'
+  projectRoot = path.resolve path.dirname script, '..'
 
   [
     interpreter, script
-    from = path.resolve path.dirname script, '..'
+    from = projectRoot
     to = process.env.HOME
   ] = process.argv
 
-  (new TheTool).relinkDir from, to
+  (new TheTool verbosity: config.verbose)
+    .relinkItem from, to
 
 class TheTool
-  constructor: ({@verbosity = 1}) ->
+  constructor: ({@verbosity = 1, @actions = this.defaultActions}) ->
 
-  relinkDir: (from, to) ->
+  defaultActions:
+    ln: (from, to) ->
+      
 
   vLog: (level, message...) ->
     console.log.apply console, message unless level > @verbosity
@@ -30,9 +39,25 @@ class TheTool
   log: (message...) ->
     @vLog 1, message...
 
+  relinkDir: (from, to) ->
+    vLog "Updating #{to} from #{from}"
+
+    if not fs.existsSync to
+      # .. make link
+      return
+
+    toStat = fs.lstatSync to
+    if toStat.isDirectory()
+    if toStat.isSymbolicLink()
+      target = fs.readlinkSync to
+    
+    throw 
+
+  relinkLink: (from, to) ->
+
   relinkItem: (item, link) ->
-    if item.endsWith '.'
-      return @log "Skipping item ending in a dot: #{item}"
+    if (path.basename item) in '..'
+      return @log "Skipping . or ..: #{item}"
 
     @vLog 2, "relinkItem #{item}, #{link}"
 
@@ -71,33 +96,3 @@ class TheTool
 
 
 main()
-
-
-###
-
-    if (-l $dir) {
-        if (-e $link && !-l $link) {
-          warn "Skipped $link: expected symlink.\n";
-          return;
-        }
-
-        unlink $link;
-        symlink $dir, $link;
-        return;
-    }
-
-    if (!-e $link) {
-        mkdir $link;
-    }
-
-    if (!-d $link) {
-        warn "Skipped $link: expected directory.\n";
-        return;
-    }
-
-    opendir(my $dh, $dir);
-    while(my $item = readdir($dh)) {
-        next if $item eq "." or $item eq "..";
-        relinkItem("$dir/$item", "$link/$item");
-    }
-}
