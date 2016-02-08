@@ -15,7 +15,7 @@ Euler = require './euler'
 class p357
   constructor: ->
 
-  answer: (max) ->
+  answer: (max, debug = -> ) ->
     sum = 1 # 1 is ok() because 1 + 1/1 = 2, which is prime
     pGen = Primes.generator()
     loop
@@ -26,7 +26,7 @@ class p357
         if candidate > max
           break
 
-        if @ok candidate
+        if @ok candidate, debug
           sum += candidate
 
     return sum
