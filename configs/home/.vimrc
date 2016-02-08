@@ -12,6 +12,12 @@ set background=dark
 set linebreak
 set showbreak=\ 
 
+set backspace=indent,eol,start
+
 syntax on
 
 set modeline
+
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+set tw=78

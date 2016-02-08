@@ -115,4 +115,3 @@ class Primes
 
 
 module.exports = new Primes
-
