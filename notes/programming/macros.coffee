@@ -1,5 +1,29 @@
 ###
 
+New idea: still requires eval, and the eval has to be re-applied to update the
+macro list, but that might be ok.
+
+Macro generation looks like
+
+enhancedFunction = provideMacros macroObj, fn
+
+provideMacros composes and evals the source of a function which defines vars
+for the provided macros and includes the provided function's definition as a
+return value so that references to the macros in the inner function resolve to
+the outer function's definitions.
+
+The resulting function object then gets a .updateMacros method added to it
+which does what it says on the tin.
+
+###
+
+provideMacros = (macroObj, fn) ->
+  evalSuffix = "return " + fn.toString() + "})()"
+  evalPrefix = "(function(macroValues) {"
+  ...
+
+###
+
 An experiment in trying to reproduce Lisp's macro functionality.
 
 Use case:
