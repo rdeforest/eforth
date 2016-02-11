@@ -1,4 +1,5 @@
 # rdeforest
+
 Self-management project
 
 # Customer: me!
@@ -68,5 +69,10 @@ Improve recurring tasks in some way
       - Process
         - Task
         - Schedule
+          - Period designation (work m-f, 08:00-12:00, 13:00-17:00)
         - Interval
         - CalculatedTime
+
+# Todo
+
+Move small-projects/notes/{personal,work,whatever} under this project?
