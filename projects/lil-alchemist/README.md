@@ -51,6 +51,9 @@ There are also 'verbs'
     - name
   - hasMany
     - Deck deck
+    - Card knownCards
+    - CardStack ownedCards
+    - Recipe knownRecipes
 
 ### Deck
 
@@ -72,9 +75,9 @@ There are also 'verbs'
     - String name
     - BlurgEffect blurg
   - hasMany
-    - recipe
-    - combo
     - CardLevel levels
+    - Card ingredients through Recipe
+    - Card products through Recipe
 
 ### Recipe
 
@@ -83,14 +86,12 @@ There are also 'verbs'
   - belongsTo
     - Card product
   - hasMany
-    - Card ingredient
+    - Card ingredients
 
 ### Library
 
   - hasMany
     - Player player
-    - Card discoveredCard
-    - Recipe discoveredRecipe
     - Card cardDefinition
 
 # Credits
