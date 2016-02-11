@@ -60,3 +60,13 @@ Improve recurring tasks in some way
     - Means of querying one thing that needs to be done
     - Unable to view other things without a reason why that can't be done right now
   - mobile interface
+
+### Models
+
+  - Program
+    - Project
+      - Process
+        - Task
+        - Schedule
+        - Interval
+        - CalculatedTime
