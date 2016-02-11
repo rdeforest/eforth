@@ -5,6 +5,8 @@
       - I try to live my life in a safe-by-default fashion and this plan as I
         know it does not meet that description.
       - Also the combination of lithium and needles triggers my phobias
+    - Making the most of my six weeks off
+      - How will I/we know I'm ready to go back?
 
   - Concerns about mind-altering substances
     - The past
@@ -45,19 +47,13 @@
   - Next steps
     - Starting next week I have six weeks
     - Does the exposure technique apply in this case?
+      - How do I gradually expose myself to a scary medication?
+      - How do I gradually expose myself to work?
     - How hard _should_ I plan?
+      - Finding it hard to plan at all
     - How frequently should we meet?
 
 # Old notes
-
-Dr. Lemberg
-
-  - When I don't know what to do
-    - What is the question? What would it mean for this to not be a problem,
-      etc.
-    - "Should we talk about this more or should I talk to someone else?"
-    - Seek consensus
-    - (nothing new here)
 
 3 tablets a day
 300 in the morning
@@ -66,4 +62,13 @@ morning dose 12 hours after evening dose
 five days later, draw blood to measure level
 if adjustment needed, five more days to confirm
 
-  reduce lamigdol by half until next appointment
+reduce lamigdol by half until next appointment
+
+- When I don't know what to do
+  - What is the question? What would it mean for this to not be a problem,
+    etc.
+  - "Should we talk about this more or should I talk to someone else?"
+  - Seek consensus
+  - (nothing new here)
+
+
