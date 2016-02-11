@@ -69,12 +69,12 @@ benefited accordingly.
 
 ### "Album of the Year" - Faith No More
 
-  - "Ashes to Ashes" - Appeal to justice from an unsolicited martyr
+  - "Ashes to Ashes" - Appeal to justice by an unsolicited martyr
 
   - "Last Cup of Sorrow" - Get over yourself
-    - This is getting old 
+    - This is getting old
       - and so are you
-    - Everything you know 
+    - Everything you know
       - and never knew
     - Will run through your fingers
       - just like sand
@@ -82,9 +82,10 @@ benefited accordingly.
 
   - "Helpless" - Comfort from considering suicide
     - The air's warm
-      - I hear the wind and 
+      - I hear the wind and
       - the trees
-    - I know I'm there, but I'll
+    - I know I'm there,
+      - but I'll
       - never be
     - The wind is soft
       - tonight
@@ -103,33 +104,34 @@ benefited accordingly.
     - And for once I'm certain
       - (I never felt better now)
 
-    - A garden is 
+    - A garden is
       - its own
       - perfect world
-    - Where everything has a place
+    - Were everything
+      - has a place
     - And Every leaf
       - every stone, every
       - speck of dirt
     - But where is my place?
       - (I never felt better now)
 
-    - I even tried 
-      - to get arrested 
+    - I even tried
+      - to get arrested
       - today
-    - But everyone 
+    - But everyone
       - looked the other way
-    - I count the hours 
-      - and I count 
+    - I count the hours
+      - and I count
       - the days
     - And for once I'm certain
       - (I never felt better now)
 
-    - Don't waaaant 
+    - Don't waaaant
       - your help
     - Don't .. need
       - your help
 
-    - Help 
+    - Help
       - less
 
     - The water's clean
@@ -147,8 +149,8 @@ benefited accordingly.
 
     - (Chorus)
 
-    - By the way, 
-    - hate to say, 
+    - By the way,
+    - hate to say,
     - help me please someone
 
     - Help
