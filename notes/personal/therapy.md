@@ -1,6 +1,9 @@
 # next appointment
 
   - Reasons for scheduling an appointment sooner than next week
+    - Seemingly worse off than baseline?
+      - Is this actually true?
+      - Can I re-establish a sustainable state?
     - Fear of Lithium
       - I try to live my life in a safe-by-default fashion and this plan as I
         know it does not meet that description.
