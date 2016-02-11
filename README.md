@@ -48,7 +48,15 @@ Improve recurring tasks in some way
 ## HabitRPG knock-off
 
   - Arbitrary scheduling
-  - "next up" querying
+    - cron style
+    - "at least twice a week"
+    - "no more than twice in 48 hours"
+    - "every Monday"
+    - "second to last Thursday of every month"
+    - "month.days/2" = 14th in February, 15th every other month
+    - will probably need a DSL for this
   - day planning w/ optional automation
+  - "do one thing"
+    - Means of querying one thing that needs to be done
+    - Unable to view other things without a reason why that can't be done right now
   - mobile interface
-
