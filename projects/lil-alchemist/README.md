@@ -63,25 +63,27 @@ There are also 'verbs'
 
   - props
     - Number atk, def
+  - belongsTo
+    - Card card
 
 ### Card
 
   - props
     - String name
-    - Array<CardLevel> levels
     - BlurgEffect blurg
   - hasMany
     - recipe
     - combo
+    - CardLevel levels
 
 ### Recipe
 
   - props
     - Number research time
-  - hasMany
-    - Card ingredient
   - belongsTo
     - Card product
+  - hasMany
+    - Card ingredient
 
 ### Library
 

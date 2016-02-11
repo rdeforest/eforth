@@ -1,0 +1,40 @@
+{
+  "name": "player",
+  "plural": "players",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "decks": {
+      "type": "hasMany",
+      "model": "deck",
+      "foreignKey": ""
+    },
+    "knownCards": {
+      "type": "hasMany",
+      "model": "card",
+      "foreignKey": ""
+    },
+    "ownedCards": {
+      "type": "hasMany",
+      "model": "cardStack",
+      "foreignKey": ""
+    },
+    "knownRecipes": {
+      "type": "hasMany",
+      "model": "recipe",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,33 @@
+{
+  "name": "cardLevel",
+  "plural": "cardLevels",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "level": {
+      "type": "number",
+      "required": true
+    },
+    "atk": {
+      "type": "number",
+      "required": true
+    },
+    "def": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "card": {
+      "type": "belongsTo",
+      "model": "card",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
