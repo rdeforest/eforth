@@ -11,6 +11,7 @@ Improve recurring tasks in some way
   - Tasks
     - self
       - existence: breathe, sleep, drink, eat
+        - automatic but improvable
       - therapy/recovery/health/...
         - medication
         - therapy homework
@@ -21,6 +22,8 @@ Improve recurring tasks in some way
         - brushing, flossing
       - improvement
         - exercise
+          - aikido?
+          - climbing?
         - journaling
         - practice
           - guitar
