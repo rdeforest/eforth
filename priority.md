@@ -15,7 +15,7 @@
     - same time every day
     - a little is fine
   - exercise
-  - CBT: needles
+  - Cogn. Behav. Therapy: needles
 
 ## How?!
 
@@ -37,3 +37,4 @@
       - Paper handling
 
 ## How?!
+

@@ -24,4 +24,5 @@ Just enough Real Life to motivate this thing.
         - Currently (Feb 2016) this means psychotheraputic work
       - 12:00 Lunch
       - 13:00 "Work"
-      - 17:00 Dinner
+      - 17:00 Entertainment
+      - 18:00 Dinner
