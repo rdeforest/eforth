@@ -48,6 +48,8 @@ Improve recurring tasks in some way
       - Maybe find ways to make the tasks more efficient to execute?
     - Measured, monitored, alerting on threshold breech
       - The hardest but also most valuable improvement
+    - Combine tasks with each other and with meta work
+      - Add to journal at time of taking meds?
 
 # Sub-projects
 
