@@ -1,3 +1,15 @@
+# Raine comments
+
+  - Things to watch for
+    - Trouble speaking
+    - Verbal cadence: "pressured speech"
+    - Rumination
+    - "fatalitic" about changing groups
+
+  - Observations
+    - Seasonal cycle
+      - Projects start in spring, die off before end of year
+
 # Results
 
   - Lithium fear
