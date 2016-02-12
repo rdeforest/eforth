@@ -1,3 +1,21 @@
+# Results
+
+  - Lithium fear
+    - Two weeks is safe and all that's needed to determine efficacy
+    - Mutual overwatch addresses "not knowing"
+
+  - Theories
+    - "tough time"
+      - Dr. Lemberg not convinced?
+      - Lexipro strikingly effective, followed by steady decline
+      - ACTUALLY, we're trying to make tough times OK
+
+  - Bi-polar
+
+  - Lexipro did no harm
+  - Prozac was terrible
+  - Other Prozac was terrible
+
 # next appointment
 
   - Reasons for scheduling an appointment sooner than next week
