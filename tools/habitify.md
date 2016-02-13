@@ -90,17 +90,14 @@
       - pre-dependencies determine priority and visibility
 
 
-Task patterns
-- done or not (simple check)
-- multiple sub steps which can be completed at different times
-- granular tasks which can be done part way
-  - differs from steps in that it changes the prioritization
-- branching
-- different was of measuring progress: steps vs time spent vs ...
-- optional sub-steps
-
-
-checklist
+  - Task patterns
+    - done or not (simple check)
+    - multiple sub steps which can be completed at different times
+    - granular tasks which can be done part way
+      - differs from steps in that it changes the prioritization
+    - branching
+    - different was of measuring progress: steps vs time spent vs ...
+    - optional sub-steps
 
 # Apps relevant to our interests
 
