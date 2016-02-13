@@ -1,0 +1,27 @@
+{
+  "name": "Schedule",
+  "plural": "Schedules",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nextEvent": {
+      "type": "number"
+    },
+    "interval": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "participant": {
+      "type": "belongsTo",
+      "model": "Participant",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

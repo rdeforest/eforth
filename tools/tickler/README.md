@@ -6,8 +6,8 @@
 
   - create user
   - create tickle item entry
-  - create interval
-  - assign interval
+  - create schedule
+  - assign schedule
   - start entry
   - stop entry
 
@@ -19,7 +19,6 @@ The usual REST stuff applies
 
   - /users
   - /items
-  - /intervals
   - /schedules
 
 Also
@@ -35,13 +34,28 @@ Also
     - schedules
 - Item
   - someText
-- Interval
-  - 
 - Schedule
   - boolean running
-  - last fired
-  - belongsTo interval
+  - number secondsBetweenTickles
+  - number lastFired
   - belongsTo item
+  - belongsTo user
+
+# StrongLoop setup
+
+    slc loopback tickler
+    cd Tickler
+
+    slc loopback:model Participant
+    # extends User because Loopback requires it
+    # goal as string
+
+    slc loopback:model Item
+    # contents as string
+
+    slc loopback:model Schedule
+    # nextEvent as number
+    # interval as number
 
 # backlogged items
 
