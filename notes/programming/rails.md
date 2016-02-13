@@ -1,5 +1,11 @@
 Notes for Rails studying
 
+# CodeCademy
+
+## Associations II, step 5
+
+Obtaining related objects not previously covered?
+
 # Big picture
 
 ## Observations
