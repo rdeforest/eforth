@@ -1,3 +1,7 @@
+# TODO: Move these notes to Trello
+
+https://trello.com/b/zZkdtqhF/habitify
+
 # HabitRPG knock-off
 
   - Should integrate with real HabitRPG to the degree that that is possible
