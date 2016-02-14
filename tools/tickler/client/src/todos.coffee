@@ -128,6 +128,6 @@ $ ->
       done = @allCheckbox.checked
       Todos.each (todo) -> todo.save 'done': done
 
-    App = new AppView
+  App = new AppView
 
 #grabTemplate = (name) -> _.template $("##{name}-template").html()
