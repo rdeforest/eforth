@@ -57,6 +57,11 @@ Also
     # nextEvent as number
     # interval as number
 
+# TODO
+
+  - Maybe turn client/ into its own node module (package.json, node_modules,
+    etc)?
+
 # backlogged items
 
 ## feature
