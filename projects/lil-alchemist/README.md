@@ -2,16 +2,16 @@
 
 A companion utility for Lil' Alchemist
 
- - Track your
-   - inventory of cards and decks
-   - known recipes 
-   - "Adventure" progress
-   - Goals and plans
- - Optimize your decks
- - Optimize your adventuring
-   - Who should I challenge next to best augment my deck?
-   - What's the best
- - Plan your research
+  - Track your
+    - inventory of cards and decks
+    - known recipes
+    - "Adventure" progress
+    - Goals and plans
+  - Optimize your decks
+  - Optimize your adventuring
+    - Who should I challenge next to best augment my deck?
+    - What's the best
+  - Plan your research
 
 # And just how might I do that?
 
@@ -34,7 +34,7 @@ blah blah
 ## UI
 
 Prompt is NodeJS repl after polluting global with functions for doing stuff.
-Each object type is a function and has a plural form for listing. 
+Each object type is a function and has a plural form for listing.
 
   - player ["name"]
   - deck [number]
@@ -69,15 +69,34 @@ There are also 'verbs'
   - belongsTo
     - Card card
 
+### Rarity
+
+  - props
+    - String name
+  - hasMany
+    - Card cards
+
 ### Card
 
   - props
     - String name
     - BlurgEffect blurg
+    - Rarity rarity
   - hasMany
     - CardLevel levels
     - Card ingredients through Recipe
     - Card products through Recipe
+  - hasMany
+    - Source sources
+  - calculated
+    - isFinal -> this.products.count is 0
+
+### Source
+
+  - props
+    - description
+  - hasMany
+    - Card cards
 
 ### Recipe
 
