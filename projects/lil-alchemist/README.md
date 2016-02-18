@@ -43,6 +43,10 @@ There are also 'verbs'
 
   - add (type)
 
+## How it populates the library
+
+It scrapes http://lil-alchemist.wikia.com/wiki/Category:Card
+
 ## Models
 
 ### Player
