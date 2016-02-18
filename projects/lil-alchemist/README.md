@@ -66,13 +66,6 @@ It scrapes http://lil-alchemist.wikia.com/wiki/Category:Card
   - belongsTo
     - Player player
 
-### CardLevel
-
-  - props
-    - Number atk, def
-  - belongsTo
-    - Card card
-
 ### Card
 
   - props
@@ -87,6 +80,9 @@ It scrapes http://lil-alchemist.wikia.com/wiki/Category:Card
 
   - props
     - Number research time
+
+        hours = n ? 3 * 2**n : 1
+
   - belongsTo
     - Card product
   - hasMany
