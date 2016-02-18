@@ -43,6 +43,10 @@ There are also 'verbs'
 
   - add (type)
 
+## How it populates the library
+
+It scrapes http://lil-alchemist.wikia.com/wiki/Category:Card
+
 ## Models
 
 ### Player
@@ -61,20 +65,6 @@ There are also 'verbs'
     - Card card
   - belongsTo
     - Player player
-
-### CardLevel
-
-  - props
-    - Number atk, def
-  - belongsTo
-    - Card card
-
-### Rarity
-
-  - props
-    - String name
-  - hasMany
-    - Card cards
 
 ### Card
 
@@ -102,6 +92,9 @@ There are also 'verbs'
 
   - props
     - Number research time
+
+        hours = n ? 3 * 2**n : 1
+
   - belongsTo
     - Card product
   - hasMany

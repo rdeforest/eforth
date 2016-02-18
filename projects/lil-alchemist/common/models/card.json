@@ -14,12 +14,7 @@
   },
   "validations": [],
   "relations": {
-    "levels": {
-      "type": "hasMany",
-      "model": "cardLevel",
-      "foreignKey": ""
-    },
-    "ingredients": {
+   "ingredients": {
       "type": "hasMany",
       "model": "cardLevel",
       "foreignKey": "",

@@ -40,10 +40,6 @@
     "dataSource": "db",
     "public": true
   },
-  "cardLevel": {
-    "dataSource": "db",
-    "public": true
-  },
   "recipe": {
     "dataSource": "db",
     "public": true
@@ -53,6 +49,10 @@
     "public": true
   },
   "cardStack": {
+    "dataSource": "db",
+    "public": true
+  },
+  "library": {
     "dataSource": "db",
     "public": true
   }
