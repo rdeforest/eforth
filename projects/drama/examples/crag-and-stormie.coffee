@@ -27,5 +27,9 @@ sm = stormagnet
 
 drama stage.curtainUp,
   cr "Today is a good day to paint."
-    .commencePainting()
-  cr "
+    .commencePainting
+  cr "That's odd..."
+    .leanIn
+    .fallForward
+  stage.lightsDown
+    .
