@@ -11,6 +11,9 @@
   - start entry
   - stop entry
 
+  - Use cases
+    - time-boxing: "ping me in an hour to see if I'm done yet"
+
 # Design
 
 ## API
