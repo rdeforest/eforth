@@ -6,35 +6,30 @@ use warnings;
 my @fields = ();
 my $line;
 my $id;
-my $card = shift @ARGV;
+my $card = {
+    name => shift @ARGV,
+  };
 my $fh;
 my $f;
 my %seen;
+my $stats;
 
-$card =~ s/ /_/g;
+$card->{dirName} = "cards/" . fixCardName($card->{name});
+
+sub fixCardName { $_[0] =~ s/ /_/g }
 
 while ($line = <>) {
   chomp $line;
 
-  if ($line eq "(tr") {
-    @fields = ();
-    next;
-  } 
-  
   if ($line eq ")tr") {
     if ($id =~ /combosTable$/) {
-      my ($other, $product, $time) = @fields;
-
-      if ($other eq "Combos" or $other eq '?') {
-        next;
-      } else {
-        `mkdir -p "cards/$card"`;
-        my $other = shift @fields;
-        $other =~ s/ /_/g;
-        open($fh, '>', $f = "cards/$card/$other")
-          or die "Error opening $f: $!";
-        print $fh join("\n", @fields);
-      }
+      $card->{combos}{fixCardName $field[0]} = {product => $field[1], time => $field[2]};
+      @fields = ();
+    } elsif ($fields[0] eq "Attack") {
+      $stats = 1;
+    } elsif ($stats) {
+      ($card->{atk}, $card->{def}) = @fields;
+      $stats = 0;
     }
     next;
   }
@@ -62,3 +57,9 @@ while ($line = <>) {
     }
   }
 }
+
+`mkdir -p cards/$card->{name}`;
+
+for my $other (keys %{$card->{combos}}) {
+}
+
