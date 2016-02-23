@@ -1,6 +1,6 @@
 Pending:
 
-  - Models
+  - Remote methods exposed
     - participant.pendingMessages()
     - item.acknowledge()
 
@@ -8,11 +8,14 @@ Pending:
     - User sign-up
     - Item management
     - Schedule management
+    - Pop-ups for reminders
 
 Doing:
-  - Expose new methods
+
+  - Expose remote methods
 
 Done:
+  - Moved to sqlite persistence
   - Does model.coffee replace model.js?
     - YES!
   - participant.pendingMessages()
