@@ -4,14 +4,14 @@ module.exports = (Item) ->
 
   Item.prototype.acknowledge = (at = Date.now()) ->
     @acknowledged = at
+    @save()
 
   Item.remoteMethod 'acknowledge',
+    isStatic: false
     accepts: [
         arg: 'id'
         type: 'number'
         required: true
       ]
     http:
-      path: '/:id/acknowledge'
-      verb: 'get'
-
+      verb: 'post'
