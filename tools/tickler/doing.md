@@ -1,3 +1,8 @@
+Stack:
+
+  - this tickler stuff
+  - Nicole's email thingie
+
 Pending:
 
   - Remote methods exposed
