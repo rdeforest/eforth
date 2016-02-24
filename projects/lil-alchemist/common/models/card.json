@@ -10,11 +10,31 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "atk": {
+      "type": "number",
+      "required": true
+    },
+    "def": {
+      "type": "number",
+      "required": true
+    },
+    "number": {
+      "type": "number",
+      "required": true
+    },
+    "rarity": {
+      "type": "number",
+      "required": true
+    },
+    "wikiUrl": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-   "ingredients": {
+    "ingredients": {
       "type": "hasMany",
       "model": "cardLevel",
       "foreignKey": "",

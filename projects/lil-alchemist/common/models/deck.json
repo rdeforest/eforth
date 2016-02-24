@@ -13,7 +13,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "player": {
+      "type": "belongsTo",
+      "model": "player",
+      "foreignKey": ""
+    },
+    "cardStacks": {
+      "type": "hasMany",
+      "model": "cardStack",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
