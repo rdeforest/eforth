@@ -1,3 +1,9 @@
+Note:
+
+  - 'Contact' portion of this project is relevant to as-yet-unstarted "ITIL"
+    project
+
+
 Stack:
 
   - this tickler stuff
@@ -17,9 +23,11 @@ Pending:
 
 Doing:
 
-  - Expose remote methods
 
 Done:
+  - Expose remote methods
+    - Have to compile CoffeeScript
+  - Figure out authenticated testing
   - Moved to sqlite persistence
   - Does model.coffee replace model.js?
     - YES!
