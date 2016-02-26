@@ -1,7 +1,6 @@
 {
   "db": {
     "name": "db",
-    "connector": "memory",
     "connector": "loopback-connector-sqlite",
     "file_name": "./sqlite.db",
     "debug": false

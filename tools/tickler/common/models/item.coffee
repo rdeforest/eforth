@@ -1,8 +1,12 @@
 module.exports = (Item) ->
-  Item.prototype.due = (at = Date.now()) ->
-    return (@acknowledged or 0) + @schedule().interval < at
+  Item.prototype.due = ->
+    not @acknowledged or (@acknowledged + @schedule().interval < Date.now())
 
-  Item.prototype.acknowledge = (at = Date.now()) ->
-    @acknowledged = at
+  Item.prototype.acknowledge = (cb) ->
+    @acknowledged = Date.now()
     @save()
-    return this
+    cb null
+
+  Item.remoteMethod 'acknowledge',
+    isStatic: false
+    description: 'Snooze an item'
