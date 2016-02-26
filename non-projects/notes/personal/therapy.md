@@ -23,7 +23,9 @@
   - How am I
     - Feeling dumber
       - The work I did should not have taken a week
-    - Want to run way (but won't)
+      - I kinda want to dial down my life
+    - Feeling old
+      - Should have more to show for my years
     - Pessimistic about this LoA thing
 
 ### Questions
