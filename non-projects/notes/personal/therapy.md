@@ -1,4 +1,38 @@
-# Raine comments
+# new
+
+## 2016-02-26
+
+### Status report
+
+  - News/updates
+    - Didn't go climbing, also realized it is not at all what I want to do
+    - Only a few minutes of music so far
+      - Came up with a 5/4 bass line but didn't record it or write it down
+      - Figured out how to make my strat usefully mobile
+    - Lots of motorcycle riding
+    - Programming
+      - tickler: back-end done
+      - ops-dojo: just chats w/ Nicole
+      - mood tracker: started work on processing its exported data
+      - renpy, Lil' Alchemist: started poking around
+        - small-projects/projects/drama
+    - Operations
+      - Spun up server02, shut down authors
+      - Moved thatsnice.org DNS to own server
+
+  - How am I
+    - Feeling dumber
+      - The work I did should not have taken a week
+    - Want to run way (but won't)
+    - Pessimistic about this LoA thing
+
+### Questions
+
+  - What's the plan?
+
+# old
+
+## Raine comments
 
   - Things to watch for
     - Trouble speaking
@@ -10,7 +44,7 @@
     - Seasonal cycle
       - Projects start in spring, die off before end of year
 
-# Results
+## Results
 
   - Lithium fear
     - Two weeks is safe and all that's needed to determine efficacy
@@ -28,7 +62,7 @@
   - Prozac was terrible
   - Other Prozac was terrible
 
-# next appointment
+## next appointment
 
   - Reasons for scheduling an appointment sooner than next week
     - Seemingly worse off than baseline?
@@ -86,7 +120,7 @@
       - Finding it hard to plan at all
     - How frequently should we meet?
 
-# Old notes
+## Old notes
 
 3 tablets a day
 300 in the morning
