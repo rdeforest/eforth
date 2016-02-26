@@ -1,8 +1,6 @@
 Note:
 
-  - 'Contact' portion of this project is relevant to as-yet-unstarted "ITIL"
-    project
-
+  - 'Contact' portion of this project overlaps with TIC project
 
 Stack:
 
@@ -11,18 +9,22 @@ Stack:
 
 Pending:
 
-  - Remote methods exposed
-    - participant.pendingMessages()
-    - item.acknowledge()
-
   - UI
     - User sign-up
     - Item management
     - Schedule management
     - Pop-ups for reminders
 
+  - fixup
+    - Make CoffeeScript compilation an automatic part of startup
+
+  - Correct ACLs
+    - https://docs.strongloop.com/display/public/LB/Accessing+related+models
+
 Doing:
 
+  - UI
+    - User creation form
 
 Done:
   - Expose remote methods
