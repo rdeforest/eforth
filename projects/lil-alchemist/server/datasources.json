@@ -5,6 +5,8 @@
   },
   "sqlite": {
     "name": "sqlite",
-    "connector": "sqlite"
+    "connector": "loopback-connector-sqlite",
+    "file_name": "./sqlite.db",
+    "debug": false
   }
 }

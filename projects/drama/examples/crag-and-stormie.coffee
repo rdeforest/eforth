@@ -25,11 +25,22 @@ drama = Drama script: examplePlay
 cr = crag
 sm = stormagnet
 
-drama stage.curtainUp,
+drama "",
+  stage
+    .setting "apartment"
+    .curtainUp()
+
   cr "Today is a good day to paint."
     .commencePainting
   cr "That's odd..."
     .leanIn
     .fallForward
-  stage.lightsDown
-    .
+
+  stage
+    .lightsDown
+    .changeSet "painting", sounds: "splashing"
+    .lightsUp
+
+  cr "Where am I?!"
+
+  sm "More importabtly, _who_ are you?"
