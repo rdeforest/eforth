@@ -170,7 +170,7 @@ $(function(){
       this.listenTo(Todos, 'all', this.render);
 
       this.footer = this.$('footer');
-      this.main = $('#main');
+      this.itemList = $('#itemList');
 
       Todos.fetch();
     },
@@ -182,11 +182,11 @@ $(function(){
       var remaining = Todos.remaining().length;
 
       if (Todos.length) {
-        this.main.show();
+        this.itemList.show();
         this.footer.show();
         this.footer.html(this.statsTemplate({done: done, remaining: remaining}));
       } else {
-        this.main.hide();
+        this.itemList.hide();
         this.footer.hide();
       }
 

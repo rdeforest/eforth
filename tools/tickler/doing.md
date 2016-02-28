@@ -2,17 +2,15 @@ Note:
 
   - 'Contact' portion of this project overlaps with TIC project
 
-Stack:
-
-  - this tickler stuff
-  - Nicole's email thingie
-
 Pending:
 
   - UI
     - User sign-up
+    - User login
     - Item management
+      - mostly done because STOLEN :)
     - Schedule management
+      - can probably copy item stuff
     - Pop-ups for reminders
 
   - fixup
@@ -24,7 +22,8 @@ Pending:
 Doing:
 
   - UI
-    - User creation form
+    - Adding schedule editing
+      - Rename existing objects to clarify relations
 
 Done:
   - Expose remote methods

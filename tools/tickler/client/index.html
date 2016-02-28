@@ -11,33 +11,39 @@
 
   <div id="todoapp">
 
-    <header>
-      <h1>Todos</h1>
-      <input id="new-todo" type="text" placeholder="What needs to be done?">
-    </header>
+    <div>
+      <header>
+        <h1>Items</h1>
+        <input id="new-todo" type="text" placeholder="What needs to be done?">
+      </header>
 
-    <section id="main">
-      <input id="toggle-all" type="checkbox">
-      <label for="toggle-all">Mark all as complete</label>
-      <ul id="todo-list"></ul>
-    </section>
+      <section id="itemList">
+        <input id="toggle-all" type="checkbox">
+        <label for="toggle-all">Mark all as complete</label>
+        <ul id="todo-list"></ul>
+      </section>
 
-    <footer>
-      <a id="clear-completed">Clear completed</a>
-      <div id="todo-count"></div>
-    </footer>
+      <footer>
+        <a id="clear-completed">Clear completed</a>
+        <div id="todo-count"></div>
+      </footer>
+    </div>
 
-  </div>
+    <div>
+      <header>
+        <h1>Schedules</h1>
+        <input id="new-schedule" type="text" placeholder="Remind how often?">
+      </header>
 
-  <div id="instructions">
-    Double-click to edit a todo.
-  </div>
+      <section id="scheduleList">
+        <ul id="schedule-list"></ul>
+      </section>
 
-  <div id="credits">
-    Created by
-    <br />
-    <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>.
-    <br />Rewritten by: <a href="https://github.com/tastejs/todomvc">TodoMVC</a>.
+      <footer>
+        <div id="schedule-count"></div>
+      </footer>
+    </div>
+
   </div>
 
   <script src="scripts/test/vendor/json2.js"></script>
