@@ -11,7 +11,13 @@
 
   <div id="todoapp">
 
-    <div>
+    <ul>
+      <li><a href="#todoapp-items">Items</a></li>
+      <li><a href="#todoapp-schedules">Schedules</a></li>
+      <li><a href="#todoapp-account">Account</a></li>
+    </ul>
+
+    <div id="todoapp-items">
       <header>
         <h1>Items</h1>
         <input id="new-todo" type="text" placeholder="What needs to be done?">
@@ -29,7 +35,7 @@
       </footer>
     </div>
 
-    <div>
+    <div id="todoapp-schedules">
       <header>
         <h1>Schedules</h1>
         <input id="new-schedule" type="text" placeholder="Remind how often?">
@@ -44,6 +50,9 @@
       </footer>
     </div>
 
+    <div id="todoapp-account">
+    </div>
+
   </div>
 
   <script src="scripts/test/vendor/json2.js"></script>
@@ -52,6 +61,7 @@
   <script src="scripts/backbone.js"></script>
   <script src="scripts/backbone.localStorage.js"></script>
   <script src="scripts/todos.js"></script>
+  <script src="scripts/ui/1.11.4/jquery-ui.js"></script>
 
   <!-- Templates -->
 

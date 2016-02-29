@@ -114,3 +114,5 @@ $ ->
 
   App = new AppView
 
+  $("#todoapp").tabs()
+
