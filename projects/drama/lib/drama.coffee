@@ -5,7 +5,7 @@ drama = (args...) ->
       narrator event
     
 Actor = ({@name, @desc, @poses}) ->
-  newActor = (actions...) ->
+  newActor = (actions...) -> actions.each
 
   newActor.prototype = {}
 
