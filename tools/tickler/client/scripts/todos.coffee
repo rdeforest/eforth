@@ -1,24 +1,29 @@
 $ ->
-  Todo = Backbone.Model.extend
+  Item = Backbone.Model.extend
     defaults: ->
-      title: "empty item..."
-      order: Todos.nextOrder()
+      contents: "empty item..."
+      order: itemList.nextOrder()
       done: false
+      acknowledged: 0
 
     toggle: -> @save done: not @get 'done'
 
-  TodoList = Backbone.Collection.extend
-    model: Todo
-    localStorage: new Backbone.LocalStorage 'todos-backbone'
-    done: -> @where done: true
-    remaining: -> @where done: false
-    nextOrder: -> if not @length then 1 else @last().get('order') + 1
+  ItemList = Backbone.Collection.extend
+    model: Item
+    #localStorage: new Backbone.LocalStorage 'todos-backbone'
+    url: '/api/v1/Items'
     comparator: 'order'
 
-  # XXX: Capitalized but not a class? Maybe change that?
-  Todos = new TodoList
+    done: ->
+      @where done: true
+    remaining: ->
+      @where done: false
+    nextOrder: ->
+      if not @length then 1 else @last().get('order') + 1
 
-  TodoView = Backbone.View.extend
+  itemList = new ItemList
+
+  ItemView = Backbone.View.extend
     tagName: 'li'
     template: _.template $('#item-template').html()
 
@@ -46,8 +51,8 @@ $ ->
       @input.focus()
 
     close: ->
-      if value = @input.val
-        @model.save title: value
+      if value = @input.val()
+        @model.save contents: value
         @$el.removeClass 'editing'
       else
         @clear()
@@ -70,20 +75,20 @@ $ ->
       @input = @$("#new-todo")
       @allCheckbox = @$("#toggle-all")[0]
 
-      @listenTo Todos, 'add',   @addOne
-      @listenTo Todos, 'reset', @addAll
-      @listenTo Todos, 'all',   @render
+      @listenTo itemList, 'add',   @addOne
+      @listenTo itemList, 'reset', @addAll
+      @listenTo itemList, 'all',   @render
 
       @footer = @$('footer')
       @itemList = $('#itemList')
 
-      Todos.fetch()
+      itemList.fetch()
 
     render: ->
-      done = Todos.done().length
-      remaining = Todos.remaining().length
+      done = itemList.done().length
+      remaining = itemList.remaining().length
 
-      if Todos.length
+      if itemList.length
         @itemList.show()
         @footer.show()
         @footer.html @statsTemplate {done, remaining}
@@ -94,25 +99,26 @@ $ ->
       @allCheckbox.checked = not remaining
 
     addOne: (todo) ->
-      view = new TodoView model: todo
+      view = new ItemView model: todo
       @$("#todo-list").append view.render().el
 
-    addAll: -> Todos.each @addOne, this
+    addAll: -> itemList.each @addOne, this
 
     createOnEnter: (e) ->
       if e.keyCode is 13 and @input.val()
-        Todos.create title: @input.val()
+        itemList.create contents: @input.val()
         @input.val ''
 
     clearCompleted: ->
-      _.invoke Todos.done(), 'destroy'
+      _.invoke itemList.done(), 'destroy'
       return false
 
     toggleAllComplete: ->
       done = @allCheckbox.checked
-      Todos.each (todo) -> todo.save done: done
+      itemList.each (todo) -> todo.save done: done
 
   App = new AppView
 
-  $("#todoapp").tabs()
+  $("#todoapp").tabs
+    active: 0
 

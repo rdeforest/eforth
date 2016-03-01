@@ -52,6 +52,19 @@
     </div>
 
     <div id="todoapp-account">
+      <section>
+        <label for="text1">Username</label>
+        <input type="text" id="username" />
+      </section>
+      <section>
+        <label for="text2">Password</label>
+        <input type="text" id="password" />
+      </section>
+      <section>
+        <label for="text3">Confirm Password</label>
+        <input type="text" id="confirm-password" />
+      </section>
+      <a class="button" href="#">Login / Register</a>
     </div>
 
   </div>
@@ -69,10 +82,18 @@
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-      <label><%- title %></label>
+      <label><%- contents %></label>
       <a class="destroy"></a>
     </div>
-    <input class="edit" type="text" value="<%- title %>" />
+    <input class="edit" type="text" value="<%- contents %>" />
+  </script>
+
+  <script type="text/template" id="schedule-template">
+    <div class="view">
+      <label><%- contents %></label>
+      <a class="destroy"></a>
+    </div>
+    <input class="edit" type="text" value="<%- contents %>" />
   </script>
 
   <script type="text/template" id="stats-template">
