@@ -6,67 +6,44 @@ autoVivify = (o, path...) ->
 
   o[name] = {}
 
-node = (name, number) -> "#{name}_#{number}"
-
-edge  = (n) -> node  "", n
-a     = (n) -> node "A", n
-b     = (n) -> node "B", n
-c     = (n) -> node "C", n
-
-plus  = "plus"
-minus = "minus"
-
-  
-
 class Maze
-  constructor: (paths) ->
-    @exits = {}
-    @copies = {}
+  constructor: (graph) ->
+    {@exits, @copies} = graph
     @other = {}
 
-    @addPaths from, destinations for from, destinations of paths
+    @completePaths surface, paths for surface, paths of graph
 
-  parseNode: (nodeName) ->
-    [surface, index] = nodeName.split '_'
-
-    switch
-      when not surface then @exits
-      when not index   then autoVivify @other,  surface
-                       else autoVivify @copies, surface, index
-
-
-  addPaths: (fromName, destinations) ->
-    from = parseNode fromName
-
-    for to in destinations
-      @addPath from, to
-      @addPath to, from
-
-  addPath: (fromName, toName) ->
-    from = parseNode fromName
-    [surface, index] = toName.split '_'
+  completePaths: (surface, paths) ->
 
 exampleMaze = new Maze
-  edge_0: [edge 15, edge 14, a 0]
-  edge_1: [a 3]
-  edge_2: [a 4, b 6, c 0, edge 11]
-  edge_3: [b 0]
+  exits:
+    0:   in: a: 0
+        out: [14, 15]
+    1:   in: a: 3
+    2:   in: a: 4, b: 6, c: 0
+        out: [11]
+    3:   in: b: 0
 
-  edge_4: [b 3]
-  edge_5: [b 7]
-  edge_6: [a 2, c 5]
-  edge_7: [a 10, edge 12, edge 9]
+    4:   in: b: 3
+    5:   in: b: 7
+    6:   in: a: 2, c: 5
+    7:   in: a: 10
+        out: [12, 9]
 
-  edge_8: [b 2]
-  edge_10: [a 13]
+    8:   in: b: 2
+    10:  in: a: 13
 
-  a_7: [b 15]
-  a_8: [c 12]
-  a_9: [a 15]
-  a_11: [minus]
+  copies:
+    a:
+      7:  in: b: 15
+      8:  in: c: 12
+      9:  in: a: 15
+      11: minus
 
-  b_10: [c 3]
-  b_13: [c 14]
+    b:
+      10: in: c: 3
+      13: in: c: 14
 
-  c_6: [c 7]
-  c_9: [plus]
+    c:
+      6: in: c: 7
+      9: plus
