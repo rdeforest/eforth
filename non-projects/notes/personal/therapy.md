@@ -2,6 +2,19 @@
 
 ## 2016-02-26
 
+### Decision
+
+  - Migrate back to cocktail of a year ago
+    - Re-add
+      - Bupropion
+      - Lexipro
+    - Reduce and maybe drop
+      - Lithium
+    - Keep
+      - Gaunfacine for ADHD
+      - Vyvanse for ADHD
+      - l-methylfolate
+
 ### Status report
 
   - News/updates
@@ -31,6 +44,13 @@
 ### Questions
 
   - What's the plan?
+
+  - Add Lexipro, reduce lithium
+  - Add something new (anti depressant)
+  - Add Seraquil(sp?)
+
+Bupropion ended in May 2015
+
 
 # old
 
