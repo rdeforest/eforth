@@ -1,4 +1,18 @@
 # new
+## 2016-03-02
+
+### Status
+
+  - How am I
+    - Generally better
+    - Clearer, more "here", fog has lifted
+
+  - News/updates
+    - Visible progress on tickler project
+    - Replaced headlight in motorcycle
+    - Planning overnight trip tomorrow
+
+  - Questions
 
 ## 2016-02-26
 
