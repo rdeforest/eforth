@@ -1,5 +1,5 @@
 autoVivify = (o, path...) ->
-  [prefix, name] = path
+  [prefix..., name] = path
 
   for part in prefix
     o = o[part] or= {}
@@ -7,43 +7,78 @@ autoVivify = (o, path...) ->
   o[name] = {}
 
 class Maze
-  constructor: (graph) ->
-    {@exits, @copies} = graph
-    @other = {}
+  constructor: -> @boxes = {}
 
-    @completePaths surface, paths for surface, paths of graph
+  addEdges: (args...) ->
+    nodes = []
 
-  completePaths: (surface, paths) ->
+    for arg in args
+      if 'object' is typeof arg
+        for k, v of arg
+          nodes.push [k, v]
+      else
+        nodes.push arg
+    
+    while nodes.length > 1
+      [node, nodes...] = nodes
+
+      for other in nodes
+        @addEdge node, other
+
+    this
+
+  addEdge: (from, to) ->
+    from = @normalize from
+    to   = @normalize to
+
+    autoVivify @boxes, from..., to...
+    autoVivify @boxes, to..., from...
+
+  normalize: (node) ->
+    switch typeof node
+      when 'number' then ['', node]
+      when 'string' then [node, 0]
+      else               node
+
+  touching: (node) ->
+    node = @normalize node
+    touching = []
+
+    for box, pin of @boxes[node[0]][node[1]
+      touching.push [box, pin]
+
+    touching
+
+  extend: (node) ->
 
 exampleMaze = new Maze
-  exits:
-    0:   in: a: 0
-        out: [14, 15]
-    1:   in: a: 3
-    2:   in: a: 4, b: 6, c: 0
-        out: [11]
-    3:   in: b: 0
 
-    4:   in: b: 3
-    5:   in: b: 7
-    6:   in: a: 2, c: 5
-    7:   in: a: 10
-        out: [12, 9]
+exampleMaze
+  .addEdges  0, 14, 15, a: 0
+  .addEdges  1, a: 3
+  .addEdges  2, 11, a: 4, b: 6, c: 0
+  .addEdges  3, b: 0
 
-    8:   in: b: 2
-    10:  in: a: 13
+  .addEdges  4, b: 3
+  .addEdges  5, b: 7
+  .addEdges  6, a: 2, c: 5
+  .addEdges  7, 9, 12, a: 10
 
-  copies:
-    a:
-      7:  in: b: 15
-      8:  in: c: 12
-      9:  in: a: 15
-      11: minus
+  .addEdges  8, b: 2
+  .addEdges 10, a: 13
 
-    b:
-      10: in: c: 3
-      13: in: c: 14
+  .addEdges a: 7, b: 15
+  .addEdges a: 8, c: 12
+  .addEdges a: 9, a: 15
+  .addEdges a: 11, "minus"
 
-    c:
-      6: in: c: 7
-      9: plus
+  .addEdges b: 10, c: 3
+  .addEdges b: 13, c: 14
+
+  .addEdges c: 6, c: 7
+  .addEdges c: 9, "plus"
+
+module.exports =
+  autoVivify: autoVivify
+  Maze: Maze
+  example: exampleMaze
