@@ -12,7 +12,38 @@
     - Replaced headlight in motorcycle
     - Planning overnight trip tomorrow
 
+  - Plans
+    - Go to San Diego
+      - Ride if possible
+      - Fly if necessary
+      - Details pending conversation with my sister this afternoon
+    - Join an Aikido dojo
+      - After above
+
   - Questions
+    - Vyvanse?
+      - Good for mood
+
+  - Work
+    - Comms
+      - Specific feedback denied
+      - Benchmarks unavailable
+    - If productivity must be vindicated
+      - Need SMART goals
+    - Push burden of proof of performance and such on others
+      - "Where are the team goals?"
+    - What Dr. L is doing
+      - "What's the problem"
+      - "How is it going to be addressed" (SMART goals)
+      - Focus on positive framing
+    - What I can do
+      - Identify the sensitive subjects
+      - Break them into pieces
+    - What Jeff could do
+      - Collaborate
+        - Incorporate other people's work
+          - Counter-example: throwing out the response workflow
+
 
 ## 2016-02-26
 
