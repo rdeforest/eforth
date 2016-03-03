@@ -1,13 +1,15 @@
-autoVivify = (o, path...) ->
+autoVivify = (o, path..., value) ->
   [prefix..., name] = path
 
   for part in prefix
     o = o[part] or= {}
 
-  o[name] = {}
+  o[name] = value
 
 class Maze
-  constructor: -> @boxes = {}
+  constructor: ->
+    # @paths[fromBox][fromPin][toBox][toPin] is path between them
+    @paths = {}
 
   addEdges: (args...) ->
     nodes = []
@@ -31,25 +33,37 @@ class Maze
     from = @normalize from
     to   = @normalize to
 
-    autoVivify @boxes, from..., to...
-    autoVivify @boxes, to..., from...
+  addPath: (from, to, path) ->
+    autoVivify @paths, from..., to..., path
+    autoVivify @paths, to..., from..., path.reverse()
 
   normalize: (node) ->
     switch typeof node
       when 'number' then ['', node]
       when 'string' then [node, 0]
-      else               node
+      else
+        if node.length is 2
+          node
+        else
+          [k] = Object.keys node
+          [k, node[k]]
 
   touching: (node) ->
-    node = @normalize node
+    [nodeBox, nodePin] = @normalize node
     touching = []
 
-    for box, pin of @boxes[node[0]][node[1]
-      touching.push [box, pin]
+    for box, pins of @paths[nodeBox][nodePin]
+      for pin of Object.keys pins
+        path = @paths[nodeBox][nodePin][box][pin]
+        touching.push [box, pin, path]
 
     touching
 
   extend: (node) ->
+    for [nearBox, nearPin, nearPath] in @touching node
+      for [farBox, farPin, farPath] in @touching [nearBox, nearPin] when farBox isnt node[0] or farPin isnt node[1]
+        newPath = nearPath.concat farPath
+        @addPath node, [farBox, farPin], newPath
 
 exampleMaze = new Maze
 
