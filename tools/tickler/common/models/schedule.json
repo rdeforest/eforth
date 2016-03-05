@@ -16,6 +16,11 @@
   },
   "validations": [],
   "relations": {
+    "items": {
+      "type": "hasMany",
+      "model": "Item",
+      "foreignKey": ""
+    },
     "participant": {
       "type": "belongsTo",
       "model": "Participant",

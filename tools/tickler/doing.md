@@ -19,11 +19,13 @@ Pending:
   - Correct ACLs
     - https://docs.strongloop.com/display/public/LB/Accessing+related+models
 
+  - Tests!
+
 Doing:
 
-  - UI
-    - Adding schedule editing
-      - Rename existing objects to clarify relations
+  - User sign-up w/o oauth
+    - Detect new user
+      - React model for Participant
 
 Done:
   - Expose remote methods
