@@ -53,18 +53,28 @@
 
     <div id="todoapp-account">
       <section>
-        <label for="text1">Username</label>
+        <label for="username">Username</label>
         <input type="text" id="username" />
       </section>
       <section>
-        <label for="text2">Password</label>
-        <input type="text" id="password" />
+        <label for="password">Password</label>
+        <input type="password" id="password" />
       </section>
       <section>
-        <label for="text3">Confirm Password</label>
-        <input type="text" id="confirm-password" />
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" />
       </section>
-      <a class="button" href="#">Login / Register</a>
+      <a class="button" href="#">Login</a>
+      <script>
+      $(function($) {
+        $(".button")
+          .button()
+          .click(function (e) {
+            // ajax call for login/register
+            e.preventDefault();
+          });
+      });
+      </script>
     </div>
 
   </div>

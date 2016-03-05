@@ -1,10 +1,24 @@
 $ ->
+
+  Participant = Backbone.Model.extend
+    defaults: ->
+      id: false
+      goal: ''
+
+  Schedule = Backbone.Model.extend
+    defaults: ->
+      nextEvent: 0
+      interval: 1000 * 60 * 60 # one hour
+      participantId: false
+
   Item = Backbone.Model.extend
     defaults: ->
       contents: "empty item..."
       order: itemList.nextOrder()
       done: false
       acknowledged: 0
+      scheduleId: false
+      participantId: false
 
     toggle: -> @save done: not @get 'done'
 
