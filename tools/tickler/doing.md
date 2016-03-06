@@ -23,9 +23,8 @@ Pending:
 
 Doing:
 
-  - User sign-up w/o oauth
-    - Detect new user
-      - React model for Participant
+  - Reproduce work from yesterday instead of walking home and checking it in
+    - started at 09:30
 
 Done:
   - Expose remote methods
