@@ -1,0 +1,14 @@
+define [], ->
+  Common =
+    TodoFilter: ''
+
+    ENTER_KEY: 13
+    ESCAPE_KEY: 27
+
+    apiUrl: '/api/v1'
+    api: (parts...) ->
+      [Common.apiUrl, parts...].join '/'
+
+  Object.defineProperty Common, 'session',
+    get: -> JSON.parse localStorage.getItem 'sessionKey'
+    set: (id) -> localStorage.setItem 'sessionKey', JSON.stringify id

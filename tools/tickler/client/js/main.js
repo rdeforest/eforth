@@ -27,7 +27,9 @@ require.config({
     underscore: '../node_modules/underscore/underscore',
     backbone: '../node_modules/backbone/backbone',
     backboneLocalstorage: '../node_modules/backbone.localstorage/backbone.localStorage',
-    text: '../node_modules/requirejs-text/text'
+    text: '../node_modules/requirejs-text/text',
+    cs: '../node_modules/require-cs/cs',
+    "coffee-script": '../node_modules/coffee-script/lib/coffee-script/coffee-script'
   }
 });
 
@@ -35,8 +37,9 @@ require([
   'backbone',
   'views/app',
   'routers/router',
+  'connect',
   'jquery-ui'
-], function (Backbone, AppView, Workspace) {
+], function (Backbone, AppView, Workspace, connect) {
   /*jshint nonew:false*/
   // Initialize routing and start Backbone.history()
   new Workspace();
@@ -56,4 +59,6 @@ require([
     .click(function(e) {
       console.log("Todo: register button");
     });
+
+  // console.log("Connect: ", connect);
 });

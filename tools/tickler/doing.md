@@ -4,6 +4,11 @@ Note:
 
 Pending:
 
+  - Convert everything I care about to CoffeeScript
+    - One of
+      - get require-cs working
+      - set up auto-compilation
+
   - UI
     - User sign-up
     - User login
@@ -23,8 +28,18 @@ Pending:
 
 Doing:
 
+  - UI: Register + Login
+    - After registering user, log them in
+    - Update form (hide fields, change buttons etc)
+    - Started at 12:00
+    - Got login success at 12:30
 
 Done:
+  - UI: Register
+    - Click Register with login, pass and confirm filled in creates account
+    - started at 10:40
+    - Got side-tracked into CoffeeScript crap, re-started at 10:55
+    - Successfully created account at 12:00
   - Reproduce work from 2016-03-05 instead of walking home and checking it in
     - started at 09:30
     - finished at 10:30
