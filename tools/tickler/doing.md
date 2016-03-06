@@ -23,10 +23,11 @@ Pending:
 
 Doing:
 
-  - Reproduce work from yesterday instead of walking home and checking it in
-    - started at 09:30
 
 Done:
+  - Reproduce work from 2016-03-05 instead of walking home and checking it in
+    - started at 09:30
+    - finished at 10:30
   - Expose remote methods
     - Have to compile CoffeeScript
   - Figure out authenticated testing

@@ -23,6 +23,7 @@ require.config({
   },
   paths: {
     jquery: '../node_modules/jquery/dist/jquery',
+    "jquery-ui": '../node_modules/jquery-ui/jquery-ui',
     underscore: '../node_modules/underscore/underscore',
     backbone: '../node_modules/backbone/backbone',
     backboneLocalstorage: '../node_modules/backbone.localstorage/backbone.localStorage',
@@ -33,7 +34,8 @@ require.config({
 require([
   'backbone',
   'views/app',
-  'routers/router'
+  'routers/router',
+  'jquery-ui'
 ], function (Backbone, AppView, Workspace) {
   /*jshint nonew:false*/
   // Initialize routing and start Backbone.history()
@@ -42,4 +44,16 @@ require([
 
   // Initialize the application view
   new AppView();
+
+  $("#todoapp").tabs();
+  $("#login")
+    .button()
+    .click(function(e) {
+      console.log("Todo: login button");
+    });
+  $("#register")
+    .button()
+    .click(function(e) {
+      console.log("Todo: register button");
+    });
 });

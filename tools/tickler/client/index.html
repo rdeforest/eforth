@@ -5,25 +5,53 @@
     <title>Backbone.js + RequireJS • TodoMVC</title>
     <link rel="stylesheet" href="node_modules/todomvc-common/base.css">
     <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/jquery.ui.all.css">
   </head>
   <body>
     <section id="todoapp">
-      <header id="header">
-        <h1>todos</h1>
-        <input id="new-todo" placeholder="What needs to be done?" autofocus>
-      </header>
-      <section id="main">
-        <input id="toggle-all" type="checkbox">
-        <label for="toggle-all">Mark all as complete</label>
-        <ul id="todo-list"></ul>
-      </section>
-      <footer id="footer"></footer>
+      <ul>
+        <li><a href="#items">Items</a></li>
+        <li><a href="#schedules">Schedules</a></li>
+        <li><a href="#connect">Connect</a></li>
+      </ul>
+      <div id="items">
+        <header id="header">
+          <h1>todos</h1>
+          <input id="new-todo" placeholder="What needs to be done?" autofocus>
+        </header>
+        <section id="main">
+          <input id="toggle-all" type="checkbox">
+          <label for="toggle-all">Mark all as complete</label>
+          <ul id="todo-list"></ul>
+        </section>
+        <footer id="footer"></footer>
+      </div>
+      <div id="schedules">
+        <header id="header">
+          <h1>schedules</h1>
+          <input id="new-schedule" placeholder="Reminder frequency?" autofocus>
+        </header>
+        <section id="main">
+          <ul id="schedule-list"></ul>
+        </section>
+      </div>
+      <div id="connect">
+        <section>
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+        </section>
+        <section>
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </section>
+        <section>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" />
+        </section>
+        <a class="button" id="login" href="#">Login</a>
+        <a class="button" id="register" href="#">Register</a>
+      </div>
     </section>
-    <footer id="info">
-      <p>Double-click to edit a todo</p>
-      <p>Written by <a href="https://github.com/tastejs/todomvc">TasteJS</a></p>
-      <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
-    </footer>
     <script data-main="js/main" src="node_modules/requirejs/require.js"></script>
   </body>
 </html>
