@@ -44,6 +44,7 @@ Doing:
     - Then resumed around 20:00
       - overrode Backbone.ajax to insert session id header
       - Looks like it works, committing changes
+    - Then finished the next day?!
 
 Done:
 
