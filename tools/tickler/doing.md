@@ -1,4 +1,14 @@
-Pending:
+# Doing
+
+  - Finish Schedule UI
+    - Make adding work
+    - Got a new schedule in the db, so that's something
+
+  - Starting to think it's time to stop trying to adapt the TodoMVC skeleton
+
+# v0.1
+
+## Pending
 
   - UI
     - Schedule management
@@ -11,17 +21,7 @@ Pending:
     - Correct ACLs
       - https://docs.strongloop.com/display/public/LB/Accessing+related+models
 
-  - v0.2
-    - Re-implement without cribbing from TodoMVC
-
-Doing:
-
-  - Finish Schedule UI
-    - Make adding work
-
-  - Starting to think it's time to stop trying to adapt the TodoMVC skeleton
-
-Done:
+## Done
 
   - Switched item view to a table. OH NOES! :P
   - Restore editing CSS stuff
@@ -72,4 +72,14 @@ Done:
     - make item.due() and .acknowledge work
     - make pendingMessages work
 
+
+# v0.2
+
+  - Re-implement "from scratch" without cribbing from TodoMVC
+
+# v0.X
+
+  - instant messaging reminders
+  - email
+  - integrate w/ Trello
 

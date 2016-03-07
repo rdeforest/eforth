@@ -4,7 +4,7 @@ define [ 'underscore', 'backbone', 'common' ],
       defaults:
         contents: 'No contents specified'
         acknowledged: 0
-        userId: -> Common.session.userId
+        participantId: -> Common.session.userId
 
       # Retained as example
       ###

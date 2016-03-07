@@ -4,13 +4,13 @@ define [
     'views/schedules'
     'common'
   ], ($, _, Backbone, Schedules, ScheduleView, Common, statsTemplate) ->
-    itemTabView = Backbone.View.extend
+    scheduleTabView = Backbone.View.extend
       events:
-        'keypress #new-item': 'createOnEnter'
+        'keypress #new-schedule': 'createOnEnter'
 
       initialize: ->
-        @$input      = @$ '#new-item'
-        @$itemList   = @$ '#item-list'
+        @$input      = @$ '#new-schedule'
+        @$scheduleList   = @$ '#schedule-list'
 
         @listenTo Schedules, 'add', @addOne
         @listenTo Schedules, 'reset', @addAll
@@ -18,12 +18,12 @@ define [
 
         Schedules.fetch reset:true
 
-      addOne: (item) ->
-        view = new ScheduleView model: item
-        @$itemList.append view.render().el
+      addOne: (schedule) ->
+        view = new ScheduleView model: schedule
+        @$scheduleList.append view.render().el
 
       addAll: ->
-        @$itemList.empty()
+        @$scheduleList.empty()
         Schedules.each @addOne, this
 
       createOnEnter: (e) ->

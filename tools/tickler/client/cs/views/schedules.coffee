@@ -2,7 +2,7 @@ define [  'jquery', 'underscore', 'backbone'
           'common', 'text!templates/schedules.html' ],
   ($, _, Backbone, Common, schedulesTemplate) ->
     ScheduleView = Backbone.View.extend
-      tagName: 'li'
+      tagName: 'tr'
       template: _.template schedulesTemplate
       events:
         'click .toggle'  : 'toggleCompleted'
