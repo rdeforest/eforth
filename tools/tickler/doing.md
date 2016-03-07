@@ -28,6 +28,15 @@ Pending:
 
 Doing:
 
+  - Create Schedule UI
+    - Copy Item stuff
+    - Ran into problem: demo was built around Todos being EVERYTHING
+      - AppView is todo-centric
+      - Need sub-views?
+      - Also found bug where pre-existing items show up crossed out on reload
+
+Done:
+
   - Todos to Items
     - Started 12:40
     - Noted time at 13:35, taking break
@@ -45,9 +54,6 @@ Doing:
       - overrode Backbone.ajax to insert session id header
       - Looks like it works, committing changes
     - Then finished the next day?!
-
-Done:
-
   - UI: Register + Login
     - After registering user, log them in
     - Update form (hide fields, change buttons etc)

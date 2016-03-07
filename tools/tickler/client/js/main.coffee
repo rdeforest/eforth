@@ -27,8 +27,6 @@ require [
     Backbone.history.start()
 
     Backbone.ajax = (url, settings = {}) ->
-      console.log "Backbone.ajax ", arguments
-
       if arguments.length is 2 or 'string' is typeof url
         settings.url = url
       else
@@ -38,15 +36,8 @@ require [
         settings.headers or= {}
         settings.headers.Authorization = session.id
 
-      result = Backbone.$.ajax.call Backbone.$, settings
-      console.log 'Backbone ajax result: ', result
-      window.lastBackboneAjaxResult = result
-      result
+      Backbone.$.ajax.call Backbone.$, settings
 
     connect.init()
 
-    # Initialize the application view
     new AppView()
-
-    $("#todoapp").tabs()
-    return

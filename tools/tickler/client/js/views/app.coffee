@@ -25,6 +25,7 @@ define [
         @listenTo Todos, 'all', _.debounce @render, 0
 
         Todos.fetch reset:true
+        $("#todoapp").tabs()
 
       render: ->
         if Todos.length

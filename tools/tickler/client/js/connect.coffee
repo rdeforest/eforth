@@ -13,6 +13,21 @@ define [
 
       ret
 
+    buttonStates =
+      connected:    logout:   'enable'
+      confirmed:    register: 'enable'
+      emptyConfirm: login:    'enable'
+
+    updateButtons = (status) ->
+      buttons =
+        login: 'disable'
+        logout: 'disable'
+        register: 'disable'
+      _.extend buttons, buttonStates[status]
+
+      for button, state of buttons
+        $("##{button}").button state
+
     validateSession = (session) ->
       if session
         $.ajax
@@ -20,55 +35,38 @@ define [
             url: Common.api 'Participants', session.userId
             headers: Authorization: session.id
           .done (user, result, response) ->
-            console.log "Validate result: ", arguments
-
             for field in ['goal', 'username', 'email']
               $("#" + field).val user[field]
 
-            $("#logout").button 'enable'
+            updateButtons 'connected'
 
             session.user = user
             Common.session = session
 
           .fail (error) ->
-            console.log "Validate failed: ", arguments
             $("#todoapp").tabs active: 2
 
-            # Common.session = null
+            Common.session = null
 
     logoutUser = ->
-      $.ajax
-          type: "POST"
-          url: Common.api 'Participants', 'logout'
+      $.post Common.api 'Participants', 'logout'
         .done (o, result, response) ->
-          console.log "Logout result: ", arguments
+          updateButtons()
 
     loginUser = (user = fields 'username', 'password') ->
-      url = Common.api 'Participants', 'login'
-
-      $.ajax
-          type: "POST"
-          url: url
-          data: user
+      $.post data: user, url: Common.api 'Participants', 'login'
         .done (session, result, response) ->
-          console.log "Login result: ", arguments
-
           if result is "success"
             Common.session = session
-            $("#logout").button 'enable'
-            $("#login, #register").button 'disable'
+            updateButtons 'connected'
+        .fail ->
+          console.log "todo: login failure UI effect"
 
     registerUser = ->
-      url = Common.api 'Participants'
       form = fields 'goal', 'username', 'password', 'email'
 
-      $.ajax
-          type: "POST"
-          url: url
-          data: form
+      $.post data: form, url: Common.api 'Participants'
         .done (user, result, response) ->
-          console.log "Register result: ", arguments
-
           if result is "success"
             {username, password} = form
             loginUser {username, password}
@@ -78,33 +76,31 @@ define [
     init: ->
       $("#logout")
         .button()
-        .button 'disable'
         .click (e) ->
-          e.preventDefault() # XXX: Is this needed?
-
           logoutUser()
 
       $("#login")
         .button()
         .click (e) ->
-          e.preventDefault() # XXX: Is this needed?
-
           loginUser()
-
-      $("#passconf")
-        .keyup (e) ->
-          if @value isnt $("#password")[0].value
-            $("#register").button 'disable'
-          else
-            $("#register").button 'enable'
 
       $("#register")
         .button()
-
         .click (e) ->
-          e.preventDefault() # XXX: Is this needed?
-
           registerUser()
+
+      $("#passconf #password")
+        .keyup (e) ->
+          pass = $("#password").val()
+          conf = $("#passconf").val()
+
+          updateButtons ''
+
+          if pass
+            if not conf
+              updateButtons 'emptyConfirm'
+            else if pass is conf
+              updateButtons 'confirmed'
 
       validateSession Common.session
 
