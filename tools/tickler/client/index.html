@@ -2,13 +2,11 @@
 <html lang="en" data-framework="backbonejs">
   <head>
     <meta charset="utf-8">
-    <title>Backbone.js + RequireJS • TodoMVC</title>
-    <link rel="stylesheet" href="node_modules/todomvc-common/base.css">
-    <link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+    <title>Nice Tickler</title>
     <link rel="stylesheet" href="node_modules/jquery-ui/themes/base/jquery.ui.all.css">
   </head>
   <body>
-    <section id="todoapp">
+    <section id="ticklerapp">
       <ul>
         <li><a href="#items">Items</a></li>
         <li><a href="#schedules">Schedules</a></li>
@@ -16,13 +14,11 @@
       </ul>
       <div id="items">
         <header id="header">
-          <h1>todos</h1>
-          <input id="new-todo" placeholder="What needs to be done?" autofocus>
+          <h1>items</h1>
+          <input id="new-item" placeholder="What needs to be done?" autofocus>
         </header>
         <section id="main">
-          <input id="toggle-all" type="checkbox">
-          <label for="toggle-all">Mark all as complete</label>
-          <ul id="todo-list"></ul>
+          <ul id="item-list"></ul>
         </section>
         <footer id="footer"></footer>
       </div>

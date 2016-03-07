@@ -1,9 +1,9 @@
 define [  'jquery', 'underscore', 'backbone'
-          'common', 'text!templates/todos.html' ],
-  ($, _, Backbone, Common, todosTemplate) ->
-    TodoView = Backbone.View.extend
+          'common', 'text!templates/items.html' ],
+  ($, _, Backbone, Common, itemsTemplate) ->
+    ItemView = Backbone.View.extend
       tagName: 'li'
-      template: _.template todosTemplate
+      template: _.template itemsTemplate
       events:
         'click .toggle'  : 'toggleCompleted'
         'dblclick label' : 'edit'

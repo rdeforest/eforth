@@ -19,8 +19,12 @@ require.config
     "coffee-script": '../node_modules/coffee-script/lib/coffee-script/coffee-script'
 
 require [
-    'backbone', 'views/app', 'routers/router',
-    'connect', 'common', 'jquery-ui'
+    'backbone'
+    'views/app'
+    'routers/router'
+    'connect'
+    'common'
+    'jquery-ui'
   ], (Backbone, AppView, Workspace, connect, Common) ->
     # Initialize routing and start Backbone.history()
     new Workspace()

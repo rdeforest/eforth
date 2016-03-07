@@ -1,6 +1,6 @@
 define [ 'underscore', 'backbone', 'common' ],
   (_, Backbone, Common) ->
-    Todo = Backbone.Model.extend
+    Item = Backbone.Model.extend
       defaults:
         contents: 'No contents specified'
         acknowledged: 0

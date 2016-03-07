@@ -44,7 +44,7 @@ define [
             Common.session = session
 
           .fail (error) ->
-            $("#todoapp").tabs active: 2
+            $("#ticklerapp").tabs active: 2
 
             Common.session = null
 

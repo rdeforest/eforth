@@ -1,7 +1,3 @@
-Note:
-
-  - 'Contact' portion of this project overlaps with TIC project
-
 Pending:
 
   - UI
@@ -15,6 +11,9 @@ Pending:
     - Correct ACLs
       - https://docs.strongloop.com/display/public/LB/Accessing+related+models
 
+  - v0.2
+    - Re-implement without cribbing from TodoMVC
+
 Doing:
 
   - Create Schedule UI
@@ -23,9 +22,12 @@ Doing:
       - AppView is todo-centric
       - Need sub-views?
       - Also found bug where pre-existing items show up crossed out on reload
+    - 09:25 Taking a break
+    - 09:35 Not much in the RSS feeds, resuming
 
 Done:
 
+  - Changed all the 'todo' references to 'item'
   - Separated CoffeeScript from JavaScript
   - Todos to Items
     - Started 12:40
