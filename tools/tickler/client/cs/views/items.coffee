@@ -2,7 +2,7 @@ define [  'jquery', 'underscore', 'backbone'
           'common', 'text!templates/items.html' ],
   ($, _, Backbone, Common, itemsTemplate) ->
     ItemView = Backbone.View.extend
-      tagName: 'li'
+      tagName: 'tr'
       template: _.template itemsTemplate
       events:
         'click .toggle'  : 'toggleCompleted'
@@ -19,15 +19,13 @@ define [  'jquery', 'underscore', 'backbone'
 
       render: ->
         @$el.html @template @model.toJSON()
-        @$el.toggleClass 'completed', @model.get 'completed'
 
         @toggleVisible()
         @$input = @$('.edit')
         this
 
-      toggleVisible: -> @$el.toggleClass 'hidden', false
+      toggleVisible: -> @$el.toggleClass 'hidden'
 
-      #  Switch this view into `"editing"` mode, displaying the input field.
       edit: ->
         @$el.addClass 'editing'
         @$input.focus()

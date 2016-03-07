@@ -1,5 +1,5 @@
-define [ 'underscore', 'backbone', 'backboneLocalstorage', 'models/item', 'common' ],
-  (_, Backbone, Store, Item, Common) ->
+define [ 'underscore', 'backbone', 'models/item', 'common' ],
+  (_, Backbone, Item, Common) ->
     new ItemsCollection = Backbone.Collection.extend
         model: Item
         url: Common.api('Items')

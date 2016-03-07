@@ -1,0 +1,15 @@
+.editing .view {
+  display: none;
+}
+
+.edit {
+  display: none;
+}
+
+.editing .edit {
+  display: block;
+}
+
+table {
+  width: 100%;
+}

@@ -16,17 +16,16 @@ Pending:
 
 Doing:
 
-  - Create Schedule UI
-    - Copy Item stuff
-    - Ran into problem: demo was built around Todos being EVERYTHING
-      - AppView is todo-centric
-      - Need sub-views?
-      - Also found bug where pre-existing items show up crossed out on reload
-    - 09:25 Taking a break
-    - 09:35 Not much in the RSS feeds, resuming
+  - Finish Schedule UI
+    - Make adding work
+
+  - Starting to think it's time to stop trying to adapt the TodoMVC skeleton
 
 Done:
 
+  - Switched item view to a table. OH NOES! :P
+  - Restore editing CSS stuff
+  - Broke out tabs into their own views
   - Changed all the 'todo' references to 'item'
   - Separated CoffeeScript from JavaScript
   - Todos to Items

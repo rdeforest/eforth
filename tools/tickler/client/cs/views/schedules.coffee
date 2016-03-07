@@ -19,7 +19,6 @@ define [  'jquery', 'underscore', 'backbone'
 
       render: ->
         @$el.html @template @model.toJSON()
-        @$el.toggleClass 'completed', @model.get 'completed'
 
         @toggleVisible()
         @$input = @$('.edit')
