@@ -4,7 +4,6 @@ define [
     'common'
     'jquery-ui'
   ], ($, Common) ->
-
     fields = (keys...) ->
       ret = {}
 
@@ -15,23 +14,32 @@ define [
       ret
 
     validateSession = (session) ->
-      $.ajax
-          type: "GET"
-          url: Common.api 'Participants', session.userId
-          headers: Authorization: session.id
-        .done (user, result, response) ->
-          console.log "Validate result: ", arguments
+      if session
+        $.ajax
+            type: "GET"
+            url: Common.api 'Participants', session.userId
+            headers: Authorization: session.id
+          .done (user, result, response) ->
+            console.log "Validate result: ", arguments
 
-          for field in ['goal', 'username', 'email']
-            $("#" + field).val user[field]
+            for field in ['goal', 'username', 'email']
+              $("#" + field).val user[field]
 
-          $("#logout").button 'enable'
+            $("#logout").button 'enable'
+
+            session.user = user
+            Common.session = session
+
+          .fail (error) ->
+            console.log "Validate failed: ", arguments
+            $("#todoapp").tabs active: 2
+
+            # Common.session = null
 
     logoutUser = ->
       $.ajax
           type: "POST"
           url: Common.api 'Participants', 'logout'
-          headers: Authorization: Common.session.id
         .done (o, result, response) ->
           console.log "Logout result: ", arguments
 
@@ -64,36 +72,39 @@ define [
           if result is "success"
             {username, password} = form
             loginUser {username, password}
+        .fail (error) ->
+          console.log "Register failed: ", arguments
 
-    $("#logout")
-      .button()
-      .button 'disable'
-      .click (e) ->
-        e.preventDefault() # XXX: Is this needed?
+    init: ->
+      $("#logout")
+        .button()
+        .button 'disable'
+        .click (e) ->
+          e.preventDefault() # XXX: Is this needed?
 
-        logoutUser()
+          logoutUser()
 
-    $("#login")
-      .button()
-      .click (e) ->
-        e.preventDefault() # XXX: Is this needed?
+      $("#login")
+        .button()
+        .click (e) ->
+          e.preventDefault() # XXX: Is this needed?
 
-        loginUser()
+          loginUser()
 
-    $("#passconf")
-      .keyup (e) ->
-        if @value isnt $("#password")[0].value
-          $("#register").button 'disable'
-        else
-          $("#register").button 'enable'
+      $("#passconf")
+        .keyup (e) ->
+          if @value isnt $("#password")[0].value
+            $("#register").button 'disable'
+          else
+            $("#register").button 'enable'
 
-    $("#register")
-      .button()
+      $("#register")
+        .button()
 
-      .click (e) ->
-        e.preventDefault() # XXX: Is this needed?
+        .click (e) ->
+          e.preventDefault() # XXX: Is this needed?
 
-        registerUser()
+          registerUser()
 
-    validateSession Common.session
+      validateSession Common.session
 

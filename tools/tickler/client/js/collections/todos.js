@@ -3,8 +3,9 @@ define([
   'underscore',
   'backbone',
   'backboneLocalstorage',
-  'models/todo'
-], function (_, Backbone, Store, Todo) {
+  'models/todo',
+  'common'
+], function (_, Backbone, Store, Todo, Common) {
   'use strict';
 
   var TodosCollection = Backbone.Collection.extend({
@@ -12,7 +13,9 @@ define([
     model: Todo,
 
     // Save all of the todo items under this example's namespace.
-    localStorage: new Store('todos-backbone'),
+    // localStorage: new Store('todos-backbone'),
+
+    url: Common.api('Items'),
 
     // Filter down the list of all todo items that are finished.
     completed: function () {

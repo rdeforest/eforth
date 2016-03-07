@@ -1,16 +1,16 @@
 /*global define*/
 define([
   'underscore',
-  'backbone'
-], function (_, Backbone) {
+  'backbone',
+  'common'
+], function (_, Backbone, Common) {
   'use strict';
 
   var Todo = Backbone.Model.extend({
-    // Default attributes for the todo
-    // and ensure that each todo created has `title` and `completed` keys.
     defaults: {
-      title: '',
-      completed: false
+      contents: '',
+      acknowledged: 0,
+      userId: function () { return Common.session.userId }
     },
 
     // Toggle the `completed` state of this todo item.

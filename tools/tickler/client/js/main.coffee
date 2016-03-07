@@ -18,16 +18,32 @@ require.config
     cs: '../node_modules/require-cs/cs'
     "coffee-script": '../node_modules/coffee-script/lib/coffee-script/coffee-script'
 
-require [ 'backbone', 'views/app', 'routers/router',
-  'connect', 'jquery-ui' ],
-  (Backbone, AppView, Workspace, connect) ->
+require [
+    'backbone', 'views/app', 'routers/router',
+    'connect', 'common', 'jquery-ui'
+  ], (Backbone, AppView, Workspace, connect, Common) ->
     # Initialize routing and start Backbone.history()
     new Workspace()
     Backbone.history.start()
+
+    Backbone.ajax = (url, settings = {}) ->
+      console.log "Backbone.ajax ", arguments
+
+      if arguments.length is 2 or 'string' is typeof url
+        settings.url = url
+      else
+        settings = url
+
+      if session = Common.session
+        settings.headers or= {}
+        settings.headers.Authorization = session.id
+
+      Backbone.$.ajax.call Backbone.$, settings
+
+    connect.init()
 
     # Initialize the application view
     new AppView()
 
     $("#todoapp").tabs()
-    connect.init()
     return

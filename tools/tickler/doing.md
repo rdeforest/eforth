@@ -28,13 +28,31 @@ Pending:
 
 Doing:
 
+  - Todos to Items
+    - Started 12:40
+    - Noted time at 13:35, taking break
+    - Restart at 13:40
+    - Then sun came out and was super annoying at 13:50
+    - Then figured out sessions still aren't quite right
+    - Doing SESSIONS now (14:00)
+    - Getting super frustrated
+    - Giving up at 14:15
+    - Moved to Stumptown
+      - trying to make most of 20 minutes remaining before karaoke
+      - it's 14:30
+      - Then went to karaoke at 14:50
+    - Then resumed around 20:00
+      - overrode Backbone.ajax to insert session id header
+      - Looks like it works, committing changes
+
+Done:
+
   - UI: Register + Login
     - After registering user, log them in
     - Update form (hide fields, change buttons etc)
     - Started at 12:00
     - Got login success at 12:30
-
-Done:
+    - And logout success at 12:55
   - UI: Register
     - Click Register with login, pass and confirm filled in creates account
     - started at 10:40
