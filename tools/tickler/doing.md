@@ -1,10 +1,7 @@
 # Doing
 
   - Finish Schedule UI
-    - Make adding work
-    - Got a new schedule in the db, so that's something
-
-  - Starting to think it's time to stop trying to adapt the TodoMVC skeleton
+    - Make editing work
 
 # v0.1
 
@@ -12,7 +9,9 @@
 
   - UI
     - Schedule management
-      - can probably copy item stuff
+      - Associate items with schedules
+      - Accept and interpret english time intervals like "1 hour"
+      - Make schedule times display well
     - Pop-ups for reminders
 
   - fixup

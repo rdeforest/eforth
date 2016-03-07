@@ -5,7 +5,6 @@ define [  'jquery', 'underscore', 'backbone'
       tagName: 'tr'
       template: _.template itemsTemplate
       events:
-        'click .toggle'  : 'toggleCompleted'
         'dblclick label' : 'edit'
         'click .destroy' : 'clear'
         'keypress .edit' : 'updateOnEnter'
@@ -15,16 +14,12 @@ define [  'jquery', 'underscore', 'backbone'
       initialize: ->
         @listenTo @model, 'change', @render
         @listenTo @model, 'destroy', @remove
-        @listenTo @model, 'visible', @toggleVisible
 
       render: ->
         @$el.html @template @model.toJSON()
 
-        @toggleVisible()
         @$input = @$('.edit')
         this
-
-      toggleVisible: -> @$el.toggleClass 'hidden'
 
       edit: ->
         @$el.addClass 'editing'

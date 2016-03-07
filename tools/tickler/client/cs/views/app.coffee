@@ -11,3 +11,5 @@ define [
 
         new itemTabView     el: '#items'
         new scheduleTabView el: '#schedules'
+        $("#loading").remove()
+        @$el.show()

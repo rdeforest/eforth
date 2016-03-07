@@ -3,7 +3,7 @@ define [ 'underscore', 'backbone', 'common' ],
     Schedule = Backbone.Model.extend
       defaults:
         interval: 86400 * 1000
-        participantId: -> Common.session.userId
+        participantId: Common.session.userId
 
       # Retained as example
       ###

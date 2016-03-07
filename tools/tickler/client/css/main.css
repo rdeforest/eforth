@@ -1,3 +1,7 @@
+.hidden {
+  display: none;
+}
+
 .editing .view {
   display: none;
 }

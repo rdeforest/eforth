@@ -5,7 +5,6 @@ define [  'jquery', 'underscore', 'backbone'
       tagName: 'tr'
       template: _.template schedulesTemplate
       events:
-        'click .toggle'  : 'toggleCompleted'
         'dblclick label' : 'edit'
         'click .destroy' : 'clear'
         'keypress .edit' : 'updateOnEnter'
@@ -15,18 +14,13 @@ define [  'jquery', 'underscore', 'backbone'
       initialize: ->
         @listenTo @model, 'change', @render
         @listenTo @model, 'destroy', @remove
-        @listenTo @model, 'visible', @toggleVisible
 
       render: ->
         @$el.html @template @model.toJSON()
 
-        @toggleVisible()
         @$input = @$('.edit')
         this
 
-      toggleVisible: -> @$el.toggleClass 'hidden', false
-
-      #  Switch this view into `"editing"` mode, displaying the input field.
       edit: ->
         @$el.addClass 'editing'
         @$input.focus()
