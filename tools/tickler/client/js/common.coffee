@@ -1,4 +1,4 @@
-define [], ->
+define ['jquery'], ($) ->
   Common =
     TodoFilter: ''
 
@@ -9,21 +9,9 @@ define [], ->
     api: (parts...) ->
       [Common.apiUrl, parts...].join '/'
 
-    updateAuthHeader: ->
-      session = Common.session
-      curHeaders = $.ajaxSetup().headers or {}
-
-      if session
-        curHeaders.Authorization = session.id
-      else
-        delete curHeaders.authorization
-
-      $.ajaxSetup headers: curHeaders
-
   Object.defineProperty Common, 'session',
     get: -> JSON.parse localStorage.getItem 'sessionKey'
     set: (session) ->
       localStorage.setItem 'sessionKey', JSON.stringify session
-      Common.updateAuthHeader()
 
   Common

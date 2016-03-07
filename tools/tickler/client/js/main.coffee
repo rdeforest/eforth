@@ -38,7 +38,10 @@ require [
         settings.headers or= {}
         settings.headers.Authorization = session.id
 
-      Backbone.$.ajax.call Backbone.$, settings
+      result = Backbone.$.ajax.call Backbone.$, settings
+      console.log 'Backbone ajax result: ', result
+      window.lastBackboneAjaxResult = result
+      result
 
     connect.init()
 
