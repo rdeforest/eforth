@@ -1,3 +1,14 @@
+# next time
+
+- Nicole's observations about my ideal work patterns?
+  - I respond well to PMing
+  - asking the right questions
+  - documentation
+- Look in to learning to explain things concretely
+- Problems
+  - Giving other people too much credit
+    - lack of confidence
+
 # new
 ## 2016-03-02
 
