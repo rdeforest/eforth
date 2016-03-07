@@ -25,7 +25,7 @@ define [  'jquery', 'underscore', 'backbone'
         @$input = @$('.edit')
         this
 
-      toggleVisible: -> @$el.toggleClass 'hidden',  @isHidden()
+      toggleVisible: -> @$el.toggleClass 'hidden', false
 
       #  Switch this view into `"editing"` mode, displaying the input field.
       edit: ->
@@ -53,6 +53,6 @@ define [  'jquery', 'underscore', 'backbone'
       revertOnEscape: (e) ->
         if e.which is Common.ESCAPE_KEY
           @$el.removeClass 'editing'
-          @$input.val @model.get 'title'
+          @$input.val @model.get 'contents'
 
       clear: -> @model.destroy()
