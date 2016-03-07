@@ -4,27 +4,16 @@ Note:
 
 Pending:
 
-  - Convert everything I care about to CoffeeScript
-    - One of
-      - get require-cs working
-      - set up auto-compilation
-
   - UI
-    - User sign-up
-    - User login
-    - Item management
-      - mostly done because STOLEN :)
     - Schedule management
       - can probably copy item stuff
     - Pop-ups for reminders
 
   - fixup
     - Make CoffeeScript compilation an automatic part of startup
-
-  - Correct ACLs
-    - https://docs.strongloop.com/display/public/LB/Accessing+related+models
-
-  - Tests!
+    - Tests!
+    - Correct ACLs
+      - https://docs.strongloop.com/display/public/LB/Accessing+related+models
 
 Doing:
 
@@ -37,6 +26,7 @@ Doing:
 
 Done:
 
+  - Separated CoffeeScript from JavaScript
   - Todos to Items
     - Started 12:40
     - Noted time at 13:35, taking break
