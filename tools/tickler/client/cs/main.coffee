@@ -40,4 +40,4 @@ require [
 
     connect.init()
 
-    new AppView()
+    window.app = new AppView()

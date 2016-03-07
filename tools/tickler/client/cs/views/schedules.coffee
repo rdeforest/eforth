@@ -30,7 +30,7 @@ define [  'jquery', 'underscore', 'backbone'
         trimmedValue = value.trim()
 
         if trimmedValue
-          @model.save contents: trimmedValue
+          @model.save interval: trimmedValue
 
           if value isnt trimmedValue
             @model.trigger 'change'

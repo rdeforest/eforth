@@ -5,6 +5,7 @@ define [
     'common'
   ], ($, _, Backbone, Schedules, ScheduleView, Common, statsTemplate) ->
     scheduleTabView = Backbone.View.extend
+      Schedules: Schedules
       events:
         'keypress #new-schedule': 'createOnEnter'
 

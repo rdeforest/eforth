@@ -9,7 +9,10 @@ define [
       initialize: ->
         @$el.tabs()
 
-        new itemTabView     el: '#items'
-        new scheduleTabView el: '#schedules'
+        @itemsTab =
+          new itemTabView     el: '#items'
+        @schedulesTab =
+          new scheduleTabView el: '#schedules'
+
         $("#loading").remove()
         @$el.show()
