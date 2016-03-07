@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "jshint ."
+    "pretest": "jshint .",
+    "build": "coffee -w -b -c -o js cs"
   },
   "dependencies": {
     "backbone": "^1.2.3",
