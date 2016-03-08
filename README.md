@@ -1,3 +1,9 @@
+# File later
+
+- Idea from Martha
+  - QR code printing for tracking physical items
+  - Easy way to print QR code labels
+
 # rdeforest
 
 Self-management project
