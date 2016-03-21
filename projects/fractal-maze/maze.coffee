@@ -1,22 +1,51 @@
-pinName = (pin) ->
-  switch typeof pin
-    when 'number' then pin.toString()
-    when 'object' then pin.box + " " + pin.pin
-    when 'string' then pin
-    else "unknown pin format"
-
-boxMaker = (name) ->
-  (pin, more...) ->
-    [box: name, pin: pin].concat more...
-
-maze =
-  wires: {}
-  paths: {}
+wires = {}
+paths = {}
 
 module.exports =
-  connect: connect = (from, to, andAlso...) ->
+  pinName: pinName = (pin) ->
+    if typeof pin is 'object'
+      if pin.length is 1
+        return pinName pin[0]
+
+      if pin.length
+        throw new Error "Invalid pin is long list: #{JSON.stringify pin}"
+
+    switch typeof pin
+      when 'number' then pin.toString()
+      when 'object' then pin.box + " " + pin.pin
+      when 'string' then pin
+      else throw new Error "unknown pin format: #{pin}"
+
+  canonical: canonical = (pin, pins...) ->
+    console.log "canonical " + JSON.stringify arguments
+
+    switch typeof pin
+      when 'string' then expanded = [pin]
+      when 'number' then expanded = [pin.toString()]
+      when 'object'
+        if pin.box
+          expanded = [pin.box + " " + pin.pin]
+        else
+          expanded = canonical pin...
+      else
+        throw new Error "Unrecognized pin form: #{JSON.stringify pin}" 
+
+    if pins.length
+      expanded = expanded.concat canonical pins...
+
+    return expanded
+
+  boxMaker: boxMaker = (name) ->
+    (pin, more...) ->
+      [box: name, pin: pin].concat more...
+
+  connect: connect = (pins...) ->
+    [from, to, andAlso...] = canonical pins
+
     from = pinName from; wires[from] or= {}
     to   = pinName to  ; wires[to]   or= {}
+
+    console.log "#{from} <-> #{to}"
 
     wires[from][to] = wires[to][from] = true
 
@@ -24,22 +53,38 @@ module.exports =
       connect from, andAlso...
       connect to, andAlso...
 
-  isConnected: isConnected = (pins) ->
-    [from, to] = pins.map (p) -> pinName p
+  isConnected: isConnected = (pins...) ->
+    console.log "isConnected #{pins.map((p) -> JSON.stringify p).join ', ' }"
 
-    return wires[from][to] or paths[from][to]
+    if typeof from is 'object'
+      if from.length
+        return isConnected from[from.length - 1], to
+      else
+        return from.pin is to[0]
+
+    if typeof to is 'object'
+      if to.length
+      return isConnected from, to[0]
+
+    [from, to] = canonical pins...
+
+    return wires[from] and wires[from][to] or paths[from] and paths[from][to]
 
   trace: trace = (from, nextStep, moreSteps..., to) ->
+    if from.length
+      trace from...
+
     if not isConnected from, nextStep
-      return false
+      throw "can't trace: #{canonical from} not connected to #{canonical nextStep}"
 
-    if not trace nextStep, moreSteps..., to
-      return false
+    trace nextStep, moreSteps..., to
 
-    from = pinName from; paths[from] or= {}
-    to   = pinName to;   paths[to]   or= {}
+    if not from.length and not to.length
+      from = pinName from
+      to   = pinName to
 
-    paths[from][to] or= [nextStep, moreSteps...]
-    paths[to][from] or= [nextStep, moreSteps...].reverse()
+      paths[from] or= {}
+      paths[to]   or= {}
 
-  boxMaker: boxMaker
+      paths[from][to] or= [nextStep, moreSteps...]
+      paths[to][from] or= [nextStep, moreSteps...].reverse()
