@@ -26,3 +26,5 @@ au BufNewFile,BufFilePre,BufRead *.md     set  filetype=markdown
 " au BufNewFile,BufFilePre,BufRead *.coffee setl foldmethod=indent
 
 set tw=78
+
+set nofoldenable
