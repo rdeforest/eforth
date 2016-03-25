@@ -46,7 +46,7 @@
     - What Dr. L is doing
       - "What's the problem"
       - "How is it going to be addressed" (SMART goals)
-      - Focus on positive framing
+      - Focus on positive (constrsuctive?) framing
     - What I can do
       - Identify the sensitive subjects
       - Break them into pieces
