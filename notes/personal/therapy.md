@@ -1,4 +1,48 @@
-# next time
+# Current advice
+
+- If I don't organize my time, I'm not organizing my time
+  - write out the plan in advance
+  - on paper
+    - Concrete item / 'anchor'
+    - Poker chips?
+    - sand timer
+  - take blood pressure
+    - add to mood app?
+    - get a health tracking wearable?
+
+- When I don't know what to do
+  - What is the question? What would it mean for this to not be a problem,
+    etc.
+  - "Should we talk about this more or should I talk to someone else?"
+  - Seek consensus
+  - (nothing new here)
+
+# new
+
+## 2016-03-25
+
+### Status
+
+  - How am I
+    - Frustrated with work on RightOnTime
+      - Progress is slow
+    - Eating and sleeping well
+    - Stressed about
+      - Raine
+      - Work
+      - News below
+
+  - News
+    - Motorcycle accident
+    - Homework
+      - Only thought about it now and then
+      - Not stressed about it
+
+## 2016-03-11
+
+no notes taken?
+
+### 'next time'
 
 - Nicole's observations about my ideal work patterns?
   - I respond well to PMing
@@ -9,7 +53,6 @@
   - Giving other people too much credit
     - lack of confidence
 
-# new
 ## 2016-03-02
 
 ### Status
@@ -208,12 +251,4 @@ five days later, draw blood to measure level
 if adjustment needed, five more days to confirm
 
 reduce lamigdol by half until next appointment
-
-- When I don't know what to do
-  - What is the question? What would it mean for this to not be a problem,
-    etc.
-  - "Should we talk about this more or should I talk to someone else?"
-  - Seek consensus
-  - (nothing new here)
-
 
