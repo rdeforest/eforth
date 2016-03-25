@@ -14,6 +14,7 @@ set   background=dark
 
 set   linebreak
 set   showbreak=\ 
+set   ts=2
 
 set   backspace=indent,eol,start
 

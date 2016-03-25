@@ -1,98 +1,90 @@
-autoVivify = (o, path..., value) ->
-  [prefix..., name] = path
-
-  for part in prefix
-    o = o[part] or= {}
-
-  o[name] = value
-
-class Maze
-  constructor: ->
-    # @paths[fromBox][fromPin][toBox][toPin] is path between them
-    @paths = {}
-
-  addEdges: (args...) ->
-    nodes = []
-
-    for arg in args
-      if 'object' is typeof arg
-        for k, v of arg
-          nodes.push [k, v]
-      else
-        nodes.push arg
-    
-    while nodes.length > 1
-      [node, nodes...] = nodes
-
-      for other in nodes
-        @addEdge node, other
-
-    this
-
-  addEdge: (from, to) ->
-    from = @normalize from
-    to   = @normalize to
-
-  addPath: (from, to, path) ->
-    autoVivify @paths, from..., to..., path
-    autoVivify @paths, to..., from..., path.reverse()
-
-  normalize: (node) ->
-    switch typeof node
-      when 'number' then ['', node]
-      when 'string' then [node, 0]
-      else
-        if node.length is 2
-          node
-        else
-          [k] = Object.keys node
-          [k, node[k]]
-
-  touching: (node) ->
-    [nodeBox, nodePin] = @normalize node
-    touching = []
-
-    for box, pins of @paths[nodeBox][nodePin]
-      for pin of Object.keys pins
-        path = @paths[nodeBox][nodePin][box][pin]
-        touching.push [box, pin, path]
-
-    touching
-
-  extend: (node) ->
-    for [nearBox, nearPin, nearPath] in @touching node
-      for [farBox, farPin, farPath] in @touching [nearBox, nearPin] when farBox isnt node[0] or farPin isnt node[1]
-        newPath = nearPath.concat farPath
-        @addPath node, [farBox, farPin], newPath
-
-exampleMaze = new Maze
-
-exampleMaze
-  .addEdges  0, 14, 15, a: 0
-  .addEdges  1, a: 3
-  .addEdges  2, 11, a: 4, b: 6, c: 0
-  .addEdges  3, b: 0
-
-  .addEdges  4, b: 3
-  .addEdges  5, b: 7
-  .addEdges  6, a: 2, c: 5
-  .addEdges  7, 9, 12, a: 10
-
-  .addEdges  8, b: 2
-  .addEdges 10, a: 13
-
-  .addEdges a: 7, b: 15
-  .addEdges a: 8, c: 12
-  .addEdges a: 9, a: 15
-  .addEdges a: 11, "minus"
-
-  .addEdges b: 10, c: 3
-  .addEdges b: 13, c: 14
-
-  .addEdges c: 6, c: 7
-  .addEdges c: 9, "plus"
+wires = {}
+paths = {}
 
 module.exports =
-  autoVivify: autoVivify
-  Maze: Maze
-  example: exampleMaze
+  pinName: pinName = (pin) ->
+    if typeof pin is 'object'
+      if pin.length is 1
+        return pinName pin[0]
+
+      if pin.length
+        throw new Error "Invalid pin is long list: #{JSON.stringify pin}"
+
+    switch typeof pin
+      when 'number' then pin.toString()
+      when 'object' then pin.box + " " + pin.pin
+      when 'string' then pin
+      else throw new Error "unknown pin format: #{pin}"
+
+  canonical: canonical = (pin, pins...) ->
+    console.log "canonical " + JSON.stringify arguments
+
+    switch typeof pin
+      when 'string' then expanded = [pin]
+      when 'number' then expanded = [pin.toString()]
+      when 'object'
+        if pin.box
+          expanded = [pin.box + " " + pin.pin]
+        else
+          expanded = canonical pin...
+      else
+        throw new Error "Unrecognized pin form: #{JSON.stringify pin}" 
+
+    if pins.length
+      expanded = expanded.concat canonical pins...
+
+    return expanded
+
+  boxMaker: boxMaker = (name) ->
+    (pin, more...) ->
+      [box: name, pin: pin].concat more...
+
+  connect: connect = (pins...) ->
+    [from, to, andAlso...] = canonical pins
+
+    from = pinName from; wires[from] or= {}
+    to   = pinName to  ; wires[to]   or= {}
+
+    console.log "#{from} <-> #{to}"
+
+    wires[from][to] = wires[to][from] = true
+
+    if andAlso.length
+      connect from, andAlso...
+      connect to, andAlso...
+
+  isConnected: isConnected = (pins...) ->
+    console.log "isConnected #{pins.map((p) -> JSON.stringify p).join ', ' }"
+
+    if typeof from is 'object'
+      if from.length
+        return isConnected from[from.length - 1], to
+      else
+        return from.pin is to[0]
+
+    if typeof to is 'object'
+      if to.length
+      return isConnected from, to[0]
+
+    [from, to] = canonical pins...
+
+    return wires[from] and wires[from][to] or paths[from] and paths[from][to]
+
+  trace: trace = (from, nextStep, moreSteps..., to) ->
+    if from.length
+      trace from...
+
+    if not isConnected from, nextStep
+      throw "can't trace: #{canonical from} not connected to #{canonical nextStep}"
+
+    trace nextStep, moreSteps..., to
+
+    if not from.length and not to.length
+      from = pinName from
+      to   = pinName to
+
+      paths[from] or= {}
+      paths[to]   or= {}
+
+      paths[from][to] or= [nextStep, moreSteps...]
+      paths[to][from] or= [nextStep, moreSteps...].reverse()
