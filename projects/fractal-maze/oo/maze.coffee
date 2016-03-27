@@ -1,24 +1,33 @@
-# Pin:  Pin  = require './pin'
-# Path: Path = require './path'
-
-# Handles .toString()
-
 warn = (warning...) ->
   console.log "WARNING: ", warning...
+
+values = (o) -> v for k, v of o
 
 pinId = 1
 
 class Pin
   constructor: (@name, @maze) ->
+    @outerSelf = null
+    @innerSelf = {}
     @shorts = {}
     @pinId = pinId += 1
 
-  addShort: (to) ->
-    if 'object' isnt typeof to
-      console.log 'extra barf'
-      throw new Error "invalid short"
+  connectOuter: (pin) ->
+    if (pin.name isnt @name or
+        pin.maze or
+        not @maze)
+      throw 'wat'
 
+    @outerSelf = pin
+    pin.innerSelf[@maze] = this
+
+  addShort: (to) ->
     if to.pinId isnt @pinId
+      console.log "shorting: #{@toString()} -> #{to.toString()}"
+
+      for short in values @shorts
+        to.addShort short
+
       @shorts[to.toString()] = to
 
   toString: ->
@@ -27,15 +36,24 @@ class Pin
     else
       @name
 
-  connected: (otherPin) -> @shorts[otherPin.toString()]
+  connected: (otherPin) ->
+    if @shorts[otherPin.toString()]
+      return true
+
+    if @maze and otherPin.maze is @maze
+      @shorts[otherPin.toString()] =
+        @outer.shorts[otherPin.name]
+
+Pin.longName = (name, maze) ->
+  if maze
+    name + "." + maze
+  else
+    name
 
 module.exports =
   Maze: class Maze
     constructor: ->
       @pins = {}
-      @outerPins = {}
-      @innerPins = {}
-      @paths = {}
 
     canonical: (pins...) ->
       canon = []
@@ -58,39 +76,48 @@ module.exports =
       return canon
 
     addPin: (pinName, maze) ->
-      pin = new Pin pinName.toString(), maze
-      longName = pin.toString()
+      longName = Pin.longName pinName, maze
 
-      if existing = @pins[longName]
-        return existing
-          
-      @pins[longName] = pin
+      if not pin = @pins[longName]
+        pin = new Pin pinName.toString(), maze
+        @pins[pin.toString()] = pin
 
       if maze
-        @innerPins[longName] = pin
+        pin.outer = @addPin pinName
+        @connectPair pin, outer
       else
-        @outerPins[longName] = pin
+        for inner in values @pins when inner.name is pinName
+          @connectPair inner, pin
+
+    connectPair: (inner, outer) ->
+      inner.connectOuter outer
+      maze = inner.maze
+
+      for short in values outer.shorts when short.innerSelf[maze]
+        @addWire inner, short.innerSelf[maze]
 
     edgeShorts: (pin) ->
       if not pin.maze
+        #console.log "es outer: ", pin.toString()
         return []
 
-      if outer = @outerPins[pin.name]
-        for pinName, short of pin.shorts
-          short
-      else
-        []
+      if pin.outerSelf
+        #console.log "es no outerSelf: ", pin.toString()
+        return []
+
+      return values pin.outer.shorts
 
     addWireOneWay: (from, to) ->
-      if 'object' isnt typeof from
-        console.log 'barf from'
-
-      if 'object' isnt typeof to
-        console.log 'barf to'
-
       from.addShort to
 
-      for short in @edgeShorts to
+      shorts = values to.shorts
+
+      if to.maze
+        shorts = shorts.concat @edgeShorts to
+
+      console.log "#{to.name} shorts: ", shorts.map (s) -> s.toString()
+
+      for short in shorts
         from.addShort short
 
       this
@@ -111,4 +138,10 @@ module.exports =
           @addWire from, to
 
       this
+
+
+# Pin:  Pin  = require './pin'
+# Path: Path = require './path'
+
+# Handles .toString()
 
