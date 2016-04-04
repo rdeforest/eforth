@@ -1,0 +1,23 @@
+{
+  "name": "Node",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "edges": {
+      "type": "hasMany",
+      "model": "Edge",
+      "foreignKey": "fromId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

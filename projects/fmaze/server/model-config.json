@@ -31,5 +31,17 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Maze": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Edge": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Node": {
+    "dataSource": "db",
+    "public": true
   }
 }

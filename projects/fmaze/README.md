@@ -16,7 +16,35 @@ When the inner maze has the same definition as the outer maze, then it also
 contains a copy of itself which contains a copy ... etc. Such a maze is
 recursive and therefore fractal.
 
+It is important to note that when pursuing a solution, one must enter and
+leave at the same level. That is, if we add "3 connects to 5" to maze B above,
+the path 1 -> B(2, 5, [3]) does not constitute a solution for A(1, 5).
+
 # So what does this do?
 
 This app is for defining, generating, solving and (hopefully) rendering nested
 and recursive mazes.
+
+# I don't see any Prolog around here. Why?
+
+How astute of you. Yes, this would make a good Prolog problem, but I'm not
+trying to learn Prolog.
+
+# Implementation notes
+
+## Models
+
+  - Node
+    - has
+      - 'name', optional: true
+    - belongsTo
+      - Maze
+    - hasMany
+      - Edges
+      - Node peerNodes through edges
+
+  - Edge
+    - belongsTo Node from, to
+
+  - Maze
+    - has String name (optional, default to id)

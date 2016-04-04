@@ -1,0 +1,24 @@
+{
+  "name": "Edge",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "from": {
+      "type": "belongsTo",
+      "model": "Node",
+      "foreignKey": ""
+    },
+    "to": {
+      "type": "belongsTo",
+      "model": "Node",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
