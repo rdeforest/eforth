@@ -1,0 +1,62 @@
+fs   = require 'fs'
+path = require 'path'
+
+
+clientDir = path.join __dirname, 'client'
+modelDir  = path.join __dirname, 'common', 'models'
+
+
+unlinkFile = (path) ->
+  new Promise (resolve, reject) ->
+    fs.unlink path, (err) ->
+      if err
+        reject err
+      else
+        resolve()
+
+scanModuleDir = (dirPath) ->
+  new Promise (resolve, reject) ->
+    fs.readdir clientDir, (err, dirEntries) ->
+      if err
+        return reject err
+
+      found = {}
+
+      for dirEnt in dirEntries
+        fullPath = path.join dirPath, dirEnt
+
+        if match = dirEnt.match /^(.*)([.](js|json|coffee))$/
+          [fullMatch, moduleName, extension] = match
+          found[moduleName] = fullPath
+
+      resolve found
+
+addDirsFiles = (bundle, dirPath) ->
+  scanModuleDir dirPath
+    .then (found) ->
+      for module, modPath of found
+        console.log "Adding #{fullPath} as module #{moduleName}"
+        bundle.require fullPath, expose: moduleName
+
+      return bundle
+
+task 'build-client', ->
+  browserify = require 'browserify'
+  coffeeify = require 'coffeeify'
+  boot = require 'loopback-boot'
+
+  bundle = browserify extensions: [ '.coffee' ], transform: [ coffeeify ]
+  bundleFile = path.join clientDir, 'client.bundle.js'
+
+  unlinkFile bundleFile
+    .then -> addDirsFiles bundle, clientDir
+    .then -> addDirsFiles bundle, modelDir
+    .then ->
+      boot.compileToBrowserify
+        appRootDir: __dirname
+        appConfigRootDir: clientDir
+        bundle
+
+      out = fs.createWriteStream bundleFile
+      bundle.bundle().pipe out
+
