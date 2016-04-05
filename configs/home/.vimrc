@@ -5,8 +5,9 @@ execute pathogen#infect()
 set   smartindent
 set   autoindent
 set   expandtab
-set nohls
 set   modeline
+set nohls
+set nowrap
 
 set   shiftwidth=2
 set   softtabstop=2
