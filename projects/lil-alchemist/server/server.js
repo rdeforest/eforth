@@ -1,3 +1,4 @@
+require('coffee-script/register');
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
