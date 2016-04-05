@@ -39,12 +39,32 @@ trying to learn Prolog.
       - 'name', optional: true
     - belongsTo
       - Maze
+        - if specified, this node is an entrance/exit to/from said maze
     - hasMany
       - Edges
       - Node peerNodes through edges
+    - does
+      - connect = (to) -> Edge.create from: this, to: to
 
   - Edge
-    - belongsTo Node from, to
+    - belongsTo 
+      - Maze
+      - Node from, to
 
   - Maze
     - has String name (optional, default to id)
+    - belongsTo
+      - Maze referenceTo
+        - If present, innards if this maze are identical to referenced maze
+        - otherwise own edges are used
+
+
+Given our example above with mazes A and B:
+
+  A(1 -> B ( 2 -> 3 -> 4 ) -> 5)
+
+Or
+
+  A(1, 5, [B(2, 4, [3])])
+
+then...

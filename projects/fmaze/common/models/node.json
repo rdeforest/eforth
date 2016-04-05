@@ -12,6 +12,11 @@
   },
   "validations": [],
   "relations": {
+    "maze": {
+      "type": "belongsTo",
+      "model": "Maze",
+      "foreignKey": ""
+    },
     "edges": {
       "type": "hasMany",
       "model": "Edge",
