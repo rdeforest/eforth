@@ -19,6 +19,19 @@
 
 # new
 
+## 2016-04-05
+
+  - Status
+    - No response from Amazon since my mail about coming in Wednesday
+  - How am I
+    - No significant change
+      - VERY anxious
+      - frustrated
+  - Thoughts
+    - On ASRS 
+      - Q 5, "fidget or squirm" - all the time!
+      - Q 7, "careless mistakes" - situation hasn't come up
+
 ## 2016-04-01
 
 ...
