@@ -307,7 +307,7 @@ Reader.prototype._readTag = function(tag) {
 module.exports = Reader;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":1,"./types":4,"assert":277,"buffer":309}],4:[function(require,module,exports){
+},{"./errors":1,"./types":4,"assert":271,"buffer":303}],4:[function(require,module,exports){
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 
@@ -665,7 +665,7 @@ Writer.prototype._ensure = function(len) {
 module.exports = Writer;
 
 }).call(this,require("buffer").Buffer)
-},{"./errors":1,"./types":4,"assert":277,"buffer":309}],6:[function(require,module,exports){
+},{"./errors":1,"./types":4,"assert":271,"buffer":303}],6:[function(require,module,exports){
 // Copyright 2011 Mark Cavage <mcavage@gmail.com> All rights reserved.
 
 // If you have no idea what ASN.1 or BER is, see this:
@@ -896,8 +896,8 @@ function _setExports(ndebug) {
 
 module.exports = _setExports(process.env.NODE_NDEBUG);
 
-}).call(this,{"isBuffer":require("../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359,"_process":380,"assert":277,"stream":412,"util":423}],8:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
+},{"../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353,"_process":374,"assert":271,"stream":406,"util":417}],8:[function(require,module,exports){
 (function (process){
 /*!
  * async
@@ -2024,7 +2024,7 @@ module.exports = _setExports(process.env.NODE_NDEBUG);
 }());
 
 }).call(this,require('_process'))
-},{"_process":380}],9:[function(require,module,exports){
+},{"_process":374}],9:[function(require,module,exports){
 
 /*!
  *  Copyright 2010 LearnBoost <dev@learnboost.com>
@@ -2238,7 +2238,7 @@ function canonicalizeResource (resource) {
 }
 module.exports.canonicalizeResource = canonicalizeResource
 
-},{"crypto":319,"url":419}],10:[function(require,module,exports){
+},{"crypto":313,"url":413}],10:[function(require,module,exports){
 (function (process,Buffer){
 var aws4 = exports,
     url = require('url'),
@@ -2560,7 +2560,7 @@ aws4.sign = function(request, credentials) {
 }
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":380,"buffer":309,"crypto":319,"lru-cache":163,"querystring":390,"url":419}],11:[function(require,module,exports){
+},{"_process":374,"buffer":303,"crypto":313,"lru-cache":157,"querystring":384,"url":413}],11:[function(require,module,exports){
 (function (process){
 /*
  Copyright (c) 2012 Nevins Bartolomeo <nevins.bartolomeo@gmail.com>
@@ -3788,7 +3788,7 @@ aws4.sign = function(request, credentials) {
 }));
 
 }).call(this,require('_process'))
-},{"_process":380,"crypto":319}],12:[function(require,module,exports){
+},{"_process":374,"crypto":313}],12:[function(require,module,exports){
 (function (Buffer){
 var DuplexStream = require('readable-stream/duplex')
   , util         = require('util')
@@ -4035,7 +4035,7 @@ BufferList.prototype.destroy = function destroy () {
 module.exports = BufferList
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"readable-stream/duplex":182,"util":423}],13:[function(require,module,exports){
+},{"buffer":303,"readable-stream/duplex":176,"util":417}],13:[function(require,module,exports){
 
 /*
 The original version of this code is taken from Douglas Crockford's json2.js:
@@ -4515,8 +4515,8 @@ CombinedStream.prototype._emitError = function(err) {
   this.emit('error', err);
 };
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359,"delayed-stream":19,"stream":412,"util":423}],16:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353,"delayed-stream":19,"stream":406,"util":417}],16:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -4626,8 +4626,8 @@ function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359}],17:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353}],17:[function(require,module,exports){
 
 /**
  * This is the web browser implementation of `debug()`.
@@ -4996,7 +4996,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":167}],19:[function(require,module,exports){
+},{"ms":161}],19:[function(require,module,exports){
 var Stream = require('stream').Stream;
 var util = require('util');
 
@@ -5105,7 +5105,7 @@ DelayedStream.prototype._checkIfMaxDataSizeExceeded = function() {
   this.emit('error', new Error(message));
 };
 
-},{"stream":412,"util":423}],20:[function(require,module,exports){
+},{"stream":406,"util":417}],20:[function(require,module,exports){
 /*!
  * depd
  * Copyright(c) 2015 Douglas Christopher Wilson
@@ -5334,7 +5334,7 @@ module.exports = function (write, end) {
 
 
 }).call(this,require('_process'))
-},{"_process":380,"stream":412}],22:[function(require,module,exports){
+},{"_process":374,"stream":406}],22:[function(require,module,exports){
 (function (Buffer){
 var crypto = require("crypto");
 var BigInteger = require("jsbn").BigInteger;
@@ -5395,7 +5395,7 @@ exports.ECKey = function(curve, key, isPublic)
 
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/ec.js":23,"./lib/sec.js":24,"buffer":309,"crypto":319,"jsbn":75}],23:[function(require,module,exports){
+},{"./lib/ec.js":23,"./lib/sec.js":24,"buffer":303,"crypto":313,"jsbn":75}],23:[function(require,module,exports){
 // Basic Javascript Elliptic Curve implementation
 // Ported loosely from BouncyCastle's Java EC code
 // Only Fp curves implemented for now
@@ -6881,7 +6881,7 @@ if (typeof window != 'undefined') {
   window.ejs = exports;
 }
 
-},{"../package.json":27,"./utils":26,"fs":262,"path":377}],26:[function(require,module,exports){
+},{"../package.json":27,"./utils":26,"fs":256,"path":371}],26:[function(require,module,exports){
 /*
  * EJS Embedded JavaScript templates
  * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
@@ -7960,7 +7960,7 @@ function dumpException(ex)
 	return (ret);
 }
 
-},{"assert":277,"util":423}],31:[function(require,module,exports){
+},{"assert":271,"util":417}],31:[function(require,module,exports){
 module.exports = ForeverAgent
 ForeverAgent.SSL = ForeverAgentSSL
 
@@ -8100,7 +8100,7 @@ function createConnectionSSL (port, host, options) {
   return tls.connect(options);
 }
 
-},{"http":413,"https":355,"net":262,"tls":262,"util":423}],32:[function(require,module,exports){
+},{"http":407,"https":349,"net":256,"tls":256,"util":417}],32:[function(require,module,exports){
 /* eslint-env browser */
 module.exports = FormData;
 
@@ -8167,7 +8167,7 @@ module.exports = function() {
   return line
 }
 
-},{"util":423}],34:[function(require,module,exports){
+},{"util":417}],34:[function(require,module,exports){
 var isProperty = require('is-property')
 
 var gen = function(obj, prop) {
@@ -8217,7 +8217,7 @@ Object.keys(schemas).map(function (name) {
   module.exports[name] = promisify(schemas[name])
 })
 
-},{"./runner":37,"./schemas":45,"pinkie-promise":173}],37:[function(require,module,exports){
+},{"./runner":37,"./schemas":45,"pinkie-promise":167}],37:[function(require,module,exports){
 'use strict'
 
 var schemas = require('./schemas')
@@ -9790,7 +9790,7 @@ module.exports = {
 
 };
 
-},{"./utils":58,"assert-plus":7,"util":423}],57:[function(require,module,exports){
+},{"./utils":58,"assert-plus":7,"util":417}],57:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
@@ -10192,8 +10192,8 @@ module.exports = {
 
 };
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359,"./utils":58,"assert-plus":7,"crypto":319,"http":413,"jsprim":79,"sshpk":214,"util":423}],58:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353,"./utils":58,"assert-plus":7,"crypto":313,"http":407,"jsprim":79,"sshpk":208,"util":417}],58:[function(require,module,exports){
 // Copyright 2012 Joyent, Inc.  All rights reserved.
 
 var assert = require('assert-plus');
@@ -10307,7 +10307,7 @@ module.exports = {
   }
 };
 
-},{"assert-plus":7,"sshpk":214,"util":423}],59:[function(require,module,exports){
+},{"assert-plus":7,"sshpk":208,"util":417}],59:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -10399,7 +10399,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./utils":58,"assert-plus":7,"buffer":309,"crypto":319,"sshpk":214}],60:[function(require,module,exports){
+},{"./utils":58,"assert-plus":7,"buffer":303,"crypto":313,"sshpk":208}],60:[function(require,module,exports){
 /*!
  * inflection
  * Copyright(c) 2011 Ben Lin <ben@dreamerslab.com>
@@ -12211,7 +12211,7 @@ module.exports.isReadable = isReadable
 module.exports.isWritable = isWritable
 module.exports.isDuplex   = isDuplex
 
-},{"stream":412}],69:[function(require,module,exports){
+},{"stream":406}],69:[function(require,module,exports){
 "use strict";
 
 /*
@@ -12731,7 +12731,7 @@ var crypto = require('crypto');
 
 module.exports = ns;
 
-},{"crypto":319}],71:[function(require,module,exports){
+},{"crypto":313}],71:[function(require,module,exports){
 "use strict";
 /**
  * @fileOverview
@@ -13069,7 +13069,7 @@ var curve255 = require('./curve255');
 module.exports = ns;
 
 }).call(this,require("buffer").Buffer)
-},{"./core":70,"./curve255":71,"./utils":74,"buffer":309}],73:[function(require,module,exports){
+},{"./core":70,"./curve255":71,"./utils":74,"buffer":303}],73:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 /**
@@ -13645,8 +13645,8 @@ var crypto = require('crypto');
 
 module.exports = ns;
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359,"./core":70,"./curve255":71,"./utils":74,"crypto":319,"jsbn":75}],74:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353,"./core":70,"./curve255":71,"./utils":74,"crypto":313,"jsbn":75}],74:[function(require,module,exports){
 "use strict";
 /**
  * @fileOverview
@@ -16055,41 +16055,7 @@ function mergeObjects(provided, overrides, defaults)
 	return (rv);
 }
 
-},{"assert":277,"extsprintf":30,"json-schema":76,"util":423,"verror":259}],80:[function(require,module,exports){
-var execute = require('./lib/executor');
-
-/**
- * The browser version of `bootLoopBackApp`.
- *
- * When loopback-boot is loaded in browser, the module exports this
- * function instead of `bootLoopBackApp`.
- *
- * The function expects the boot instructions to be included in
- * the browser bundle, see `boot.compileToBrowserify`.
- *
- * @param {Object} app The loopback app to boot, as returned by `loopback()`.
- * @param {Object|string} [options] options as described in
- * `boot.compileToBrowserify`.
- *
- * @header boot(app)
- */
-
-exports = module.exports = function bootBrowserApp(app, options) {
-  // Only using options.id to identify the browserified bundle to load for
-  // this application. If no Id was provided, load the default bundle.
-  var moduleName = 'loopback-boot#instructions';
-  if (options && typeof options === 'object' && options.appId)
-    moduleName += '-' + options.appId;
-
-  // The name of the module containing instructions
-  // is hard-coded in lib/bundler
-  var instructions = require(moduleName);
-  execute(app, instructions);
-};
-
-exports.execute = execute;
-
-},{"./lib/executor":81}],81:[function(require,module,exports){
+},{"assert":271,"extsprintf":30,"json-schema":76,"util":417,"verror":253}],80:[function(require,module,exports){
 (function (process){
 var assert = require('assert');
 var semver = require('semver');
@@ -16508,9 +16474,9 @@ function enableAnonymousSwagger(app, instructions) {
 }
 
 }).call(this,require('_process'))
-},{"_process":380,"assert":277,"async":8,"debug":17,"loopback":147,"path":377,"semver":198,"util":423}],82:[function(require,module,exports){
+},{"_process":374,"assert":271,"async":8,"debug":17,"loopback":141,"path":371,"semver":192,"util":417}],81:[function(require,module,exports){
 module.exports = require('./lib/remote-connector');
-},{"./lib/remote-connector":84}],83:[function(require,module,exports){
+},{"./lib/remote-connector":83}],82:[function(require,module,exports){
 /*!
  * Dependencies
  */
@@ -16740,7 +16706,7 @@ function defineRelationProperty(modelClass, def) {
     }
   });
 }
-},{"loopback-datasource-juggler/lib/relation-definition":108}],84:[function(require,module,exports){
+},{"loopback-datasource-juggler/lib/relation-definition":107}],83:[function(require,module,exports){
 (function (process){
 /**
  * Dependencies.
@@ -16858,7 +16824,7 @@ function noop() {
 }
 
 }).call(this,require('_process'))
-},{"./relations":83,"_process":380,"assert":277,"loopback-datasource-juggler/lib/include":98,"loopback-datasource-juggler/lib/jutil":101,"strong-remoting":223}],85:[function(require,module,exports){
+},{"./relations":82,"_process":374,"assert":271,"loopback-datasource-juggler/lib/include":97,"loopback-datasource-juggler/lib/jutil":100,"strong-remoting":217}],84:[function(require,module,exports){
 exports.Connector = require('./lib/connector');
 // Set up SqlConnector as an alias to SQLConnector
 exports.SQLConnector = exports.SqlConnector = require('./lib/sql');
@@ -16866,7 +16832,7 @@ exports.ParameterizedSQL = exports.SQLConnector.ParameterizedSQL;
 exports.Transaction = require('./lib/transaction');
 
 
-},{"./lib/connector":86,"./lib/sql":88,"./lib/transaction":89}],86:[function(require,module,exports){
+},{"./lib/connector":85,"./lib/sql":87,"./lib/transaction":88}],85:[function(require,module,exports){
 (function (process){
 var debug = require('debug')('loopback:connector');
 
@@ -17146,7 +17112,7 @@ Connector.defineAliases(Connector.prototype, 'execute', ['command', 'query']);
 
 
 }).call(this,require('_process'))
-},{"_process":380,"debug":17}],87:[function(require,module,exports){
+},{"_process":374,"debug":17}],86:[function(require,module,exports){
 var assert = require('assert');
 var PLACEHOLDER = '?';
 
@@ -17249,7 +17215,7 @@ ParameterizedSQL.join = function(sqls, separator) {
 ParameterizedSQL.PLACEHOLDER = PLACEHOLDER;
 
 
-},{"assert":277}],88:[function(require,module,exports){
+},{"assert":271}],87:[function(require,module,exports){
 (function (process){
 var util = require('util');
 var async = require('async');
@@ -18611,7 +18577,7 @@ SQLConnector.prototype.executeSQL = function(sql, params, options, callback) {
 };
 
 }).call(this,require('_process'))
-},{"./connector":86,"./parameterized-sql":87,"./transaction":89,"_process":380,"assert":277,"async":90,"debug":17,"util":423}],89:[function(require,module,exports){
+},{"./connector":85,"./parameterized-sql":86,"./transaction":88,"_process":374,"assert":271,"async":89,"debug":17,"util":417}],88:[function(require,module,exports){
 var assert = require('assert');
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
@@ -18700,7 +18666,7 @@ Transaction.begin = function(connector, options, cb) {
   });
 };
 
-},{"assert":277,"debug":17,"events":347,"util":423}],90:[function(require,module,exports){
+},{"assert":271,"debug":17,"events":341,"util":417}],89:[function(require,module,exports){
 (function (process,global){
 /*!
  * async
@@ -19969,7 +19935,7 @@ Transaction.begin = function(connector, options, cb) {
 }());
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":380}],91:[function(require,module,exports){
+},{"_process":374}],90:[function(require,module,exports){
 exports.ModelBuilder = exports.LDL = require('./lib/model-builder.js').ModelBuilder;
 exports.DataSource = exports.Schema = require('./lib/datasource.js').DataSource;
 exports.ModelBaseClass = require('./lib/model.js');
@@ -19987,7 +19953,7 @@ Object.defineProperty(exports, 'test', {
 
 exports.Transaction = require('loopback-connector').Transaction;
 
-},{"./lib/datasource.js":95,"./lib/geo.js":96,"./lib/model-builder.js":104,"./lib/model.js":106,"./lib/validations.js":114,"./package.json":121,"loopback-connector":85}],92:[function(require,module,exports){
+},{"./lib/datasource.js":94,"./lib/geo.js":95,"./lib/model-builder.js":103,"./lib/model.js":105,"./lib/validations.js":113,"./package.json":120,"loopback-connector":84}],91:[function(require,module,exports){
 (function (process){
 // A lightweight alternative to "depd" that works in the browser
 module.exports = function depd(namespace) {
@@ -20007,7 +19973,7 @@ module.exports = function depd(namespace) {
 };
 
 }).call(this,require('_process'))
-},{"_process":380}],93:[function(require,module,exports){
+},{"_process":374}],92:[function(require,module,exports){
 (function (process){
 var util = require('util');
 var Connector = require('loopback-connector').Connector;
@@ -20798,7 +20764,7 @@ function merge(base, update) {
 }
 
 }).call(this,require('_process'))
-},{"../geo":96,"../utils":113,"_process":380,"async":115,"fs":262,"loopback-connector":85,"util":423}],94:[function(require,module,exports){
+},{"../geo":95,"../utils":112,"_process":374,"async":114,"fs":256,"loopback-connector":84,"util":417}],93:[function(require,module,exports){
 (function (process){
 
 /*!
@@ -23477,7 +23443,7 @@ function isPKMissing(modelClass, cb) {
 }
 
 }).call(this,require('_process'))
-},{"./connectors/memory":93,"./geo":96,"./include.js":98,"./jutil":101,"./list.js":102,"./model":106,"./relations.js":109,"./scope.js":110,"./transaction":111,"./utils":113,"./validations":114,"_process":380,"assert":277,"async":115,"debug":17,"util":423}],95:[function(require,module,exports){
+},{"./connectors/memory":92,"./geo":95,"./include.js":97,"./jutil":100,"./list.js":101,"./model":105,"./relations.js":108,"./scope.js":109,"./transaction":110,"./utils":112,"./validations":113,"_process":374,"assert":271,"async":114,"debug":17,"util":417}],94:[function(require,module,exports){
 (function (process){
 /*!
  * Module dependencies
@@ -25672,7 +25638,7 @@ DataSource.registerType = function (type) {
 };
 
 }).call(this,require('_process'))
-},{"./dao.js":94,"./jutil":101,"./model-builder.js":104,"./model-definition.js":105,"./model.js":106,"./observer":107,"./relation-definition.js":108,"./scope.js":110,"./utils":113,"_process":380,"assert":277,"async":115,"debug":17,"events":347,"traverse":246,"util":423}],96:[function(require,module,exports){
+},{"./dao.js":93,"./jutil":100,"./model-builder.js":103,"./model-definition.js":104,"./model.js":105,"./observer":106,"./relation-definition.js":107,"./scope.js":109,"./utils":112,"_process":374,"assert":271,"async":114,"debug":17,"events":341,"traverse":240,"util":417}],95:[function(require,module,exports){
 var assert = require('assert');
 
 /*!
@@ -25950,7 +25916,7 @@ function geoDistance(x1, y1, x2, y2, options) {
 }
 
 
-},{"assert":277}],97:[function(require,module,exports){
+},{"assert":271}],96:[function(require,module,exports){
 var deprecated = require('depd')('loopback-datasource-juggler');
 
 /*!
@@ -26047,7 +26013,7 @@ function deprecateHook(ctor, prefixes, capitalizedName) {
     'http://docs.strongloop.com/display/LB/Operation+hooks');
 }
 
-},{"depd":92}],98:[function(require,module,exports){
+},{"depd":91}],97:[function(require,module,exports){
 (function (process){
 var async = require('async');
 var utils = require('./utils');
@@ -26985,7 +26951,7 @@ Inclusion.include = function (objects, include, options, cb) {
 
 
 }).call(this,require('_process'))
-},{"./include_utils":99,"./list":102,"./utils":113,"_process":380,"async":115}],99:[function(require,module,exports){
+},{"./include_utils":98,"./list":101,"./utils":112,"_process":374,"async":114}],98:[function(require,module,exports){
 module.exports.buildOneToOneIdentityMapWithOrigKeys = buildOneToOneIdentityMapWithOrigKeys;
 module.exports.buildOneToManyIdentityMapWithOrigKeys = buildOneToManyIdentityMapWithOrigKeys;
 module.exports.join = join;
@@ -27086,7 +27052,7 @@ function KVMap(){
   return mapImpl;
 }
 
-},{}],100:[function(require,module,exports){
+},{}],99:[function(require,module,exports){
 module.exports = function getIntrospector(ModelBuilder) {
 
   function introspectType(value) {
@@ -27150,7 +27116,7 @@ module.exports = function getIntrospector(ModelBuilder) {
 
 
 
-},{}],101:[function(require,module,exports){
+},{}],100:[function(require,module,exports){
 var util = require('util');
 
 /**
@@ -27249,7 +27215,7 @@ function mergeMixins(source, target) {
   }
 }
 
-},{"util":423}],102:[function(require,module,exports){
+},{"util":417}],101:[function(require,module,exports){
 var util = require('util');
 var Any = require('./types').Types.Any;
 
@@ -27349,7 +27315,7 @@ List.prototype.toString = function () {
 };
 
 
-},{"./types":112,"util":423}],103:[function(require,module,exports){
+},{"./types":111,"util":417}],102:[function(require,module,exports){
 var debug = require('debug')('loopback:mixin');
 var assert = require('assert');
 var DefaultModelBaseClass = require('./model.js');
@@ -27418,7 +27384,7 @@ MixinProvider.prototype.define = function defineMixin(name, mixin) {
 };
 
 
-},{"./model.js":106,"assert":277,"debug":17}],104:[function(require,module,exports){
+},{"./model.js":105,"assert":271,"debug":17}],103:[function(require,module,exports){
 /*!
  * Module dependencies
  */
@@ -28209,7 +28175,7 @@ ModelBuilder.prototype.buildModelFromInstance = function (name, json, options) {
 
 
 
-},{"./introspection":100,"./list.js":102,"./mixins":103,"./model-definition.js":105,"./model.js":106,"./types":112,"./utils":113,"assert":277,"depd":92,"events":347,"inflection":60,"util":423}],105:[function(require,module,exports){
+},{"./introspection":99,"./list.js":101,"./mixins":102,"./model-definition.js":104,"./model.js":105,"./types":111,"./utils":112,"assert":271,"depd":91,"events":341,"inflection":60,"util":417}],104:[function(require,module,exports){
 var assert = require('assert');
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
@@ -28519,7 +28485,7 @@ ModelDefinition.prototype.hasPK = function() {
   return this.ids().length > 0;
 };
 
-},{"./model":106,"./model-builder":104,"./types":112,"assert":277,"events":347,"traverse":246,"util":423}],106:[function(require,module,exports){
+},{"./model":105,"./model-builder":103,"./types":111,"assert":271,"events":341,"traverse":240,"util":417}],105:[function(require,module,exports){
 (function (process){
 /*!
  * Module exports class Model
@@ -29145,7 +29111,7 @@ jutil.mixin(ModelBaseClass, Hookable);
 jutil.mixin(ModelBaseClass, validations.Validatable);
 
 }).call(this,require('_process'))
-},{"./hooks":97,"./jutil":101,"./list":102,"./observer":107,"./utils":113,"./validations":114,"_process":380,"async":115,"depd":92,"node-uuid":170,"util":423}],107:[function(require,module,exports){
+},{"./hooks":96,"./jutil":100,"./list":101,"./observer":106,"./utils":112,"./validations":113,"_process":374,"async":114,"depd":91,"node-uuid":164,"util":417}],106:[function(require,module,exports){
 var async = require('async');
 var utils = require('./utils');
 
@@ -29325,7 +29291,7 @@ ObserverMixin.notifyObserversAround = function(operation, context, fn, callback)
     });
 };
 
-},{"./utils":113,"async":115}],108:[function(require,module,exports){
+},{"./utils":112,"async":114}],107:[function(require,module,exports){
 (function (process){
 /*!
  * Dependencies
@@ -32560,7 +32526,7 @@ ReferencesMany.prototype.remove = function (acInst, options, cb) {
 };
 
 }).call(this,require('_process'))
-},{"./connectors/memory":93,"./model.js":106,"./scope.js":110,"./utils":113,"./validations.js":114,"_process":380,"assert":277,"async":115,"debug":17,"inflection":60,"util":423}],109:[function(require,module,exports){
+},{"./connectors/memory":92,"./model.js":105,"./scope.js":109,"./utils":112,"./validations.js":113,"_process":374,"assert":271,"async":114,"debug":17,"inflection":60,"util":417}],108:[function(require,module,exports){
 /*!
  * Dependencies
  */
@@ -32738,7 +32704,7 @@ RelationMixin.embedsMany = function embedsMany(modelTo, params) {
   return RelationDefinition.embedsMany(this, modelTo, params);
 };
 
-},{"./relation-definition":108}],110:[function(require,module,exports){
+},{"./relation-definition":107}],109:[function(require,module,exports){
 var i8n = require('inflection');
 var utils = require('./utils');
 var defineCachedRelations = utils.defineCachedRelations;
@@ -33198,7 +33164,7 @@ function defineScope(cls, targetClass, name, params, methods, options) {
   return definition;
 }
 
-},{"./model.js":106,"./utils":113,"inflection":60}],111:[function(require,module,exports){
+},{"./model.js":105,"./utils":112,"inflection":60}],110:[function(require,module,exports){
 (function (process){
 var debug = require('debug')('loopback:connector:transaction');
 var uuid = require('node-uuid');
@@ -33383,7 +33349,7 @@ TransactionMixin.Transaction = Transaction;
 
 
 }).call(this,require('_process'))
-},{"./jutil":101,"./observer":107,"./utils":113,"_process":380,"debug":17,"loopback-connector":85,"node-uuid":170}],112:[function(require,module,exports){
+},{"./jutil":100,"./observer":106,"./utils":112,"_process":374,"debug":17,"loopback-connector":84,"node-uuid":164}],111:[function(require,module,exports){
 (function (Buffer){
 var Types = {};
 /**
@@ -33453,7 +33419,7 @@ module.exports = function (modelTypes) {
 
 module.exports.Types = Types;
 }).call(this,require("buffer").Buffer)
-},{"./geo":96,"buffer":309}],113:[function(require,module,exports){
+},{"./geo":95,"buffer":303}],112:[function(require,module,exports){
 (function (process,global){
 exports.safeRequire = safeRequire;
 exports.fieldsToArray = fieldsToArray;
@@ -34058,7 +34024,7 @@ function findIndexOf(arr, target, isEqual) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":380,"assert":277,"qs":116,"traverse":246,"url":419}],114:[function(require,module,exports){
+},{"_process":374,"assert":271,"qs":115,"traverse":240,"url":413}],113:[function(require,module,exports){
 (function (process){
 var util = require('util');
 var extend = util._extend;
@@ -34900,7 +34866,7 @@ function truncatePropertyString(value) {
 }
 
 }).call(this,require('_process'))
-},{"_process":380,"util":423}],115:[function(require,module,exports){
+},{"_process":374,"util":417}],114:[function(require,module,exports){
 (function (process,global){
 /*!
  * async
@@ -36187,10 +36153,10 @@ function truncatePropertyString(value) {
 }());
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":380}],116:[function(require,module,exports){
+},{"_process":374}],115:[function(require,module,exports){
 module.exports = require('./lib/');
 
-},{"./lib/":117}],117:[function(require,module,exports){
+},{"./lib/":116}],116:[function(require,module,exports){
 // Load modules
 
 var Stringify = require('./stringify');
@@ -36207,7 +36173,7 @@ module.exports = {
     parse: Parse
 };
 
-},{"./parse":118,"./stringify":119}],118:[function(require,module,exports){
+},{"./parse":117,"./stringify":118}],117:[function(require,module,exports){
 // Load modules
 
 var Utils = require('./utils');
@@ -36375,7 +36341,7 @@ module.exports = function (str, options) {
     return Utils.compact(obj);
 };
 
-},{"./utils":120}],119:[function(require,module,exports){
+},{"./utils":119}],118:[function(require,module,exports){
 // Load modules
 
 var Utils = require('./utils');
@@ -36498,7 +36464,7 @@ module.exports = function (obj, options) {
     return keys.join(delimiter);
 };
 
-},{"./utils":120}],120:[function(require,module,exports){
+},{"./utils":119}],119:[function(require,module,exports){
 // Load modules
 
 
@@ -36690,7 +36656,7 @@ exports.isBuffer = function (obj) {
               obj.constructor.isBuffer(obj));
 };
 
-},{}],121:[function(require,module,exports){
+},{}],120:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -36812,12 +36778,12 @@ module.exports={
   "version": "2.45.2"
 }
 
-},{}],122:[function(require,module,exports){
+},{}],121:[function(require,module,exports){
 exports.PhaseList = require('./lib/phase-list');
 exports.Phase = require('./lib/phase');
 exports.mergePhaseNameLists = require('./lib/merge-name-lists');
 
-},{"./lib/merge-name-lists":123,"./lib/phase":125,"./lib/phase-list":124}],123:[function(require,module,exports){
+},{"./lib/merge-name-lists":122,"./lib/phase":124,"./lib/phase-list":123}],122:[function(require,module,exports){
 /**
  * Extend the list of builtin phases by merging in an array of phases
  * requested by a user while preserving the relative order of phases
@@ -36893,7 +36859,7 @@ module.exports = function mergePhaseNameLists(currentNames, namesToMerge) {
   return targetArray;
 };
 
-},{}],124:[function(require,module,exports){
+},{}],123:[function(require,module,exports){
 (function (process){
 var Phase = require('./phase');
 var zipMerge = require('./merge-name-lists');
@@ -37193,7 +37159,7 @@ PhaseList.prototype.registerHandler = function(phaseName, handler) {
 };
 
 }).call(this,require('_process'))
-},{"./merge-name-lists":123,"./phase":125,"_process":380,"async":8}],125:[function(require,module,exports){
+},{"./merge-name-lists":122,"./phase":124,"_process":374,"async":8}],124:[function(require,module,exports){
 var async = require('async');
 
 module.exports = Phase;
@@ -37356,7 +37322,7 @@ Phase.prototype.toString = function() {
 
 Phase.prototype.__isPhase__ = true;
 
-},{"async":8}],126:[function(require,module,exports){
+},{"async":8}],125:[function(require,module,exports){
 module.exports = function(loopback) {
   loopback.getCurrentContext = function() {
     return null;
@@ -37368,7 +37334,7 @@ module.exports = function(loopback) {
   };
 };
 
-},{}],127:[function(require,module,exports){
+},{}],126:[function(require,module,exports){
 module.exports={
   "name": "AccessToken",
   "properties": {
@@ -37408,243 +37374,7 @@ module.exports={
   ]
 }
 
-},{}],128:[function(require,module,exports){
-(function (process,Buffer){
-/*!
- * Module Dependencies.
- */
-
-var loopback = require('../../lib/loopback');
-var assert = require('assert');
-var uid = require('uid2');
-var DEFAULT_TOKEN_LEN = 64;
-
-/**
- * Token based authentication and access control.
- *
- * **Default ACLs**
- *
- *  - DENY EVERYONE `*`
- *  - ALLOW EVERYONE create
- *
- * @property {String} id Generated token ID.
- * @property {Number} ttl Time to live in seconds, 2 weeks by default.
- * @property {Date} created When the token was created.
- * @property {Object} settings Extends the `Model.settings` object.
- * @property {Number} settings.accessTokenIdLength Length of the base64-encoded string access token. Default value is 64.
- * Increase the length for a more secure access token.
- *
- * @class AccessToken
- * @inherits {PersistedModel}
- */
-
-module.exports = function(AccessToken) {
-
-  // Workaround for https://github.com/strongloop/loopback/issues/292
-  AccessToken.definition.rawProperties.created.default =
-  AccessToken.definition.properties.created.default = function() {
-    return new Date();
-  };
-
-  /**
-   * Anonymous Token
-   *
-   * ```js
-   * assert(AccessToken.ANONYMOUS.id === '$anonymous');
-   * ```
-   */
-
-  AccessToken.ANONYMOUS = new AccessToken({id: '$anonymous'});
-
-  /**
-   * Create a cryptographically random access token id.
-   *
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {String} token
-   */
-
-  AccessToken.createAccessTokenId = function(fn) {
-    uid(this.settings.accessTokenIdLength || DEFAULT_TOKEN_LEN, function(err, guid) {
-      if (err) {
-        fn(err);
-      } else {
-        fn(null, guid);
-      }
-    });
-  };
-
-  /*!
-   * Hook to create accessToken id.
-   */
-  AccessToken.observe('before save', function(ctx, next) {
-    if (!ctx.instance || ctx.instance.id) {
-      // We are running a partial update or the instance already has an id
-      return next();
-    }
-
-    AccessToken.createAccessTokenId(function(err, id) {
-      if (err) return next(err);
-      ctx.instance.id = id;
-      next();
-    });
-  });
-
-  /**
-   * Find a token for the given `ServerRequest`.
-   *
-   * @param {ServerRequest} req
-   * @param {Object} [options] Options for finding the token
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {AccessToken} token
-   */
-
-  AccessToken.findForRequest = function(req, options, cb) {
-    if (cb === undefined && typeof options === 'function') {
-      cb = options;
-      options = {};
-    }
-
-    var id = tokenIdForRequest(req, options);
-
-    if (id) {
-      this.findById(id, function(err, token) {
-        if (err) {
-          cb(err);
-        } else if (token) {
-          token.validate(function(err, isValid) {
-            if (err) {
-              cb(err);
-            } else if (isValid) {
-              cb(null, token);
-            } else {
-              var e = new Error('Invalid Access Token');
-              e.status = e.statusCode = 401;
-              e.code = 'INVALID_TOKEN';
-              cb(e);
-            }
-          });
-        } else {
-          cb();
-        }
-      });
-    } else {
-      process.nextTick(function() {
-        cb();
-      });
-    }
-  };
-
-  /**
-   * Validate the token.
-   *
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {Boolean} isValid
-   */
-
-  AccessToken.prototype.validate = function(cb) {
-    try {
-      assert(
-          this.created && typeof this.created.getTime === 'function',
-        'token.created must be a valid Date'
-      );
-      assert(this.ttl !== 0, 'token.ttl must be not be 0');
-      assert(this.ttl, 'token.ttl must exist');
-      assert(this.ttl >= -1, 'token.ttl must be >= -1');
-
-      var now = Date.now();
-      var created = this.created.getTime();
-      var elapsedSeconds = (now - created) / 1000;
-      var secondsToLive = this.ttl;
-      var isValid = elapsedSeconds < secondsToLive;
-
-      if (isValid) {
-        cb(null, isValid);
-      } else {
-        this.destroy(function(err) {
-          cb(err, isValid);
-        });
-      }
-    } catch (e) {
-      cb(e);
-    }
-  };
-
-  function tokenIdForRequest(req, options) {
-    var params = options.params || [];
-    var headers = options.headers || [];
-    var cookies = options.cookies || [];
-    var i = 0;
-    var length;
-    var id;
-
-    // https://github.com/strongloop/loopback/issues/1326
-    if (options.searchDefaultTokenKeys !== false) {
-      params = params.concat(['access_token']);
-      headers = headers.concat(['X-Access-Token', 'authorization']);
-      cookies = cookies.concat(['access_token', 'authorization']);
-    }
-
-    for (length = params.length; i < length; i++) {
-      var param = params[i];
-      // replacement for deprecated req.param()
-      id = req.params && req.params[param] !== undefined ? req.params[param] :
-        req.body && req.body[param] !== undefined ? req.body[param] :
-        req.query && req.query[param] !== undefined ? req.query[param] :
-        undefined;
-
-      if (typeof id === 'string') {
-        return id;
-      }
-    }
-
-    for (i = 0, length = headers.length; i < length; i++) {
-      id = req.header(headers[i]);
-
-      if (typeof id === 'string') {
-        // Add support for oAuth 2.0 bearer token
-        // http://tools.ietf.org/html/rfc6750
-        if (id.indexOf('Bearer ') === 0) {
-          id = id.substring(7);
-          // Decode from base64
-          var buf = new Buffer(id, 'base64');
-          id = buf.toString('utf8');
-        } else if (/^Basic /i.test(id)) {
-          id = id.substring(6);
-          id = (new Buffer(id, 'base64')).toString('utf8');
-          // The spec says the string is user:pass, so if we see both parts
-          // we will assume the longer of the two is the token, so we will
-          // extract "a2b2c3" from:
-          //   "a2b2c3"
-          //   "a2b2c3:"   (curl http://a2b2c3@localhost:3000/)
-          //   "token:a2b2c3" (curl http://token:a2b2c3@localhost:3000/)
-          //   ":a2b2c3"
-          var parts = /^([^:]*):(.*)$/.exec(id);
-          if (parts) {
-            id = parts[2].length > parts[1].length ? parts[2] : parts[1];
-          }
-        }
-        return id;
-      }
-    }
-
-    if (req.signedCookies) {
-      for (i = 0, length = cookies.length; i < length; i++) {
-        id = req.signedCookies[cookies[i]];
-
-        if (typeof id === 'string') {
-          return id;
-        }
-      }
-    }
-    return null;
-  }
-};
-
-}).call(this,require('_process'),require("buffer").Buffer)
-},{"../../lib/loopback":156,"_process":380,"assert":277,"buffer":309,"uid2":249}],129:[function(require,module,exports){
+},{}],127:[function(require,module,exports){
 module.exports={
   "name": "ACL",
   "properties": {
@@ -37663,582 +37393,7 @@ module.exports={
   }
 }
 
-},{}],130:[function(require,module,exports){
-(function (process){
-/*!
- Schema ACL options
-
- Object level permissions, for example, an album owned by a user
-
- Factors to be authorized against:
-
- * model name: Album
- * model instance properties: userId of the album, friends, shared
- * methods
- * app and/or user ids/roles
- ** loggedIn
- ** roles
- ** userId
- ** appId
- ** none
- ** everyone
- ** relations: owner/friend/granted
-
- Class level permissions, for example, Album
- * model name: Album
- * methods
-
- URL/Route level permissions
- * url pattern
- * application id
- * ip addresses
- * http headers
-
- Map to oAuth 2.0 scopes
-
- */
-
-var loopback = require('../../lib/loopback');
-var async = require('async');
-var assert = require('assert');
-var debug = require('debug')('loopback:security:acl');
-
-var ctx = require('../../lib/access-context');
-var AccessContext = ctx.AccessContext;
-var Principal = ctx.Principal;
-var AccessRequest = ctx.AccessRequest;
-
-var Role = loopback.Role;
-assert(Role, 'Role model must be defined before ACL model');
-
-/**
- * A Model for access control meta data.
- *
- * System grants permissions to principals (users/applications, can be grouped
- * into roles).
- *
- * Protected resource: the model data and operations
- * (model/property/method/relation/…)
- *
- * For a given principal, such as client application and/or user, is it allowed
- * to access (read/write/execute)
- * the protected resource?
- *
- * @header ACL
- * @property {String} model Name of the model.
- * @property {String} property Name of the property, method, scope, or relation.
- * @property {String} accessType Type of access being granted: one of READ, WRITE, or EXECUTE.
- * @property {String} permission Type of permission granted. One of:
- *
- *  - ALARM: Generate an alarm, in a system-dependent way, the access specified in the permissions component of the ACL entry.
- *  - ALLOW: Explicitly grants access to the resource.
- *  - AUDIT: Log, in a system-dependent way, the access specified in the permissions component of the ACL entry.
- *  - DENY: Explicitly denies access to the resource.
- * @property {String} principalType Type of the principal; one of: Application, Use, Role.
- * @property {String} principalId ID of the principal - such as appId, userId or roleId.
- * @property {Object} settings Extends the `Model.settings` object.
- * @property {String} settings.defaultPermission Default permission setting: ALLOW, DENY, ALARM, or AUDIT. Default is ALLOW.
- * Set to DENY to prohibit all API access by default.
- *
- * @class ACL
- * @inherits PersistedModel
- */
-
-module.exports = function(ACL) {
-
-  ACL.ALL = AccessContext.ALL;
-
-  ACL.DEFAULT = AccessContext.DEFAULT; // Not specified
-  ACL.ALLOW = AccessContext.ALLOW; // Allow
-  ACL.ALARM = AccessContext.ALARM; // Warn - send an alarm
-  ACL.AUDIT = AccessContext.AUDIT; // Audit - record the access
-  ACL.DENY = AccessContext.DENY; // Deny
-
-  ACL.READ = AccessContext.READ; // Read operation
-  ACL.REPLICATE = AccessContext.REPLICATE; // Replicate (pull) changes
-  ACL.WRITE = AccessContext.WRITE; // Write operation
-  ACL.EXECUTE = AccessContext.EXECUTE; // Execute operation
-
-  ACL.USER = Principal.USER;
-  ACL.APP = ACL.APPLICATION = Principal.APPLICATION;
-  ACL.ROLE = Principal.ROLE;
-  ACL.SCOPE = Principal.SCOPE;
-
-  /**
-   * Calculate the matching score for the given rule and request
-   * @param {ACL} rule The ACL entry
-   * @param {AccessRequest} req The request
-   * @returns {Number}
-   */
-  ACL.getMatchingScore = function getMatchingScore(rule, req) {
-    var props = ['model', 'property', 'accessType'];
-    var score = 0;
-
-    for (var i = 0; i < props.length; i++) {
-      // Shift the score by 4 for each of the properties as the weight
-      score = score * 4;
-      var ruleValue = rule[props[i]] || ACL.ALL;
-      var requestedValue = req[props[i]] || ACL.ALL;
-      var isMatchingMethodName = props[i] === 'property' && req.methodNames.indexOf(ruleValue) !== -1;
-
-      var isMatchingAccessType = ruleValue === requestedValue;
-      if (props[i] === 'accessType' && !isMatchingAccessType) {
-        switch (ruleValue) {
-          case ACL.EXECUTE:
-            // EXECUTE should match READ, REPLICATE and WRITE
-            isMatchingAccessType = true;
-            break;
-          case ACL.WRITE:
-            // WRITE should match REPLICATE too
-            isMatchingAccessType = requestedValue === ACL.REPLICATE;
-            break;
-        }
-      }
-
-      if (isMatchingMethodName || isMatchingAccessType) {
-        // Exact match
-        score += 3;
-      } else if (ruleValue === ACL.ALL) {
-        // Wildcard match
-        score += 2;
-      } else if (requestedValue === ACL.ALL) {
-        score += 1;
-      } else {
-        // Doesn't match at all
-        return -1;
-      }
-    }
-
-    // Weigh against the principal type into 4 levels
-    // - user level (explicitly allow/deny a given user)
-    // - app level (explicitly allow/deny a given app)
-    // - role level (role based authorization)
-    // - other
-    // user > app > role > ...
-    score = score * 4;
-    switch (rule.principalType) {
-      case ACL.USER:
-        score += 4;
-        break;
-      case ACL.APP:
-        score += 3;
-        break;
-      case ACL.ROLE:
-        score += 2;
-        break;
-      default:
-        score += 1;
-    }
-
-    // Weigh against the roles
-    // everyone < authenticated/unauthenticated < related < owner < ...
-    score = score * 8;
-    if (rule.principalType === ACL.ROLE) {
-      switch (rule.principalId) {
-        case Role.OWNER:
-          score += 4;
-          break;
-        case Role.RELATED:
-          score += 3;
-          break;
-        case Role.AUTHENTICATED:
-        case Role.UNAUTHENTICATED:
-          score += 2;
-          break;
-        case Role.EVERYONE:
-          score += 1;
-          break;
-        default:
-          score += 5;
-      }
-    }
-    score = score * 4;
-    score += AccessContext.permissionOrder[rule.permission || ACL.ALLOW] - 1;
-    return score;
-  };
-
-  /**
-   * Get matching score for the given `AccessRequest`.
-   * @param {AccessRequest} req The request
-   * @returns {Number} score
-   */
-
-  ACL.prototype.score = function(req) {
-    return this.constructor.getMatchingScore(this, req);
-  };
-
-  /*!
-   * Resolve permission from the ACLs
-   * @param {Object[]) acls The list of ACLs
-   * @param {Object} req The request
-   * @returns {AccessRequest} result The effective ACL
-   */
-  ACL.resolvePermission = function resolvePermission(acls, req) {
-    if (!(req instanceof AccessRequest)) {
-      req = new AccessRequest(req);
-    }
-    // Sort by the matching score in descending order
-    acls = acls.sort(function(rule1, rule2) {
-      return ACL.getMatchingScore(rule2, req) - ACL.getMatchingScore(rule1, req);
-    });
-    var permission = ACL.DEFAULT;
-    var score = 0;
-
-    for (var i = 0; i < acls.length; i++) {
-      var candidate = acls[i];
-      score = ACL.getMatchingScore(candidate, req);
-      if (score < 0) {
-        // the highest scored ACL did not match
-        break;
-      }
-      if (!req.isWildcard()) {
-        // We should stop from the first match for non-wildcard
-        permission = candidate.permission;
-        break;
-      } else {
-        if (req.exactlyMatches(candidate)) {
-          permission = candidate.permission;
-          break;
-        }
-        // For wildcard match, find the strongest permission
-        var candidateOrder = AccessContext.permissionOrder[candidate.permission];
-        var permissionOrder = AccessContext.permissionOrder[permission];
-        if (candidateOrder > permissionOrder) {
-          permission = candidate.permission;
-        }
-      }
-    }
-
-    if (debug.enabled) {
-      debug('The following ACLs were searched: ');
-      acls.forEach(function(acl) {
-        acl.debug();
-        debug('with score:', acl.score(req));
-      });
-    }
-
-    var res = new AccessRequest(req.model, req.property, req.accessType,
-        permission || ACL.DEFAULT);
-    return res;
-  };
-
-  /*!
-   * Get the static ACLs from the model definition
-   * @param {String} model The model name
-   * @param {String} property The property/method/relation name
-   *
-   * @return {Object[]} An array of ACLs
-   */
-  ACL.getStaticACLs = function getStaticACLs(model, property) {
-    var modelClass = loopback.findModel(model);
-    var staticACLs = [];
-    if (modelClass && modelClass.settings.acls) {
-      modelClass.settings.acls.forEach(function(acl) {
-        var prop = acl.property;
-        // We support static ACL property with array of string values.
-        if (Array.isArray(prop) && prop.indexOf(property) >= 0)
-          prop = property;
-        if (!prop || prop === ACL.ALL || property === prop) {
-          staticACLs.push(new ACL({
-            model: model,
-            property: prop || ACL.ALL,
-            principalType: acl.principalType,
-            principalId: acl.principalId, // TODO: Should it be a name?
-            accessType: acl.accessType || ACL.ALL,
-            permission: acl.permission
-          }));
-        }
-      });
-    }
-    var prop = modelClass && (
-      // regular property
-      modelClass.definition.properties[property] ||
-      // relation/scope
-      (modelClass._scopeMeta && modelClass._scopeMeta[property]) ||
-      // static method
-      modelClass[property] ||
-      // prototype method
-      modelClass.prototype[property]);
-    if (prop && prop.acls) {
-      prop.acls.forEach(function(acl) {
-        staticACLs.push(new ACL({
-          model: modelClass.modelName,
-          property: property,
-          principalType: acl.principalType,
-          principalId: acl.principalId,
-          accessType: acl.accessType,
-          permission: acl.permission
-        }));
-      });
-    }
-    return staticACLs;
-  };
-
-  /**
-   * Check if the given principal is allowed to access the model/property
-   * @param {String} principalType The principal type.
-   * @param {String} principalId The principal ID.
-   * @param {String} model The model name.
-   * @param {String} property The property/method/relation name.
-   * @param {String} accessType The access type.
-   * @callback {Function} callback Callback function.
-   * @param {String|Error} err The error object
-   * @param {AccessRequest} result The access permission
-   */
-  ACL.checkPermission = function checkPermission(principalType, principalId,
-                                                 model, property, accessType,
-                                                 callback) {
-    if (principalId !== null && principalId !== undefined && (typeof principalId !== 'string')) {
-      principalId = principalId.toString();
-    }
-    property = property || ACL.ALL;
-    var propertyQuery = (property === ACL.ALL) ? undefined : {inq: [property, ACL.ALL]};
-    accessType = accessType || ACL.ALL;
-    var accessTypeQuery = (accessType === ACL.ALL) ? undefined : {inq: [accessType, ACL.ALL, ACL.EXECUTE]};
-
-    var req = new AccessRequest(model, property, accessType);
-
-    var acls = this.getStaticACLs(model, property);
-
-    var resolved = this.resolvePermission(acls, req);
-
-    if (resolved && resolved.permission === ACL.DENY) {
-      debug('Permission denied by statically resolved permission');
-      debug(' Resolved Permission: %j', resolved);
-      process.nextTick(function() {
-        if (callback) callback(null, resolved);
-      });
-      return;
-    }
-
-    var self = this;
-    this.find({where: {principalType: principalType, principalId: principalId,
-        model: model, property: propertyQuery, accessType: accessTypeQuery}},
-      function(err, dynACLs) {
-        if (err) {
-          if (callback) callback(err);
-          return;
-        }
-        acls = acls.concat(dynACLs);
-        resolved = self.resolvePermission(acls, req);
-        if (resolved && resolved.permission === ACL.DEFAULT) {
-          var modelClass = loopback.findModel(model);
-          resolved.permission = (modelClass && modelClass.settings.defaultPermission) || ACL.ALLOW;
-        }
-        if (callback) callback(null, resolved);
-      });
-  };
-
-  ACL.prototype.debug = function() {
-    if (debug.enabled) {
-      debug('---ACL---');
-      debug('model %s', this.model);
-      debug('property %s', this.property);
-      debug('principalType %s', this.principalType);
-      debug('principalId %s', this.principalId);
-      debug('accessType %s', this.accessType);
-      debug('permission %s', this.permission);
-    }
-  };
-
-  /**
-   * Check if the request has the permission to access.
-   * @options {Object} context See below.
-   * @property {Object[]} principals An array of principals.
-   * @property {String|Model} model The model name or model class.
-   * @property {*} id The model instance ID.
-   * @property {String} property The property/method/relation name.
-   * @property {String} accessType The access type:
-   *   READ, REPLICATE, WRITE, or EXECUTE.
-   * @param {Function} callback Callback function
-   */
-
-  ACL.checkAccessForContext = function(context, callback) {
-    var registry = this.registry;
-
-    if (!(context instanceof AccessContext)) {
-      context = new AccessContext(context);
-    }
-
-    var model = context.model;
-    var property = context.property;
-    var accessType = context.accessType;
-    var modelName = context.modelName;
-
-    var methodNames = context.methodNames;
-    var propertyQuery = (property === ACL.ALL) ? undefined : {inq: methodNames.concat([ACL.ALL])};
-
-    var accessTypeQuery = (accessType === ACL.ALL) ?
-      undefined :
-      (accessType === ACL.REPLICATE) ?
-        {inq: [ACL.REPLICATE, ACL.WRITE, ACL.ALL]} :
-        {inq: [accessType, ACL.ALL]};
-
-    var req = new AccessRequest(modelName, property, accessType, ACL.DEFAULT, methodNames);
-
-    var effectiveACLs = [];
-    var staticACLs = this.getStaticACLs(model.modelName, property);
-
-    var self = this;
-    var roleModel = registry.getModelByType(Role);
-    this.find({where: {model: model.modelName, property: propertyQuery,
-      accessType: accessTypeQuery}}, function(err, acls) {
-      if (err) {
-        if (callback) callback(err);
-        return;
-      }
-      var inRoleTasks = [];
-
-      acls = acls.concat(staticACLs);
-
-      acls.forEach(function(acl) {
-        // Check exact matches
-        for (var i = 0; i < context.principals.length; i++) {
-          var p = context.principals[i];
-          var typeMatch = p.type === acl.principalType;
-          var idMatch = String(p.id) === String(acl.principalId);
-          if (typeMatch && idMatch) {
-            effectiveACLs.push(acl);
-            return;
-          }
-        }
-
-        // Check role matches
-        if (acl.principalType === ACL.ROLE) {
-          inRoleTasks.push(function(done) {
-            roleModel.isInRole(acl.principalId, context,
-              function(err, inRole) {
-                if (!err && inRole) {
-                  effectiveACLs.push(acl);
-                }
-                done(err, acl);
-              });
-          });
-        }
-      });
-
-      async.parallel(inRoleTasks, function(err, results) {
-        if (err) {
-          if (callback) callback(err, null);
-          return;
-        }
-
-        var resolved = self.resolvePermission(effectiveACLs, req);
-        if (resolved && resolved.permission === ACL.DEFAULT) {
-          resolved.permission = (model && model.settings.defaultPermission) || ACL.ALLOW;
-        }
-        debug('---Resolved---');
-        resolved.debug();
-        if (callback) callback(null, resolved);
-      });
-    });
-  };
-
-  /**
-   * Check if the given access token can invoke the method
-   * @param {AccessToken} token The access token
-   * @param {String} model The model name
-   * @param {*} modelId The model id
-   * @param {String} method The method name
-   * @callback {Function} callback Callback function
-   * @param {String|Error} err The error object
-   * @param {Boolean} allowed is the request allowed
-   */
-  ACL.checkAccessForToken = function(token, model, modelId, method, callback) {
-    assert(token, 'Access token is required');
-
-    var context = new AccessContext({
-      accessToken: token,
-      model: model,
-      property: method,
-      method: method,
-      modelId: modelId
-    });
-
-    this.checkAccessForContext(context, function(err, access) {
-      if (err) {
-        if (callback) callback(err);
-        return;
-      }
-      if (callback) callback(null, access.permission !== ACL.DENY);
-    });
-  };
-
-  ACL.resolveRelatedModels = function() {
-    if (!this.roleModel) {
-      var reg = this.registry;
-      this.roleModel = reg.getModelByType(loopback.Role);
-      this.roleMappingModel = reg.getModelByType(loopback.RoleMapping);
-      this.userModel = reg.getModelByType(loopback.User);
-      this.applicationModel = reg.getModelByType(loopback.Application);
-    }
-  };
-
-  /**
-   * Resolve a principal by type/id
-   * @param {String} type Principal type - ROLE/APP/USER
-   * @param {String|Number} id Principal id or name
-   * @param {Function} cb Callback function
-   */
-  ACL.resolvePrincipal = function(type, id, cb) {
-    type = type || ACL.ROLE;
-    this.resolveRelatedModels();
-    switch (type) {
-      case ACL.ROLE:
-        this.roleModel.findOne({where: {or: [{name: id}, {id: id}]}}, cb);
-        break;
-      case ACL.USER:
-        this.userModel.findOne(
-          {where: {or: [{username: id}, {email: id}, {id: id}]}}, cb);
-        break;
-      case ACL.APP:
-        this.applicationModel.findOne(
-          {where: {or: [{name: id}, {email: id}, {id: id}]}}, cb);
-        break;
-      default:
-        process.nextTick(function() {
-          var err = new Error('Invalid principal type: ' + type);
-          err.statusCode = 400;
-          cb(err);
-        });
-    }
-  };
-
-  /**
-   * Check if the given principal is mapped to the role
-   * @param {String} principalType Principal type
-   * @param {String|*} principalId Principal id/name
-   * @param {String|*} role Role id/name
-   * @param {Function} cb Callback function
-   */
-  ACL.isMappedToRole = function(principalType, principalId, role, cb) {
-    var self = this;
-    this.resolvePrincipal(principalType, principalId,
-      function(err, principal) {
-        if (err) return cb(err);
-        if (principal != null) {
-          principalId = principal.id;
-        }
-        principalType = principalType || 'ROLE';
-        self.resolvePrincipal('ROLE', role, function(err, role) {
-          if (err || !role) return cb(err, role);
-          self.roleMappingModel.findOne({
-            where: {
-              roleId: role.id,
-              principalType: principalType,
-              principalId: String(principalId)
-            }
-          }, function(err, result) {
-            if (err) return cb(err);
-            return cb(null, !!result);
-          });
-        });
-      });
-  };
-};
-
-}).call(this,require('_process'))
-},{"../../lib/access-context":148,"../../lib/loopback":156,"_process":380,"assert":277,"async":8,"debug":17}],131:[function(require,module,exports){
+},{}],128:[function(require,module,exports){
 module.exports={
   "name": "Application",
   "properties": {
@@ -38364,7 +37519,7 @@ module.exports={
   }
 }
 
-},{}],132:[function(require,module,exports){
+},{}],129:[function(require,module,exports){
 var assert = require('assert');
 var utils = require('../../lib/utils');
 
@@ -38570,7 +37725,7 @@ module.exports = function(Application) {
   };
 };
 
-},{"../../lib/utils":161,"assert":277,"crypto":319}],133:[function(require,module,exports){
+},{"../../lib/utils":155,"assert":271,"crypto":313}],130:[function(require,module,exports){
 module.exports={
   "name": "Change",
   "trackChanges": false,
@@ -38597,7 +37752,7 @@ module.exports={
   }
 }
 
-},{}],134:[function(require,module,exports){
+},{}],131:[function(require,module,exports){
 /*!
  * Module Dependencies.
  */
@@ -39404,7 +38559,7 @@ module.exports = function(Change) {
   };
 };
 
-},{"../../lib/loopback":156,"../../lib/utils":161,"assert":277,"async":8,"canonical-json":13,"crypto":319,"debug":17,"depd":92}],135:[function(require,module,exports){
+},{"../../lib/loopback":150,"../../lib/utils":155,"assert":271,"async":8,"canonical-json":13,"crypto":313,"debug":17,"depd":91}],132:[function(require,module,exports){
 module.exports={
   "name": "Checkpoint",
   "properties": {
@@ -39420,7 +38575,7 @@ module.exports={
   }
 }
 
-},{}],136:[function(require,module,exports){
+},{}],133:[function(require,module,exports){
 /**
  * Module Dependencies.
  */
@@ -39493,7 +38648,7 @@ module.exports = function(Checkpoint) {
   };
 };
 
-},{"assert":277}],137:[function(require,module,exports){
+},{"assert":271}],134:[function(require,module,exports){
 module.exports={
   "name": "Email",
   "base": "Model",
@@ -39506,7 +38661,7 @@ module.exports={
   }
 }
 
-},{}],138:[function(require,module,exports){
+},{}],135:[function(require,module,exports){
 /**
  * Email model.  Extends LoopBack base [Model](#model-new-model).
  * @property {String} to Email addressee.  Required.
@@ -39559,7 +38714,7 @@ module.exports = function(Email) {
   };
 };
 
-},{}],139:[function(require,module,exports){
+},{}],136:[function(require,module,exports){
 module.exports={
   "name": "RoleMapping",
   "description": "Map principals to roles",
@@ -39584,95 +38739,7 @@ module.exports={
   }
 }
 
-},{}],140:[function(require,module,exports){
-(function (process){
-var loopback = require('../../lib/loopback');
-
-/**
- * The `RoleMapping` model extends from the built in `loopback.Model` type.
- *
- * @property {String} id Generated ID.
- * @property {String} name Name of the role.
- * @property {String} Description Text description.
- *
- * @class RoleMapping
- * @inherits {PersistedModel}
- */
-
-module.exports = function(RoleMapping) {
-  // Principal types
-  RoleMapping.USER = 'USER';
-  RoleMapping.APP = RoleMapping.APPLICATION = 'APP';
-  RoleMapping.ROLE = 'ROLE';
-
-  RoleMapping.resolveRelatedModels = function() {
-    if (!this.userModel) {
-      var reg = this.registry;
-      this.roleModel = reg.getModelByType(loopback.Role);
-      this.userModel = reg.getModelByType(loopback.User);
-      this.applicationModel = reg.getModelByType(loopback.Application);
-    }
-  };
-
-  /**
-   * Get the application principal
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {Application} application
-   */
-  RoleMapping.prototype.application = function(callback) {
-    this.constructor.resolveRelatedModels();
-
-    if (this.principalType === RoleMapping.APPLICATION) {
-      var applicationModel = this.constructor.applicationModel;
-      applicationModel.findById(this.principalId, callback);
-    } else {
-      process.nextTick(function() {
-        if (callback) callback(null, null);
-      });
-    }
-  };
-
-  /**
-   * Get the user principal
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {User} user
-   */
-  RoleMapping.prototype.user = function(callback) {
-    this.constructor.resolveRelatedModels();
-    if (this.principalType === RoleMapping.USER) {
-      var userModel = this.constructor.userModel;
-      userModel.findById(this.principalId, callback);
-    } else {
-      process.nextTick(function() {
-        if (callback) callback(null, null);
-      });
-    }
-  };
-
-  /**
-   * Get the child role principal
-   * @callback {Function} callback
-   * @param {Error} err
-   * @param {User} childUser
-   */
-  RoleMapping.prototype.childRole = function(callback) {
-    this.constructor.resolveRelatedModels();
-
-    if (this.principalType === RoleMapping.ROLE) {
-      var roleModel = this.constructor.roleModel;
-      roleModel.findById(this.principalId, callback);
-    } else {
-      process.nextTick(function() {
-        if (callback) callback(null, null);
-      });
-    }
-  };
-};
-
-}).call(this,require('_process'))
-},{"../../lib/loopback":156,"_process":380}],141:[function(require,module,exports){
+},{}],137:[function(require,module,exports){
 module.exports={
   "name": "Role",
   "properties": {
@@ -39700,456 +38767,7 @@ module.exports={
   }
 }
 
-},{}],142:[function(require,module,exports){
-(function (process){
-var loopback = require('../../lib/loopback');
-var debug = require('debug')('loopback:security:role');
-var assert = require('assert');
-var async = require('async');
-
-var AccessContext = require('../../lib/access-context').AccessContext;
-
-var RoleMapping = loopback.RoleMapping;
-
-assert(RoleMapping, 'RoleMapping model must be defined before Role model');
-
-/**
- * The Role model
- * @class Role
- * @header Role object
- */
-module.exports = function(Role) {
-
-  // Workaround for https://github.com/strongloop/loopback/issues/292
-  Role.definition.rawProperties.created.default =
-    Role.definition.properties.created.default = function() {
-    return new Date();
-  };
-
-  // Workaround for https://github.com/strongloop/loopback/issues/292
-  Role.definition.rawProperties.modified.default =
-    Role.definition.properties.modified.default = function() {
-    return new Date();
-  };
-
-  Role.resolveRelatedModels = function() {
-    if (!this.userModel) {
-      var reg = this.registry;
-      this.roleMappingModel = reg.getModelByType(loopback.RoleMapping);
-      this.userModel = reg.getModelByType(loopback.User);
-      this.applicationModel = reg.getModelByType(loopback.Application);
-    }
-  };
-
-  // Set up the connection to users/applications/roles once the model
-  Role.once('dataSourceAttached', function(roleModel) {
-
-    ['users', 'applications', 'roles'].forEach(function(rel) {
-      /**
-       * Fetch all users assigned to this role
-       * @function Role.prototype#users
-       * @param {object} [query] query object passed to model find call
-       * @param  {Function} [callback]
-       */
-      /**
-       * Fetch all applications assigned to this role
-       * @function Role.prototype#applications
-       * @param {object} [query] query object passed to model find call
-       * @param  {Function} [callback]
-       */
-      /**
-       * Fetch all roles assigned to this role
-       * @function Role.prototype#roles
-       * @param {object} [query] query object passed to model find call
-       * @param {Function} [callback]
-       */
-      Role.prototype[rel] = function(query, callback) {
-        roleModel.resolveRelatedModels();
-        var relsToModels = {
-          users: roleModel.userModel,
-          applications: roleModel.applicationModel,
-          roles: roleModel
-        };
-
-        var ACL = loopback.ACL;
-        var relsToTypes = {
-          users: ACL.USER,
-          applications: ACL.APP,
-          roles: ACL.ROLE
-        };
-
-        var model = relsToModels[rel];
-        listByPrincipalType(model, relsToTypes[rel], query, callback);
-      };
-    });
-
-    /**
-     * Fetch all models assigned to this role
-     * @private
-     * @param {*} model model type to fetch
-     * @param {String} [principalType] principalType used in the rolemapping for model
-     * @param {object} [query] query object passed to model find call
-     * @param  {Function} [callback] callback function called with `(err, models)` arguments.
-     */
-    function listByPrincipalType(model, principalType, query, callback) {
-      if (callback === undefined) {
-        callback = query;
-        query = {};
-      }
-
-      roleModel.roleMappingModel.find({
-        where: {roleId: this.id, principalType: principalType}
-      }, function(err, mappings) {
-        var ids;
-        if (err) {
-          return callback(err);
-        }
-        ids = mappings.map(function(m) {
-          return m.principalId;
-        });
-        query.where = query.where || {};
-        query.where.id = {inq: ids};
-        model.find(query, function(err, models) {
-          callback(err, models);
-        });
-      });
-    }
-
-  });
-
-  // Special roles
-  Role.OWNER = '$owner'; // owner of the object
-  Role.RELATED = '$related'; // any User with a relationship to the object
-  Role.AUTHENTICATED = '$authenticated'; // authenticated user
-  Role.UNAUTHENTICATED = '$unauthenticated'; // authenticated user
-  Role.EVERYONE = '$everyone'; // everyone
-
-  /**
-   * Add custom handler for roles.
-   * @param {String} role Name of role.
-   * @param {Function} resolver Function that determines if a principal is in the specified role.
-   * Signature must be `function(role, context, callback)`
-   */
-  Role.registerResolver = function(role, resolver) {
-    if (!Role.resolvers) {
-      Role.resolvers = {};
-    }
-    Role.resolvers[role] = resolver;
-  };
-
-  Role.registerResolver(Role.OWNER, function(role, context, callback) {
-    if (!context || !context.model || !context.modelId) {
-      process.nextTick(function() {
-        if (callback) callback(null, false);
-      });
-      return;
-    }
-    var modelClass = context.model;
-    var modelId = context.modelId;
-    var userId = context.getUserId();
-    Role.isOwner(modelClass, modelId, userId, callback);
-  });
-
-  function isUserClass(modelClass) {
-    if (modelClass) {
-      return modelClass === loopback.User ||
-        modelClass.prototype instanceof loopback.User;
-    } else {
-      return false;
-    }
-  }
-
-  /*!
-   * Check if two user IDs matches
-   * @param {*} id1
-   * @param {*} id2
-   * @returns {boolean}
-   */
-  function matches(id1, id2) {
-    if (id1 === undefined || id1 === null || id1 === '' ||
-      id2 === undefined || id2 === null || id2 === '') {
-      return false;
-    }
-    // The id can be a MongoDB ObjectID
-    return id1 === id2 || id1.toString() === id2.toString();
-  }
-
-  /**
-   * Check if a given user ID is the owner the model instance.
-   * @param {Function} modelClass The model class
-   * @param {*} modelId The model ID
-   * @param {*} userId The user ID
-   * @param {Function} callback Callback function
-   */
-  Role.isOwner = function isOwner(modelClass, modelId, userId, callback) {
-    assert(modelClass, 'Model class is required');
-    debug('isOwner(): %s %s userId: %s', modelClass && modelClass.modelName, modelId, userId);
-    // No userId is present
-    if (!userId) {
-      process.nextTick(function() {
-        callback(null, false);
-      });
-      return;
-    }
-
-    // Is the modelClass User or a subclass of User?
-    if (isUserClass(modelClass)) {
-      process.nextTick(function() {
-        callback(null, matches(modelId, userId));
-      });
-      return;
-    }
-
-    modelClass.findById(modelId, function(err, inst) {
-      if (err || !inst) {
-        debug('Model not found for id %j', modelId);
-        if (callback) callback(err, false);
-        return;
-      }
-      debug('Model found: %j', inst);
-      var ownerId = inst.userId || inst.owner;
-      // Ensure ownerId exists and is not a function/relation
-      if (ownerId && 'function' !== typeof ownerId) {
-        if (callback) callback(null, matches(ownerId, userId));
-        return;
-      } else {
-        // Try to follow belongsTo
-        for (var r in modelClass.relations) {
-          var rel = modelClass.relations[r];
-          if (rel.type === 'belongsTo' && isUserClass(rel.modelTo)) {
-            debug('Checking relation %s to %s: %j', r, rel.modelTo.modelName, rel);
-            inst[r](processRelatedUser);
-            return;
-          }
-        }
-        debug('No matching belongsTo relation found for model %j and user: %j', modelId, userId);
-        if (callback) callback(null, false);
-      }
-
-      function processRelatedUser(err, user) {
-        if (!err && user) {
-          debug('User found: %j', user.id);
-          if (callback) callback(null, matches(user.id, userId));
-        } else {
-          if (callback) callback(err, false);
-        }
-      }
-    });
-  };
-
-  Role.registerResolver(Role.AUTHENTICATED, function(role, context, callback) {
-    if (!context) {
-      process.nextTick(function() {
-        if (callback) callback(null, false);
-      });
-      return;
-    }
-    Role.isAuthenticated(context, callback);
-  });
-
-  /**
-   * Check if the user ID is authenticated
-   * @param {Object} context The security context.
-   *
-   * @callback {Function} callback Callback function.
-   * @param {Error} err Error object.
-   * @param {Boolean} isAuthenticated True if the user is authenticated.
-   */
-  Role.isAuthenticated = function isAuthenticated(context, callback) {
-    process.nextTick(function() {
-      if (callback) callback(null, context.isAuthenticated());
-    });
-  };
-
-  Role.registerResolver(Role.UNAUTHENTICATED, function(role, context, callback) {
-    process.nextTick(function() {
-      if (callback) callback(null, !context || !context.isAuthenticated());
-    });
-  });
-
-  Role.registerResolver(Role.EVERYONE, function(role, context, callback) {
-    process.nextTick(function() {
-      if (callback) callback(null, true); // Always true
-    });
-  });
-
-  /**
-   * Check if a given principal is in the specified role.
-   *
-   * @param {String} role The role name.
-   * @param {Object} context The context object.
-   *
-   * @callback {Function} callback Callback function.
-   * @param {Error} err Error object.
-   * @param {Boolean} isInRole True if the principal is in the specified role.
-   */
-  Role.isInRole = function(role, context, callback) {
-    if (!(context instanceof AccessContext)) {
-      context = new AccessContext(context);
-    }
-
-    this.resolveRelatedModels();
-
-    debug('isInRole(): %s', role);
-    context.debug();
-
-    var resolver = Role.resolvers[role];
-    if (resolver) {
-      debug('Custom resolver found for role %s', role);
-      resolver(role, context, callback);
-      return;
-    }
-
-    if (context.principals.length === 0) {
-      debug('isInRole() returns: false');
-      process.nextTick(function() {
-        if (callback) callback(null, false);
-      });
-      return;
-    }
-
-    var inRole = context.principals.some(function(p) {
-
-      var principalType = p.type || undefined;
-      var principalId = p.id || undefined;
-
-      // Check if it's the same role
-      return principalType === RoleMapping.ROLE && principalId === role;
-    });
-
-    if (inRole) {
-      debug('isInRole() returns: %j', inRole);
-      process.nextTick(function() {
-        if (callback) callback(null, true);
-      });
-      return;
-    }
-
-    var roleMappingModel = this.roleMappingModel;
-    this.findOne({where: {name: role}}, function(err, result) {
-      if (err) {
-        if (callback) callback(err);
-        return;
-      }
-      if (!result) {
-        if (callback) callback(null, false);
-        return;
-      }
-      debug('Role found: %j', result);
-
-      // Iterate through the list of principals
-      async.some(context.principals, function(p, done) {
-        var principalType = p.type || undefined;
-        var principalId = p.id || undefined;
-        var roleId = result.id.toString();
-
-        if (principalId !== null && principalId !== undefined && (typeof principalId !== 'string')) {
-          principalId = principalId.toString();
-        }
-
-        if (principalType && principalId) {
-          roleMappingModel.findOne({where: {roleId: roleId,
-              principalType: principalType, principalId: principalId}},
-            function(err, result) {
-              debug('Role mapping found: %j', result);
-              done(!err && result); // The only arg is the result
-            });
-        } else {
-          process.nextTick(function() {
-            done(false);
-          });
-        }
-      }, function(inRole) {
-        debug('isInRole() returns: %j', inRole);
-        if (callback) callback(null, inRole);
-      });
-    });
-
-  };
-
-  /**
-   * List roles for a given principal.
-   * @param {Object} context The security context.
-   *
-   * @callback {Function} callback Callback function.
-   * @param {Error} err Error object.
-   * @param {String[]} roles An array of role IDs
-   */
-  Role.getRoles = function(context, callback) {
-    if (!(context instanceof AccessContext)) {
-      context = new AccessContext(context);
-    }
-    var roles = [];
-    this.resolveRelatedModels();
-
-    var addRole = function(role) {
-      if (role && roles.indexOf(role) === -1) {
-        roles.push(role);
-      }
-    };
-
-    var self = this;
-    // Check against the smart roles
-    var inRoleTasks = [];
-    Object.keys(Role.resolvers).forEach(function(role) {
-      inRoleTasks.push(function(done) {
-        self.isInRole(role, context, function(err, inRole) {
-          if (debug.enabled) {
-            debug('In role %j: %j', role, inRole);
-          }
-          if (!err && inRole) {
-            addRole(role);
-            done();
-          } else {
-            done(err, null);
-          }
-        });
-      });
-    });
-
-    var roleMappingModel = this.roleMappingModel;
-    context.principals.forEach(function(p) {
-      // Check against the role mappings
-      var principalType = p.type || undefined;
-      var principalId = p.id == null ? undefined : p.id;
-
-      if (typeof principalId !== 'string' && principalId != null) {
-        principalId = principalId.toString();
-      }
-
-      // Add the role itself
-      if (principalType === RoleMapping.ROLE && principalId) {
-        addRole(principalId);
-      }
-
-      if (principalType && principalId) {
-        // Please find() treat undefined matches all values
-        inRoleTasks.push(function(done) {
-          roleMappingModel.find({where: {principalType: principalType,
-            principalId: principalId}}, function(err, mappings) {
-            debug('Role mappings found: %s %j', err, mappings);
-            if (err) {
-              if (done) done(err);
-              return;
-            }
-            mappings.forEach(function(m) {
-              addRole(m.roleId);
-            });
-            if (done) done();
-          });
-        });
-      }
-    });
-
-    async.parallel(inRoleTasks, function(err, results) {
-      debug('getRoles() returns: %j %j', err, roles);
-      if (callback) callback(err, roles);
-    });
-  };
-};
-
-}).call(this,require('_process'))
-},{"../../lib/access-context":148,"../../lib/loopback":156,"_process":380,"assert":277,"async":8,"debug":17}],143:[function(require,module,exports){
+},{}],138:[function(require,module,exports){
 module.exports={
   "name": "Scope",
   "description": [
@@ -40165,7 +38783,7 @@ module.exports={
   }
 }
 
-},{}],144:[function(require,module,exports){
+},{}],139:[function(require,module,exports){
 var assert = require('assert');
 var loopback = require('../../lib/loopback');
 
@@ -40215,7 +38833,7 @@ module.exports = function(Scope) {
   };
 };
 
-},{"../../lib/loopback":156,"assert":277}],145:[function(require,module,exports){
+},{"../../lib/loopback":150,"assert":271}],140:[function(require,module,exports){
 module.exports={
   "name": "User",
   "properties": {
@@ -40319,733 +38937,7 @@ module.exports={
   }
 }
 
-},{}],146:[function(require,module,exports){
-(function (__dirname){
-/*!
- * Module Dependencies.
- */
-
-var loopback = require('../../lib/loopback');
-var utils = require('../../lib/utils');
-var path = require('path');
-var SALT_WORK_FACTOR = 10;
-var crypto = require('crypto');
-
-var bcrypt;
-try {
-  // Try the native module first
-  bcrypt = require('bcrypt');
-  // Browserify returns an empty object
-  if (bcrypt && typeof bcrypt.compare !== 'function') {
-    bcrypt = require('bcryptjs');
-  }
-} catch (err) {
-  // Fall back to pure JS impl
-  bcrypt = require('bcryptjs');
-}
-
-var DEFAULT_TTL = 1209600; // 2 weeks in seconds
-var DEFAULT_RESET_PW_TTL = 15 * 60; // 15 mins in seconds
-var DEFAULT_MAX_TTL = 31556926; // 1 year in seconds
-var assert = require('assert');
-
-var debug = require('debug')('loopback:user');
-
-/**
- * Built-in User model.
- * Extends LoopBack [PersistedModel](#persistedmodel-new-persistedmodel).
- *
- * Default `User` ACLs.
- *
- * - DENY EVERYONE `*`
- * - ALLOW EVERYONE `create`
- * - ALLOW OWNER `deleteById`
- * - ALLOW EVERYONE `login`
- * - ALLOW EVERYONE `logout`
- * - ALLOW OWNER `findById`
- * - ALLOW OWNER `updateAttributes`
- *
- * @property {String} username Must be unique.
- * @property {String} password Hidden from remote clients.
- * @property {String} email Must be valid email.
- * @property {Boolean} emailVerified Set when a user's email has been verified via `confirm()`.
- * @property {String} verificationToken Set when `verify()` is called.
- * @property {String} realm The namespace the user belongs to. See [Partitioning users with realms](https://docs.strongloop.com/display/public/LB/Partitioning+users+with+realms) for details.
- * @property {Date} created The property is not used by LoopBack, you are free to use it for your own purposes.
- * @property {Date} lastUpdated The property is not used by LoopBack, you are free to use it for your own purposes.
- * @property {String} status The property is not used by LoopBack, you are free to use it for your own purposes.
- * @property {Object} settings Extends the `Model.settings` object.
- * @property {Boolean} settings.emailVerificationRequired Require the email verification
- * process before allowing a login.
- * @property {Number} settings.ttl Default time to live (in seconds) for the `AccessToken` created by `User.login() / user.createAccessToken()`.
- * Default is `1209600` (2 weeks)
- * @property {Number} settings.maxTTL The max value a user can request a token to be alive / valid for.
- * Default is `31556926` (1 year)
- * @property {Boolean} settings.realmRequired Require a realm when logging in a user.
- * @property {String} settings.realmDelimiter When set a realm is required.
- * @property {Number} settings.resetPasswordTokenTTL Time to live for password reset `AccessToken`. Default is `900` (15 minutes).
- * @property {Number} settings.saltWorkFactor The `bcrypt` salt work factor. Default is `10`.
- * @property {Boolean} settings.caseSensitiveEmail Enable case sensitive email.
- *
- * @class User
- * @inherits {PersistedModel}
- */
-
-module.exports = function(User) {
-
-  /**
-   * Create access token for the logged in user. This method can be overridden to
-   * customize how access tokens are generated
-   *
-   * @param {Number} ttl The requested ttl
-   * @param {Object} [options] The options for access token, such as scope, appId
-   * @callback {Function} cb The callback function
-   * @param {String|Error} err The error string or object
-   * @param {AccessToken} token The generated access token object
-   */
-  User.prototype.createAccessToken = function(ttl, options, cb) {
-    if (cb === undefined && typeof options === 'function') {
-      // createAccessToken(ttl, cb)
-      cb = options;
-      options = undefined;
-    }
-
-    cb = cb || utils.createPromiseCallback();
-
-    if (typeof ttl === 'object' && !options) {
-      // createAccessToken(options, cb)
-      options = ttl;
-      ttl = options.ttl;
-    }
-    options = options || {};
-    var userModel = this.constructor;
-    ttl = Math.min(ttl || userModel.settings.ttl, userModel.settings.maxTTL);
-    this.accessTokens.create({
-      ttl: ttl
-    }, cb);
-    return cb.promise;
-  };
-
-  function splitPrincipal(name, realmDelimiter) {
-    var parts = [null, name];
-    if (!realmDelimiter) {
-      return parts;
-    }
-    var index = name.indexOf(realmDelimiter);
-    if (index !== -1) {
-      parts[0] = name.substring(0, index);
-      parts[1] = name.substring(index + realmDelimiter.length);
-    }
-    return parts;
-  }
-
-  /**
-   * Normalize the credentials
-   * @param {Object} credentials The credential object
-   * @param {Boolean} realmRequired
-   * @param {String} realmDelimiter The realm delimiter, if not set, no realm is needed
-   * @returns {Object} The normalized credential object
-   */
-  User.normalizeCredentials = function(credentials, realmRequired, realmDelimiter) {
-    var query = {};
-    credentials = credentials || {};
-    if (!realmRequired) {
-      if (credentials.email) {
-        query.email = credentials.email;
-      } else if (credentials.username) {
-        query.username = credentials.username;
-      }
-    } else {
-      if (credentials.realm) {
-        query.realm = credentials.realm;
-      }
-      var parts;
-      if (credentials.email) {
-        parts = splitPrincipal(credentials.email, realmDelimiter);
-        query.email = parts[1];
-        if (parts[0]) {
-          query.realm = parts[0];
-        }
-      } else if (credentials.username) {
-        parts = splitPrincipal(credentials.username, realmDelimiter);
-        query.username = parts[1];
-        if (parts[0]) {
-          query.realm = parts[0];
-        }
-      }
-    }
-    return query;
-  };
-
-  /**
-   * Login a user by with the given `credentials`.
-   *
-   * ```js
-   *    User.login({username: 'foo', password: 'bar'}, function (err, token) {
-  *      console.log(token.id);
-  *    });
-   * ```
-   *
-   * @param {Object} credentials username/password or email/password
-   * @param {String[]|String} [include] Optionally set it to "user" to include
-   * the user info
-   * @callback {Function} callback Callback function
-   * @param {Error} err Error object
-   * @param {AccessToken} token Access token if login is successful
-   */
-
-  User.login = function(credentials, include, fn) {
-    var self = this;
-    if (typeof include === 'function') {
-      fn = include;
-      include = undefined;
-    }
-
-    fn = fn || utils.createPromiseCallback();
-
-    include = (include || '');
-    if (Array.isArray(include)) {
-      include = include.map(function(val) {
-        return val.toLowerCase();
-      });
-    } else {
-      include = include.toLowerCase();
-    }
-
-    var realmDelimiter;
-    // Check if realm is required
-    var realmRequired = !!(self.settings.realmRequired ||
-      self.settings.realmDelimiter);
-    if (realmRequired) {
-      realmDelimiter = self.settings.realmDelimiter;
-    }
-    var query = self.normalizeCredentials(credentials, realmRequired,
-      realmDelimiter);
-
-    if (realmRequired && !query.realm) {
-      var err1 = new Error('realm is required');
-      err1.statusCode = 400;
-      err1.code = 'REALM_REQUIRED';
-      fn(err1);
-      return fn.promise;
-    }
-    if (!query.email && !query.username) {
-      var err2 = new Error('username or email is required');
-      err2.statusCode = 400;
-      err2.code = 'USERNAME_EMAIL_REQUIRED';
-      fn(err2);
-      return fn.promise;
-    }
-
-    self.findOne({where: query}, function(err, user) {
-      var defaultError = new Error('login failed');
-      defaultError.statusCode = 401;
-      defaultError.code = 'LOGIN_FAILED';
-
-      function tokenHandler(err, token) {
-        if (err) return fn(err);
-        if (Array.isArray(include) ? include.indexOf('user') !== -1 : include === 'user') {
-          // NOTE(bajtos) We can't set token.user here:
-          //  1. token.user already exists, it's a function injected by
-          //     "AccessToken belongsTo User" relation
-          //  2. ModelBaseClass.toJSON() ignores own properties, thus
-          //     the value won't be included in the HTTP response
-          // See also loopback#161 and loopback#162
-          token.__data.user = user;
-        }
-        fn(err, token);
-      }
-
-      if (err) {
-        debug('An error is reported from User.findOne: %j', err);
-        fn(defaultError);
-      } else if (user) {
-        user.hasPassword(credentials.password, function(err, isMatch) {
-          if (err) {
-            debug('An error is reported from User.hasPassword: %j', err);
-            fn(defaultError);
-          } else if (isMatch) {
-            if (self.settings.emailVerificationRequired && !user.emailVerified) {
-              // Fail to log in if email verification is not done yet
-              debug('User email has not been verified');
-              err = new Error('login failed as the email has not been verified');
-              err.statusCode = 401;
-              err.code = 'LOGIN_FAILED_EMAIL_NOT_VERIFIED';
-              fn(err);
-            } else {
-              if (user.createAccessToken.length === 2) {
-                user.createAccessToken(credentials.ttl, tokenHandler);
-              } else {
-                user.createAccessToken(credentials.ttl, credentials, tokenHandler);
-              }
-            }
-          } else {
-            debug('The password is invalid for user %s', query.email || query.username);
-            fn(defaultError);
-          }
-        });
-      } else {
-        debug('No matching record is found for user %s', query.email || query.username);
-        fn(defaultError);
-      }
-    });
-    return fn.promise;
-  };
-
-  /**
-   * Logout a user with the given accessToken id.
-   *
-   * ```js
-   *    User.logout('asd0a9f8dsj9s0s3223mk', function (err) {
-  *      console.log(err || 'Logged out');
-  *    });
-   * ```
-   *
-   * @param {String} accessTokenID
-   * @callback {Function} callback
-   * @param {Error} err
-   */
-
-  User.logout = function(tokenId, fn) {
-    fn = fn || utils.createPromiseCallback();
-    this.relations.accessTokens.modelTo.findById(tokenId, function(err, accessToken) {
-      if (err) {
-        fn(err);
-      } else if (accessToken) {
-        accessToken.destroy(fn);
-      } else {
-        fn(new Error('could not find accessToken'));
-      }
-    });
-    return fn.promise;
-  };
-
-  /**
-   * Compare the given `password` with the users hashed password.
-   *
-   * @param {String} password The plain text password
-   * @returns {Boolean}
-   */
-
-  User.prototype.hasPassword = function(plain, fn) {
-    fn = fn || utils.createPromiseCallback();
-    if (this.password && plain) {
-      bcrypt.compare(plain, this.password, function(err, isMatch) {
-        if (err) return fn(err);
-        fn(null, isMatch);
-      });
-    } else {
-      fn(null, false);
-    }
-    return fn.promise;
-  };
-
-  /**
-   * Verify a user's identity by sending them a confirmation email.
-   *
-   * ```js
-   *    var options = {
-   *      type: 'email',
-   *      to: user.email,
-   *      template: 'verify.ejs',
-   *      redirect: '/',
-   *      tokenGenerator: function (user, cb) { cb("random-token"); }
-   *    };
-   *
-   *    user.verify(options, next);
-   * ```
-   *
-   * @options {Object} options
-   * @property {String} type Must be 'email'.
-   * @property {String} to Email address to which verification email is sent.
-   * @property {String} from Sender email addresss, for example
-   *   `'noreply@myapp.com'`.
-   * @property {String} subject Subject line text.
-   * @property {String} text Text of email.
-   * @property {String} template Name of template that displays verification
-   *  page, for example, `'verify.ejs'.
-   * @property {String} redirect Page to which user will be redirected after
-   *  they verify their email, for example `'/'` for root URI.
-   * @property {Function} generateVerificationToken A function to be used to
-   *  generate the verification token. It must accept the user object and a
-   *  callback function. This function should NOT add the token to the user
-   *  object, instead simply execute the callback with the token! User saving
-   *  and email sending will be handled in the `verify()` method.
-   */
-
-  User.prototype.verify = function(options, fn) {
-    fn = fn || utils.createPromiseCallback();
-
-    var user = this;
-    var userModel = this.constructor;
-    var registry = userModel.registry;
-    assert(typeof options === 'object', 'options required when calling user.verify()');
-    assert(options.type, 'You must supply a verification type (options.type)');
-    assert(options.type === 'email', 'Unsupported verification type');
-    assert(options.to || this.email, 'Must include options.to when calling user.verify() or the user must have an email property');
-    assert(options.from, 'Must include options.from when calling user.verify()');
-
-    options.redirect = options.redirect || '/';
-    options.template = path.resolve(options.template || path.join(__dirname, '..', '..', 'templates', 'verify.ejs'));
-    options.user = this;
-    options.protocol = options.protocol || 'http';
-
-    var app = userModel.app;
-    options.host = options.host || (app && app.get('host')) || 'localhost';
-    options.port = options.port || (app && app.get('port')) || 3000;
-    options.restApiRoot = options.restApiRoot || (app && app.get('restApiRoot')) || '/api';
-
-    var displayPort = (
-      (options.protocol === 'http' && options.port == '80') ||
-      (options.protocol === 'https' && options.port == '443')
-    ) ? '' : ':' + options.port;
-
-    options.verifyHref = options.verifyHref ||
-      options.protocol +
-      '://' +
-      options.host +
-      displayPort +
-      options.restApiRoot +
-      userModel.http.path +
-      userModel.sharedClass.find('confirm', true).http.path +
-      '?uid=' +
-      options.user.id +
-      '&redirect=' +
-      options.redirect;
-
-    // Email model
-    var Email = options.mailer || this.constructor.email || registry.getModelByType(loopback.Email);
-
-    // Set a default token generation function if one is not provided
-    var tokenGenerator = options.generateVerificationToken || User.generateVerificationToken;
-
-    tokenGenerator(user, function(err, token) {
-      if (err) { return fn(err); }
-
-      user.verificationToken = token;
-      user.save(function(err) {
-        if (err) {
-          fn(err);
-        } else {
-          sendEmail(user);
-        }
-      });
-    });
-
-    // TODO - support more verification types
-    function sendEmail(user) {
-      options.verifyHref += '&token=' + user.verificationToken;
-
-      options.text = options.text || 'Please verify your email by opening this link in a web browser:\n\t{href}';
-
-      options.text = options.text.replace('{href}', options.verifyHref);
-
-      options.to = options.to || user.email;
-
-      options.subject = options.subject || 'Thanks for Registering';
-
-      options.headers = options.headers || {};
-
-      var template = loopback.template(options.template);
-      options.html = template(options);
-
-      Email.send(options, function(err, email) {
-        if (err) {
-          fn(err);
-        } else {
-          fn(null, {email: email, token: user.verificationToken, uid: user.id});
-        }
-      });
-    }
-    return fn.promise;
-  };
-
-  /**
-   * A default verification token generator which accepts the user the token is
-   * being generated for and a callback function to indicate completion.
-   * This one uses the crypto library and 64 random bytes (converted to hex)
-   * for the token. When used in combination with the user.verify() method this
-   * function will be called with the `user` object as it's context (`this`).
-   *
-   * @param {object} user The User this token is being generated for.
-   * @param {Function} cb The generator must pass back the new token with this function call
-   */
-  User.generateVerificationToken = function(user, cb) {
-    crypto.randomBytes(64, function(err, buf) {
-      cb(err, buf && buf.toString('hex'));
-    });
-  };
-
-  /**
-   * Confirm the user's identity.
-   *
-   * @param {Any} userId
-   * @param {String} token The validation token
-   * @param {String} redirect URL to redirect the user to once confirmed
-   * @callback {Function} callback
-   * @param {Error} err
-   */
-  User.confirm = function(uid, token, redirect, fn) {
-    fn = fn || utils.createPromiseCallback();
-    this.findById(uid, function(err, user) {
-      if (err) {
-        fn(err);
-      } else {
-        if (user && user.verificationToken === token) {
-          user.verificationToken = undefined;
-          user.emailVerified = true;
-          user.save(function(err) {
-            if (err) {
-              fn(err);
-            } else {
-              fn();
-            }
-          });
-        } else {
-          if (user) {
-            err = new Error('Invalid token: ' + token);
-            err.statusCode = 400;
-            err.code = 'INVALID_TOKEN';
-          } else {
-            err = new Error('User not found: ' + uid);
-            err.statusCode = 404;
-            err.code = 'USER_NOT_FOUND';
-          }
-          fn(err);
-        }
-      }
-    });
-    return fn.promise;
-  };
-
-  /**
-   * Create a short lived acess token for temporary login. Allows users
-   * to change passwords if forgotten.
-   *
-   * @options {Object} options
-   * @prop {String} email The user's email address
-   * @callback {Function} callback
-   * @param {Error} err
-   */
-
-  User.resetPassword = function(options, cb) {
-    cb = cb || utils.createPromiseCallback();
-    var UserModel = this;
-    var ttl = UserModel.settings.resetPasswordTokenTTL || DEFAULT_RESET_PW_TTL;
-
-    options = options || {};
-    if (typeof options.email !== 'string') {
-      var err = new Error('Email is required');
-      err.statusCode = 400;
-      err.code = 'EMAIL_REQUIRED';
-      cb(err);
-      return cb.promise;
-    }
-
-    UserModel.findOne({ where: {email: options.email} }, function(err, user) {
-      if (err) {
-        return cb(err);
-      }
-      if (!user) {
-        err = new Error('Email not found');
-        err.statusCode = 404;
-        err.code = 'EMAIL_NOT_FOUND';
-        return cb(err);
-      }
-      // create a short lived access token for temp login to change password
-      // TODO(ritch) - eventually this should only allow password change
-      user.accessTokens.create({ttl: ttl}, function(err, accessToken) {
-        if (err) {
-          return cb(err);
-        }
-        cb();
-        UserModel.emit('resetPasswordRequest', {
-          email: options.email,
-          accessToken: accessToken,
-          user: user
-        });
-      });
-    });
-
-    return cb.promise;
-  };
-
-  /*!
-   * Hash the plain password
-   */
-  User.hashPassword = function(plain) {
-    this.validatePassword(plain);
-    var salt = bcrypt.genSaltSync(this.settings.saltWorkFactor || SALT_WORK_FACTOR);
-    return bcrypt.hashSync(plain, salt);
-  };
-
-  User.validatePassword = function(plain) {
-    if (typeof plain === 'string' && plain) {
-      return true;
-    }
-    var err =  new Error('Invalid password: ' + plain);
-    err.statusCode = 422;
-    throw err;
-  };
-
-  /*!
-   * Setup an extended user model.
-   */
-
-  User.setup = function() {
-    // We need to call the base class's setup method
-    User.base.setup.call(this);
-    var UserModel = this;
-
-    // max ttl
-    this.settings.maxTTL = this.settings.maxTTL || DEFAULT_MAX_TTL;
-    this.settings.ttl = this.settings.ttl || DEFAULT_TTL;
-
-    UserModel.setter.email = function(value) {
-      if (!UserModel.settings.caseSensitiveEmail) {
-        this.$email = value.toLowerCase();
-      } else {
-        this.$email = value;
-      }
-    };
-
-    UserModel.setter.password = function(plain) {
-      if (typeof plain !== 'string') {
-        return;
-      }
-      if (plain.indexOf('$2a$') === 0 && plain.length === 60) {
-        // The password is already hashed. It can be the case
-        // when the instance is loaded from DB
-        this.$password = plain;
-      } else {
-        this.$password = this.constructor.hashPassword(plain);
-      }
-    };
-
-    // Access token to normalize email credentials
-    UserModel.observe('access', function normalizeEmailCase(ctx, next) {
-      if (!ctx.Model.settings.caseSensitiveEmail && ctx.query.where && ctx.query.where.email) {
-        ctx.query.where.email = ctx.query.where.email.toLowerCase();
-      }
-      next();
-    });
-
-    // Make sure emailVerified is not set by creation
-    UserModel.beforeRemote('create', function(ctx, user, next) {
-      var body = ctx.req.body;
-      if (body && body.emailVerified) {
-        body.emailVerified = false;
-      }
-      next();
-    });
-
-    UserModel.remoteMethod(
-      'login',
-      {
-        description: 'Login a user with username/email and password.',
-        accepts: [
-          {arg: 'credentials', type: 'object', required: true, http: {source: 'body'}},
-          {arg: 'include', type: ['string'], http: {source: 'query' },
-            description: 'Related objects to include in the response. ' +
-            'See the description of return value for more details.'}
-        ],
-        returns: {
-          arg: 'accessToken', type: 'object', root: true,
-          description:
-            'The response body contains properties of the AccessToken created on login.\n' +
-            'Depending on the value of `include` parameter, the body may contain ' +
-            'additional properties:\n\n' +
-            '  - `user` - `{User}` - Data of the currently logged in user. (`include=user`)\n\n'
-        },
-        http: {verb: 'post'}
-      }
-    );
-
-    UserModel.remoteMethod(
-      'logout',
-      {
-        description: 'Logout a user with access token.',
-        accepts: [
-          {arg: 'access_token', type: 'string', required: true, http: function(ctx) {
-            var req = ctx && ctx.req;
-            var accessToken = req && req.accessToken;
-            var tokenID = accessToken && accessToken.id;
-
-            return tokenID;
-          }, description: 'Do not supply this argument, it is automatically extracted ' +
-            'from request headers.'
-          }
-        ],
-        http: {verb: 'all'}
-      }
-    );
-
-    UserModel.remoteMethod(
-      'confirm',
-      {
-        description: 'Confirm a user registration with email verification token.',
-        accepts: [
-          {arg: 'uid', type: 'string', required: true},
-          {arg: 'token', type: 'string', required: true},
-          {arg: 'redirect', type: 'string'}
-        ],
-        http: {verb: 'get', path: '/confirm'}
-      }
-    );
-
-    UserModel.remoteMethod(
-      'resetPassword',
-      {
-        description: 'Reset password for a user with email.',
-        accepts: [
-          {arg: 'options', type: 'object', required: true, http: {source: 'body'}}
-        ],
-        http: {verb: 'post', path: '/reset'}
-      }
-    );
-
-    UserModel.afterRemote('confirm', function(ctx, inst, next) {
-      if (ctx.args.redirect !== undefined) {
-        if (!ctx.res) {
-          return next(new Error('The transport does not support HTTP redirects.'));
-        }
-        ctx.res.location(ctx.args.redirect);
-        ctx.res.status(302);
-      }
-      next();
-    });
-
-    // default models
-    assert(loopback.Email, 'Email model must be defined before User model');
-    UserModel.email = loopback.Email;
-
-    assert(loopback.AccessToken, 'AccessToken model must be defined before User model');
-    UserModel.accessToken = loopback.AccessToken;
-
-    // email validation regex
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    UserModel.validatesFormatOf('email', {with: re, message: 'Must provide a valid email'});
-
-    // FIXME: We need to add support for uniqueness of composite keys in juggler
-    if (!(UserModel.settings.realmRequired || UserModel.settings.realmDelimiter)) {
-      UserModel.validatesUniquenessOf('email', {message: 'Email already exists'});
-      UserModel.validatesUniquenessOf('username', {message: 'User already exists'});
-    }
-
-    return UserModel;
-  };
-
-  /*!
-   * Setup the base user.
-   */
-
-  User.setup();
-
-};
-
-}).call(this,"/node_modules/loopback/common/models")
-},{"../../lib/loopback":156,"../../lib/utils":161,"assert":277,"bcrypt":281,"bcryptjs":11,"crypto":319,"debug":17,"path":377}],147:[function(require,module,exports){
+},{}],141:[function(require,module,exports){
 /**
  * loopback ~ public api
  */
@@ -41069,7 +38961,7 @@ loopback.Remote = require('loopback-connector-remote');
 loopback.GeoPoint = require('loopback-datasource-juggler/lib/geo').GeoPoint;
 loopback.ValidationError = loopback.Model.ValidationError;
 
-},{"./lib/connectors/base-connector":152,"./lib/connectors/mail":153,"./lib/connectors/memory":154,"./lib/loopback":156,"loopback-connector-remote":82,"loopback-datasource-juggler":91,"loopback-datasource-juggler/lib/geo":96}],148:[function(require,module,exports){
+},{"./lib/connectors/base-connector":146,"./lib/connectors/mail":147,"./lib/connectors/memory":148,"./lib/loopback":150,"loopback-connector-remote":81,"loopback-datasource-juggler":90,"loopback-datasource-juggler/lib/geo":95}],142:[function(require,module,exports){
 var assert = require('assert');
 var loopback = require('./loopback');
 var debug = require('debug')('loopback:security:access-context');
@@ -41373,7 +39265,7 @@ module.exports.AccessContext = AccessContext;
 module.exports.Principal = Principal;
 module.exports.AccessRequest = AccessRequest;
 
-},{"./loopback":156,"assert":277,"debug":17}],149:[function(require,module,exports){
+},{"./loopback":150,"assert":271,"debug":17}],143:[function(require,module,exports){
 (function (process,__dirname){
 /*!
  * Module dependencies.
@@ -41937,7 +39829,7 @@ app.listen = function(cb) {
 };
 
 }).call(this,require('_process'),"/node_modules/loopback/lib")
-},{"./registry":159,"_process":380,"assert":277,"fs":262,"http":413,"loopback-datasource-juggler":91,"path":377,"strong-remoting":223,"underscore.string/camelize":250,"underscore.string/classify":252,"util":423}],150:[function(require,module,exports){
+},{"./registry":153,"_process":374,"assert":271,"fs":256,"http":407,"loopback-datasource-juggler":90,"path":371,"strong-remoting":217,"underscore.string/camelize":244,"underscore.string/classify":246,"util":417}],144:[function(require,module,exports){
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
 
@@ -41969,7 +39861,7 @@ BrowserExpress.prototype.get = function(key) {
   return this.settings[key];
 };
 
-},{"events":347,"util":423}],151:[function(require,module,exports){
+},{"events":341,"util":417}],145:[function(require,module,exports){
 module.exports = function(registry) {
   // NOTE(bajtos) we must use static require() due to browserify limitations
 
@@ -42039,7 +39931,7 @@ module.exports = function(registry) {
   }
 };
 
-},{"../common/models/access-token.js":128,"../common/models/access-token.json":127,"../common/models/acl.js":130,"../common/models/acl.json":129,"../common/models/application.js":132,"../common/models/application.json":131,"../common/models/change.js":134,"../common/models/change.json":133,"../common/models/checkpoint.js":136,"../common/models/checkpoint.json":135,"../common/models/email.js":138,"../common/models/email.json":137,"../common/models/role-mapping.js":140,"../common/models/role-mapping.json":139,"../common/models/role.js":142,"../common/models/role.json":141,"../common/models/scope.js":144,"../common/models/scope.json":143,"../common/models/user.js":146,"../common/models/user.json":145}],152:[function(require,module,exports){
+},{"../common/models/access-token.js":"loopback-boot#models#access-token.js","../common/models/access-token.json":126,"../common/models/acl.js":"loopback-boot#models#acl.js","../common/models/acl.json":127,"../common/models/application.js":129,"../common/models/application.json":128,"../common/models/change.js":131,"../common/models/change.json":130,"../common/models/checkpoint.js":133,"../common/models/checkpoint.json":132,"../common/models/email.js":135,"../common/models/email.json":134,"../common/models/role-mapping.js":"loopback-boot#models#role-mapping.js","../common/models/role-mapping.json":136,"../common/models/role.js":"loopback-boot#models#role.js","../common/models/role.json":137,"../common/models/scope.js":139,"../common/models/scope.json":138,"../common/models/user.js":"loopback-boot#models#user.js","../common/models/user.json":140}],146:[function(require,module,exports){
 /**
  * Expose `Connector`.
  */
@@ -42095,7 +39987,7 @@ Connector.prototype._addCrudOperationsFromJDBAdapter = function(connector) {
 
 };
 
-},{"assert":277,"debug":17,"events":347,"util":423}],153:[function(require,module,exports){
+},{"assert":271,"debug":17,"events":341,"util":417}],147:[function(require,module,exports){
 (function (process){
 /**
  * Dependencies.
@@ -42284,7 +40176,7 @@ Mailer.mailer =
 Mailer.prototype.mailer = mailer;
 
 }).call(this,require('_process'))
-},{"../loopback":156,"_process":380,"assert":277,"debug":17,"nodemailer":281}],154:[function(require,module,exports){
+},{"../loopback":150,"_process":374,"assert":271,"debug":17,"nodemailer":275}],148:[function(require,module,exports){
 /**
  * Expose `Memory`.
  */
@@ -42325,7 +40217,7 @@ inherits(Memory, Connector);
 
 Memory.initialize = JdbMemory.initialize;
 
-},{"./base-connector":152,"assert":277,"debug":17,"loopback-datasource-juggler/lib/connectors/memory":93,"util":423}],155:[function(require,module,exports){
+},{"./base-connector":146,"assert":271,"debug":17,"loopback-datasource-juggler/lib/connectors/memory":92,"util":417}],149:[function(require,module,exports){
 (function (__dirname){
 var path = require('path');
 
@@ -42381,7 +40273,7 @@ middlewares.favicon = function(icon, options) {
 };
 
 }).call(this,"/node_modules/loopback/lib")
-},{"path":377}],156:[function(require,module,exports){
+},{"path":371}],150:[function(require,module,exports){
 (function (__dirname){
 /*!
  * Module dependencies.
@@ -42802,7 +40694,7 @@ require('./builtin-models')(loopback);
 loopback.DataSource = juggler.DataSource;
 
 }).call(this,"/node_modules/loopback/lib")
-},{"../package.json":162,"../server/current-context":126,"./application":149,"./builtin-models":151,"./express-middleware":155,"./registry":159,"./runtime":160,"./server-app":150,"assert":277,"ejs":25,"express":150,"fs":262,"loopback-datasource-juggler":91,"path":377,"util":423}],157:[function(require,module,exports){
+},{"../package.json":156,"../server/current-context":125,"./application":143,"./builtin-models":145,"./express-middleware":149,"./registry":153,"./runtime":154,"./server-app":144,"assert":271,"ejs":25,"express":144,"fs":256,"loopback-datasource-juggler":90,"path":371,"util":417}],151:[function(require,module,exports){
 /*!
  * Module Dependencies.
  */
@@ -43647,7 +41539,7 @@ module.exports = function(registry) {
   return Model;
 };
 
-},{"assert":277,"loopback-datasource-juggler":91,"strong-remoting":223,"util":423}],158:[function(require,module,exports){
+},{"assert":271,"loopback-datasource-juggler":90,"strong-remoting":217,"util":417}],152:[function(require,module,exports){
 (function (process){
 /*!
  * Module Dependencies.
@@ -45343,7 +43235,7 @@ module.exports = function(registry) {
 };
 
 }).call(this,require('_process'))
-},{"./runtime":160,"./utils":161,"_process":380,"assert":277,"async":8,"debug":17,"depd":92,"stream":412}],159:[function(require,module,exports){
+},{"./runtime":154,"./utils":155,"_process":374,"assert":271,"async":8,"debug":17,"depd":91,"stream":406}],153:[function(require,module,exports){
 var assert = require('assert');
 var extend = require('util')._extend;
 var juggler = require('loopback-datasource-juggler');
@@ -45816,7 +43708,7 @@ Object.defineProperty(Registry.prototype, 'DataModel', {
   }
 });
 
-},{"./model":157,"./persisted-model":158,"assert":277,"debug":17,"loopback-datasource-juggler":91,"util":423}],160:[function(require,module,exports){
+},{"./model":151,"./persisted-model":152,"assert":271,"debug":17,"loopback-datasource-juggler":90,"util":417}],154:[function(require,module,exports){
 /*
  * This is an internal file that should not be used outside of loopback.
  * All exported entities can be accessed via the `loopback` object.
@@ -45839,7 +43731,7 @@ runtime.isBrowser = typeof window !== 'undefined';
 
 runtime.isServer = !runtime.isBrowser;
 
-},{}],161:[function(require,module,exports){
+},{}],155:[function(require,module,exports){
 (function (global){
 exports.createPromiseCallback = createPromiseCallback;
 
@@ -45871,7 +43763,7 @@ function throwPromiseNotDefined() {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],162:[function(require,module,exports){
+},{}],156:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -46050,7 +43942,7 @@ module.exports={
   "version": "2.27.0"
 }
 
-},{}],163:[function(require,module,exports){
+},{}],157:[function(require,module,exports){
 module.exports = LRUCache
 
 // This will be a proper iterable 'Map' in engines that support it,
@@ -46521,7 +44413,7 @@ function Entry (key, value, length, now, maxAge) {
   this.maxAge = maxAge || 0
 }
 
-},{"pseudomap":176,"util":423,"yallist":261}],164:[function(require,module,exports){
+},{"pseudomap":170,"util":417,"yallist":255}],158:[function(require,module,exports){
 module.exports={
   "application/1d-interleaved-parityfec": {
     "source": "iana"
@@ -53098,7 +50990,7 @@ module.exports={
   }
 }
 
-},{}],165:[function(require,module,exports){
+},{}],159:[function(require,module,exports){
 /*!
  * mime-db
  * Copyright(c) 2014 Jonathan Ong
@@ -53111,7 +51003,7 @@ module.exports={
 
 module.exports = require('./db.json')
 
-},{"./db.json":164}],166:[function(require,module,exports){
+},{"./db.json":158}],160:[function(require,module,exports){
 /*!
  * mime-types
  * Copyright(c) 2014 Jonathan Ong
@@ -53301,7 +51193,7 @@ function populateMaps(extensions, types) {
   })
 }
 
-},{"mime-db":165,"path":377}],167:[function(require,module,exports){
+},{"mime-db":159,"path":371}],161:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -53428,7 +51320,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's';
 }
 
-},{}],168:[function(require,module,exports){
+},{}],162:[function(require,module,exports){
 var inject = require('./inject')
 var serializer = require('stream-serializer')
 
@@ -53436,7 +51328,7 @@ module.exports = inject(function (stream, opts) {
   return serializer(opts && opts.wrapper) (stream)
 })
 
-},{"./inject":169,"stream-serializer":220}],169:[function(require,module,exports){
+},{"./inject":163,"stream-serializer":214}],163:[function(require,module,exports){
 'use strict';
 
 var through = require('through')
@@ -53623,7 +51515,7 @@ function MuxDemux (opts, onConnection) {
 } //inject
 
 
-},{"duplex":21,"through":238,"xtend":260}],170:[function(require,module,exports){
+},{"duplex":21,"through":232,"xtend":254}],164:[function(require,module,exports){
 (function (Buffer){
 //     uuid.js
 //
@@ -53899,7 +51791,7 @@ function MuxDemux (opts, onConnection) {
 })('undefined' !== typeof window ? window : null);
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"crypto":319}],171:[function(require,module,exports){
+},{"buffer":303,"crypto":313}],165:[function(require,module,exports){
 var crypto = require('crypto')
   , qs = require('querystring')
   ;
@@ -54037,7 +51929,7 @@ exports.rfc3986 = rfc3986
 exports.generateBase = generateBase
 
 
-},{"crypto":319,"querystring":390}],172:[function(require,module,exports){
+},{"crypto":313,"querystring":384}],166:[function(require,module,exports){
 /*!
  * Copyright(c) 2011 Einar Otto Stangvik <einaros@gmail.com>
  * MIT Licensed
@@ -54125,14 +52017,14 @@ function Options(defaults) {
 
 module.exports = Options;
 
-},{"fs":262}],173:[function(require,module,exports){
+},{"fs":256}],167:[function(require,module,exports){
 (function (global){
 'use strict';
 
 module.exports = global.Promise || require('pinkie');
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"pinkie":174}],174:[function(require,module,exports){
+},{"pinkie":168}],168:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -54428,7 +52320,7 @@ Promise.reject = function (reason) {
 module.exports = Promise;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],175:[function(require,module,exports){
+},{}],169:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -54452,7 +52344,7 @@ function nextTick(fn) {
 }
 
 }).call(this,require('_process'))
-},{"_process":380}],176:[function(require,module,exports){
+},{"_process":374}],170:[function(require,module,exports){
 (function (process){
 if (process.env.npm_package_name === 'pseudomap' &&
     process.env.npm_lifecycle_script === 'test')
@@ -54465,7 +52357,7 @@ if (typeof Map === 'function' && !process.env.TEST_PSEUDOMAP) {
 }
 
 }).call(this,require('_process'))
-},{"./pseudomap":177,"_process":380}],177:[function(require,module,exports){
+},{"./pseudomap":171,"_process":374}],171:[function(require,module,exports){
 var hasOwnProperty = Object.prototype.hasOwnProperty
 
 module.exports = PseudoMap
@@ -54580,7 +52472,7 @@ function set (data, k, v) {
   data[key] = new Entry(k, v, key)
 }
 
-},{}],178:[function(require,module,exports){
+},{}],172:[function(require,module,exports){
 'use strict';
 
 var Stringify = require('./stringify');
@@ -54591,7 +52483,7 @@ module.exports = {
     parse: Parse
 };
 
-},{"./parse":179,"./stringify":180}],179:[function(require,module,exports){
+},{"./parse":173,"./stringify":174}],173:[function(require,module,exports){
 'use strict';
 
 var Utils = require('./utils');
@@ -54757,7 +52649,7 @@ module.exports = function (str, opts) {
     return Utils.compact(obj);
 };
 
-},{"./utils":181}],180:[function(require,module,exports){
+},{"./utils":175}],174:[function(require,module,exports){
 'use strict';
 
 var Utils = require('./utils');
@@ -54890,7 +52782,7 @@ module.exports = function (object, opts) {
     return keys.join(delimiter);
 };
 
-},{"./utils":181}],181:[function(require,module,exports){
+},{"./utils":175}],175:[function(require,module,exports){
 'use strict';
 
 var hexTable = (function () {
@@ -55054,10 +52946,10 @@ exports.isBuffer = function (obj) {
     return !!(obj.constructor && obj.constructor.isBuffer && obj.constructor.isBuffer(obj));
 };
 
-},{}],182:[function(require,module,exports){
+},{}],176:[function(require,module,exports){
 module.exports = require("./lib/_stream_duplex.js")
 
-},{"./lib/_stream_duplex.js":183}],183:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":177}],177:[function(require,module,exports){
 // a duplex stream is just a stream that is both readable and writable.
 // Since JS doesn't have multiple prototypal inheritance, this class
 // prototypally inherits from Readable, and then parasitically from
@@ -55133,7 +53025,7 @@ function forEach(xs, f) {
     f(xs[i], i);
   }
 }
-},{"./_stream_readable":184,"./_stream_writable":185,"core-util-is":16,"inherits":61,"process-nextick-args":175}],184:[function(require,module,exports){
+},{"./_stream_readable":178,"./_stream_writable":179,"core-util-is":16,"inherits":61,"process-nextick-args":169}],178:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -56016,7 +53908,7 @@ function indexOf(xs, x) {
   return -1;
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":183,"_process":380,"buffer":309,"core-util-is":16,"events":347,"inherits":61,"isarray":67,"process-nextick-args":175,"string_decoder/":221,"util":281}],185:[function(require,module,exports){
+},{"./_stream_duplex":177,"_process":374,"buffer":303,"core-util-is":16,"events":341,"inherits":61,"isarray":67,"process-nextick-args":169,"string_decoder/":215,"util":275}],179:[function(require,module,exports){
 (function (process){
 // A bit simpler than readable streams.
 // Implement an async ._write(chunk, encoding, cb), and it'll handle all
@@ -56535,7 +54427,7 @@ function CorkedRequest(state) {
   };
 }
 }).call(this,require('_process'))
-},{"./_stream_duplex":183,"_process":380,"buffer":309,"core-util-is":16,"events":347,"inherits":61,"process-nextick-args":175,"util-deprecate":258}],186:[function(require,module,exports){
+},{"./_stream_duplex":177,"_process":374,"buffer":303,"core-util-is":16,"events":341,"inherits":61,"process-nextick-args":169,"util-deprecate":252}],180:[function(require,module,exports){
 // Copyright 2010-2012 Mikeal Rogers
 //
 //    Licensed under the Apache License, Version 2.0 (the "License");
@@ -56693,7 +54585,7 @@ Object.defineProperty(request, 'debug', {
   }
 })
 
-},{"./lib/cookies":188,"./lib/helpers":191,"./request":197,"extend":29}],187:[function(require,module,exports){
+},{"./lib/cookies":182,"./lib/helpers":185,"./request":191,"extend":29}],181:[function(require,module,exports){
 'use strict'
 
 var caseless = require('caseless')
@@ -56863,7 +54755,7 @@ Auth.prototype.onResponse = function (response) {
 
 exports.Auth = Auth
 
-},{"./helpers":191,"caseless":14,"node-uuid":170}],188:[function(require,module,exports){
+},{"./helpers":185,"caseless":14,"node-uuid":164}],182:[function(require,module,exports){
 'use strict'
 
 var tough = require('tough-cookie')
@@ -56904,7 +54796,7 @@ exports.jar = function(store) {
   return new RequestJar(store)
 }
 
-},{"tough-cookie":239}],189:[function(require,module,exports){
+},{"tough-cookie":233}],183:[function(require,module,exports){
 (function (process){
 'use strict'
 
@@ -56987,7 +54879,7 @@ function getProxyFromURI(uri) {
 module.exports = getProxyFromURI
 
 }).call(this,require('_process'))
-},{"_process":380}],190:[function(require,module,exports){
+},{"_process":374}],184:[function(require,module,exports){
 'use strict'
 
 var fs = require('fs')
@@ -57204,7 +55096,7 @@ Har.prototype.options = function (options) {
 
 exports.Har = Har
 
-},{"extend":29,"fs":262,"har-validator":36,"querystring":390}],191:[function(require,module,exports){
+},{"extend":29,"fs":256,"har-validator":36,"querystring":384}],185:[function(require,module,exports){
 (function (process,Buffer){
 'use strict'
 
@@ -57282,7 +55174,7 @@ exports.version               = version
 exports.defer                 = deferMethod()
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":380,"buffer":309,"crypto":319,"json-stringify-safe":77}],192:[function(require,module,exports){
+},{"_process":374,"buffer":303,"crypto":313,"json-stringify-safe":77}],186:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 
@@ -57398,7 +55290,7 @@ Multipart.prototype.onRequest = function (options) {
 exports.Multipart = Multipart
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"combined-stream":15,"isstream":68,"node-uuid":170}],193:[function(require,module,exports){
+},{"buffer":303,"combined-stream":15,"isstream":68,"node-uuid":164}],187:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 
@@ -57549,7 +55441,7 @@ OAuth.prototype.onRequest = function (_oauth) {
 exports.OAuth = OAuth
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"caseless":14,"crypto":319,"node-uuid":170,"oauth-sign":171,"qs":178,"url":419}],194:[function(require,module,exports){
+},{"buffer":303,"caseless":14,"crypto":313,"node-uuid":164,"oauth-sign":165,"qs":172,"url":413}],188:[function(require,module,exports){
 'use strict'
 
 var qs = require('qs')
@@ -57602,7 +55494,7 @@ Querystring.prototype.unescape = querystring.unescape
 
 exports.Querystring = Querystring
 
-},{"qs":178,"querystring":390}],195:[function(require,module,exports){
+},{"qs":172,"querystring":384}],189:[function(require,module,exports){
 'use strict'
 
 var url = require('url')
@@ -57757,7 +55649,7 @@ Redirect.prototype.onResponse = function (response) {
 
 exports.Redirect = Redirect
 
-},{"url":419}],196:[function(require,module,exports){
+},{"url":413}],190:[function(require,module,exports){
 'use strict'
 
 var url = require('url')
@@ -57935,7 +55827,7 @@ Tunnel.defaultProxyHeaderWhiteList = defaultProxyHeaderWhiteList
 Tunnel.defaultProxyHeaderExclusiveList = defaultProxyHeaderExclusiveList
 exports.Tunnel = Tunnel
 
-},{"tunnel-agent":247,"url":419}],197:[function(require,module,exports){
+},{"tunnel-agent":241,"url":413}],191:[function(require,module,exports){
 (function (process,Buffer){
 'use strict'
 
@@ -59367,7 +57259,7 @@ Request.prototype.toJSON = requestToJSON
 module.exports = Request
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./lib/auth":187,"./lib/cookies":188,"./lib/getProxyFromURI":189,"./lib/har":190,"./lib/helpers":191,"./lib/multipart":192,"./lib/oauth":193,"./lib/querystring":194,"./lib/redirect":195,"./lib/tunnel":196,"_process":380,"aws-sign2":9,"aws4":10,"bl":12,"buffer":309,"caseless":14,"extend":29,"forever-agent":31,"form-data":32,"hawk":54,"http":413,"http-signature":55,"https":355,"is-typedarray":66,"isstream":68,"mime-types":166,"stream":412,"stringstream":222,"url":419,"util":423,"zlib":307}],198:[function(require,module,exports){
+},{"./lib/auth":181,"./lib/cookies":182,"./lib/getProxyFromURI":183,"./lib/har":184,"./lib/helpers":185,"./lib/multipart":186,"./lib/oauth":187,"./lib/querystring":188,"./lib/redirect":189,"./lib/tunnel":190,"_process":374,"aws-sign2":9,"aws4":10,"bl":12,"buffer":303,"caseless":14,"extend":29,"forever-agent":31,"form-data":32,"hawk":54,"http":407,"http-signature":55,"https":349,"is-typedarray":66,"isstream":68,"mime-types":160,"stream":406,"stringstream":216,"url":413,"util":417,"zlib":301}],192:[function(require,module,exports){
 ;(function(exports) {
 
 // export the class if we are in a Node-like system.
@@ -60570,9 +58462,9 @@ if (typeof define === 'function' && define.amd)
   semver = {}
 );
 
-},{}],199:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 module.exports = require('./lib/sse');
-},{"./lib/sse":200}],200:[function(require,module,exports){
+},{"./lib/sse":194}],194:[function(require,module,exports){
 var Options = require('options')
   , util = require('util')
   , url = require('url')
@@ -60613,7 +58505,7 @@ SSE.prototype.handleRequest = function(req, res, query) {
   this.emit('connection', client, querystring.parse(query));
 }
 
-},{"./sseclient":201,"events":347,"options":172,"querystring":390,"url":419,"util":423}],201:[function(require,module,exports){
+},{"./sseclient":195,"events":341,"options":166,"querystring":384,"url":413,"util":417}],195:[function(require,module,exports){
 var util    = require('util'),
     events  = require('events');
 
@@ -60680,7 +58572,7 @@ SSEClient.prototype.close = function() {
   this.res.end();
 }
 
-},{"events":347,"util":423}],202:[function(require,module,exports){
+},{"events":341,"util":417}],196:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -60852,7 +58744,7 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],203:[function(require,module,exports){
+},{"buffer":303}],197:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -61167,7 +59059,7 @@ ECPrivate.prototype.deriveSharedSecret = function (pubKey) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":202,"./key":215,"./private-key":216,"./utils":219,"assert-plus":7,"buffer":309,"crypto":319,"ecc-jsbn":22,"ecc-jsbn/lib/ec":23,"jodid25519":69,"jsbn":75}],204:[function(require,module,exports){
+},{"./algs":196,"./key":209,"./private-key":210,"./utils":213,"assert-plus":7,"buffer":303,"crypto":313,"ecc-jsbn":22,"ecc-jsbn/lib/ec":23,"jodid25519":69,"jsbn":75}],198:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -61267,7 +59159,7 @@ Signer.prototype.sign = function () {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./signature":217,"assert-plus":7,"buffer":309,"stream":412,"tweetnacl":248,"util":423}],205:[function(require,module,exports){
+},{"./signature":211,"assert-plus":7,"buffer":303,"stream":406,"tweetnacl":242,"util":417}],199:[function(require,module,exports){
 // Copyright 2015 Joyent, Inc.
 
 var assert = require('assert-plus');
@@ -61327,7 +59219,7 @@ module.exports = {
 	SignatureParseError: SignatureParseError
 };
 
-},{"assert-plus":7,"util":423}],206:[function(require,module,exports){
+},{"assert-plus":7,"util":417}],200:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -61471,7 +59363,7 @@ Fingerprint._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":202,"./errors":205,"./key":215,"./utils":219,"assert-plus":7,"buffer":309,"crypto":319}],207:[function(require,module,exports){
+},{"./algs":196,"./errors":199,"./key":209,"./utils":213,"assert-plus":7,"buffer":303,"crypto":313}],201:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -61548,7 +59440,7 @@ function write(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../key":215,"../private-key":216,"../utils":219,"./pem":208,"./rfc4253":211,"./ssh":213,"assert-plus":7,"buffer":309}],208:[function(require,module,exports){
+},{"../key":209,"../private-key":210,"../utils":213,"./pem":202,"./rfc4253":205,"./ssh":207,"assert-plus":7,"buffer":303}],202:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -61704,7 +59596,7 @@ function write(key, type) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":202,"../key":215,"../private-key":216,"../utils":219,"./pkcs1":209,"./pkcs8":210,"./rfc4253":211,"./ssh-private":212,"asn1":6,"assert-plus":7,"buffer":309}],209:[function(require,module,exports){
+},{"../algs":196,"../key":209,"../private-key":210,"../utils":213,"./pkcs1":203,"./pkcs8":204,"./rfc4253":205,"./ssh-private":206,"asn1":6,"assert-plus":7,"buffer":303}],203:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -62028,7 +59920,7 @@ function writePkcs1ECDSAPrivate(der, key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":202,"../key":215,"../private-key":216,"../utils":219,"./pem":208,"./pkcs8":210,"asn1":6,"assert-plus":7,"buffer":309}],210:[function(require,module,exports){
+},{"../algs":196,"../key":209,"../private-key":210,"../utils":213,"./pem":202,"./pkcs8":204,"asn1":6,"assert-plus":7,"buffer":303}],204:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -62542,7 +60434,7 @@ function writePkcs8ECDSAPrivate(key, der) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":202,"../key":215,"../private-key":216,"../utils":219,"./pem":208,"asn1":6,"assert-plus":7,"buffer":309}],211:[function(require,module,exports){
+},{"../algs":196,"../key":209,"../private-key":210,"../utils":213,"./pem":202,"asn1":6,"assert-plus":7,"buffer":303}],205:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -62692,7 +60584,7 @@ function write(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":202,"../key":215,"../private-key":216,"../ssh-buffer":218,"../utils":219,"assert-plus":7,"buffer":309}],212:[function(require,module,exports){
+},{"../algs":196,"../key":209,"../private-key":210,"../ssh-buffer":212,"../utils":213,"assert-plus":7,"buffer":303}],206:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -62834,7 +60726,7 @@ function write(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../algs":202,"../key":215,"../private-key":216,"../ssh-buffer":218,"../utils":219,"./pem":208,"./rfc4253":211,"asn1":6,"assert-plus":7,"buffer":309,"crypto":319}],213:[function(require,module,exports){
+},{"../algs":196,"../key":209,"../private-key":210,"../ssh-buffer":212,"../utils":213,"./pem":202,"./rfc4253":205,"asn1":6,"assert-plus":7,"buffer":303,"crypto":313}],207:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -62952,7 +60844,7 @@ function write(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"../key":215,"../private-key":216,"../utils":219,"./rfc4253":211,"./ssh-private":212,"assert-plus":7,"buffer":309}],214:[function(require,module,exports){
+},{"../key":209,"../private-key":210,"../utils":213,"./rfc4253":205,"./ssh-private":206,"assert-plus":7,"buffer":303}],208:[function(require,module,exports){
 // Copyright 2015 Joyent, Inc.
 
 var Key = require('./key');
@@ -62979,7 +60871,7 @@ module.exports = {
 	SignatureParseError: errs.SignatureParseError
 };
 
-},{"./errors":205,"./fingerprint":206,"./key":215,"./private-key":216,"./signature":217}],215:[function(require,module,exports){
+},{"./errors":199,"./fingerprint":200,"./key":209,"./private-key":210,"./signature":211}],209:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -63249,7 +61141,7 @@ Key._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":202,"./dhe":203,"./ed-compat":204,"./errors":205,"./fingerprint":206,"./formats/auto":207,"./formats/pem":208,"./formats/pkcs1":209,"./formats/pkcs8":210,"./formats/rfc4253":211,"./formats/ssh":213,"./formats/ssh-private":212,"./private-key":216,"./signature":217,"./utils":219,"assert-plus":7,"buffer":309,"crypto":319}],216:[function(require,module,exports){
+},{"./algs":196,"./dhe":197,"./ed-compat":198,"./errors":199,"./fingerprint":200,"./formats/auto":201,"./formats/pem":202,"./formats/pkcs1":203,"./formats/pkcs8":204,"./formats/rfc4253":205,"./formats/ssh":207,"./formats/ssh-private":206,"./private-key":210,"./signature":211,"./utils":213,"assert-plus":7,"buffer":303,"crypto":313}],210:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -63477,7 +61369,7 @@ PrivateKey._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":202,"./ed-compat":204,"./errors":205,"./fingerprint":206,"./formats/auto":207,"./formats/pem":208,"./formats/pkcs1":209,"./formats/pkcs8":210,"./formats/rfc4253":211,"./formats/ssh-private":212,"./key":215,"./signature":217,"./utils":219,"assert-plus":7,"buffer":309,"crypto":319,"jodid25519":69,"util":423}],217:[function(require,module,exports){
+},{"./algs":196,"./ed-compat":198,"./errors":199,"./fingerprint":200,"./formats/auto":201,"./formats/pem":202,"./formats/pkcs1":203,"./formats/pkcs8":204,"./formats/rfc4253":205,"./formats/ssh-private":206,"./key":209,"./signature":211,"./utils":213,"assert-plus":7,"buffer":303,"crypto":313,"jodid25519":69,"util":417}],211:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -63718,7 +61610,7 @@ Signature._oldVersionDetect = function (obj) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"./algs":202,"./errors":205,"./ssh-buffer":218,"./utils":219,"asn1":6,"assert-plus":7,"buffer":309,"crypto":319}],218:[function(require,module,exports){
+},{"./algs":196,"./errors":199,"./ssh-buffer":212,"./utils":213,"asn1":6,"assert-plus":7,"buffer":303,"crypto":313}],212:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -63846,7 +61738,7 @@ SSHBuffer.prototype.write = function (buf) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"assert-plus":7,"buffer":309}],219:[function(require,module,exports){
+},{"assert-plus":7,"buffer":303}],213:[function(require,module,exports){
 (function (Buffer){
 // Copyright 2015 Joyent, Inc.
 
@@ -64057,7 +61949,7 @@ function addRSAMissing(key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./private-key":216,"assert-plus":7,"buffer":309,"jsbn":75}],220:[function(require,module,exports){
+},{"./private-key":210,"assert-plus":7,"buffer":303,"jsbn":75}],214:[function(require,module,exports){
 
 var EventEmitter = require('events').EventEmitter
 
@@ -64128,7 +62020,7 @@ exports.raw = function (stream) {
 }
 
 
-},{"events":347}],221:[function(require,module,exports){
+},{"events":341}],215:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -64351,7 +62243,7 @@ function base64DetectIncompleteChar(buffer) {
   this.charLength = this.charReceived ? 3 : 0;
 }
 
-},{"buffer":309}],222:[function(require,module,exports){
+},{"buffer":303}],216:[function(require,module,exports){
 (function (Buffer){
 var util = require('util')
 var Stream = require('stream')
@@ -64457,7 +62349,7 @@ function alignedWrite(buffer) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"stream":412,"string_decoder":417,"util":423}],223:[function(require,module,exports){
+},{"buffer":303,"stream":406,"string_decoder":411,"util":417}],217:[function(require,module,exports){
 /**
  * remotes ~ public api
  */
@@ -64465,7 +62357,7 @@ function alignedWrite(buffer) {
 module.exports = require('./lib/remote-objects');
 module.exports.SharedClass = require('./lib/shared-class');
 
-},{"./lib/remote-objects":229,"./lib/shared-class":231}],224:[function(require,module,exports){
+},{"./lib/remote-objects":223,"./lib/shared-class":225}],218:[function(require,module,exports){
 'use strict';
 
 var EventEmitter = require('events').EventEmitter;
@@ -64493,7 +62385,7 @@ ContextBase.prototype.getScope = function() {
     method.sharedMethod && method.sharedMethod.ctor;
 };
 
-},{"events":347,"util":423}],225:[function(require,module,exports){
+},{"events":341,"util":417}],219:[function(require,module,exports){
 /**
  * Expose `Dynamic`.
  */
@@ -64618,7 +62510,7 @@ Dynamic.define('number', function convertNumber(val) {
   return Number(val);
 });
 
-},{"assert":277,"debug":17}],226:[function(require,module,exports){
+},{"assert":271,"debug":17}],220:[function(require,module,exports){
 /*!
  * Expose `ExportsHelper`.
  */
@@ -64755,7 +62647,7 @@ function method(fn, options) {
   return self;
 }
 
-},{"debug":17}],227:[function(require,module,exports){
+},{"debug":17}],221:[function(require,module,exports){
 (function (Buffer,process){
 /*!
  * Expose `HttpContext`.
@@ -65423,8 +63315,8 @@ HttpContext.prototype.done = function(cb) {
   cb();
 };
 
-}).call(this,{"isBuffer":require("../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
-},{"../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":359,"./context-base":224,"./dynamic":225,"./shared-method":232,"_process":380,"assert":277,"debug":17,"js2xmlparser":281,"mux-demux":168,"sse":199,"util":423}],228:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js")},require('_process'))
+},{"../../../../../../../../../usr/lib/node_modules/browserify/node_modules/is-buffer/index.js":353,"./context-base":218,"./dynamic":219,"./shared-method":226,"_process":374,"assert":271,"debug":17,"js2xmlparser":275,"mux-demux":162,"sse":193,"util":417}],222:[function(require,module,exports){
 /*!
  * Expose `HttpInvocation`.
  */
@@ -65764,7 +63656,7 @@ HttpInvocation.prototype.transformResponse = function(res, body, callback) {
   callback.apply(this, callbackArgs);
 };
 
-},{"./dynamic":225,"assert":277,"debug":17,"events":347,"mux-demux":168,"path":377,"qs":233,"request":186,"stream":412,"url":419,"util":423}],229:[function(require,module,exports){
+},{"./dynamic":219,"assert":271,"debug":17,"events":341,"mux-demux":162,"path":371,"qs":227,"request":180,"stream":406,"url":413,"util":417}],223:[function(require,module,exports){
 (function (process){
 /*!
  * Expose `RemoteObjects`.
@@ -66493,7 +64385,7 @@ RemoteObjects.prototype.convert = function(name, fn) {
 };
 
 }).call(this,require('_process'))
-},{"./dynamic":225,"./exports-helper":226,"./rest-adapter":230,"./shared-class":231,"./shared-method":232,"_process":380,"assert":277,"debug":17,"depd":20,"eventemitter2":28,"loopback-phase":122,"url":419,"util":423}],230:[function(require,module,exports){
+},{"./dynamic":219,"./exports-helper":220,"./rest-adapter":224,"./shared-class":225,"./shared-method":226,"_process":374,"assert":271,"debug":17,"depd":20,"eventemitter2":28,"loopback-phase":121,"url":413,"util":417}],224:[function(require,module,exports){
 (function (process){
 /*!
  * Expose `RestAdapter`.
@@ -67146,7 +65038,7 @@ function joinPaths(left, right) {
 }
 
 }).call(this,require('_process'))
-},{"./context-base":224,"./http-context":227,"./http-invocation":228,"_process":380,"assert":277,"async":8,"body-parser":281,"cors":281,"debug":17,"events":347,"express":281,"util":423}],231:[function(require,module,exports){
+},{"./context-base":218,"./http-context":221,"./http-invocation":222,"_process":374,"assert":271,"async":8,"body-parser":275,"cors":275,"debug":17,"events":341,"express":275,"util":417}],225:[function(require,module,exports){
 /*!
  * Expose `SharedClass`.
  */
@@ -67411,7 +65303,7 @@ function eachRemoteFunctionInObject(obj, f) {
   }
 }
 
-},{"./shared-method":232,"assert":277,"debug":17,"inflection":60,"util":423}],232:[function(require,module,exports){
+},{"./shared-method":226,"assert":271,"debug":17,"inflection":60,"util":417}],226:[function(require,module,exports){
 (function (Buffer){
 /*!
  * Expose `SharedMethod`.
@@ -68050,11 +65942,11 @@ SharedMethod.prototype.addAlias = function(alias) {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"assert":277,"buffer":309,"debug":17,"traverse":246,"util":423}],233:[function(require,module,exports){
+},{"assert":271,"buffer":303,"debug":17,"traverse":240,"util":417}],227:[function(require,module,exports){
+arguments[4][115][0].apply(exports,arguments)
+},{"./lib/":228,"dup":115}],228:[function(require,module,exports){
 arguments[4][116][0].apply(exports,arguments)
-},{"./lib/":234,"dup":116}],234:[function(require,module,exports){
-arguments[4][117][0].apply(exports,arguments)
-},{"./parse":235,"./stringify":236,"dup":117}],235:[function(require,module,exports){
+},{"./parse":229,"./stringify":230,"dup":116}],229:[function(require,module,exports){
 // Load modules
 
 var Utils = require('./utils');
@@ -68213,7 +66105,7 @@ module.exports = function (str, options) {
     return Utils.compact(obj);
 };
 
-},{"./utils":237}],236:[function(require,module,exports){
+},{"./utils":231}],230:[function(require,module,exports){
 // Load modules
 
 var Utils = require('./utils');
@@ -68312,7 +66204,7 @@ module.exports = function (obj, options) {
     return keys.join(delimiter);
 };
 
-},{"./utils":237}],237:[function(require,module,exports){
+},{"./utils":231}],231:[function(require,module,exports){
 // Load modules
 
 
@@ -68446,7 +66338,7 @@ exports.isBuffer = function (obj) {
         obj.constructor.isBuffer(obj));
 };
 
-},{}],238:[function(require,module,exports){
+},{}],232:[function(require,module,exports){
 (function (process){
 var Stream = require('stream')
 
@@ -68558,7 +66450,7 @@ function through (write, end, opts) {
 
 
 }).call(this,require('_process'))
-},{"_process":380,"stream":412}],239:[function(require,module,exports){
+},{"_process":374,"stream":406}],233:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -69902,7 +67794,7 @@ module.exports = {
   canonicalDomain: canonicalDomain
 };
 
-},{"../package.json":245,"./memstore":240,"./pathMatch":241,"./permuteDomain":242,"./pubsuffix":243,"./store":244,"net":262,"punycode":387,"url":419}],240:[function(require,module,exports){
+},{"../package.json":239,"./memstore":234,"./pathMatch":235,"./permuteDomain":236,"./pubsuffix":237,"./store":238,"net":256,"punycode":381,"url":413}],234:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -70074,7 +67966,7 @@ MemoryCookieStore.prototype.getAllCookies = function(cb) {
   cb(null, cookies);
 };
 
-},{"./pathMatch":241,"./permuteDomain":242,"./store":244,"util":423}],241:[function(require,module,exports){
+},{"./pathMatch":235,"./permuteDomain":236,"./store":238,"util":417}],235:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -70137,7 +68029,7 @@ function pathMatch (reqPath, cookiePath) {
 
 exports.pathMatch = pathMatch;
 
-},{}],242:[function(require,module,exports){
+},{}],236:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -70195,7 +68087,7 @@ function permuteDomain (domain) {
 
 exports.permuteDomain = permuteDomain;
 
-},{"./pubsuffix":243}],243:[function(require,module,exports){
+},{"./pubsuffix":237}],237:[function(require,module,exports){
 /****************************************************
  * AUTOMATICALLY GENERATED by generate-pubsuffix.js *
  *                  DO NOT EDIT!                    *
@@ -70295,7 +68187,7 @@ var index = module.exports.index = Object.freeze(
 
 // END of automatically generated file
 
-},{"punycode":387}],244:[function(require,module,exports){
+},{"punycode":381}],238:[function(require,module,exports){
 /*!
  * Copyright (c) 2015, Salesforce.com, Inc.
  * All rights reserved.
@@ -70368,7 +68260,7 @@ Store.prototype.getAllCookies = function(cb) {
   throw new Error('getAllCookies is not implemented (therefore jar cannot be serialized)');
 };
 
-},{}],245:[function(require,module,exports){
+},{}],239:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -70490,7 +68382,7 @@ module.exports={
   "version": "2.2.2"
 }
 
-},{}],246:[function(require,module,exports){
+},{}],240:[function(require,module,exports){
 var traverse = module.exports = function (obj) {
     return new Traverse(obj);
 };
@@ -70806,7 +68698,7 @@ var hasOwnProperty = Object.hasOwnProperty || function (obj, key) {
     return key in obj;
 };
 
-},{}],247:[function(require,module,exports){
+},{}],241:[function(require,module,exports){
 (function (process,Buffer){
 'use strict'
 
@@ -71053,7 +68945,7 @@ if (process.env.NODE_DEBUG && /\btunnel\b/.test(process.env.NODE_DEBUG)) {
 exports.debug = debug // for test
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":380,"assert":277,"buffer":309,"events":347,"http":413,"https":355,"net":262,"tls":262,"util":423}],248:[function(require,module,exports){
+},{"_process":374,"assert":271,"buffer":303,"events":341,"http":407,"https":349,"net":256,"tls":256,"util":417}],242:[function(require,module,exports){
 (function(nacl) {
 'use strict';
 
@@ -73443,7 +71335,7 @@ nacl.setPRNG = function(fn) {
 
 })(typeof module !== 'undefined' && module.exports ? module.exports : (self.nacl = self.nacl || {}));
 
-},{"crypto":281}],249:[function(require,module,exports){
+},{"crypto":275}],243:[function(require,module,exports){
 /**
  * Module dependencies
  */
@@ -73500,7 +71392,7 @@ function uid(length, cb) {
 
 module.exports = uid;
 
-},{"crypto":319}],250:[function(require,module,exports){
+},{"crypto":313}],244:[function(require,module,exports){
 var trim = require('./trim');
 var decap = require('./decapitalize');
 
@@ -73516,7 +71408,7 @@ module.exports = function camelize(str, decapitalize) {
   }
 };
 
-},{"./decapitalize":253,"./trim":257}],251:[function(require,module,exports){
+},{"./decapitalize":247,"./trim":251}],245:[function(require,module,exports){
 var makeString = require('./helper/makeString');
 
 module.exports = function capitalize(str, lowercaseRest) {
@@ -73526,7 +71418,7 @@ module.exports = function capitalize(str, lowercaseRest) {
   return str.charAt(0).toUpperCase() + remainingChars;
 };
 
-},{"./helper/makeString":256}],252:[function(require,module,exports){
+},{"./helper/makeString":250}],246:[function(require,module,exports){
 var capitalize = require('./capitalize');
 var camelize = require('./camelize');
 var makeString = require('./helper/makeString');
@@ -73536,7 +71428,7 @@ module.exports = function classify(str) {
   return capitalize(camelize(str.replace(/[\W_]/g, ' ')).replace(/\s/g, ''));
 };
 
-},{"./camelize":250,"./capitalize":251,"./helper/makeString":256}],253:[function(require,module,exports){
+},{"./camelize":244,"./capitalize":245,"./helper/makeString":250}],247:[function(require,module,exports){
 var makeString = require('./helper/makeString');
 
 module.exports = function decapitalize(str) {
@@ -73544,7 +71436,7 @@ module.exports = function decapitalize(str) {
   return str.charAt(0).toLowerCase() + str.slice(1);
 };
 
-},{"./helper/makeString":256}],254:[function(require,module,exports){
+},{"./helper/makeString":250}],248:[function(require,module,exports){
 var escapeRegExp = require('./escapeRegExp');
 
 module.exports = function defaultToWhiteSpace(characters) {
@@ -73556,14 +71448,14 @@ module.exports = function defaultToWhiteSpace(characters) {
     return '[' + escapeRegExp(characters) + ']';
 };
 
-},{"./escapeRegExp":255}],255:[function(require,module,exports){
+},{"./escapeRegExp":249}],249:[function(require,module,exports){
 var makeString = require('./makeString');
 
 module.exports = function escapeRegExp(str) {
   return makeString(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
 };
 
-},{"./makeString":256}],256:[function(require,module,exports){
+},{"./makeString":250}],250:[function(require,module,exports){
 /**
  * Ensure some object is a coerced to a string
  **/
@@ -73572,7 +71464,7 @@ module.exports = function makeString(object) {
   return '' + object;
 };
 
-},{}],257:[function(require,module,exports){
+},{}],251:[function(require,module,exports){
 var makeString = require('./helper/makeString');
 var defaultToWhiteSpace = require('./helper/defaultToWhiteSpace');
 var nativeTrim = String.prototype.trim;
@@ -73584,7 +71476,7 @@ module.exports = function trim(str, characters) {
   return str.replace(new RegExp('^' + characters + '+|' + characters + '+$', 'g'), '');
 };
 
-},{"./helper/defaultToWhiteSpace":254,"./helper/makeString":256}],258:[function(require,module,exports){
+},{"./helper/defaultToWhiteSpace":248,"./helper/makeString":250}],252:[function(require,module,exports){
 (function (global){
 
 /**
@@ -73655,7 +71547,7 @@ function config (name) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],259:[function(require,module,exports){
+},{}],253:[function(require,module,exports){
 /*
  * verror.js: richer JavaScript errors
  */
@@ -73814,7 +71706,7 @@ WError.prototype.cause = function we_cause(c)
 	return (this.we_cause);
 };
 
-},{"assert":277,"extsprintf":30,"util":423}],260:[function(require,module,exports){
+},{"assert":271,"extsprintf":30,"util":417}],254:[function(require,module,exports){
 module.exports = extend
 
 function extend(target) {
@@ -73830,7 +71722,7 @@ function extend(target) {
 
     return target
 }
-},{}],261:[function(require,module,exports){
+},{}],255:[function(require,module,exports){
 module.exports = Yallist
 
 Yallist.Node = Node
@@ -74192,9 +72084,9 @@ function Node (value, prev, next, list) {
   }
 }
 
-},{}],262:[function(require,module,exports){
+},{}],256:[function(require,module,exports){
 
-},{}],263:[function(require,module,exports){
+},{}],257:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -74205,7 +72097,7 @@ asn1.constants = require('./asn1/constants');
 asn1.decoders = require('./asn1/decoders');
 asn1.encoders = require('./asn1/encoders');
 
-},{"./asn1/api":264,"./asn1/base":266,"./asn1/constants":270,"./asn1/decoders":272,"./asn1/encoders":275,"bn.js":279}],264:[function(require,module,exports){
+},{"./asn1/api":258,"./asn1/base":260,"./asn1/constants":264,"./asn1/decoders":266,"./asn1/encoders":269,"bn.js":273}],258:[function(require,module,exports){
 var asn1 = require('../asn1');
 var inherits = require('inherits');
 
@@ -74266,7 +72158,7 @@ Entity.prototype.encode = function encode(data, enc, /* internal */ reporter) {
   return this._getEncoder(enc).encode(data, reporter);
 };
 
-},{"../asn1":263,"inherits":358,"vm":424}],265:[function(require,module,exports){
+},{"../asn1":257,"inherits":352,"vm":418}],259:[function(require,module,exports){
 var inherits = require('inherits');
 var Reporter = require('../base').Reporter;
 var Buffer = require('buffer').Buffer;
@@ -74384,7 +72276,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
   return out;
 };
 
-},{"../base":266,"buffer":309,"inherits":358}],266:[function(require,module,exports){
+},{"../base":260,"buffer":303,"inherits":352}],260:[function(require,module,exports){
 var base = exports;
 
 base.Reporter = require('./reporter').Reporter;
@@ -74392,7 +72284,7 @@ base.DecoderBuffer = require('./buffer').DecoderBuffer;
 base.EncoderBuffer = require('./buffer').EncoderBuffer;
 base.Node = require('./node');
 
-},{"./buffer":265,"./node":267,"./reporter":268}],267:[function(require,module,exports){
+},{"./buffer":259,"./node":261,"./reporter":262}],261:[function(require,module,exports){
 var Reporter = require('../base').Reporter;
 var EncoderBuffer = require('../base').EncoderBuffer;
 var DecoderBuffer = require('../base').DecoderBuffer;
@@ -75015,7 +72907,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
   return /^[A-Za-z0-9 '\(\)\+,\-\.\/:=\?]*$/.test(str);
 };
 
-},{"../base":266,"minimalistic-assert":361}],268:[function(require,module,exports){
+},{"../base":260,"minimalistic-assert":355}],262:[function(require,module,exports){
 var inherits = require('inherits');
 
 function Reporter(options) {
@@ -75119,7 +73011,7 @@ ReporterError.prototype.rethrow = function rethrow(msg) {
   return this;
 };
 
-},{"inherits":358}],269:[function(require,module,exports){
+},{"inherits":352}],263:[function(require,module,exports){
 var constants = require('../constants');
 
 exports.tagClass = {
@@ -75163,7 +73055,7 @@ exports.tag = {
 };
 exports.tagByName = constants._reverse(exports.tag);
 
-},{"../constants":270}],270:[function(require,module,exports){
+},{"../constants":264}],264:[function(require,module,exports){
 var constants = exports;
 
 // Helper
@@ -75184,7 +73076,7 @@ constants._reverse = function reverse(map) {
 
 constants.der = require('./der');
 
-},{"./der":269}],271:[function(require,module,exports){
+},{"./der":263}],265:[function(require,module,exports){
 var inherits = require('inherits');
 
 var asn1 = require('../../asn1');
@@ -75507,13 +73399,13 @@ function derDecodeLen(buf, primitive, fail) {
   return len;
 }
 
-},{"../../asn1":263,"inherits":358}],272:[function(require,module,exports){
+},{"../../asn1":257,"inherits":352}],266:[function(require,module,exports){
 var decoders = exports;
 
 decoders.der = require('./der');
 decoders.pem = require('./pem');
 
-},{"./der":271,"./pem":273}],273:[function(require,module,exports){
+},{"./der":265,"./pem":267}],267:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -75565,7 +73457,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
   return DERDecoder.prototype.decode.call(this, input, options);
 };
 
-},{"../../asn1":263,"./der":271,"buffer":309,"inherits":358}],274:[function(require,module,exports){
+},{"../../asn1":257,"./der":265,"buffer":303,"inherits":352}],268:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -75861,13 +73753,13 @@ function encodeTag(tag, primitive, cls, reporter) {
   return res;
 }
 
-},{"../../asn1":263,"buffer":309,"inherits":358}],275:[function(require,module,exports){
+},{"../../asn1":257,"buffer":303,"inherits":352}],269:[function(require,module,exports){
 var encoders = exports;
 
 encoders.der = require('./der');
 encoders.pem = require('./pem');
 
-},{"./der":274,"./pem":276}],276:[function(require,module,exports){
+},{"./der":268,"./pem":270}],270:[function(require,module,exports){
 var inherits = require('inherits');
 var Buffer = require('buffer').Buffer;
 
@@ -75892,7 +73784,7 @@ PEMEncoder.prototype.encode = function encode(data, options) {
   return out.join('\n');
 };
 
-},{"../../asn1":263,"./der":274,"buffer":309,"inherits":358}],277:[function(require,module,exports){
+},{"../../asn1":257,"./der":268,"buffer":303,"inherits":352}],271:[function(require,module,exports){
 // http://wiki.commonjs.org/wiki/Unit_Testing/1.0
 //
 // THIS IS NOT TESTED NOR LIKELY TO WORK OUTSIDE V8!
@@ -76253,7 +74145,7 @@ var objectKeys = Object.keys || function (obj) {
   return keys;
 };
 
-},{"util/":423}],278:[function(require,module,exports){
+},{"util/":417}],272:[function(require,module,exports){
 'use strict'
 
 exports.toByteArray = toByteArray
@@ -76364,7 +74256,7 @@ function fromByteArray (uint8) {
   return parts.join('')
 }
 
-},{}],279:[function(require,module,exports){
+},{}],273:[function(require,module,exports){
 (function (module, exports) {
   'use strict';
 
@@ -79786,7 +77678,7 @@ function fromByteArray (uint8) {
   };
 })(typeof module === 'undefined' || module, this);
 
-},{}],280:[function(require,module,exports){
+},{}],274:[function(require,module,exports){
 var r;
 
 module.exports = function rand(len) {
@@ -79845,9 +77737,9 @@ if (typeof window === 'object') {
   }
 }
 
-},{}],281:[function(require,module,exports){
-arguments[4][262][0].apply(exports,arguments)
-},{"dup":262}],282:[function(require,module,exports){
+},{}],275:[function(require,module,exports){
+arguments[4][256][0].apply(exports,arguments)
+},{"dup":256}],276:[function(require,module,exports){
 (function (Buffer){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
@@ -80028,7 +77920,7 @@ AES.prototype._doCryptBlock = function (M, keySchedule, SUB_MIX, SBOX) {
 exports.AES = AES
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],283:[function(require,module,exports){
+},{"buffer":303}],277:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -80129,7 +78021,7 @@ function xorTest (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":282,"./ghash":287,"buffer":309,"buffer-xor":308,"cipher-base":312,"inherits":358}],284:[function(require,module,exports){
+},{"./aes":276,"./ghash":281,"buffer":303,"buffer-xor":302,"cipher-base":306,"inherits":352}],278:[function(require,module,exports){
 var ciphers = require('./encrypter')
 exports.createCipher = exports.Cipher = ciphers.createCipher
 exports.createCipheriv = exports.Cipheriv = ciphers.createCipheriv
@@ -80142,7 +78034,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":285,"./encrypter":286,"./modes":288}],285:[function(require,module,exports){
+},{"./decrypter":279,"./encrypter":280,"./modes":282}],279:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -80283,7 +78175,7 @@ exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":282,"./authCipher":283,"./modes":288,"./modes/cbc":289,"./modes/cfb":290,"./modes/cfb1":291,"./modes/cfb8":292,"./modes/ctr":293,"./modes/ecb":294,"./modes/ofb":295,"./streamCipher":296,"buffer":309,"cipher-base":312,"evp_bytestokey":348,"inherits":358}],286:[function(require,module,exports){
+},{"./aes":276,"./authCipher":277,"./modes":282,"./modes/cbc":283,"./modes/cfb":284,"./modes/cfb1":285,"./modes/cfb8":286,"./modes/ctr":287,"./modes/ecb":288,"./modes/ofb":289,"./streamCipher":290,"buffer":303,"cipher-base":306,"evp_bytestokey":342,"inherits":352}],280:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -80409,7 +78301,7 @@ exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":282,"./authCipher":283,"./modes":288,"./modes/cbc":289,"./modes/cfb":290,"./modes/cfb1":291,"./modes/cfb8":292,"./modes/ctr":293,"./modes/ecb":294,"./modes/ofb":295,"./streamCipher":296,"buffer":309,"cipher-base":312,"evp_bytestokey":348,"inherits":358}],287:[function(require,module,exports){
+},{"./aes":276,"./authCipher":277,"./modes":282,"./modes/cbc":283,"./modes/cfb":284,"./modes/cfb1":285,"./modes/cfb8":286,"./modes/ctr":287,"./modes/ecb":288,"./modes/ofb":289,"./streamCipher":290,"buffer":303,"cipher-base":306,"evp_bytestokey":342,"inherits":352}],281:[function(require,module,exports){
 (function (Buffer){
 var zeros = new Buffer(16)
 zeros.fill(0)
@@ -80511,7 +78403,7 @@ function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],288:[function(require,module,exports){
+},{"buffer":303}],282:[function(require,module,exports){
 exports['aes-128-ecb'] = {
   cipher: 'AES',
   key: 128,
@@ -80684,7 +78576,7 @@ exports['aes-256-gcm'] = {
   type: 'auth'
 }
 
-},{}],289:[function(require,module,exports){
+},{}],283:[function(require,module,exports){
 var xor = require('buffer-xor')
 
 exports.encrypt = function (self, block) {
@@ -80703,7 +78595,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":308}],290:[function(require,module,exports){
+},{"buffer-xor":302}],284:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -80738,7 +78630,7 @@ function encryptStart (self, data, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"buffer-xor":308}],291:[function(require,module,exports){
+},{"buffer":303,"buffer-xor":302}],285:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad
@@ -80776,7 +78668,7 @@ function shiftIn (buffer, value) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],292:[function(require,module,exports){
+},{"buffer":303}],286:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -80795,7 +78687,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],293:[function(require,module,exports){
+},{"buffer":303}],287:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -80830,7 +78722,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"buffer-xor":308}],294:[function(require,module,exports){
+},{"buffer":303,"buffer-xor":302}],288:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -80838,7 +78730,7 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],295:[function(require,module,exports){
+},{}],289:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -80858,7 +78750,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"buffer-xor":308}],296:[function(require,module,exports){
+},{"buffer":303,"buffer-xor":302}],290:[function(require,module,exports){
 (function (Buffer){
 var aes = require('./aes')
 var Transform = require('cipher-base')
@@ -80887,7 +78779,7 @@ StreamCipher.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aes":282,"buffer":309,"cipher-base":312,"inherits":358}],297:[function(require,module,exports){
+},{"./aes":276,"buffer":303,"cipher-base":306,"inherits":352}],291:[function(require,module,exports){
 var ebtk = require('evp_bytestokey')
 var aes = require('browserify-aes/browser')
 var DES = require('browserify-des')
@@ -80962,7 +78854,7 @@ function getCiphers () {
 }
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"browserify-aes/browser":284,"browserify-aes/modes":288,"browserify-des":298,"browserify-des/modes":299,"evp_bytestokey":348}],298:[function(require,module,exports){
+},{"browserify-aes/browser":278,"browserify-aes/modes":282,"browserify-des":292,"browserify-des/modes":293,"evp_bytestokey":342}],292:[function(require,module,exports){
 (function (Buffer){
 var CipherBase = require('cipher-base')
 var des = require('des.js')
@@ -81009,7 +78901,7 @@ DES.prototype._final = function () {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"cipher-base":312,"des.js":320,"inherits":358}],299:[function(require,module,exports){
+},{"buffer":303,"cipher-base":306,"des.js":314,"inherits":352}],293:[function(require,module,exports){
 exports['des-ecb'] = {
   key: 8,
   iv: 0
@@ -81035,7 +78927,7 @@ exports['des-ede'] = {
   iv: 0
 }
 
-},{}],300:[function(require,module,exports){
+},{}],294:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 var randomBytes = require('randombytes');
@@ -81079,7 +78971,7 @@ function getr(priv) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":279,"buffer":309,"randombytes":391}],301:[function(require,module,exports){
+},{"bn.js":273,"buffer":303,"randombytes":385}],295:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 exports['RSA-SHA224'] = exports.sha224WithRSAEncryption = {
@@ -81155,7 +79047,7 @@ exports['RSA-MD5'] = exports.md5WithRSAEncryption = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],302:[function(require,module,exports){
+},{"buffer":303}],296:[function(require,module,exports){
 (function (Buffer){
 var _algos = require('./algos')
 var createHash = require('create-hash')
@@ -81262,7 +79154,7 @@ module.exports = {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./algos":301,"./sign":304,"./verify":305,"buffer":309,"create-hash":315,"inherits":358,"stream":412}],303:[function(require,module,exports){
+},{"./algos":295,"./sign":298,"./verify":299,"buffer":303,"create-hash":309,"inherits":352,"stream":406}],297:[function(require,module,exports){
 'use strict'
 exports['1.3.132.0.10'] = 'secp256k1'
 
@@ -81276,7 +79168,7 @@ exports['1.3.132.0.34'] = 'p384'
 
 exports['1.3.132.0.35'] = 'p521'
 
-},{}],304:[function(require,module,exports){
+},{}],298:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var createHmac = require('create-hmac')
@@ -81465,7 +79357,7 @@ module.exports.getKey = getKey
 module.exports.makeKey = makeKey
 
 }).call(this,require("buffer").Buffer)
-},{"./curves":303,"bn.js":279,"browserify-rsa":300,"buffer":309,"create-hmac":318,"elliptic":330,"parse-asn1":376}],305:[function(require,module,exports){
+},{"./curves":297,"bn.js":273,"browserify-rsa":294,"buffer":303,"create-hmac":312,"elliptic":324,"parse-asn1":370}],299:[function(require,module,exports){
 (function (Buffer){
 // much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var curves = require('./curves')
@@ -81572,7 +79464,7 @@ function checkValue (b, q) {
 module.exports = verify
 
 }).call(this,require("buffer").Buffer)
-},{"./curves":303,"bn.js":279,"buffer":309,"elliptic":330,"parse-asn1":376}],306:[function(require,module,exports){
+},{"./curves":297,"bn.js":273,"buffer":303,"elliptic":324,"parse-asn1":370}],300:[function(require,module,exports){
 (function (process,Buffer){
 var msg = require('pako/lib/zlib/messages');
 var zstream = require('pako/lib/zlib/zstream');
@@ -81812,7 +79704,7 @@ Zlib.prototype._error = function(status) {
 exports.Zlib = Zlib;
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"_process":380,"buffer":309,"pako/lib/zlib/constants":364,"pako/lib/zlib/deflate.js":366,"pako/lib/zlib/inflate.js":368,"pako/lib/zlib/messages":370,"pako/lib/zlib/zstream":372}],307:[function(require,module,exports){
+},{"_process":374,"buffer":303,"pako/lib/zlib/constants":358,"pako/lib/zlib/deflate.js":360,"pako/lib/zlib/inflate.js":362,"pako/lib/zlib/messages":364,"pako/lib/zlib/zstream":366}],301:[function(require,module,exports){
 (function (process,Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -82426,7 +80318,7 @@ util.inherits(InflateRaw, Zlib);
 util.inherits(Unzip, Zlib);
 
 }).call(this,require('_process'),require("buffer").Buffer)
-},{"./binding":306,"_process":380,"_stream_transform":401,"assert":277,"buffer":309,"util":423}],308:[function(require,module,exports){
+},{"./binding":300,"_process":374,"_stream_transform":395,"assert":271,"buffer":303,"util":417}],302:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -82440,7 +80332,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],309:[function(require,module,exports){
+},{"buffer":303}],303:[function(require,module,exports){
 (function (global){
 /*!
  * The buffer module from node.js, for the browser.
@@ -83900,9 +81792,9 @@ function blitBuffer (src, dst, offset, length) {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"base64-js":278,"ieee754":356,"isarray":310}],310:[function(require,module,exports){
+},{"base64-js":272,"ieee754":350,"isarray":304}],304:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"dup":67}],311:[function(require,module,exports){
+},{"dup":67}],305:[function(require,module,exports){
 module.exports = {
   "100": "Continue",
   "101": "Switching Protocols",
@@ -83967,7 +81859,7 @@ module.exports = {
   "511": "Network Authentication Required"
 }
 
-},{}],312:[function(require,module,exports){
+},{}],306:[function(require,module,exports){
 (function (Buffer){
 var Transform = require('stream').Transform
 var inherits = require('inherits')
@@ -84061,7 +81953,7 @@ CipherBase.prototype._toString = function (value, enc, final) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"inherits":358,"stream":412,"string_decoder":417}],313:[function(require,module,exports){
+},{"buffer":303,"inherits":352,"stream":406,"string_decoder":411}],307:[function(require,module,exports){
 (function (Buffer){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -84172,7 +82064,7 @@ function objectToString(o) {
 }
 
 }).call(this,{"isBuffer":require("../../is-buffer/index.js")})
-},{"../../is-buffer/index.js":359}],314:[function(require,module,exports){
+},{"../../is-buffer/index.js":353}],308:[function(require,module,exports){
 (function (Buffer){
 var elliptic = require('elliptic');
 var BN = require('bn.js');
@@ -84298,7 +82190,7 @@ function formatReturnValue(bn, enc, len) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":279,"buffer":309,"elliptic":330}],315:[function(require,module,exports){
+},{"bn.js":273,"buffer":303,"elliptic":324}],309:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var inherits = require('inherits')
@@ -84354,7 +82246,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":317,"buffer":309,"cipher-base":312,"inherits":358,"ripemd160":403,"sha.js":405}],316:[function(require,module,exports){
+},{"./md5":311,"buffer":303,"cipher-base":306,"inherits":352,"ripemd160":397,"sha.js":399}],310:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var intSize = 4;
@@ -84391,7 +82283,7 @@ function hash(buf, fn, hashSize, bigEndian) {
 }
 exports.hash = hash;
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],317:[function(require,module,exports){
+},{"buffer":303}],311:[function(require,module,exports){
 'use strict';
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -84548,7 +82440,7 @@ function bit_rol(num, cnt)
 module.exports = function md5(buf) {
   return helpers.hash(buf, core_md5, 16);
 };
-},{"./helpers":316}],318:[function(require,module,exports){
+},{"./helpers":310}],312:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 var createHash = require('create-hash/browser');
@@ -84620,7 +82512,7 @@ module.exports = function createHmac(alg, key) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"create-hash/browser":315,"inherits":358,"stream":412}],319:[function(require,module,exports){
+},{"buffer":303,"create-hash/browser":309,"inherits":352,"stream":406}],313:[function(require,module,exports){
 'use strict'
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = require('randombytes')
@@ -84699,7 +82591,7 @@ var publicEncrypt = require('public-encrypt')
   }
 })
 
-},{"browserify-cipher":297,"browserify-sign":302,"browserify-sign/algos":301,"create-ecdh":314,"create-hash":315,"create-hmac":318,"diffie-hellman":326,"pbkdf2":378,"public-encrypt":381,"randombytes":391}],320:[function(require,module,exports){
+},{"browserify-cipher":291,"browserify-sign":296,"browserify-sign/algos":295,"create-ecdh":308,"create-hash":309,"create-hmac":312,"diffie-hellman":320,"pbkdf2":372,"public-encrypt":375,"randombytes":385}],314:[function(require,module,exports){
 'use strict';
 
 exports.utils = require('./des/utils');
@@ -84708,7 +82600,7 @@ exports.DES = require('./des/des');
 exports.CBC = require('./des/cbc');
 exports.EDE = require('./des/ede');
 
-},{"./des/cbc":321,"./des/cipher":322,"./des/des":323,"./des/ede":324,"./des/utils":325}],321:[function(require,module,exports){
+},{"./des/cbc":315,"./des/cipher":316,"./des/des":317,"./des/ede":318,"./des/utils":319}],315:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -84775,7 +82667,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
   }
 };
 
-},{"inherits":358,"minimalistic-assert":361}],322:[function(require,module,exports){
+},{"inherits":352,"minimalistic-assert":355}],316:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -84918,7 +82810,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
   return this._unpad(out);
 };
 
-},{"minimalistic-assert":361}],323:[function(require,module,exports){
+},{"minimalistic-assert":355}],317:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -85063,7 +82955,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
   utils.rip(l, r, out, off);
 };
 
-},{"../des":320,"inherits":358,"minimalistic-assert":361}],324:[function(require,module,exports){
+},{"../des":314,"inherits":352,"minimalistic-assert":355}],318:[function(require,module,exports){
 'use strict';
 
 var assert = require('minimalistic-assert');
@@ -85120,7 +83012,7 @@ EDE.prototype._update = function _update(inp, inOff, out, outOff) {
 EDE.prototype._pad = DES.prototype._pad;
 EDE.prototype._unpad = DES.prototype._unpad;
 
-},{"../des":320,"inherits":358,"minimalistic-assert":361}],325:[function(require,module,exports){
+},{"../des":314,"inherits":352,"minimalistic-assert":355}],319:[function(require,module,exports){
 'use strict';
 
 exports.readUInt32BE = function readUInt32BE(bytes, off) {
@@ -85378,7 +83270,7 @@ exports.padSplit = function padSplit(num, size, group) {
   return out.join(' ');
 };
 
-},{}],326:[function(require,module,exports){
+},{}],320:[function(require,module,exports){
 (function (Buffer){
 var generatePrime = require('./lib/generatePrime')
 var primes = require('./lib/primes.json')
@@ -85424,7 +83316,7 @@ exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffi
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman
 
 }).call(this,require("buffer").Buffer)
-},{"./lib/dh":327,"./lib/generatePrime":328,"./lib/primes.json":329,"buffer":309}],327:[function(require,module,exports){
+},{"./lib/dh":321,"./lib/generatePrime":322,"./lib/primes.json":323,"buffer":303}],321:[function(require,module,exports){
 (function (Buffer){
 var BN = require('bn.js');
 var MillerRabin = require('miller-rabin');
@@ -85592,7 +83484,7 @@ function formatReturnValue(bn, enc) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./generatePrime":328,"bn.js":279,"buffer":309,"miller-rabin":360,"randombytes":391}],328:[function(require,module,exports){
+},{"./generatePrime":322,"bn.js":273,"buffer":303,"miller-rabin":354,"randombytes":385}],322:[function(require,module,exports){
 var randomBytes = require('randombytes');
 module.exports = findPrime;
 findPrime.simpleSieve = simpleSieve;
@@ -85699,7 +83591,7 @@ function findPrime(bits, gen) {
 
 }
 
-},{"bn.js":279,"miller-rabin":360,"randombytes":391}],329:[function(require,module,exports){
+},{"bn.js":273,"miller-rabin":354,"randombytes":385}],323:[function(require,module,exports){
 module.exports={
     "modp1": {
         "gen": "02",
@@ -85734,7 +83626,7 @@ module.exports={
         "prime": "ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff"
     }
 }
-},{}],330:[function(require,module,exports){
+},{}],324:[function(require,module,exports){
 'use strict';
 
 var elliptic = exports;
@@ -85750,7 +83642,7 @@ elliptic.curves = require('./elliptic/curves');
 elliptic.ec = require('./elliptic/ec');
 elliptic.eddsa = require('./elliptic/eddsa');
 
-},{"../package.json":346,"./elliptic/curve":333,"./elliptic/curves":336,"./elliptic/ec":337,"./elliptic/eddsa":340,"./elliptic/hmac-drbg":343,"./elliptic/utils":345,"brorand":280}],331:[function(require,module,exports){
+},{"../package.json":340,"./elliptic/curve":327,"./elliptic/curves":330,"./elliptic/ec":331,"./elliptic/eddsa":334,"./elliptic/hmac-drbg":337,"./elliptic/utils":339,"brorand":274}],325:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -86103,7 +83995,7 @@ BasePoint.prototype.dblp = function dblp(k) {
   return r;
 };
 
-},{"../../elliptic":330,"bn.js":279}],332:[function(require,module,exports){
+},{"../../elliptic":324,"bn.js":273}],326:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -86515,7 +84407,7 @@ Point.prototype.eq = function eq(other) {
 Point.prototype.toP = Point.prototype.normalize;
 Point.prototype.mixedAdd = Point.prototype.add;
 
-},{"../../elliptic":330,"../curve":333,"bn.js":279,"inherits":358}],333:[function(require,module,exports){
+},{"../../elliptic":324,"../curve":327,"bn.js":273,"inherits":352}],327:[function(require,module,exports){
 'use strict';
 
 var curve = exports;
@@ -86525,7 +84417,7 @@ curve.short = require('./short');
 curve.mont = require('./mont');
 curve.edwards = require('./edwards');
 
-},{"./base":331,"./edwards":332,"./mont":334,"./short":335}],334:[function(require,module,exports){
+},{"./base":325,"./edwards":326,"./mont":328,"./short":329}],328:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -86703,7 +84595,7 @@ Point.prototype.getX = function getX() {
   return this.x.fromRed();
 };
 
-},{"../../elliptic":330,"../curve":333,"bn.js":279,"inherits":358}],335:[function(require,module,exports){
+},{"../../elliptic":324,"../curve":327,"bn.js":273,"inherits":352}],329:[function(require,module,exports){
 'use strict';
 
 var curve = require('../curve');
@@ -87614,7 +85506,7 @@ JPoint.prototype.isInfinity = function isInfinity() {
   return this.z.cmpn(0) === 0;
 };
 
-},{"../../elliptic":330,"../curve":333,"bn.js":279,"inherits":358}],336:[function(require,module,exports){
+},{"../../elliptic":324,"../curve":327,"bn.js":273,"inherits":352}],330:[function(require,module,exports){
 'use strict';
 
 var curves = exports;
@@ -87821,7 +85713,7 @@ defineCurve('secp256k1', {
   ]
 });
 
-},{"../elliptic":330,"./precomputed/secp256k1":344,"hash.js":349}],337:[function(require,module,exports){
+},{"../elliptic":324,"./precomputed/secp256k1":338,"hash.js":343}],331:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -88045,7 +85937,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
   throw new Error('Unable to find valid recovery factor');
 };
 
-},{"../../elliptic":330,"./key":338,"./signature":339,"bn.js":279}],338:[function(require,module,exports){
+},{"../../elliptic":324,"./key":332,"./signature":333,"bn.js":273}],332:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -88154,7 +86046,7 @@ KeyPair.prototype.inspect = function inspect() {
          ' pub: ' + (this.pub && this.pub.inspect()) + ' >';
 };
 
-},{"bn.js":279}],339:[function(require,module,exports){
+},{"bn.js":273}],333:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -88291,7 +86183,7 @@ Signature.prototype.toDER = function toDER(enc) {
   return utils.encode(res, enc);
 };
 
-},{"../../elliptic":330,"bn.js":279}],340:[function(require,module,exports){
+},{"../../elliptic":324,"bn.js":273}],334:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -88411,7 +86303,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
   return val instanceof this.pointClass;
 };
 
-},{"../../elliptic":330,"./key":341,"./signature":342,"hash.js":349}],341:[function(require,module,exports){
+},{"../../elliptic":324,"./key":335,"./signature":336,"hash.js":343}],335:[function(require,module,exports){
 'use strict';
 
 var elliptic = require('../../elliptic');
@@ -88509,7 +86401,7 @@ KeyPair.prototype.getPublic = function getPublic(enc) {
 
 module.exports = KeyPair;
 
-},{"../../elliptic":330}],342:[function(require,module,exports){
+},{"../../elliptic":324}],336:[function(require,module,exports){
 'use strict';
 
 var BN = require('bn.js');
@@ -88577,7 +86469,7 @@ Signature.prototype.toHex = function toHex() {
 
 module.exports = Signature;
 
-},{"../../elliptic":330,"bn.js":279}],343:[function(require,module,exports){
+},{"../../elliptic":324,"bn.js":273}],337:[function(require,module,exports){
 'use strict';
 
 var hash = require('hash.js');
@@ -88693,7 +86585,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
   return utils.encode(res, enc);
 };
 
-},{"../elliptic":330,"hash.js":349}],344:[function(require,module,exports){
+},{"../elliptic":324,"hash.js":343}],338:[function(require,module,exports){
 module.exports = {
   doubles: {
     step: 4,
@@ -89475,7 +87367,7 @@ module.exports = {
   }
 };
 
-},{}],345:[function(require,module,exports){
+},{}],339:[function(require,module,exports){
 'use strict';
 
 var utils = exports;
@@ -89650,7 +87542,7 @@ function intFromLE(bytes) {
 utils.intFromLE = intFromLE;
 
 
-},{"bn.js":279}],346:[function(require,module,exports){
+},{"bn.js":273}],340:[function(require,module,exports){
 module.exports={
   "_args": [
     [
@@ -89751,7 +87643,7 @@ module.exports={
   "version": "6.2.3"
 }
 
-},{}],347:[function(require,module,exports){
+},{}],341:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -90051,7 +87943,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],348:[function(require,module,exports){
+},{}],342:[function(require,module,exports){
 (function (Buffer){
 var md5 = require('create-hash/md5')
 module.exports = EVP_BytesToKey
@@ -90123,7 +88015,7 @@ function EVP_BytesToKey (password, salt, keyLen, ivLen) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"create-hash/md5":317}],349:[function(require,module,exports){
+},{"buffer":303,"create-hash/md5":311}],343:[function(require,module,exports){
 var hash = exports;
 
 hash.utils = require('./hash/utils');
@@ -90140,7 +88032,7 @@ hash.sha384 = hash.sha.sha384;
 hash.sha512 = hash.sha.sha512;
 hash.ripemd160 = hash.ripemd.ripemd160;
 
-},{"./hash/common":350,"./hash/hmac":351,"./hash/ripemd":352,"./hash/sha":353,"./hash/utils":354}],350:[function(require,module,exports){
+},{"./hash/common":344,"./hash/hmac":345,"./hash/ripemd":346,"./hash/sha":347,"./hash/utils":348}],344:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -90233,7 +88125,7 @@ BlockHash.prototype._pad = function pad() {
   return res;
 };
 
-},{"../hash":349}],351:[function(require,module,exports){
+},{"../hash":343}],345:[function(require,module,exports){
 var hmac = exports;
 
 var hash = require('../hash');
@@ -90283,7 +88175,7 @@ Hmac.prototype.digest = function digest(enc) {
   return this.outer.digest(enc);
 };
 
-},{"../hash":349}],352:[function(require,module,exports){
+},{"../hash":343}],346:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 
@@ -90429,7 +88321,7 @@ var sh = [
   8, 5, 12, 9, 12, 5, 14, 6, 8, 13, 6, 5, 15, 13, 11, 11
 ];
 
-},{"../hash":349}],353:[function(require,module,exports){
+},{"../hash":343}],347:[function(require,module,exports){
 var hash = require('../hash');
 var utils = hash.utils;
 var assert = utils.assert;
@@ -90995,7 +88887,7 @@ function g1_512_lo(xh, xl) {
   return r;
 }
 
-},{"../hash":349}],354:[function(require,module,exports){
+},{"../hash":343}],348:[function(require,module,exports){
 var utils = exports;
 var inherits = require('inherits');
 
@@ -91254,7 +89146,7 @@ function shr64_lo(ah, al, num) {
 };
 exports.shr64_lo = shr64_lo;
 
-},{"inherits":358}],355:[function(require,module,exports){
+},{"inherits":352}],349:[function(require,module,exports){
 var http = require('http');
 
 var https = module.exports;
@@ -91270,7 +89162,7 @@ https.request = function (params, cb) {
     return http.request.call(this, params, cb);
 }
 
-},{"http":413}],356:[function(require,module,exports){
+},{"http":407}],350:[function(require,module,exports){
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   var e, m
   var eLen = nBytes * 8 - mLen - 1
@@ -91356,7 +89248,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   buffer[offset + i - d] |= s * 128
 }
 
-},{}],357:[function(require,module,exports){
+},{}],351:[function(require,module,exports){
 
 var indexOf = [].indexOf;
 
@@ -91367,9 +89259,9 @@ module.exports = function(arr, obj){
   }
   return -1;
 };
-},{}],358:[function(require,module,exports){
+},{}],352:[function(require,module,exports){
 arguments[4][61][0].apply(exports,arguments)
-},{"dup":61}],359:[function(require,module,exports){
+},{"dup":61}],353:[function(require,module,exports){
 /**
  * Determine if an object is Buffer
  *
@@ -91388,7 +89280,7 @@ module.exports = function (obj) {
     ))
 }
 
-},{}],360:[function(require,module,exports){
+},{}],354:[function(require,module,exports){
 var bn = require('bn.js');
 var brorand = require('brorand');
 
@@ -91503,7 +89395,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
   return false;
 };
 
-},{"bn.js":279,"brorand":280}],361:[function(require,module,exports){
+},{"bn.js":273,"brorand":274}],355:[function(require,module,exports){
 module.exports = assert;
 
 function assert(val, msg) {
@@ -91516,7 +89408,7 @@ assert.equal = function assertEqual(l, r, msg) {
     throw new Error(msg || ('Assertion failed: ' + l + ' != ' + r));
 };
 
-},{}],362:[function(require,module,exports){
+},{}],356:[function(require,module,exports){
 'use strict';
 
 
@@ -91620,7 +89512,7 @@ exports.setTyped = function (on) {
 
 exports.setTyped(TYPED_OK);
 
-},{}],363:[function(require,module,exports){
+},{}],357:[function(require,module,exports){
 'use strict';
 
 // Note: adler32 takes 12% for level 0 and 2% for level 6.
@@ -91654,7 +89546,7 @@ function adler32(adler, buf, len, pos) {
 
 module.exports = adler32;
 
-},{}],364:[function(require,module,exports){
+},{}],358:[function(require,module,exports){
 module.exports = {
 
   /* Allowed flush values; see deflate() and inflate() below for details */
@@ -91703,7 +89595,7 @@ module.exports = {
   //Z_NULL:                 null // Use -1 or null inline, depending on var type
 };
 
-},{}],365:[function(require,module,exports){
+},{}],359:[function(require,module,exports){
 'use strict';
 
 // Note: we can't get significant speed boost here.
@@ -91746,7 +89638,7 @@ function crc32(crc, buf, len, pos) {
 
 module.exports = crc32;
 
-},{}],366:[function(require,module,exports){
+},{}],360:[function(require,module,exports){
 'use strict';
 
 var utils   = require('../utils/common');
@@ -93513,7 +91405,7 @@ exports.deflatePrime = deflatePrime;
 exports.deflateTune = deflateTune;
 */
 
-},{"../utils/common":362,"./adler32":363,"./crc32":365,"./messages":370,"./trees":371}],367:[function(require,module,exports){
+},{"../utils/common":356,"./adler32":357,"./crc32":359,"./messages":364,"./trees":365}],361:[function(require,module,exports){
 'use strict';
 
 // See state defs from inflate.js
@@ -93841,7 +91733,7 @@ module.exports = function inflate_fast(strm, start) {
   return;
 };
 
-},{}],368:[function(require,module,exports){
+},{}],362:[function(require,module,exports){
 'use strict';
 
 
@@ -95346,7 +93238,7 @@ exports.inflateSyncPoint = inflateSyncPoint;
 exports.inflateUndermine = inflateUndermine;
 */
 
-},{"../utils/common":362,"./adler32":363,"./crc32":365,"./inffast":367,"./inftrees":369}],369:[function(require,module,exports){
+},{"../utils/common":356,"./adler32":357,"./crc32":359,"./inffast":361,"./inftrees":363}],363:[function(require,module,exports){
 'use strict';
 
 
@@ -95675,7 +93567,7 @@ module.exports = function inflate_table(type, lens, lens_index, codes, table, ta
   return 0;
 };
 
-},{"../utils/common":362}],370:[function(require,module,exports){
+},{"../utils/common":356}],364:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -95690,7 +93582,7 @@ module.exports = {
   '-6':   'incompatible version' /* Z_VERSION_ERROR (-6) */
 };
 
-},{}],371:[function(require,module,exports){
+},{}],365:[function(require,module,exports){
 'use strict';
 
 
@@ -96891,7 +94783,7 @@ exports._tr_flush_block  = _tr_flush_block;
 exports._tr_tally = _tr_tally;
 exports._tr_align = _tr_align;
 
-},{"../utils/common":362}],372:[function(require,module,exports){
+},{"../utils/common":356}],366:[function(require,module,exports){
 'use strict';
 
 
@@ -96922,7 +94814,7 @@ function ZStream() {
 
 module.exports = ZStream;
 
-},{}],373:[function(require,module,exports){
+},{}],367:[function(require,module,exports){
 module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.2": "aes-128-cbc",
 "2.16.840.1.101.3.4.1.3": "aes-128-ofb",
@@ -96936,7 +94828,7 @@ module.exports={"2.16.840.1.101.3.4.1.1": "aes-128-ecb",
 "2.16.840.1.101.3.4.1.43": "aes-256-ofb",
 "2.16.840.1.101.3.4.1.44": "aes-256-cfb"
 }
-},{}],374:[function(require,module,exports){
+},{}],368:[function(require,module,exports){
 // from https://github.com/indutny/self-signed/blob/gh-pages/lib/asn1.js
 // Fedor, you are amazing.
 
@@ -97055,7 +94947,7 @@ exports.signature = asn1.define('signature', function () {
   )
 })
 
-},{"asn1.js":263}],375:[function(require,module,exports){
+},{"asn1.js":257}],369:[function(require,module,exports){
 (function (Buffer){
 // adapted from https://github.com/apatil/pemstrip
 var findProc = /Proc-Type: 4,ENCRYPTED\r?\nDEK-Info: AES-((?:128)|(?:192)|(?:256))-CBC,([0-9A-H]+)\r?\n\r?\n([0-9A-z\n\r\+\/\=]+)\r?\n/m
@@ -97089,7 +94981,7 @@ module.exports = function (okey, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"browserify-aes":284,"buffer":309,"evp_bytestokey":348}],376:[function(require,module,exports){
+},{"browserify-aes":278,"buffer":303,"evp_bytestokey":342}],370:[function(require,module,exports){
 (function (Buffer){
 var asn1 = require('./asn1')
 var aesid = require('./aesid.json')
@@ -97194,7 +95086,7 @@ function decrypt (data, password) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./aesid.json":373,"./asn1":374,"./fixProc":375,"browserify-aes":284,"buffer":309,"pbkdf2":378}],377:[function(require,module,exports){
+},{"./aesid.json":367,"./asn1":368,"./fixProc":369,"browserify-aes":278,"buffer":303,"pbkdf2":372}],371:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -97422,7 +95314,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":380}],378:[function(require,module,exports){
+},{"_process":374}],372:[function(require,module,exports){
 (function (Buffer){
 var createHmac = require('create-hmac')
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -97506,9 +95398,9 @@ function pbkdf2Sync (password, salt, iterations, keylen, digest) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"create-hmac":318}],379:[function(require,module,exports){
-arguments[4][175][0].apply(exports,arguments)
-},{"_process":380,"dup":175}],380:[function(require,module,exports){
+},{"buffer":303,"create-hmac":312}],373:[function(require,module,exports){
+arguments[4][169][0].apply(exports,arguments)
+},{"_process":374,"dup":169}],374:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -97601,7 +95493,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],381:[function(require,module,exports){
+},{}],375:[function(require,module,exports){
 exports.publicEncrypt = require('./publicEncrypt');
 exports.privateDecrypt = require('./privateDecrypt');
 
@@ -97612,7 +95504,7 @@ exports.privateEncrypt = function privateEncrypt(key, buf) {
 exports.publicDecrypt = function publicDecrypt(key, buf) {
   return exports.privateDecrypt(key, buf, true);
 };
-},{"./privateDecrypt":383,"./publicEncrypt":384}],382:[function(require,module,exports){
+},{"./privateDecrypt":377,"./publicEncrypt":378}],376:[function(require,module,exports){
 (function (Buffer){
 var createHash = require('create-hash');
 module.exports = function (seed, len) {
@@ -97631,7 +95523,7 @@ function i2ops(c) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"buffer":309,"create-hash":315}],383:[function(require,module,exports){
+},{"buffer":303,"create-hash":309}],377:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var mgf = require('./mgf');
@@ -97742,7 +95634,7 @@ function compare(a, b){
   return dif;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":382,"./withPublic":385,"./xor":386,"bn.js":279,"browserify-rsa":300,"buffer":309,"create-hash":315,"parse-asn1":376}],384:[function(require,module,exports){
+},{"./mgf":376,"./withPublic":379,"./xor":380,"bn.js":273,"browserify-rsa":294,"buffer":303,"create-hash":309,"parse-asn1":370}],378:[function(require,module,exports){
 (function (Buffer){
 var parseKeys = require('parse-asn1');
 var randomBytes = require('randombytes');
@@ -97840,7 +95732,7 @@ function nonZero(len, crypto) {
   return out;
 }
 }).call(this,require("buffer").Buffer)
-},{"./mgf":382,"./withPublic":385,"./xor":386,"bn.js":279,"browserify-rsa":300,"buffer":309,"create-hash":315,"parse-asn1":376,"randombytes":391}],385:[function(require,module,exports){
+},{"./mgf":376,"./withPublic":379,"./xor":380,"bn.js":273,"browserify-rsa":294,"buffer":303,"create-hash":309,"parse-asn1":370,"randombytes":385}],379:[function(require,module,exports){
 (function (Buffer){
 var bn = require('bn.js');
 function withPublic(paddedMsg, key) {
@@ -97853,7 +95745,7 @@ function withPublic(paddedMsg, key) {
 
 module.exports = withPublic;
 }).call(this,require("buffer").Buffer)
-},{"bn.js":279,"buffer":309}],386:[function(require,module,exports){
+},{"bn.js":273,"buffer":303}],380:[function(require,module,exports){
 module.exports = function xor(a, b) {
   var len = a.length;
   var i = -1;
@@ -97862,7 +95754,7 @@ module.exports = function xor(a, b) {
   }
   return a
 };
-},{}],387:[function(require,module,exports){
+},{}],381:[function(require,module,exports){
 (function (global){
 /*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root) {
@@ -98399,7 +96291,7 @@ module.exports = function xor(a, b) {
 }(this));
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],388:[function(require,module,exports){
+},{}],382:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -98485,7 +96377,7 @@ var isArray = Array.isArray || function (xs) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-},{}],389:[function(require,module,exports){
+},{}],383:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -98572,13 +96464,13 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}],390:[function(require,module,exports){
+},{}],384:[function(require,module,exports){
 'use strict';
 
 exports.decode = exports.parse = require('./decode');
 exports.encode = exports.stringify = require('./encode');
 
-},{"./decode":388,"./encode":389}],391:[function(require,module,exports){
+},{"./decode":382,"./encode":383}],385:[function(require,module,exports){
 (function (process,global,Buffer){
 'use strict'
 
@@ -98618,11 +96510,11 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"_process":380,"buffer":309}],392:[function(require,module,exports){
-arguments[4][182][0].apply(exports,arguments)
-},{"./lib/_stream_duplex.js":393,"dup":182}],393:[function(require,module,exports){
-arguments[4][183][0].apply(exports,arguments)
-},{"./_stream_readable":395,"./_stream_writable":397,"core-util-is":313,"dup":183,"inherits":358,"process-nextick-args":379}],394:[function(require,module,exports){
+},{"_process":374,"buffer":303}],386:[function(require,module,exports){
+arguments[4][176][0].apply(exports,arguments)
+},{"./lib/_stream_duplex.js":387,"dup":176}],387:[function(require,module,exports){
+arguments[4][177][0].apply(exports,arguments)
+},{"./_stream_readable":389,"./_stream_writable":391,"core-util-is":307,"dup":177,"inherits":352,"process-nextick-args":373}],388:[function(require,module,exports){
 // a passthrough stream.
 // basically just the most minimal sort of Transform stream.
 // Every written chunk gets output as-is.
@@ -98649,9 +96541,9 @@ function PassThrough(options) {
 PassThrough.prototype._transform = function (chunk, encoding, cb) {
   cb(null, chunk);
 };
-},{"./_stream_transform":396,"core-util-is":313,"inherits":358}],395:[function(require,module,exports){
-arguments[4][184][0].apply(exports,arguments)
-},{"./_stream_duplex":393,"_process":380,"buffer":309,"core-util-is":313,"dup":184,"events":347,"inherits":358,"isarray":398,"process-nextick-args":379,"string_decoder/":417,"util":281}],396:[function(require,module,exports){
+},{"./_stream_transform":390,"core-util-is":307,"inherits":352}],389:[function(require,module,exports){
+arguments[4][178][0].apply(exports,arguments)
+},{"./_stream_duplex":387,"_process":374,"buffer":303,"core-util-is":307,"dup":178,"events":341,"inherits":352,"isarray":392,"process-nextick-args":373,"string_decoder/":411,"util":275}],390:[function(require,module,exports){
 // a transform stream is a readable/writable stream where you do
 // something with the data.  Sometimes it's called a "filter",
 // but that's not a great name for it, since that implies a thing where
@@ -98832,14 +96724,14 @@ function done(stream, er) {
 
   return stream.push(null);
 }
-},{"./_stream_duplex":393,"core-util-is":313,"inherits":358}],397:[function(require,module,exports){
-arguments[4][185][0].apply(exports,arguments)
-},{"./_stream_duplex":393,"_process":380,"buffer":309,"core-util-is":313,"dup":185,"events":347,"inherits":358,"process-nextick-args":379,"util-deprecate":421}],398:[function(require,module,exports){
+},{"./_stream_duplex":387,"core-util-is":307,"inherits":352}],391:[function(require,module,exports){
+arguments[4][179][0].apply(exports,arguments)
+},{"./_stream_duplex":387,"_process":374,"buffer":303,"core-util-is":307,"dup":179,"events":341,"inherits":352,"process-nextick-args":373,"util-deprecate":415}],392:[function(require,module,exports){
 arguments[4][67][0].apply(exports,arguments)
-},{"dup":67}],399:[function(require,module,exports){
+},{"dup":67}],393:[function(require,module,exports){
 module.exports = require("./lib/_stream_passthrough.js")
 
-},{"./lib/_stream_passthrough.js":394}],400:[function(require,module,exports){
+},{"./lib/_stream_passthrough.js":388}],394:[function(require,module,exports){
 var Stream = (function (){
   try {
     return require('st' + 'ream'); // hack to fix a circular dependency issue when used with browserify
@@ -98853,13 +96745,13 @@ exports.Duplex = require('./lib/_stream_duplex.js');
 exports.Transform = require('./lib/_stream_transform.js');
 exports.PassThrough = require('./lib/_stream_passthrough.js');
 
-},{"./lib/_stream_duplex.js":393,"./lib/_stream_passthrough.js":394,"./lib/_stream_readable.js":395,"./lib/_stream_transform.js":396,"./lib/_stream_writable.js":397}],401:[function(require,module,exports){
+},{"./lib/_stream_duplex.js":387,"./lib/_stream_passthrough.js":388,"./lib/_stream_readable.js":389,"./lib/_stream_transform.js":390,"./lib/_stream_writable.js":391}],395:[function(require,module,exports){
 module.exports = require("./lib/_stream_transform.js")
 
-},{"./lib/_stream_transform.js":396}],402:[function(require,module,exports){
+},{"./lib/_stream_transform.js":390}],396:[function(require,module,exports){
 module.exports = require("./lib/_stream_writable.js")
 
-},{"./lib/_stream_writable.js":397}],403:[function(require,module,exports){
+},{"./lib/_stream_writable.js":391}],397:[function(require,module,exports){
 (function (Buffer){
 /*
 CryptoJS v3.1.2
@@ -99073,7 +96965,7 @@ function ripemd160 (message) {
 module.exports = ripemd160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],404:[function(require,module,exports){
+},{"buffer":303}],398:[function(require,module,exports){
 (function (Buffer){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -99146,7 +97038,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":309}],405:[function(require,module,exports){
+},{"buffer":303}],399:[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -99163,7 +97055,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha":406,"./sha1":407,"./sha224":408,"./sha256":409,"./sha384":410,"./sha512":411}],406:[function(require,module,exports){
+},{"./sha":400,"./sha1":401,"./sha224":402,"./sha256":403,"./sha384":404,"./sha512":405}],400:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -99260,7 +97152,7 @@ Sha.prototype._hash = function () {
 module.exports = Sha
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"buffer":309,"inherits":358}],407:[function(require,module,exports){
+},{"./hash":398,"buffer":303,"inherits":352}],401:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -99362,7 +97254,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"buffer":309,"inherits":358}],408:[function(require,module,exports){
+},{"./hash":398,"buffer":303,"inherits":352}],402:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -99418,7 +97310,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"./sha256":409,"buffer":309,"inherits":358}],409:[function(require,module,exports){
+},{"./hash":398,"./sha256":403,"buffer":303,"inherits":352}],403:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -99556,7 +97448,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"buffer":309,"inherits":358}],410:[function(require,module,exports){
+},{"./hash":398,"buffer":303,"inherits":352}],404:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -99616,7 +97508,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"./sha512":411,"buffer":309,"inherits":358}],411:[function(require,module,exports){
+},{"./hash":398,"./sha512":405,"buffer":303,"inherits":352}],405:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -99879,7 +97771,7 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":404,"buffer":309,"inherits":358}],412:[function(require,module,exports){
+},{"./hash":398,"buffer":303,"inherits":352}],406:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -100008,7 +97900,7 @@ Stream.prototype.pipe = function(dest, options) {
   return dest;
 };
 
-},{"events":347,"inherits":358,"readable-stream/duplex.js":392,"readable-stream/passthrough.js":399,"readable-stream/readable.js":400,"readable-stream/transform.js":401,"readable-stream/writable.js":402}],413:[function(require,module,exports){
+},{"events":341,"inherits":352,"readable-stream/duplex.js":386,"readable-stream/passthrough.js":393,"readable-stream/readable.js":394,"readable-stream/transform.js":395,"readable-stream/writable.js":396}],407:[function(require,module,exports){
 (function (global){
 var ClientRequest = require('./lib/request')
 var extend = require('xtend')
@@ -100090,7 +97982,7 @@ http.METHODS = [
 	'UNSUBSCRIBE'
 ]
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./lib/request":415,"builtin-status-codes":311,"url":419,"xtend":425}],414:[function(require,module,exports){
+},{"./lib/request":409,"builtin-status-codes":305,"url":413,"xtend":419}],408:[function(require,module,exports){
 (function (global){
 exports.fetch = isFunction(global.fetch) && isFunction(global.ReadableByteStream)
 
@@ -100134,7 +98026,7 @@ function isFunction (value) {
 xhr = null // Help gc
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],415:[function(require,module,exports){
+},{}],409:[function(require,module,exports){
 (function (process,global,Buffer){
 // var Base64 = require('Base64')
 var capability = require('./capability')
@@ -100416,7 +98308,7 @@ var unsafeHeaders = [
 ]
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":414,"./response":416,"_process":380,"buffer":309,"inherits":358,"stream":412,"to-arraybuffer":418}],416:[function(require,module,exports){
+},{"./capability":408,"./response":410,"_process":374,"buffer":303,"inherits":352,"stream":406,"to-arraybuffer":412}],410:[function(require,module,exports){
 (function (process,global,Buffer){
 var capability = require('./capability')
 var inherits = require('inherits')
@@ -100598,9 +98490,9 @@ IncomingMessage.prototype._onXHRProgress = function () {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./capability":414,"_process":380,"buffer":309,"inherits":358,"stream":412}],417:[function(require,module,exports){
-arguments[4][221][0].apply(exports,arguments)
-},{"buffer":309,"dup":221}],418:[function(require,module,exports){
+},{"./capability":408,"_process":374,"buffer":303,"inherits":352,"stream":406}],411:[function(require,module,exports){
+arguments[4][215][0].apply(exports,arguments)
+},{"buffer":303,"dup":215}],412:[function(require,module,exports){
 var Buffer = require('buffer').Buffer
 
 module.exports = function (buf) {
@@ -100629,7 +98521,7 @@ module.exports = function (buf) {
 	}
 }
 
-},{"buffer":309}],419:[function(require,module,exports){
+},{"buffer":303}],413:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -101363,7 +99255,7 @@ Url.prototype.parseHost = function() {
   if (host) this.hostname = host;
 };
 
-},{"./util":420,"punycode":387,"querystring":390}],420:[function(require,module,exports){
+},{"./util":414,"punycode":381,"querystring":384}],414:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -101381,16 +99273,16 @@ module.exports = {
   }
 };
 
-},{}],421:[function(require,module,exports){
-arguments[4][258][0].apply(exports,arguments)
-},{"dup":258}],422:[function(require,module,exports){
+},{}],415:[function(require,module,exports){
+arguments[4][252][0].apply(exports,arguments)
+},{"dup":252}],416:[function(require,module,exports){
 module.exports = function isBuffer(arg) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'
     && typeof arg.readUInt8 === 'function';
 }
-},{}],423:[function(require,module,exports){
+},{}],417:[function(require,module,exports){
 (function (process,global){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -101980,7 +99872,7 @@ function hasOwnProperty(obj, prop) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./support/isBuffer":422,"_process":380,"inherits":358}],424:[function(require,module,exports){
+},{"./support/isBuffer":416,"_process":374,"inherits":352}],418:[function(require,module,exports){
 var indexOf = require('indexof');
 
 var Object_keys = function (obj) {
@@ -102120,164 +100012,2417 @@ exports.createContext = Script.createContext = function (context) {
     return copy;
 };
 
-},{"indexof":357}],425:[function(require,module,exports){
+},{"indexof":351}],419:[function(require,module,exports){
 arguments[4][64][0].apply(exports,arguments)
 },{"dup":64}],"client":[function(require,module,exports){
-(function (__dirname){
 var app, boot, loopback;
-
-console.log('requiring loopback');
 
 loopback = require('loopback');
 
-console.log('requiring loopback-boot');
-
 boot = require('loopback-boot');
-
-console.log('creating app');
 
 app = module.exports = loopback();
 
-app.start = function() {
-  return console.log("Something called app.start with", arguments);
-};
-
-console.log('calling boot');
-
-boot(app, __dirname, function(err) {
-  return console.log("boot callback invoked with", arguments);
-});
+boot(app);
 
 console.log('Models: ', Object.keys(app.models));
 
 
-}).call(this,"/client")
-},{"loopback":147,"loopback-boot":80}],"config":[function(require,module,exports){
-module.exports={
-  "restApiRoot": "/api",
-  "host": "0.0.0.0",
-  "port": 3000,
-  "remoting": {
-    "context": {
-      "enableHttpContext": false
-    },
-    "rest": {
-      "normalizeHttpPath": false,
-      "xml": false
-    },
-    "json": {
-      "strict": false,
-      "limit": "100kb"
-    },
-    "urlencoded": {
-      "extended": true,
-      "limit": "100kb"
-    },
-    "cors": false,
-    "errorHandler": {
-      "disableStackTrace": false
-    }
-  },
-  "legacyExplorer": false
-}
-
-},{}],"datasources":[function(require,module,exports){
-module.exports={
-  "db": {
-    "name": "db",
-    "connector": "memory"
-  },
-  "rest": {
-    "name": "rest",
-    "connector": "rest"
-  }
-}
-
-},{}],"loopback-boot#instructions":[function(require,module,exports){
+},{"loopback":141,"loopback-boot":"loopback-boot"}],"loopback-boot#instructions":[function(require,module,exports){
 module.exports={
   "env": "development",
-  "config": {
-    "restApiRoot": "/api",
-    "host": "0.0.0.0",
-    "port": 3000,
-    "remoting": {
-      "context": {
-        "enableHttpContext": false
+  "config": {},
+  "dataSources": {
+    "db": {
+      "name": "db",
+      "connector": "memory"
+    },
+    "rest": {
+      "name": "rest",
+      "connector": "rest"
+    }
+  },
+  "models": [
+    {
+      "name": "User",
+      "config": {
+        "dataSource": "db"
       },
-      "rest": {
-        "normalizeHttpPath": false,
-        "xml": false
+      "definition": {
+        "name": "User",
+        "properties": {
+          "realm": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string",
+            "required": true
+          },
+          "credentials": {
+            "type": "object",
+            "deprecated": true
+          },
+          "challenges": {
+            "type": "object",
+            "deprecated": true
+          },
+          "email": {
+            "type": "string",
+            "required": true
+          },
+          "emailVerified": "boolean",
+          "verificationToken": "string",
+          "status": "string",
+          "created": "date",
+          "lastUpdated": "date"
+        },
+        "options": {
+          "caseSensitiveEmail": true
+        },
+        "hidden": [
+          "password",
+          "verificationToken"
+        ],
+        "acls": [
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "create"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "deleteById"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "login"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "logout"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "findById"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "updateAttributes"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "confirm"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "resetPassword",
+            "accessType": "EXECUTE"
+          }
+        ],
+        "relations": {
+          "accessTokens": {
+            "type": "hasMany",
+            "model": "AccessToken",
+            "foreignKey": "userId",
+            "options": {
+              "disableInclude": true
+            }
+          }
+        }
       },
-      "json": {
-        "strict": false,
-        "limit": "100kb"
+      "sourceFile": "loopback-boot#models#user.js"
+    },
+    {
+      "name": "AccessToken",
+      "config": {
+        "dataSource": "db",
+        "public": false
       },
-      "urlencoded": {
-        "extended": true,
-        "limit": "100kb"
+      "definition": {
+        "name": "AccessToken",
+        "properties": {
+          "id": {
+            "type": "string",
+            "id": true
+          },
+          "ttl": {
+            "type": "number",
+            "ttl": true,
+            "default": 1209600,
+            "description": "time to live in seconds (2 weeks by default)"
+          },
+          "created": {
+            "type": "Date"
+          }
+        },
+        "relations": {
+          "user": {
+            "type": "belongsTo",
+            "model": "User",
+            "foreignKey": "userId"
+          }
+        },
+        "acls": [
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY"
+          },
+          {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "property": "create",
+            "permission": "ALLOW"
+          }
+        ]
       },
-      "cors": false,
-      "errorHandler": {
-        "disableStackTrace": false
+      "sourceFile": "loopback-boot#models#access-token.js"
+    },
+    {
+      "name": "ACL",
+      "config": {
+        "dataSource": "db",
+        "public": false
+      },
+      "definition": {
+        "name": "ACL",
+        "properties": {
+          "model": {
+            "type": "string",
+            "description": "The name of the model"
+          },
+          "property": {
+            "type": "string",
+            "description": "The name of the property, method, scope, or relation"
+          },
+          "accessType": "string",
+          "permission": "string",
+          "principalType": "string",
+          "principalId": "string"
+        }
+      },
+      "sourceFile": "loopback-boot#models#acl.js"
+    },
+    {
+      "name": "RoleMapping",
+      "config": {
+        "dataSource": "db",
+        "public": false
+      },
+      "definition": {
+        "name": "RoleMapping",
+        "description": "Map principals to roles",
+        "properties": {
+          "id": {
+            "type": "string",
+            "id": true,
+            "generated": true
+          },
+          "principalType": {
+            "type": "string",
+            "description": "The principal type, such as user, application, or role"
+          },
+          "principalId": "string"
+        },
+        "relations": {
+          "role": {
+            "type": "belongsTo",
+            "model": "Role",
+            "foreignKey": "roleId"
+          }
+        }
+      },
+      "sourceFile": "loopback-boot#models#role-mapping.js"
+    },
+    {
+      "name": "Role",
+      "config": {
+        "dataSource": "db",
+        "public": false
+      },
+      "definition": {
+        "name": "Role",
+        "properties": {
+          "id": {
+            "type": "string",
+            "id": true,
+            "generated": true
+          },
+          "name": {
+            "type": "string",
+            "required": true
+          },
+          "description": "string",
+          "created": "date",
+          "modified": "date"
+        },
+        "relations": {
+          "principals": {
+            "type": "hasMany",
+            "model": "RoleMapping",
+            "foreignKey": "roleId"
+          }
+        }
+      },
+      "sourceFile": "loopback-boot#models#role.js"
+    },
+    {
+      "name": "IFunction",
+      "config": {
+        "dataSource": "db",
+        "public": true
       }
     },
-    "legacyExplorer": false
-  },
-  "dataSources": {},
-  "models": [],
+    {
+      "name": "Transform",
+      "config": {
+        "dataSource": "db",
+        "public": true
+      }
+    },
+    {
+      "name": "IFSystem",
+      "config": {
+        "dataSource": "db",
+        "public": true
+      }
+    }
+  ],
   "components": [],
   "mixins": [],
   "files": {
     "boot": []
   }
 }
-},{}],"model-config":[function(require,module,exports){
-module.exports={
-  "_meta": {
-    "sources": [
-      "loopback/common/models",
-      "loopback/server/models",
-      "../common/models",
-      "./models"
-    ],
-    "mixins": [
-      "loopback/common/mixins",
-      "loopback/server/mixins",
-      "../common/mixins",
-      "./mixins"
-    ]
-  },
-  "User": {
-    "dataSource": "db"
-  },
-  "AccessToken": {
-    "dataSource": "db",
-    "public": false
-  },
-  "ACL": {
-    "dataSource": "db",
-    "public": false
-  },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false
-  },
-  "Role": {
-    "dataSource": "db",
-    "public": false
-  },
-  "IFunction": {
-    "dataSource": "db",
-    "public": true
-  },
-  "Transform": {
-    "dataSource": "db",
-    "public": true
-  },
-  "IFSystem": {
-    "dataSource": "db",
-    "public": true
+},{}],"loopback-boot#models#access-token.js":[function(require,module,exports){
+(function (process,Buffer){
+/*!
+ * Module Dependencies.
+ */
+
+var loopback = require('../../lib/loopback');
+var assert = require('assert');
+var uid = require('uid2');
+var DEFAULT_TOKEN_LEN = 64;
+
+/**
+ * Token based authentication and access control.
+ *
+ * **Default ACLs**
+ *
+ *  - DENY EVERYONE `*`
+ *  - ALLOW EVERYONE create
+ *
+ * @property {String} id Generated token ID.
+ * @property {Number} ttl Time to live in seconds, 2 weeks by default.
+ * @property {Date} created When the token was created.
+ * @property {Object} settings Extends the `Model.settings` object.
+ * @property {Number} settings.accessTokenIdLength Length of the base64-encoded string access token. Default value is 64.
+ * Increase the length for a more secure access token.
+ *
+ * @class AccessToken
+ * @inherits {PersistedModel}
+ */
+
+module.exports = function(AccessToken) {
+
+  // Workaround for https://github.com/strongloop/loopback/issues/292
+  AccessToken.definition.rawProperties.created.default =
+  AccessToken.definition.properties.created.default = function() {
+    return new Date();
+  };
+
+  /**
+   * Anonymous Token
+   *
+   * ```js
+   * assert(AccessToken.ANONYMOUS.id === '$anonymous');
+   * ```
+   */
+
+  AccessToken.ANONYMOUS = new AccessToken({id: '$anonymous'});
+
+  /**
+   * Create a cryptographically random access token id.
+   *
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {String} token
+   */
+
+  AccessToken.createAccessTokenId = function(fn) {
+    uid(this.settings.accessTokenIdLength || DEFAULT_TOKEN_LEN, function(err, guid) {
+      if (err) {
+        fn(err);
+      } else {
+        fn(null, guid);
+      }
+    });
+  };
+
+  /*!
+   * Hook to create accessToken id.
+   */
+  AccessToken.observe('before save', function(ctx, next) {
+    if (!ctx.instance || ctx.instance.id) {
+      // We are running a partial update or the instance already has an id
+      return next();
+    }
+
+    AccessToken.createAccessTokenId(function(err, id) {
+      if (err) return next(err);
+      ctx.instance.id = id;
+      next();
+    });
+  });
+
+  /**
+   * Find a token for the given `ServerRequest`.
+   *
+   * @param {ServerRequest} req
+   * @param {Object} [options] Options for finding the token
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {AccessToken} token
+   */
+
+  AccessToken.findForRequest = function(req, options, cb) {
+    if (cb === undefined && typeof options === 'function') {
+      cb = options;
+      options = {};
+    }
+
+    var id = tokenIdForRequest(req, options);
+
+    if (id) {
+      this.findById(id, function(err, token) {
+        if (err) {
+          cb(err);
+        } else if (token) {
+          token.validate(function(err, isValid) {
+            if (err) {
+              cb(err);
+            } else if (isValid) {
+              cb(null, token);
+            } else {
+              var e = new Error('Invalid Access Token');
+              e.status = e.statusCode = 401;
+              e.code = 'INVALID_TOKEN';
+              cb(e);
+            }
+          });
+        } else {
+          cb();
+        }
+      });
+    } else {
+      process.nextTick(function() {
+        cb();
+      });
+    }
+  };
+
+  /**
+   * Validate the token.
+   *
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {Boolean} isValid
+   */
+
+  AccessToken.prototype.validate = function(cb) {
+    try {
+      assert(
+          this.created && typeof this.created.getTime === 'function',
+        'token.created must be a valid Date'
+      );
+      assert(this.ttl !== 0, 'token.ttl must be not be 0');
+      assert(this.ttl, 'token.ttl must exist');
+      assert(this.ttl >= -1, 'token.ttl must be >= -1');
+
+      var now = Date.now();
+      var created = this.created.getTime();
+      var elapsedSeconds = (now - created) / 1000;
+      var secondsToLive = this.ttl;
+      var isValid = elapsedSeconds < secondsToLive;
+
+      if (isValid) {
+        cb(null, isValid);
+      } else {
+        this.destroy(function(err) {
+          cb(err, isValid);
+        });
+      }
+    } catch (e) {
+      cb(e);
+    }
+  };
+
+  function tokenIdForRequest(req, options) {
+    var params = options.params || [];
+    var headers = options.headers || [];
+    var cookies = options.cookies || [];
+    var i = 0;
+    var length;
+    var id;
+
+    // https://github.com/strongloop/loopback/issues/1326
+    if (options.searchDefaultTokenKeys !== false) {
+      params = params.concat(['access_token']);
+      headers = headers.concat(['X-Access-Token', 'authorization']);
+      cookies = cookies.concat(['access_token', 'authorization']);
+    }
+
+    for (length = params.length; i < length; i++) {
+      var param = params[i];
+      // replacement for deprecated req.param()
+      id = req.params && req.params[param] !== undefined ? req.params[param] :
+        req.body && req.body[param] !== undefined ? req.body[param] :
+        req.query && req.query[param] !== undefined ? req.query[param] :
+        undefined;
+
+      if (typeof id === 'string') {
+        return id;
+      }
+    }
+
+    for (i = 0, length = headers.length; i < length; i++) {
+      id = req.header(headers[i]);
+
+      if (typeof id === 'string') {
+        // Add support for oAuth 2.0 bearer token
+        // http://tools.ietf.org/html/rfc6750
+        if (id.indexOf('Bearer ') === 0) {
+          id = id.substring(7);
+          // Decode from base64
+          var buf = new Buffer(id, 'base64');
+          id = buf.toString('utf8');
+        } else if (/^Basic /i.test(id)) {
+          id = id.substring(6);
+          id = (new Buffer(id, 'base64')).toString('utf8');
+          // The spec says the string is user:pass, so if we see both parts
+          // we will assume the longer of the two is the token, so we will
+          // extract "a2b2c3" from:
+          //   "a2b2c3"
+          //   "a2b2c3:"   (curl http://a2b2c3@localhost:3000/)
+          //   "token:a2b2c3" (curl http://token:a2b2c3@localhost:3000/)
+          //   ":a2b2c3"
+          var parts = /^([^:]*):(.*)$/.exec(id);
+          if (parts) {
+            id = parts[2].length > parts[1].length ? parts[2] : parts[1];
+          }
+        }
+        return id;
+      }
+    }
+
+    if (req.signedCookies) {
+      for (i = 0, length = cookies.length; i < length; i++) {
+        id = req.signedCookies[cookies[i]];
+
+        if (typeof id === 'string') {
+          return id;
+        }
+      }
+    }
+    return null;
   }
+};
+
+}).call(this,require('_process'),require("buffer").Buffer)
+},{"../../lib/loopback":150,"_process":374,"assert":271,"buffer":303,"uid2":243}],"loopback-boot#models#acl.js":[function(require,module,exports){
+(function (process){
+/*!
+ Schema ACL options
+
+ Object level permissions, for example, an album owned by a user
+
+ Factors to be authorized against:
+
+ * model name: Album
+ * model instance properties: userId of the album, friends, shared
+ * methods
+ * app and/or user ids/roles
+ ** loggedIn
+ ** roles
+ ** userId
+ ** appId
+ ** none
+ ** everyone
+ ** relations: owner/friend/granted
+
+ Class level permissions, for example, Album
+ * model name: Album
+ * methods
+
+ URL/Route level permissions
+ * url pattern
+ * application id
+ * ip addresses
+ * http headers
+
+ Map to oAuth 2.0 scopes
+
+ */
+
+var loopback = require('../../lib/loopback');
+var async = require('async');
+var assert = require('assert');
+var debug = require('debug')('loopback:security:acl');
+
+var ctx = require('../../lib/access-context');
+var AccessContext = ctx.AccessContext;
+var Principal = ctx.Principal;
+var AccessRequest = ctx.AccessRequest;
+
+var Role = loopback.Role;
+assert(Role, 'Role model must be defined before ACL model');
+
+/**
+ * A Model for access control meta data.
+ *
+ * System grants permissions to principals (users/applications, can be grouped
+ * into roles).
+ *
+ * Protected resource: the model data and operations
+ * (model/property/method/relation/…)
+ *
+ * For a given principal, such as client application and/or user, is it allowed
+ * to access (read/write/execute)
+ * the protected resource?
+ *
+ * @header ACL
+ * @property {String} model Name of the model.
+ * @property {String} property Name of the property, method, scope, or relation.
+ * @property {String} accessType Type of access being granted: one of READ, WRITE, or EXECUTE.
+ * @property {String} permission Type of permission granted. One of:
+ *
+ *  - ALARM: Generate an alarm, in a system-dependent way, the access specified in the permissions component of the ACL entry.
+ *  - ALLOW: Explicitly grants access to the resource.
+ *  - AUDIT: Log, in a system-dependent way, the access specified in the permissions component of the ACL entry.
+ *  - DENY: Explicitly denies access to the resource.
+ * @property {String} principalType Type of the principal; one of: Application, Use, Role.
+ * @property {String} principalId ID of the principal - such as appId, userId or roleId.
+ * @property {Object} settings Extends the `Model.settings` object.
+ * @property {String} settings.defaultPermission Default permission setting: ALLOW, DENY, ALARM, or AUDIT. Default is ALLOW.
+ * Set to DENY to prohibit all API access by default.
+ *
+ * @class ACL
+ * @inherits PersistedModel
+ */
+
+module.exports = function(ACL) {
+
+  ACL.ALL = AccessContext.ALL;
+
+  ACL.DEFAULT = AccessContext.DEFAULT; // Not specified
+  ACL.ALLOW = AccessContext.ALLOW; // Allow
+  ACL.ALARM = AccessContext.ALARM; // Warn - send an alarm
+  ACL.AUDIT = AccessContext.AUDIT; // Audit - record the access
+  ACL.DENY = AccessContext.DENY; // Deny
+
+  ACL.READ = AccessContext.READ; // Read operation
+  ACL.REPLICATE = AccessContext.REPLICATE; // Replicate (pull) changes
+  ACL.WRITE = AccessContext.WRITE; // Write operation
+  ACL.EXECUTE = AccessContext.EXECUTE; // Execute operation
+
+  ACL.USER = Principal.USER;
+  ACL.APP = ACL.APPLICATION = Principal.APPLICATION;
+  ACL.ROLE = Principal.ROLE;
+  ACL.SCOPE = Principal.SCOPE;
+
+  /**
+   * Calculate the matching score for the given rule and request
+   * @param {ACL} rule The ACL entry
+   * @param {AccessRequest} req The request
+   * @returns {Number}
+   */
+  ACL.getMatchingScore = function getMatchingScore(rule, req) {
+    var props = ['model', 'property', 'accessType'];
+    var score = 0;
+
+    for (var i = 0; i < props.length; i++) {
+      // Shift the score by 4 for each of the properties as the weight
+      score = score * 4;
+      var ruleValue = rule[props[i]] || ACL.ALL;
+      var requestedValue = req[props[i]] || ACL.ALL;
+      var isMatchingMethodName = props[i] === 'property' && req.methodNames.indexOf(ruleValue) !== -1;
+
+      var isMatchingAccessType = ruleValue === requestedValue;
+      if (props[i] === 'accessType' && !isMatchingAccessType) {
+        switch (ruleValue) {
+          case ACL.EXECUTE:
+            // EXECUTE should match READ, REPLICATE and WRITE
+            isMatchingAccessType = true;
+            break;
+          case ACL.WRITE:
+            // WRITE should match REPLICATE too
+            isMatchingAccessType = requestedValue === ACL.REPLICATE;
+            break;
+        }
+      }
+
+      if (isMatchingMethodName || isMatchingAccessType) {
+        // Exact match
+        score += 3;
+      } else if (ruleValue === ACL.ALL) {
+        // Wildcard match
+        score += 2;
+      } else if (requestedValue === ACL.ALL) {
+        score += 1;
+      } else {
+        // Doesn't match at all
+        return -1;
+      }
+    }
+
+    // Weigh against the principal type into 4 levels
+    // - user level (explicitly allow/deny a given user)
+    // - app level (explicitly allow/deny a given app)
+    // - role level (role based authorization)
+    // - other
+    // user > app > role > ...
+    score = score * 4;
+    switch (rule.principalType) {
+      case ACL.USER:
+        score += 4;
+        break;
+      case ACL.APP:
+        score += 3;
+        break;
+      case ACL.ROLE:
+        score += 2;
+        break;
+      default:
+        score += 1;
+    }
+
+    // Weigh against the roles
+    // everyone < authenticated/unauthenticated < related < owner < ...
+    score = score * 8;
+    if (rule.principalType === ACL.ROLE) {
+      switch (rule.principalId) {
+        case Role.OWNER:
+          score += 4;
+          break;
+        case Role.RELATED:
+          score += 3;
+          break;
+        case Role.AUTHENTICATED:
+        case Role.UNAUTHENTICATED:
+          score += 2;
+          break;
+        case Role.EVERYONE:
+          score += 1;
+          break;
+        default:
+          score += 5;
+      }
+    }
+    score = score * 4;
+    score += AccessContext.permissionOrder[rule.permission || ACL.ALLOW] - 1;
+    return score;
+  };
+
+  /**
+   * Get matching score for the given `AccessRequest`.
+   * @param {AccessRequest} req The request
+   * @returns {Number} score
+   */
+
+  ACL.prototype.score = function(req) {
+    return this.constructor.getMatchingScore(this, req);
+  };
+
+  /*!
+   * Resolve permission from the ACLs
+   * @param {Object[]) acls The list of ACLs
+   * @param {Object} req The request
+   * @returns {AccessRequest} result The effective ACL
+   */
+  ACL.resolvePermission = function resolvePermission(acls, req) {
+    if (!(req instanceof AccessRequest)) {
+      req = new AccessRequest(req);
+    }
+    // Sort by the matching score in descending order
+    acls = acls.sort(function(rule1, rule2) {
+      return ACL.getMatchingScore(rule2, req) - ACL.getMatchingScore(rule1, req);
+    });
+    var permission = ACL.DEFAULT;
+    var score = 0;
+
+    for (var i = 0; i < acls.length; i++) {
+      var candidate = acls[i];
+      score = ACL.getMatchingScore(candidate, req);
+      if (score < 0) {
+        // the highest scored ACL did not match
+        break;
+      }
+      if (!req.isWildcard()) {
+        // We should stop from the first match for non-wildcard
+        permission = candidate.permission;
+        break;
+      } else {
+        if (req.exactlyMatches(candidate)) {
+          permission = candidate.permission;
+          break;
+        }
+        // For wildcard match, find the strongest permission
+        var candidateOrder = AccessContext.permissionOrder[candidate.permission];
+        var permissionOrder = AccessContext.permissionOrder[permission];
+        if (candidateOrder > permissionOrder) {
+          permission = candidate.permission;
+        }
+      }
+    }
+
+    if (debug.enabled) {
+      debug('The following ACLs were searched: ');
+      acls.forEach(function(acl) {
+        acl.debug();
+        debug('with score:', acl.score(req));
+      });
+    }
+
+    var res = new AccessRequest(req.model, req.property, req.accessType,
+        permission || ACL.DEFAULT);
+    return res;
+  };
+
+  /*!
+   * Get the static ACLs from the model definition
+   * @param {String} model The model name
+   * @param {String} property The property/method/relation name
+   *
+   * @return {Object[]} An array of ACLs
+   */
+  ACL.getStaticACLs = function getStaticACLs(model, property) {
+    var modelClass = loopback.findModel(model);
+    var staticACLs = [];
+    if (modelClass && modelClass.settings.acls) {
+      modelClass.settings.acls.forEach(function(acl) {
+        var prop = acl.property;
+        // We support static ACL property with array of string values.
+        if (Array.isArray(prop) && prop.indexOf(property) >= 0)
+          prop = property;
+        if (!prop || prop === ACL.ALL || property === prop) {
+          staticACLs.push(new ACL({
+            model: model,
+            property: prop || ACL.ALL,
+            principalType: acl.principalType,
+            principalId: acl.principalId, // TODO: Should it be a name?
+            accessType: acl.accessType || ACL.ALL,
+            permission: acl.permission
+          }));
+        }
+      });
+    }
+    var prop = modelClass && (
+      // regular property
+      modelClass.definition.properties[property] ||
+      // relation/scope
+      (modelClass._scopeMeta && modelClass._scopeMeta[property]) ||
+      // static method
+      modelClass[property] ||
+      // prototype method
+      modelClass.prototype[property]);
+    if (prop && prop.acls) {
+      prop.acls.forEach(function(acl) {
+        staticACLs.push(new ACL({
+          model: modelClass.modelName,
+          property: property,
+          principalType: acl.principalType,
+          principalId: acl.principalId,
+          accessType: acl.accessType,
+          permission: acl.permission
+        }));
+      });
+    }
+    return staticACLs;
+  };
+
+  /**
+   * Check if the given principal is allowed to access the model/property
+   * @param {String} principalType The principal type.
+   * @param {String} principalId The principal ID.
+   * @param {String} model The model name.
+   * @param {String} property The property/method/relation name.
+   * @param {String} accessType The access type.
+   * @callback {Function} callback Callback function.
+   * @param {String|Error} err The error object
+   * @param {AccessRequest} result The access permission
+   */
+  ACL.checkPermission = function checkPermission(principalType, principalId,
+                                                 model, property, accessType,
+                                                 callback) {
+    if (principalId !== null && principalId !== undefined && (typeof principalId !== 'string')) {
+      principalId = principalId.toString();
+    }
+    property = property || ACL.ALL;
+    var propertyQuery = (property === ACL.ALL) ? undefined : {inq: [property, ACL.ALL]};
+    accessType = accessType || ACL.ALL;
+    var accessTypeQuery = (accessType === ACL.ALL) ? undefined : {inq: [accessType, ACL.ALL, ACL.EXECUTE]};
+
+    var req = new AccessRequest(model, property, accessType);
+
+    var acls = this.getStaticACLs(model, property);
+
+    var resolved = this.resolvePermission(acls, req);
+
+    if (resolved && resolved.permission === ACL.DENY) {
+      debug('Permission denied by statically resolved permission');
+      debug(' Resolved Permission: %j', resolved);
+      process.nextTick(function() {
+        if (callback) callback(null, resolved);
+      });
+      return;
+    }
+
+    var self = this;
+    this.find({where: {principalType: principalType, principalId: principalId,
+        model: model, property: propertyQuery, accessType: accessTypeQuery}},
+      function(err, dynACLs) {
+        if (err) {
+          if (callback) callback(err);
+          return;
+        }
+        acls = acls.concat(dynACLs);
+        resolved = self.resolvePermission(acls, req);
+        if (resolved && resolved.permission === ACL.DEFAULT) {
+          var modelClass = loopback.findModel(model);
+          resolved.permission = (modelClass && modelClass.settings.defaultPermission) || ACL.ALLOW;
+        }
+        if (callback) callback(null, resolved);
+      });
+  };
+
+  ACL.prototype.debug = function() {
+    if (debug.enabled) {
+      debug('---ACL---');
+      debug('model %s', this.model);
+      debug('property %s', this.property);
+      debug('principalType %s', this.principalType);
+      debug('principalId %s', this.principalId);
+      debug('accessType %s', this.accessType);
+      debug('permission %s', this.permission);
+    }
+  };
+
+  /**
+   * Check if the request has the permission to access.
+   * @options {Object} context See below.
+   * @property {Object[]} principals An array of principals.
+   * @property {String|Model} model The model name or model class.
+   * @property {*} id The model instance ID.
+   * @property {String} property The property/method/relation name.
+   * @property {String} accessType The access type:
+   *   READ, REPLICATE, WRITE, or EXECUTE.
+   * @param {Function} callback Callback function
+   */
+
+  ACL.checkAccessForContext = function(context, callback) {
+    var registry = this.registry;
+
+    if (!(context instanceof AccessContext)) {
+      context = new AccessContext(context);
+    }
+
+    var model = context.model;
+    var property = context.property;
+    var accessType = context.accessType;
+    var modelName = context.modelName;
+
+    var methodNames = context.methodNames;
+    var propertyQuery = (property === ACL.ALL) ? undefined : {inq: methodNames.concat([ACL.ALL])};
+
+    var accessTypeQuery = (accessType === ACL.ALL) ?
+      undefined :
+      (accessType === ACL.REPLICATE) ?
+        {inq: [ACL.REPLICATE, ACL.WRITE, ACL.ALL]} :
+        {inq: [accessType, ACL.ALL]};
+
+    var req = new AccessRequest(modelName, property, accessType, ACL.DEFAULT, methodNames);
+
+    var effectiveACLs = [];
+    var staticACLs = this.getStaticACLs(model.modelName, property);
+
+    var self = this;
+    var roleModel = registry.getModelByType(Role);
+    this.find({where: {model: model.modelName, property: propertyQuery,
+      accessType: accessTypeQuery}}, function(err, acls) {
+      if (err) {
+        if (callback) callback(err);
+        return;
+      }
+      var inRoleTasks = [];
+
+      acls = acls.concat(staticACLs);
+
+      acls.forEach(function(acl) {
+        // Check exact matches
+        for (var i = 0; i < context.principals.length; i++) {
+          var p = context.principals[i];
+          var typeMatch = p.type === acl.principalType;
+          var idMatch = String(p.id) === String(acl.principalId);
+          if (typeMatch && idMatch) {
+            effectiveACLs.push(acl);
+            return;
+          }
+        }
+
+        // Check role matches
+        if (acl.principalType === ACL.ROLE) {
+          inRoleTasks.push(function(done) {
+            roleModel.isInRole(acl.principalId, context,
+              function(err, inRole) {
+                if (!err && inRole) {
+                  effectiveACLs.push(acl);
+                }
+                done(err, acl);
+              });
+          });
+        }
+      });
+
+      async.parallel(inRoleTasks, function(err, results) {
+        if (err) {
+          if (callback) callback(err, null);
+          return;
+        }
+
+        var resolved = self.resolvePermission(effectiveACLs, req);
+        if (resolved && resolved.permission === ACL.DEFAULT) {
+          resolved.permission = (model && model.settings.defaultPermission) || ACL.ALLOW;
+        }
+        debug('---Resolved---');
+        resolved.debug();
+        if (callback) callback(null, resolved);
+      });
+    });
+  };
+
+  /**
+   * Check if the given access token can invoke the method
+   * @param {AccessToken} token The access token
+   * @param {String} model The model name
+   * @param {*} modelId The model id
+   * @param {String} method The method name
+   * @callback {Function} callback Callback function
+   * @param {String|Error} err The error object
+   * @param {Boolean} allowed is the request allowed
+   */
+  ACL.checkAccessForToken = function(token, model, modelId, method, callback) {
+    assert(token, 'Access token is required');
+
+    var context = new AccessContext({
+      accessToken: token,
+      model: model,
+      property: method,
+      method: method,
+      modelId: modelId
+    });
+
+    this.checkAccessForContext(context, function(err, access) {
+      if (err) {
+        if (callback) callback(err);
+        return;
+      }
+      if (callback) callback(null, access.permission !== ACL.DENY);
+    });
+  };
+
+  ACL.resolveRelatedModels = function() {
+    if (!this.roleModel) {
+      var reg = this.registry;
+      this.roleModel = reg.getModelByType(loopback.Role);
+      this.roleMappingModel = reg.getModelByType(loopback.RoleMapping);
+      this.userModel = reg.getModelByType(loopback.User);
+      this.applicationModel = reg.getModelByType(loopback.Application);
+    }
+  };
+
+  /**
+   * Resolve a principal by type/id
+   * @param {String} type Principal type - ROLE/APP/USER
+   * @param {String|Number} id Principal id or name
+   * @param {Function} cb Callback function
+   */
+  ACL.resolvePrincipal = function(type, id, cb) {
+    type = type || ACL.ROLE;
+    this.resolveRelatedModels();
+    switch (type) {
+      case ACL.ROLE:
+        this.roleModel.findOne({where: {or: [{name: id}, {id: id}]}}, cb);
+        break;
+      case ACL.USER:
+        this.userModel.findOne(
+          {where: {or: [{username: id}, {email: id}, {id: id}]}}, cb);
+        break;
+      case ACL.APP:
+        this.applicationModel.findOne(
+          {where: {or: [{name: id}, {email: id}, {id: id}]}}, cb);
+        break;
+      default:
+        process.nextTick(function() {
+          var err = new Error('Invalid principal type: ' + type);
+          err.statusCode = 400;
+          cb(err);
+        });
+    }
+  };
+
+  /**
+   * Check if the given principal is mapped to the role
+   * @param {String} principalType Principal type
+   * @param {String|*} principalId Principal id/name
+   * @param {String|*} role Role id/name
+   * @param {Function} cb Callback function
+   */
+  ACL.isMappedToRole = function(principalType, principalId, role, cb) {
+    var self = this;
+    this.resolvePrincipal(principalType, principalId,
+      function(err, principal) {
+        if (err) return cb(err);
+        if (principal != null) {
+          principalId = principal.id;
+        }
+        principalType = principalType || 'ROLE';
+        self.resolvePrincipal('ROLE', role, function(err, role) {
+          if (err || !role) return cb(err, role);
+          self.roleMappingModel.findOne({
+            where: {
+              roleId: role.id,
+              principalType: principalType,
+              principalId: String(principalId)
+            }
+          }, function(err, result) {
+            if (err) return cb(err);
+            return cb(null, !!result);
+          });
+        });
+      });
+  };
+};
+
+}).call(this,require('_process'))
+},{"../../lib/access-context":142,"../../lib/loopback":150,"_process":374,"assert":271,"async":8,"debug":17}],"loopback-boot#models#role-mapping.js":[function(require,module,exports){
+(function (process){
+var loopback = require('../../lib/loopback');
+
+/**
+ * The `RoleMapping` model extends from the built in `loopback.Model` type.
+ *
+ * @property {String} id Generated ID.
+ * @property {String} name Name of the role.
+ * @property {String} Description Text description.
+ *
+ * @class RoleMapping
+ * @inherits {PersistedModel}
+ */
+
+module.exports = function(RoleMapping) {
+  // Principal types
+  RoleMapping.USER = 'USER';
+  RoleMapping.APP = RoleMapping.APPLICATION = 'APP';
+  RoleMapping.ROLE = 'ROLE';
+
+  RoleMapping.resolveRelatedModels = function() {
+    if (!this.userModel) {
+      var reg = this.registry;
+      this.roleModel = reg.getModelByType(loopback.Role);
+      this.userModel = reg.getModelByType(loopback.User);
+      this.applicationModel = reg.getModelByType(loopback.Application);
+    }
+  };
+
+  /**
+   * Get the application principal
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {Application} application
+   */
+  RoleMapping.prototype.application = function(callback) {
+    this.constructor.resolveRelatedModels();
+
+    if (this.principalType === RoleMapping.APPLICATION) {
+      var applicationModel = this.constructor.applicationModel;
+      applicationModel.findById(this.principalId, callback);
+    } else {
+      process.nextTick(function() {
+        if (callback) callback(null, null);
+      });
+    }
+  };
+
+  /**
+   * Get the user principal
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {User} user
+   */
+  RoleMapping.prototype.user = function(callback) {
+    this.constructor.resolveRelatedModels();
+    if (this.principalType === RoleMapping.USER) {
+      var userModel = this.constructor.userModel;
+      userModel.findById(this.principalId, callback);
+    } else {
+      process.nextTick(function() {
+        if (callback) callback(null, null);
+      });
+    }
+  };
+
+  /**
+   * Get the child role principal
+   * @callback {Function} callback
+   * @param {Error} err
+   * @param {User} childUser
+   */
+  RoleMapping.prototype.childRole = function(callback) {
+    this.constructor.resolveRelatedModels();
+
+    if (this.principalType === RoleMapping.ROLE) {
+      var roleModel = this.constructor.roleModel;
+      roleModel.findById(this.principalId, callback);
+    } else {
+      process.nextTick(function() {
+        if (callback) callback(null, null);
+      });
+    }
+  };
+};
+
+}).call(this,require('_process'))
+},{"../../lib/loopback":150,"_process":374}],"loopback-boot#models#role.js":[function(require,module,exports){
+(function (process){
+var loopback = require('../../lib/loopback');
+var debug = require('debug')('loopback:security:role');
+var assert = require('assert');
+var async = require('async');
+
+var AccessContext = require('../../lib/access-context').AccessContext;
+
+var RoleMapping = loopback.RoleMapping;
+
+assert(RoleMapping, 'RoleMapping model must be defined before Role model');
+
+/**
+ * The Role model
+ * @class Role
+ * @header Role object
+ */
+module.exports = function(Role) {
+
+  // Workaround for https://github.com/strongloop/loopback/issues/292
+  Role.definition.rawProperties.created.default =
+    Role.definition.properties.created.default = function() {
+    return new Date();
+  };
+
+  // Workaround for https://github.com/strongloop/loopback/issues/292
+  Role.definition.rawProperties.modified.default =
+    Role.definition.properties.modified.default = function() {
+    return new Date();
+  };
+
+  Role.resolveRelatedModels = function() {
+    if (!this.userModel) {
+      var reg = this.registry;
+      this.roleMappingModel = reg.getModelByType(loopback.RoleMapping);
+      this.userModel = reg.getModelByType(loopback.User);
+      this.applicationModel = reg.getModelByType(loopback.Application);
+    }
+  };
+
+  // Set up the connection to users/applications/roles once the model
+  Role.once('dataSourceAttached', function(roleModel) {
+
+    ['users', 'applications', 'roles'].forEach(function(rel) {
+      /**
+       * Fetch all users assigned to this role
+       * @function Role.prototype#users
+       * @param {object} [query] query object passed to model find call
+       * @param  {Function} [callback]
+       */
+      /**
+       * Fetch all applications assigned to this role
+       * @function Role.prototype#applications
+       * @param {object} [query] query object passed to model find call
+       * @param  {Function} [callback]
+       */
+      /**
+       * Fetch all roles assigned to this role
+       * @function Role.prototype#roles
+       * @param {object} [query] query object passed to model find call
+       * @param {Function} [callback]
+       */
+      Role.prototype[rel] = function(query, callback) {
+        roleModel.resolveRelatedModels();
+        var relsToModels = {
+          users: roleModel.userModel,
+          applications: roleModel.applicationModel,
+          roles: roleModel
+        };
+
+        var ACL = loopback.ACL;
+        var relsToTypes = {
+          users: ACL.USER,
+          applications: ACL.APP,
+          roles: ACL.ROLE
+        };
+
+        var model = relsToModels[rel];
+        listByPrincipalType(model, relsToTypes[rel], query, callback);
+      };
+    });
+
+    /**
+     * Fetch all models assigned to this role
+     * @private
+     * @param {*} model model type to fetch
+     * @param {String} [principalType] principalType used in the rolemapping for model
+     * @param {object} [query] query object passed to model find call
+     * @param  {Function} [callback] callback function called with `(err, models)` arguments.
+     */
+    function listByPrincipalType(model, principalType, query, callback) {
+      if (callback === undefined) {
+        callback = query;
+        query = {};
+      }
+
+      roleModel.roleMappingModel.find({
+        where: {roleId: this.id, principalType: principalType}
+      }, function(err, mappings) {
+        var ids;
+        if (err) {
+          return callback(err);
+        }
+        ids = mappings.map(function(m) {
+          return m.principalId;
+        });
+        query.where = query.where || {};
+        query.where.id = {inq: ids};
+        model.find(query, function(err, models) {
+          callback(err, models);
+        });
+      });
+    }
+
+  });
+
+  // Special roles
+  Role.OWNER = '$owner'; // owner of the object
+  Role.RELATED = '$related'; // any User with a relationship to the object
+  Role.AUTHENTICATED = '$authenticated'; // authenticated user
+  Role.UNAUTHENTICATED = '$unauthenticated'; // authenticated user
+  Role.EVERYONE = '$everyone'; // everyone
+
+  /**
+   * Add custom handler for roles.
+   * @param {String} role Name of role.
+   * @param {Function} resolver Function that determines if a principal is in the specified role.
+   * Signature must be `function(role, context, callback)`
+   */
+  Role.registerResolver = function(role, resolver) {
+    if (!Role.resolvers) {
+      Role.resolvers = {};
+    }
+    Role.resolvers[role] = resolver;
+  };
+
+  Role.registerResolver(Role.OWNER, function(role, context, callback) {
+    if (!context || !context.model || !context.modelId) {
+      process.nextTick(function() {
+        if (callback) callback(null, false);
+      });
+      return;
+    }
+    var modelClass = context.model;
+    var modelId = context.modelId;
+    var userId = context.getUserId();
+    Role.isOwner(modelClass, modelId, userId, callback);
+  });
+
+  function isUserClass(modelClass) {
+    if (modelClass) {
+      return modelClass === loopback.User ||
+        modelClass.prototype instanceof loopback.User;
+    } else {
+      return false;
+    }
+  }
+
+  /*!
+   * Check if two user IDs matches
+   * @param {*} id1
+   * @param {*} id2
+   * @returns {boolean}
+   */
+  function matches(id1, id2) {
+    if (id1 === undefined || id1 === null || id1 === '' ||
+      id2 === undefined || id2 === null || id2 === '') {
+      return false;
+    }
+    // The id can be a MongoDB ObjectID
+    return id1 === id2 || id1.toString() === id2.toString();
+  }
+
+  /**
+   * Check if a given user ID is the owner the model instance.
+   * @param {Function} modelClass The model class
+   * @param {*} modelId The model ID
+   * @param {*} userId The user ID
+   * @param {Function} callback Callback function
+   */
+  Role.isOwner = function isOwner(modelClass, modelId, userId, callback) {
+    assert(modelClass, 'Model class is required');
+    debug('isOwner(): %s %s userId: %s', modelClass && modelClass.modelName, modelId, userId);
+    // No userId is present
+    if (!userId) {
+      process.nextTick(function() {
+        callback(null, false);
+      });
+      return;
+    }
+
+    // Is the modelClass User or a subclass of User?
+    if (isUserClass(modelClass)) {
+      process.nextTick(function() {
+        callback(null, matches(modelId, userId));
+      });
+      return;
+    }
+
+    modelClass.findById(modelId, function(err, inst) {
+      if (err || !inst) {
+        debug('Model not found for id %j', modelId);
+        if (callback) callback(err, false);
+        return;
+      }
+      debug('Model found: %j', inst);
+      var ownerId = inst.userId || inst.owner;
+      // Ensure ownerId exists and is not a function/relation
+      if (ownerId && 'function' !== typeof ownerId) {
+        if (callback) callback(null, matches(ownerId, userId));
+        return;
+      } else {
+        // Try to follow belongsTo
+        for (var r in modelClass.relations) {
+          var rel = modelClass.relations[r];
+          if (rel.type === 'belongsTo' && isUserClass(rel.modelTo)) {
+            debug('Checking relation %s to %s: %j', r, rel.modelTo.modelName, rel);
+            inst[r](processRelatedUser);
+            return;
+          }
+        }
+        debug('No matching belongsTo relation found for model %j and user: %j', modelId, userId);
+        if (callback) callback(null, false);
+      }
+
+      function processRelatedUser(err, user) {
+        if (!err && user) {
+          debug('User found: %j', user.id);
+          if (callback) callback(null, matches(user.id, userId));
+        } else {
+          if (callback) callback(err, false);
+        }
+      }
+    });
+  };
+
+  Role.registerResolver(Role.AUTHENTICATED, function(role, context, callback) {
+    if (!context) {
+      process.nextTick(function() {
+        if (callback) callback(null, false);
+      });
+      return;
+    }
+    Role.isAuthenticated(context, callback);
+  });
+
+  /**
+   * Check if the user ID is authenticated
+   * @param {Object} context The security context.
+   *
+   * @callback {Function} callback Callback function.
+   * @param {Error} err Error object.
+   * @param {Boolean} isAuthenticated True if the user is authenticated.
+   */
+  Role.isAuthenticated = function isAuthenticated(context, callback) {
+    process.nextTick(function() {
+      if (callback) callback(null, context.isAuthenticated());
+    });
+  };
+
+  Role.registerResolver(Role.UNAUTHENTICATED, function(role, context, callback) {
+    process.nextTick(function() {
+      if (callback) callback(null, !context || !context.isAuthenticated());
+    });
+  });
+
+  Role.registerResolver(Role.EVERYONE, function(role, context, callback) {
+    process.nextTick(function() {
+      if (callback) callback(null, true); // Always true
+    });
+  });
+
+  /**
+   * Check if a given principal is in the specified role.
+   *
+   * @param {String} role The role name.
+   * @param {Object} context The context object.
+   *
+   * @callback {Function} callback Callback function.
+   * @param {Error} err Error object.
+   * @param {Boolean} isInRole True if the principal is in the specified role.
+   */
+  Role.isInRole = function(role, context, callback) {
+    if (!(context instanceof AccessContext)) {
+      context = new AccessContext(context);
+    }
+
+    this.resolveRelatedModels();
+
+    debug('isInRole(): %s', role);
+    context.debug();
+
+    var resolver = Role.resolvers[role];
+    if (resolver) {
+      debug('Custom resolver found for role %s', role);
+      resolver(role, context, callback);
+      return;
+    }
+
+    if (context.principals.length === 0) {
+      debug('isInRole() returns: false');
+      process.nextTick(function() {
+        if (callback) callback(null, false);
+      });
+      return;
+    }
+
+    var inRole = context.principals.some(function(p) {
+
+      var principalType = p.type || undefined;
+      var principalId = p.id || undefined;
+
+      // Check if it's the same role
+      return principalType === RoleMapping.ROLE && principalId === role;
+    });
+
+    if (inRole) {
+      debug('isInRole() returns: %j', inRole);
+      process.nextTick(function() {
+        if (callback) callback(null, true);
+      });
+      return;
+    }
+
+    var roleMappingModel = this.roleMappingModel;
+    this.findOne({where: {name: role}}, function(err, result) {
+      if (err) {
+        if (callback) callback(err);
+        return;
+      }
+      if (!result) {
+        if (callback) callback(null, false);
+        return;
+      }
+      debug('Role found: %j', result);
+
+      // Iterate through the list of principals
+      async.some(context.principals, function(p, done) {
+        var principalType = p.type || undefined;
+        var principalId = p.id || undefined;
+        var roleId = result.id.toString();
+
+        if (principalId !== null && principalId !== undefined && (typeof principalId !== 'string')) {
+          principalId = principalId.toString();
+        }
+
+        if (principalType && principalId) {
+          roleMappingModel.findOne({where: {roleId: roleId,
+              principalType: principalType, principalId: principalId}},
+            function(err, result) {
+              debug('Role mapping found: %j', result);
+              done(!err && result); // The only arg is the result
+            });
+        } else {
+          process.nextTick(function() {
+            done(false);
+          });
+        }
+      }, function(inRole) {
+        debug('isInRole() returns: %j', inRole);
+        if (callback) callback(null, inRole);
+      });
+    });
+
+  };
+
+  /**
+   * List roles for a given principal.
+   * @param {Object} context The security context.
+   *
+   * @callback {Function} callback Callback function.
+   * @param {Error} err Error object.
+   * @param {String[]} roles An array of role IDs
+   */
+  Role.getRoles = function(context, callback) {
+    if (!(context instanceof AccessContext)) {
+      context = new AccessContext(context);
+    }
+    var roles = [];
+    this.resolveRelatedModels();
+
+    var addRole = function(role) {
+      if (role && roles.indexOf(role) === -1) {
+        roles.push(role);
+      }
+    };
+
+    var self = this;
+    // Check against the smart roles
+    var inRoleTasks = [];
+    Object.keys(Role.resolvers).forEach(function(role) {
+      inRoleTasks.push(function(done) {
+        self.isInRole(role, context, function(err, inRole) {
+          if (debug.enabled) {
+            debug('In role %j: %j', role, inRole);
+          }
+          if (!err && inRole) {
+            addRole(role);
+            done();
+          } else {
+            done(err, null);
+          }
+        });
+      });
+    });
+
+    var roleMappingModel = this.roleMappingModel;
+    context.principals.forEach(function(p) {
+      // Check against the role mappings
+      var principalType = p.type || undefined;
+      var principalId = p.id == null ? undefined : p.id;
+
+      if (typeof principalId !== 'string' && principalId != null) {
+        principalId = principalId.toString();
+      }
+
+      // Add the role itself
+      if (principalType === RoleMapping.ROLE && principalId) {
+        addRole(principalId);
+      }
+
+      if (principalType && principalId) {
+        // Please find() treat undefined matches all values
+        inRoleTasks.push(function(done) {
+          roleMappingModel.find({where: {principalType: principalType,
+            principalId: principalId}}, function(err, mappings) {
+            debug('Role mappings found: %s %j', err, mappings);
+            if (err) {
+              if (done) done(err);
+              return;
+            }
+            mappings.forEach(function(m) {
+              addRole(m.roleId);
+            });
+            if (done) done();
+          });
+        });
+      }
+    });
+
+    async.parallel(inRoleTasks, function(err, results) {
+      debug('getRoles() returns: %j %j', err, roles);
+      if (callback) callback(err, roles);
+    });
+  };
+};
+
+}).call(this,require('_process'))
+},{"../../lib/access-context":142,"../../lib/loopback":150,"_process":374,"assert":271,"async":8,"debug":17}],"loopback-boot#models#user.js":[function(require,module,exports){
+(function (__dirname){
+/*!
+ * Module Dependencies.
+ */
+
+var loopback = require('../../lib/loopback');
+var utils = require('../../lib/utils');
+var path = require('path');
+var SALT_WORK_FACTOR = 10;
+var crypto = require('crypto');
+
+var bcrypt;
+try {
+  // Try the native module first
+  bcrypt = require('bcrypt');
+  // Browserify returns an empty object
+  if (bcrypt && typeof bcrypt.compare !== 'function') {
+    bcrypt = require('bcryptjs');
+  }
+} catch (err) {
+  // Fall back to pure JS impl
+  bcrypt = require('bcryptjs');
 }
 
-},{}]},{},[]);
+var DEFAULT_TTL = 1209600; // 2 weeks in seconds
+var DEFAULT_RESET_PW_TTL = 15 * 60; // 15 mins in seconds
+var DEFAULT_MAX_TTL = 31556926; // 1 year in seconds
+var assert = require('assert');
+
+var debug = require('debug')('loopback:user');
+
+/**
+ * Built-in User model.
+ * Extends LoopBack [PersistedModel](#persistedmodel-new-persistedmodel).
+ *
+ * Default `User` ACLs.
+ *
+ * - DENY EVERYONE `*`
+ * - ALLOW EVERYONE `create`
+ * - ALLOW OWNER `deleteById`
+ * - ALLOW EVERYONE `login`
+ * - ALLOW EVERYONE `logout`
+ * - ALLOW OWNER `findById`
+ * - ALLOW OWNER `updateAttributes`
+ *
+ * @property {String} username Must be unique.
+ * @property {String} password Hidden from remote clients.
+ * @property {String} email Must be valid email.
+ * @property {Boolean} emailVerified Set when a user's email has been verified via `confirm()`.
+ * @property {String} verificationToken Set when `verify()` is called.
+ * @property {String} realm The namespace the user belongs to. See [Partitioning users with realms](https://docs.strongloop.com/display/public/LB/Partitioning+users+with+realms) for details.
+ * @property {Date} created The property is not used by LoopBack, you are free to use it for your own purposes.
+ * @property {Date} lastUpdated The property is not used by LoopBack, you are free to use it for your own purposes.
+ * @property {String} status The property is not used by LoopBack, you are free to use it for your own purposes.
+ * @property {Object} settings Extends the `Model.settings` object.
+ * @property {Boolean} settings.emailVerificationRequired Require the email verification
+ * process before allowing a login.
+ * @property {Number} settings.ttl Default time to live (in seconds) for the `AccessToken` created by `User.login() / user.createAccessToken()`.
+ * Default is `1209600` (2 weeks)
+ * @property {Number} settings.maxTTL The max value a user can request a token to be alive / valid for.
+ * Default is `31556926` (1 year)
+ * @property {Boolean} settings.realmRequired Require a realm when logging in a user.
+ * @property {String} settings.realmDelimiter When set a realm is required.
+ * @property {Number} settings.resetPasswordTokenTTL Time to live for password reset `AccessToken`. Default is `900` (15 minutes).
+ * @property {Number} settings.saltWorkFactor The `bcrypt` salt work factor. Default is `10`.
+ * @property {Boolean} settings.caseSensitiveEmail Enable case sensitive email.
+ *
+ * @class User
+ * @inherits {PersistedModel}
+ */
+
+module.exports = function(User) {
+
+  /**
+   * Create access token for the logged in user. This method can be overridden to
+   * customize how access tokens are generated
+   *
+   * @param {Number} ttl The requested ttl
+   * @param {Object} [options] The options for access token, such as scope, appId
+   * @callback {Function} cb The callback function
+   * @param {String|Error} err The error string or object
+   * @param {AccessToken} token The generated access token object
+   */
+  User.prototype.createAccessToken = function(ttl, options, cb) {
+    if (cb === undefined && typeof options === 'function') {
+      // createAccessToken(ttl, cb)
+      cb = options;
+      options = undefined;
+    }
+
+    cb = cb || utils.createPromiseCallback();
+
+    if (typeof ttl === 'object' && !options) {
+      // createAccessToken(options, cb)
+      options = ttl;
+      ttl = options.ttl;
+    }
+    options = options || {};
+    var userModel = this.constructor;
+    ttl = Math.min(ttl || userModel.settings.ttl, userModel.settings.maxTTL);
+    this.accessTokens.create({
+      ttl: ttl
+    }, cb);
+    return cb.promise;
+  };
+
+  function splitPrincipal(name, realmDelimiter) {
+    var parts = [null, name];
+    if (!realmDelimiter) {
+      return parts;
+    }
+    var index = name.indexOf(realmDelimiter);
+    if (index !== -1) {
+      parts[0] = name.substring(0, index);
+      parts[1] = name.substring(index + realmDelimiter.length);
+    }
+    return parts;
+  }
+
+  /**
+   * Normalize the credentials
+   * @param {Object} credentials The credential object
+   * @param {Boolean} realmRequired
+   * @param {String} realmDelimiter The realm delimiter, if not set, no realm is needed
+   * @returns {Object} The normalized credential object
+   */
+  User.normalizeCredentials = function(credentials, realmRequired, realmDelimiter) {
+    var query = {};
+    credentials = credentials || {};
+    if (!realmRequired) {
+      if (credentials.email) {
+        query.email = credentials.email;
+      } else if (credentials.username) {
+        query.username = credentials.username;
+      }
+    } else {
+      if (credentials.realm) {
+        query.realm = credentials.realm;
+      }
+      var parts;
+      if (credentials.email) {
+        parts = splitPrincipal(credentials.email, realmDelimiter);
+        query.email = parts[1];
+        if (parts[0]) {
+          query.realm = parts[0];
+        }
+      } else if (credentials.username) {
+        parts = splitPrincipal(credentials.username, realmDelimiter);
+        query.username = parts[1];
+        if (parts[0]) {
+          query.realm = parts[0];
+        }
+      }
+    }
+    return query;
+  };
+
+  /**
+   * Login a user by with the given `credentials`.
+   *
+   * ```js
+   *    User.login({username: 'foo', password: 'bar'}, function (err, token) {
+  *      console.log(token.id);
+  *    });
+   * ```
+   *
+   * @param {Object} credentials username/password or email/password
+   * @param {String[]|String} [include] Optionally set it to "user" to include
+   * the user info
+   * @callback {Function} callback Callback function
+   * @param {Error} err Error object
+   * @param {AccessToken} token Access token if login is successful
+   */
+
+  User.login = function(credentials, include, fn) {
+    var self = this;
+    if (typeof include === 'function') {
+      fn = include;
+      include = undefined;
+    }
+
+    fn = fn || utils.createPromiseCallback();
+
+    include = (include || '');
+    if (Array.isArray(include)) {
+      include = include.map(function(val) {
+        return val.toLowerCase();
+      });
+    } else {
+      include = include.toLowerCase();
+    }
+
+    var realmDelimiter;
+    // Check if realm is required
+    var realmRequired = !!(self.settings.realmRequired ||
+      self.settings.realmDelimiter);
+    if (realmRequired) {
+      realmDelimiter = self.settings.realmDelimiter;
+    }
+    var query = self.normalizeCredentials(credentials, realmRequired,
+      realmDelimiter);
+
+    if (realmRequired && !query.realm) {
+      var err1 = new Error('realm is required');
+      err1.statusCode = 400;
+      err1.code = 'REALM_REQUIRED';
+      fn(err1);
+      return fn.promise;
+    }
+    if (!query.email && !query.username) {
+      var err2 = new Error('username or email is required');
+      err2.statusCode = 400;
+      err2.code = 'USERNAME_EMAIL_REQUIRED';
+      fn(err2);
+      return fn.promise;
+    }
+
+    self.findOne({where: query}, function(err, user) {
+      var defaultError = new Error('login failed');
+      defaultError.statusCode = 401;
+      defaultError.code = 'LOGIN_FAILED';
+
+      function tokenHandler(err, token) {
+        if (err) return fn(err);
+        if (Array.isArray(include) ? include.indexOf('user') !== -1 : include === 'user') {
+          // NOTE(bajtos) We can't set token.user here:
+          //  1. token.user already exists, it's a function injected by
+          //     "AccessToken belongsTo User" relation
+          //  2. ModelBaseClass.toJSON() ignores own properties, thus
+          //     the value won't be included in the HTTP response
+          // See also loopback#161 and loopback#162
+          token.__data.user = user;
+        }
+        fn(err, token);
+      }
+
+      if (err) {
+        debug('An error is reported from User.findOne: %j', err);
+        fn(defaultError);
+      } else if (user) {
+        user.hasPassword(credentials.password, function(err, isMatch) {
+          if (err) {
+            debug('An error is reported from User.hasPassword: %j', err);
+            fn(defaultError);
+          } else if (isMatch) {
+            if (self.settings.emailVerificationRequired && !user.emailVerified) {
+              // Fail to log in if email verification is not done yet
+              debug('User email has not been verified');
+              err = new Error('login failed as the email has not been verified');
+              err.statusCode = 401;
+              err.code = 'LOGIN_FAILED_EMAIL_NOT_VERIFIED';
+              fn(err);
+            } else {
+              if (user.createAccessToken.length === 2) {
+                user.createAccessToken(credentials.ttl, tokenHandler);
+              } else {
+                user.createAccessToken(credentials.ttl, credentials, tokenHandler);
+              }
+            }
+          } else {
+            debug('The password is invalid for user %s', query.email || query.username);
+            fn(defaultError);
+          }
+        });
+      } else {
+        debug('No matching record is found for user %s', query.email || query.username);
+        fn(defaultError);
+      }
+    });
+    return fn.promise;
+  };
+
+  /**
+   * Logout a user with the given accessToken id.
+   *
+   * ```js
+   *    User.logout('asd0a9f8dsj9s0s3223mk', function (err) {
+  *      console.log(err || 'Logged out');
+  *    });
+   * ```
+   *
+   * @param {String} accessTokenID
+   * @callback {Function} callback
+   * @param {Error} err
+   */
+
+  User.logout = function(tokenId, fn) {
+    fn = fn || utils.createPromiseCallback();
+    this.relations.accessTokens.modelTo.findById(tokenId, function(err, accessToken) {
+      if (err) {
+        fn(err);
+      } else if (accessToken) {
+        accessToken.destroy(fn);
+      } else {
+        fn(new Error('could not find accessToken'));
+      }
+    });
+    return fn.promise;
+  };
+
+  /**
+   * Compare the given `password` with the users hashed password.
+   *
+   * @param {String} password The plain text password
+   * @returns {Boolean}
+   */
+
+  User.prototype.hasPassword = function(plain, fn) {
+    fn = fn || utils.createPromiseCallback();
+    if (this.password && plain) {
+      bcrypt.compare(plain, this.password, function(err, isMatch) {
+        if (err) return fn(err);
+        fn(null, isMatch);
+      });
+    } else {
+      fn(null, false);
+    }
+    return fn.promise;
+  };
+
+  /**
+   * Verify a user's identity by sending them a confirmation email.
+   *
+   * ```js
+   *    var options = {
+   *      type: 'email',
+   *      to: user.email,
+   *      template: 'verify.ejs',
+   *      redirect: '/',
+   *      tokenGenerator: function (user, cb) { cb("random-token"); }
+   *    };
+   *
+   *    user.verify(options, next);
+   * ```
+   *
+   * @options {Object} options
+   * @property {String} type Must be 'email'.
+   * @property {String} to Email address to which verification email is sent.
+   * @property {String} from Sender email addresss, for example
+   *   `'noreply@myapp.com'`.
+   * @property {String} subject Subject line text.
+   * @property {String} text Text of email.
+   * @property {String} template Name of template that displays verification
+   *  page, for example, `'verify.ejs'.
+   * @property {String} redirect Page to which user will be redirected after
+   *  they verify their email, for example `'/'` for root URI.
+   * @property {Function} generateVerificationToken A function to be used to
+   *  generate the verification token. It must accept the user object and a
+   *  callback function. This function should NOT add the token to the user
+   *  object, instead simply execute the callback with the token! User saving
+   *  and email sending will be handled in the `verify()` method.
+   */
+
+  User.prototype.verify = function(options, fn) {
+    fn = fn || utils.createPromiseCallback();
+
+    var user = this;
+    var userModel = this.constructor;
+    var registry = userModel.registry;
+    assert(typeof options === 'object', 'options required when calling user.verify()');
+    assert(options.type, 'You must supply a verification type (options.type)');
+    assert(options.type === 'email', 'Unsupported verification type');
+    assert(options.to || this.email, 'Must include options.to when calling user.verify() or the user must have an email property');
+    assert(options.from, 'Must include options.from when calling user.verify()');
+
+    options.redirect = options.redirect || '/';
+    options.template = path.resolve(options.template || path.join(__dirname, '..', '..', 'templates', 'verify.ejs'));
+    options.user = this;
+    options.protocol = options.protocol || 'http';
+
+    var app = userModel.app;
+    options.host = options.host || (app && app.get('host')) || 'localhost';
+    options.port = options.port || (app && app.get('port')) || 3000;
+    options.restApiRoot = options.restApiRoot || (app && app.get('restApiRoot')) || '/api';
+
+    var displayPort = (
+      (options.protocol === 'http' && options.port == '80') ||
+      (options.protocol === 'https' && options.port == '443')
+    ) ? '' : ':' + options.port;
+
+    options.verifyHref = options.verifyHref ||
+      options.protocol +
+      '://' +
+      options.host +
+      displayPort +
+      options.restApiRoot +
+      userModel.http.path +
+      userModel.sharedClass.find('confirm', true).http.path +
+      '?uid=' +
+      options.user.id +
+      '&redirect=' +
+      options.redirect;
+
+    // Email model
+    var Email = options.mailer || this.constructor.email || registry.getModelByType(loopback.Email);
+
+    // Set a default token generation function if one is not provided
+    var tokenGenerator = options.generateVerificationToken || User.generateVerificationToken;
+
+    tokenGenerator(user, function(err, token) {
+      if (err) { return fn(err); }
+
+      user.verificationToken = token;
+      user.save(function(err) {
+        if (err) {
+          fn(err);
+        } else {
+          sendEmail(user);
+        }
+      });
+    });
+
+    // TODO - support more verification types
+    function sendEmail(user) {
+      options.verifyHref += '&token=' + user.verificationToken;
+
+      options.text = options.text || 'Please verify your email by opening this link in a web browser:\n\t{href}';
+
+      options.text = options.text.replace('{href}', options.verifyHref);
+
+      options.to = options.to || user.email;
+
+      options.subject = options.subject || 'Thanks for Registering';
+
+      options.headers = options.headers || {};
+
+      var template = loopback.template(options.template);
+      options.html = template(options);
+
+      Email.send(options, function(err, email) {
+        if (err) {
+          fn(err);
+        } else {
+          fn(null, {email: email, token: user.verificationToken, uid: user.id});
+        }
+      });
+    }
+    return fn.promise;
+  };
+
+  /**
+   * A default verification token generator which accepts the user the token is
+   * being generated for and a callback function to indicate completion.
+   * This one uses the crypto library and 64 random bytes (converted to hex)
+   * for the token. When used in combination with the user.verify() method this
+   * function will be called with the `user` object as it's context (`this`).
+   *
+   * @param {object} user The User this token is being generated for.
+   * @param {Function} cb The generator must pass back the new token with this function call
+   */
+  User.generateVerificationToken = function(user, cb) {
+    crypto.randomBytes(64, function(err, buf) {
+      cb(err, buf && buf.toString('hex'));
+    });
+  };
+
+  /**
+   * Confirm the user's identity.
+   *
+   * @param {Any} userId
+   * @param {String} token The validation token
+   * @param {String} redirect URL to redirect the user to once confirmed
+   * @callback {Function} callback
+   * @param {Error} err
+   */
+  User.confirm = function(uid, token, redirect, fn) {
+    fn = fn || utils.createPromiseCallback();
+    this.findById(uid, function(err, user) {
+      if (err) {
+        fn(err);
+      } else {
+        if (user && user.verificationToken === token) {
+          user.verificationToken = undefined;
+          user.emailVerified = true;
+          user.save(function(err) {
+            if (err) {
+              fn(err);
+            } else {
+              fn();
+            }
+          });
+        } else {
+          if (user) {
+            err = new Error('Invalid token: ' + token);
+            err.statusCode = 400;
+            err.code = 'INVALID_TOKEN';
+          } else {
+            err = new Error('User not found: ' + uid);
+            err.statusCode = 404;
+            err.code = 'USER_NOT_FOUND';
+          }
+          fn(err);
+        }
+      }
+    });
+    return fn.promise;
+  };
+
+  /**
+   * Create a short lived acess token for temporary login. Allows users
+   * to change passwords if forgotten.
+   *
+   * @options {Object} options
+   * @prop {String} email The user's email address
+   * @callback {Function} callback
+   * @param {Error} err
+   */
+
+  User.resetPassword = function(options, cb) {
+    cb = cb || utils.createPromiseCallback();
+    var UserModel = this;
+    var ttl = UserModel.settings.resetPasswordTokenTTL || DEFAULT_RESET_PW_TTL;
+
+    options = options || {};
+    if (typeof options.email !== 'string') {
+      var err = new Error('Email is required');
+      err.statusCode = 400;
+      err.code = 'EMAIL_REQUIRED';
+      cb(err);
+      return cb.promise;
+    }
+
+    UserModel.findOne({ where: {email: options.email} }, function(err, user) {
+      if (err) {
+        return cb(err);
+      }
+      if (!user) {
+        err = new Error('Email not found');
+        err.statusCode = 404;
+        err.code = 'EMAIL_NOT_FOUND';
+        return cb(err);
+      }
+      // create a short lived access token for temp login to change password
+      // TODO(ritch) - eventually this should only allow password change
+      user.accessTokens.create({ttl: ttl}, function(err, accessToken) {
+        if (err) {
+          return cb(err);
+        }
+        cb();
+        UserModel.emit('resetPasswordRequest', {
+          email: options.email,
+          accessToken: accessToken,
+          user: user
+        });
+      });
+    });
+
+    return cb.promise;
+  };
+
+  /*!
+   * Hash the plain password
+   */
+  User.hashPassword = function(plain) {
+    this.validatePassword(plain);
+    var salt = bcrypt.genSaltSync(this.settings.saltWorkFactor || SALT_WORK_FACTOR);
+    return bcrypt.hashSync(plain, salt);
+  };
+
+  User.validatePassword = function(plain) {
+    if (typeof plain === 'string' && plain) {
+      return true;
+    }
+    var err =  new Error('Invalid password: ' + plain);
+    err.statusCode = 422;
+    throw err;
+  };
+
+  /*!
+   * Setup an extended user model.
+   */
+
+  User.setup = function() {
+    // We need to call the base class's setup method
+    User.base.setup.call(this);
+    var UserModel = this;
+
+    // max ttl
+    this.settings.maxTTL = this.settings.maxTTL || DEFAULT_MAX_TTL;
+    this.settings.ttl = this.settings.ttl || DEFAULT_TTL;
+
+    UserModel.setter.email = function(value) {
+      if (!UserModel.settings.caseSensitiveEmail) {
+        this.$email = value.toLowerCase();
+      } else {
+        this.$email = value;
+      }
+    };
+
+    UserModel.setter.password = function(plain) {
+      if (typeof plain !== 'string') {
+        return;
+      }
+      if (plain.indexOf('$2a$') === 0 && plain.length === 60) {
+        // The password is already hashed. It can be the case
+        // when the instance is loaded from DB
+        this.$password = plain;
+      } else {
+        this.$password = this.constructor.hashPassword(plain);
+      }
+    };
+
+    // Access token to normalize email credentials
+    UserModel.observe('access', function normalizeEmailCase(ctx, next) {
+      if (!ctx.Model.settings.caseSensitiveEmail && ctx.query.where && ctx.query.where.email) {
+        ctx.query.where.email = ctx.query.where.email.toLowerCase();
+      }
+      next();
+    });
+
+    // Make sure emailVerified is not set by creation
+    UserModel.beforeRemote('create', function(ctx, user, next) {
+      var body = ctx.req.body;
+      if (body && body.emailVerified) {
+        body.emailVerified = false;
+      }
+      next();
+    });
+
+    UserModel.remoteMethod(
+      'login',
+      {
+        description: 'Login a user with username/email and password.',
+        accepts: [
+          {arg: 'credentials', type: 'object', required: true, http: {source: 'body'}},
+          {arg: 'include', type: ['string'], http: {source: 'query' },
+            description: 'Related objects to include in the response. ' +
+            'See the description of return value for more details.'}
+        ],
+        returns: {
+          arg: 'accessToken', type: 'object', root: true,
+          description:
+            'The response body contains properties of the AccessToken created on login.\n' +
+            'Depending on the value of `include` parameter, the body may contain ' +
+            'additional properties:\n\n' +
+            '  - `user` - `{User}` - Data of the currently logged in user. (`include=user`)\n\n'
+        },
+        http: {verb: 'post'}
+      }
+    );
+
+    UserModel.remoteMethod(
+      'logout',
+      {
+        description: 'Logout a user with access token.',
+        accepts: [
+          {arg: 'access_token', type: 'string', required: true, http: function(ctx) {
+            var req = ctx && ctx.req;
+            var accessToken = req && req.accessToken;
+            var tokenID = accessToken && accessToken.id;
+
+            return tokenID;
+          }, description: 'Do not supply this argument, it is automatically extracted ' +
+            'from request headers.'
+          }
+        ],
+        http: {verb: 'all'}
+      }
+    );
+
+    UserModel.remoteMethod(
+      'confirm',
+      {
+        description: 'Confirm a user registration with email verification token.',
+        accepts: [
+          {arg: 'uid', type: 'string', required: true},
+          {arg: 'token', type: 'string', required: true},
+          {arg: 'redirect', type: 'string'}
+        ],
+        http: {verb: 'get', path: '/confirm'}
+      }
+    );
+
+    UserModel.remoteMethod(
+      'resetPassword',
+      {
+        description: 'Reset password for a user with email.',
+        accepts: [
+          {arg: 'options', type: 'object', required: true, http: {source: 'body'}}
+        ],
+        http: {verb: 'post', path: '/reset'}
+      }
+    );
+
+    UserModel.afterRemote('confirm', function(ctx, inst, next) {
+      if (ctx.args.redirect !== undefined) {
+        if (!ctx.res) {
+          return next(new Error('The transport does not support HTTP redirects.'));
+        }
+        ctx.res.location(ctx.args.redirect);
+        ctx.res.status(302);
+      }
+      next();
+    });
+
+    // default models
+    assert(loopback.Email, 'Email model must be defined before User model');
+    UserModel.email = loopback.Email;
+
+    assert(loopback.AccessToken, 'AccessToken model must be defined before User model');
+    UserModel.accessToken = loopback.AccessToken;
+
+    // email validation regex
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    UserModel.validatesFormatOf('email', {with: re, message: 'Must provide a valid email'});
+
+    // FIXME: We need to add support for uniqueness of composite keys in juggler
+    if (!(UserModel.settings.realmRequired || UserModel.settings.realmDelimiter)) {
+      UserModel.validatesUniquenessOf('email', {message: 'Email already exists'});
+      UserModel.validatesUniquenessOf('username', {message: 'User already exists'});
+    }
+
+    return UserModel;
+  };
+
+  /*!
+   * Setup the base user.
+   */
+
+  User.setup();
+
+};
+
+}).call(this,"/node_modules/loopback/common/models")
+},{"../../lib/loopback":150,"../../lib/utils":155,"assert":271,"bcrypt":275,"bcryptjs":11,"crypto":313,"debug":17,"path":371}],"loopback-boot":[function(require,module,exports){
+var execute = require('./lib/executor');
+
+/**
+ * The browser version of `bootLoopBackApp`.
+ *
+ * When loopback-boot is loaded in browser, the module exports this
+ * function instead of `bootLoopBackApp`.
+ *
+ * The function expects the boot instructions to be included in
+ * the browser bundle, see `boot.compileToBrowserify`.
+ *
+ * @param {Object} app The loopback app to boot, as returned by `loopback()`.
+ * @param {Object|string} [options] options as described in
+ * `boot.compileToBrowserify`.
+ *
+ * @header boot(app)
+ */
+
+exports = module.exports = function bootBrowserApp(app, options) {
+  // Only using options.id to identify the browserified bundle to load for
+  // this application. If no Id was provided, load the default bundle.
+  var moduleName = 'loopback-boot#instructions';
+  if (options && typeof options === 'object' && options.appId)
+    moduleName += '-' + options.appId;
+
+  // The name of the module containing instructions
+  // is hard-coded in lib/bundler
+  var instructions = require(moduleName);
+  execute(app, instructions);
+};
+
+exports.execute = execute;
+
+},{"./lib/executor":80}]},{},[]);
