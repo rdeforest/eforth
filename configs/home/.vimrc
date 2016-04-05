@@ -29,3 +29,5 @@ au BufNewFile,BufFilePre,BufRead *.md     set  filetype=markdown
 set tw=78
 
 set nofoldenable
+
+let g:vim_markdown_fenced_languages = ['coffee=coffee', 'vim=vim', 'c=c']

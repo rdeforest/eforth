@@ -1,1 +1,1 @@
-(Transform) ->
+module.exports = (Transform) ->

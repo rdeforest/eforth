@@ -1,1 +1,1 @@
-(IFunction) ->
+module.exports = (IFunction) ->
