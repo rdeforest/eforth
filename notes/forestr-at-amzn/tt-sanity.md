@@ -2,14 +2,15 @@
 
   - Lookout Team
     - Reduce ticket pain, unnecessary effort and interruptions
+
   - Lookout Customers
     - Reduce time-to-response, time-to-close
 
 # Plan
 
-  - Mass-tag current tickets as "unreviewed"
-    - (pretty sure there's a trick for this)
   - Institute review process (Can Bruce's tool help me here?)
+    - Mass-tag current tickets as "unreviewed"
+      - (pretty sure there's a trick for this)
     - Incidents
       - Is/was the incident actionable?
         - If so, could the issue have been prevented?
@@ -20,7 +21,11 @@
       - How long did the customer wait between their updates and ours?
       - Is this a recurring request?
 
-# Measures of success
+  - Start additional work based on ticket review
+
+# Measures of (ultimate) success
+
+(Does not apply to review process.)
 
   - Ticket age
   - Incident frequency

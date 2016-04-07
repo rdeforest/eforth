@@ -1,8 +1,10 @@
 # Customers
 
-  - Team
+  - Lookout Team
     - Reminder of focii
     - Quick reference
+    - Additional means of alarming
+      - Sudden jump in sev3 tickets?
 
   - Visitors
     - Talking point: "So what exactly would you say you do here?"
@@ -29,10 +31,7 @@
 
   - Just the HTML page with
     - Lookout ops dashboard (the fancy map page)
-    - top N tickets in tt
-    - top N items in sim
+    - tt, sim
+      - Graph of ticket counts (by sev, age, etc)
+      - top N tickets
 
-# Outstanding questions
-
-  - How will we measure success?
-    - "Rich and Andy love it"?
