@@ -19,10 +19,12 @@
 # MVP
 
   - Rich's dev box
-  - deconfigure display manager
-  - Setup daemon to run X and run Chrome in it in non-interactive mode
-    - Monitor Chrome and X somehow (?) and restart them as needed
-  - Simple HTML page 
+    - Minimal config change: should be fast to setup a new one
+    - deconfigure display manager
+    - Setup run just X and Chrome in non-interactive mode
+      - Monitor Chrome and X somehow (?) and restart them as needed
+  - create Chrome's home page
+    - Hosted in S3
     - iframe for each displayed page
     - scripting to flip through them
     - refresh frames while they're in the background to hide page load times
@@ -31,7 +33,7 @@
 
   - Just the HTML page with
     - Lookout ops dashboard (the fancy map page)
-    - tt, sim
+    - tt, sim summaries
       - Graph of ticket counts (by sev, age, etc)
       - top N tickets
 
