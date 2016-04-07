@@ -1,38 +1,32 @@
-# Config
-secondsPerFrame = 3
 
-hideFrame = (frame) -> frame.style.display = 'none'
-
-showFrame = (frame) -> frame.style.display = 'inherit'
-
-reloadFrame = (frame) ->
-  [url, refresh = 0] = frame.src.split '?'
-  refresh++
-  frame.src = url + '?' + refresh
+secondsPerFrame = 2
+framesShown     = 2
 
 
-startFlipping = ({frames, secondsPerFrame}) ->
-  interval = secondsPerFrame * 1000
+height = (Math.floor 100 / framesShown).toString() + "%"
 
-  nextFrame = ->
-    [prevFrame, curFrame, rest...] = frames
-    frames = [curFrame, rest..., prevFrame]
+getFrames = -> document.getElementsByTagName 'iframe'
 
-    console.log "flipping from #{prevFrame.src} to #{curFrame.src}"
+frameExtensions =
+  display: (v) -> @style.display = v; this
+  hide:        -> @display 'none'
+  show:        -> @display 'inherit'
+  bump:        -> @parentElement.appendChild this
+  refresh:     -> @src = "" + this.src; this
 
-    showFrame curFrame
-    hideFrame prevFrame
-    reloadFrame prevFrame
+proto = (getFrames()[0]).constructor.prototype
 
-  setInterval nextFrame, interval
+proto[name] = def for name, def of frameExtensions
 
-# start
-for frame in (frames = document.getElementsByTagName 'iframe')
-  frame.width = frame.height = "100%"
-  hideFrame frame
+rotateFrames = ->
+  firstFrame = (frames = getFrames())[0]
 
-showFrame frames[0]
+  frames[framesShown].show()
+  
+  frames[0].hide().bump().refresh()
 
-startFlipping {frames, secondsPerFrame}
+for f, i in getFrames()
+  f.style.height = height
+  f.hide() if i >= framesShown
 
-
+setInterval rotateFrames, secondsPerFrame * 1000
