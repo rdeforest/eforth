@@ -1,41 +1,38 @@
-resizeFrame = (frame) -> frame.width = frame.height = "100%"
+# Config
+secondsPerFrame = 3
 
 hideFrame = (frame) -> frame.style.display = 'none'
 
 showFrame = (frame) -> frame.style.display = 'inherit'
 
-hideAndResizeFrames = ->
-  frames = document.getElementsByTagName 'iframe'
+reloadFrame = (frame) ->
+  [url, refresh = 0] = frame.src.split '?'
+  refresh++
+  frame.src = url + '?' + refresh
 
-  for frame in frames
-    resizeFrame frame
-    hideFrame frame
-
-  frames
-
-frames = hideAndResizeFrames()
-showFrame frames[0]
-secondsPerFrame = 3
-task = null
 
 startFlipping = ({frames, secondsPerFrame}) ->
   interval = secondsPerFrame * 1000
 
-  curFrameIdx = prevFrameIdx = 0
-  curFrame = prevFrame = frames[curFrameIdx]
-
   nextFrame = ->
-    [prevFrameIdx, curFrameIdx] = [curFrameIdx, (curFrameIdx + 1) % frames.length]
-    [prevFrame, curFrame] = [curFrame, frames[curFrameIdx]]
+    [prevFrame, curFrame, rest...] = frames
+    frames = [curFrame, rest..., prevFrame]
 
     console.log "flipping from #{prevFrame.src} to #{curFrame.src}"
 
     showFrame curFrame
     hideFrame prevFrame
+    reloadFrame prevFrame
 
-  task = setInterval nextFrame, interval
+  setInterval nextFrame, interval
+
+# start
+for frame in (frames = document.getElementsByTagName 'iframe')
+  frame.width = frame.height = "100%"
+  hideFrame frame
+
+showFrame frames[0]
 
 startFlipping {frames, secondsPerFrame}
 
-window.frames = frames
-window.task = task
+
