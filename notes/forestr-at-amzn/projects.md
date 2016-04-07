@@ -5,15 +5,18 @@
       - ticket info
     - dev dashboard
       - project info
-  - tt sanity
-    - review, clean, summarize current queue
-    - monitor management automation (benderlib)
+
   - ops sanity
+    - tt sanity
+      - review, clean, summarize current queue
+      - monitor management automation (benderlib)
     - pop management automation
       - new pop
       - refresh
       - rename(?)
     - inventory database (cmdb)?
+
+  - dev sanity?:w
 
 # plans
 
