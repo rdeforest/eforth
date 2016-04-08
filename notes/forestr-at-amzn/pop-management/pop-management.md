@@ -12,12 +12,23 @@ changes in network traffic and to make business decisions.
 
 # POP life cycle
 
-  - Add POP
-  - Change software
-  - Change hardware
-  - Change config
-  - Troubleshoot issue
-  - Retire POP
+  - Add
+    - Hardware
+    - Software
+    - Monitoring
+    - Documentation
+  - Maintain
+    - Adapt to changing context and new knowledge
+      - Troubleshoot: internal or external change invalidated assumptions
+      - Change config
+      - Change software
+      - Change hardware
+    - Learn
+      - Compare predictions to reality, feed surprises into adaption
+  - Retire
+
+(None of the above is necessarily POP-specific. Should probably abstract it
+out to some meta-doc.)
 
 # Todo
 
