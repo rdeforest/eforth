@@ -14,6 +14,8 @@
   - PeakFlow (Arbor device)
     - Only at this place in the path to consume the data
     - Should/will move under Flowbucket
+    - Special case "on-net en-tras"
+      - Router -> Flowbucket
   - Flowbucket
     - Stores flow information in S3
     - distribution to multiple consumers, but we care about NFC
@@ -21,10 +23,6 @@
     - Health check -> Flowbalancer -> 'tee config' to S3 -> Flowbucket
     - Polls Router via SNMP to get real byte and packet counters
 
-Special case "on-net en-tras"
-
-  - Router
-  - Flowbucket
 
 # Inside the NFC
 
