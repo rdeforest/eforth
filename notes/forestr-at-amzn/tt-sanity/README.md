@@ -6,6 +6,18 @@
   - Lookout Customers
     - Reduce time-to-response, time-to-close
 
+# Measures of (ultimate) success
+
+(Does not apply to review process.)
+
+  - Ticket age reduction
+    - Implies less time spent revisiting the same ticket
+  - Incident frequency reduction
+    - Implies less time spent working tickets at all
+    - Exclude opened-as-closed tickets used for tracking? Are there any?
+  - Service Call response time reduction
+    - Implies improved customer experience
+
 # Plan
 
   - Institute review process (Can Bruce's tool help me here?)
@@ -23,9 +35,24 @@
 
   - Start additional work based on ticket review
 
-# Measures of (ultimate) success
+  - Consider continuing development of one-at-a-time ticket tool
 
-(Does not apply to review process.)
+# Next action
 
-  - Ticket age
-  - Incident frequency
+  - Review thoughts with Rich
+
+# Meta
+
+```json
+{
+  "name": "tt-sanity",
+  "status": "planning",
+  "dependencies": {
+    "forestrAccessRestored": {
+      "blocking": "2016-04-11"
+    }
+  }
+}
+```
+
+
