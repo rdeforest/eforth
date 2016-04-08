@@ -39,9 +39,3 @@ Special case "on-net en-tras"
 
   - Each stack is per-region
     - New routers point to the nearest stack
-
-# Questions
-
-  - CloudFront DNS?
-  - Other consumers of Flowbucket?
-    - Probably?
