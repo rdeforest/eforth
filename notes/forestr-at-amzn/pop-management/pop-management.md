@@ -40,4 +40,3 @@ out to some meta-doc.)
     - What do we have and why?
     - How do we know our config is good?
       - What is good? (80% util?)
-  - 
