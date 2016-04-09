@@ -34,7 +34,7 @@
   - surprise power tokens ruin your plans
  - Fallout / HuniePop cross-over fan fiction is illegal in 5 US states and territotires
  - If you can figure out how to correctly enter the Konamii Code
-  - You can onlock 'anal mode'
+  - You can unlock 'anal mode'
   - The voice actresses will all sleep with you
   - The Middle East will have long-lasting peace
  - i hurd you liek mudkips
