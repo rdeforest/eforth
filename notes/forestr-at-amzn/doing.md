@@ -1,14 +1,25 @@
 # Today
 
-## Meeting w/ Rich
+Now: Move notes
 
-  - Login status
-    - Andy got in touch with the right person to drive this.
-    - They will update Andy and he will text me when I am able to log in.
+## Planned
 
-  - Project updates
-    - See /^# Projects/ for specifics
-    - Anything I'm missing?
+  - Move my work from this week to internal source control
+  - Onboarding checklist and progress
+  - Start on tt-sanity
+  - Move my real desk and chair
+
+## Done
+
+### 2016-04-11
+
+  - Ops meeting
+  - Stand-up
+  - Progress cleaning up email
+  - Started moving project notes to internal locations
+
+
+### 2016-04-08
 
   - Plan for next week
     - Primary focus: onboarding, moving desk and monitors, etc
@@ -21,18 +32,9 @@
     - Preferred comms modes?
       - Status updates, etc
       - Sprints start Wednesday? Should I sync up to that schedule?
-    - Who is/are our PM(s)?
-
-## Planned
-
-  - If I get my access
-    - Move my work from this week to internal source control
-    - Start on tt-sanity
-
-## Done
 
   - Standup
-  - Onboarding session 3
+  - Onboarding session 3, 4
 
 # Projects
 
