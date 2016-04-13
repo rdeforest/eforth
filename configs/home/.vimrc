@@ -2,24 +2,24 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
-set smartindent
-set autoindent
-set expandtab
+set   smartindent
+set   autoindent
+set   expandtab
+set   modeline
+set nohls
+set nowrap
 
-set shiftwidth=2
-set softtabstop=2
-set background=dark
+set   shiftwidth=2
+set   softtabstop=2
+set   background=dark
 
-set ts=2
+set   linebreak
+set   showbreak=\ 
+set   ts=2
 
-set linebreak
-set showbreak=\ 
-
-set backspace=indent,eol,start
+set   backspace=indent,eol,start
 
 syntax on
-
-set modeline
 
 au BufNewFile,BufFilePre,BufRead *.md     set  filetype=markdown
 
@@ -27,3 +27,7 @@ au BufNewFile,BufFilePre,BufRead *.md     set  filetype=markdown
 " au BufNewFile,BufFilePre,BufRead *.coffee setl foldmethod=indent
 
 set tw=78
+
+set nofoldenable
+
+let g:vim_markdown_fenced_languages = ['coffee=coffee', 'vim=vim', 'c=c']

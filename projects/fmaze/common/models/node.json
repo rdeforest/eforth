@@ -1,0 +1,28 @@
+{
+  "name": "Node",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "maze": {
+      "type": "belongsTo",
+      "model": "Maze",
+      "foreignKey": ""
+    },
+    "edges": {
+      "type": "hasMany",
+      "model": "Edge",
+      "foreignKey": "fromId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

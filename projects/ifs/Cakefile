@@ -1,0 +1,121 @@
+fs   = require 'fs'
+path = require 'path'
+
+option '-v', '--verbose [level]', 'logging verbosity'
+
+clientDir = path.join __dirname, 'client'
+modelDir  = '.' + path.sep + path.join 'common', 'models'
+
+verbosity = 10
+
+log = (level, args...) ->
+  if level <= verbosity
+    console.log args...
+
+unlinkFile = (path) ->
+  new Promise (resolve, reject) ->
+    fs.unlink path, (err) ->
+      if err
+        reject err
+      else
+        resolve()
+
+scanModuleDir = (dirPath, prefix) ->
+  new Promise (resolve, reject) ->
+    fs.readdir dirPath, (err, dirEntries) ->
+      if err
+        return reject err
+
+      found = {}
+
+      for dirEnt in dirEntries
+        fullPath = path.join dirPath, dirEnt
+
+        if match = dirEnt.match /^(.*)([.](js|json|coffee))$/
+          [fullMatch, moduleName, extension] = match
+
+          if prefix
+            moduleName = prefix + path.sep + moduleName
+
+          found[moduleName] = fullPath
+
+      resolve found
+
+scanFileDir = (dirPath) ->
+  new Promise (resolve, reject) ->
+    fs.readdir dirPath, (err, dirEntries) ->
+      log 1, "dirPath", dirPath
+
+      if err
+        return reject err
+
+      found = []
+
+      for dirEnt in dirEntries
+        fullPath = path.join dirPath, dirEnt
+        expose = '..' + path.sep + fullPath
+        fullPath = '.' + path.sep + fullPath
+
+        if match = dirEnt.match /^(.*)([.](js|json|coffee))$/
+          found.push [fullPath, expose]
+
+      resolve found
+
+addDirsFiles = (bundle, dirPath) ->
+  scanFileDir dirPath
+    .then (found) ->
+      log 1, "Found: ", found
+
+      for [file, expose] in found
+        bundle.require file, expose: expose
+
+      return bundle
+
+addDirsModules = (bundle, dirPath, prefix) ->
+  scanModuleDir dirPath, prefix
+    .then (found) ->
+      for moduleName, modulePath of found
+        log 1, "Adding #{modulePath} as module #{moduleName}"
+        bundle.require modulePath, expose: moduleName
+
+      return bundle
+
+task 'build-client', (options) ->
+  verbosity = options.verbose or 0
+
+  browserify = require 'browserify'
+  coffeeify = require 'coffeeify'
+  boot = require 'loopback-boot'
+  _ = require 'underscore'
+
+  config = _.extend {}, {
+      dataSources: require './client/datasources.json'
+      models: require './client/model-config.json'
+      basedir: './server'
+      #appRootDir: __dirname
+      #appConfigRootDir: clientDir
+    },
+    require './package.json',
+    require './client/config.json',
+
+  bundle = browserify extensions: [ '.coffee' ], transform: [ coffeeify ]
+  bundleFile = path.join clientDir, 'client.bundle.js'
+
+  unlinkFile bundleFile
+    .catch (e) -> true
+    .then ->
+      bundle.require './client/client', expose: 'client'
+      bundle.require 'loopback-boot'
+
+      boot.compileToBrowserify config, bundle
+
+      log 1, "Bundle assembled, writing to #{bundleFile}"
+      out = fs.createWriteStream bundleFile
+      bStream = bundle.bundle()
+      bStream.pipe out
+        .on 'finish', -> log 1, "Finished writing bundle to #{bundleFile}"
+        .on 'error', (e) -> log 0, "Error writing bundle: #{e.stack}"
+    .catch (e) ->
+      log 0, "Promise error: #{e}, #{e.stack}"
+      
+
