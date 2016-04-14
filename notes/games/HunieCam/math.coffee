@@ -10,41 +10,97 @@ singletonConstructor = (fn) ->
     theOne = this
     fn.apply this, args
 
+
+class Building
+  constructor: (@startTime = 0.25, @maxTime = 4) ->
+    @uses = 0
+
+  nextUseTime: (girl) -> _.min [@maxTime, (@uses + 1) / 4]
+
+  use: (girl) -> @uses++
+
+
+class TrainingBuilding extends Building
+  constructor: (@skill) ->
+    super undefined, 8
+
+  nextUseTime: (girl) ->
+
+  use: (girl) -> girl[skill]++
+
+
+class ResourceBuilding extends Building
+  constructor: (maxTime) ->
+    super undefined, maxTime
+
+  nextUse: (girl) ->
+    timeCost: @nextUseTime girl
+
+
+class CamBuilding extends ResourceBuilding
+  constructor: ->
+    super 12
+
+  nextUse: (girl) ->
+    _.extend super girl,
+      money: girl.camGross()
+      fans: girl.camFans()
+
+
+class PhotoBuilding extends ResourceBuilding
+  constructor: ->
+    super 8
+
+  nextUse: (girl) ->
+    _.extend super girl,
+      fans: girl.photoFans()
+
+
 class Town
   constructor: singletonConstructor ->
-    for varName in 'camLevel ph'.split ' '
-    @camLevel = @photoLevel = 0
-    @addCam()
-    @addPhoto()
+    @cam = new CamBuilding
+    @photo = new PhotoBuilding
 
-  camUp: ->
-    @camLevel++
-    @camPower = (@camLevel + 3) / 4
-
-  photoUp: ->
-    @photoLevel++
-    @photoPower = (@photoLevel + 3) / 4
 
 class Hunie
-  constructor: (@name, @traits) ->
+  constructor: (@name, info) ->
+    {@traits, @skill, @style} = info
     @items = []
     @doing = []
     @minutesLeft = 0
     @skill = @style = 1
     @town = new Town
+    @time = 0
 
-  styleRate: [1..5].map (n) -> n**2 + n * 4
+  adjustIncome: (n) ->
+    fns = []
 
-  skillRate: [1..5].map (n) -> (n + 1) / 4
+    for item in @items
+      if item.adjustIncome
+        n = item.adjustIncome n, this
 
-  sessionPayRate: (style, skill) ->
-    2**(style + skill - 2)
+  itemGet:  (item) -> @items.push item
 
-  sessionGrossRate: (fans, skill, upgrades) ->
-    upgradeFactor = 1
-    fans * skillRate[skill] * upgradeFactor
+  itemLost: (item) -> @items = _(@items).without item
 
-  profitRate: (fans, skill, upgrades, style) ->
-    sessionGrossRate(fans, skill, upgrades) - sessionPayRate(style, skill)
+  level: -> @skill + @style - 2
 
-_(root).extend Hunie: Hunie
+  fansPerShoot: ->
+    @style ** 2 + @style * 4
+
+  skillRate: ->
+    @adjustFans
+    [1..5].map (n) -> (n + 1) / 4
+
+  sessionPayRate: ->
+    @adjustIncome 2 ** @level()) * pigFactor
+
+  camGross: ->
+    @fans * @skillRate() * @town.cam.power
+
+  camNet: ->
+    (@camGross()) - (@camPay(@town.cam.nextUseTime()))
+
+_(root).extend
+  Hunie: Hunie
+  Town: Town
