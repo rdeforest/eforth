@@ -38,3 +38,21 @@ Time in sessions?
 
 Session time increases by .25h EVERY time ANY girl does that kind of session
 up to some limit. 12h for cam, 8 for photo?
+
+Buildings
+  Training:
+    hours = (girl.skill + girl.style - 1) ...
+
+  skill style boutique strip club
+  1     1     1        1
+  1     2     5        2
+  2     1     2        5
+
+  Boutique:
+    startHours: 1
+    increment:
+  Strip Club:
+    startHours: 1
+    increment:
+
+
