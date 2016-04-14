@@ -1,0 +1,40 @@
+Photo upgrades
+  25% = 5 to 6, 12 to 15
+
+Item upgrades
+  Fetish "fans from photo shoot up 25%"
+    - 25% of _what_? How does it stack?
+    - It DOES stack
+
+  15 -> 18 tells us nothing
+  
+  21 -> 26 -> 32
+
+  2 style, butt plug, lvl2 photo studio = 18 fans per shoot
+  bump studio, 21
+
+n n^2+4n /4
+1  5     1
+2 12     3
+3 21     5
+4 32     8
+5 45     11
+
+
+Time in sessions?
+  day 7
+  Beli:
+    skill: 2
+    style: 1
+    fans: 206
+    camSesLen: 9.5
+    photoSesLen: 3.75
+  Kyanna:
+    skill: 1
+    style: 1
+    fans: 204
+    camSesLen: 9.25
+    photoSesLen: 4
+
+Session time increases by .25h EVERY time ANY girl does that kind of session
+up to some limit. 12h for cam, 8 for photo?
