@@ -1,3 +1,4 @@
+# Extends String to add padStart/right, padEnd/left and center
 _ = require 'underscore'
 fs = require 'fs'
 
@@ -8,10 +9,10 @@ _(String.prototype).extend
     else
       ''
 
-  padStart: (width, pad = ' ') ->
+  padStart: right = (width, pad = ' ') ->
     this + (pad.fillWidth width - @length)
 
-  padEnd: (width, pad = ' ') ->
+  padEnd: left = (width, pad = ' ') ->
     (pad.fillWidth width - @length) + this
 
   center: (width, pad = ' ') ->
@@ -19,34 +20,6 @@ _(String.prototype).extend
     middle = Math.floor diff / 2
     [ pad.fillWidth(middle), this, pad.fillWidth(diff - middle)].join ''
 
-fs.readFile 'girls.txt', (err, buffer) ->
-  console.log ''
-  lines = buffer.toString().split '\n'
-  girls = {}
-  traits = []
-
-  for info in lines
-    [girl, trait...] = info.split ' '
-    trait = trait
-      .filter (s) -> s.length
-      .join ' '
-
-    if trait
-      (girls[girl] or= {})[trait] = true
-      traits.push trait
-
-  paddedTraits = _(traits).uniq().map (s) -> s.center 11
-
-  console.log ''.padEnd(10) + paddedTraits.join ''
-
-  for girl, girlTraits of girls
-    line = girl.padEnd(9) + ': '
-
-    for trait in traits
-      if girl[trait]
-        line += 'X'.center 11
-      else
-        line += ''.padEnd 11
-
-    console.log line
-
+_(String.prototype).extend
+  left: left
+  right: right

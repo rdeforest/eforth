@@ -1,15 +1,5 @@
 _ = require 'underscore'
-
-singletonConstructor = (fn) ->
-  theOne = null
-
-  (args...) ->
-    if theOne
-      return theOne
-
-    theOne = this
-    fn.apply this, args
-
+singletonConstructor = require './singleton'
 
 class Building
   constructor: (@startTime = 0.25, @maxTime = 4) ->
