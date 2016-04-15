@@ -1,65 +1,37 @@
+_ = require 'underscore'
+formatting = require './formatting'
+
+
 module.exports = info =
   girls:
-    Aiko:
-      traits: [ 'Asian',      'Glasses'    ]
-      skill: 4, style: 2
-    Audrey:
-      traits: [ 'Flat Chest', 'Teen'       ]
-      skill: 2, style: 2
-    Beli:
-      traits: [ 'Asian',      'Chubby'     ]
-      skill: 2, style: 1
-    Brooke:
-      traits: [ 'Glasses',    'MILF'       ]
-      skill: 3, style: 5
-    Candace:
-      traits: [ 'Fit',        'Huge Tits'  ]
-      skill: 5, style: 3
-    Jessie:
-      traits: [ 'Chubby',     'MILF'       ]
-      skill: 5, style: 2
-    Kyanna:
-      traits: [ 'Latina',     'Thick Ass'  ]
-      skill: 1, style: 1
-    Lailani:
-      traits: [ 'Asian',      'Flat Chest' ]
-      skill: 3, style: 1
-    Lillian:
-      traits: [ 'Tattoos',    'Teen'       ]
-      skill: 2, style: 4
-    Lola:
-      traits: [ 'Ebony',      'Fit'        ]
-      skill: 3, style: 3
-    Marlena:
-      traits: [ 'Huge Tits',  'Latina'     ]
-      skill: 5, style: 5
-    Nadia:
-      traits: [ 'MILF',       'Tattoos'    ]
-      skill: 2, style: 2
-    Nikki:
-      traits: [ 'Glasses',    'Huge Tits'  ]
-      skill: 1, style: 1
-    Nora:
-      traits: [ 'Latina',     'Tattoos'    ]
-      skill: 2, style: 5
-    Renee:
-      traits: [ 'Ebony',      'Thick Ass'  ]
-      skill: 4, style: 4
-    Sarah:
-      traits: [ 'Chubby',     'Thick Ass'  ]
-      skill: 1, style: 3
-    Tiffany:
-      traits: [ 'Fit',        'Teen'       ]
-      skill: 1, style: 1
-    Zoey:
-      traits: [ 'Ebony',      'Flat Chest' ]
-      skill: 1, style: 2
+    Aiko:    skill: 4, style: 2 traits: [ 'Asian',      'Glasses'    ]
+    Lailani: skill: 3, style: 1 traits: [ 'Asian',      'Flat Chest' ]
+    Beli:    skill: 2, style: 1 traits: [ 'Asian',      'Chubby'     ]
+    Nikki:   skill: 1, style: 1 traits: [ 'Huge Tits',  'Glasses'    ]
+    Brooke:  skill: 3, style: 5 traits: [ 'MILF',       'Glasses'    ]
+    Zoey:    skill: 1, style: 2 traits: [ 'Ebony',      'Flat Chest' ]
+    Audrey:  skill: 2, style: 2 traits: [ 'Teen',       'Flat Chest' ]
+    Jessie:  skill: 5, style: 2 traits: [ 'MILF',       'Chubby'     ]
+    Sarah:   skill: 1, style: 3 traits: [ 'Thick Ass',  'Chubby'     ]
+    Kyanna:  skill: 1, style: 1 traits: [ 'Thick Ass',  'Latina'     ]
+    Marlena: skill: 5, style: 5 traits: [ 'Huge Tits',  'Latina'     ]
+    Candace: skill: 5, style: 3 traits: [ 'Huge Tits',  'Fit'        ]
+    Lola:    skill: 3, style: 3 traits: [ 'Ebony',      'Fit'        ]
+    Nadia:   skill: 2, style: 2 traits: [ 'MILF',       'Tattoos'    ]
+    Lillian: skill: 2, style: 4 traits: [ 'Teen',       'Tattoos'    ]
+    Nora:    skill: 2, style: 5 traits: [ 'Latina',     'Tattoos'    ]
+    Renee:   skill: 4, style: 4 traits: [ 'Thick Ass',  'Ebony'      ]
+    Tiffany: skill: 1, style: 1 traits: [ 'Teen',       'Fit'        ]
 
-info.traits = {}
+  # Get it?! "Showgirls"?! HAHAHAHA ugh
+  showGirls: ->
+    traits =
+      _(info.girls)
+        .map (girl) -> girl.traits
+        .flatten()
+        .uniq()
+    
+    paddedTraits =
 
-for name, girl of info.girls
-  for trait, idx in girl.traits
-    (girl.traits[idx] =
-      (info.traits[trait] or= []))
-        .push girl
+
 
