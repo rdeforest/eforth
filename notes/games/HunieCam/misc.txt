@@ -1,3 +1,11 @@
+NEWS
+
+  - Length of cam session is not global
+    - New 4/4 girl had 11h 30m time
+    - 1/1 girl who was second hired had 5h 22m time
+    - When a 2/2 girl finished her time for going back was 11h
+    - 1/1 girl above then still had time of 5h 22m
+
 Photo upgrades
   25% = 5 to 6, 12 to 15
 
