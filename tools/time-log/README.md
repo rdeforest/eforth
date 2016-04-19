@@ -3,17 +3,9 @@
 Based on method I use at work now in which I write my time log in valid
 CoffeeScript.
 
-```coffee
-module.exports = (logger = require '../index') ->
-  {q, year, month, day, start, stop} = logger
+## Syntax
 
-  year 2016,
-    month 04,
-      day 20,
-        start '16:25', 'demonstrating this format'
-        start '16:26', q.example = example: 'how to use the q object'
-        stop '16:27'
-```
+(See example-data.coffee)
 
 # Spec
 
@@ -25,7 +17,7 @@ are used to compose a log.
 
 ### Specifiers
 
-See console-log.coffee :)
+(See console-log.coffee)
 
 ### q
 
