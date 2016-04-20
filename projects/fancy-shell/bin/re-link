@@ -9,6 +9,8 @@ use warnings;
 use File::Basename;
 use Cwd;
 
+require "$ENV{HOME}/.fancy-env/config.pm";
+
 my $verbosity = 1;
 
 my $projectRoot = getProjectRoot();
