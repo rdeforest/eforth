@@ -8,8 +8,9 @@ use warnings;
 
 use File::Basename;
 use Cwd;
+use YAML;
 
-require "$ENV{HOME}/.fancy-env/config.pm";
+my $config = YAML->from "$ENV{HOME}/.fancy-env/config.pm";
 
 my $verbosity = 1;
 
