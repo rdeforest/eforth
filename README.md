@@ -4,10 +4,13 @@
 
 ## Self
 
-### Mechanical
+See github/rdeforest/rdeforest
 
-### Temporal
+## writing
 
-### Emotional
+## music
 
-## Relationships
+## learning
+
+## ideas
+
