@@ -18,6 +18,7 @@ class Trait
     {traits} = info
 
     @girls = []
+    @fans = 0
 
     if traits[@name]
       realMe = traits[@name]
@@ -65,24 +66,24 @@ class Girl
 girlData =
   Beli:    name: 'Beli',    skill: 2, style: 1, traits: [ 'Asian',      'Chubby'     ]
   Aiko:    name: 'Aiko',    skill: 4, style: 2, traits: [ 'Asian',      'Glasses'    ]
-  Lailani: name: 'Lailani', skill: 3, style: 1, traits: [ 'Asian',      'Flat Chest' ]
-  Audrey:  name: 'Audrey',  skill: 2, style: 2, traits: [ 'Teen',       'Flat Chest' ]
+  Lailani: name: 'Lailani', skill: 3, style: 1, traits: [ 'Asian',      'Flat_Chest' ]
+  Audrey:  name: 'Audrey',  skill: 2, style: 2, traits: [ 'Teen',       'Flat_Chest' ]
   Lillian: name: 'Lillian', skill: 2, style: 4, traits: [ 'Teen',       'Tattoos'    ]
   Tiffany: name: 'Tiffany', skill: 1, style: 1, traits: [ 'Teen',       'Fit'        ]
 
   Jessie:  name: 'Jessie',  skill: 5, style: 2, traits: [ 'MILF',       'Chubby'     ]
-  Sarah:   name: 'Sarah',   skill: 1, style: 3, traits: [ 'Thick Ass',  'Chubby'     ]
-  Nikki:   name: 'Nikki',   skill: 1, style: 1, traits: [ 'Huge Tits',  'Glasses'    ]
+  Sarah:   name: 'Sarah',   skill: 1, style: 3, traits: [ 'Thick_Ass',  'Chubby'     ]
+  Nikki:   name: 'Nikki',   skill: 1, style: 1, traits: [ 'Huge_Tits',  'Glasses'    ]
   Brooke:  name: 'Brooke',  skill: 3, style: 5, traits: [ 'MILF',       'Glasses'    ]
-  Zoey:    name: 'Zoey',    skill: 1, style: 2, traits: [ 'Ebony',      'Flat Chest' ]
+  Zoey:    name: 'Zoey',    skill: 1, style: 2, traits: [ 'Ebony',      'Flat_Chest' ]
   Nadia:   name: 'Nadia',   skill: 2, style: 2, traits: [ 'MILF',       'Tattoos'    ]
   Nora:    name: 'Nora',    skill: 2, style: 5, traits: [ 'Latina',     'Tattoos'    ]
-  Candace: name: 'Candace', skill: 5, style: 3, traits: [ 'Huge Tits',  'Fit'        ]
+  Candace: name: 'Candace', skill: 5, style: 3, traits: [ 'Huge_Tits',  'Fit'        ]
   Lola:    name: 'Lola',    skill: 3, style: 3, traits: [ 'Ebony',      'Fit'        ]
 
-  Kyanna:  name: 'Kyanna',  skill: 1, style: 1, traits: [ 'Thick Ass',  'Latina'     ]
-  Marlena: name: 'Marlena', skill: 5, style: 5, traits: [ 'Huge Tits',  'Latina'     ]
-  Renee:   name: 'Renee',   skill: 4, style: 4, traits: [ 'Ebony',      'Thick Ass'  ]
+  Kyanna:  name: 'Kyanna',  skill: 1, style: 1, traits: [ 'Thick_Ass',  'Latina'     ]
+  Marlena: name: 'Marlena', skill: 5, style: 5, traits: [ 'Huge_Tits',  'Latina'     ]
+  Renee:   name: 'Renee',   skill: 4, style: 4, traits: [ 'Ebony',      'Thick_Ass'  ]
 
 for name, girl of girlData
   console.log girl
@@ -118,6 +119,8 @@ _.extend info,
       return morePals
 
 _.extend info.utils,
+    girls: info.girls
+    traits: info.traits
     pickPosition: pickPosition = (x, y, cell) ->
       ( if x or not y
           cell.center
