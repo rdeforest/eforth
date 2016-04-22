@@ -1,10 +1,12 @@
 # What .. what is this?!
 
-I'm trying to create a Node module for simplifying the development of apps based on a streamed interface.
+I'm trying to create a Node module for simplifying the development of apps
+based on a streamed interface.
 
 # Assumptions
 
-In-band protocol is line-based. Out-of-band protocol starts with a negotiated binary signal and then looks like JSON. Details below.
+In-band protocol is line-based. Out-of-band protocol starts with a negotiated
+binary signal and then looks like JSON. Details below.
 
 # Binary protocol
 

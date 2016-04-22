@@ -1,5 +1,13 @@
 #!/usr/bin/perl
 
+=pod
+
+Directory de-duping tool. Re-write in CoffeeScript! :)
+
+=cut
+
+
+
 use strict;
 use warnings;
 
