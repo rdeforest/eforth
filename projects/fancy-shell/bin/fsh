@@ -1,0 +1,39 @@
+#!coffee
+
+###
+
+    Fancy Shell control program
+
+Examples:
+
+    fsh init                # create a skeleton .fsh directory here
+
+    fsh config option value
+
+    fsh ignore somePath     # add somePath to .fsh/ignore
+
+    fsh backup              # copy actual files to the git working directory,
+                            # commit and push
+
+    fsh restore             # copy git working directory to live location
+
+    fsh status              # summary of diff between real and git versions
+
+    fsh repo                # echo full path to .fsh/git
+
+###
+
+{env, argv} = process = require 'process'
+fs = require 'fs'
+
+_ = require 'underscore'
+byline = require 'byline'
+
+requested = deriveIntent {env, argv}
+
+if requested.error
+  requested.explainError()
+else
+  requested.proceed()
+
+deriveIntend = ({env, argv}) ->
