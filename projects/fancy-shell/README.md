@@ -53,7 +53,8 @@ things by default.
 
     $ vi .bashrc
     # ... 
-    $ .fsh/bin/backup
+    $ fsh backup
     (git diff output, then)
     Proceed anyway? (Y/n) Y
-    $ 
+    $ rm .bashrc
+    $ fsh restore
