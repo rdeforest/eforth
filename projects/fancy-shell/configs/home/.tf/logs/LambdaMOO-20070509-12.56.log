@@ -1,0 +1,2104 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 121 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             13 new messages
+    *Core-DB-Issues (#8175)              40 new messages
+    *Site-Issues (#72243)                7 new messages
+Last connected Sat Apr 28 09:37:45 2007 PDT from dsl081-175-048.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+It's the current issue of the LambdaMOO Times, dated Thu Mar 22, 2007.
+
+Thursday, March 22, 2007
+REAPERS ELECTION RESULTS
+   The election to fill vacancies on the LambdaMOO Elected Undertakers and Executors has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        49        18         7   *   active (#91798)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+
+(end)
+===== *Server-Hackers (#24451) (13 messages) =
+
+Message 1095 on *Server-Hackers (#24451):
+Date:     Sat Sep 23 20:02:11 2006 PDT
+From:     Anodos (#21528)
+To:       *Server-Hackers (#24451)
+Subject:  *MOO-2
+
+I've created the *MOO-2 mailing list to discuss the design of a second-generation MOO server. All welcome.
+
+Anodos
+--------------------------
+Message 1096 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:34:38 2006 PDT
+From:     Radish (#60072)
+To:       *Server-Hackers (#24451)
+Subject:  *MOO-2
+
+ >design of a second-generation MOO server.
+
+Hasn't Linden Labs done a pretty good job of what is essentially a modern moo?
+--------------------------
+Message 1097 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:47:03 2006 PDT
+From:     Sleeper (#98232)
+To:       *Server-Hackers (#24451)
+
+Linden Labs "Second Life" is, indead, not a bad approximation of a modern MOO.
+--------------------------
+Message 1098 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:48:27 2006 PDT
+From:     Sleeper (#98232)
+To:       *Server-Hackers (#24451)
+
+And what a nice slip, because Second Life's archictecture is a dead end :)
+--------------------------
+Message 1099 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 17:29:24 2006 PDT
+From:     Quad (#105557)
+To:       *Server-Hackers (#24451)
+
+How is it a dead end?
+--------------------------
+Message 1100 on *Server-Hackers (#24451):
+Date:     Tue Sep 26 10:44:30 2006 PDT
+From:     Biafra (#61504)
+To:       Sleeper (#98232) and *Server-Hackers (#24451)
+
+>  And what a nice slip, because Second Life's archictecture is a
+>  dead end :)
+
+They let the users fly (as the @join and @go)... So, where's the virtual reality ? It would be better to get a flying device (or have to buy one). That was consistent.
+--------------------------
+Message 1101 on *Server-Hackers (#24451):
+Date:     Tue Sep 26 10:46:40 2006 PDT
+From:     Sleeper (#98232)
+To:       Biafra (#61504) and *Server-Hackers (#24451)
+
+>  Date:     Tue Sep 26 10:44:30 2006 PDT
+>  From:     Biafra (#61504)
+>  To:       Sleeper (#98232) and *Server-Hackers (#24451)
+>  
+>  >  And what a nice slip, because Second Life's archictecture is a
+>  >  dead end :)
+>  
+>  They let the users fly (as the @join and @go)... So, where's the
+>  virtual reality ? It would be better to get a flying device (or
+>  have to buy one). That was consistent.
+
+Architecture.   How and where their machines/networks are set up.
+--------------------------
+Message 1102 on *Server-Hackers (#24451):
+Date:     Thu Sep 28 12:46:59 2006 PDT
+From:     Quad (#105557)
+To:       *Server-Hackers (#24451)
+
+So: a) because their physics model doesn't match "reality" b) because of some unspecified architecture reasons. Strong arguments. ;-)
+--------------------------
+Message 1103 on *Server-Hackers (#24451):
+Date:     Fri Sep 29 22:47:06 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+SL's main problem is the permissions model on the code and objects, LambdaMOO's model is much more mature and, dare I say, secure for use in a multi-user environment.  In LambdaMOO, authors have complete control over who can create descendents and who can read their code (and thus copy).  Everything being effectively setuid in LambdaMOO means there is not much way to destroy things that are not yours.  You need to trust other programmers/designers in SL more so than in Lambda.  You mainly only need to trust your Player Class programmer(s) in LambdaMOO.  The programming model is completely event based, even simple things like calling functions end up looking and acting like triggering events.  I find it difficult to properly keep track of state this way when you have a complex action.  This may just be the language's LISP-esque nature influencing me (I have still not fully wrapped my head around functional programming other than in javascript, which I still program procedurally).  I also have not logged into SL in like 5 months or so, so what I'm remembering might be somewhat off.
+--------------------------
+Message 1104 on *Server-Hackers (#24451):
+Date:     Sun Oct  1 21:01:11 2006 PDT
+From:     Radish (#60072)
+To:       *Server-Hackers (#24451)
+
+Event model based system is a very good thing. It really isn't that hard, just break down each interaction.
+As to the security model, I expect it is a significant effort. I loved the hack I read about that
+shot everyone 10,000 feet into the air. But, funny only once. ;-)
+--------------------------
+Message 1105 on *Server-Hackers (#24451):
+Date:     Fri Oct  6 00:00:15 2006 PDT
+From:     Anodos (#21528)
+To:       *Server-Hackers (#24451) and *Wizard-List (#6428)
+Subject:  Re: Backspace problems
+
+I have written a small patch for the Lambda server which fixes the backspace problem I commented about some months ago. I have uploaded it to the Sourceforge page. Whoever is running the Lambda server these days, could you please apply this patch? It would make life easier for many newcomers.
+
+Anodos
+
+>  I often hang out in the Coat Closet and as such I meet many new
+>  guests, on the MOO for the first time. Almost uniformly, they have
+>  problems with backspace, due to using the telnet program in
+>  Windows.
+>  
+>  Now I know we're all sensible anti-Microsoft snobs, and we know
+>  the REAL solution is for MS to fix things at their end, but in the
+>  meantime a lot of potential players are suffering for no good
+>  reason. Would it be very difficult to modify the server so that it
+>  intercepts ^H's and processes the input string appropriately?
+>  
+>  Anodos
+--------------------------
+Message 1106 on *Server-Hackers (#24451):
+Date:     Wed Mar 14 16:38:13 2007 PDT
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+I'm writing something that calls toliteral() on every non-STR element of a list, putting the results into another list.  Doing this on even slightly long lists is chewing up lots of seconds of CPU time.  Same behaviour if I call tostr() instead.  Thing is, putting literal strings into a list takes practically no CPU time, and calling toliteral() the same number of times but without putting the result into a list also takes practically no CPU time.  Why is this?
+
+;; a={}; for f in [1..3000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 15002 ticks, 1 second.]
+;; a={}; for f in [1..4000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 20002 ticks, 3 seconds.]
+;; a={}; for f in [1..5000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 25002 ticks, 5 seconds.]
+;; a={}; for f in [1..3000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 9002 ticks, 1 second.]
+;; a={}; for f in [1..4000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 12002 ticks, 1 second.]
+;; a={}; for f in [1..5000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 15002 ticks, 1 second.]
+;; for f in [1..3000] i=toliteral("aaaaa");endfor
+=> 0
+[used 12001 ticks, 0 seconds.]
+;; for f in [1..4000] i=toliteral("aaaaa");endfor
+=> 0
+[used 16001 ticks, 0 seconds.]
+;; for f in [1..5000] i=toliteral("aaaaa");endfor
+=> 0
+[used 20001 ticks, 0 seconds.]
+--------------------------
+Message 1107 on *Server-Hackers (#24451):
+Date:     Tue Mar 20 11:48:15 2007 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+The case where you both call toliteral AND put it in a list allocates and uses lots of new memory.  Calling toliteral alone over and over allocates it but frees it so the CPU churns on the same data.  Appending literal strings is just like appending literal ints -- you have a list of the same string a zillion times.  You could try a={@a, "aaaaa"+""} to see the memory effect without the builtin call.
+--------------------------
+
+===== *Core-DB-Issues (#8175) (40 messages) ==
+
+Message 5040 on *Core-DB-Issues (#8175):
+Date:     Sat Aug 19 12:07:52 2006 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  mail system and parentheses
+
+Here are some small changes, made at YibMOO awhile back, that make it so the mail system doesn't have to remove "(" and ")" when displaying player names, nor go through as many contortions when searching for object numbers in address fields.  So people can have things like "(R)" in their names.  But $player_db:available has been changed so a player can't get a name that contains a string matching "(#[0-9]+)".
+
+- Change $mail_agent:parse_address_field to look for (#[0-9]+) instead of searching back and forth for ")" and "(#".
+- Change $mail_agent:from_msg_seq, $big_mail_recipient:from_msg_seq, and $new_prog_log:receive_message to call $mail_agent:parse_address_field instead of searching for parentheses.
+- Change $player_db:available and $player_db:why_bad_name to prohibit names that contain (#[0-9]+).
+- Change $mail_agent:name so it removes substrings matching (#[0-9]+) and no longer removes all "(" and ")"
+
+*** $mail_agent:parse_address_field(old)
+--- $mail_agent:parse_address_field
+***************
+*** 4,7 ****
+  string = args[1];
+! while (e = index(string, ")"))
+!   if ((s = rindex(string[1..e], "(#")) && (#0 != (o = toobj(string[s + 2..e - 1]))))
+      objects = {@objects, o};
+--- 4,8 ----
+  string = args[1];
+! while (m = match(string, "(#[0-9]+)"))
+!   {s, e} = m[1..2];
+!   if (#0 != (o = toobj(string[s + 1..e - 1])))
+      objects = {@objects, o};
+
+*** $mail_agent:from_msg_seq(old)
+--- $mail_agent:from_msg_seq
+***************
+*** 13,17 ****
+      fromline = msg[2][2];
+!     if (toobj(fromline[rindex(fromline, "(") + 1..rindex(fromline, ")") - 1]) in plist)
+        fseq = $seq_utils:add(fseq, i, i);
+      endif
+    else
+--- 13,19 ----
+      fromline = msg[2][2];
+!     for f in ($mail_agent:parse_address_field(fromline))
+!       if (f in plist)
+          fseq = $seq_utils:add(fseq, i, i);
+        endif
++     endfor
+    else
+
+*** $mail_agent:name(old)
+--- $mail_agent:name
+***************
+*** 8,9 ****
+  endif
+! return tostr(strsub(strsub(name, "(", ""), ")", ""), " (", what, ")");
+--- 8,13 ----
+  endif
+! while (m = match(name, "(#[0-9]+)"))
+!   {s, e} = m[1..2];
+!   name[s..e] = "";
+! endwhile
+! return tostr(name, " (", what, ")");
+
+*** $big_mail_recipient:from_msg_seq(old)
+--- $big_mail_recipient:from_msg_seq
+***************
+*** 17,21 ****
+        fromline = msg[4];
+!       if (toobj(fromline[rindex(fromline, "(") + 1..rindex(fromline, ")") - 1]) in plist)
+          fseq = $seq_utils:add(fseq, i, i);
+        endif
+        i = i + 1;
+--- 17,23 ----
+        fromline = msg[4];
+!       for f in ($mail_agent:parse_address_field(fromline))
+!         if (f in plist)
+            fseq = $seq_utils:add(fseq, i, i);
+          endif
++       endfor
+        i = i + 1;
+
+*** $new_prog_log:receive_message(old)
+--- $new_prog_log:receive_message
+***************
+*** 14,16 ****
+    if (index(m[4], "@programmer ") == 1)
+!     m = {m[1], toobj(args[2]), o = toobj(m[4][rindex(m[4], "(") + 1..rindex(m[4], ")") - 1]), o.name};
+    endif
+--- 14,16 ----
+    if (index(m[4], "@programmer ") == 1)
+!     m = {m[1], toobj(args[2]), o = $mail_agent:parse_address_field(m[4])[1], o.name};
+    endif
+
+*** $player_db:available(old)
+--- $player_db:available
+***************
+*** 9,10 ****
+--- 9,12 ----
+    return 0;
++ elseif (match(name, "(#[0-9]+)"))
++   return 0;
+  elseif (valid(who = this:find_exact(name)) && is_player(who))
+
+*** $player_db:why_bad_name(old)
+--- $player_db:why_bad_name
+***************
+*** 13,14 ****
+--- 13,16 ----
+    return tostr("You may not begin a name with the \"", "*#()"[i], "\" character.");
++ elseif (match(name, "(#[0-9]+)"))
++   return tostr("A name can't contain a parenthesized object number.");
+  elseif (name in $player_db.stupid_names)
+--------------------------
+Message 5041 on *Core-DB-Issues (#8175):
+Date:     Sun Sep  3 09:05:33 2006 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: mail system and parentheses
+
+Finally got around to implementing this.  Are there any players whose names are affected?  Hope it all works...  Test it out!
+--------------------------
+Message 5042 on *Core-DB-Issues (#8175):
+Date:     Fri Oct 13 16:34:19 2006 PDT
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  Who wrote the core?
+
+A guest was asking me this in the Closet today and it got me curious. Does anyone know who wrote the fundamentals of the core? Haakon presumably. Did any of the other wizzes have a large hand in it? I know everybody has contributed bits and pieces over the ages, but I was wondering who lay out the base design.
+
+Anodos
+--------------------------
+Message 5043 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 15 17:37:18 2006 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  MCP 2.1
+
+Has anyone attempted to add MCP 2.1 to Lambda? Are there any major obstacles?
+
+Anodos
+--------------------------
+Message 5044 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 01:01:53 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Warning: Next Post Long
+
+Posting script mod for #322:@arb-p in next post.  Sorry about the length (148 lines of code).
+--------------------------
+Message 5045 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 01:03:16 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175) and Paragraph (#122534)
+Subject:  #322:@arb-p
+
+The following is modified code for #322:@arb-p.  It allows you to do review nomination petitions with indexing sequences similar to that of the mail system.
+
+@edit #322:@arb-p
+del 1-$
+enter
+"Syntax:  @arb-petitions [all|first:<# of petitions>|last:<# of petitions>|<index1>-<index2>]";
+"         ;this:list_arb_petitions([\"all|first:<# of petitions>|last:<# of petitions>|<index1>-<index2>\"])";
+"";
+"Prints a list of all office nominating petitions that have not been declined by you in tabular form, showing each petition's candidate, object number, mailing-list name, and signature count, along with an indication of whether or not you have signed it.  ";
+"";
+"If the argument `all' is given, all office petitions, including declined ones, are listed.";
+"If given an argument such as first:10 or last:10, prints first or last 10 petitions as specified.  Can also use indexes such as 1-50.";
+{su, lu} = {$string_utils, $list_utils};
+if (verb[2..4] == "ARB")
+  core = $local.arb_pet_core;
+elseif (verb[2..7] == "Reaper")
+  core = $local.reaper_pet_core;
+elseif (verb[2..10] == "Registrar")
+  core = $local.registrar_pet_core;
+else
+  return player:tell("Unrecognized office!  Tell a wizard.");
+endif
+range = {};
+if (length(args) > 1)
+  player:notify($code_utils:verb_usage()[1]);
+  return;
+elseif (!args || args[1] != "all")
+  if (args && length(seq = su:explode(args[1], ":")) == 2)
+    if (seq[1] == "first")
+      vlist = su:to_value(seq[2]);
+      if (vlist[1])
+        range = {1, vlist[2]};
+      endif
+    elseif (seq[1] == "last")
+      vlist = su:to_value(seq[2]);
+      if (vlist[1])
+        range = {-1 * vlist[2], 0};
+      endif
+    endif
+  elseif (args && length(seq = su:explode(args[1], "-")) == 2)
+    clist = lu:map_arg(su, "to_value", seq);
+    if (lu:slice(clist) == {1, 1})
+      range = lu:slice(clist, 2);
+    endif
+  elseif (!args)
+    range = {1, 0};
+  endif
+  if (!range)
+    player:notify($code_utils:verb_usage()[1]);
+    return;
+  endif
+  pets = {};
+  for p in (core.active_petitions)
+    "    try";
+    if (!(player in p.decliners))
+      pets = {@pets, p};
+    endif
+    "    except (E_PROPNF, E_INVIND)";
+    "      core.active_petitions = setremove(core.active_petitions, p);";
+    "    endtry";
+  endfor
+elseif (index("all", args[1]) == 1)
+  pets = core.active_petitions;
+else
+  player:notify($code_utils:verb_usage()[1]);
+  return;
+endif
+if (!pets)
+  player:notify(tostr("There are no active ", core.election_name, " petitions", args == {"all"} ? "" | " that you have not declined", "."));
+  return;
+endif
+"...sorting...";
+order = this:petition_option("petition_order") || "created";
+keys = {};
+if (order == "signed")
+  "...sort petitions by number of signatures...";
+  for p in (pets)
+    keys = {@keys, -length(p.signers)};
+  endfor
+elseif (order == "vetted")
+  "...sort petitions in vetting order...";
+  for p in (pets)
+    keys = {@keys, -p.vetted};
+  endfor
+elseif (order == "written")
+  "...sort petitions in writing order...";
+  for p in (pets)
+    keys = {@keys, -p.last_edit_time};
+  endfor
+elseif (order == "stages")
+  "...sort petitions into stages...";
+  qualified = qualified_keys = accepted = accepted_keys = {};
+  unaccepted = unaccepted_keys = {};
+  for p in (pets)
+    if ($object_utils:isa(p, core.ballot))
+      qualified = {@qualified, p};
+      qualified_keys = {@qualified_keys, -p.last_edit_time};
+    elseif (p.author in p.signers)
+      accepted = {@accepted, p};
+      accepted_keys = {@accepted_keys, -length(p.signers)};
+    else
+      unaccepted = {@unaccepted, p};
+      unaccepted_keys = {@unaccepted_keys, -length(p.signers)};
+    endif
+    $command_utils:suspend_if_needed(0);
+  endfor
+  qualified = lu:sort_suspended(0, qualified, qualified_keys);
+  accepted = lu:sort_suspended(0, accepted, accepted_keys);
+  unaccepted = lu:sort_suspended(0, unaccepted, unaccepted_keys);
+  pets = {@qualified, @accepted, @unaccepted};
+endif
+if (keys)
+  pets = lu:sort(pets, keys);
+endif
+if (range)
+  pets = $seq_utils:extract({range[1] >= 0 ? range[1] | length(pets) + range[1] + 1, range[2] ? range[2] + 1 | length(pets) + 1}, pets);
+endif
+"...";
+owidth = 7;
+nwidth = 20;
+non_cwidth = 1 + 2 + 1 + 1 + 0 + 2 + owidth + 2 + nwidth + 2 + 4 + 2 + 4;
+cwidth = max(player:linelen() - non_cwidth, 20);
+player:notify(tostr("*  ", "R ", su:left("Candidate", cwidth), "  ", su:left("ObjNum", owidth), "  ", su:left("Mail Name", nwidth), "  Msgs  Sigs"));
+player:notify(tostr("-  ", "- ", su:left("---------", cwidth), "  ", su:left("------", owidth), "  ", su:left("---------", nwidth), "  ----  ----"));
+for p in (pets)
+  star = player in p.signers ? "*" | (player in p.decliners ? "-" | " ");
+  reelect = p.author in core.lame_ducks ? "R" | " ";
+  candidate = su:nn(p.author);
+  candidate = candidate[1..min(cwidth, $)];
+  objnum = tostr(p);
+  p:mail_name();
+  mname = "*" + core.petition_prefix + "-P:" + p.name;
+  mname = mname[1..min(nwidth, $)];
+  subscribed = this:get_current_message(p) ? "+" | " ";
+  authorized = p.author in p.signers ? " " | "?";
+  player:notify(tostr(star, authorized, " ", reelect, " ", su:left(candidate, cwidth), "  ", su:left(objnum, owidth), "  ", su:left(mname, nwidth), "  ", su:right(p:length_all_msgs(), 3), subscribed, "  ", su:right(length(p.signers), 4)));
+  $command_utils:suspend_if_needed(0);
+endfor
+player:notify("");
+player:notify("* = signed by you, + = subscribed to mailing list, - = declined by you.");
+player:notify("R = nominee for re-election, ? = not signed by nominee.");
+player:notify(tostr("A total of ", core.signature_threshold, " signatures are needed to qualify a candidate for the ballot."));
+nseats = core.nmembers - length(core.members) + length(core.lame_ducks);
+player:notify(tostr("There ", nseats == 1 ? "is " | "are ", nseats, " vacant seat", nseats == 1 ? "" | "s", "."));
+player:notify(tostr("The nominating period for this election ", time() < core:nominations_closing_time() ? tostr("ends on ", core:pretty_time(core:nominations_closing_time()), ", which is ", su:from_seconds(core:nominations_closing_time() - time()), " from now") | "has already ended", "."));
+"Paragraph (#122534) - Sun Dec 3, 2006 - Changed the three $list_utils:sort calls circa line 102 to use :sort_suspended instead. This, to handle everyone in the MOO being @nominated. How democratic.";
+"- Also added an extra :suspend_if_needed circa line 100, for extra measure.";
+"active (#91798) - Mon Dec 4, 2006 - Added lines 18, 22-46, 110-112 for indexing to manage sorting thru the huge number of nomination petitions.";
+.
+com
+--------------------------
+Message 5046 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 19:28:38 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798), *Core-DB-Issues (#8175), and Paragraph (#122534)
+Subject:  Re: #322:@arb-p
+
+Implemented.
+--------------------------
+Message 5047 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 21:20:07 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: #322:@arb-p
+
+Thanks for the quick implement.  The improvements seem to be working.
+--------------------------
+Message 5049 on *Core-DB-Issues (#8175):
+Date:     Mon Dec 11 22:05:09 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  @arb-p signed
+
+As per 8150 on *oldsocialissues, I am posting a modification to the nomination petition listing verb to add an option to display only those signed by the nominee.  Kudos to Ice-wizard (#78039) for the suggestion.
+
+@edit #322:@arb-p
+s /all/all|signed/ 1-2
+s /args[1] != "all"/!(args[1] in {"all", "signed"})/ 22
+ins 59
+enter
+elseif (index("signed", args[1]) == 1)
+  for p in (core.active_petitions)
+    if (!(player in p.decliners) && (p.author in p.signers))
+      pets = {@pets, p};
+    endif
+  endfor
+.
+s /102/108/ 147
+s /100/106/ 148
+s /110-112/116-118/ 149
+ins $ ""- Mon Dec 11, 2006 - Added lines 59-64 to do: @arb-p signed";
+com
+--------------------------
+Message 5050 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 06:20:20 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Implemented.
+--------------------------
+Message 5051 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 10:52:39 2006 PST
+From:     active (#91798)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Hrm, missed a variable setting (pets = {}; needs to be before first if).  Please fix with the following:
+
+@edit #322:@arb-p
+m 47 to 18
+com
+--------------------------
+Message 5052 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 13:55:31 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Fixed.
+--------------------------
+Message 5053 on *Core-DB-Issues (#8175):
+Date:     Sat Jan  6 22:55:50 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  bug in $string_utils:abbreviated_value
+
+Under certain conditions, abbreviated_value will return {...} even though there's room to show part of the list.
+
+;; for i in [6..8] for width in [20..23]  player:tell($string_utils:abbreviated_value($list_utils:range(1,i), width)); endfor endfor
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, ...}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, ...}
+{...}
+{...}
+{1, 2, 3, 4, 5, 6, ...}
+
+I think the fix (in $string_utils:_abbreviated_value) is to move lastpos = 1; (line 17) to be before the while loop, rather than being executed at the beginning of each iteration of the loop.  That fixes this bug, but I haven't tested other conditions yet.
+--------------------------
+Message 5054 on *Core-DB-Issues (#8175):
+Date:     Sat Feb  3 08:45:36 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Sorting @grepcore
+
+Change in $wiz:@grepcore:
+
+10:  $code_utils:(regexp ? "find_verbs_matching" | "find_verbs_containing")(pattern, $core_objects());
+
+To:
+
+10:  $code_utils:(regexp ? "find_verbs_matching" | "find_verbs_containing")(pattern, $list_utils:sort($core_objects()));
+--------------------------
+Message 5055 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 07:58:37 2007 PST
+From:     Nosredna (#2487)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+That takes 25K tickes.  You sure it's a good idea?
+--------------------------
+Message 5057 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 14:06:03 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+$core_objects() takes 13958 ticks.
+$list_utils:sort($core_objects()) takes 20580 ticks
+
+Tick increase: 6622 with the current core.
+--------------------------
+Message 5058 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 14:48:57 2007 PST
+From:     Nosredna (#2487)
+To:       Tidus (#110777) and *Core-DB-Issues (#8175)
+
+I wonder if the right thing then is to change line 68 of $core_objects to "insert into sorted list" (possibly writing such a procedure).  Seems like one of the N's is already in place.
+--------------------------
+Message 5059 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 15:37:26 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+#0:core_objects
+
+Change line 9 to {l_u, @core_objects} = {$list_utils};
+
+Delete line 68, add:
+
+    insert = l_u:find_insert(core_objects, v);
+    core_objects = {@core_objects[1..insert-1], v, @core_objects[insert..$]};
+
+Tick increase: 6319.
+--------------------------
+Message 5060 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 18:38:45 2007 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+
+Since the return value of #0:core_objects doesn't change much, you could just cache a sorted copy and then check that the sorted copy has the same elements as the unsorted copy.
+
+sorted = this.cache;
+unsorted = $core_objects();
+if (!$set_utils:equal(sorted, unsorted))
+  sorted = $list_utils:sort(unsorted);
+  this.cache = sorted;
+endif
+return sorted;
+
+Anodos
+--------------------------
+Message 5061 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 19:48:41 2007 PST
+From:     Nosredna (#2487)
+To:       Anodos (#21528) and *Core-DB-Issues (#8175)
+
+Wouldn't that be hugely ticky too?  The point is not to sort it every time!  Quite possibly having a cache would be good, but then we should USE it rather than fussing with it each time.  Maybe have some verb to update it, or a nightly task, or something?  I dunno, maybe this is silly.  Why did you want it sorted anyway?
+--------------------------
+Message 5062 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 20:12:46 2007 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+
+>  Date:     Sun Feb  4 19:48:41 2007 PST
+>  From:     Nosredna (#2487)
+>  To:       Anodos (#21528) and *Core-DB-Issues (#8175)
+>  
+>  Wouldn't that be hugely ticky too?  The point is not to sort it
+>  every time!  Quite possibly having a cache would be good, but then
+>  we should USE it rather than fussing with it each time.  Maybe
+>  have some verb to update it, or a nightly task, or something?  I
+>  dunno, maybe this is silly.  Why did you want it sorted anyway?
+
+It doesn't sort it every time. Just when $core_objects() has changed from one call to the next. The call to equals() only takes about 1000 ticks overhead, compared to ~6000 if you sort every time. 
+--------------------------
+Message 5063 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 20:17:01 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+Or you could cache an unsorted value along with the sorted one and compare it for just a couple of ticks.
+--------------------------
+Message 5064 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:00:13 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  Re: Sorting @grepcore
+
+The tick-overhead was one reason why I suggested making the change in @grepcore rather than in $core_objects(). Limited usage limits the cost, while still yielding increased usefulness with the results, saving the wizard the unmeasured time needed to scan (occasionally long) unsorted results.
+
+Alternatively I suppose, $core_objects() could prop-store its results along with a date stamp ({time(), sorted-result}), then include an age check at its top to either use or update the results. Clumsy, but how often do the results of $core_objects() actually change?
+--------------------------
+Message 5065 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:34:45 2007 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Heh, we could put a check in @property and @rmprop to see if it's adding to #0, and if so, update a sorted $core_objects list.
+--------------------------
+Message 5066 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:48:35 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Heh, yeah. I'm guessing @prop is called considerably more often than @grepcore or mcd combined, though. Lots of wee bites are better than one big'un?
+
+Off the top of my head...
+
+if (in_mcd)
+  ..
+elseif (core_obj_prop[1] < time() - (freq = $local.core_update_frequency ? freq | hard-value))
+  return core_obj_prop[2]
+endif
+..
+if (verb == "core_object_info")
+  ..
+else
+  "... what most people care about";
+  core_obj_prop = {time(), core_objects};
+  return core_objects;
+endif
+
+Rough, unpolished but should illustrate what I meant.
+--------------------------
+Message 5067 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:56:28 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Er, I meant...
+
+  core_obj_prop = {time(), core_objects = $list_utils:sort(core_objects)};
+
+...of course.
+--------------------------
+Message 5068 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:17:14 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+The posting and reading of messages on *core-db about the ticks used by sort for @grepcore (and, heh, the testing to put numbers in those posts) probably dwarfs the number of ticks that would actually be used by people using @grepcore in the next year...
+--------------------------
+Message 5069 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:20:39 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  Another tick comment
+
+A line like:
+
+core_objects = {@core_objects[1..insert-1], v, @core_objects[insert..$]};
+
+takes way more *ticks* than using listinsert() even though the end result is the same.
+--------------------------
+Message 5070 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:36:57 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  And finally a less ticky but less desirable solution...
+
+Perhaps this version, which takes 15532 ticks (up only 1574 from $core_objects()) will illustrate why I disdain saving ticks:
+
+;;n = $list_utils:map_builtin($core_objects(), "tonum"); s={}; while(n) next=min(@n); n=setremove(n,next); s={@s,toobj(next)}; endwhile; return s
+
+(the least-ticky solution will always be the one that makes builtins do as much work as possible!)
+--------------------------
+Message 5071 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 10 05:25:32 2007 PST
+From:     Loufah (#116455)
+To:       *Core-DB-Issues (#8175)
+
+You could also make sort() a builtin!
+--------------------------
+Message 5072 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 10 13:45:14 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+Yes, I'll make it a builtin that takes 20000 ticks per call!  MUAHAHAHA
+--------------------------
+Message 5074 on *Core-DB-Issues (#8175):
+Date:     Wed Feb 14 17:14:26 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  $generic_editor:yank
+
+In the editor:
+>yank from #3
+generic room (#3)
+
+The error message should be "generic room (#3) doesn't seem to be a note."
+
+Fix: in $generic_editor:yank, change
+76:    player:notify($string_utils:nn(iobj), " doesn't seem to be a note.");
+to
+76:    player:notify(tostr($string_utils:nn(iobj), " doesn't seem to be a note."));
+--------------------------
+Message 5075 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 17 13:00:23 2007 PST
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: $generic_editor:yank
+
+Fixed.
+--------------------------
+Message 5076 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 10:41:40 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime, and the Feb shuffle
+
+Suggest changing @uptime to:
+
+player:notify(tostr($network.MOO_name, " has been up for ", $time_utils:english_time(time() - $last_restart_time), "."));
+
+Slightly more accurate, since $last_restart_time refers to the db's last boot time, which doesn't always coincide with the server's uptime.
+
+Also, I just watched @uptime do its February shuffle again (the results losing days in changing over to March) and before digging into it (before losing interest again) wanted to check if anyone's already tackled that beast.
+--------------------------
+Message 5077 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:37:34 2007 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: @uptime, and the Feb shuffle
+
+Maybe it should display both times (server uptime and database uptime)...?
+--------------------------
+Message 5078 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:43:42 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+I don't think there's a way for the server to find out when it started.
+--------------------------
+Message 5079 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:52:50 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+To get the correct english time, give $time_utils:english_time a 2nd arg, $last_restart_time.  You want $time_utils:english_time to do its computations using the time at which the interval started.
+--------------------------
+Message 5080 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 18:26:11 2007 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime
+
+I made the mod to say $network.MOO_name.  I don't understand the reference time thing.  It seems to give the same results.
+--------------------------
+Message 5081 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 22:31:57 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime
+
+> I don't understand the reference time thing.  It seems to give the same results.
+
+Right now, it'll give the same results with or without the reftime argument, because the uptime is between 1 and 2 months and both January and March have the same number of days.
+
+But if we simulate - by giving :english_time a 2nd argument, which it will use instead of time() - what it was like yesterday, when it was February, we get an interval that's off by a few days:
+
+;ctime($last_restart_time)
+=> "Tue Jan 23 18:57:56 2007 PST"
+
+;; t=time(); player:tell(ctime(t)); return $time_utils:english_time(t - $last_restart_time, t)
+Thu Mar  1 22:28:33 2007 PST
+=> "1 month, 6 days, 3 hours, 30 minutes, and 37 seconds"
+
+;; t=time()-86400; player:tell(ctime(t)); return $time_utils:english_time(t - $last_restart_time, t)
+Wed Feb 28 22:28:34 2007 PST
+=> "1 month, 8 days, 3 hours, 30 minutes, and 38 seconds"
+--------------------------
+Message 5082 on *Core-DB-Issues (#8175):
+Date:     Fri Mar  2 06:16:56 2007 PST
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: @uptime
+
+OK, $last_restart_time given as reftime too, now that I understand why.
+--------------------------
+
+===== *Site-Issues (#72243) (7 messages) =====
+
+Message 64 on *Site-Issues (#72243):
+Date:     Sat Nov 25 04:15:28 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243)
+Subject:  clock fun
+
+So if anybody knows an easy & reasonably safe (read: hardware independent) way to get NTP to violate its slew limitation of 1s/2000s so that I can burn off this extra hour in something *WAY* less than 2 months, I'm all ears.  
+
+Otherwise it looks like I get to take this machine down for about an 1 hour.
+--------------------------
+Message 65 on *Site-Issues (#72243):
+Date:     Sat Nov 25 06:15:05 2006 PST
+From:     Drippy (#109564)
+To:       *Site-Issues (#72243)
+
+I've never had trouble with stopping processes, running ntpdate, and rebooting. Or just rebooting and resetting the hardware clock on a PC.
+--------------------------
+Message 66 on *Site-Issues (#72243):
+Date:     Sat Nov 25 12:20:49 2006 PST
+From:     stucky (#108696)
+To:       *Site-Issues (#72243)
+Subject:  re: clock fun
+
+man ntpdate
+
+-B
+    Force the time to always be slewed using the adjtime() system call, even if the measured offset is greater than +-128 ms. The default is to step the time using settimeofday() if the offset is greater than +-128 ms. Note that, if the offset is much greater than +-128 ms in this case, that it can take a long time (hours) to slew the clock to the correct value. During this time. the host should not be used to synchronize clients. 
+-b
+    Force the time to be stepped using the settimeofday() system call, rather than slewed (default) using the adjtime() system call. This option should be used when called from a startup file at boot time. 
+--------------------------
+Message 67 on *Site-Issues (#72243):
+Date:     Sun Nov 26 00:06:10 2006 PST
+From:     some_name (#88206)
+To:       *Site-Issues (#72243), *Unix (#3338), and Rog (#4292)
+Subject:  LamdaMOO clock "fix"(?), etc.
+
+RE: news 846, @peek 64 on *Site-Issues (#72243), et. seq.
+
+If it's running on some *NIX flavor (e.g. LINUX, Solaris, HP-UX, ...),
+one can typically skew the clock at a maximum rate of up to +-10%.
+E.g.:
+o terminate any running [x]ntp[d] process.
+o use the appropriate command, option(s), and option argument(s) for
+  your *NIX flavor to speed up or slow down the system clock to its
+  maximum skew rate (e.g. date -u, adjtimex, etc.)
+o If the skewing doesn't automatically go away when the clock is quite
+  close to the correct time (e.g. with adjtimex), readjust the running
+  system clock speed to run at normal speed (or at least quite close to
+  it).
+o restart [x]ntp[d] daemon process.
+
+This is generally a feasible approach for offsets that aren't *too
+large* (e.g. several hours or less), but generally infeasible for large
+offsets (e.g. months or more of clock error).  It also comes in handy to
+recover [x]ntp[d] from unstable equilibrium situations (where it's 
+diverging from, rather than converging to, the correct time).
+
+I've also got some scripts I've used to at least semi-automate this 
+process.
+--------------------------
+Message 68 on *Site-Issues (#72243):
+Date:     Sun Nov 26 00:43:22 2006 PST
+From:     Rog (#4292)
+To:       some_name (#88206) and *Site-Issues (#72243)
+Subject:  Re: LamdaMOO clock "fix"(?), etc.
+
+We're on debian (sarge).  And, ironically, I'd just finished reading the tickadj manpage right before I saw this note.  But thank you; this appears to be the Right Thing.
+
+I'm still not clear on why ntpd/ntpdate can't do this (or rather do it, but only over the course of months given the apparently-hard-coded limit of 0.5% slew) since it seems like the sort of thing that would come up fairly often.  Oh well, problem solved (knock wood).
+--------------------------
+Message 69 on *Site-Issues (#72243):
+Date:     Sun Nov 26 03:42:19 2006 PST
+From:     some_name (#88206)
+To:       *Site-Issues (#72243) and Rog (#4292)
+Subject:  Re: LamdaMOO clock "fix"(?), etc.
+
+The basic NTP documentation is pretty good, but many of the noteworthy
+details are buried within the source code, or otherwise not quite so
+conveniently available.  There are, however, apparently some good books
+on NTP ... and short of much digging into source code, they're probably
+rather necessary for covering many of the finer points.  These are at
+least two that I'm aware of:
+http://www.apress.com/book/bookDisplay.html?bID=429
+http://www.eecis.udel.edu/~mills/book.html
+
+And here's an example script (normalized here for average default 
+values, and using pool.ntp.org. - probably preferable to pick a 
+specific NTP server for more consistent convergence).  Also, this 
+example is for Debian GNU/Linux 3.1 "Sarge", and on a system with the 
+hardware clock set to UTC.
+
+#!/bin/sh
+umask 077 && cd / && batch << \__EOT__
+#!/bin/sh
+umask 077 || exit
+cd / || exit
+
+ntpserver=pool.ntp.org.
+hwclock_opt=--utc
+#hwclock_opt=--localtime
+#ntprc=/etc/init.d/ntp
+ntprc=/etc/init.d/ntp-server
+nominal_frequency=0
+nominal_tick=10000
+
+>>/dev/null "$ntprc" stop || exit
+
+min_frequency=-6553600
+max_frequency=6553600
+min_tick=9000
+max_tick=11000
+
+while :
+do
+    sign=
+    set -- `ntpdate -u -q "$ntpserver" | awk '
+        /^.* *offset -*[0-9][0-9]*\.[0-9][0-9]* sec$/ {
+            i=int($(NF-1)*10)
+            if(i>=0){print i}
+            else{print "-", -1 * i;}
+            exit(0);
+        }'`
+    [ X"$1" = X- ] && { sign=-; shift; }
+    case X"$1" in
+        X[1-9]*)
+            if [ X"$sign" = X- ]; then
+                adjtimex --tick "$min_tick" --frequency "$min_frequency"
+            else
+                adjtimex --tick "$max_tick" --frequency "$max_frequency"
+            fi
+            sleep "$1"
+        ;;
+        X0)
+            adjtimex --tick "$nominal_tick" --frequency "$nominal_frequency"
+            (
+                umask 022 &&
+                "$ntprc" start
+                sleep 600
+                hwclock $hwclock_opt --systohc
+            )
+            exit
+        ;;
+        *)
+            adjtimex --tick "$nominal_tick" --frequency "$nominal_frequency"
+            sleep 300
+        ;;
+    esac
+done
+__EOT__
+--------------------------
+Message 70 on *Site-Issues (#72243):
+Date:     Wed Dec  6 17:07:52 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243)
+Subject:  new server version
+
+LambdaMOO is now back on the bleeding edge, having incorporated all of the most recent fixes, including the one I just added today to make backspace now actually do something vaguely useful (thanks, Blob -- I suppose, strictly speaking, the Correct Answer there would be to implement full-blown telnet negotiation, but this will do for now...).
+--------------------------
+
+===== End of new mail ========================
+Did you get all of that? [Enter `yes' or `no']
+Last-read-dates not updated
+< connected: Crag. Total: 122 >
+I don't understand that.
+===== *Server-Hackers (#24451) (13 messages) =
+
+Message 1095 on *Server-Hackers (#24451):
+Date:     Sat Sep 23 20:02:11 2006 PDT
+From:     Anodos (#21528)
+To:       *Server-Hackers (#24451)
+Subject:  *MOO-2
+
+I've created the *MOO-2 mailing list to discuss the design of a second-generation MOO server. All welcome.
+
+Anodos
+--------------------------
+Message 1096 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:34:38 2006 PDT
+From:     Radish (#60072)
+To:       *Server-Hackers (#24451)
+Subject:  *MOO-2
+
+ >design of a second-generation MOO server.
+
+Hasn't Linden Labs done a pretty good job of what is essentially a modern moo?
+--------------------------
+Message 1097 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:47:03 2006 PDT
+From:     Sleeper (#98232)
+To:       *Server-Hackers (#24451)
+
+Linden Labs "Second Life" is, indead, not a bad approximation of a modern MOO.
+--------------------------
+Message 1098 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 16:48:27 2006 PDT
+From:     Sleeper (#98232)
+To:       *Server-Hackers (#24451)
+
+And what a nice slip, because Second Life's archictecture is a dead end :)
+--------------------------
+Message 1099 on *Server-Hackers (#24451):
+Date:     Sun Sep 24 17:29:24 2006 PDT
+From:     Quad (#105557)
+To:       *Server-Hackers (#24451)
+
+How is it a dead end?
+--------------------------
+Message 1100 on *Server-Hackers (#24451):
+Date:     Tue Sep 26 10:44:30 2006 PDT
+From:     Biafra (#61504)
+To:       Sleeper (#98232) and *Server-Hackers (#24451)
+
+>  And what a nice slip, because Second Life's archictecture is a
+>  dead end :)
+
+They let the users fly (as the @join and @go)... So, where's the virtual reality ? It would be better to get a flying device (or have to buy one). That was consistent.
+--------------------------
+Message 1101 on *Server-Hackers (#24451):
+Date:     Tue Sep 26 10:46:40 2006 PDT
+From:     Sleeper (#98232)
+To:       Biafra (#61504) and *Server-Hackers (#24451)
+
+>  Date:     Tue Sep 26 10:44:30 2006 PDT
+>  From:     Biafra (#61504)
+>  To:       Sleeper (#98232) and *Server-Hackers (#24451)
+>  
+>  >  And what a nice slip, because Second Life's archictecture is a
+>  >  dead end :)
+>  
+>  They let the users fly (as the @join and @go)... So, where's the
+>  virtual reality ? It would be better to get a flying device (or
+>  have to buy one). That was consistent.
+
+Architecture.   How and where their machines/networks are set up.
+--------------------------
+Message 1102 on *Server-Hackers (#24451):
+Date:     Thu Sep 28 12:46:59 2006 PDT
+From:     Quad (#105557)
+To:       *Server-Hackers (#24451)
+
+So: a) because their physics model doesn't match "reality" b) because of some unspecified architecture reasons. Strong arguments. ;-)
+--------------------------
+Message 1103 on *Server-Hackers (#24451):
+Date:     Fri Sep 29 22:47:06 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+SL's main problem is the permissions model on the code and objects, LambdaMOO's model is much more mature and, dare I say, secure for use in a multi-user environment.  In LambdaMOO, authors have complete control over who can create descendents and who can read their code (and thus copy).  Everything being effectively setuid in LambdaMOO means there is not much way to destroy things that are not yours.  You need to trust other programmers/designers in SL more so than in Lambda.  You mainly only need to trust your Player Class programmer(s) in LambdaMOO.  The programming model is completely event based, even simple things like calling functions end up looking and acting like triggering events.  I find it difficult to properly keep track of state this way when you have a complex action.  This may just be the language's LISP-esque nature influencing me (I have still not fully wrapped my head around functional programming other than in javascript, which I still program procedurally).  I also have not logged into SL in like 5 months or so, so what I'm remembering might be somewhat off.
+--------------------------
+Message 1104 on *Server-Hackers (#24451):
+Date:     Sun Oct  1 21:01:11 2006 PDT
+From:     Radish (#60072)
+To:       *Server-Hackers (#24451)
+
+Event model based system is a very good thing. It really isn't that hard, just break down each interaction.
+As to the security model, I expect it is a significant effort. I loved the hack I read about that
+shot everyone 10,000 feet into the air. But, funny only once. ;-)
+--------------------------
+Message 1105 on *Server-Hackers (#24451):
+Date:     Fri Oct  6 00:00:15 2006 PDT
+From:     Anodos (#21528)
+To:       *Server-Hackers (#24451) and *Wizard-List (#6428)
+Subject:  Re: Backspace problems
+
+I have written a small patch for the Lambda server which fixes the backspace problem I commented about some months ago. I have uploaded it to the Sourceforge page. Whoever is running the Lambda server these days, could you please apply this patch? It would make life easier for many newcomers.
+
+Anodos
+
+>  I often hang out in the Coat Closet and as such I meet many new
+>  guests, on the MOO for the first time. Almost uniformly, they have
+>  problems with backspace, due to using the telnet program in
+>  Windows.
+>  
+>  Now I know we're all sensible anti-Microsoft snobs, and we know
+>  the REAL solution is for MS to fix things at their end, but in the
+>  meantime a lot of potential players are suffering for no good
+>  reason. Would it be very difficult to modify the server so that it
+>  intercepts ^H's and processes the input string appropriately?
+>  
+>  Anodos
+--------------------------
+Message 1106 on *Server-Hackers (#24451):
+Date:     Wed Mar 14 16:38:13 2007 PDT
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+I'm writing something that calls toliteral() on every non-STR element of a list, putting the results into another list.  Doing this on even slightly long lists is chewing up lots of seconds of CPU time.  Same behaviour if I call tostr() instead.  Thing is, putting literal strings into a list takes practically no CPU time, and calling toliteral() the same number of times but without putting the result into a list also takes practically no CPU time.  Why is this?
+
+;; a={}; for f in [1..3000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 15002 ticks, 1 second.]
+;; a={}; for f in [1..4000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 20002 ticks, 3 seconds.]
+;; a={}; for f in [1..5000] a={@a, toliteral("aaaaa")}; endfor
+=> 0
+[used 25002 ticks, 5 seconds.]
+;; a={}; for f in [1..3000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 9002 ticks, 1 second.]
+;; a={}; for f in [1..4000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 12002 ticks, 1 second.]
+;; a={}; for f in [1..5000] a={@a, "\"aaaaa\""}; endfor
+=> 0
+[used 15002 ticks, 1 second.]
+;; for f in [1..3000] i=toliteral("aaaaa");endfor
+=> 0
+[used 12001 ticks, 0 seconds.]
+;; for f in [1..4000] i=toliteral("aaaaa");endfor
+=> 0
+[used 16001 ticks, 0 seconds.]
+;; for f in [1..5000] i=toliteral("aaaaa");endfor
+=> 0
+[used 20001 ticks, 0 seconds.]
+--------------------------
+Message 1107 on *Server-Hackers (#24451):
+Date:     Tue Mar 20 11:48:15 2007 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+The case where you both call toliteral AND put it in a list allocates and uses lots of new memory.  Calling toliteral alone over and over allocates it but frees it so the CPU churns on the same data.  Appending literal strings is just like appending literal ints -- you have a list of the same string a zillion times.  You could try a={@a, "aaaaa"+""} to see the memory effect without the builtin call.
+--------------------------
+
+===== *Core-DB-Issues (#8175) (40 messages) ==
+
+Message 5040 on *Core-DB-Issues (#8175):
+Date:     Sat Aug 19 12:07:52 2006 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  mail system and parentheses
+
+Here are some small changes, made at YibMOO awhile back, that make it so the mail system doesn't have to remove "(" and ")" when displaying player names, nor go through as many contortions when searching for object numbers in address fields.  So people can have things like "(R)" in their names.  But $player_db:available has been changed so a player can't get a name that contains a string matching "(#[0-9]+)".
+
+- Change $mail_agent:parse_address_field to look for (#[0-9]+) instead of searching back and forth for ")" and "(#".
+- Change $mail_agent:from_msg_seq, $big_mail_recipient:from_msg_seq, and $new_prog_log:receive_message to call $mail_agent:parse_address_field instead of searching for parentheses.
+- Change $player_db:available and $player_db:why_bad_name to prohibit names that contain (#[0-9]+).
+- Change $mail_agent:name so it removes substrings matching (#[0-9]+) and no longer removes all "(" and ")"
+
+*** $mail_agent:parse_address_field(old)
+--- $mail_agent:parse_address_field
+***************
+*** 4,7 ****
+  string = args[1];
+! while (e = index(string, ")"))
+!   if ((s = rindex(string[1..e], "(#")) && (#0 != (o = toobj(string[s + 2..e - 1]))))
+      objects = {@objects, o};
+--- 4,8 ----
+  string = args[1];
+! while (m = match(string, "(#[0-9]+)"))
+!   {s, e} = m[1..2];
+!   if (#0 != (o = toobj(string[s + 1..e - 1])))
+      objects = {@objects, o};
+
+*** $mail_agent:from_msg_seq(old)
+--- $mail_agent:from_msg_seq
+***************
+*** 13,17 ****
+      fromline = msg[2][2];
+!     if (toobj(fromline[rindex(fromline, "(") + 1..rindex(fromline, ")") - 1]) in plist)
+        fseq = $seq_utils:add(fseq, i, i);
+      endif
+    else
+--- 13,19 ----
+      fromline = msg[2][2];
+!     for f in ($mail_agent:parse_address_field(fromline))
+!       if (f in plist)
+          fseq = $seq_utils:add(fseq, i, i);
+        endif
++     endfor
+    else
+
+*** $mail_agent:name(old)
+--- $mail_agent:name
+***************
+*** 8,9 ****
+  endif
+! return tostr(strsub(strsub(name, "(", ""), ")", ""), " (", what, ")");
+--- 8,13 ----
+  endif
+! while (m = match(name, "(#[0-9]+)"))
+!   {s, e} = m[1..2];
+!   name[s..e] = "";
+! endwhile
+! return tostr(name, " (", what, ")");
+
+*** $big_mail_recipient:from_msg_seq(old)
+--- $big_mail_recipient:from_msg_seq
+***************
+*** 17,21 ****
+        fromline = msg[4];
+!       if (toobj(fromline[rindex(fromline, "(") + 1..rindex(fromline, ")") - 1]) in plist)
+          fseq = $seq_utils:add(fseq, i, i);
+        endif
+        i = i + 1;
+--- 17,23 ----
+        fromline = msg[4];
+!       for f in ($mail_agent:parse_address_field(fromline))
+!         if (f in plist)
+            fseq = $seq_utils:add(fseq, i, i);
+          endif
++       endfor
+        i = i + 1;
+
+*** $new_prog_log:receive_message(old)
+--- $new_prog_log:receive_message
+***************
+*** 14,16 ****
+    if (index(m[4], "@programmer ") == 1)
+!     m = {m[1], toobj(args[2]), o = toobj(m[4][rindex(m[4], "(") + 1..rindex(m[4], ")") - 1]), o.name};
+    endif
+--- 14,16 ----
+    if (index(m[4], "@programmer ") == 1)
+!     m = {m[1], toobj(args[2]), o = $mail_agent:parse_address_field(m[4])[1], o.name};
+    endif
+
+*** $player_db:available(old)
+--- $player_db:available
+***************
+*** 9,10 ****
+--- 9,12 ----
+    return 0;
++ elseif (match(name, "(#[0-9]+)"))
++   return 0;
+  elseif (valid(who = this:find_exact(name)) && is_player(who))
+
+*** $player_db:why_bad_name(old)
+--- $player_db:why_bad_name
+***************
+*** 13,14 ****
+--- 13,16 ----
+    return tostr("You may not begin a name with the \"", "*#()"[i], "\" character.");
++ elseif (match(name, "(#[0-9]+)"))
++   return tostr("A name can't contain a parenthesized object number.");
+  elseif (name in $player_db.stupid_names)
+--------------------------
+Message 5041 on *Core-DB-Issues (#8175):
+Date:     Sun Sep  3 09:05:33 2006 PDT
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: mail system and parentheses
+
+Finally got around to implementing this.  Are there any players whose names are affected?  Hope it all works...  Test it out!
+--------------------------
+Message 5042 on *Core-DB-Issues (#8175):
+Date:     Fri Oct 13 16:34:19 2006 PDT
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  Who wrote the core?
+
+A guest was asking me this in the Closet today and it got me curious. Does anyone know who wrote the fundamentals of the core? Haakon presumably. Did any of the other wizzes have a large hand in it? I know everybody has contributed bits and pieces over the ages, but I was wondering who lay out the base design.
+
+Anodos
+--------------------------
+Message 5043 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 15 17:37:18 2006 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+Subject:  MCP 2.1
+
+Has anyone attempted to add MCP 2.1 to Lambda? Are there any major obstacles?
+
+Anodos
+--------------------------
+Message 5044 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 01:01:53 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Warning: Next Post Long
+
+Posting script mod for #322:@arb-p in next post.  Sorry about the length (148 lines of code).
+--------------------------
+Message 5045 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 01:03:16 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175) and Paragraph (#122534)
+Subject:  #322:@arb-p
+
+The following is modified code for #322:@arb-p.  It allows you to do review nomination petitions with indexing sequences similar to that of the mail system.
+
+@edit #322:@arb-p
+del 1-$
+enter
+"Syntax:  @arb-petitions [all|first:<# of petitions>|last:<# of petitions>|<index1>-<index2>]";
+"         ;this:list_arb_petitions([\"all|first:<# of petitions>|last:<# of petitions>|<index1>-<index2>\"])";
+"";
+"Prints a list of all office nominating petitions that have not been declined by you in tabular form, showing each petition's candidate, object number, mailing-list name, and signature count, along with an indication of whether or not you have signed it.  ";
+"";
+"If the argument `all' is given, all office petitions, including declined ones, are listed.";
+"If given an argument such as first:10 or last:10, prints first or last 10 petitions as specified.  Can also use indexes such as 1-50.";
+{su, lu} = {$string_utils, $list_utils};
+if (verb[2..4] == "ARB")
+  core = $local.arb_pet_core;
+elseif (verb[2..7] == "Reaper")
+  core = $local.reaper_pet_core;
+elseif (verb[2..10] == "Registrar")
+  core = $local.registrar_pet_core;
+else
+  return player:tell("Unrecognized office!  Tell a wizard.");
+endif
+range = {};
+if (length(args) > 1)
+  player:notify($code_utils:verb_usage()[1]);
+  return;
+elseif (!args || args[1] != "all")
+  if (args && length(seq = su:explode(args[1], ":")) == 2)
+    if (seq[1] == "first")
+      vlist = su:to_value(seq[2]);
+      if (vlist[1])
+        range = {1, vlist[2]};
+      endif
+    elseif (seq[1] == "last")
+      vlist = su:to_value(seq[2]);
+      if (vlist[1])
+        range = {-1 * vlist[2], 0};
+      endif
+    endif
+  elseif (args && length(seq = su:explode(args[1], "-")) == 2)
+    clist = lu:map_arg(su, "to_value", seq);
+    if (lu:slice(clist) == {1, 1})
+      range = lu:slice(clist, 2);
+    endif
+  elseif (!args)
+    range = {1, 0};
+  endif
+  if (!range)
+    player:notify($code_utils:verb_usage()[1]);
+    return;
+  endif
+  pets = {};
+  for p in (core.active_petitions)
+    "    try";
+    if (!(player in p.decliners))
+      pets = {@pets, p};
+    endif
+    "    except (E_PROPNF, E_INVIND)";
+    "      core.active_petitions = setremove(core.active_petitions, p);";
+    "    endtry";
+  endfor
+elseif (index("all", args[1]) == 1)
+  pets = core.active_petitions;
+else
+  player:notify($code_utils:verb_usage()[1]);
+  return;
+endif
+if (!pets)
+  player:notify(tostr("There are no active ", core.election_name, " petitions", args == {"all"} ? "" | " that you have not declined", "."));
+  return;
+endif
+"...sorting...";
+order = this:petition_option("petition_order") || "created";
+keys = {};
+if (order == "signed")
+  "...sort petitions by number of signatures...";
+  for p in (pets)
+    keys = {@keys, -length(p.signers)};
+  endfor
+elseif (order == "vetted")
+  "...sort petitions in vetting order...";
+  for p in (pets)
+    keys = {@keys, -p.vetted};
+  endfor
+elseif (order == "written")
+  "...sort petitions in writing order...";
+  for p in (pets)
+    keys = {@keys, -p.last_edit_time};
+  endfor
+elseif (order == "stages")
+  "...sort petitions into stages...";
+  qualified = qualified_keys = accepted = accepted_keys = {};
+  unaccepted = unaccepted_keys = {};
+  for p in (pets)
+    if ($object_utils:isa(p, core.ballot))
+      qualified = {@qualified, p};
+      qualified_keys = {@qualified_keys, -p.last_edit_time};
+    elseif (p.author in p.signers)
+      accepted = {@accepted, p};
+      accepted_keys = {@accepted_keys, -length(p.signers)};
+    else
+      unaccepted = {@unaccepted, p};
+      unaccepted_keys = {@unaccepted_keys, -length(p.signers)};
+    endif
+    $command_utils:suspend_if_needed(0);
+  endfor
+  qualified = lu:sort_suspended(0, qualified, qualified_keys);
+  accepted = lu:sort_suspended(0, accepted, accepted_keys);
+  unaccepted = lu:sort_suspended(0, unaccepted, unaccepted_keys);
+  pets = {@qualified, @accepted, @unaccepted};
+endif
+if (keys)
+  pets = lu:sort(pets, keys);
+endif
+if (range)
+  pets = $seq_utils:extract({range[1] >= 0 ? range[1] | length(pets) + range[1] + 1, range[2] ? range[2] + 1 | length(pets) + 1}, pets);
+endif
+"...";
+owidth = 7;
+nwidth = 20;
+non_cwidth = 1 + 2 + 1 + 1 + 0 + 2 + owidth + 2 + nwidth + 2 + 4 + 2 + 4;
+cwidth = max(player:linelen() - non_cwidth, 20);
+player:notify(tostr("*  ", "R ", su:left("Candidate", cwidth), "  ", su:left("ObjNum", owidth), "  ", su:left("Mail Name", nwidth), "  Msgs  Sigs"));
+player:notify(tostr("-  ", "- ", su:left("---------", cwidth), "  ", su:left("------", owidth), "  ", su:left("---------", nwidth), "  ----  ----"));
+for p in (pets)
+  star = player in p.signers ? "*" | (player in p.decliners ? "-" | " ");
+  reelect = p.author in core.lame_ducks ? "R" | " ";
+  candidate = su:nn(p.author);
+  candidate = candidate[1..min(cwidth, $)];
+  objnum = tostr(p);
+  p:mail_name();
+  mname = "*" + core.petition_prefix + "-P:" + p.name;
+  mname = mname[1..min(nwidth, $)];
+  subscribed = this:get_current_message(p) ? "+" | " ";
+  authorized = p.author in p.signers ? " " | "?";
+  player:notify(tostr(star, authorized, " ", reelect, " ", su:left(candidate, cwidth), "  ", su:left(objnum, owidth), "  ", su:left(mname, nwidth), "  ", su:right(p:length_all_msgs(), 3), subscribed, "  ", su:right(length(p.signers), 4)));
+  $command_utils:suspend_if_needed(0);
+endfor
+player:notify("");
+player:notify("* = signed by you, + = subscribed to mailing list, - = declined by you.");
+player:notify("R = nominee for re-election, ? = not signed by nominee.");
+player:notify(tostr("A total of ", core.signature_threshold, " signatures are needed to qualify a candidate for the ballot."));
+nseats = core.nmembers - length(core.members) + length(core.lame_ducks);
+player:notify(tostr("There ", nseats == 1 ? "is " | "are ", nseats, " vacant seat", nseats == 1 ? "" | "s", "."));
+player:notify(tostr("The nominating period for this election ", time() < core:nominations_closing_time() ? tostr("ends on ", core:pretty_time(core:nominations_closing_time()), ", which is ", su:from_seconds(core:nominations_closing_time() - time()), " from now") | "has already ended", "."));
+"Paragraph (#122534) - Sun Dec 3, 2006 - Changed the three $list_utils:sort calls circa line 102 to use :sort_suspended instead. This, to handle everyone in the MOO being @nominated. How democratic.";
+"- Also added an extra :suspend_if_needed circa line 100, for extra measure.";
+"active (#91798) - Mon Dec 4, 2006 - Added lines 18, 22-46, 110-112 for indexing to manage sorting thru the huge number of nomination petitions.";
+.
+com
+--------------------------
+Message 5046 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 19:28:38 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798), *Core-DB-Issues (#8175), and Paragraph (#122534)
+Subject:  Re: #322:@arb-p
+
+Implemented.
+--------------------------
+Message 5047 on *Core-DB-Issues (#8175):
+Date:     Mon Dec  4 21:20:07 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: #322:@arb-p
+
+Thanks for the quick implement.  The improvements seem to be working.
+--------------------------
+Message 5049 on *Core-DB-Issues (#8175):
+Date:     Mon Dec 11 22:05:09 2006 PST
+From:     active (#91798)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  @arb-p signed
+
+As per 8150 on *oldsocialissues, I am posting a modification to the nomination petition listing verb to add an option to display only those signed by the nominee.  Kudos to Ice-wizard (#78039) for the suggestion.
+
+@edit #322:@arb-p
+s /all/all|signed/ 1-2
+s /args[1] != "all"/!(args[1] in {"all", "signed"})/ 22
+ins 59
+enter
+elseif (index("signed", args[1]) == 1)
+  for p in (core.active_petitions)
+    if (!(player in p.decliners) && (p.author in p.signers))
+      pets = {@pets, p};
+    endif
+  endfor
+.
+s /102/108/ 147
+s /100/106/ 148
+s /110-112/116-118/ 149
+ins $ ""- Mon Dec 11, 2006 - Added lines 59-64 to do: @arb-p signed";
+com
+--------------------------
+Message 5050 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 06:20:20 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Implemented.
+--------------------------
+Message 5051 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 10:52:39 2006 PST
+From:     active (#91798)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Hrm, missed a variable setting (pets = {}; needs to be before first if).  Please fix with the following:
+
+@edit #322:@arb-p
+m 47 to 18
+com
+--------------------------
+Message 5052 on *Core-DB-Issues (#8175):
+Date:     Tue Dec 12 13:55:31 2006 PST
+From:     Nosredna (#2487)
+To:       active (#91798) and *Core-DB-Issues (#8175)
+Subject:  Re: @arb-p signed
+
+Fixed.
+--------------------------
+Message 5053 on *Core-DB-Issues (#8175):
+Date:     Sat Jan  6 22:55:50 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  bug in $string_utils:abbreviated_value
+
+Under certain conditions, abbreviated_value will return {...} even though there's room to show part of the list.
+
+;; for i in [6..8] for width in [20..23]  player:tell($string_utils:abbreviated_value($list_utils:range(1,i), width)); endfor endfor
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, 6}
+{1, 2, 3, 4, 5, ...}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, 6, 7}
+{1, 2, 3, 4, 5, ...}
+{...}
+{...}
+{1, 2, 3, 4, 5, 6, ...}
+
+I think the fix (in $string_utils:_abbreviated_value) is to move lastpos = 1; (line 17) to be before the while loop, rather than being executed at the beginning of each iteration of the loop.  That fixes this bug, but I haven't tested other conditions yet.
+--------------------------
+Message 5054 on *Core-DB-Issues (#8175):
+Date:     Sat Feb  3 08:45:36 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Sorting @grepcore
+
+Change in $wiz:@grepcore:
+
+10:  $code_utils:(regexp ? "find_verbs_matching" | "find_verbs_containing")(pattern, $core_objects());
+
+To:
+
+10:  $code_utils:(regexp ? "find_verbs_matching" | "find_verbs_containing")(pattern, $list_utils:sort($core_objects()));
+--------------------------
+Message 5055 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 07:58:37 2007 PST
+From:     Nosredna (#2487)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+That takes 25K tickes.  You sure it's a good idea?
+--------------------------
+Message 5057 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 14:06:03 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+$core_objects() takes 13958 ticks.
+$list_utils:sort($core_objects()) takes 20580 ticks
+
+Tick increase: 6622 with the current core.
+--------------------------
+Message 5058 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 14:48:57 2007 PST
+From:     Nosredna (#2487)
+To:       Tidus (#110777) and *Core-DB-Issues (#8175)
+
+I wonder if the right thing then is to change line 68 of $core_objects to "insert into sorted list" (possibly writing such a procedure).  Seems like one of the N's is already in place.
+--------------------------
+Message 5059 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 15:37:26 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+#0:core_objects
+
+Change line 9 to {l_u, @core_objects} = {$list_utils};
+
+Delete line 68, add:
+
+    insert = l_u:find_insert(core_objects, v);
+    core_objects = {@core_objects[1..insert-1], v, @core_objects[insert..$]};
+
+Tick increase: 6319.
+--------------------------
+Message 5060 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 18:38:45 2007 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+
+Since the return value of #0:core_objects doesn't change much, you could just cache a sorted copy and then check that the sorted copy has the same elements as the unsorted copy.
+
+sorted = this.cache;
+unsorted = $core_objects();
+if (!$set_utils:equal(sorted, unsorted))
+  sorted = $list_utils:sort(unsorted);
+  this.cache = sorted;
+endif
+return sorted;
+
+Anodos
+--------------------------
+Message 5061 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 19:48:41 2007 PST
+From:     Nosredna (#2487)
+To:       Anodos (#21528) and *Core-DB-Issues (#8175)
+
+Wouldn't that be hugely ticky too?  The point is not to sort it every time!  Quite possibly having a cache would be good, but then we should USE it rather than fussing with it each time.  Maybe have some verb to update it, or a nightly task, or something?  I dunno, maybe this is silly.  Why did you want it sorted anyway?
+--------------------------
+Message 5062 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 20:12:46 2007 PST
+From:     Anodos (#21528)
+To:       *Core-DB-Issues (#8175)
+
+>  Date:     Sun Feb  4 19:48:41 2007 PST
+>  From:     Nosredna (#2487)
+>  To:       Anodos (#21528) and *Core-DB-Issues (#8175)
+>  
+>  Wouldn't that be hugely ticky too?  The point is not to sort it
+>  every time!  Quite possibly having a cache would be good, but then
+>  we should USE it rather than fussing with it each time.  Maybe
+>  have some verb to update it, or a nightly task, or something?  I
+>  dunno, maybe this is silly.  Why did you want it sorted anyway?
+
+It doesn't sort it every time. Just when $core_objects() has changed from one call to the next. The call to equals() only takes about 1000 ticks overhead, compared to ~6000 if you sort every time. 
+--------------------------
+Message 5063 on *Core-DB-Issues (#8175):
+Date:     Sun Feb  4 20:17:01 2007 PST
+From:     Tidus (#110777)
+To:       *Core-DB-Issues (#8175)
+
+Or you could cache an unsorted value along with the sorted one and compare it for just a couple of ticks.
+--------------------------
+Message 5064 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:00:13 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Nosredna (#2487)
+Subject:  Re: Sorting @grepcore
+
+The tick-overhead was one reason why I suggested making the change in @grepcore rather than in $core_objects(). Limited usage limits the cost, while still yielding increased usefulness with the results, saving the wizard the unmeasured time needed to scan (occasionally long) unsorted results.
+
+Alternatively I suppose, $core_objects() could prop-store its results along with a date stamp ({time(), sorted-result}), then include an age check at its top to either use or update the results. Clumsy, but how often do the results of $core_objects() actually change?
+--------------------------
+Message 5065 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:34:45 2007 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Heh, we could put a check in @property and @rmprop to see if it's adding to #0, and if so, update a sorted $core_objects list.
+--------------------------
+Message 5066 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:48:35 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Heh, yeah. I'm guessing @prop is called considerably more often than @grepcore or mcd combined, though. Lots of wee bites are better than one big'un?
+
+Off the top of my head...
+
+if (in_mcd)
+  ..
+elseif (core_obj_prop[1] < time() - (freq = $local.core_update_frequency ? freq | hard-value))
+  return core_obj_prop[2]
+endif
+..
+if (verb == "core_object_info")
+  ..
+else
+  "... what most people care about";
+  core_obj_prop = {time(), core_objects};
+  return core_objects;
+endif
+
+Rough, unpolished but should illustrate what I meant.
+--------------------------
+Message 5067 on *Core-DB-Issues (#8175):
+Date:     Thu Feb  8 07:56:28 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: Sorting @grepcore
+
+Er, I meant...
+
+  core_obj_prop = {time(), core_objects = $list_utils:sort(core_objects)};
+
+...of course.
+--------------------------
+Message 5068 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:17:14 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+The posting and reading of messages on *core-db about the ticks used by sort for @grepcore (and, heh, the testing to put numbers in those posts) probably dwarfs the number of ticks that would actually be used by people using @grepcore in the next year...
+--------------------------
+Message 5069 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:20:39 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  Another tick comment
+
+A line like:
+
+core_objects = {@core_objects[1..insert-1], v, @core_objects[insert..$]};
+
+takes way more *ticks* than using listinsert() even though the end result is the same.
+--------------------------
+Message 5070 on *Core-DB-Issues (#8175):
+Date:     Fri Feb  9 23:36:57 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+Subject:  And finally a less ticky but less desirable solution...
+
+Perhaps this version, which takes 15532 ticks (up only 1574 from $core_objects()) will illustrate why I disdain saving ticks:
+
+;;n = $list_utils:map_builtin($core_objects(), "tonum"); s={}; while(n) next=min(@n); n=setremove(n,next); s={@s,toobj(next)}; endwhile; return s
+
+(the least-ticky solution will always be the one that makes builtins do as much work as possible!)
+--------------------------
+Message 5071 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 10 05:25:32 2007 PST
+From:     Loufah (#116455)
+To:       *Core-DB-Issues (#8175)
+
+You could also make sort() a builtin!
+--------------------------
+Message 5072 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 10 13:45:14 2007 PST
+From:     Xeric (#112019)
+To:       *Core-DB-Issues (#8175)
+
+Yes, I'll make it a builtin that takes 20000 ticks per call!  MUAHAHAHA
+--------------------------
+Message 5074 on *Core-DB-Issues (#8175):
+Date:     Wed Feb 14 17:14:26 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  $generic_editor:yank
+
+In the editor:
+>yank from #3
+generic room (#3)
+
+The error message should be "generic room (#3) doesn't seem to be a note."
+
+Fix: in $generic_editor:yank, change
+76:    player:notify($string_utils:nn(iobj), " doesn't seem to be a note.");
+to
+76:    player:notify(tostr($string_utils:nn(iobj), " doesn't seem to be a note."));
+--------------------------
+Message 5075 on *Core-DB-Issues (#8175):
+Date:     Sat Feb 17 13:00:23 2007 PST
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: $generic_editor:yank
+
+Fixed.
+--------------------------
+Message 5076 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 10:41:40 2007 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime, and the Feb shuffle
+
+Suggest changing @uptime to:
+
+player:notify(tostr($network.MOO_name, " has been up for ", $time_utils:english_time(time() - $last_restart_time), "."));
+
+Slightly more accurate, since $last_restart_time refers to the db's last boot time, which doesn't always coincide with the server's uptime.
+
+Also, I just watched @uptime do its February shuffle again (the results losing days in changing over to March) and before digging into it (before losing interest again) wanted to check if anyone's already tackled that beast.
+--------------------------
+Message 5077 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:37:34 2007 PST
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: @uptime, and the Feb shuffle
+
+Maybe it should display both times (server uptime and database uptime)...?
+--------------------------
+Message 5078 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:43:42 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+I don't think there's a way for the server to find out when it started.
+--------------------------
+Message 5079 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 12:52:50 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+To get the correct english time, give $time_utils:english_time a 2nd arg, $last_restart_time.  You want $time_utils:english_time to do its computations using the time at which the interval started.
+--------------------------
+Message 5080 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 18:26:11 2007 PST
+From:     Nosredna (#2487)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime
+
+I made the mod to say $network.MOO_name.  I don't understand the reference time thing.  It seems to give the same results.
+--------------------------
+Message 5081 on *Core-DB-Issues (#8175):
+Date:     Thu Mar  1 22:31:57 2007 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  @uptime
+
+> I don't understand the reference time thing.  It seems to give the same results.
+
+Right now, it'll give the same results with or without the reftime argument, because the uptime is between 1 and 2 months and both January and March have the same number of days.
+
+But if we simulate - by giving :english_time a 2nd argument, which it will use instead of time() - what it was like yesterday, when it was February, we get an interval that's off by a few days:
+
+;ctime($last_restart_time)
+=> "Tue Jan 23 18:57:56 2007 PST"
+
+;; t=time(); player:tell(ctime(t)); return $time_utils:english_time(t - $last_restart_time, t)
+Thu Mar  1 22:28:33 2007 PST
+=> "1 month, 6 days, 3 hours, 30 minutes, and 37 seconds"
+
+;; t=time()-86400; player:tell(ctime(t)); return $time_utils:english_time(t - $last_restart_time, t)
+Wed Feb 28 22:28:34 2007 PST
+=> "1 month, 8 days, 3 hours, 30 minutes, and 38 seconds"
+--------------------------
+Message 5082 on *Core-DB-Issues (#8175):
+Date:     Fri Mar  2 06:16:56 2007 PST
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject:  Re: @uptime
+
+OK, $last_restart_time given as reftime too, now that I understand why.
+--------------------------
+
+===== *Site-Issues (#72243) (7 messages) =====
+
+Message 64 on *Site-Issues (#72243):
+Date:     Sat Nov 25 04:15:28 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243)
+Subject:  clock fun
+
+So if anybody knows an easy & reasonably safe (read: hardware independent) way to get NTP to violate its slew limitation of 1s/2000s so that I can burn off this extra hour in something *WAY* less than 2 months, I'm all ears.  
+
+Otherwise it looks like I get to take this machine down for about an 1 hour.
+--------------------------
+Message 65 on *Site-Issues (#72243):
+Date:     Sat Nov 25 06:15:05 2006 PST
+From:     Drippy (#109564)
+To:       *Site-Issues (#72243)
+
+I've never had trouble with stopping processes, running ntpdate, and rebooting. Or just rebooting and resetting the hardware clock on a PC.
+--------------------------
+Message 66 on *Site-Issues (#72243):
+Date:     Sat Nov 25 12:20:49 2006 PST
+From:     stucky (#108696)
+To:       *Site-Issues (#72243)
+Subject:  re: clock fun
+
+man ntpdate
+
+-B
+    Force the time to always be slewed using the adjtime() system call, even if the measured offset is greater than +-128 ms. The default is to step the time using settimeofday() if the offset is greater than +-128 ms. Note that, if the offset is much greater than +-128 ms in this case, that it can take a long time (hours) to slew the clock to the correct value. During this time. the host should not be used to synchronize clients. 
+-b
+    Force the time to be stepped using the settimeofday() system call, rather than slewed (default) using the adjtime() system call. This option should be used when called from a startup file at boot time. 
+--------------------------
+Message 67 on *Site-Issues (#72243):
+Date:     Sun Nov 26 00:06:10 2006 PST
+From:     some_name (#88206)
+To:       *Site-Issues (#72243), *Unix (#3338), and Rog (#4292)
+Subject:  LamdaMOO clock "fix"(?), etc.
+
+RE: news 846, @peek 64 on *Site-Issues (#72243), et. seq.
+
+If it's running on some *NIX flavor (e.g. LINUX, Solaris, HP-UX, ...),
+one can typically skew the clock at a maximum rate of up to +-10%.
+E.g.:
+o terminate any running [x]ntp[d] process.
+o use the appropriate command, option(s), and option argument(s) for
+  your *NIX flavor to speed up or slow down the system clock to its
+  maximum skew rate (e.g. date -u, adjtimex, etc.)
+o If the skewing doesn't automatically go away when the clock is quite
+  close to the correct time (e.g. with adjtimex), readjust the running
+  system clock speed to run at normal speed (or at least quite close to
+  it).
+o restart [x]ntp[d] daemon process.
+
+This is generally a feasible approach for offsets that aren't *too
+large* (e.g. several hours or less), but generally infeasible for large
+offsets (e.g. months or more of clock error).  It also comes in handy to
+recover [x]ntp[d] from unstable equilibrium situations (where it's 
+diverging from, rather than converging to, the correct time).
+
+I've also got some scripts I've used to at least semi-automate this 
+process.
+--------------------------
+Message 68 on *Site-Issues (#72243):
+Date:     Sun Nov 26 00:43:22 2006 PST
+From:     Rog (#4292)
+To:       some_name (#88206) and *Site-Issues (#72243)
+Subject:  Re: LamdaMOO clock "fix"(?), etc.
+
+We're on debian (sarge).  And, ironically, I'd just finished reading the tickadj manpage right before I saw this note.  But thank you; this appears to be the Right Thing.
+
+I'm still not clear on why ntpd/ntpdate can't do this (or rather do it, but only over the course of months given the apparently-hard-coded limit of 0.5% slew) since it seems like the sort of thing that would come up fairly often.  Oh well, problem solved (knock wood).
+--------------------------
+Message 69 on *Site-Issues (#72243):
+Date:     Sun Nov 26 03:42:19 2006 PST
+From:     some_name (#88206)
+To:       *Site-Issues (#72243) and Rog (#4292)
+Subject:  Re: LamdaMOO clock "fix"(?), etc.
+
+The basic NTP documentation is pretty good, but many of the noteworthy
+details are buried within the source code, or otherwise not quite so
+conveniently available.  There are, however, apparently some good books
+on NTP ... and short of much digging into source code, they're probably
+rather necessary for covering many of the finer points.  These are at
+least two that I'm aware of:
+http://www.apress.com/book/bookDisplay.html?bID=429
+http://www.eecis.udel.edu/~mills/book.html
+
+And here's an example script (normalized here for average default 
+values, and using pool.ntp.org. - probably preferable to pick a 
+specific NTP server for more consistent convergence).  Also, this 
+example is for Debian GNU/Linux 3.1 "Sarge", and on a system with the 
+hardware clock set to UTC.
+
+#!/bin/sh
+umask 077 && cd / && batch << \__EOT__
+#!/bin/sh
+umask 077 || exit
+cd / || exit
+
+ntpserver=pool.ntp.org.
+hwclock_opt=--utc
+#hwclock_opt=--localtime
+#ntprc=/etc/init.d/ntp
+ntprc=/etc/init.d/ntp-server
+nominal_frequency=0
+nominal_tick=10000
+
+>>/dev/null "$ntprc" stop || exit
+
+min_frequency=-6553600
+max_frequency=6553600
+min_tick=9000
+max_tick=11000
+
+while :
+do
+    sign=
+    set -- `ntpdate -u -q "$ntpserver" | awk '
+        /^.* *offset -*[0-9][0-9]*\.[0-9][0-9]* sec$/ {
+            i=int($(NF-1)*10)
+            if(i>=0){print i}
+            else{print "-", -1 * i;}
+            exit(0);
+        }'`
+    [ X"$1" = X- ] && { sign=-; shift; }
+    case X"$1" in
+        X[1-9]*)
+            if [ X"$sign" = X- ]; then
+                adjtimex --tick "$min_tick" --frequency "$min_frequency"
+            else
+                adjtimex --tick "$max_tick" --frequency "$max_frequency"
+            fi
+            sleep "$1"
+        ;;
+        X0)
+            adjtimex --tick "$nominal_tick" --frequency "$nominal_frequency"
+            (
+                umask 022 &&
+                "$ntprc" start
+                sleep 600
+                hwclock $hwclock_opt --systohc
+            )
+            exit
+        ;;
+        *)
+            adjtimex --tick "$nominal_tick" --frequency "$nominal_frequency"
+            sleep 300
+        ;;
+    esac
+done
+__EOT__
+--------------------------
+Message 70 on *Site-Issues (#72243):
+Date:     Wed Dec  6 17:07:52 2006 PST
+From:     Rog (#4292)
+To:       *Site-Issues (#72243)
+Subject:  new server version
+
+LambdaMOO is now back on the bleeding edge, having incorporated all of the most recent fixes, including the one I just added today to make backspace now actually do something vaguely useful (thanks, Blob -- I suppose, strictly speaking, the Correct Answer there would be to implement full-blown telnet negotiation, but this will do for now...).
+--------------------------
+
+===== End of new mail ========================
+Did you get all of that? [Enter `yes' or `no']
+Last-read-dates updated

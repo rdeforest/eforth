@@ -1,0 +1,870 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+Mintie, Robert, and Marcie are here.  stormagnet is dozing.
+Last connected Sat Jan 29 12:54:36 2005 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 1439660996 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1439660996 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1439660996 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1439660996
+=> 0
+[used 1 tick, 0 seconds.]
+=> "x.hKW7fGvsEPI"
+[used 4 ticks, 0 seconds.]
+Marcie doesn't.
+You see no "marcy" here.
+=> #954 (Marcy)
+Mintie [to Marcie]: yay!
+=> "ecB9Q0xjW6h1g"
+[used 4 ticks, 0 seconds.]
+Marcie says, "yay!"
+Crag says, "Ok, try connecting again"
+Mintie says, "k"
+You hear a quiet popping sound; Mintie has disconnected.
+< Mintie has disconnected.  Total: 4 >
+You hear a quiet popping sound; Marcie has disconnected.
+< Marcie has disconnected.  Total: 3 >
+Minty has connected.
+Minty says, "W00!"
+Marcy has connected.
+Marcy says, "yay!"
+Minty yays!
+Marcy [to Crag]: thanks :)
+Minty [to Marcy]: I know what your password is ;)
+Minty says, "lol"
+Marcy [to Minty]: I know what your password is :)
+Minty says, "lol"
+Marcy giggles.
+Minty [to Crag]: so I'm still a wiz, or do you have to make me one again?
+Crag says, "I re-wizzed you"
+You hear a quiet popping sound; Robert has disconnected.
+< Robert has disconnected.  Total: 4 >
+Marcy says, "how rude!"
+Minty says, "lol"
+Crag grins.
+Marcy giggles.
+Crag says, "So back to porting @paste..."
+Minty says, "ROFL!"
+That is not a valid command.
+Objects owned by Crag (from #0 to #1163):
+ 26K  #958 Crag                      *[Entrance Hall]
+  1M  #948 random stats              *[GhostOfTheManor]
+  3K  #908 die                        [Nowhere]
+ <1K  #968 d6                        *[Samurai]
+  1K  #967 Magic Eight Die           *[xantha]
+ <1K  #984 d100                       [Crag]
+ <1K  #995 ice pick                   [Crag]
+  1K  #998 Entity                     [Crag]
+  1K #1002 Relationship               [Crag]
+ <1K  #975 Transition                 [Crag]
+ <1K #1003 Comparison                 [Crag]
+ <1K #1004 Quality                    [Crag]
+  1K #1007 relationship utils         [Crag]
+ <1K #1026 box of Tide(tm) brand det *[Laundry]
+ <1K  #456 bandages                   [Crag]
+  5K #1039 Working Hard Feature       [Crag]
+ <1K  #772 Master Bedroom            <-*east, <-*north
+ <1K #1132 Legato NetWorker          *[crankcase]
+  7K #1020 Pasting Feature            [Crag]
+-- 19 objects.  Total bytes: 1,085,920.---------------------------------------
+Minty says, "k, I won't bother you."
+Crag says, "You can bother me"
+Marcy will.
+Crag says, "It won't take long"
+Minty says, "lol"
+Marcy says, "well, I'm kidding"
+Minty says, "lol"
+The Pasting Feature (#1020) has 1 verb.  Sure you want to recycle it? [Enter `yes' or `no']
+The Pasting Feature (#1020) recycled.
+Minty [to Marcy]: Sure, sure
+Crag says, "attempting to port pasting feature..."
+No change.
+You now have Pasting Feature (aka paste) with object number #1160 and parent Generic Feature Object (#65).
+The created object is now your current object.
+=> {"|", "@paste", "@|"}
+[used 3 ticks, 0 seconds.]
+=> 1
+[used 2 ticks, 0 seconds.]
+=> {"|*", "@pasteto @paste @pasteto2", "@|"}
+[used 3 ticks, 0 seconds.]
+=> "The Pasting Feature is mostly useful to people with fancy clients (such as Emacs) or who connect using a windowing system that allows them to copy text they've already seen.  It's intended to give people a way to quote verbatim text at other people in the room."
+[used 2 ticks, 0 seconds.]
+=> {"Pasting Feature", "paste"}
+[used 3 ticks, 0 seconds.]
+=> "Verbs useful to people using a windowing system to paste text at people."
+[used 2 ticks, 0 seconds.]
+=> 0
+[used 2 ticks, 0 seconds.]
+=> #-1 <$nothing>
+[used 2 ticks, 0 seconds.]
+=> {7779, 1002603771}
+[used 3 ticks, 0 seconds.]
+Verb added [1] (0).
+Now programming Pasting Feature:|*[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+Verb added [2] (1).
+Now programming Pasting Feature:@pasteto @paste @pasteto2[2](1).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Robert has connected.
+0 errors.
+Verb programmed.
+"#269" is not the name of any player.
+That object does not have that verb definition.
+Now ignoring code for _:@|.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Verb code ignored.
+Crag says, "***attempt finished***"
+Minty says, "I redid my alais again too."
+Crag grrr
+,aliases                 Core-Wizard (#184)    r      {"Minty", "min"}
+-------------------------------- finished ---------------------------------
+Minty eeks!
+Crag grrs at pasting feature
+Pasting Feature (#1160) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location Crag (#958).
+ #1160:|*                       Crag (#958)          rxd    any any any
+ #1160:"@pasteto @paste @pasteto2" GhostOfTheManor (#2) rxd any any any
+-------------------------------- finished ---------------------------------
+Marcy says, "eep"
+The Pasting Feature (#1160) has 2 verbs.  Sure you want to recycle it? [Enter `yes' or `no']
+Minty says, "brb"
+The Pasting Feature (#1160) recycled.
+You hear a quiet popping sound; Robert has disconnected.
+< Robert has disconnected.  Total: 4 >
+=> #35 (unknown hacker)
+You see no "robert" here.
+Marcy says, "I didn't have to redo mine"
+Robert (#909) [ (player) programmer ]
+  Child of generic programmer (#52).
+  Location Limbo (#15).
+-------------------------------- finished ---------------------------------
+Marcy shrugs.
+Crag (#958) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Entrance Hall (#70).
+-------------------------------- finished ---------------------------------
+Crag tries porting again...
+Crag says, "attempting to port pasting feature..."
+No change.
+You now have Pasting Feature (aka paste) with object number #1090 and parent Generic Feature Object (#65).
+The created object is now your current object.
+=> {"|", "@paste", "@|"}
+[used 3 ticks, 0 seconds.]
+=> 1
+[used 2 ticks, 0 seconds.]
+=> {"|*", "@pasteto @paste @pasteto2", "@|"}
+[used 3 ticks, 0 seconds.]
+=> "The Pasting Feature is mostly useful to people with fancy clients (such as Emacs) or who connect using a windowing system that allows them to copy text they've already seen.  It's intended to give people a way to quote verbatim text at other people in the room."
+[used 2 ticks, 0 seconds.]
+=> {"Pasting Feature", "paste"}
+[used 3 ticks, 0 seconds.]
+=> "Verbs useful to people using a windowing system to paste text at people."
+[used 2 ticks, 0 seconds.]
+=> 0
+[used 2 ticks, 0 seconds.]
+=> #-1 <$nothing>
+[used 2 ticks, 0 seconds.]
+=> {7779, 1002603771}
+[used 3 ticks, 0 seconds.]
+Verb added [1] (0).
+Now programming Pasting Feature:|*[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Marcy says, "good luck, may the force be with you"
+Marcy says, "hehe"
+Minty says, "back"
+Minty says, "lol"
+Marcy [to Minty]: wb
+Minty [to Marcy]: Thanks
+Minty says, "hadda give Dinah her eye salve and that icky paste."
+Line 12:  syntax error
+1 error(s).
+Verb not programmed.
+Verb added [2] (1).
+Now programming Pasting Feature:@|[2](1).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Marcy says, "awww"
+0 errors.
+Verb programmed.
+Crag says, "***attempt finished***"
+Crag says, "ARG"
+Minty eeks!
+Crag says, "sorry"
+stormagnet wakes
+Minty comforts Crag.
+Marcy says, "awww, s'ok"
+stormagnet says, "Hiya all!"
+Marcy [to stormagnet]: hello
+You see no "robert" here.
+Minty [to stormagnet]: Hiya!  Long time no see!
+Robert (#909) [ (player) programmer ]
+  Child of generic programmer (#52).
+  Location Limbo (#15).
+-------------------------------- finished ---------------------------------
+stormagnet <- was in another window
+Minty giggles.
+stormagnet says, "The lag is all my fault"
+Minty says, "Ohhh"
+Marcy says, "tut"
+Marcy giggles.
+Minty says, "S'ok :)"
+stormagnet dons a piratical eyepatch
+Minty grins.
+,aliases                 Core-Wizard (#184)    r      {"GhostOfTheManor", "Ghost of the Manor"}
+-------------------------------- finished ---------------------------------
+Minty says, "lol"
+Marcy drools.
+Minty says, "lol"
+< GhostOfTheManor has connected.  Total: 5 >
+Minty [to Marcy]: Yer bad!
+Marcy says, "I mean, nice patch"
+Minty says, "lol"
+stormagnet . o O ( sweet, sweet mp3s )
+Marcy says, "lol"
+That is not a valid command.
+Objects owned by Crag (from #0 to #1163):
+ 26K  #958 Crag                      *[Entrance Hall]
+  1M  #948 random stats              *[GhostOfTheManor]
+  3K  #908 die                        [Nowhere]
+ <1K  #968 d6                        *[Samurai]
+  1K  #967 Magic Eight Die           *[xantha]
+ <1K  #984 d100                       [Crag]
+ <1K  #995 ice pick                   [Crag]
+  1K  #998 Entity                     [Crag]
+  1K #1002 Relationship               [Crag]
+ <1K  #975 Transition                 [Crag]
+ <1K #1003 Comparison                 [Crag]
+ <1K #1004 Quality                    [Crag]
+  1K #1007 relationship utils         [Crag]
+ <1K #1026 box of Tide(tm) brand det *[Laundry]
+ <1K  #456 bandages                   [Crag]
+  5K #1039 Working Hard Feature       [Crag]
+ <1K  #772 Master Bedroom            <-*east, <-*north
+ <1K #1132 Legato NetWorker          *[crankcase]
+  7K #1090 Pasting Feature            [Crag]
+-- 19 objects.  Total bytes: 1,085,920.---------------------------------------
+Marcy says, "is there a feature to add for socials/verbs?"
+The Pasting Feature (#1090) has 2 verbs.  Sure you want to recycle it? [Enter `yes' or `no']
+Minty [to stormagnet]: Ahhh, downloading music?
+The Pasting Feature (#1090) recycled.
+Crag [to Marcy]: not yet
+Marcy [to Crag]: k, thanks :)
+stormagnet says, "I've had all these songs stuck in my head and now, finally, I may purge them with the might of 2000 electronic donkeys!"
+Crag nodsnods
+Crag says, "There's stabbing, though"
+Marcy says, "stabbing?"
+[with the ice pick]
+Crag stabs Marcy with an ice pick.  Neat!
+Marcy dies from a wound inflicted by Crag with the ice pick.
+Marcy has left.
+Crag giggles
+Minty says, "lol"
+You page Marcy, "type "out" to come back"
+Marcy arrives from the heavens.
+Marcy says, "whew!"
+Minty woohoos!
+Marcy says, "that was rather skeery.  lol"
+Crag says, "It's random whether you actually die"
+Minty says, "lol"
+Marcy says, "ohhh"
+Crag says, "Sortof random"
+Marcy stabs Marcy with a Marcy's Butcher Knife.  Neat!
+Crag says, "Each stab increases the chances"
+Minty says, "what do you type to use it?"
+I'm just a country gal, who loves people and animals. I love to have a good time, try to be a good listener and help out when I can. One thing you don't want to do is make me angry. If you do, I'll turn on a nickle and toss you the change.
+She is awake and looks alert.
+Carrying:
+ a Rose                                  
+Crag [to Minty]: You need a knife first
+Minty says, "ohh"
+Minty says, "k, give me one"
+Minty says, "lol"
+Marcy says, "eep, I stabbed me with my own knife?"
+Crag says, "jussec"
+Objects owned by Minty (from #0 to #1163):
+  3K  #951 Minty                     *[Entrance Hall]
+-- 1 object.  Total bytes: 3,887.---------------------------------------------
+Minty (#951) contains a Rose (#952).
+Rose (#952) [ readable ]
+  Owned by Brain (#950).
+  Child of generic thing (#5).
+  Location Minty (#951).
+-------------------------------- finished ---------------------------------
+Minty [to Marcy]: well, duh?
+Crag says, "I'm going to turn your rose into a knife"
+Minty says, "lol"
+stormagnet says, "hmmm"
+You see no "knife" here.
+Carrying:
+ an ice pick                             a Comparison
+ a cider pitcher                         a Quality
+ a d100                                  some relationship utils
+ an Entity                               the Working Hard Feature
+ a Relationship                          a bandages
+ a Transition                            
+Marcy says, "lol"
+ice pick (#995)   butcher knife (#855)   generic unit testable thing (#832)   generic thing (#5)   root class (#1)
+stormagnet [to Crag]: give xp works not
+Marcy stabs Minty with a Marcy's Butcher Knife.  Neat!
+Minty dies from a wound inflicted by Marcy with the Marcy's Butcher Knife.
+Minty has left.
+stormagnet gets the answer verbally
+Parent changed.
+You page Minty, "Type 'out' to come back"
+stormagnet ponders the joy of conversing on the MOO while in the same room
+Marcy says, "eek, poor Minty!!!!"
+Minty arrives from the heavens.
+stormagnet gives stormagnet an xp for '133ch'.
+Marcy says, "whew"
+Crag [to Minty]: you can now 'stab marcy'
+Minty whews!
+Crag says, "Your rose is a weapon"
+Marcy says, "yay!"
+Minty grins evilly.
+Minty stabs Marcy with a Rose.  Neat!
+Marcy dies from a wound inflicted by Minty with the Rose.
+Marcy has left.
+Marcy arrives from the heavens.
+Minty says, "lol"
+Minty (#951) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Entrance Hall (#70).
+-------------------------------- finished ---------------------------------
+Minty (#951) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Entrance Hall (#70).
+ newt_victim_msg         Minty (#951)          r c    ""
+ newt_msg                Minty (#951)          r c    {#69, "do", {"name", "p..
+ public_identity         Minty (#951)          r c    #-1
+ programmer_msg          Minty (#951)          r c    {#69, "do", {"dname", "..
+ programmer_victim_msg   Minty (#951)          r c    "You are now a programm..
+ toad_victim_msg         Minty (#951)          r c    "Have a nice life..."
+ toad_msg                Minty (#951)          r c    {#69, "do", {"dname", "..
+ mail_identity           Minty (#951)            c    #-1
+ boot_player_msg         Minty (#951)          r c    {#69, "do", {"dname", "..
+ display_options         Minty (#951)          r c    {}
+ list_options            Minty (#951)          r c    {}
+ eval_options            Minty (#951)          r c    {{"ticks", 6}, {"env", ..
+ recreate_enabled        Minty (#951)          r c    1
+ building_options        Minty (#951)          r c    {}
+,features                unknown hack (#35)    r      {#67, #68, #238}
+,previous_connection     Core-Wizard (#184)           {1058285231, "uslink-66..
+ mail_lists              Minty (#951)          r c    {}
+,email_address           Core-Wizard (#184)           "minty@thatsnice.org"
+,last_disconnect_time    Core-Wizard (#184)    r      1058289768
+,help                    Minty (#951)          r c    0
+ linetask                unknown hack (#35)    r      {0, 0}
+ linesleft               unknown hack (#35)    r      0
+ linebuffer              unknown hack (#35)           {}
+ pagelen                 unknown hack (#35)    r      0
+,_mail_task              Minty (#951)          r c    1653970926
+,owned_objects           Quota (#185)          r      {#951}
+ linelen                 unknown hack (#35)    r      -79
+,current_folder          Minty (#951)            c    #951
+,all_connect_places      Core-Wizard (#184)           {"uslink-66.173.38-95.u..
+,last_connect_place      Core-Wizard (#184)           "port 7777 from uslink-..
+ dict                    Minty (#951)          r c    {}
+ messages_going          Minty (#951)            c    {}
+,responsible             Minty (#951)            c    {}
+ lines                   Minty (#951)            c    20
+ page_absent_msg         Minty (#951)          r c    {#69, "do", {"dname", "..
+ page_origin_msg         Minty (#951)          r c    ""
+ page_echo_msg           Minty (#951)          r c    0
+ mail_notify             Minty (#951)          r c    {}
+ mail_forward            Minty (#951)          r c    {}
+ edit_options            Minty (#951)          r c    {}
+ mail_options            Minty (#951)          r c    {}
+,current_message         Minty (#951)            c    {1, 1040798146}
+,messages                Minty (#951)            c    {{1, {1040798146, "Crag..
+,last_connect_time       Core-Wizard (#184)    r      1107033133
+,ownership_quota         Quota (#185)                 -10000
+,gender                  Minty (#951)          r c    #157
+ home                    unknown hack (#35)    r      #70
+,password                Core-Wizard (#184)           "x.hKW7fGvsEPI"
+ gaglist                 Minty (#951)          r c    {}
+ paranoid                Minty (#951)          r c    0
+ spoof_attribution_msg   Minty (#951)          r c    "     --"
+ pronoun_sub_style       Minty (#951)          r c    #78
+,last_player_paged       unknown hack (#35)    r      "crag"
+,contributed_line        Core-Wizard (#184)    r      ""
+,contributed_links       Core-Wizard (#184)    r      {}
+,followers               unknown hack (#35)    r      {}
+ followable              unknown hack (#35)    r      1
+ integrate_sep_msg       Minty (#951)          r c    "  "
+ integration_enabled     Minty (#951)          r c    1
+ jtext_form              Core-Wizard (#184)    r      "linemode"
+,focus_object            Core-Wizard (#184)    r      #951
+ misc_options            Minty (#951)          r c    {{"fstamp", "[ $o:$M $p..
+,authentication_key      Core-Wizard (#184)           0
+ client_options          Minty (#951)          r c    {}
+,link_shepherd           unknown hack (#35)    r      #-1
+,walking_task            unknown hack (#35)    r      0
+ temp_brief              Minty (#951)          r c    0
+ jaddress_stack          unknown hack (#35)    r      {}
+ total_started           Core-Wizard (#184)           0
+,total_connect_time      Core-Wizard (#184)           37746
+,started_keeping_total   Core-Wizard (#184)           1040798120
+ current_object          Core-Wizard (#184)    r      {#0, "#0"}
+ current_object_stack    Core-Wizard (#184)    r      {}
+,following               unknown hack (#35)    r      {}
+ walk_randomness         Core-Wizard (#184)    r      {1, 8}
+ client_features         Minty (#951)          r c    {}
+ client_authkey          Minty (#951)          r c    ""
+ client_disfuncs         Minty (#951)          r c    {}
+ client_debug            Minty (#951)          r c    0
+ remote_emote_prefix_msg Minty (#951)          r c    {#69, "do", "(from ", {..
+ who_options             Core-Wizard (#184)    r      {{"columns", {"name", "..
+ last_entrance_time      Core-Wizard (#184)    r      768064450
+ dozing_msg              Minty (#951)          r c    {#69, "do", "idling"}
+ idle_start_time         Minty (#951)          r c    0
+ idle_msg                Minty (#951)          r c    {#69, "do", "real life ..
+ idle_string             Minty (#951)          r c    ""
+ dozing_string           Minty (#951)          r c    ""
+,doing_string            unknown hack (#35)    r      ""
+ doing_msg               Core-Wizard (#184)    r      {#69, "do"}
+,disconnect_task         Core-Wizard (#184)    r      0
+ last_password_time      Core-Wizard (#184)           0
+ last_timestamp          Core-Wizard (#184)    r      830677321
+,size_quota              Quota (#185)                 {100000, 3887, 11070320..
+ shout_msg               Minty (#951)          r c    {#69, "do", {"name", "p..
+ contributed_document    Core-Wizard (#184)           E_NONE
+,walking_dest            unknown hack (#35)    r      #804
+ use_do_command          Minty (#951)          r c    0
+,first_connect_time      Core-Wizard (#184)    r      1040798120
+,out_of_band_session     unknown hack (#35)    r      #1027
+ parse_options           Minty (#951)          r c    {"guess_object", "repor..
+ timezone                unknown hack (#35)    r      #39
+,xp                      Minty (#951)          r c    {{"stabbed", #954, 1107..
+ givexp_msg              Minty (#951)          r c    {#69, "do", {"name", "p..
+ revokexp_msg            Minty (#951)          r c    {#69, "do", {"name", "p..
+,hit_points              Minty (#951)          r c    5
+ max_hit_points          Minty (#951)          r c    5
+ ducktime                Minty (#951)          r c    0
+ duck_msg                Minty (#951)          r c    {#69, "do", {"name", "d..
+ overduck_msg            Minty (#951)          r c    {#69, "do", {"name", "p..
+ death_msg               Minty (#951)          r c    {#69, "do", {"name", "d..
+ in_msg                  Minty (#951)          r c    {#69, "do", "in"}
+,dependents              Core-Wizard (#184)    r      {}
+,key                     Minty (#951)            c    0
+,aliases                 Core-Wizard (#184)    r      {"Minty", "min"}
+,description             Minty (#951)          r c    "I'm just a country gal..
+ visible                 unknown hack (#35)    r      1
+ integrate_room_msg      Minty (#951)          r c    ""
+ integrate_player_msg    Minty (#951)          r c    ""
+ integrate_container_msg Minty (#951)          r c    ""
+ unique                  Core-Wizard (#184)    r      1
+ proper                  Core-Wizard (#184)    r      1
+ integrate_in            unknown hack (#35)    r      {#145}
+ handlers                unknown hack (#35)    r      {}
+ number                  unknown hack (#35)    r      1
+,offered                 Core-Wizard (#184)    r      #-1
+,object_size             Quota (#185)          r      {3887, 1107032074}
+-------------------------------- finished ---------------------------------
+Marcy says, "lol"
+Minty says, "Awesome!"
+Marcy says, "least there is a cake factory there"
+Minty nods.
+Crag says, "I didn't notice... how odd"
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+Crag dies from a wound inflicted by Crag with the ice pick.
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+GhostOfTheManor is here, daydreaming.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+Minty and Marcy are here.  stormagnet is distracted.
+Minty says, "w00!"
+stormagnet says, "We should make that cake factory operational"
+stormagnet . o O ( caaakke... )
+stormagnet drools
+Marcy giggles.
+There are no features in the feature object registry matching "paste".
+Minty [to Crag]: I owe you one for @booting me ;)
+stormagnet stares off into the distance
+Minty says, "ROFL!"
+Crag [to Minty]: Sure
+Minty says, "lol"
+Minty says, "Nah"
+stormagnet says, "we could have cake fights!"
+Minty says, "Yeah!"
+Marcy laughs.
+Minty giggles.
+stormagnet . o O ( dammit )
+stormagnet . o O ( need cake )
+stormagnet . o O ( so suggestible.. )
+Minty laughs.
+Usage:  @add-feature <object>
+Available features not already in your feature list include:
+Builders Tools                          documentation feature
+Community Group Commands                
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#238    Touchy Feely Socials Feature Object
+#83     login watcher mark 2
+#1039   Working Hard Feature
+------- ----
+The Pasting Feature (#1020) added as a feature.
+Minty pats stormagnet onna head.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+---------------------------------- Crag -----------------------------------
+testing
+--------------------------- Crag stops pasting ----------------------------
+Done @pasting.
+Crag says, "Almost there"
+stormagnet cheers!
+Minty yays!
+Marcy [to Crag]: yay!
+stormagnet wanders off to the kitchen to make a pot of tea
+Minty says, "Wow, we get more quota here than we did elseMOO!"
+Minty . o O ( 100,000 bytes )
+Marcy says, "cool"
+Minty nods.
+Crag says, "The machine only has 256M of ram, so we can't go to crazy just now."
+Crag says, "Current process size is..."
+< GhostOfTheManor has disconnected.  Total: 4 >
+Crag says, "Only 6M, yay"
+Minty says, "But that's twice what we get elseMOO."
+Crag says, "Yeah"
+Minty nods.
+Crag says, "MOOs are historically stingy with quota because they have an open joining policy"
+Crag says, "Since we're a little exclusive we can afford to be generous"
+Minty says, "Ohhh"
+Marcy says, "ohhh"
+Minty yays!
+Crag [to Minty]: as a wizard you can give people quota
+Minty nods.
+Crag says, "Feel free to give them as much as you like."
+Crag says, "BUT"
+Minty doesn't know how to though.
+Minty laughs.
+Crag says, "It should be clear to people that we want to stay somewhat on-theme here"
+Minty tries to learn.
+Crag says, "So no extreme sci-fi or weirdness or whatever"
+Minty [to Crag]: okay.
+-----
+@QUOTA
+======
+
+Usage:  @quota [<someone>]
+
+Each player has a limit as to how much database disk space e may consume with their objects, properties, and verbs.  Objects are periodically measured (and can have their measurement forced---see help @measure).  If a player is over quota after a measurement, e will not be able to @create any objects, use @copy, @verb, or @property to grow any objects.  Existing properties and verbs may be edited/changed at will, even while over quota.
+
+The @quota command prints out your current quota and measured usage.  If you have more than one character, it will summarize all your other characters' usage as well.
+
+@quota <player> will print out the quota and usage of another player.  [Note: you will not be able to obtain second character information for another player; whether primary or secondary character, the @quota display will only show one character's quota.]
+
+@quota prints a time of measurement in its display.  This is the time of the oldest measurement out of all your objects.  For example, if you @measure three of your objects right now, those individual times get updated, but if you still have a couple of objects with older measurements, that older time will be the time printed by @quota.  This is confusing to many people.
+
+If you want to get more quota, please see `help quota-policy'[1].
+
+
+ - - - - - - - - - - - - - - - - - - - - - - - - - -
+Syntax:  @quota <player> is <number> [<reason>]
+
+This second and more interesting form of the verb changes a player's quota to the given number.  Mail will be sent to $quota_log; the message will include the <reason> if such is given.
+
+Crag [to Minty]: help @quota
+-----
+`HELP THEME' NOT FOUND
+======================
+
+Sorry, but no help is available on `theme'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+Minty [to Crag]: So I can't build a place called 'Some Beach'?
+Crag says, "I need to write 'help theme' soon"
+Minty [to Crag]: okay
+Crag [to Minty]: Not without incorporating it into the existing scenery
+Crag says, "This manor could be located near a waterfront"
+Minty nods.
+Crag says, "So if you were to extend the road past the wall down to a beach, that would be ok"
+Minty [to Crag]: We have plenty of time to do all that.
+Crag nods.
+Crag [to Minty]: Have you been around the whole Manor grounds?
+Marcy says, "I'll be back later"
+Crag [to Marcy]: Ok!
+Crag [to Marcy]: good to see you again
+Minty [to Crag]: Nope
+Marcy [to stormagnet]: Nice to have met you
+Minty huggles Marcy.
+Marcy [to Crag]: thanks, you too
+Marcy huggles Minty.
+Crag [to Minty]: Next time you log in and everyone's idle, wander around and check stuff out
+You hear a quiet popping sound; Marcy has disconnected.
+< Marcy has disconnected.  Total: 3 >
+Crag says, "A lot of it is unfinished, but we have actual hard-copy maps here that we're working from"
+Minty [to Crag]: I don't know what all is here, or what their numbers are.
+Crag says, "Both for the building and the outside."
+Crag says, "That's ok, these things take time"
+Minty nods.
+Crag says, "ANyway, we have a kind of magical realism thing we're going for here."
+Minty says, "Ahhh"
+Minty says, "okay"
+Crag says, "We're avoiding things which would narrow down the time period, like vehicals"
+Minty says, "Ahhh"
+Crag says, "We want it to be possible for this to be anywhere in the western world, from about 1400 to a little in the future."
+Minty says, "Lots I need to learn."
+Crag grins.
+Minty nods.
+Crag says, "I should be documenting this"
+Minty giggles.
+Crag says, "BUt I am logging it at least"
+Crag says, "I can make something of the logs later."
+Minty says, "Yep!  Yay!"
+Crag says, "Now back to the pasting feature..."
+Minty says, "k"
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#238    Touchy Feely Socials Feature Object
+#83     login watcher mark 2
+#1039   Working Hard Feature
+#1020   Pasting Feature
+------- ----
+Minty watches.
+Crag says, "We can keep talking while I figure this out"
+Crag says, "The feature works, I just have to make it show up in @addfeature"
+Minty says, "I don't wanna interrupt ya ;)"
+Crag says, "heh, ok"
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+GhostOfTheMan  Heavens                       Sat Jan 29 13:30:33 2005 PST
+
+Total: 1 person, who has not been active recently.
+< GhostOfTheManor has connected.  Total: 4 >
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#238    Touchy Feely Socials Feature Object
+------- ----
+Crag says, "You might want to @addfeature login"
+Minty says, "k"
+Crag says, "Since we have more than one room here, it's easy to miss someone"
+Minty says, "ok, added"
+The Pasting Feature (#1020) is already one of your features.
+Crag says, "YAY"
+Crag says, "Now @addfeature paste"
+Minty says, "k"
+The verb :| is on   Pasting Feature(#1020)
+Crag says, "You now have @paste and @paste-to"
+Minty yays!
+Minty nods.
+Crag says, "whew, that was a different kind of hassle from what I expected."
+Minty [to Crag]: Thanks!
+Minty giggles.
+Crag says, "You're welcome"
+Minty says, "I bet it was!"
+Crag says, "Maybe next weekend I'll see about making the touchy-feely feature work."
+Minty says, "Coolies!"
+Crag says, "Now I can cross one of my to-do items off the whiteboard."
+< GhostOfTheManor has disconnected.  Total: 3 >
+Minty gets all touchy feely anyways.
+Minty nods.
+Minty says, "Oh, do we still have the *bb and *qooc?"
+Minty says, "Since you switched DB?"
+Crag says, "No, I'll need to re-create those."
+Minty says, "okay"
+You aren't subscribed to any mailing lists.
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+-------- end of @subscribe -------
+Crag says, "There are no non-standard lists at all..."
+Crag says, "I guess I shouldn't be surprised."
+Minty says, "ahhh"
+Crag says, "I'll just make those right now."
+Crag says, "Unfortunately I can't just copy them over."
+Minty says, "We sure used to have fun with *qooc in Netsville."
+Crag grins.
+Minty nods.
+Steering-Committee (#135)   Generic Administrators Mailing List (#107)   Generic Mail Recipient (#41)   root class (#1)
+You now have Quotes Out Of Context (aka qooc) with object number #1161 and parent Generic Administrators Mailing List (#107).
+The created object is now your current object.
+Minty hardly goes there anymore.
+"*sc" is not the name of any player.
+Steering-Committee (#135) [ ]
+  Owned by Core-Wizard (#184).
+  Child of Generic Administrators Mailing List (#107).
+  Location Mail Distribution Center (#42).
+-------------------------------- finished ---------------------------------
+Crag says, "You mentioned that"
+Crag says, "quote a few times, actually :)"
+Minty giggles.
+Moved.
+*Quotes Out Of Context has 0 messages.
+Quotes Out Of Context (#1161) [ readable ]
+  Child of Generic Administrators Mailing List (#107).
+  Location Mail Distribution Center (#42).
+-------------------------------- finished ---------------------------------
+ readers                 Crag (#958)           r c    {}
+-------------------------------- finished ---------------------------------
+ writers                 Crag (#958)           r c    {}
+-------------------------------- finished ---------------------------------
+ readers                 Core-Wizard (#184)    r c    {}
+-------------------------------- finished ---------------------------------
+ writers                 Core-Wizard (#184)    r c    {}
+-------------------------------- finished ---------------------------------
+,readers                 Core-Wizard (#184)    r c    1
+-------------------------------- finished ---------------------------------
+=> #1161 (Quotes Out Of Context)
+[used 1 tick, 0 seconds.]
+=> 1
+[used 2 ticks, 0 seconds.]
+Crag says, "Ok, we now have a *qooc"
+Minty yays!
+Description set.
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+*qooc  [Writable]
+    ...as if you didn't know
+-------- end of @subscribe -------
+Minty says, "I really have lag bad."
+Crag says, "That's because of stormagnet's downloading."
+Minty nods.
+Crag says, "I don't know what we're going to do about that."
+Crag says, "We just can't get any more bandwidth where we are."
+Minty says, "Least I'm not getting disconnected, glad to see it's not a routing problem."
+Minty nods.
+Crag nods.
+Crag says, "Oh, what hostname do you use for the MOO?"
+Crag says, "You should be using pm.thatsnice.org"
+Minty says, "Yours?"
+Minty says, "I named it Crag's MOO"
+Crag says, "If we ever move the MOO to stormagnet's computer, the IP will change"
+Crag says, "I mean the computer name"
+Minty says, "Ohhhh"
+Crag says, "If you use pm.thatsnice.org you won't notice the change."
+Crag says, "if you use 64.81.175.9, it might not work some day"
+Minty says, "Ohh, so I should change it to pm.thatsnice.org right now then."
+Crag nodsnods
+Minty says, "?"
+Minty says, "k"
+< GhostOfTheManor has connected.  Total: 4 >
+Minty goes to the address book to change it.
+Minty says, "k, done"
+Crag says, "Ok, I've got some other stuff I've got to go work on"
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+Minty          Entrance Hall                 25 seconds                        
+GhostOfTheMan  Heavens                       39 seconds                        
+stormagnet     Entrance Hall                 17 minutes                        
+
+Total: 4 people, 3 of whom have been active recently.
+Minty says, "But when I click on file to bring up connect, it still says Crag'sMOO."
+Minty says, "ok, I won't bother you then."
+Crag says, "You should explore and stuff"
+Crag says, "I'll be back later"
+Crag says, "today even!"
+< GhostOfTheManor has disconnected.  Total: 3 >
+Minty says, "Actually, I need to leave.. almost chore time."
+Crag says, "ok :)"
+Crag idles: real life intrusion
+[Idling at 1:48 P.M. on Sat, Jan 29: real life intrusion]
+Minty hugs, shags, licks and stuff.
+You hear a quiet popping sound; Minty has disconnected.
+< Minty has disconnected.  Total: 2 >
+enceladus has connected.
+Crag wakes
+@Programmer enceladus despite eir lack of description? [Enter `yes' or `no']
+enceladus is now a programmer.  Eir quota is currently 0.
+enceladus and the other admins have been notified.
+enceladus is now a programmer.
+[Type a reason for the quota increase or `@abort' to abort the command.]
+enceladus's quota set to 100000.
+Crag [to enceladus]: I gave you 100k quota.  Don't build it all in once place. :)
+You now have theme with object number #1150 and parent generic note (#9).
+The created object is now your current object.
+The Note Editor
+
+Do a 'look' to get the list of commands, or 'help' for assistance.
+
+Now editing "theme"(#1150).text.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+enceladus is here, dozing.  stormagnet is off in another world.
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current edit options:
+
+-quiet-insert       Report line numbers on insert or append.
+-eval-subs          Ignore .eval_subs when compiling verbs.
+-local              Use in-MOO text editors.
++local              Ship text to client for local editing.
+Current client options:
+
+-edit          Your client can't do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
+-mcp-edit      Your client can't do MCP standard editing.
++mcp-edit      Your client can do MCP standard editing.
++edit          Your client can do local editing.
+#$#dns-org-mud-moo-simpleedit-content 1439660996 reference: "str:#1150.text" name: theme.text type: string-list content*: "" _data-tag: 3706754680
+#$#: 3706754680
+Crag brb

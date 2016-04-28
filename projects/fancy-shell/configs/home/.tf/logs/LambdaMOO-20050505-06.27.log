@@ -1,0 +1,151 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 138 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              5 new messages
+Last connected Wed Apr 20 18:45:31 2005 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 809 on *News (#123):
+Date:    Sunday  1-May-05 14:07:19
+From:    Petition/Ballot Core (#33842)
+To:      *News (#123)
+Subject: Open Ballot #102412 Ready for Voting
+Sender:   Petitioner (#4)
+
+Petition #102412 has received enough signatures to transform it into open Ballot:Lag_Is_Dead (#102412): `Lag Is Dead', which is now available for voting.  Type `read #102412' to see the text of the proposal and then `vote yes on #102412' to cast your vote in favor of it, `vote no on #102412' to cast your vote against it, or `abstain on #102412' to stop hearing about it.  Voting on this ballot will close on Sunday, May 15, at 2:07 pm, LambdaMOO Standard Time; until then, you can change your vote as often as you wish.  You can read (and contribute to) commentary on this proposal on the mailing list named *Ballot:Lag_Is_Dead or *Ballot:lid; type `help mail' for details.
+--------------------------
+Message 4872 on *Core-DB-Issues (#8175):
+Date:    Tuesday 26-Apr-05 12:59:01
+From:    Tartan (#107618)
+To:      Tartan (#107618) and *Core-DB-Issues (#8175)
+
+where can one pick up a copy of the lambda core db these days?  (I tried ftp://ftp.lambda.moo.mud.org but it was non-responsive)
+--------------------------
+Message 4873 on *Core-DB-Issues (#8175):
+Date:    Tuesday 26-Apr-05 15:04:01
+From:    Nosredna (#2487)
+To:      Tartan (#107618) and *Core-DB-Issues (#8175)
+
+FTP site should be back up.
+--------------------------
+< connected: Crag. Total: 139 >
+Message 4874 on *Core-DB-Issues (#8175):
+Date:    Friday 29-Apr-05 15:54:56
+From:    Diopter (#98842)
+To:      *Core-DB-Issues (#8175)
+Subject: $time_utils:from_day enhancement
+
+This change to $time_utils:from_day lets you specify a reference time to be used instead of the current time.  This will let you do things like find the third Friday in June even when it isn't currently June: $time_utils:from_day("Fri", 3, $time_utils:from_month("June", 1)).
+
+*** $time_utils:from_day(orig)
+--- $time_utils:from_day
+***************
+*** 1 ****
+! "from_day(day_of_week,which)";
+--- 1 ----
+! "from_day(day_of_week,which [,reference time])";
+***************
+*** 7 ****
+! {day, ?dir = 0} = args;
+--- 7 ----
+! {day, ?dir = 0, ?reftime = time()} = args;
+***************
+*** 12 ****
+! time = time() - delta;
+--- 12 ----
+! time = reftime - delta;
+
+*** $time_utils.help_msg(orig)
+--- $time_utils.help_msg
+***************
+*** 8 ****
+! from_day      (day_of_week, which)   => time-since-1970 for the given day*
+--- 8,9 ----
+! from_day      (day_of_week, which[, reference time])
+!                                      => time-since-1970 for the given day*
+--------------------------
+Message 4875 on *Core-DB-Issues (#8175):
+Date:    Friday 29-Apr-05 19:29:21
+From:    Nosredna (#2487)
+To:      Diopter (#98842) and *Core-DB-Issues (#8175)
+Subject: Re: $time_utils:from_day enhancement
+
+Implemented.
+--------------------------
+Message 4876 on *Core-DB-Issues (#8175):
+Date:    Friday 29-Apr-05 20:11:29
+From:    Nosredna (#2487)
+To:      Galatea_Stardancer (#122047) and *Core-DB-Issues (#8175)
+Subject: Re: $object_utils:accessible_verbs(), revisited
+
+OK, I've used Galatea_Stardancer's code from message 4865 on *core in :accessible_verbs.  I've copied the old one to :accessible_verbs(old) for now, in case there are problems.
+--------------------------
+No News (is good news)
+Message 4865 on *Core-DB-Issues (#8175):
+Date:    Friday  7-Jan-05 17:20:47
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: $object_utils:accessible_verbs(), revisited
+
+While $object_utils:accessible_verbs(), in its present form, has, indeed, gotten corrected [Xref: msgs 4845, 4847, 4849 on *Core-DB-Issues], I had always thought that my version was somehow more efficient.
+I now have the numbers proving this to be true, check it out:
+
+Object                        # Verbs    Ticks w/ curr    Ticks w/ mine
+------                        -------    -------------    -------------
+The System Object (#0)             31              420              264
+Root Class (#1)                    39              524              328
+generic player (#6)               108             1421              880
+string utilities (#20)             76             1005              624
+object utilities (#3669)           39              524              328
+code utilities (#153)              61              810              504
+Adventurers Database (#46)         94             1239              768
+generic voodoo doll (#74)         100             1317              816
+object_db (#33376)                 11              160              104
+Magic Database (#328)             140             1837             1136
+Generic Zapper (#81)                3               56               40
+iron latch (#15122)                 2               43               32
+In the Well (#9962)                 1               30               24
+Note PADD (#59443)                  0               17               16
+
+
+I had hoped to add a $command_utils:suspend_if_needed(0) within the for-loop; however, that cost an extra 8 ticks or so, per verb, resulting in tick sizes that were not only not better, but, in some cases with my exemplars here, twice as bad!  :|
+So... no suspending if needed, oh well.
+
+Without further ado, here is the code for my version of $object_utils:accessible_verbs(<OBJ>)
+
+"  accessible_verbs(object)   => a list of verb names (or E_PERM) regardless of readability of object";
+{thing} = args;
+valid(thing) || raise(E_INVARG, "Invalid object argument");
+{num_verbs, verbs} = {length(verbs(thing)), {}};
+set_task_perms(caller_perms());
+"... caching num of verbs before for loop saves us ticks ...";
+for i in [1..num_verbs]
+  verbs = {@verbs, `verb_info(thing, i)[3] ! E_PERM'};
+endfor
+return verbs;
+
+--------------------------

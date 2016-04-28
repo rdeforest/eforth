@@ -1,0 +1,66 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 101 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+Last connected Sat Jul 26 11:08:16 2008 PDT from 64.81.169.43
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 870 on *News (#123):
+Date:     Tue Jul 29 02:42:04 2008 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Architecture Review Board has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        36        11         3   *   Kagan (#102427)
+        33        10         3   *   Profane (#30788)
+        22        12         4   *   dtBy (#118322)
+        22        14         5   *   Skully (#93167)
+        13        13         7       Durhin (#122460)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+No News (is good news)
+< connected: Crag. Total: 102 >
+Line 1:  Unknown built-in function: conected_players
+1 error.
+=> 102
+[used 5 ticks, 0 seconds.]
+Crag (#58746) [ (player) programmer ]
+  Child of generic programmer (#217).
+  Location Storage room (#27242).
+  Size: 9,739 bytes at Thu Aug 21 01:07:25 2008 PDT
+-------------------------------- finished ---------------------------------
+Crag(#58746)   generic programmer(#217)   generic builder(#630)   Generic LambdaMOO Citizen(#322)   Frand's player class(#3133)   Generic Mail Receiving Player(#100068)   generic player(#6)   Root Class(#1)
+Objects owned by Crag (from #0 to #123391):
+  9K  #58746 Crag                       [Storage room]
+  3K  #27242 Storage room              
+-- 2 objects.  Total bytes: 12,859.-------------------------------------------
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.

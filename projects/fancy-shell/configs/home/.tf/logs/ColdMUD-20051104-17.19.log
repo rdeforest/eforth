@@ -1,0 +1,30 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+I don't understand that.
+I don't understand that.
+--> $admin_1
+--> $admin_1
+--> [$frob_class, $sys, $has_verbs, $has_commands, $user_db, $utils, $verb_cache, $lock_parser]
+I don't understand that.
+--> ['startup, 'new_connection, 'doing_poll, 'set_doing_poll, 'new_user_class, 'set_new_user_class, 'create_user, 'connection_starting, 'admins, 'is_admin, 'binary_dump, 'text_dump, 'shutdown, 'change_sender_parents, 'spawn_sender, 'create_object, 'destroy_sender, 'remote_verb_templates, 'new_remote_template, 'removed_remote_template, 'user_going_away, 'log, 'log_traceback, 'connect, 'heartbeat, 'do_backup, 'schedule_task, 'remove_first_task, 'ps, 'backup_interval, 'set_backup_interval, 'sender_data, 'starting_room, 'set_starting_room, 'exit_starting_room, 'set_exit_starting_room, 'assign_name, 'deassign_name, 'new_admin, 'admin_going_away]
+I don't understand that.
+ERROR: Current object (#39) is not the system object.
+Thrown by function shutdown().
+~perm in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #32), line 11
+~methoderr in #39.parse_command (defined on #30), line 32
+~methoderr in #39.parse_command (defined on #32), line 12
+Line 2: syntax error
+--> $sys

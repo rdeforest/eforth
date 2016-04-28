@@ -1,0 +1,14 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+--> [$verb_cache, $utils, $user_db, $sys, $properties, $help_node, $has_verbs, $has_commands, $frob_class, $lock_parser]

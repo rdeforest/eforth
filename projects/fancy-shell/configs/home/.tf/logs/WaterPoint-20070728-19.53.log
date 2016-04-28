@@ -1,0 +1,764 @@
+Waterpoint: mildly naughty fiefdom[315]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Coastal Path
+A relatively smooth path along the coast.  The ocean rolls against the rocky coast.  A thick night mist hangs like a heavy blanket, blotting out all natural light.  It is warm.  The path continues southeast.  A sandy beach beckons invitingly to the northeast.  Another path leads northwest away from the coast, uphill towards the summit.  The coastal path continues to the north.
+You see a trash can here.
+A dark wizard is here, asleep.
+Last connected Fri Aug  4 12:59:48 2006 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news all' to read all news or `news' to read just new news.
+There is new activity on the following lists:
+    *Bug-reports                29 new messages
+    *News                       1 new message
+    *welcome-messages           3 new messages
+    *core                       4 new messages
+    *server-hacking             6 new messages
+    *Documentation              5 new messages
+#$#mcp-negotiate-can 1741444438 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1741444438 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1741444438 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-org-waterpoint-tellpriority min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1741444438 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1741444438
+Message 833 on *Bug-reports:
+Date:     Mon Aug  7 20:00:14 2006 PDT
+From:     Ben
+To:       *Bug-reports
+
+We don't have a $player.queued_task_limit.  If someone made one, it would override the $server_options value.  It should have a non-int (or negative) value to fall back on the $server_options value
+--------------------------
+Message 834 on *Bug-reports:
+Date:     Mon Aug  7 20:02:53 2006 PDT
+From:     Ben
+To:       *Bug-reports
+
+I think the problem with $startup and the random cases where connection objects (like NNTP player objects) are not cleaned up is due to the queued task limit being exceeded at boot when the db loads the connected players list from the db and immediately disconnects them all, creating a flood of tasks.
+--------------------------
+Message 835 on *Bug-reports:
+Date:     Wed Aug  9 21:51:17 2006 PDT
+From:     Ben
+To:       *Bug-reports
+
+Ok, I locked down $player.queued_task_limit and I fattened up $core_wizard's.  Anyone want to restart to see if it helps??
+--------------------------
+Message 836 on *Bug-reports:
+Date:     Fri Aug 11 10:02:59 2006 PDT
+From:     Marn
+To:       *Bug-reports
+
+If something which you have gagged (say #388) causes you to move (say by you following someone moved by #388), then you don't see the output of the room's automatic :look_self, nor any other notification that you have moved.
+
+The fix that comes to mind is making :gag_p stop checking the rest of the callers list when it sees :enterfunc called by move(), and possibly other 'hook' cases where the effect isn't really dependent on the caller. This might be too lenient, however.
+--------------------------
+Message 837 on *Bug-reports:
+Date:     Thu Oct 19 09:48:55 2006 PDT
+From:     Kenny
+To:       *Bug-reports
+
+in $http:parse_url the urlregexp should be "
+%([A-Za-z]*%)://%([
+/]*%)%(/.*%|%)$"
+--------------------------
+Message 838 on *Bug-reports:
+Date:     Mon Oct 23 12:46:08 2006 PDT
+From:     Marn
+To:       *Bug-reports
+
+`help <ambiguous feature name>' reports complete failure rather than the ambiguity.
+--------------------------
+Message 839 on *Bug-reports:
+Date:     Thu Nov 23 23:53:45 2006 PST
+From:     James
+To:       *Bug-reports
+Subject:  dictionary sec-out
+
+>lookup cwm
+[in the reference book]
+You look up "cwm" in the reference book.
+#333:parse_netdict (this == #4688), line 60:  Task ran out of seconds
+... called from #333:lookup*! webster*! (this == #4688), line 33
+... called from #6:last_huh (this == #316), line 51
+... called from #50:do_huh, line 17
+... called from #1:huh (this == #469), line 10
+(End of traceback)
+
+I don't know how long this will be repeatable.
+--------------------------
+Message 840 on *Bug-reports:
+Date:     Tue Nov 28 01:40:02 2006 PST
+From:     James
+To:       *Bug-reports
+Subject:  Re: dictionary sec-out
+
+>  I don't know how long this will be repeatable.
+
+... apparently a long time ...
+--------------------------
+Message 841 on *Bug-reports:
+Date:     Tue Jan  2 12:45:05 2007 PST
+From:     Ragnar
+To:       *Bug-reports
+Subject:  @age ignores leap days
+
+$player:@age should include the reference time in its call to @time_utils:english_time, i.e.:
+
+27:      notice = $time_utils:english_time(duration / 86400 * 86400, time);
+--------------------------
+Crag first connected on Sun Jan 12 07:26:05 1997 PST
+He is 10 years, 6 months, and 16 days old.
+Message 842 on *Bug-reports:
+Date:     Tue Jan  2 12:47:55 2007 PST
+From:     Ragnar
+To:       *Bug-reports
+Subject:  @age and time zone
+
+Also, @age interprets .first_connect_time as Pacific Time, but it should be Eastern Time for dates before the server moved.  (When was that?)
+--------------------------
+Message 843 on *Bug-reports:
+Date:     Sun Jan  7 12:20:16 2007 PST
+From:     Ben
+To:       *Bug-reports
+Subject:  @age
+
+Ok, I implemented 841 on *bugs, but I don't understand what it is doing.  As far as 842, I think output timezones are all personalized now.
+--------------------------
+Message 844 on *Bug-reports:
+Date:     Mon Jan  8 11:51:13 2007 PST
+From:     keith
+To:       *Bug-reports
+
+#4914:use_exit_now (this == #6977), line 21:  Verb not found
+.. called from #4914:use_exit (this == #6977), line 45
+.. called from #4914:wander (this == #6977), line 79
+.. called from #4682:wanderlust, line 19
+(End of traceback)
+--------------------------
+Message 845 on *Bug-reports:
+Date:     Tue Jan  9 08:15:56 2007 PST
+From:     keith
+To:       *Bug-reports
+
+#4914:use_exit_now (this == #6977), line 21:  Verb not found
+.. called from #4914:use_exit (this == #6977), line 45
+.. called from #4914:wander (this == #6977), line 79
+.. called from #4682:wanderlust, line 19
+(End of traceback)
+#4914:use_exit_now (this == #6687), line 21:  Verb not found
+.. called from #4914:use_exit (this == #6687), line 45
+.. called from #4914:wander (this == #6687), line 79
+.. called from #4682:wanderlust, line 19
+(End of traceback)
+--------------------------
+Message 846 on *Bug-reports:
+Date:     Wed Jan 17 13:19:01 2007 PST
+From:     keith
+To:       *Bug-reports
+
+#4729:affect (this == #6569), line 5:  Type mismatch
+.. called from #974:was_eaten_by (this == #6569), line 2
+.. called from #4914:wander (this == #5900), line 19
+.. called from #4682:wanderlust, line 19
+(End of traceback)
+--------------------------
+Message 847 on *Bug-reports:
+Date:     Wed Feb 14 07:56:18 2007 PST
+From:     Rob
+To:       *Bug-reports
+Subject:  $local.httpd.handler:read_headers parses Accept header strangely
+
+#1959:read_headers, line 12:
+  accept = $set_utils:union($string_utils:explode(value), accept);
+
+This splits the header on spaces, which isn't too helpful. Media types are separated by commas, so perhaps something like this would work better:
+
+  types = $string_utils:explode(value, ",");
+  types = $list_utils:map_arg($string_utils, "trim", types);
+  accept = $set_utils:union(types, accept);
+--------------------------
+Message 848 on *Bug-reports:
+Date:     Sat Feb 17 02:48:43 2007 PST
+From:     Rob
+To:       *Bug-reports
+Subject:  bogus ASCII value for HT in $string_utils
+
+> ;$string_utils:character_to_ascii($string_utils.tab)
+=> 9
+> ;$string_utils:character_to_hex_ascii($string_utils.tab)
+=> "08"
+
+The problem is with $string_utils._character_set_in_ascii and ._character_set_in_hex_ascii:
+
+> ;index($string_utils._character_set, $string_utils.tab)
+=> 1
+> ;$string_utils._character_set_in_ascii[1]
+=> 8
+> ;$string_utils._character_set_in_hex_ascii[1]
+=> "08"
+
+:character_to_ascii was changed to use decode_binary(encode_binary(...)), so it returns the correct result.
+--------------------------
+Message 849 on *Bug-reports:
+Date:     Tue Feb 20 16:49:05 2007 PST
+From:     Rob
+To:       *Bug-reports
+Subject:  #4460:read may parse lines incorrectly
+
+I think there may be a bug in the way the binary-mode http handler (#4460):read parses lines...
+
+ 7:    if (i = index(x, "~0D~0A"))
+ 8:      skip = 6;
+ 9:      break;
+10:    elseif (i = index(x, "~0D"))
+11:      skip = 3;
+12:      break;
+13:    endif
+
+Suppose the data being read from the connection is returned from the operating system like so:
+
+1st read(): "GET / HTTP/1.1~0D"
+2nd read(): "~0AHost: wtpt.org~0D~0A"...
+
+In this case, the above code would return the first line OK, but the second line would be returned as "~0AHost: wtpt.org".
+
+I think looking for a single CR as a line terminator is an error in any case; section 19.3 of RFC 2616 recommends that tolerant applications recognize a single LF as a line terminator and ignore the leading CR. So the second case on line 10 above should look for "~0A" rather than "~0D".
+
+  -rob
+--------------------------
+Message 850 on *Bug-reports:
+Date:     Fri Mar 23 10:18:39 2007 PDT
+From:     Marn
+To:       *Bug-reports
+
+#212:@pasteto: loop on line 48 needs a suspend_if_needed, as demonstrated by Ford
+--------------------------
+Message 851 on *Bug-reports:
+Date:     Fri Mar 23 12:14:40 2007 PDT
+From:     keith
+To:       *Bug-reports
+Subject:  hm
+
+While pasting:
+
+!ELEMENT metadata (record)*>
+<!ATTLIST metadata
+  xmlns CDATA #FIXED ''
+  altitude CDATA #IMPLIED
+  fov CDATA #IMPLIED
+  fovClock CDATA #IMPLIED
+  gimbalAzimuth CDATA #IMPLIED
+  gimbalClock CDATA #IMPLIED
+  gimbalElevation CDATA #IMPLIED
+  heading CDATA #IMPLIED
+  latitude CDATA #IMPLIED
+  longitude CDATA #IMPLIED
+  pitch CDATA #IMPLIED
+  roll CDATA #IMPLIED
+  sensor CDATA #IMPLIED
+  sensorAzimuth CDATA #IMPLIED
+  sensorElevation CDATA #IMPLIED
+  sensorTwist CDATA #IMPLIED
+  targetLat CDATA #IMPLIED
+  targetLon CDATA #IMPLIED
+  targetRange CDATA #IMPLIED
+  targetWidth CDATA #IMPLIED
+  timeTag CDATA #IMPLIED
+  velocityEast CDATA #IMPLIED
+  velocityNorth CDATA #IMPLIED
+  velocityUp CDATA #IMPLIED>
+
+<!ELEMENT record (frame+,metadata?)>
+<!ATTLIST record
+  xmlns CDATA #FIXED ''
+  cts CDATA #REQUIRED>
+
+<!ELEMENT frame EMPTY>
+<!ATTLIST frame
+  xmlns CDATA #FIXED ''
+  fnum CDATA #IMPLIED
+  stream NMTOKEN #REQUIRED
+  valid NMTOKEN #REQUIRED>
+
+#657:tell (this == #242), line 2:  Resource limit exceeded
+.. called from #1:tell_lines (this == #242), line 6
+.. called from #212:@pasteto @paste @pasteto2, line 49
+.. called from #6:my_huh (this == #1107), line 31
+.. called from #50:do_huh, line 11
+.. called from #1:huh (this == #459), line 10
+(End of traceback)
+--------------------------
+Message 852 on *Bug-reports:
+Date:     Sat Mar 31 17:39:20 2007 PDT
+From:     Rob
+To:       *Bug-reports
+Subject:  $string_utils:print_truncated_recursive may run out of seconds
+
+I've lately been running into:
+
+#18:print_truncated_recursive, line 24:  Task ran out of seconds
+... called from #18:print_truncated, line 4
+... called from #52:@d*isplay (this == #234), line 185
+(End of traceback)
+
+I suggest the following fix:
+
+--- #18:print_truncated_recursive
++++ #18:print_truncated_recursive(new)
+@@ -19,6 +19,10 @@
+     if (value[q] == "\"")
+       q = min(q, index(value + "\\", "\\"));
+     endif
++    if (1 + q > len)
++      result = result + value;
++      break;
++    endif
+     result = result + value[1..q - 1] + "\\" + value[q];
+     value = value[q + 1..length(value)];
+   endwhile
+--------------------------
+Message 853 on *Bug-reports:
+Date:     Sat Mar 31 18:21:41 2007 PDT
+From:     Perfect Tommy
+To:       *Bug-reports
+
+is 'if (q >= len)' equivalent?
+--------------------------
+Message 854 on *Bug-reports:
+Date:     Thu Apr  5 08:03:04 2007 PDT
+From:     Kenny
+To:       *Bug-reports
+Subject:  @check-full fails on some requests
+
+It appears that @check-full can't handle waifs.
+
+Traceback for:
+*** Jabber: Unknown reply from `yahoo.jabber.la.gs'.
+This           Verb             Programmer     VerbLocation   Player        
+-------------- ---------------- -------------- -------------- --------------
+#7000(xmpp)    tell_user        #267(kR)       #7000(xmpp)    #6612(jh)
+#7000(xmpp)    receive_iq_reply #267(kR)       #7000(xmpp)    #6612(jh)
+#6:@ch*eck-full (this == #267), line 78:  Type mismatch
+(End of traceback)
+--------------------------
+Message 855 on *Bug-reports:
+Date:     Wed Apr 11 03:02:14 2007 PDT
+From:     Rob
+To:       *Bug-reports
+Subject:  $english:@add-nonvowel-exception failure, oh and an $english nonvowel-exception suggestion
+
+> @add-nonvowel-exception HTTP to $english
+All words starting with "HTTP" take "an" as an indefinite article.
+Is this correct? [Enter `yes' or `no']
+> yes
+#47:isa, line 10:  Type mismatch
+... called from #42:nn, line 3
+... called from #49:map_arg, line 17
+... called from #42:name_list nn_list, line 1
+... called from #42:make_message, line 11
+... called from #42:send_message, line 26
+... called from #72:@add-vowel-exc*eption @add-nonvowel-exc*eption, line 30
+... called from #3:here_huh (this == #5822), line 22
+... called from #7136:here_huh (this == #5822), line 1
+... called from #50:do_huh, line 13
+... called from #1:huh (this == #5822), line 10
+(End of traceback)
+--------------------------
+Message 856 on *Bug-reports:
+Date:     Wed Apr 11 11:57:43 2007 PDT
+From:     Ben
+To:       *Bug-reports
+
+It's a silly verb.  It Does Stuff if you're a wizard, otherwise it's glorified (and apparently buggy) @qsend.  I just added the exception.  I suspect the args to :send_message are wrong.
+--------------------------
+Message 858 on *Bug-reports:
+Date:     Wed Apr 11 19:24:24 2007 PDT
+From:     Ben
+To:       *Bug-reports
+
+Ok, now it goes to *bugs, and I fixed the :init_for_core bug that screwed it up
+--------------------------
+Message 859 on *Bug-reports:
+Date:     Fri Apr 20 05:26:38 2007 PDT
+From:     Rob
+To:       *Bug-reports
+Subject:  Task ran out of ticks
+
+> join kenny
+You stand up from the thick carpet of pine needles.
+You walk south, to the grassy area.
+The Grassy Area
+A grassy area a few hundred yards wide between the rocky shore and a wooded area.  Plenty of space to sit on the grass.  pj, Ford, Becky, and Ben are sitting on it.  An open seat is here.  Mordred and JoD are sitting on it.  A penguin named Bob is here.  Matthew and stucky are sitting on him.  A silk buckwheat pillow is here.  Sean is sitting on it.  A Pirates beach towel is spread out on the grass.  Jim and rgm are sitting on it.  A tank is parked here.  A high chair facing the wall is here.  Marn is sitting on it.  Some toast points are here.  It's still early in the day, the sun is bright in the sky.  It is chilly.
+A sign here says, `Topic: JVM: Do not want!'
+You see Ragnar's mp3 player, a linking book to Cutthroats, a Card Guppies game, a nearly empty cup of >:-Is and :-Oes, a stock boy, a small wicker wastebasket, a pez dispenser with a penzey's head, one of Xplat's armies, a Weather Trophy, the URL trap, a title trap, an interactive plot, a Potential Names for Fasteddie's Band, a pez dispenser with a CRAZY PEZ DISPENSER HEAD MAN head, a linking book to The Hitchhiker's Guide to the Galaxy, Sean's silent dictionary, the macaw, a frog, a linking book to Inhumane, a linking book to Zork 2 - the Wizard of Frobozz, a taped-up steel vault, a pepperoni-and-onions pizza, Err, Abby, and a cockroach/foot/nuclear bomb game here.
+Kenny is here.  rgm is distracted.  Tari and keith are daydreaming.  Sean, Charkes, and James are dozing.  Druid, Ford, Jim, pj, Roy, Eclipse, Kyle, Mordred, stucky, Dea, Ben, Matthew, JoD, Marn, dave, and Chris are off in another world.  Becky is idling.
+#49:sort, line 10:  Task ran out of ticks
+... called from #6999:_strip_text (this == #5343), line 78
+... called from #6999:tell (this == #5343), line 15
+... called from #3:announce_all_but (this == #335), line 11
+... called from #7:move (this == #352), line 27
+... called from #6:walking_step (this == #234), line 13
+... called from #189:move_by_exits, line 12
+... called from #6:move_by_exits (this == #234), line 4
+... called from #189:walkto walkto_blocking, line 8
+(End of traceback)
+
+Not sure if it has anything to do with the buttload of pez in the room I was leaving.
+--------------------------
+Message 860 on *Bug-reports:
+Date:     Tue May 22 11:23:38 2007 PDT
+From:     Ben
+To:       *Bug-reports
+Subject:  Bug from RGM entering point moby?
+
+rgm [to you]: I get a traceback entering off point moby (#855)
+-------------------------Private message from rgm--------------------------
+#49:map_arg, line 17:  Task ran out of ticks
+. called from #49:map_arg, line 13
+. called from #49:map_arg, line 13
+. called from #6999:_strip_text (this == #7415), line 78
+. called from #6999:tell (this == #7415), line 15
+. called from #3:announce_all_but (this == #855), line 11
+. called from #7:move (this == #5145), line 35
+. called from #6:walking_step (this == #4177), line 13
+. called from #189:move_by_exits, line 12
+. called from #6:move_by_exits (this == #4177), line 4
+. called from #189:walkto walkto_blocking, line 8
+(End of traceback)
+--------------------------------end message--------------------------------
+--------------------------
+Message 861 on *Bug-reports:
+Date:     Mon May 28 20:00:44 2007 PDT
+From:     Anrm
+To:       *Bug-reports
+Subject:  group membership display incomplete
+
+Looking at #2290, the welcome message group, displays the members of the DB group but not the direct members of the welcome message group.
+
+It appears that #168:description makes the incorrect assumption that no group has both members and subgroups.
+
+Not a bug, but related: perhaps the subgroups should be listed only by name and members, not full description, for less recursive verbosity?
+--------------------------
+Message 862 on *Bug-reports:
+Date:     Fri Jun 15 22:00:09 2007 PDT
+From:     Charkes
+To:       *Bug-reports
+Subject:  I demand this bug be fixed immediately
+
+pet james
+#6881:pet (this == #316), line 4:  Verb not found
+(End of traceback)
+--------------------------
+=> #316 (James)
+#-1:Input to EVAL, line 4:  Property not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #289), line 21
+... called from #52:eval eval-d eval+d (this == #289), line 16
+(End of traceback)
+James (#316) [ readable (player) programmer ]
+  Child of grakPC (#6350).
+  Location Limbo (#15).
+-------------------------------- finished ---------------------------------
+Object #316 does not define that verb, but its ancestor #6881 does.
+Last modified Sun May 20 17:56:31 2007 PDT by James (#316).
+#6881:"pet" this none none
+ 1:  if (this.is_dead)
+ 2:    $local.comp_utils:act(this.pet_while_dead_msg, {}, 1);
+ 3:  else
+ 4:    return pass(@args);
+ 5:  endif
+dead PC (#6881) [ readable ]
+  Owned by James (#316).
+  Child of canine PC (#7728).
+  Location James (#316).
+-------------------------------- finished ---------------------------------
+canine PC (#7728) [ readable ]
+  Owned by James (#316).
+  Child of composite player class (#3333).
+  Location James (#316).
+-------------------------------- finished ---------------------------------
+The component player class adds a few features:
+
+        super object matching
+        more grammatical murmuring (for now)
+
+Super object matching allows you to match things like '1st pez' and 'any pez' to get past ambiguity.  Of course, it doesn't work on things that call this.location:match_object instead of player:my_match_object, but those things SUCK.
+
+In the future there will be more features, like components and multi-object matching.
+
+You can become a #3333 by typing `@chparent me to #3333', even if you are not a programmer.
+
+#3333 is currently only recommended for the daring.
+E is sleeping.
+Message 64 on *News:
+Date:     Fri Aug 11 20:45:28 2006 PDT
+From:     Ben
+To:       *News
+
+Cable went away for a while.
+--------------------------
+Message 253 on *welcome-messages:
+Date:     Fri Aug 18 11:26:05 2006 PDT
+From:     Ken
+To:       *welcome-messages
+
+Waterpoint: unicode hinterlands
+
+--------------------------
+Message 254 on *welcome-messages:
+Date:     Fri Apr 20 15:01:35 2007 PDT
+From:     Ben
+To:       *welcome-messages
+
+Waterpoint: exact potency
+
+--------------------------
+Message 255 on *welcome-messages:
+Date:     Mon May 14 13:49:06 2007 PDT
+From:     Ben
+To:       *welcome-messages
+
+Waterpoint: mildly naughty fiefdom
+
+--------------------------
+Message 147 on *core:
+Date:     Wed Nov 16 18:24:07 2005 PST
+From:     Ben
+To:       *core
+
+$player:@register line 67 uses undef'd 'reason' (maybe it meant 'result'?)
+--------------------------
+Message 148 on *core:
+Date:     Wed Nov 16 18:30:02 2005 PST
+From:     Ben
+To:       *core
+
+$network:init_for_core line 12 uses thiis
+--------------------------
+Message 149 on *core:
+Date:     Mon Jan  9 12:49:27 2006 PST
+From:     James
+To:       *core
+Subject:  139-148 fixed
+
+... of which I did 144-6, Ben and Ken the rest (apparently).
+
+So, Ben, it looks like you've been doing something interesting with the server again...
+--------------------------
+Message 150 on *core:
+Date:     Mon Feb 19 20:45:28 2007 PST
+From:     Xplat
+To:       *Documentation and *core
+Subject:  help $you
+
+I fixed $you:help_text to escape the % signs as Blob mentioned a LONG time ago (82 on *core).  Sorry about the 5 year delay.  These things happen.  (?!)
+
+Also, I removed the distracting help on :verb_sub in favor of mentioning that $you is also a gender object.  I would have pointed to `help $gender' there, if it existed.  Sadly, it does not.
+--------------------------
+Message 49 on *server-hacking:
+Date:     Fri May 11 11:57:59 2007 PDT
+From:     James
+To:       *server-hacking
+Subject:  proposal for datatypes and constructors
+
+I plan to introduce a server version with BUF (buffer, byte-sequence) and DICT (dictionary, lookup table) types.  In connection with these, there would be new syntax for constructors--and potentially DEconstructors, as well as new indexing syntax for DICTs.
+
+  constructor: TYPE '{' conslist '}';
+
+  conslist: consitem ',' conslist
+          | /* nothing */;
+
+  consitem: consopts conselement;
+
+  consopts: consopt ',' consopts
+          | /* nothing */;
+
+  consopt: '??' id '=' id
+         | '??' id '=' tINTEGER
+         | '?@' id '=' id
+         | '?@' id '=' tINTEGER;
+
+  conselement: '@' expr
+             | id '=>' expr
+             | '(' expr ')' '=>' expr
+             | expr;
+
+An example might be:
+
+  header = BUF { ?@order = network, /* persistent option */
+                 "FzzL",
+                 ??width = 32,      /* item-local option */
+                 packetlen
+               };
+
+A dictionary example:
+
+  event = DICT { type => "directed_speech", speaker => player, @args };
+
+(args being a dictionary to be spliced in)
+
+I propose this syntax for dictionary indexing:
+
+  dictionary->id
+  dictionary->(expr)
+
+Now open for comments!
+--------------------------
+Message 50 on *server-hacking:
+Date:     Fri May 11 12:08:50 2007 PDT
+From:     James
+To:       *server-hacking
+Subject:  Re: proposal for datatypes and constructors
+
+>  An example might be:
+>
+>    header = BUF { ?@order = network, /* persistent option */
+>                   "FzzL",
+>                   ??width = 32,      /* item-local option */
+>                   packetlen
+>                 };
+
+To clarify:
+
+  "FzzL" would go in literally as ascii, packetlen would go in as an unsigned (because of defaults) 32-bit network-order integer.  if packetlen = 256, the resulting buffer would be '46 7a 7a 4c 00 00 01 00'.
+--------------------------
+Message 51 on *server-hacking:
+Date:     Fri May 11 16:44:41 2007 PDT
+From:     Ben
+To:       *server-hacking
+
+Why not make buf opaque and offer pack/unpack with perl syntax?
+--------------------------
+Message 52 on *server-hacking:
+Date:     Fri May 11 17:01:06 2007 PDT
+From:     James
+To:       Ben and *server-hacking
+
+>  Date:     Fri May 11 16:44:41 2007 PDT
+>  From:     Ben
+>
+>  Why not make buf opaque and offer pack/unpack with perl syntax?
+
+perl pack/unpack syntax is also opaque ...
+
+whatever i end up doing, it won't be that.
+--------------------------
+Message 53 on *server-hacking:
+Date:     Tue May 29 05:26:42 2007 PDT
+From:     wRog
+To:       *server-hacking
+Subject:  server.c checkin
+
+So I just checked in the changes referenced in 1110 on (*Server-Hackers@LambdaMOO).  I'm fairly sure this is what caused the LambdaMOO server panics we had back in January, April and May of this year.
+
+--------------------------
+Message 54 on *server-hacking:
+Date:     Tue May 29 16:06:18 2007 PDT
+From:     wRog
+To:       *server-hacking
+Subject:  Re: server.c checkin
+
+hmm.  having looked at it some more and seeing that server_close() goes out of its way to set .disconnect_me for the sake of having the right state of things for the :user_client_disconnected call that occurs there, even though it's freeing the shandle itself a few lines later, I think I'm just going to do this fix.  
+
+But feel free to yell if you have strong feelings...
+
+
+Message 1112 on *Server-Hackers (#24451):
+Date:    Tue May 29 15:50:20 2007 PDT
+From:    Rog (#4292)
+To:      *Server-Hackers (#24451)
+Subject: Re: the bug
+
+It occurs to me that there's still a bit of weirdness in the case of a reconnection in which one is changing listeners from OLD_L to NEW_L.
+
+Current state of affairs -- and this has apparently been the behavior since the support for separate listeners was introduced -- is that we get an OLD_L:user_client_disconnected(P) call followed by a NEW_L:user_connected(P) call such that -- here's the kicker -- P stays "connected" the whole time.  That is P is on the connected_players() list, and likewise all of the other connection-related functions (idle_seconds(), connected_seconds(), etc) are returning values as if P were still connected.
+
+Which seems to go against the apparent intent of the code to present the illusion that the player client has broken the OLD_L connection and subsequently connected anew at NEW_L in two separate operations.  It may even be that people have written one or more P:disfunc verbs (which, in LambdaCore, are called by both :user_client_disconnected and :user_disconnected) that expect P to not be connected and will crash and burn otherwise.
+
+Now one *could* regard P remaining connected during :user_client_disconnected as being a feature so that one can recognize reconnections from the inside of the user_client_disconnected hook, however this seems to defeat the purpose of having a separate :user_reconnected hook in the first place.  That is, if you actually care about distinguishing the reconnection cases, you are now having to put that code in two separate places.
+
+So I'm currently inclined to regard this as a bug.  
+
+The fix appears to be a two-line change in server.c to temporarily set the .disconnect_me flag on the player's shandle so as to make the player appear to be logged out for the duration of (the initial pre-suspend run of) the OLD_L:user_client_disconnected() call, after which it gets reset so that the subsequent NEW_L:user_connected call sees a connected player again.  And all this happens *before* run_ready_tasks() returns to the server main_loop, the point where all of the .disconnect_me's actually get disconnected.
+
+Thoughts?
+--------------------------
+--------------------------
+Message 57 on *Documentation:
+Date:     Mon Jan 22 18:37:17 2007 PST
+From:     Ragnar
+To:       *Documentation
+
+The help strings for $http:get_now and $http:get are incomplete (they don't mention the optional arguments) and wrong (the return value is not a list of strings).
+--------------------------
+Message 58 on *Documentation:
+Date:     Mon Feb 19 20:45:28 2007 PST
+From:     Xplat
+To:       *Documentation and *core
+Subject:  help $you
+
+I fixed $you:help_text to escape the % signs as Blob mentioned a LONG time ago (82 on *core).  Sorry about the 5 year delay.  These things happen.  (?!)
+
+Also, I removed the distracting help on :verb_sub in favor of mentioning that $you is also a gender object.  I would have pointed to `help $gender' there, if it existed.  Sadly, it does not.
+--------------------------
+Message 59 on *Documentation:
+Date:     Mon May 28 17:38:35 2007 PDT
+From:     James
+To:       *Documentation
+Subject:  improved help on all collectables
+
+... by making the exclusion in :help_verbs actually work and extending it to #355.
+
+Also made special help text for the generic cat ear mutation.
+
+Why is object help still using an alias to find help for the verbs?  it's printing the same message for both forms of 'twitch'.  This is no good.
+--------------------------
+Message 60 on *Documentation:
+Date:     Mon May 28 17:39:49 2007 PDT
+From:     James
+To:       *Documentation
+Subject:  Re: improved help on all collectables
+
+>  Date:     Mon May 28 17:38:35 2007 PDT
+>  From:     James
+>
+>  ... by making the exclusion in :help_verbs actually work and
+>  extending it to #355.
+
+OF COURSE i meant #1580.
+--------------------------
+Message 61 on *Documentation:
+Date:     Fri Jul 13 10:16:52 2007 PDT
+From:     Ragnar
+To:       *Documentation
+Subject:  writable notes
+
+`help write' should maybe mention $note.writers.  Or is that documented somewhere else?
+--------------------------
+No News (is news)

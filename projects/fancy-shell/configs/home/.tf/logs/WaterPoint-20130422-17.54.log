@@ -1,0 +1,266 @@
+Waterpoint: pickled spitfires[326]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Little Point
+A small jut of land sticks out into the sea here. The ocean rolls against the rocky coast.  The Susan Variable is resting here.  It is dark out and the stars are shining.  It is cold.
+Last connected Mon Apr 15 01:11:46 2013 PDT from 63.224.54.239
+#$#mcp-negotiate-can 1282686783 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1282686783 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1282686783 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1282686783 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1282686783
+The generic event handler(#137) has 6 kids.
+Rose Widget Event Handler (rweh) (#643)   Auto-Sitting Handler (#1965)   Visual Event Handler (veh) (#2180)   Rehash Event Handler (reh) (#2606)   lazy wave event handler (#3355)   MGI event handler (#5069)
+Auto-Sitting Handler (#1965) [ readable ]
+  Owned by Ben (#269).
+  Child of generic event handler (#137).
+-------------------------------- finished ---------------------------------
+Auto-Sitting Handler (#1965) [ readable ]
+  Owned by Ben (#269).
+  Child of generic event handler (#137).
+ #1965:handle_event_move_by_exit_completed Ben (#269) rx    this none this
+ #1965:sit_with_player          Xythian (#199)       rxd    this none this
+ #1965:remove_self_from         Ben (#269)           rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Fri Oct 17 09:11:05 2003 PDT by Ben (#269).
+#1965:"handle_event_move_by_exit_completed" this none this
+ 1:  fork (0)
+ 2:    who = args[3][1];
+ 3:    exit = args[3][2];
+ 4:    if (args[1] != who)
+ 5:      "only remind you to sit down when YOU move";
+ 6:      return 0;
+ 7:    endif
+ 8:    feature = this.feature;
+ 9:    prefs = feature:get_prefs(who);
+10:    if (!(prefs[4] in {"auto", "remind"}))
+11:      return 0;
+12:    endif
+13:    if (i = $list_utils:iassoc(who, this.reminder_tasks))
+14:      kill_task(this.reminder_tasks[i][2]);
+15:      this.reminder_tasks = listdelete(this.reminder_tasks, i);
+16:    endif
+17:    "sort now because @dislike-seat! matches will be removed and may make the list empty";
+18:    here = who.location;
+19:    seats = feature:sort_seats(feature:seats_of(here:contents()), prefs);
+20:    if (!seats)
+21:      return 0;
+22:    endif
+23:    fork tid (this.delay)
+24:      if (i = $list_utils:iassoc(who, this.reminder_tasks))
+25:        this.reminder_tasks = listdelete(this.reminder_tasks, i);
+26:      endif
+27:      "firewall in case we get moved without events";
+28:      if (here != who.location)
+29:        return;
+30:      endif
+31:      if (valid($sittable:seat_for(who)))
+32:        return;
+33:      endif
+34:      msg = "You would be more comfortable sitting down.  ";
+35:      if (prefs[4] == "auto")
+36:        if (this:sit_with_player(who, seats))
+37:          return;
+38:        else
+39:          msg = "Couldn't sit you down.  ";
+40:        endif
+41:      endif
+42:      seatnames = $list_utils:map_verb(seats, "name", "d", {"occupied"});
+43:      who:tell(tostr(msg, "Available seats:  ", $string_utils:english_list(seatnames), "."));
+44:    endfork
+45:    this.reminder_tasks = {@this.reminder_tasks, {who, tid}};
+46:  endfork
+47:  return 1;
+The generic event handler(#137) has 6 kids.
+Rose Widget Event Handler (rweh) (#643)   Auto-Sitting Handler (#1965)   Visual Event Handler (veh) (#2180)   Rehash Event Handler (reh) (#2606)   lazy wave event handler (#3355)   MGI event handler (#5069)
+Auto-Sitting Handler (#1965) [ readable ]
+  Owned by Ben (#269).
+  Child of generic event handler (#137).
+ #1965:handle_event_move_by_exit_completed Ben (#269) rx    this none this
+ #1965:sit_with_player          Xythian (#199)       rxd    this none this
+ #1965:remove_self_from         Ben (#269)           rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Fri Oct 17 09:11:05 2003 PDT by Ben (#269).
+#1965:"handle_event_move_by_exit_completed" this none this
+ 1:  fork (0)
+ 2:    who = args[3][1];
+ 3:    exit = args[3][2];
+ 4:    if (args[1] != who)
+ 5:      "only remind you to sit down when YOU move";
+ 6:      return 0;
+ 7:    endif
+ 8:    feature = this.feature;
+ 9:    prefs = feature:get_prefs(who);
+10:    if (!(prefs[4] in {"auto", "remind"}))
+11:      return 0;
+12:    endif
+13:    if (i = $list_utils:iassoc(who, this.reminder_tasks))
+14:      kill_task(this.reminder_tasks[i][2]);
+15:      this.reminder_tasks = listdelete(this.reminder_tasks, i);
+16:    endif
+17:    "sort now because @dislike-seat! matches will be removed and may make the list empty";
+18:    here = who.location;
+19:    seats = feature:sort_seats(feature:seats_of(here:contents()), prefs);
+20:    if (!seats)
+21:      return 0;
+22:    endif
+23:    fork tid (this.delay)
+24:      if (i = $list_utils:iassoc(who, this.reminder_tasks))
+25:        this.reminder_tasks = listdelete(this.reminder_tasks, i);
+26:      endif
+27:      "firewall in case we get moved without events";
+28:      if (here != who.location)
+29:        return;
+30:      endif
+31:      if (valid($sittable:seat_for(who)))
+32:        return;
+33:      endif
+34:      msg = "You would be more comfortable sitting down.  ";
+35:      if (prefs[4] == "auto")
+36:        if (this:sit_with_player(who, seats))
+37:          return;
+38:        else
+39:          msg = "Couldn't sit you down.  ";
+40:        endif
+41:      endif
+42:      seatnames = $list_utils:map_verb(seats, "name", "d", {"occupied"});
+43:      who:tell(tostr(msg, "Available seats:  ", $string_utils:english_list(seatnames), "."));
+44:    endfork
+45:    this.reminder_tasks = {@this.reminder_tasks, {who, tid}};
+46:  endfork
+47:  return 1;
+That is not a valid command.
+generic piece of furniture (#81) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic sittable object (#80).
+  Location generic room (#3).
+   #81:sit                      unknown hacker (#35) rxd    any on top of/on/onto/upon this
+   #81:"stand get"              unknown hacker (#35) rxd    any out of/from inside/from this
+   #81:"sh*ove pu*sh"           unknown hacker (#35) rxd    any out of/from inside/from this
+   #81:description              unknown hacker (#35) rxd    this none this
+   #81:integrate_room_msg       unknown hacker (#35) rxd    this none this
+   #81:"stand_msg squeeze_msg sit_msg fall_msg shove_msg also_shove_msg next_to_msg already_sitting_msg" unknown hacker (#35) rxd this none this
+   #81:next_to                  unknown hacker (#35) rx     this none this
+   #81:delete_sitting           unknown hacker (#35) rx     this none this
+   #81:insert_sitting           unknown hacker (#35) rxd    this none this
+   #81:moveto                   unknown hacker (#35) rxd    this none this
+   #81:visible                  unknown hacker (#35) rxd    this none this
+   #81:empty_message_integrate_room unknown hacker (#35) rxd this none this
+   #81:help_verbs               Core-Wizard (#191)   rxd    this none this
+   #81:obvious_seat_for         Core-Wizard (#191)   rxd    this none this
+   #81:move_next_to             unknown hacker (#35) rxd    this none this
+   #81:shoving_policy           unknown hacker (#35) rxd    this none this
+   #81:modname_occupied         Xeric (#999)         rxd    this none this
+   #81:desc_sitting_text        unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------
+generic piece of furniture (#81) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic sittable object (#80).
+  Location generic room (#3).
+.squeeze                 unknown hack (#35)    r c    0
+.seats                   unknown hack (#35)    r c    0
+.sit_msg                 unknown hack (#35)    r c    {#69, "do", {"name", "p..
+.squeeze_msg             unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.stand_msg               unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.fall_msg                unknown hack (#35)    r c    {#69, "do", {"name", "d..
+.shove_msg               unknown hack (#35)    r c    {#69, "do", {"dname", "..
+.also_shove_msg          unknown hack (#35)    r c    {#69, "do", {"dname", "..
+.nosqueeze_msg           unknown hack (#35)    r c    {#69, "do", "There's no..
+.integrate_empty_msg     unknown hack (#35)    r c    {#69, "do", {"name", "t..
+.integrate_sitters_msg   unknown hack (#35)    r c    {#69, "do", "  ", {"nam..
+.next_to_msg             unknown hack (#35)    r c    {#69, "do", " ", {"noun..
+.obvious_seat            unknown hack (#35)    r c    1
+.already_sitting_msg     unknown hack (#35)    r c    {#69, "do", "You are al..
+.move_next_to_msg        unknown hack (#35)    r c    {#69, "do", {"name", "p..
+.help_text               unknown hack (#35)    r c    {"Users can sit on, sho..
+.desc_sitting_msg        unknown hack (#35)    r c    ""
+.desc_empty_msg          unknown hack (#35)    r c    ""
+-------------------------------- finished ---------------------------------
+-----
+EVENTS
+======
+
+The event system allows a room to notify its dependents (contents and exits) that something has taken place within the room.
+
+To add another object to the room's dependents list, use :add_dependent(object).  To remove an object from the room's dependents list, use :remove_dependent(object).
+
+To broadcast an event, use :broadcast_event_<type>(@args), where type is the type of event you wish to broadcast.  It'd be a good idea to make args[1] be an alist of {string, value} pairs; if this is so, and one of the strings is "default_handler", the corresponding value will be used as an event handler object (see below) which will handle the event if the receiver doesn't otherwise handle it.
+
+For more information on the above verbs, see help $room:add_dependent/remove_dependent/broadcast_event_*.
+
+For an object to handle an event it must define an event handler.  Event handlers are simply verbs defined on the objects with the name :event_<type>, where type is the type of the event you wish to handle.  Event handler objects (descended from $event_handler) may also be added to an object with object:add_handler(handler); event handler objects handle events via verbs named :handle_event_<type>.
+
+The currently supported standard events notified from $room are :event_enter(who) and :event_exit(who), broadcast when `who' enters and exits the room.
+
+generic room (#3)   generic containing object (#150)   generic event dispatching object (#113)   root class (#1)
+#113:"broadcast_event_*" this none this
+ 1:  ":broadcast_event_<type>(@event-args) -- broadcasts the event <type> with args `event-args' to all objects listening to this dispatcher.";
+ 2:  "if (!$perm_utils:controls(caller_perms(), this))";
+ 3:  "  return E_PERM;";
+ 4:  "endif";
+ 5:  name = verb[11..length(verb)];
+ 6:  retlist = {};
+ 7:  for o in (this:("dependents_" + name)(@args))
+ 8:    ret = o:(name)(@args);
+ 9:    if (ret)
+10:      retlist = {@retlist, ret};
+11:    endif
+12:  endfor
+13:  return retlist;
+That object does not define that verb.
+#113:"dependents dependents_event_*" this none this
+ 1:  "Copied from event dispatcher (#1751):dependents by Doug (#444) Mon Apr 25 01:08:30 1994 EDT";
+ 2:  ":dependents:  give the list of all dependents, to which all events could presumably be passed.";
+ 3:  "By default this simply returns a list.";
+ 4:  return this.dependents;
+generic piece of furniture (#81) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic sittable object (#80).
+  Location generic room (#3).
+   #81:sit                      unknown hacker (#35) rxd    any on top of/on/onto/upon this
+   #81:"stand get"              unknown hacker (#35) rxd    any out of/from inside/from this
+   #81:"sh*ove pu*sh"           unknown hacker (#35) rxd    any out of/from inside/from this
+   #81:description              unknown hacker (#35) rxd    this none this
+   #81:integrate_room_msg       unknown hacker (#35) rxd    this none this
+   #81:"stand_msg squeeze_msg sit_msg fall_msg shove_msg also_shove_msg next_to_msg already_sitting_msg" unknown hacker (#35) rxd this none this
+   #81:next_to                  unknown hacker (#35) rx     this none this
+   #81:delete_sitting           unknown hacker (#35) rx     this none this
+   #81:insert_sitting           unknown hacker (#35) rxd    this none this
+   #81:moveto                   unknown hacker (#35) rxd    this none this
+   #81:visible                  unknown hacker (#35) rxd    this none this
+   #81:empty_message_integrate_room unknown hacker (#35) rxd this none this
+   #81:help_verbs               Core-Wizard (#191)   rxd    this none this
+   #81:obvious_seat_for         Core-Wizard (#191)   rxd    this none this
+   #81:move_next_to             unknown hacker (#35) rxd    this none this
+   #81:shoving_policy           unknown hacker (#35) rxd    this none this
+   #81:modname_occupied         Xeric (#999)         rxd    this none this
+   #81:desc_sitting_text        unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------

@@ -1,0 +1,29 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Redirecting old connection to this port ***
+#$#mcp version: 2.1 to: 2.1
+Last connected Mon Aug 15 10:00:29 2005 PDT from wrack.thatsnice.org
+The Master Bedroom
+A bed is here.  stormagnet and you are sitting on it.
+stormagnet is here.
+#$#mcp-negotiate-can 1693351827 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1693351827 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1693351827 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1693351827
+Crag says, "Grrr"
+Crag says, "I confused my screen session"
+Crag says, "But I don't know how"
+Crag says, "ANYWAY"
+Crag says, "WIth any second unit on we get the short cycle problem I was talking about"
+Crag says, "But I think by setting the temperature threshold on THAT unit low enough I can get it to stay on"
+Crag says, "And then the one that doesn't have the short cycle problem can be the one which turns on and off as needed."
+Crag says, "maybe"
+Crag says, "We'll see"
+Crag brb

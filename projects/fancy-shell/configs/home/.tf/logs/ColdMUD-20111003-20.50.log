@@ -1,0 +1,1233 @@
+!<The file 'welcome' is missing.>
+!The user "Crag" does not exist.
+!<The file 'welcome' is missing.>
+!<The file 'welcome' is missing.>
+!<The file 'welcome' is missing.>
+!<The file 'welcome' is missing.>
+!The user "crag" does not exist.
+*** Connected ***
+Nowhere
+You see nothing special.
+--> [["definer * this * eval *", 'eval_as_to_cmd], ["as * eval *", 'eval_as_cmd], ["eval *", 'eval_cmd], ["@program * on *", 'program_cmd], ["@show *", 'show_cmd], ["@params *", 'params_cmd], ["@methods *", 'methods_cmd], ["@verbs *", 'verbs_cmd], ["@list * on *", 'list_cmd], ["@dig * to *", 'dig_to_cmd], ["@dig *", 'dig_cmd], ["@who", 'who_cmd], ["@doing *", 'doing_cmd], ["@quit", 'quit_cmd], ["i?nventory", 'inventory_cmd], ["p?age * with *", 'page_cmd], ["sample_edit *", 'sample_edit_cmd]]
+Parents: []
+Parameters:
+  name
+  owners
+  public
+  child_index
+  fertile
+  inited
+Methods:
+  init_root
+  initialize
+  uninitialize
+  change_parents
+  chparents
+  will_inherit
+  name
+  name_str
+  owners
+  is_owned_by
+  public
+  fertile
+  set_fertile
+  set_name
+  set_public
+  set_owners
+  add_owner
+  del_owner
+  spawn
+  destroy
+  add_parameter
+  parameters
+  del_parameter
+  del_method
+  methods
+  parents
+  children
+  ancestors
+  find_method
+  find_next_method
+  list_method
+  compile
+  show
+  has_ancestor
+  eval
+#1 variables:
+  name: 'root
+  owners: [#1]
+  public: 1
+  child_index: 0
+  fertile: 0
+  inited: 0
+Parents: [#35]
+Parameters:
+Methods:
+#34 variables:
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "s\\hz6WRv10H7A"
+  doing: ""
+  connected_at: 1317700289
+  last_command_at: 1317700327
+  editor: 0
+  editor_method: 0
+  connections: [#45]
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "crag"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: []
+  shortcuts: []
+#1 variables:
+  name: 'admin_1
+  child_index: 0
+  owners: [#47]
+  fertile: 0
+  public: 1
+  inited: 1
+Parents: [#1]
+Parameters:
+  admins
+  new_user_class
+  starting_room
+  exit_starting_room
+  doing_poll
+  remote_templates
+  server_port
+  current_receiver
+  task_queue
+  backup_interval
+  last_backup
+Methods:
+  startup
+  new_connection
+  doing_poll
+  set_doing_poll
+  new_user_class
+  set_new_user_class
+  create_user
+  connection_starting
+  admins
+  is_admin
+  binary_dump
+  text_dump
+  shutdown
+  change_sender_parents
+  spawn_sender
+  create_object
+  destroy_sender
+  remote_verb_templates
+  new_remote_template
+  removed_remote_template
+  user_going_away
+  log
+  log_traceback
+  connect
+  heartbeat
+  do_backup
+  schedule_task
+  remove_first_task
+  ps
+  backup_interval
+  set_backup_interval
+  sender_data
+  starting_room
+  set_starting_room
+  exit_starting_room
+  set_exit_starting_room
+  assign_name
+  deassign_name
+  new_admin
+  admin_going_away
+#0 variables:
+  admins: [#35, #47]
+  new_user_class: #35
+  starting_room: #23
+  exit_starting_room: #24
+  doing_poll: "Doing"
+  remote_templates: #[]
+  server_port: 6666
+  current_receiver: #46
+  task_queue: []
+  backup_interval: 3600
+  last_backup: 1317700231
+#1 variables:
+  name: 'sys
+  child_index: 0
+  owners: [#0]
+  fertile: 0
+  public: 1
+  inited: 1
+!I don't understand that.
+Parents: [#35]
+Parameters:
+Methods:
+#34 variables:
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "s\\hz6WRv10H7A"
+  doing: ""
+  connected_at: 1317700289
+  last_command_at: 1317700379
+  editor: 0
+  editor_method: 0
+  connections: [#45]
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "crag"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: []
+  shortcuts: []
+#1 variables:
+  name: 'admin_1
+  child_index: 0
+  owners: [#47]
+  fertile: 0
+  public: 1
+  inited: 1
+!I don't see that here.
+!I don't see that here.
+--> $admin
+Parents: [#34]
+Parameters:
+Methods:
+  init_admin
+  uninit_admin
+  eval_as_cmd
+  eval_as_to_cmd
+#34 variables:
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "*"
+  doing: ""
+  connected_at: 0
+  last_command_at: 0
+  editor: 0
+  editor_method: 0
+  connections: []
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "admin"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: [["definer * this * eval *", 'eval_as_to_cmd], ["as * eval *", 'eval_as_cmd]]
+  shortcuts: []
+#1 variables:
+  name: 'admin
+  child_index: 1
+  owners: [#35]
+  fertile: 0
+  public: 1
+  inited: 1
+!I don't see that here.
+Parents: [#33]
+Parameters:
+  inited
+  programming
+  program_buf
+Methods:
+  init_programmer
+  uninit_programmer
+  parse_command
+  programming_line
+  program_done
+  eval_cmd
+  program_cmd
+  show_cmd
+  params_cmd
+  methods_cmd
+  verbs_cmd
+  list_cmd
+#34 variables:
+  inited: 0
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "*"
+  doing: ""
+  connected_at: 0
+  last_command_at: 0
+  editor: 0
+  editor_method: 0
+  connections: []
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "programmer"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: [["eval *", 'eval_cmd], ["@program * on *", 'program_cmd], ["@show *", 'show_cmd], ["@params *", 'params_cmd], ["@methods *", 'methods_cmd], ["@verbs *", 'verbs_cmd], ["@list * on *", 'list_cmd]]
+  shortcuts: [[";*", 'eval_cmd, ["eval", 1]]]
+#1 variables:
+  name: 'programmer
+  child_index: 0
+  owners: [#34]
+  fertile: 0
+  public: 1
+  inited: 1
+#0.new_connection() (defined on #0):
+if (sender() != this() || caller() != definer())
+    throw(~perm, "Invalid call to private method.");
+current_receiver = $connection.spawn();
+bind(server_port, current_receiver);
+Methods:
+  init_connection
+  uninit_connection
+  msg
+  err
+  tell
+  connect
+  disconnect
+  parse
+  parse_line
+  user
+  addr
+  port
+  echo_welcome
+  connect_cmd
+  create_cmd
+  quit_cmd
+  user_going_away
+#29.connect() (defined on #29):
+arg addr_arg, port_arg;
+
+if (sender() != 0)
+    throw(~perm, "Sender not the server.");
+addr = addr_arg;
+port = port_arg;
+.echo_welcome();
+$sys.connection_starting();
+#29.echo_welcome() (defined on #29):
+if (sender() != this() || caller() != definer())
+    throw(~perm, "Invalid access to private method.");
+if (!(| echo_file("welcome") |))
+    .err("<The file 'welcome' is missing.>");
+!methodnf in opcode 'MESSAGE: Method connection not found.
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+Parents: [#35]
+Parameters:
+Methods:
+#34 variables:
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "s\\hz6WRv10H7A"
+  doing: ""
+  connected_at: 1317700289
+  last_command_at: 1317700548
+  editor: 0
+  editor_method: 0
+  connections: [#45]
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "crag"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: []
+  shortcuts: []
+#1 variables:
+  name: 'admin_1
+  child_index: 0
+  owners: [#47]
+  fertile: 0
+  public: 1
+  inited: 1
+--> [$connection_2]
+!Line 1: syntax error
+!perm: Invalid access to private method.
+!type
+!'echo_welcome must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!188
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> [["definer * this * eval *", 'eval_as_to_cmd], ["as * eval *", 'eval_as_cmd], ["eval *", 'eval_cmd], ["@program * on *", 'program_cmd], ["@show *", 'show_cmd], ["@params *", 'params_cmd], ["@methods *", 'methods_cmd], ["@verbs *", 'verbs_cmd], ["@list * on *", 'list_cmd], ["@dig * to *", 'dig_to_cmd], ["@dig *", 'dig_cmd], ["@who", 'who_cmd], ["@doing *", 'doing_cmd], ["@quit", 'quit_cmd], ["i?nventory", 'inventory_cmd], ["p?age * with *", 'page_cmd], ["sample_edit *", 'sample_edit_cmd]]
+!Line 1: syntax error
+--> ["Line 2: syntax error"]
+--> [[~perm, "Invalid access to private method.", 0], ['method, 'echo_welcome, $connection_2, $connection, 20], [~perm, 'tmp_eval, $connection_2, $connection_2, 5], [~methoderr, 'eval, $connection_2, $root, 75]]
+... welcome?
+--> $connection_2
+Parents: [#35]
+Parameters:
+Methods:
+#34 variables:
+  programming: 0
+  program_buf: 0
+#32 variables:
+  password: "s\\hz6WRv10H7A"
+  doing: ""
+  connected_at: 1317700289
+  last_command_at: 1317700764
+  editor: 0
+  editor_method: 0
+  connections: [#45]
+#25 variables:
+  location: #23
+#21 variables:
+  contents: []
+#20 variables:
+  vr_name: "crag"
+#19 variables:
+  description: "You see nothing special."
+#17 variables:
+  verbs: #[]
+#18 variables:
+  commands: []
+  shortcuts: []
+#1 variables:
+  name: 'admin_1
+  child_index: 0
+  owners: [#47]
+  fertile: 0
+  public: 1
+  inited: 1
+#47.list_cmd() (defined on #34):
+arg dummy1, method, dummy2, name;
+var obj, anc, header, code;
+
+if (sender() != this())
+    throw(~perm, "Sender not this.");
+
+// Find the object to show.
+method = tosym(method);
+catch ~objnf, ~perm {
+    obj = .match_environment(name);
+    anc = obj.find_method(method);
+    code = anc.list_method(method);
+} with handler {
+    switch (error()) {
+        case ~objnf:
+            .err("I don't see that here.");
+        case ~perm:
+            .err("Permission denied.");
+    }
+    return;
+}
+
+// List the method.
+header = toliteral(obj) + "." + tostr(method) + "() (defined on ";
+header = header + toliteral(anc) + "):";
+.msg(header);
+.msg(code);
+Methods:
+  init_connection
+  uninit_connection
+  msg
+  err
+  tell
+  connect
+  disconnect
+  parse
+  parse_line
+  user
+  addr
+  port
+  echo_welcome
+  connect_cmd
+  create_cmd
+  quit_cmd
+  user_going_away
+Methods:
+Methods:
+  init_admin
+  uninit_admin
+  eval_as_cmd
+  eval_as_to_cmd
+Methods:
+  startup
+  new_connection
+  doing_poll
+  set_doing_poll
+  new_user_class
+  set_new_user_class
+  create_user
+  connection_starting
+  admins
+  is_admin
+  binary_dump
+  text_dump
+  shutdown
+  change_sender_parents
+  spawn_sender
+  create_object
+  destroy_sender
+  remote_verb_templates
+  new_remote_template
+  removed_remote_template
+  user_going_away
+  log
+  log_traceback
+  connect
+  heartbeat
+  do_backup
+  schedule_task
+  remove_first_task
+  ps
+  backup_interval
+  set_backup_interval
+  sender_data
+  starting_room
+  set_starting_room
+  exit_starting_room
+  set_exit_starting_room
+  assign_name
+  deassign_name
+  new_admin
+  admin_going_away
+#0.do_backup() (defined on #0):
+if (sender() != this() || caller() != definer())
+    throw(~perm, "Invalid call to private method");
+log("Doing backup");
+text_dump();
+last_backup = time();
+--> $programmer
+--> $programmer
+--> $programmer
+--> [[";*", 'eval_cmd, ["eval", 1]], ["@program *.*", 'program_cmd, ["@program", 2, "on", 1]], ["@list *.*", 'list_cmd, ["@list", 2, "on", 1]]]
+!Line 2: syntax error
+--> $admin_1
+Methods:
+  range
+  to_string
+  to_english
+  map
+  map_on
+  filter
+  filter_on
+  sort
+  _sort
+  columnize
+  map_tostr
+  english_vr_object_list
+Enter text for method indent.
+!Line 3: syntax error
+!I don't understand that.
+!I don't understand that.
+!I don't understand that.
+!I don't understand that.
+!I don't understand that.
+!I don't understand that.
+!I don't understand that.
+Enter text for method indent.
+Method compiled.
+!Line 1: syntax error
+!numargs in opcode 'MESSAGE: #15.list_method called with no arguments, requires one.
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!type in opcode 'SPLICE_ADD: 0 is not a list.
+!type
+!'indent must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!type
+!'list_method must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!134
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!type
+!'list_method must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!134
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> $list
+!type
+!'find_method must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!134
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+#15.indent() (defined on #15):
+arg prefix, lines;
+var l, ret;
+
+for l in (lines)
+    ret = [@ret, prefix + l];
+return ret;
+--> $list
+--> $list
+--> ["arg prefix, lines;", "var l, ret;", "", "for l in (lines)", "    ret = [@ret, prefix + l];", "return ret;"]
+arg prefix, lines;
+var l, ret;
+
+for l in (lines)
+    ret = [@ret, prefix + l];
+return ret;
+--> $admin_1
+!type in opcode 'SPLICE_ADD: 0 is not a list.
+!type
+!'indent must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!example
+--> $admin_1
+--> 0
+!type in opcode 'SPLICE_ADD: 0 is not a list.
+!type
+!'indent must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> "foobar"
+!I don't understand that.
+#47.eval_cmd() (defined on #34):
+arg dummy1, s;
+var result;
+
+if (sender() != this())
+    throw(~perm, "Sender not this.");
+
+// Evaluate the line.
+if (s && s[1] == ";")
+    result = .eval([substr(s, 2)]);
+else
+    result = .eval(["return " + s + ";"]);
+
+// Display the errors, or the result.
+if (result[1] == 'failure)
+    .err(result[2]);
+else if (result[1] == 'traceback)
+    .report_traceback(result[2]);
+else if (!s || s[1] != ";")
+    .msg("--> " + $data.unparse(result[2]));
+bar
+--> 'string
+!I don't see that here.
+--> "foo"
+Enter text for method indent.
+Method compiled.
+!type in opcode 'SPLICE_ADD: 0 is not a list.
+!type
+!'indent must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!Line 1: syntax error
+!Line 1: syntax error
+!Line 2: syntax error
+!I don't understand that.
+Enter text for method indent.
+Method compiled.
+--> ["  foo"]
+!Line 1: syntax error
+!paramnf in opcode 'GET_OBJ_VAR: No such parameter traceback.
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+[[~div, "Attempt to divide 1 by zero.", 0], ['opcode, '/], [~div, 'tmp_eval, $admin_1, $admin_1, 6]]
+--> "foo"
+[[~methodnf, "Method foo not found.", 0], ['opcode, 'MESSAGE], [~methodnf, 'tmp_eval, $admin_1, $admin_1, 8]]
+!foo: bar
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!188
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+!foo: bar
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!188
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> "123"
+!I don't see that here.
+!methodnf
+!Method create_cmd not found.
+!0
+!function
+!find_method
+!methodnf
+!find_method
+!#47
+!#1
+!28
+!methodnf
+!list_cmd
+!#47
+!#34
+!43
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+Methods:
+  init_root
+  initialize
+  uninitialize
+  change_parents
+  chparents
+  will_inherit
+  name
+  name_str
+  owners
+  is_owned_by
+  public
+  fertile
+  set_fertile
+  set_name
+  set_public
+  set_owners
+  add_owner
+  del_owner
+  spawn
+  destroy
+  add_parameter
+  parameters
+  del_parameter
+  del_method
+  methods
+  parents
+  children
+  ancestors
+  find_method
+  find_next_method
+  list_method
+  compile
+  show
+  has_ancestor
+  eval
+Methods:
+  startup
+  new_connection
+  doing_poll
+  set_doing_poll
+  new_user_class
+  set_new_user_class
+  create_user
+  connection_starting
+  admins
+  is_admin
+  binary_dump
+  text_dump
+  shutdown
+  change_sender_parents
+  spawn_sender
+  create_object
+  destroy_sender
+  remote_verb_templates
+  new_remote_template
+  removed_remote_template
+  user_going_away
+  log
+  log_traceback
+  connect
+  heartbeat
+  do_backup
+  schedule_task
+  remove_first_task
+  ps
+  backup_interval
+  set_backup_interval
+  sender_data
+  starting_room
+  set_starting_room
+  exit_starting_room
+  set_exit_starting_room
+  assign_name
+  deassign_name
+  new_admin
+  admin_going_away
+#0.create_user() (defined on #0):
+arg name, password;
+var user;
+
+if (caller() != $connection && !.is_admin(sender()))
+    throw(~perm, "Caller is not $connection and sender is not an admin.");
+
+// Create a new user object.
+catch any {
+    user = new_user_class.spawn();
+    user.set_vr_name(name);
+    user.set_password(password);
+    user.del_owner(this());
+} with handler {
+    if (user) {
+        (| user.destroy() |);
+        user = 0;
+    }
+    rethrow(error());
+}
+return user;
+!namenf in opcode 'NAME: Can't find object name util.
+!type
+!'tmp_eval must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> [$utils]
+#47.spawn() (defined on #32):
+arg [args];
+
+if (!$sys.is_admin(sender()))
+    throw(~perm, "Sender is not an admin.");
+return (> pass(@args) <);
+#1.spawn() (defined on #1):
+arg [suffix];
+var obj;
+
+if (!fertile && !.is_owned_by(sender()))
+    throw(~perm, "Not fertile and sender not an owner.");
+
+// Figure out the suffix from the arguments and child index.
+if (suffix) {
+    if (suffix[1] in "0123456789")
+        throw(~perm, "Can't specify a numeric suffix.");
+    suffix = suffix[1];
+} else {
+    child_index = child_index + 1;
+    suffix = tostr(child_index);
+}
+
+// Ask the system object for a child.
+obj = $sys.spawn_sender(suffix, sender());
+return obj;
+--> $utils_1
+Methods:
+  init_root
+  initialize
+  uninitialize
+  change_parents
+  chparents
+  will_inherit
+  name
+  name_str
+  owners
+  is_owned_by
+  public
+  fertile
+  set_fertile
+  set_name
+  set_public
+  set_owners
+  add_owner
+  del_owner
+  spawn
+  destroy
+  add_parameter
+  parameters
+  del_parameter
+  del_method
+  methods
+  parents
+  children
+  ancestors
+  find_method
+  find_next_method
+  list_method
+  compile
+  show
+  has_ancestor
+  eval
+!type: New name is not a symbol.
+!type
+!'set_name must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!188
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> $traceback
+Enter text for method formatted.
+Method compiled.
+!range in opcode 'INDEX: Index (0) is less than one.
+!type
+!'formatted must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+Enter text for method report_traceback;.
+Method compiled.
+!range in opcode 'INDEX: Index (0) is less than one.
+!type
+!'formatted must be string.
+!0
+!opcode
+!+
+!type
+!report_traceback
+!#47
+!#32
+!262
+!methoderr
+!eval_cmd
+!#47
+!#34
+!108
+!methoderr
+!parse_command
+!#47
+!#32
+!141
+!methoderr
+!parse_command
+!#47
+!#34
+!40
+--> 1

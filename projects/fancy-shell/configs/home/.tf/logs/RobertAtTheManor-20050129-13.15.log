@@ -1,0 +1,27 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+Crag, Minty, and Marcy are here.  stormagnet is dozing.
+Last connected Sat Jan 29 13:08:25 2005 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 1368969625 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1368969625 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1368969625 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1368969625
+Crag says, "***attempt finished***"
+Minty says, "I redid my alais again too."
+Crag grrr
+Minty eeks!
+Crag grrs at pasting feature
+Marcy says, "eep"
+Minty says, "brb"

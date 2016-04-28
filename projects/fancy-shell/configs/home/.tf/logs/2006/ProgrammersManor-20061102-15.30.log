@@ -1,0 +1,20 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.
+Last connected Sun Aug 27 13:47:01 2006 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 1358339030 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1358339030 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1358339030 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1358339030
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Master Bedroom                0 seconds                         
+Binder         Guest Room                    a day                             
+
+Total: 2 people, 1 of whom has been active recently.

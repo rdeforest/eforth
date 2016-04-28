@@ -1,0 +1,78 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 159 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              2 new messages
+Last connected Fri Aug  5 09:04:07 2005 PDT from 64.81.175.9
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+< connected: Crag. Total: 160 >
+Message 815 on *News (#123):
+Date:     Thu Sep  1 00:00:00 2005 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Elected Undertakers and Executors.  This office was created by *B:UEE.  Nominations for the ballot will be accepted until Thursday, September  8, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for Reapers' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 816 on *News (#123):
+Date:     Fri Sep  2 09:38:38 2005 PDT
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Open Ballot #33225 Ready for Voting
+Sender:   Petitioner (#4)
+
+Petition #33225 has received enough signatures to transform it into open Ballot:Double (#33225): `Double Everyone's Quota', which is now available for voting.  Type `read #33225' to see the text of the proposal and then `vote yes on #33225' to cast your vote in favor of it, `vote no on #33225' to cast your vote against it, or `abstain on #33225' to stop hearing about it.  Voting on this ballot will close on Friday, September 16, at 9:38 am, LambdaMOO Standard Time; until then, you can change your vote as often as you wish.  You can read (and contribute to) commentary on this proposal on the mailing list named *Ballot:Double; type `help mail' for details.
+--------------------------
+Message 4899 on *Core-DB-Issues (#8175):
+Date:     Thu Sep  1 18:18:56 2005 PDT
+From:     Blob (#21528)
+To:       *Core-DB-Issues (#8175) and *Documentation (#33586)
+Subject:  @makeplayer docs
+
+As a wiz in LambdaCore 'help @make-player' shows:
+
+@make-player name [email-address [commentary]]
+
+This seems to indicate that the email-address is optional, which it is not. If there is no email address given, @make-player gives the traceback:
+
+#57:@make-player (this == #2), line 9:  Range error
+
+Blob
+--------------------------
+Message 4900 on *Core-DB-Issues (#8175):
+Date:     Thu Sep  1 19:22:12 2005 PDT
+From:     Nosredna (#2487)
+To:       Blob (#21528), *Core-DB-Issues (#8175), and *Documentation (#33586)
+Subject:  Re: @makeplayer docs
+
+Turns out the doc is already corrected in the current lambdamoo (#1130.("@make-player")).
+--------------------------
+No News (is good news)
+Sorry, but no help is available on `@make-player'.
+That object does not define that verb.
+No News (is good news)

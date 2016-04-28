@@ -1,0 +1,88 @@
+#!/usr/bin/coffee
+
+
+process = require 'process'
+
+fs = require 'fs'
+path = require 'path'
+
+_ = require 'underscore'
+byline = require 'byline'
+
+{env, argv} = process
+
+resolve = (parts...) ->
+  path.resolve parts...
+
+resolve = (parts...) ->
+  path.resolve parts...
+
+libDir = resolve path.dirname(module.filename), '..', 'lib'
+
+config = _.extend {libDir}, require resolve libDir, 'defaults'
+
+
+modulePath = (moduleName) ->
+  resolve config.modulePath, moduleName
+
+requireModule = (moduleName) ->
+  try
+    require modulePath moduleName
+  catch e
+    (require modulePath 'mod-load-failed') name: moduleName, error: e
+
+
+
+findFshDir = (env) ->
+  parent = env.PWD
+
+  if not parent
+    throw new Error 'Surprise!'
+
+  dir = null
+  searchPaths = []
+
+  while dir isnt parent
+    dir = parent
+    parent = resolve dir, '..'
+    searchPaths.push dir
+
+
+  searchPaths.push env.HOME
+
+  for dir in searchPaths
+    try
+      stat = fs.statSync fshDir = resolve dir, config.fshDirName
+
+      if stat.isDirectory()
+        return fshDir
+
+
+globalOpts = (parameters, config) ->
+  while parameters.length and parameters[0].startsWith '-'
+    param = parameters.shift()
+
+
+examineEnv = ({env, argv, config}) ->
+  if config.fshDir or= findFshDir env
+    config.modulePath or= resolve config.fshDir, 'modules'
+  else
+    config.modulePath or= resolve config.libDir, 'modules'
+
+
+deriveIntent = ({env, argv}) ->
+  [interp, script, parameters...] = argv
+  [cmd = 'help', parameters...] = parameters
+  [moduleName, subModules...] = cmd.split ':'
+
+  globalOpts parameters, config
+  examineEnv {env, argv, config}
+
+  module = requireModule moduleName
+  
+  (config) -> module config, subModules, parameters
+
+
+requested = deriveIntent {env, argv}
+
+requested config

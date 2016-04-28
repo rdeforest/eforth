@@ -1,0 +1,59 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 59 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+Last connected Sun Apr 14 20:59:28 2013 PDT from 63.224.54.239
+=> #149  (Error Generator)
+[used 3 ticks, 0 seconds.]
+Error Generator (#149) [ readable ]
+  Owned by Hacker (#18105).
+  Child of Root Class (#1).
+  Location Moonripple (#50634).
+  Size: 7,458 bytes at Wed Apr 25 09:47:10 2007 PDT
+  #149:raise                    Hacker (#18105)      rxd    this none this
+  #149:E_NONE                   Hacker (#18105)      rxd    this none this
+  #149:E_TYPE                   Hacker (#18105)      rxd    this none this
+  #149:E_DIV                    Hacker (#18105)      rxd    this none this
+  #149:E_PERM                   Hacker (#18105)      rxd    this none this
+  #149:E_PROPNF                 Hacker (#18105)      rxd    this none this
+  #149:E_VERBNF                 Hacker (#18105)      rxd    this none this
+  #149:E_VARNF                  Hacker (#18105)      rxd    this none this
+  #149:E_INVIND                 Hacker (#18105)      rxd    this none this
+  #149:E_RECMOVE                Hacker (#18105)      rxd    this none this
+  #149:E_MAXREC                 Hacker (#18105)      rxd    this none this
+  #149:E_RANGE                  Hacker (#18105)      rxd    this none this
+  #149:E_ARGS                   Hacker (#18105)      rxd    this none this
+  #149:E_NACC                   Hacker (#18105)      rxd    this none this
+  #149:E_INVARG                 Hacker (#18105)      rxd    this none this
+  #149:E_QUOTA                  ur-Rog (#6349)       rxd    this none this
+  #149:accept                   Hacker (#18105)      rxd    this none this
+  #149:name                     Hacker (#18105)      rxd    this none this
+  #149:toerr                    Hacker (#18105)      rxd    this none this
+  #149:match_error              Hacker (#18105)      rxd    this none this
+-------------------------------- finished ---------------------------------
+#149:raise   this none this
+raise(@args);
+"this:(this.names[tonum(args[1]) + 1])()";

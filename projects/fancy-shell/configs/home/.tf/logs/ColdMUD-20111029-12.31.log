@@ -1,0 +1,138 @@
+ColdGOO
+
+    create  name password    To create a new character
+    connect name password    To connect to an existing character
+    @quit                    To leave
+
+!The user "Crag" does not exist.
+*** Connected ***
+Nowhere
+You see nothing special.
+--> $programmer
+Caught error ~methodnf (Method properties not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+Caught error ~methodnf (Method variables not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+--> ['inited, 'programming, 'program_buf, 'current_object]
+--> $root
+!I don't understand that.
+!I don't understand that.
+--> [["definer * this * eval *", 'eval_as_to_cmd], ["as * eval *", 'eval_as_cmd], ["eval *", 'eval_cmd], ["@program * on *", 'program_cmd], ["@show *", 'show_cmd], ["@params *", 'params_cmd], ["@methods *", 'methods_cmd], ["@verbs *", 'verbs_cmd], ["@list * on *", 'list_cmd], ["@dig * to *", 'dig_to_cmd], ["@dig *", 'dig_cmd], ["@who", 'who_cmd], ["@doing *", 'doing_cmd], ["@quit", 'quit_cmd], ["i?nventory", 'inventory_cmd], ["p?age * with *", 'page_cmd], ["sample_edit *", 'sample_edit_cmd]]
+!Line 1: syntax error
+!Line 1: syntax error
+!Line 1: syntax error
+!Line 1: syntax error
+!Line 1: syntax error
+definer * this * eval *
+as * eval *
+eval *
+@program * on *
+@show *
+@params *
+@methods *
+@verbs *
+@list * on *
+@dig * to *
+@dig *
+@who
+@doing *
+@quit
+i?nventory
+p?age * with *
+sample_edit *
+;*
+@program *.*
+@list *.*
+!I don't understand that.
+Verbs:
+Verbs:
+--> $verb_cache
+Caught error ~methodnf (Method all_methods not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+--> ['object_defined_verb, 'object_undefined_verb, 'templates]
+--> []
+--> [$sys, $server_args, $server, $socket, $frob_class, $user_db, $utils, $has_verbs, $verb_cache, $has_commands, $help_node, $lock_parser]
+--> [$described]
+--> [$has_verbs]
+--> [$described]
+--> ['init_described, 'description, 'full_description, 'set_description, 'look_verb, 'describe_verb]
+@program $described.look_verb
+    arg dummy1, dummy2;
+    var actor;
+    
+    actor = sender();
+    actor.tell(.full_description());
+.
+Nowhere
+You see nothing special.
+Caught error ~methodnf (Method data not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+!Neither the object nor its ancestors define a method by that name.
+Enter text for method obj_data.
+Method compiled.
+--> #[[$root, #[['name, 'root], ['owners, [$root]], ['public, 1], ['child_index, 0], ['fertile, 0], ['inited, 0]]]]
+Enter text for method data.
+Method compiled.
+--> #[[$root, #[['name, 'admin_1], ['child_index, 0], ['owners, [$admin_1]], ['fertile, 0], ['public, 1], ['inited, 1]]], [$has_commands, #[['commands, []], ['shortcuts, []]]], [$has_verbs, #[['verbs, #[]]]], [$described, #[['description, "You see nothing special."]]], [$vr, #[['vr_name, "Crag"]]], [$container, #[['contents, []]]], [$located, #[['location, $nowhere]]], [$user, #[['password, "9qWch/XgTemVs"], ['doing, ""], ['connected_at, 1319916675], ['last_command_at, 1319918224], ['editor, 0], ['editor_method, 0], ['connections, [$connection_1]]]], [$programmer, #[['programming, 0], ['program_buf, 0], ['current_object, $root]]]]
+@program $sys.obj_data
+    arg o;
+    
+    return data(o);
+.
+@program $root.data
+    return $sys.obj_data(this());
+.
+--> #[[$root, #[['name, 'nowhere], ['child_index, 0], ['owners, [$nowhere]], ['fertile, 0], ['public, 1], ['inited, 1]]], [$has_commands, #[['commands, []], ['shortcuts, []]]], [$has_verbs, #[['verbs, #[]]]], [$described, #[['description, "You see nothing special."]]], [$vr, #[['vr_name, "Nowhere"]]], [$container, #[['contents, [$thing, $box, $person, $proto_user, $user, $builder, $programmer, $admin, $help_user, $admin_1]]]], [$room, #[['exits, []], ['dark, 1], ['link_ok, 0]]]]
+!Line 1: syntax error
+!Line 1: syntax error
+2
+$root => #[['name, 'nowhere], ['child_index, 0], ['owners, [$nowhere]], ['fertile, 0], ['public, 1], ['inited, 1]]
+$has_commands => #[['commands, []], ['shortcuts, []]]
+$has_verbs => #[['verbs, #[]]]
+$described => #[['description, "You see nothing special."]]
+$vr => #[['vr_name, "Nowhere"]]
+$container => #[['contents, [$thing, $box, $person, $proto_user, $user, $builder, $programmer, $admin, $help_user, $admin_1]]]
+$room => #[['exits, []], ['dark, 1], ['link_ok, 0]]
+$root => #[['name, 'nowhere], ['child_index, 0], ['owners, [$nowhere]], ['fertile, 0], ['public, 1], ['inited, 1]]
+$has_commands => #[['commands, []], ['shortcuts, []]]
+$has_verbs => #[['verbs, #[]]]
+$described => #[['description, "You see nothing special."]]
+$vr => #[['vr_name, "Nowhere"]]
+$container => #[['contents, [$thing, $box, $person, $proto_user, $user, $builder, $programmer, $admin, $help_user, $admin_1]]]
+$room => #[['exits, []], ['dark, 1], ['link_ok, 0]]
+Caught error ~methodnf (Method all_children not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+--> []
+Enter text for method all_children.
+!Line 4: syntax error
+!Line 7: syntax error
+Enter text for method all_children.
+!Line 4: syntax error
+Enter text for method all_children.
+Method compiled.
+--> [$sys, $server_args, $server, $socket, $frob_class, $lock_class, $true_lock_class, $false_lock_class, $object_lock_class, $and_lock_class, $or_lock_class, $not_lock_class, $editor_class, $user_db, $utils, $list, $data, $traceback, $has_verbs, $described, $vr, $container, $room, $nowhere, $void, $box, $person, $proto_user, $user, $builder, $programmer, $admin, $admin_1, $help_user, $located, $thing, $exit, $verb_cache, $has_commands, $connection, $connection_1, $connection_2, $help_node, $help_help, $help_index, $help_root, $user_help, $builder_help, $programmer_help, $lock_parser]
+--> [$described, $vr, $container, $room, $nowhere, $void, $box, $person, $proto_user, $user, $builder, $programmer, $admin, $admin_1, $help_user, $located, $thing, $exit]
+--> [[1, 7], [1, 3], [4, 1], [5, 3], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+--> [[1, 4], [1, 0], [1, 1], [2, 3], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+--> 0
+--> [[1, 4], [1, 3], [4, 1], [5, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+Caught error ~namenf (Can't find object name string.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'NAME]
+  $admin_1.tmp_eval (on $admin_1): ~namenf
+  $root.eval (on $admin_1): ~methoderr

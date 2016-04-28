@@ -1,0 +1,71 @@
+Waterpoint: false genericity[310]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Deer Trail
+A narrow path through the woods.  Leafy branches brush against you.  The afternoon sun shines brightly.  It is cold.  The deer trail continues to the southwest and east.
+Last connected Mon Feb 13 23:00:43 2006 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news all' to read all news or `news' to read just new news.
+There is new activity on the following lists:
+    *News                       2 new messages
+    *Bug-reports                23 new messages
+    *welcome-messages           1 new message
+    *core                       20 new messages
+#$#mcp-negotiate-can 1707651928 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1707651928 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1707651928 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-org-waterpoint-tellpriority min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1707651928 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1707651928
+The MOO is currently running version 1.8.2-waif,xml of the LambdaMOO server code.
+The core is derived from a JHCore extracted on Oct 20, 1996.
+-----
+DISASSEMBLE()
+=============
+
+Syntax:  disassemble (obj <object>, str <verb-desc>)   => list
+
+Returns a (longish) list of strings giving a listing of the server's internal ``compiled'' form of the verb as specified by <verb-desc> on <object>.  This format is not documented and may indeed change from release to release, but some programmers may nonetheless find the output of `disassemble()' interesting to peruse as a way to gain a deeper appreciation of how the server works.
+
+If <object> is not valid, then `E_INVARG' is raised.  If <object> does not define a verb as specified by <verb-desc>, then `E_VERBNF' is raised.  If the programmer does not have read permission on the verb in question, then `disassemble()' raises `E_PERM'.
+
+-----
+VERB_CODE()
+===========
+
+Syntax:  verb_code (obj <object>, str <verb-desc> [, <fully-paren> [, <indent>]])   => list
+     set_verb_code (obj <object>, str <verb-desc>, list <code>)   => list
+
+These functions get and set (respectively) the MOO-code program associated with the verb as specified by <verb-desc> on <object>.  The program is represented as a list of strings, one for each line of the program; this is the kind of value returned by `verb_code()' and expected as the third argument to `set_verb_code()'.  For `verb_code()', the expressions in the returned code are usually written with the minimum-necessary parenthesization; if <full-paren> is true, then all expressions are fully parenthesized.  Also for `verb_code()', the lines in the returned code are usually not indented at all; if <indent> is true, each line is indented to better show the nesting of statements.
+
+If <object> is not valid, then `E_INVARG' is raised.  If <object> does not define a verb as specified by <verb-desc>, then `E_VERBNF' is raised.  If the programmer does not have read (write) permission on the verb in question, then `verb_code()' (`set_verb_code()') raises `E_PERM'.  If the programmer is not, in fact. a programmer, then `E_PERM' is raised.
+
+For `set_verb_code()', the result is a list of strings, the error messages generated by the MOO-code compiler during processing of <code>.  If the list is non-empty, then `set_verb_code()' did not install <code>; the program associated with the verb in question is unchanged.
+

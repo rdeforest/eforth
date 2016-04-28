@@ -1,0 +1,567 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+Last connected Sat Jan 29 13:45:21 2005 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 1182403527 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1182403527 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1182403527 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1182403527
+-----
+CORE UTILITY HELP TOPICS
+========================
+
+$biglist_utils[1]       $building_utils[2]      $code_utils[3]
+$command_utils[4]       $english[5]             $english_utils[6]
+$exit[7]                $gender_utils[8]        $generic_db[9]
+$generic_editor[10]     $generic_help[11]       $generic_options[12]
+$help[13]               $housekeeper[14]        $integration_utils[15]
+$list_utils[16]         $lock_utils[17]         $login[18]
+$mail_agent[19]         $mail_recipient[20]     $math_utils[21]
+$name_utils[22]         $no_one[23]             $object_utils[24]
+$openable_container[25]                         $parse_utils[26]
+$perm_utils[27]         $player_db[28]          $quota_utils[29]
+$relation_utils[30]     $room[31]               $room_matching_utils[32]
+$seq_utils[33]          $set_utils[34]          $string_utils[35]
+$time_utils[36]         $trig_utils[37]         $walking_utils[38]
+$who_utils[39]          $wiz_utils[40]          core-index[41]
+mail-format[42]         mail-recipient[43]      mail-resolve[44]
+mail-system[45]         MR-access[46]           MR-naming[47]
+MR-reading[48]          MR-searching[49]        MR-sequences[50]
+MR-subscribing[51]      MR-writing[52]          object-matching[53]
+receiving-mail[54]      sending-mail[55]        
+
+-----
+THE HELP SYSTEM
+===============
+
+When a player types help, the following list of objects is consulted for .help properties:  the player itself, all ancestors of player up to and including $player, and, if the current location is a room, the current location together with all ancestors of the current location back to and including $room.  Each help property should have as value either an object or a list of objects (otherwise we just ignore it).  These objects are then strung together as a list of "help databases" to be searched in order for the requested topic.
+
+A help database (in the sense of anything that is usable by $player:help()) is any object having the following verbs:
+
+  :find_topics([string])
+     where string is a supposed help topic, returns a list of strings,
+     i.e., actual help topics that this db knows about, or some boolean 
+     false value in the event that this db is clueless...
+     If no arguments are given, this should return a list of all topics
+     in the db.  However, in the case that such a list can't (reasonably)
+     be constructed, it might just return {} or another subset of all
+     available topics.
+
+  :get_topic(string,dblist)
+     given one of the strings returned by :find_topics this either
+     returns a list of strings (text to be spewed to the player) or
+     returns 1 to indicate that it has already taken care of printing
+     information to the player.
+     The second argument is the list of all help dbs that are being 
+     consulted.
+
+  :topic_text(string)
+     like get_topic, but instead returns the raw contents of a help topic
+
+  :set_topic_text(string, text)
+     sets the contents of a help topic
+
+  :dump_topic(string)
+     like topic_text, but instead returns a script that can be used to
+     upload the text.  this is somewhat obsolete now, as it doesn't need
+     to be customized on any help databases but instead always uses
+     :set_topic-text.
+
+  :has_topic(string)
+     returns true if and only if this db has a topic matching that name
+     exactly
+
+  :add_topic(string)
+     returns true if the topic was added
+
+  :delete_topic(string)
+     likewise with deletion
+
+If :find_topic reports that a particular db knows about a given topic it returns the full topic name, so that :get_topic may be called on it later.
+
+The remaining verbs are used by maintainers (see $prog:@gethelp) to edit help topics.
+
+$GENERIC_HELP AND $HELP
+-----------------------
+
+The Generic Help Database, $generic_help, is the parent class of a particular kind of help database of which $help is an instance.  On help databases of this type, every help topic has a corresponding property, interpreted as follows:
+
+  this.(topic) = string             
+      one-line help text.
+
+  this.(topic) = {"*<verb>*",@args}
+      call this:<verb>(args,dblist) to get text; dblist is the full list of 
+      help objects that are being consulted (as passed in by :get_topic).
+
+  this.(topic) = other list of strings 
+      multi-line help text--see `help help-format' for more information
+
+For the {"*<verb>*",...} form, the current verbs available are
+
+  {"*forward*", topic, @rest}   
+     - get help text for topic and then append the lines of `rest'.  
+       rest may, in turn, begin with a "*<verb>*"...
+
+  {"*pass*", topic, @rest}   
+     - get help text for topic from the first help database after this one
+       that actually has help text for topic, and then append lines of `rest'.
+       As with "*forward*" rest may, in turn, begin with a "*<verb>*"...
+
+  {"*unpass*", topic, @rest}
+     - get help text for topic from the first help database
+       that actually has help text for topic, and then append lines of `rest'.
+       This is identical to *pass* except that we begin the search of help
+       dbs from the beginning of the list.  Care should be exercised since
+       this can cause loops...
+
+  {"*subst*", @lines} 
+     - All occurences of %[exp] in lines are replaced with the value of exp
+         which is assumed to evaluate to a string.  
+       All lines beginning with %;exp are replaced with the value of exp 
+         which is assumed to evaluate to a list of strings.
+       Evaluation is done using $no_one's permissions so exp in either case
+       can only refer to public information.
+
+  {"*index*", title}
+     - returns a list of all topics in this database, arranged in columns.
+       title is used as a heading for this index.
+
+  {"*objectdoc*", object}
+     - gets the documentation for the given object (i.e., object:help_msg())
+       N.B. as with all other *verb* arguments, object must be a string.
+
+  {"*verbdoc*", objec
+       N.B. as with all other *verb* arguments, object must be a string.
+
+  {"*verbdoc*", object, verbname}
+     - gets the documentation for the named verb on the given object
+       (i.e., any strings at the beginnine documentation for the named verb on the given object
+       (i.e., any strings at the beginning of said verbcode)
+
+Individual help dbs are free to define additional verbs that may be used in this context.  $help itself defines the following additional such verbs:
+
+  {"*index_list*"}
+     - returns a list of all index topics in all databases in the search list.
+       An index topic is one whose actual text is {"*index*", something}.
+       When creating a help db, you should be sure to make an index topic.
+
+  {"*full_index*"}
+     - prints indices for all help databases in the search list.
+
+It should be noted (once again) that help databases need not be children of $generic_help, so long as they have :find_topics/:get_topic/:dump_topic working as specified above.
+
+There are currently no links for you to pick.
+-----
+CORE UTILITY HELP TOPICS
+========================
+
+$biglist_utils[1]       $building_utils[2]      $code_utils[3]
+$command_utils[4]       $english[5]             $english_utils[6]
+$exit[7]                $gender_utils[8]        $generic_db[9]
+$generic_editor[10]     $generic_help[11]       $generic_options[12]
+$help[13]               $housekeeper[14]        $integration_utils[15]
+$list_utils[16]         $lock_utils[17]         $login[18]
+$mail_agent[19]         $mail_recipient[20]     $math_utils[21]
+$name_utils[22]         $no_one[23]             $object_utils[24]
+$openable_container[25]                         $parse_utils[26]
+$perm_utils[27]         $player_db[28]          $quota_utils[29]
+$relation_utils[30]     $room[31]               $room_matching_utils[32]
+$seq_utils[33]          $set_utils[34]          $string_utils[35]
+$time_utils[36]         $trig_utils[37]         $walking_utils[38]
+$who_utils[39]          $wiz_utils[40]          core-index[41]
+mail-format[42]         mail-recipient[43]      mail-resolve[44]
+mail-system[45]         MR-access[46]           MR-naming[47]
+MR-reading[48]          MR-searching[49]        MR-sequences[50]
+MR-subscribing[51]      MR-writing[52]          object-matching[53]
+receiving-mail[54]      sending-mail[55]        
+
+-----
+THE HELP SYSTEM
+===============
+
+When a player types help, the following list of objects is consulted for .help properties:  the player itself, all ancestors of player up to and including $player, and, if the current location is a room, the current location together with all ancestors of the current location back to and including $room.  Each help property should have as value either an object or a list of objects (otherwise we just ignore it).  These objects are then strung together as a list of "help databases" to be searched in order for the requested topic.
+
+A help database (in the sense of anything that is usable by $player:help()) is any object having the following verbs:
+
+  :find_topics([string])
+     where string is a supposed help topic, returns a list of strings,
+     i.e., actual help topics that this db knows about, or some boolean 
+     false value in the event that this db is clueless...
+     If no arguments are given, this should return a list of all topics
+     in the db.  However, in the case that such a list can't (reasonably)
+     be constructed, it might just return {} or another subset of all
+     available topics.
+
+  :get_topic(string,dblist)
+     given one of the strings returned by :find_topics this either
+     returns a list of strings (text to be spewed to the player) or
+     returns 1 to indicate that it has already taken care of printing
+     information to the player.
+     The second argument is the list of all help dbs that are being 
+     consulted.
+
+  :topic_text(string)
+     like get_topic, but instead returns the raw contents of a help topic
+
+  :set_topic_text(string, text)
+     sets the contents of a help topic
+
+  :dump_topic(string)
+     like topic_text, but instead returns a script that can be used to
+     upload the text.  this is somewhat obsolete now, as it doesn't need
+     to be customized on any help databases but instead always uses
+     :set_topic-text.
+
+  :has_topic(string)
+     returns true if and only if this db has a topic matching that name
+     exactly
+
+  :add_topic(string)
+     returns true if the topic was added
+
+  :delete_topic(string)
+     likewise with deletion
+
+If :find_topic reports that a particular db knows about a given topic it returns the full topic name, so that :get_topic may be called on it later.
+
+The remaining verbs are used by maintainers (see $prog:@gethelp) to edit help topics.
+
+$GENERIC_HELP AND $HELP
+-----------------------
+
+The Generic Help Database, $generic_help, is the parent class of a particular kind of help database of which $help is an instance.  On help databases of this type, every help topic has a corresponding property, interpreted as follows:
+
+  this.(topic) = string             
+      one-line help text.
+
+  this.(topic) = {"*<verb>*",@args}
+      call this:<verb>(args,dblist) to get text; dblist is the full list of 
+      help objects that are being consulted (as passed in by :get_topic).
+
+  this.(topic) = other list of strings 
+      multi-line help text--see `help help-format' for more information
+
+For the {"*<verb>*",...} form, the current verbs available are
+
+  {"*forward*", topic, @rest}   
+     - get help text for topic and then append the lines of `rest'.  
+       rest may, in turn, begin with a "*<verb>*"...
+
+  {"*pass*", topic, @rest}   
+     - get help text for topic from the first help database after this one
+       that actually has help text for topic, and then append lines of `rest'.
+       As with "*forward*" rest may, in turn, begin with a "*<verb>*"...
+
+  {"*unpass*", topic, @rest}
+     - get help text for topic from the first help database
+       that actually has help text for topic, and then append lines of `rest'.
+       This is identical to *pass* except that we begin the search of help
+       dbs from the beginning of the list.  Care should be exercised since
+       this can cause loops...
+
+  {"*subst*", @lines} 
+     - All occurences of %[exp] in lines are replaced with the value of exp
+         which is assumed to evaluate to a string.  
+       All lines beginning with %;exp are replaced with the value of exp 
+         which is assumed to evaluate to a list of strings.
+       Evaluation is done using $no_one's permissions so exp in either case
+       can only refer to public information.
+
+  {"*index*", title}
+     - returns a list of all topics in this database, arranged in columns.
+       title is used as a heading for this index.
+
+  {"*objectdoc*", object}
+     - gets the documentation for the given object (i.e., object:help_msg())
+       N.B. as with all other *verb* arguments, object must be a string.
+
+  {"*verbdoc*", objec
+       N.B. as with all other *verb* arguments, object must be a string.
+
+  {"*verbdoc*", object, verbname}
+     - gets the documentation for the named verb on the given object
+       (i.e., any strings at the beginnine documentation for the named verb on the given object
+       (i.e., any strings at the beginning of said verbcode)
+
+Individual help dbs are free to define additional verbs that may be used in this context.  $help itself defines the following additional such verbs:
+
+  {"*index_list*"}
+     - returns a list of all index topics in all databases in the search list.
+       An index topic is one whose actual text is {"*index*", something}.
+       When creating a help db, you should be sure to make an index topic.
+
+  {"*full_index*"}
+     - prints indices for all help databases in the search list.
+
+It should be noted (once again) that help databases need not be children of $generic_help, so long as they have :find_topics/:get_topic/:dump_topic working as specified above.
+
+-----
+STANDARD HELP TEXT FORMAT
+=========================
+
+The JHCore help system attempts automatic conversion of help texts written in a certain format into jtext, the rich/hypertext format developed at JHM.  The format is heavily based on certain conventions found in LambdaCore help documents, so most of them could be automatically converted.  This document details the expected format.
+
+HELP TEXT ELEMENTS
+------------------
+
+The JHCore help format is designed to be highly readable in raw format--it is derived from the texts that are presented verbatim to users on other MOOs.  However, it also includes (or more rigorously defines) constructs that a machine can translate into paragraphs, headers, itemized lists, definition lists, hypertext links, and plaintext.
+
+Blank Lines
+===========
+
+Blank lines separate paragraphs from headers from definition lists from itemized lists from plaintext.  The term "blank line" means a completely empty line; a line composed entirely of whitespace doesn't count.  This is mostly for efficiency.
+
+At some point there may be a "help text compiler", which will attempt to parse a text written in this format, show you the result, and point out common problems.  A good use of this would be checking for whitespace lines.  Meanwhile, we're just converting help texts on the fly, and don't want to be printing error messages and such.
+
+Paragraphs
+==========
+
+The most common help text element is the paragraph.  A paragraph (like this one) is a single line of text, preceded and followed by blank lines.  Paragraphs should _not_ be linewrapped text.  The help system makes no assumptions about screen width, and you shouldn't either; if the help text converter finds more than one line of text with no blank lines in between, it assumes that there's some special formatting going on.  (It will try to recognize headers, definition lists, and itemized links; if this fails, it formats as plaintext and hopes for the best.)
+
+Note that a lot of MOO text manipulation systems--for example, the linewrapping (see `help @wrap'[1]) done for people without special clients, and the algorithm used to include text in mail replies--make the same assumption that a line is equivalent to a paragraph, so this is a good skill to develop even if you're not writing help texts regularly.  And including blank lines between paragraphs in some of these contexts improves readability.
+
+Hypertext Links
+===============
+
+It is possible to embed hypertext links to other help topics within help text (paragraphs, itemized lists, or definition list descriptions).  A link is marked with a single quote (either direction), the word "help", a single space, a word containing no spaces, and a single closing quote.  For an example, see this sentence in the middle of `help help-format'[2].  (If you saw a boxed number after that link, please note that it was an artifact of jtext output, rather than a part of the hypertext link format.)
+
+The word after "help" is the name of the help topic to link to.  If the word is enclosed in angle brackets (actually, if it begins with the "<" character), this piece of text will not be considered a hypertext link.  This is so we can include instructions to type `help <topic-name>' for more information.
+
+You can also include a similar reference to a project--for example, `@proj info jtext' or `@proj usa doc' are both relevant to this document.
+
+Headers
+=======
+
+Just above this sentence is a header.  A header consists of two lines, preceded and followed by blank lines.  The first line is the text of the header.  The second line should be a string of equals ("=") or hyphen ("-") characters, of the same length as the header text.
+
+There are four levels of headers available through the help format:
+
+  o  Level 1: All caps, equals signs (see "standard help text format").
+  o  Level 2: All caps, hyphens (see "help text elements").
+  o  Level 3: Normal text, equals signs (see "headers").
+  o  Level 4: Normal text, hyphens (no example here).
+
+They may, of course, be formatted differently by different clients that understand jtext.
+
+Sometimes you don't want your first- or second-level header to be in all caps.  You can also indicate header level by replacing the first "=" or "-" with a numeral between 1 and 6.  For example, one of the headers in this document is represented as:
+
+  Help Text Elements
+  2-----------------
+
+Warning:  Many output formats (for example, the in-db line-mode client and most ASCII HTML displayers) will turn headers into all caps anyway.
+
+If there is not a header of level 1 at the beginning of a help text, it will be given a top-level header based on the name of the help topic.
+
+Itemized Lists
+==============
+
+An itemized list is a series of bulleted lines preceded and followed by blank lines.  A "bullet" is recognized by the presence of several elements at the beginning of a line:  more than one space, followed by one of several bullet characters (currently "-", "o", and "*"), followed by one or more spaces.
+
+Each line of an itemized list must use the same bullet character and the same number of spaces before and after.
+
+No nesting of lists is allowed; an item contains only a line of simple text.  It should be possible to include hypertext links (see above) soon.
+
+Numbered lists are planned for the future.
+
+Definition Lists
+================
+
+The definition list gets its name from its use in glossaries.  Each element of a definition list consists of a term (something to be defined) and a definition (what it means).  In practice, it's used for much more than that, but the help format currently provides only one use of it:  lists of related help texts.
+
+The help format allows an author to provide a list of links to other help texts and a brief description of each one.  For an example, see `help summary'[3], which contains four separate definition lists.
+
+The format for one of these definition lists places each element on a line, with blank lines preceding and following the whole list.  There must be at least two elements for a definition list to be recognized.  Each line contains the name of a help topic; the string " -- " (a dash); and some text, usually describing the help topic or its relation to the current one.
+
+example -- This is an example of the format for a definition list entry.
+
+It wasn't converted into definition list form because there's only one line.
+
+Horizontal Rule
+===============
+
+A line consisting only of twenty or more hyphens in a row, with blank lines immediately before and after, will be represented as a horizontal line across the page.  Here's an example:
+
+-------------------------------------------------------------------------------
+Plaintext
+=========
+
+The help converter breaks text into chunks separated by blank lines.  If a chunk is only one line long, it's considered a paragraph.  If not, an attempt is made to recognize it as header, itemized list, or definition list.  If none of these match, the converter assumes that the author has done some kind of formatting, and it shouldn't mess with it.
+
+In this situation, the chunk of text is considered preformatted "plaintext", and will generally be output in a fixed-width font with the formatting provided.
+
+In most cases, plaintext is the result of either a help text inherited from LambdaCore which didn't conform to the format defined here, or an author needing some kind of formatting not currently provided by the help format (e.g., nested lists).  It usually represents a failure of some sort on the part of the help system; for this reason, the system maintains a list of help texts that required plaintext formatting.  This list should be (but isn't) checked periodically, and help texts should be fixed or new capacities added to the converter.
+
+*Bug-reports has just been sent new mail (re: relativity and internal compasses) by Crag.
+*Bug-reports has just been sent new mail (re: sense and sensitivity) by Crag.
+< Robert has connected.  Total: 6 >
+Carrying:
+ a random stats                          a Pasting Feature
+How random is 'random()'?
+Using 127400 numbers between 1 and 4, we are counting the frequencies of sequences of 4 numbers.
+Don't know how to display depth 4 results.
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+-------------------------------- finished ---------------------------------
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+.dataset                 Crag (#958)           r c    {1, 4, 2, 1, 3, 2, 2, 2..
+.series_length           Crag (#958)           r c    4
+.series_table            Crag (#958)           r c    {{{{477, 466, 478, 497}..
+.datacount               Crag (#958)           r c    1000000
+.datasize                Crag (#958)           r c    4
+.min                     Crag (#958)           r c    0
+.max                     Crag (#958)           r c    0
+-------------------------------- finished ---------------------------------
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+  #948:note_series              Crag (#958)          rxd    this none this
+  #948:get_series               Crag (#958)          rxd    this none this
+  #948:set_series               Crag (#958)          rxd    this none this
+  #948:run                      Crag (#958)          r d    this none none
+  #948:gendata                  Crag (#958)          rxd    this none this
+  #948:genstat                  Crag (#958)          rxd    this none this
+  #948:showstat                 Crag (#958)          rxd    this none this
+  #948:array_incr               Crag (#958)          rxd    this none this
+  #948:make_series_table        Crag (#958)          rxd    this none this
+  #948:clear                    Crag (#958)          r d    this none none
+  #948:description              Crag (#958)          rxd    this none this
+-------------------------------- finished ---------------------------------
+=> {"Don't know how to display depth 4 results."}
+=> {"How random is 'random()'?", "Using 127400 numbers between 1 and 4, we are counting the frequencies of sequences of 4 numbers.", "Don't know how to display depth 4 results."}
+That object does not define that verb.
+Last modified Tue Dec 24 12:14:40 2002 PST by Crag (#2).
+#948:"description" this none this
+ 1:  conf = {"Using " + tostr(length(this.dataset)) + " numbers between 1 and " + tostr(this.datasize) + "," + " we are counting the frequencies of sequences of " + tostr(this.series_length) + " numbers."};
+ 2:  stats = this:showstat();
+ 3:  return {@pass(@args), @conf, @stats};
+Last modified Tue Dec 24 12:21:36 2002 PST by Crag (#2).
+#948:"run" this none none
+ 1:  this:gendata();
+ 2:  this:genstat();
+ 3:  player:tell_lines(this:description());
+Your current object is now a random stats (#948).
+=> 3
+#-1:Input to EVAL, line 4:  Verb not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #2), line 21
+... called from #52:eval eval-d eval+d (this == #2), line 16
+(End of traceback)
+Try this instead:  run _
+[the random stats]
+Extracting series information
+How random is 'random()'?
+Using 116000 numbers between 1 and 4, we are counting the frequencies of sequences of 4 numbers.
+Don't know how to display depth 4 results.
+Last modified Tue Dec 24 12:12:45 2002 PST by Crag (#2).
+#948:"showstat" this none this
+ 1:  if (this.series_length == 2)
+ 2:    columnsize = 72 / this.datasize;
+ 3:    l = {};
+ 4:    for row in (this.series_table)
+ 5:      s = "";
+ 6:      for n in (row)
+ 7:        s = s + " " + $string_utils:right($string_utils:group_number(n), columnsize);
+ 8:      endfor
+ 9:      l = {@l, s};
+10:    endfor
+11:    return l;
+12:  endif
+13:  return {"Don't know how to display depth " + tostr(this.series_length) + " results."};
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+.dataset                 Crag (#958)           r c    {3, 2, 1, 3, 2, 4, 1, 3..
+.series_length           Crag (#958)           r c    4
+.series_table            Crag (#958)           r c    {{{{487, 454, 458, 448}..
+.datacount               Crag (#958)           r c    1000000
+.datasize                Crag (#958)           r c    4
+.min                     Crag (#958)           r c    0
+.max                     Crag (#958)           r c    0
+-------------------------------- finished ---------------------------------
+Last modified Tue Dec 24 12:21:36 2002 PST by Crag (#2).
+#948:"run" this none none
+ 1:  this:gendata();
+ 2:  this:genstat();
+ 3:  player:tell_lines(this:description());
+Last modified Tue Dec 24 12:29:39 2002 PST by Crag (#2).
+#948:"gendata" this none this
+ 1:  ds = this.datasize;
+ 2:  set = {random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds)};
+ 3:  while (seconds_left())
+ 4:    set = {@set, random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds), random(ds)};
+ 5:  endwhile
+ 6:  this.dataset = set;
+=> 4
+=> 2
+[the random stats]
+Extracting series information
+How random is 'random()'?
+Using 116800 numbers between 1 and 2, we are counting the frequencies of sequences of 4 numbers.
+Don't know how to display depth 4 results.
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+.dataset                 Crag (#958)           r c    {2, 1, 1, 2, 2, 1, 1, 1..
+.series_length           Crag (#958)           r c    4
+.series_table            Crag (#958)           r c    {{{{7332, 7231}, {7249,..
+.datacount               Crag (#958)           r c    1000000
+.datasize                Crag (#958)           r c    2
+.min                     Crag (#958)           r c    0
+.max                     Crag (#958)           r c    0
+-------------------------------- finished ---------------------------------
+=> 2
+[the random stats]
+Extracting series information
+How random is 'random()'?
+Using 116400 numbers between 1 and 2, we are counting the frequencies of sequences of 2 numbers.
+                               29,002                               29,074
+                               29,074                               29,249
+random stats (#948) [ readable ]
+  Owned by Crag (#958).
+  Child of generic thing (#5).
+  Location GhostOfTheManor (#2).
+.dataset                 Crag (#958)           r c    {1, 2, 2, 2, 2, 1, 2, 1..
+.series_length           Crag (#958)           r c    2
+.series_table            Crag (#958)           r c    {{29002, 29074}, {29074..
+.datacount               Crag (#958)           r c    1000000
+.datasize                Crag (#958)           r c    2
+.min                     Crag (#958)           r c    0
+.max                     Crag (#958)           r c    0
+-------------------------------- finished ---------------------------------
+< Minty has disconnected.  Total: 5 >
+< enceladus has disconnected.  Total: 4 >
+< enceladus has connected.  Total: 5 >
+< enceladus has disconnected.  Total: 4 >
+< Minty has connected.  Total: 5 >
+< Minty has disconnected.  Total: 4 >
+< kirsty has connected.  Total: 5 >
+*Player-Creation-Log has just been sent new mail (re: kirsty (#1168)) by the security.
+< Minty has connected.  Total: 6 >
+< Marcy has connected.  Total: 7 >
+< Marcy has disconnected.  Total: 6 >
+< Minty has disconnected.  Total: 5 >
+< kirsty has disconnected.  Total: 4 >
+*Bug-reports has just been sent new mail (re: Feature: bug/feature tracking syste) by Crag.
+< Marcy has connected.  Total: 5 >
+< Marcy has disconnected.  Total: 4 >
+< kirsty has connected.  Total: 5 >
+< kirsty has disconnected.  Total: 4 >
+< Crag has disconnected.  Total: 3 >

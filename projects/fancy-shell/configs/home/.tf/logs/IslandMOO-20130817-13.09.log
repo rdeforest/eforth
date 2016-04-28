@@ -1,0 +1,3714 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Front Parlour
+A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal.  An oriental rug lies soft underfoot.  A bureau a gradin stands off to the side of the room.  A desk chair is pulled up next to the desk.  A sideboard stands against the wall next to the doors to the foyer.  Across the room, some setees are drawn up in a semi-circle around a tea table.  Opposite the settees, a large marble fireplace occupies the eastern wall. In front of the hearth are a pair of wingback armchairs, with a small occasional table between them.
+Last connected Sun Jun 16 18:49:11 2013 PDT from localhost
+#$#mcp-negotiate-can 1025024665 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1025024665 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1025024665 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1025024665
+The verb :w is on   Front Parlour(#398)--generic room(#3)
+    #3:"e east w west s south n north ne northeast nw northwest se southeast sw southwest u up d down" unknown hacker (#35) rxd none none none
+-------------------------------- finished ---------------------------------
+A set of related utilities.
+The unknown hacker (#35) is on the North Vestibule.
+You see no "unknown" here.
+=> #398 (Front Parlour)
+The verb :l is on   Front Parlour(#398)--generic room(#3)
+Object #398 does not define that verb, but its ancestor #3 does.
+#3:"l*ook" any any any
+if (dobjstr == "" && !prepstr)
+  this:look_self();
+elseif ($code_utils:short_prep(prepstr) != "in" && prepstr != "on")
+  if (!dobjstr && prepstr == "at")
+    dobjstr = iobjstr;
+    iobjstr = "";
+  else
+    dobjstr = dobjstr + (prepstr && (dobjstr && " ") + prepstr);
+    dobjstr = dobjstr + (iobjstr && (dobjstr && " ") + iobjstr);
+  endif
+  dobj = this:match_object(dobjstr);
+  if (!$command_utils:object_match_failed(dobj, dobjstr))
+    dobj:look_self();
+  endif
+elseif (!iobjstr)
+  player:tell(verb, " ", prepstr, " what?");
+else
+  iobj = this:match_object(iobjstr);
+  if (!$command_utils:object_match_failed(iobj, iobjstr))
+    iobj:look_in(dobjstr);
+  endif
+endif
+=> #248 (Group Utilities)
+The unknown hacker (#35) is on the North Vestibule.
+=> #243 (Crag)
+Moved.
+Carrying:
+ a MCP parent                            a Beaker's Commands
+ a Parsing objects                       a Generic Command
+ a Text generation objects               a Generic English Command
+ an Abstract class                       a Grouping Command
+ a Generic Nesting Decoration            a microphone
+ a Delegator                             a Cardgame Feature
+ a Delegate                              the Interface
+ a New Generic Room                      the Class
+ a Room Exit Delegate                    some Delegation Utilities
+ a Generic Input Handler                 a Source control strategy
+ a Generic Command Handler               
+You see no "nesting" here.
+Crag (#243) contains a MCP parent (#251), a Parsing objects (#252), a Text generation objects (#253), an Abstract class (#254), a Generic Nesting Decoration (#265), a Delegator (#269), a Delegate (#270), a New Generic Room (#271), a Room Exit Delegate (#279), a Generic Input Handler (#509), a Generic Command Handler (#510), a Beaker's Commands (#511), a Generic Command (#531), a Generic English Command (#532), a Grouping Command (#533), a microphone (#282), a Cardgame Feature (#558), the Interface (#561), the Class (#562), some Delegation Utilities (#247), and a Source control strategy (#504).
+Moved.
+#251
+#253
+#254
+#265
+#269
+#270
+#271
+#279
+#509
+#510
+#511
+#531
+#532
+#533
+#282
+#558
+#561
+#562
+#247
+#504
+=> 0
+@move #251 to #-1
+@move #253 to #-1
+@move #254 to #-1
+@move #265 to #-1
+@move #269 to #-1
+@move #270 to #-1
+@move #271 to #-1
+@move #279 to #-1
+@move #509 to #-1
+@move #510 to #-1
+@move #511 to #-1
+@move #531 to #-1
+@move #532 to #-1
+@move #533 to #-1
+@move #282 to #-1
+@move #558 to #-1
+@move #561 to #-1
+@move #562 to #-1
+@move #247 to #-1
+@move #504 to #-1
+=> 0
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+Moved.
+A white plaster ceiling, embossed with a pattern of grape vines and acanthus leaves.  A brass chandelier hangs overhead, casting a dazzlingly bright light.
+You haven't specified which "d" you mean.
+The verb :d is on   Front Parlour(#398)--generic room(#3)   front parlour floor(#513)--generic thing(#5)   front parlour ceiling(#515)--generic container(#126)   oriental rug(#516)--generic thing(#5)   tea table(#506)--Generic Table(#280)   walls(#519)--generic container(#126)   bureau a gradin(#543)--generic container(#126)   desk chair(#548)--generic thing(#5)   sideboard(#549)--generic container(#126)   settee(#517)--generic thing(#5)   armchair(#505)--generic thing(#5)   front parlour fireplace(#507)--generic container(#126)   occasional table(#575)--Generic Table(#280)   cabriole legs(#576)--generic thing(#5)
+"d" is not the name of any player.
+#-1:Input to EVAL, line 4:  Variable not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+Object #398 does not define that verb, but its ancestor #3 does.
+#3:"l*ook" any any any
+if (dobjstr == "" && !prepstr)
+  this:look_self();
+elseif ($code_utils:short_prep(prepstr) != "in" && prepstr != "on")
+  if (!dobjstr && prepstr == "at")
+    dobjstr = iobjstr;
+    iobjstr = "";
+  else
+    dobjstr = dobjstr + (prepstr && (dobjstr && " ") + prepstr);
+    dobjstr = dobjstr + (iobjstr && (dobjstr && " ") + iobjstr);
+  endif
+  dobj = this:match_object(dobjstr);
+  if (!$command_utils:object_match_failed(dobj, dobjstr))
+    dobj:look_self();
+  endif
+elseif (!iobjstr)
+  player:tell(verb, " ", prepstr, " what?");
+else
+  iobj = this:match_object(iobjstr);
+  if (!$command_utils:object_match_failed(iobj, iobjstr))
+    iobj:look_in(dobjstr);
+  endif
+endif
+=> #-2 <$ambiguous_match>
+=> #515 (front parlour ceiling)
+Crag (#243)   generic wizard (#51)   generic programmer (#52)   generic builder (#4)   generic player (#6)   generic containing object (#145)   generic event dispatching object (#110)   Generic Virtual Reality Object (#291)   Helpful Object (#250)   root class (#1)
+Crag (#243)   generic wizard (#51)   generic programmer (#52)   generic builder (#4)   generic player (#6)   generic containing object (#145)   generic event dispatching object (#110)   Generic Virtual Reality Object (#291)   Helpful Object (#250)   root class (#1)
+generic builder (#4) [ readable ]
+  Owned by Core-Wizard (#184).
+  Child of generic player (#6).
+  Location generic room (#3).
+    #4:@quota                   Core-Wizard (#184)   r d    any none none
+    #4:@create                  Core-Wizard (#184)   r d    any any any
+    #4:@recycle                 Core-Wizard (#184)   r d    any none none
+    #4:@recreate                Core-Wizard (#184)   r d    any as any
+    #4:@dig                     Core-Wizard (#184)   r d    any any any
+    #4:@auditDB                 Core-Wizard (#184)   r d    any any any
+    #4:@count                   Core-Wizard (#184)   r d    any none none
+    #4:@countDB                 Core-Wizard (#184)   r d    any none none
+    #4:@sort-owned*-objects     Core-Wizard (#184)   r d    none none none
+    #4:@add-owned               Core-Wizard (#184)   r d    any none none
+    #4:@verify-owned            Core-Wizard (#184)   r d    none none none
+    #4:@unlock                  Core-Wizard (#184)   r d    any none none
+    #4:@lock                    Core-Wizard (#184)   r d    any with/using any
+    #4:@newmess*age             Core-Wizard (#184)   r d    any any any
+    #4:@unmess*age              Core-Wizard (#184)   r d    any any any
+    #4:_messagify               Core-Wizard (#184)   rxd    this none this
+    #4:@kids                    Core-Wizard (#184)   rxd    any none none
+    #4:@contents                Core-Wizard (#184)   r d    any none none
+    #4:@par*ents                Core-Wizard (#184)   r d    any none none
+    #4:@location*s              Core-Wizard (#184)   r d    any none none
+    #4:_create                  Core-Wizard (#184)   rxd    this none this
+    #4:_recycle                 Core-Wizard (#184)   rxd    this none this
+    #4:@audit                   Core-Wizard (#184)   r d    any any any
+    #4:"@building-o*ptions @buildingo*ptions" Core-Wizard (#184) r d any any any
+    #4:set_building_option      Core-Wizard (#184)   rxd    this none this
+    #4:building_option          Core-Wizard (#184)   rxd    this none this
+    #4:options_packages         unknown hacker (#35) rxd    this none this
+    #4:@recycle!                Core-Wizard (#184)   r d    any none none
+    #4:@move                    Core-Wizard (#184)   rxd    any at/to any
+    #4:@measure                 Core-Wizard (#184)   r d    any any any
+    #4:@grant                   Core-Wizard (#184)   r d    any at/to any
+    #4:@set*property            Core-Wizard (#184)   r d    any at/to any
+-------------------------------- finished ---------------------------------
+Verb added [33] (32).
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#4:@room-info none none none" name: "MOO verb: #4:@room-info none none none" type: moo-code content*: "" _data-tag: 1928401206279
+#$#: 1928401206279
+That is not a valid command.
+That is not a valid command.
+The Front Parlour
+A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal.  An oriental rug lies soft underfoot.  A bureau a gradin stands off to the side of the room.  A desk chair is pulled up next to the desk.  A sideboard stands against the wall next to the doors to the foyer.  Across the room, some setees are drawn up in a semi-circle around a tea table.  Opposite the settees, a large marble fireplace occupies the eastern wall. In front of the hearth are a pair of wingback armchairs, with a small occasional table between them.
+The south (#408) leads to the West Foyer (#393) via {south, s}.
+The west (#409) leads to the Music Room (#400) via {west, w}.
+That object does not define that verb.
+Object #398 does not define that verb, but its ancestor #3 does.
+Last modified Sat Feb  2 07:51:34 2002 PST by splat (#3024) (on JHM (for core)).
+#3:"@exits" any none none
+// Usage: @exits [obvious]
+who = valid(caller_perms()) ? caller_perms() | player;
+obvious = args && length(args) == 1 && index("obvious", args[1]) == 1;
+if (args && !obvious)
+  $command_utils:explain_syntax(this, verb, args);
+  return E_ARGS;
+endif
+if (obvious || !this:can_read_exits(who))
+  exits = this:obvious_exits();
+  player:tell("Obvious exits:  ", $string_utils:dname_list(exits, "none"), ".");
+  // player:tell("Sorry, only the owner of a room may list its exits.");
+elseif (!(exits = this:exits()))
+  player:tell("This room has no conventional exits.");
+else
+  for exit in (exits)
+    // xplat 2002.01.31 -- Erik's version of the 'nowhere' thing didn't really work, so I'm trying something slightly more elaborate.
+    room = `exit.dest ! E_INVIND, E_PROPNF => #-1';
+    room_name = valid(room) ? $string_utils:dname_and_number(room) | "nowhere";
+    exit_namec = valid(exit) ? $string_utils:dnamec_and_number(exit) | tostr("An invalid exit (", exit, ")");
+    player:tell(exit_namec, " leads to ", room_name, " via {", $string_utils:from_list(`exit.aliases ! E_INVIND => {}', ", "), "}.");
+  endfor
+endif
+=> #3 (generic room)
+The south (#408) leads to the West Foyer (#393) via {south, s}.
+The west (#409) leads to the Music Room (#400) via {west, w}.
+object utilities (#47) [ readable ]
+  Owned by Core-Wizard (#184).
+  Child of generic utilities (#146).
+   #47:has_property             Core-Wizard (#184)   rxd    this none this
+   #47:all_properties           Core-Wizard (#184)   rxd    this none this
+   #47:has_verb                 Core-Wizard (#184)   rxd    this none this
+   #47:has_callable_verb        Core-Wizard (#184)   rxd    this none this
+   #47:all_verbs                Core-Wizard (#184)   rxd    this none this
+   #47:match_verb               Core-Wizard (#184)   rxd    this none this
+   #47:isa                      Core-Wizard (#184)   rxd    this none this
+   #47:ancestors                Core-Wizard (#184)   rxd    this none this
+   #47:"descendants descendents" Core-Wizard (#184)  rxd    this none this
+   #47:"descendants_suspended descendents_suspended" Core-Wizard (#184) rxd this none this
+   #47:ordered_descendants      Core-Wizard (#184)   rxd    this none this
+   #47:branches                 unknown hacker (#35) rxd    this none this
+   #47:branches_suspended       Core-Wizard (#184)   rxd    this none this
+   #47:leaves                   unknown hacker (#35) rxd    this none this
+   #47:leaves_suspended         Core-Wizard (#184)   rxd    this none this
+   #47:contains                 Core-Wizard (#184)   rxd    this none this
+   #47:all_contents             Core-Wizard (#184)   rxd    this none this
+   #47:findable_properties      Core-Wizard (#184)   rxd    this none this
+   #47:owned_properties         Core-Wizard (#184)   rxd    this none this
+   #47:property_conflicts       Core-Wizard (#184)   rx     this none this
+   #47:descendants_with_property_suspended Core-Wizard (#184) rx this none this
+   #47:locations                Core-Wizard (#184)   rxd    this none this
+   #47:"fertile_descendants fertile_descendents" Core-Wizard (#184) rxd this none this
+   #47:all_properties_suspended Core-Wizard (#184)   rxd    this none this
+   #47:match_verbs(new)         unknown hacker (#35) rx     this none this
+   #47:connected                unknown hacker (#35) rxd    this none this
+   #47:all_contents_bfs         unknown hacker (#35) rxd    this none this
+   #47:match_verbs_named        Core-Wizard (#184)   rxd    this none this
+   #47:check_for_legacy         unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------
+You see no "$permissions_utils" here.
+You see no "$perms_utils" here.
+object utilities (#47)   generic utilities (#146)   Abstract class (#254)   root class (#1)
+The generic utilities(#146) has 24 kids.
+Generic BigList Utilities (#13)   wizard utilities (#24)   math utilities (#26)   set utilities (#27)   sequence utilities (#32)   gender utilities (#38)   time utilities (#39)   object utilities (#47)   lock utilities (#48)   list utilities (#49)   command utilities (#50)   code utilities (#53)   permissions utilities (#130)   building utilities (#19)   string utilities (#18)   English Utilities (#72)   integration utils (#74)   Name Utilities (#177)   Parsing Utilities (#117)   walking utils (#182)   room matching utilities (#190)   Generic Quota Utils Parent (#88)   Group Utilities (#248)   Delegation Utilities (#247)
+permissions utilities (#130) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic utilities (#146).
+-------------------------------- finished ---------------------------------
+permissions utilities (#130) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic utilities (#146).
+  #130:controls                 Core-Wizard (#184)   rxd    this none this
+  #130:apply                    unknown hacker (#35) rxd    this none this
+  #130:controls_verb            Core-Wizard (#184)   rxd    this none this
+  #130:"controls_prop controls_property" Core-Wizard (#184) rxd this none this
+  #130:invoked_by_function      unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------
+=> {}
+=> #130 (permissions utilities)
+-----
+$PERM_UTILS:CONTROLS
+====================
+
+@perm_utils:controls(who, what)
+
+Is WHO allowed to hack on WHAT?
+
+You haven't specified which "d" you mean.
+generic room (#3) [ readable fertile ]
+  Owned by Core-Wizard (#184).
+  Child of generic containing object (#145).
+    #3:confunc                  unknown hacker (#35) rxd    this none this
+    #3:disfunc                  unknown hacker (#35) rxd    this none this
+    #3:say                      unknown hacker (#35) rxd    any any any
+    #3:emote                    unknown hacker (#35) rxd    any any any
+    #3:announce                 unknown hacker (#35) rxd    this none this
+    #3:"match_exit match_entrance" unknown hacker (#35) rxd this none this
+    #3:add_exit                 Core-Wizard (#184)   rxd    this none this
+    #3:tell_contents            unknown hacker (#35) rxd    this none this
+    #3:@exits                   unknown hacker (#35) rxd    any none none
+    #3:add_entrance             Core-Wizard (#184)   rxd    this none this
+    #3:bless_for_entry          Core-Wizard (#184)   rxd    this none this
+    #3:@entrances               Core-Wizard (#184)   r d    none none none
+    #3:go                       Core-Wizard (#184)   rxd    any none none
+    #3:l*ook                    unknown hacker (#35) rxd    any any any
+    #3:announce_all             unknown hacker (#35) rxd    this none this
+    #3:announce_all_but         unknown hacker (#35) rxd    this none this
+    #3:enterfunc                Core-Wizard (#184)   rxd    this none this
+    #3:remove_exit              Core-Wizard (#184)   rxd    this none this
+    #3:remove_entrance          Core-Wizard (#184)   rxd    this none this
+    #3:"@add-exit @addexit"     Core-Wizard (#184)   r d    any none none
+    #3:"@add-entrance @addentrance" Core-Wizard (#184) r d  any none none
+    #3:recycle                  Core-Wizard (#184)   rxd    this none this
+    #3:"e east w west s south n north ne northeast nw northwest se southeast sw southwest u up d down" unknown hacker (#35) rxd none none none
+    #3:@eject                   Core-Wizard (#184)   r d    any none none
+    #3:"ejection_msg oejection_msg victim_ejection_msg" unknown hacker (#35) rxd this none this
+    #3:accept_for_abode         unknown hacker (#35) rxd    this none this
+    #3:@resident*s              Core-Wizard (#184)   r d    any none none
+    #3:@remove-exit             Core-Wizard (#184)   r d    any none none
+    #3:@remove-entrance         Core-Wizard (#184)   r d    any none none
+    #3:moveto                   Core-Wizard (#184)   rxd    this none this
+    #3:who_location_msg         unknown hacker (#35) rxd    this none this
+    #3:"exits entrances"        Core-Wizard (#184)   rxd    this none this
+    #3:obvious_exits            unknown hacker (#35) rxd    this none this
+    #3:here_huh                 Core-Wizard (#184)   rxd    this none this
+    #3:room_announce*_all_but   unknown hacker (#35) rxd    this none this
+    #3:examine_commands_ok      unknown hacker (#35) rxd    this none this
+    #3:examine_key              Core-Wizard (#184)   rxd    this none this
+    #3:examine_contents         unknown hacker (#35) rxd    this none this
+    #3:ok_to_integrate          unknown hacker (#35) rxd    this none this
+    #3:look_self                unknown hacker (#35) rxd    this none this
+    #3:description              unknown hacker (#35) rxd    this none this
+    #3:where_am_i               unknown hacker (#35) rxd    this none this
+    #3:"housekeeper_msg housekeeper_deposit_msg" unknown hacker (#35) rxd this none this
+    #3:look_in                  unknown hacker (#35) rxd    this none this
+    #3:namec_for_look_self      unknown hacker (#35) rxd    this none this
+    #3:set_integrate_unknown_objects unknown hacker (#35) rx this none this
+    #3:"dependents dependents_event_*" unknown hacker (#35) rxd this none this
+    #3:reconfunc                unknown hacker (#35) rxd    this none this
+    #3:sit                      unknown hacker (#35) rxd    none none none
+    #3:stand                    unknown hacker (#35) r d    none none none
+    #3:topic_msg                unknown hacker (#35) rxd    this none this
+    #3:topic                    unknown hacker (#35) r d    any any any
+    #3:set_topic_sign           topic-owner (#181)   rxd    this none this
+    #3:event_really_disconnected Core-Wizard (#184)  rxd    this none this
+    #3:match_type_object        unknown hacker (#35) rxd    this none this
+    #3:party_location           unknown hacker (#35) rxd    this none this
+    #3:init_for_core            Core-Wizard (#184)   rxd    this none this
+    #3:acceptable               Core-Wizard (#184)   rxd    this none this
+    #3:is_public_location       Core-Wizard (#184)   rxd    this none this
+    #3:objects_for_match        unknown hacker (#35) rxd    this none this
+    #3:set_walking_cost         unknown hacker (#35) rxd    this none this
+    #3:walking_cost             unknown hacker (#35) rxd    this none this
+    #3:"can_add_exit can_add_entrance" Core-Wizard (#184) rxd this none this
+    #3:"can_remove_exit can_remove_entrance" Core-Wizard (#184) rxd this none this
+    #3:"can_read_exits can_read_entrances" Core-Wizard (#184) rxd this none this
+    #3:terrain_delay            unknown hacker (#35) rxd    this none this
+    #3:set_terrain_delay        unknown hacker (#35) rx     this none this
+    #3:"walk_failed_source walk_failed_dest" unknown hacker (#35) rxd this none this
+    #3:integrated_desc          Crag (#243)          rxd    this none this
+-------------------------------- finished ---------------------------------
+Object #398 does not define that verb, but its ancestor #3 does.
+Last modified Sat Aug 23 22:03:12 1997 PDT by Xythian (#199) (on Waterpoint).
+#3:"exits entrances" this none this
+if (caller == this || $perm_utils:controls(caller_perms(), this) || this:("can_read_" + verb)(caller_perms()))
+  return this.(verb);
+else
+  return E_PERM;
+endif
+=> "Front Parlour"
+-----
+GENERAL INFORMATION ON $STRING_UTILS[1]
+=======================================
+
+For a complete description of a given verb, do `help $string_utils:verbname'[2]
+
+    Conversion routines:
+
+:char_list    (string)                               => {"a", "b", "c"}
+:to_list      (string)                               => {"a", "foo", "bear"}
+ (see also :explode, below)
+
+:from_list    (list [,sep])                          => "foo1foo2foo3"
+:english_list (str-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+:title_list*c (obj-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+                                                  or => "Foo1, foo2, and foo3"
+
+:[i|d]name[c]_and_number                             => "foo (#123)"
+:[i|d]name[c]_list (obj-list, name-args)             => english list of names
+                                                        in appropriate style
+:[i|d]name[c]_and_number_list(obj-list, name-args)   => same, plus " (#123)"
+:names_of     (obj-list)  => "foo1 (#123)   foo2 (#456)   foo3 (#789)"
+
+:to_value       (string)                             => {1, value}
+                                                  or => {0, error message}
+:prefix_to_value(string)                             => {rest-of-string, value}
+                                                  or => {0, error message}
+:end_expression (string)                             => index of expression
+
+:from_value[_suspended] (value [,quoteflag [,maxlistdepth]])
+                                                     => "{foo1, foo2, foo3}"
+:print[_suspended] (value)                           => "{foo1, foo2, foo3}"
+:print_truncated   (value, length, suffix)           => "{foo1, fo.."
+:print_with_names  (value)                           => "{foo1, foo2 (#123)}"
+
+:english_number(42 [,zero])  => "forty-two"
+:english_ordinal(42)         => "forty-second"
+:ordinal(42)                 => "42nd"
+:group_number(42135 [,sep])  => "42,135"
+:from_seconds (num)          => "an hour" or "3 days" or "15 seconds"
+
+:glob_to_regexp("foo*b?r")   => "^foo.*b.r$"
+:xglob_to_regexp("f*ba[rz]") => "^f.*ba[rz]$"
+
+    Type checking:
+
+:is_numeric   (string) => return true if string is composed entirely of digits
+
+    String Matching:
+
+:match_string(string, pattern, options) => * wildcard matching
+:find_prefix(prefix, string-list)       => list index of element starting
+                                           with prefix
+:match_stringlist(string, string-list)  => index/$ambiguous_match/$failed_match
+:index_delimited(string,target[, case]) => index of delimited string occurrence
+:index_all(string, target[, delimited]) => all occurrences of target in string
+:next_index(str1, str2, prev[, case])   => index, after index `prev'
+
+    Object Matching (see also $command_utils):
+
+:literal_object(string)                        => object match independent
+                                                  of location
+:match        (string, [obj-list, prop-name]+) => matching object
+:match_player (string-list[,me-object])        => list of matching players
+:match_object (string, location)               => default object match
+:match_player_or_object(@string-list)          => matching object or player
+:match_room   (string)                         => matching room object
+
+    Parsing:
+
+:explode (string,char) -- string => list of words delimited by char
+ (see also :to_list, above)
+:words   (string)      -- string => list of words (as with command line parser)
+:word_start (string)   -- string => list of start-end pairs.
+:first_word (string)   -- string => {first word, rest of string} or {}
+
+:parse_command(cmd_line[, player]) -- string => parsed command info
+
+    Pretty printing:
+
+:space         (n/string[,filler])     => n spaces
+:left          (string,width[,filler]) => left justified string in field 
+:right         (string,width[,filler]) => right justified string in field
+:center/re     (string,width[,filler]) => centered string in field
+:columnize/se[_suspended](list,n[,width])
+                                       => list of strings in n columns
+:columnize/se_no_truncate(list,n[,linelen])
+                                       => same, but will not truncate items
+:columnize/se_with_headers(headers, fields) => columnize, plus headers
+
+    Substitutions
+
+:substitute (string, subst_list [,case])  -- general substitutions.
+:substitute_delimited(...)                -- same, but with word boundaries.
+:pronoun_sub (string/list[,who[,thing[,location]]])
+                                          -- pronoun substitutions.
+:pronoun_sub_secure (string[,who[,thing[,location]]],default)
+                                          -- substitute and check for names.
+:pronoun_quote (string/list/subst_list)   -- quoting for pronoun substitutions.
+:regexp_quote(string)                     -- quoting for regexps.
+
+    Miscellaneous string munging:
+
+:trim         (string)       => string with outside whitespace removed.
+:triml        (string)       => string with leading whitespace removed.
+:trimr        (string)       => string with trailing whitespace removed.
+:strip_chars  (string,chars) => string with all chars in `chars' removed.
+:strip_all_but(string,chars) => string with all chars not in `chars' removed.
+:capitalize/se(string)       => string with first letter capitalized.
+:uppercase/lowercase(string) => string with all letters upper or lowercase.
+:reverse      (string)       => string, backwards.
+
+:common(string1, string2)    => length of longest common prefix.
+:is_uppercase (string)       => true iff no lowercase letters in string
+:is_lowercase (string)       => true iff no uppercase letters in string
+:nonblank     (string)       => true iff any non-whitespace characters
+
+:connection_hostname(string) => hostname part of connection identifier.
+
+    Conversions to and from common string formats:
+
+:character_to_ascii(char)    => integer ASCII rep of char
+:character_to_hex_ascii(char) => two-digit hexadecimal string ASCII rep of char
+:ascii_to_character(num)     => character represented in ASCII by num
+:hex_ascii_to_character(hex) => ASCII character represented by two-character hexadecimal string hex
+
+    A few useful properties:
+
+alphabet                    => "abcdefghijklmnopqrstuvwxyz"
+tab                         => a single tab character
+
+Line 1:  Unknown built-in function: substr
+1 error.
+Line 1:  Unknown built-in function: substring
+1 error.
+-----
+STRING_HASH()
+=============
+
+Syntax:  string_hash (str <text>)       => str
+         binary_hash (str <bin-string>) => str
+
+Returns a 32-character hexadecimal string encoding the result of applying the MD5 cryptographically secure hash function to the contents of the string <text> or the binary string <bin-string>.  MD5, like other such functions, has the property that, if
+    string_hash(<x>) == string_hash(<y>)
+then, almost certainly,
+    equal(<x>, <y>)
+This can be useful, for example, in certain networking applications: after sending a large piece of text across a connection, also send the result of applying `string_hash()' to the text; if the destination site also applies `string_hash()' to the text and gets the same result, you can be quite confident that the large text has arrived unchanged.
+
+-----
+Available Help Indices
+======================
+
+wiz-index[1]
+      Wizard Help Topics
+prog-index[2]
+      Programmer Help Topics
+builtin-index[3]
+      Server Built-in Functions
+core-index[4]
+      Core Utility Help Topics
+jtext-index[5]
+      Jtext Help Topics
+mcp-index[6]
+      MCP help topics
+tkmoo-index[7]
+      tkmoo help topics
+unicode-index[8]
+      Server Unicode Built-in Functions
+policy-index[9]
+      policy help database
+admin-index[10]
+      administration group help
+gen-index[11]
+      General Help Topics
+
+full-index[12]
+      EVERYTHING
+
+-----
+PROGRAMMER HELP TOPICS
+======================
+
+#[1]                    ;[2]                    @add-feature[3]
+@addalias#[4]           @addfeature[5]          aliases[6]
+@args[7]                @args#[8]               @check-chparent[9]
+@check-property[10]     @chmod[11]              @chparent[12]
+@clearproperty[13]      @copy[14]               @copy-x[15]
+@d[16]                  @dbsize[17]             @disinherit[18]
+@disown[19]             @display[20]            @display-options[21]
+@displayoptions[22]     @egrep[23]              errors[24]
+eval[25]                @eval-options[26]       events[27]
+exam[28]                examine[29]             expressions[30]
+features[31]            for[32]                 fork()[33]
+@forked[34]             functions[35]           @grep[36]
+help[37]                integrate[38]           integration[39]
+@kids[40]               @kill[41]               language[42]
+@list[43]               @list#[44]              @list-options[45]
+listen()[46]            @listoptions[47]        mpl[48]
+named[49]               named-args[50]          named-arguments[51]
+precedence[52]          prepositions[53]        prog-index[54]
+@program[55]            .program[56]            @program#[57]
+programming[58]         @prop[59]               @property[60]
+@prospectus[61]         regexps[62]             regular-expressions[63]
+@remove-feature[64]     @rename#[65]            return[66]
+@rmalias#[67]           @rmproperty[68]         @rmverb[69]
+@rmverb#[70]            @setenv[71]             @show[72]
+statements[73]          tasks[74]               truth[75]
+unlisten()[76]          utilities[77]           valid()[78]
+@verb[79]               while()[80]             
+
+-----
+`HELP FUNCTION' AMBIGUOUS
+=========================
+
+Sorry, the topic `function' is ambiguous.  I don't know which of the following topics you mean:
+
+`help function_info()'[1]                       `help functions'[2]
+
+-----
+FUNCTIONS
+=========
+
+There are many, many built-in functions available to MOO programmers.  The following list gives a brief summary of the arguments and purpose of each function; for more information, see the LambdaMOO Programmer's Manual.  
+
+pass(arg, ...)              -- call same verb defined on this object's parent
+raise(code[, msg[, value]]) -- raise code as an error
+
+typeof(value)      -- determine the data type of value
+ tostr(value, ...) -- concatenate values into a string
+ tonum(value)      -- convert non-list value into a integer
+ toint(value)      == tonum(value)
+ tofloat(value)    -- convert non-list value into a float
+ toobj(value)      -- convert non-list value into an object
+floatstr(float, precision, scientific?)
+                   -- convert float value to string
+encode_binary(value, ...)      -- values to binary string
+decode_binary(bstring[, full]) -- binary string to list of values
+
+binary_hash(bstring) -- MD5 hash value of binary string
+string_hash(string)  -- MD5 hash value of string
+value_hash(value)    == string_hash(toliteral(value))
+
+value_bytes(value)   --- number of bytes required to store value
+object_bytes(object) --- number of bytes required to store object
+
+eval(string)       -- parse and execute string as MOO code
+toliteral(value)   -- convert value to a string that evaluates to it
+call_function(func[, arg, ...]) == func([arg, ...])
+
+function_info([func]) -- builtin function desc (or list of all of them)
+
+length(list/string) -- returns the length of a string or list
+listappend(list, value [, index]) -- adding an element at the end of a list
+listinsert(list, value [, index]) -- adding an element at the head of a list
+   listset(list, value, index)    -- updating a list at some index
+listdelete(list, index)           -- removing an element from a list
+    setadd(list, element) -- adding an element to a set represented as a list
+ setremove(list, element) -- removing an element from such a set
+is_member(element, list) -- case-sensitive version of (element IN list)
+equal(v1,v2)             -- case-sensitive version of (v1 == v2)
+
+min(n1, n2, ...) -- minimum of n1,n2,...
+max(n1, n2, ...) -- maximum of n1,n2,...
+random(n)        -- random integer between 1 and n inclusive
+ time()          -- current time in seconds since midnight GMT, 1 Jan 70
+ctime([time])    -- time (or current time) converted to a human-readable string
+
+  abs(n) -- absolute value of n
+floor(x) -- truncate x towards minus infinity
+trunc(x) -- truncate x towards zero
+ ceil(x) -- truncate x towards plus infinity
+ sqrt(n) -- square root of n
+  exp(x) -- e to the x
+  log(x) -- natural log
+log10(x) -- base 10 log
+ sin(a),  cos(a),  tan(a)     -- circular trignometric functions
+asin(y), acos(x), atan(x[,y]) -- inverse circular trignometric functions
+ sinh(a), cosh(a), tanh(a)    -- hyperbolic trigonometric functions
+
+ index(str1, str2 [, case-matters]) -- index of first str2 in str1
+rindex(str1, str2 [, case-matters]) -- index of last  str2 in str1
+strcmp(str1, str2) -- case-sensitive string comparison
+strsub(subject, what, with [, case-matters]) -- substitution in a string
+crypt(string [, salt]) -- one-way string encryption
+ match(str1, str2 [, case-matters]) -- match first pattern str2 in str1
+rmatch(str1, str2 [, case-matters]) -- match last  pattern str2 in str1
+substitute(template, subs) -- perform substitutions on template
+
+   valid(object)             -- testing whether an object exists
+  create(parent [, owner(*)])-- creating a new MOO object
+ recycle(object)             -- destroying a MOO object
+    move(object, where)      -- altering the object-containment hierarchy
+chparent(object, new-parent) -- altering the object-inheritance hierarchy
+  parent(object)             -- object's parent   in the inheritance hierarchy
+children(object)             -- object's children in the inheritance hierarchy
+max_object()       -- the highest-numbered object in the MOO
+renumber(obj)      -- changes an object's number to lowest available one (*)
+reset_max_object() -- resets max_object() to the largest valid object (*)
+
+     properties(object) -- a list of the properties defined on an object
+   add_property(object, prop-name, value, info) -- add a new property
+delete_property(object, prop-name)              -- remove a property
+    property_info(object, prop-name)       -- {owner, perms} info on a property
+set_property_info(object, prop-name, info) -- setting same
+is_clear_property(object, prop-name) -- find out if a property is "clear"
+   clear_property(object, prop-name) -- make a property "clear"
+
+      verbs(object) -- a list of the verbs defined on an object
+   add_verb(object, info, args)  -- add a verb to an object
+delete_verb(object, verb-name)   -- remove a verb from an object
+    verb_info(object, verb-name) -- {owner, perms, names} info for a verb defn.
+    verb_args(object, verb-name) -- {dobj, prep, iobj} argument info for a verb
+    verb_code(object, verb-name [, fully-paren [, indent]]) -- program listing
+set_verb_info(object, verb-name, {owner, perms, names})
+set_verb_args(object, verb-name, {dobj, prep, iobj})   
+set_verb_code(object, verb-name, {line, line, ...})
+  disassemble(object, verb-name) -- moo bytecode for verb
+
+notify(conn, string[, noflush])      -- output string to connection
+read([conn])                         -- read input line from connection (*)
+flush_input(conn[, showmsg?])        -- flush pending input on connection (*)
+force_input(conn, line[, at-front?]) -- insert line as pending input (*)
+
+        is_player(object) -- testing whether or not object is a player
+          players()       -- a list of all players, active or not
+connected_players()       -- a list of all currently-connected players
+     idle_seconds(player) -- seconds since given player typed anything
+connected_seconds(player) -- seconds given player has been logged in
+    boot_player(player)        -- disconnect player from the MOO immediately(*)
+set_player_flag(player, value) -- set/clear player bit; boot player if clear(*)
+connection_name(player)   -- a server-assigned name for player's connection
+open_network_connection(@args) -- open a connection to another network site
+connection_option(conn,option)           -- setting of option for connection
+connection_options(conn)                 -- list of {option, value}
+set_connection_option(conn,option,value) -- change setting of option
+output_delimiters(player)      -- {prefix,suffix} set by PREFIX/SUFFIX cmds
+buffered_output_length([conn]) -- number of bytes currently buffered on output
+
+caller_perms()         -- the player whose permissions your caller was using
+set_task_perms(player) -- changing permissions of the running task (*)
+callers([lineno?])  -- stack: list of {obj, verb, owner, vloc, player[,line]}
+task_stack(taskid[,lineno?]) -- callers() stack for suspended task
+
+seconds_left() -- number of seconds left in the current task
+ticks_left()   -- number of ticks   left in the current task
+task_id()              -- id number for the currently-running task
+suspend(secs)          -- suspend current task for a number of seconds
+resume(taskid[,value]) -- resume the specified task
+kill_task(taskid)      -- delete one of your tasks from the queue
+queued_tasks()         -- list of {taskid,start,,,owner,obj,verb,line,this}
+queue_info([player])   -- number of tasks for player or list of tasking players
+
+server_version()   -- a string of three numbers "major.minor.release"
+server_log(string) -- add a comment to the server log file (*)
+listen(obj, point[, msgs?]) -- start listening, return canonicalized point (*)
+unlisten(canonpoint)        -- stop listening at canonpoint (*)
+listeners() -- list of {object, canonpoint, msgs?} listening points (*)
+shutdown(msg)    -- print msg and kill the server (*)
+dump_database()  -- what it says (*)
+db_disk_size()   -- size in bytes of database disk file
+memory_usage()   -- {{blocksize, nused, nfree}, ...}, the server's memory stats
+
+(*) => as you might have expected, these usually require wizard permissions.
+
+=> "o"
+=> ""
+=> "oo"
+#-1:Input to EVAL, line 4:  Range error
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+=> {"A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal."}
+-----
+PROGRAMMING
+===========
+
+MOO contains a rich programming language for the creation of interesting rooms, exits, and other objects.  Help is available on the following topics concerning programming in MOO:
+
+language[1]
+      a brief reference for the syntax and semantics of the MOO language
+tasks[2]
+      a brief description of MOO tasks and their resource limits
+
+@property[3]
+      adding a property to an object
+@rmproperty[4]
+      removing a property from an object
+
+@verb[5]
+      adding a verb to an object
+@rmverb[6]
+      removing a verb from an object
+@args[7]
+      changing the syntax of a verb
+@copy[8]
+      copying a verb from one object to another
+
+@program[9]
+      entering the program for a verb
+@list[10]
+      printing a listing of the program for a verb
+@edit[11]
+      editing verb code
+eval[12]
+      executing MOO statements and expressions without writing a verb
+
+@show[13]
+      looking at all the details of an object, a property, or a verb
+@display[14]
+      a different way to look at those details
+
+@parents[15]
+      listing the ancestors of an object
+@kids[16]
+      listing the children of an object
+@chparent[17]
+      changing the parent of an object
+
+@contents[18]
+      listing the contents of an object
+@chmod[19]
+      changing the permissions on an object, a property, or a verb
+@rename[20]
+      changing the name of a verb or object
+@currentobject[21]
+      specify an object to work with
+
+-----
+LANGUAGE
+========
+
+The MOO programming language is described in excruciating detail in the LambdaMOO Programmer's Manual, available for FTP from parcftp.xerox.com in the file pub/MOO/ProgrammersManual.txt.  The online help consists of a few quick reference guides here in the help system under the following topics:
+
+statements[1]
+      the syntax and semantics of the various kinds of MOO statements
+expressions[2]
+      the same for the various kinds of MOO expressions
+functions[3]
+      a list of the primitive functions available to MOO programs
+
+-----
+STATEMENTS
+==========
+
+The following kinds of statements exist in the MOO programming language:
+
+Null
+====
+
+        ;
+
+The null statement does nothing.
+
+Expressions
+===========
+
+        expression ;
+
+The expression statement evaluates the expression and then discards the value.
+
+Conditional
+===========
+
+        IF ( expression ) statements ENDIF
+        IF ( expression ) statements ELSE statements ENDIF
+        IF ( expression )
+          statements
+        ELSEIF ( expression )
+          statements
+        ...
+        ELSE
+          statements
+        ENDIF
+
+The conditional statement evaluates each expression in turn and executes the statements associated with the first one to return a true value; the ELSE statements are executed if none of the expressions returns a true value.  There can be any number of ELSEIF clauses and the ELSE part is optional.  See `help truth'[1] for the definition of 'true value'.
+
+List iteration
+==============
+
+        FOR name IN ( expression ) statements ENDFOR
+
+The list iteration statement first evaluates the expression, which must return a list.  It then executes the statements once for each element of that list, each time with the named variable having the value of the corresponding list element.
+
+Numeric iteration
+=================
+
+        FOR name IN [ expression .. expression ] statements ENDFOR
+
+The numeric iteration statement first evaluates the two expressions, both of which must return numbers; call those numbers N1 and N2, respectively.  The statements are then executed once for each integer I such that N1 <= I <= N2, in increasing order; each time, the named variable has the corresponding value of I.
+
+Indefinite iteration
+====================
+
+        WHILE ( expression ) statements ENDWHILE
+
+The indefinite iteration statement repeatedly evaluates the expression and, each time it returns a true value, executes the statements.  The loop stops the first time that the expression returns a false value.  The definitions of 'true' and 'false' values is in `help truth'[2].
+
+Return
+======
+
+        RETURN ;
+        RETURN expression ;
+
+The return statement evalautes the expression, if any, and returns the resulting value (or 0 if there is no expression) to the verb that called the current one.  Execution of the current verb is immediately terminated.
+
+Fork
+====
+
+        FORK ( expression ) statements ENDFORK
+        FORK name ( expression ) statements ENDFORK
+
+The fork statement first executes the expression, which must return a number; call that number N.  It then creates a new MOO task that will, after at least N seconds, execute the statements.  When the new task begins, all variables will have the values they had at the time the FORK statement was executed.  The task executing the FORK statement immediately continues execution.  If a variable name is given after the FORK keyword, then it is assigned the 'queue ID' of the newly-created task.  The value of this variable is visible both to the task executing the fork statement and to the statements in the newly-created task.  See `help tasks'[3] for more information about forked tasks.
+
+-----
+GENERAL INFORMATION ON $STRING_UTILS[1]
+=======================================
+
+For a complete description of a given verb, do `help $string_utils:verbname'[2]
+
+    Conversion routines:
+
+:char_list    (string)                               => {"a", "b", "c"}
+:to_list      (string)                               => {"a", "foo", "bear"}
+ (see also :explode, below)
+
+:from_list    (list [,sep])                          => "foo1foo2foo3"
+:english_list (str-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+:title_list*c (obj-list[,none-str[,and-str[, sep]]]) => "foo1, foo2, and foo3"
+                                                  or => "Foo1, foo2, and foo3"
+
+:[i|d]name[c]_and_number                             => "foo (#123)"
+:[i|d]name[c]_list (obj-list, name-args)             => english list of names
+                                                        in appropriate style
+:[i|d]name[c]_and_number_list(obj-list, name-args)   => same, plus " (#123)"
+:names_of     (obj-list)  => "foo1 (#123)   foo2 (#456)   foo3 (#789)"
+
+:to_value       (string)                             => {1, value}
+                                                  or => {0, error message}
+:prefix_to_value(string)                             => {rest-of-string, value}
+                                                  or => {0, error message}
+:end_expression (string)                             => index of expression
+
+:from_value[_suspended] (value [,quoteflag [,maxlistdepth]])
+                                                     => "{foo1, foo2, foo3}"
+:print[_suspended] (value)                           => "{foo1, foo2, foo3}"
+:print_truncated   (value, length, suffix)           => "{foo1, fo.."
+:print_with_names  (value)                           => "{foo1, foo2 (#123)}"
+
+:english_number(42 [,zero])  => "forty-two"
+:english_ordinal(42)         => "forty-second"
+:ordinal(42)                 => "42nd"
+:group_number(42135 [,sep])  => "42,135"
+:from_seconds (num)          => "an hour" or "3 days" or "15 seconds"
+
+:glob_to_regexp("foo*b?r")   => "^foo.*b.r$"
+:xglob_to_regexp("f*ba[rz]") => "^f.*ba[rz]$"
+
+    Type checking:
+
+:is_numeric   (string) => return true if string is composed entirely of digits
+
+    String Matching:
+
+:match_string(string, pattern, options) => * wildcard matching
+:find_prefix(prefix, string-list)       => list index of element starting
+                                           with prefix
+:match_stringlist(string, string-list)  => index/$ambiguous_match/$failed_match
+:index_delimited(string,target[, case]) => index of delimited string occurrence
+:index_all(string, target[, delimited]) => all occurrences of target in string
+:next_index(str1, str2, prev[, case])   => index, after index `prev'
+
+    Object Matching (see also $command_utils):
+
+:literal_object(string)                        => object match independent
+                                                  of location
+:match        (string, [obj-list, prop-name]+) => matching object
+:match_player (string-list[,me-object])        => list of matching players
+:match_object (string, location)               => default object match
+:match_player_or_object(@string-list)          => matching object or player
+:match_room   (string)                         => matching room object
+
+    Parsing:
+
+:explode (string,char) -- string => list of words delimited by char
+ (see also :to_list, above)
+:words   (string)      -- string => list of words (as with command line parser)
+:word_start (string)   -- string => list of start-end pairs.
+:first_word (string)   -- string => {first word, rest of string} or {}
+
+:parse_command(cmd_line[, player]) -- string => parsed command info
+
+    Pretty printing:
+
+:space         (n/string[,filler])     => n spaces
+:left          (string,width[,filler]) => left justified string in field 
+:right         (string,width[,filler]) => right justified string in field
+:center/re     (string,width[,filler]) => centered string in field
+:columnize/se[_suspended](list,n[,width])
+                                       => list of strings in n columns
+:columnize/se_no_truncate(list,n[,linelen])
+                                       => same, but will not truncate items
+:columnize/se_with_headers(headers, fields) => columnize, plus headers
+
+    Substitutions
+
+:substitute (string, subst_list [,case])  -- general substitutions.
+:substitute_delimited(...)                -- same, but with word boundaries.
+:pronoun_sub (string/list[,who[,thing[,location]]])
+                                          -- pronoun substitutions.
+:pronoun_sub_secure (string[,who[,thing[,location]]],default)
+                                          -- substitute and check for names.
+:pronoun_quote (string/list/subst_list)   -- quoting for pronoun substitutions.
+:regexp_quote(string)                     -- quoting for regexps.
+
+    Miscellaneous string munging:
+
+:trim         (string)       => string with outside whitespace removed.
+:triml        (string)       => string with leading whitespace removed.
+:trimr        (string)       => string with trailing whitespace removed.
+:strip_chars  (string,chars) => string with all chars in `chars' removed.
+:strip_all_but(string,chars) => string with all chars not in `chars' removed.
+:capitalize/se(string)       => string with first letter capitalized.
+:uppercase/lowercase(string) => string with all letters upper or lowercase.
+:reverse      (string)       => string, backwards.
+
+:common(string1, string2)    => length of longest common prefix.
+:is_uppercase (string)       => true iff no lowercase letters in string
+:is_lowercase (string)       => true iff no uppercase letters in string
+:nonblank     (string)       => true iff any non-whitespace characters
+
+:connection_hostname(string) => hostname part of connection identifier.
+
+    Conversions to and from common string formats:
+
+:character_to_ascii(char)    => integer ASCII rep of char
+:character_to_hex_ascii(char) => two-digit hexadecimal string ASCII rep of char
+:ascii_to_character(num)     => character represented in ASCII by num
+:hex_ascii_to_character(hex) => ASCII character represented by two-character hexadecimal string hex
+
+    A few useful properties:
+
+alphabet                    => "abcdefghijklmnopqrstuvwxyz"
+tab                         => a single tab character
+
+-----
+GENERAL INFORMATION ON $LIST_UTILS[1]
+=====================================
+
+append            (list,list,..) => result of concatenating the given lists
+flatten           (list of lists)=> list of all non-list elements
+reverse           (list)         => reversed list
+remove_duplicates (list)         => list with all duplicates removed
+compress          (list)         => list with consecutive duplicates removed
+setremove_all     (list,elt)     => list with all occurrences of elt removed
+find_insert       (sortedlist,e) => index of first element > e in sortedlist
+sort              (list[,keys])  => sorted list
+
+make              (n[,e])        => list of n copies of e
+range             (m,n)          => {m,m+1,...,n}
+
+arrayset   (list,val,i[,j,k...]) => array modified so that list[i][j][k]==val
+
+-- Mapping functions (take a list and do something to each element):
+
+map_prop ({o...},prop)              => list of o.(prop)            for all o
+map_verb ({o...},verb[,args)        => list of o:(verb)(@args)     for all o
+map_arg  ([n,]obj,verb,{a...},args) => list of obj:(verb)(a,@args) for all a
+
+-- Association list functions --
+
+An association list (alist) is a list of pairs (2-element lists), though the following functions have been generalized for lists of n-tuples (n-element lists).  In each case i defaults to 1.
+
+make_alist      (lists[,pad]) => alist from list of parallel lists
+assoc        (targ,alist[,i]) => 1st tuple in alist whose i-th element is targ
+iassoc       (targ,alist[,i]) => index of same.
+assoc_prefix (targ,alist[,i]) => ... whose i-th element has targ as a prefix
+iassoc_prefix(targ,alist[,i]) => index of same.
+slice             (alist[,i]) => list of i-th elements
+sort_alist        (alist[,i]) => alist sorted on i-th elements.
+
+-----
+$LIST_UTILS:COLUMNIZE
+=====================
+
+That object does not define that verb.
+
+-----
+$LIST_UTILS:COLUMNIZE_WITH_HEADERS
+==================================
+
+That object does not define that verb.
+
+-----
+$STRING_UTILS:COLUMNIZE
+=======================
+
+columnize (items, n [, width]) - Turn a one-column list of items into an n-column list. 'width' is the last character position that may be occupied; it defaults to a standard screen width. Example: To tell the player a list of numbers in three columns, do 'player:tell_lines ($string_utils:columnize ({1, 2, 3, 4, 5, 6, 7}, 3));'.
+
+-----
+$STRING_UTILS:COLUMNIZE_WITH_HEADERS
+====================================
+
+Usage: columnize_with_headers(headers, fields) => lines
+
+Format the m * n array of strings under n headers.
+
+Doesn't truncate strings.
+
+Error programming generic builder:@room-info[33](32).
+Line 18:  syntax error
+1 error(s).
+Verb not programmed.
+Error programming generic builder:@room-info[33](32).
+Line 19:  syntax error
+1 error(s).
+Verb not programmed.
+0 errors.
+Verb programmed.
+#4:@room-info (this == #243), line 4:  Variable not found
+(End of traceback)
+That object does not define that verb.
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#4:@room-info none none none" name: "MOO verb: #4:@room-info none none none" type: moo-code content*: "" _data-tag: 997139002280
+#$#* 997139002280 content: // Display info about here which is relevant to building:
+#$#* 997139002280 content: //   exits
+#$#* 997139002280 content: //   directions not described (n, s, e, w, u, d, extra exits)
+#$#* 997139002280 content: if (!$perm_utils:controls(player, here))
+#$#* 997139002280 content:   return player:tell("You don't control this location.");
+#$#* 997139002280 content: endif
+#$#* 997139002280 content: info = {};
+#$#* 997139002280 content: for e in (this:exits())
+#$#* 997139002280 content:   desc = e:description();
+#$#* 997139002280 content:   if (length(desc) > 48)
+#$#* 997139002280 content:     desc = "\"" + desc[1..45] + "...\"";
+#$#* 997139002280 content:   elseif (!desc)
+#$#* 997139002280 content:     desc = "(no description)";
+#$#* 997139002280 content:   else
+#$#* 997139002280 content:     desc = "\"" + desc + "\"";
+#$#* 997139002280 content:   endif
+#$#* 997139002280 content:   info = {@info, {e, e:name(), desc}};
+#$#* 997139002280 content: endfor
+#$#* 997139002280 content: player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+#$#: 997139002280
+0 errors.
+Verb programmed.
+#4:@room-info (this == #243), line 8:  Verb not found
+(End of traceback)
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#4:@room-info none none none" name: "MOO verb: #4:@room-info none none none" type: moo-code content*: "" _data-tag: 2122520692281
+#$#* 2122520692281 content: // Display info about here which is relevant to building:
+#$#* 2122520692281 content: //   exits
+#$#* 2122520692281 content: //   directions not described (n, s, e, w, u, d, extra exits)
+#$#* 2122520692281 content: if (!$perm_utils:controls(player, this))
+#$#* 2122520692281 content:   return player:tell("You don't control this location.");
+#$#* 2122520692281 content: endif
+#$#* 2122520692281 content: info = {};
+#$#* 2122520692281 content: for e in (this:exits())
+#$#* 2122520692281 content:   desc = e:description();
+#$#* 2122520692281 content:   if (length(desc) > 48)
+#$#* 2122520692281 content:     desc = "\"" + desc[1..45] + "...\"";
+#$#* 2122520692281 content:   elseif (!desc)
+#$#* 2122520692281 content:     desc = "(no description)";
+#$#* 2122520692281 content:   else
+#$#* 2122520692281 content:     desc = "\"" + desc + "\"";
+#$#* 2122520692281 content:   endif
+#$#* 2122520692281 content:   info = {@info, {e, e:name(), desc}};
+#$#* 2122520692281 content: endfor
+#$#* 2122520692281 content: player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+#$#: 2122520692281
+=> #398 (Front Parlour)
+=> {#408, #409}
+That object does not define that verb.
+The verb :@room-info is on   Crag(#243)--generic builder(#4)
+0 errors.
+Verb programmed.
+#4:@room-info (this == #243), line 16:  Type mismatch
+(End of traceback)
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#243:@room-info none none none" name: "MOO verb: #243:@room-info none none none" type: moo-code content*: "" _data-tag: 1308495969282
+#$#* 1308495969282 content: Crag (#243) does not define a :@room-info verb.  The following code is from its ancestor, generic builder (#4).
+#$#* 1308495969282 content: // Display info about here which is relevant to building:
+#$#* 1308495969282 content: //   exits
+#$#* 1308495969282 content: //   directions not described (n, s, e, w, u, d, extra exits)
+#$#* 1308495969282 content: here = this:location();
+#$#* 1308495969282 content: if (!$perm_utils:controls(player, here))
+#$#* 1308495969282 content:   return player:tell("You don't control this location.");
+#$#* 1308495969282 content: endif
+#$#* 1308495969282 content: info = {};
+#$#* 1308495969282 content: for e in (here:exits())
+#$#* 1308495969282 content:   desc = e:description();
+#$#* 1308495969282 content:   if (length(desc) > 48)
+#$#* 1308495969282 content:     desc = "\"" + desc[1..45] + "...\"";
+#$#* 1308495969282 content:   elseif (!desc)
+#$#* 1308495969282 content:     desc = "(no description)";
+#$#* 1308495969282 content:   else
+#$#* 1308495969282 content:     desc = "\"" + desc + "\"";
+#$#* 1308495969282 content:   endif
+#$#* 1308495969282 content:   info = {@info, {e, e:name(), desc}};
+#$#* 1308495969282 content: endfor
+#$#* 1308495969282 content: player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+#$#: 1308495969282
+That object does not define that verb.
+Object #243 does not define that verb, but its ancestor #4 does.
+Last modified Sat Aug 17 13:50:44 2013 PDT by Crag (#243).
+#4:"@room-info" none none none
+// Display info about here which is relevant to building:
+//   exits
+//   directions not described (n, s, e, w, u, d, extra exits)
+here = this:location();
+if (!$perm_utils:controls(player, here))
+  return player:tell("You don't control this location.");
+endif
+info = {};
+for e in (here:exits())
+  desc = e:description();
+  if (length(desc) > 48)
+    desc = "\"" + desc[1..45] + "...\"";
+  elseif (!desc)
+    desc = "(no description)";
+  else
+    desc = "\"" + desc + "\"";
+  endif
+  info = {@info, {e, e:name(), desc}};
+endfor
+player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+Object #243 does not define that verb, but its ancestor #4 does.
+Last modified Sat Aug 17 13:50:44 2013 PDT by Crag (#243).
+#4:"@room-info" none none none
+ 1:  // Display info about here which is relevant to building:
+ 2:  //   exits
+ 3:  //   directions not described (n, s, e, w, u, d, extra exits)
+ 4:  here = this:location();
+ 5:  if (!$perm_utils:controls(player, here))
+ 6:    return player:tell("You don't control this location.");
+ 7:  endif
+ 8:  info = {};
+ 9:  for e in (here:exits())
+10:    desc = e:description();
+11:    if (length(desc) > 48)
+12:      desc = "\"" + desc[1..45] + "...\"";
+13:    elseif (!desc)
+14:      desc = "(no description)";
+15:    else
+16:      desc = "\"" + desc + "\"";
+17:    endif
+18:    info = {@info, {e, e:name(), desc}};
+19:  endfor
+20:  player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+Line 1:  Unknown built-in function: type
+1 error.
+=> 2
+That object has no verb matching that name + args.
+#4:@room-info (this == #243), line 16:  Type mismatch
+(End of traceback)
+=> ""
+=> "#1"
+=> "{#1}"
+That object has no verb matching that name + args.
+That object has no verb matching that name + args.
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#4:@room-info none none none" name: "MOO verb: #4:@room-info none none none" type: moo-code content*: "" _data-tag: 254888080283
+#$#* 254888080283 content: // Display info about here which is relevant to building:
+#$#* 254888080283 content: //   exits
+#$#* 254888080283 content: //   directions not described (n, s, e, w, u, d, extra exits)
+#$#* 254888080283 content: here = this:location();
+#$#* 254888080283 content: if (!$perm_utils:controls(player, here))
+#$#* 254888080283 content:   return player:tell("You don't control this location.");
+#$#* 254888080283 content: endif
+#$#* 254888080283 content: info = {};
+#$#* 254888080283 content: for e in (here:exits())
+#$#* 254888080283 content:   desc = e:description();
+#$#* 254888080283 content:   if (length(desc) > 48)
+#$#* 254888080283 content:     desc = "\"" + desc[1..45] + "...\"";
+#$#* 254888080283 content:   elseif (!desc)
+#$#* 254888080283 content:     desc = "(no description)";
+#$#* 254888080283 content:   else
+#$#* 254888080283 content:     desc = "\"" + desc + "\"";
+#$#* 254888080283 content:   endif
+#$#* 254888080283 content:   info = {@info, {e, e:name(), desc}};
+#$#* 254888080283 content: endfor
+#$#* 254888080283 content: player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}));
+#$#: 254888080283
+0 errors.
+Verb programmed.
+#18:columnize_with_headers columnise_with_headers, line 5:  Range error
+... called from #4:@room-info (this == #243), line 22
+(End of traceback)
+=> #408 (south)
+=> {"A pair of double doors lead south to the West Foyer.", "In the West Foyer, you see nothing.", "The doors are open."}
+=> {"In the Music Room, you see nothing.", "The doors to the west are open."}
+0 errors.
+Verb programmed.
+#18:columnize_with_headers columnise_with_headers, line 5:  Range error
+... called from #4:@room-info (this == #243), line 20
+(End of traceback)
+0 errors.
+Verb programmed.
+#18:columnize_with_headers columnise_with_headers, line 5:  Range error
+... called from #4:@room-info (this == #243), line 20
+(End of traceback)
+0 errors.
+Verb programmed.
+#4:@room-info (this == #243), line 18:  Variable not found
+(End of traceback)
+0 errors.
+Verb programmed.
+DEBUG: #408, "south", "{\"A pair of double doors lead south to the We..."
+DEBUG: #409, "west", "{\"In the Music Room, you see nothing.\", \"The ..."
+#18:columnize_with_headers columnise_with_headers, line 5:  Range error
+... called from #4:@room-info (this == #243), line 22
+(End of traceback)
+-----
+#18:COLUMNIZE_WITH_HEADERS
+==========================
+
+Usage: columnize_with_headers(headers, fields) => lines
+
+Format the m * n array of strings under n headers.
+
+Doesn't truncate strings.
+
+0 errors.
+Verb programmed.
+DEBUG: #408, "south", "{\"A pair of double doors lead south to the We..."
+DEBUG: #409, "west", "{\"In the Music Room, you see nothing.\", \"The ..."
+#18:columnize_with_headers columnise_with_headers, line 14:  Type mismatch
+... called from #4:@room-info (this == #243), line 22
+(End of traceback)
+Line 1:  syntax error
+1 error.
+Line 1:  syntax error
+1 error.
+Line 1:  syntax error
+1 error.
+=> {"a", "b"}
+=> {{}}
+=> {"a   b", "-   -", "aa  ab", "ba  bb", "-   -"}
+a   b
+-   -
+aa  ab
+ba  bb
+-   -
+=> 0
+0 errors.
+Verb programmed.
+{{#408, "south", "{\"A pair of double doors lead south to the We..."}, {#409, "west", "{\"In the Music Room, you see nothing.\", \"The ..."}}
+#18:columnize_with_headers columnise_with_headers, line 14:  Type mismatch
+... called from #4:@room-info (this == #243), line 23
+(End of traceback)
+Line 1:  Missing quote
+Line 1:  syntax error
+2 errors.
+That is not a valid command.
+#18:columnize_with_headers columnise_with_headers, line 14:  Type mismatch
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+0 errors.
+Verb programmed.
+{{"#408", "south", "{\"A pair of double doors lead south to the We..."}, {"#409", "west", "{\"In the Music Room, you see nothing.\", \"The ..."}}
+exit  name   desc
+----  ----   ----
+#408  south  {"A pair of double doors lead south to the We...
+#409  west   {"In the Music Room, you see nothing.", "The ...
+----  ----   ----
+{{"#408", "south", "{\"A pair of double doors lead south to the We..."}, {"#409", "west", "{\"In the Music Room, you see nothing.\", \"The ..."}}
+exit  name   desc
+----  ----   ----
+#408  south  {"A pair of double doors lead south to the We...
+#409  west   {"In the Music Room, you see nothing.", "The ...
+----  ----   ----
+0 errors.
+Verb programmed.
+exit  name   desc
+----  ----   ----
+#408  south  {"A pair of double doors lead south to the We...
+#409  west   {"In the Music Room, you see nothing.", "The ...
+----  ----   ----
+=> 1
+=> "1"
+0 errors.
+Verb programmed.
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#4:@room-info none none none" name: "MOO verb: #4:@room-info none none none" type: moo-code content*: "" _data-tag: 1446119280284
+#$#* 1446119280284 content: // Display info about here which is relevant to building:
+#$#* 1446119280284 content: //   exits
+#$#* 1446119280284 content: //   directions not described (n, s, e, w, u, d, extra exits)
+#$#* 1446119280284 content: // 
+#$#* 1446119280284 content: // init
+#$#* 1446119280284 content: here = this:location();
+#$#* 1446119280284 content: info = {};
+#$#* 1446119280284 content: // 
+#$#* 1446119280284 content: // permissions
+#$#* 1446119280284 content: if (!$perm_utils:controls(player, here))
+#$#* 1446119280284 content:   return player:tell("You don't control this location.");
+#$#* 1446119280284 content: endif
+#$#* 1446119280284 content: // 
+#$#* 1446119280284 content: // gather info
+#$#* 1446119280284 content: for e in (here:exits())
+#$#* 1446119280284 content:   desc = toliteral(e:description());
+#$#* 1446119280284 content:   if (length(desc) > 48)
+#$#* 1446119280284 content:     desc = desc[1..45] + "...";
+#$#* 1446119280284 content:   elseif (!desc)
+#$#* 1446119280284 content:     desc = "(no description)";
+#$#* 1446119280284 content:   endif
+#$#* 1446119280284 content:   name = e:name();
+#$#* 1446119280284 content:   info = {@info, {toliteral(e), name, desc}};
+#$#* 1446119280284 content: endfor
+#$#* 1446119280284 content: // 
+#$#* 1446119280284 content: // display info
+#$#* 1446119280284 content: player:tell_lines($string_utils:columnize_with_headers({"exit", "name", "desc"}, info));
+#$#: 1446119280284
+0 errors.
+Verb programmed.
+Object #398 does not define that verb, but its ancestor #3 does.
+#3:"match_exit match_entrance" (what)
+// Only full matches are successful.  This is so, for example, "s" doesn't match "secret door".
+if (what)
+  yes = $failed_match;
+  for e in (this:(verb == "match_exit" ? "exits" | "entrances")())
+    if (valid(e) && what in {e.name, @e.aliases})
+      if (yes == $failed_match)
+        yes = e;
+      elseif (yes != e)
+        return $ambiguous_match;
+      endif
+    endif
+  endfor
+  return yes;
+else
+  return $nothing;
+endif
+=> {#408, #409}
+=> {"south", "s"}
+=> #408 (south)
+-----
+STATEMENTS
+==========
+
+The following kinds of statements exist in the MOO programming language:
+
+Null
+====
+
+        ;
+
+The null statement does nothing.
+
+Expressions
+===========
+
+        expression ;
+
+The expression statement evaluates the expression and then discards the value.
+
+Conditional
+===========
+
+        IF ( expression ) statements ENDIF
+        IF ( expression ) statements ELSE statements ENDIF
+        IF ( expression )
+          statements
+        ELSEIF ( expression )
+          statements
+        ...
+        ELSE
+          statements
+        ENDIF
+
+The conditional statement evaluates each expression in turn and executes the statements associated with the first one to return a true value; the ELSE statements are executed if none of the expressions returns a true value.  There can be any number of ELSEIF clauses and the ELSE part is optional.  See `help truth'[1] for the definition of 'true value'.
+
+List iteration
+==============
+
+        FOR name IN ( expression ) statements ENDFOR
+
+The list iteration statement first evaluates the expression, which must return a list.  It then executes the statements once for each element of that list, each time with the named variable having the value of the corresponding list element.
+
+Numeric iteration
+=================
+
+        FOR name IN [ expression .. expression ] statements ENDFOR
+
+The numeric iteration statement first evaluates the two expressions, both of which must return numbers; call those numbers N1 and N2, respectively.  The statements are then executed once for each integer I such that N1 <= I <= N2, in increasing order; each time, the named variable has the corresponding value of I.
+
+Indefinite iteration
+====================
+
+        WHILE ( expression ) statements ENDWHILE
+
+The indefinite iteration statement repeatedly evaluates the expression and, each time it returns a true value, executes the statements.  The loop stops the first time that the expression returns a false value.  The definitions of 'true' and 'false' values is in `help truth'[2].
+
+Return
+======
+
+        RETURN ;
+        RETURN expression ;
+
+The return statement evalautes the expression, if any, and returns the resulting value (or 0 if there is no expression) to the verb that called the current one.  Execution of the current verb is immediately terminated.
+
+Fork
+====
+
+        FORK ( expression ) statements ENDFORK
+        FORK name ( expression ) statements ENDFORK
+
+The fork statement first executes the expression, which must return a number; call that number N.  It then creates a new MOO task that will, after at least N seconds, execute the statements.  When the new task begins, all variables will have the values they had at the time the FORK statement was executed.  The task executing the FORK statement immediately continues execution.  If a variable name is given after the FORK keyword, then it is assigned the 'queue ID' of the newly-created task.  The value of this variable is visible both to the task executing the fork statement and to the statements in the newly-created task.  See `help tasks'[3] for more information about forked tasks.
+
+Line 1:  syntax error
+1 error.
+Line 1:  syntax error
+1 error.
+-----
+SETREMOVE()
+===========
+
+Syntax:  setadd (list <list>, <value>)   => list
+      setremove (list <list>, <value>)   => list
+
+Returns a copy of <list> with the given <value> added or removed, as appropriate.  `setadd()' only adds <value> if it is not already an element of <list>; <list> is thus treated as a mathematical set.  <value> is added at the end of the resulting list, if at all.  Similarly, `setremove()' returns a list identical to <list> if <value> is not an element.  If <value> appears more than once in <list>, only the first occurrence is removed in the returned copy.
+
+    setadd({1, 2, 3}, 3)         =>   {1, 2, 3}
+    setadd({1, 2, 3}, 4)         =>   {1, 2, 3, 4}
+    setremove({1, 2, 3}, 3)      =>   {1, 2}
+    setremove({1, 2, 3}, 4)      =>   {1, 2, 3}
+    setremove({1, 2, 3, 2}, 2)   =>   {1, 3, 2}
+
+Error programming generic builder:@room-info[33](32).
+Line 10:  syntax error
+1 error(s).
+Verb not programmed.
+Error programming generic builder:@room-info[33](32).
+Line 22:  syntax error
+1 error(s).
+Verb not programmed.
+Error programming generic builder:@room-info[33](32).
+Line 50:  syntax error
+1 error(s).
+Verb not programmed.
+0 errors.
+Verb programmed.
+dir  exit?  obj   name   desc
+---  -----  ---   ----   ----
+s    yes    #408  south  {"A pair of double doors lead south to the We...
+w    yes    #409  west   {"In the Music Room, you see nothing.", "The ...
+u    no     #409  west   {"A white plaster ceiling, embossed with a pa...
+d                        no match
+e                        no match
+n                        no match
+---  -----  ---   ----   ----
+0 errors.
+Verb programmed.
+dir  exit?  obj   name                   desc
+---  -----  ---   ----                   ----
+s    yes    #408  south                  {"A pair of double doors lead south to the We...
+w    yes    #409  west                   {"In the Music Room, you see nothing.", "The ...
+u    no     #515  front parlour ceiling  {"A white plaster ceiling, embossed with a pa...
+d                                        no match
+e                                        no match
+n                                        no match
+---  -----  ---   ----                   ----
+A waxed wooden floor, in dark-brown stained maplewood.
+,aliases                 stormagnet (#246)     r c    {"front parlour floor", "floor", "down"}
+-------------------------------- finished ---------------------------------
+Objects owned by Crag (from #0 to #577):
+ 13K #243 Crag                      *[Front Parlour]
+  1K #244 generic group              [Nowhere]
+  7K #242 Generic Pile               [Nowhere]
+ <1K #248 Group Utilities            [Nowhere]
+  2K #250 Helpful Object             [Nowhere]
+ <1K #251 MCP parent                 [Nowhere]
+ <1K #252 Parsing objects            [Nowhere]
+ <1K #253 Text generation objects    [Nowhere]
+ <1K #254 Abstract class             [Nowhere]
+  4K #255 Generic Pilable Thing      [Nowhere]
+ <1K #264 adventure party           *[bridge]
+  2K #265 Generic Nesting Decoratio  [Nowhere]
+  7K #269 Delegator                  [Nowhere]
+  1K #270 Delegate                   [Nowhere]
+ <1K #271 New Generic Room           [Nowhere]
+  1K #279 Room Exit Delegate         [Nowhere]
+  3K #280 Generic Table              [Nowhere]
+  3K #290 How $staff will notice pe *[butler's desk]
+ <1K #291 Generic Virtual Reality O  [Nowhere]
+  1K #445 Generic Achievement        [Nowhere]
+ <1K #448 Tested Generic Achievemen  [Nowhere]
+  1K #509 Generic Input Handler      [Nowhere]
+  1K #510 Generic Command Handler    [Nowhere]
+ <1K #511 Beaker's Commands          [Nowhere]
+  1K #531 Generic Command            [Nowhere]
+ <1K #532 Generic English Command    [Nowhere]
+ <1K #533 Grouping Command           [Nowhere]
+ 14K #540 Generic See-through Porta  <invalid>-><invalid>
+ 26K #558 Cardgame Feature           [Nowhere]
+ <1K #560 Blank Root                 [Nowhere]
+ <1K #561 Interface                  [Nowhere]
+ <1K #562 Class                      [Nowhere]
+ <1K #247 Delegation Utilities       [Nowhere]
+  6K #574 Clock                      [Nowhere]
+  2K #504 Source control strategy    [Nowhere]
+-- 35 objects.  Total bytes: 115,214.-----------------------------------------
+You see no "$group_utils" here.
+,core_names              Crag (#243)           r c    {}
+-------------------------------- finished ---------------------------------
+Group Utilities (#248) [ readable ]
+  Child of generic utilities (#146).
+  #248:maybe_create_group       Crag (#243)          rxd    this none this
+-------------------------------- finished ---------------------------------
+=> 1376775668
+=> 8
+=> 9
+=> 0
+=> 68
+=> 68
+=> 69
+0 errors.
+Verb programmed.
+Objects owned by stormagnet (from #0 to #577):
+  9K #246 stormagnet                *[Limbo]
+  5K #260 Generic Wind-Up Toy        [stormagnet]
+  2K #261 Wind-Up Duck               [stormagnet]
+  2K #266 tracery windows            *North Vestibule->Northern Entrance
+  1K #267 Northern Entrance         
+  1K #268 north                      *North Vestibule->Northern Entrance
+  1K #259 generic rug                [Nowhere]
+  1K #257 brown Persian rug         *[North Vestibule]
+ <1K #272 generic ceiling           *[generic room]
+ <1K #273 timbered ceiling          *[North Vestibule]
+  2K #274 chaise longue             *[North Vestibule]
+  2K #275 butler's desk             *[North Vestibule]
+ <1K #276 butler's key               [stormagnet]
+  1K #277 demi-lune table           *[North Vestibule]
+  1K #278 silver salver              [demi-lune table]
+  1K #284 calling cards              [silver salver]
+  1K #285 chandelier                 [timbered ceiling]
+  2K #286 porter's chair            *[North Vestibule]
+  1K #287 Great Hall                
+ <1K #288 south                      *North Vestibule->Great Hall
+ <1K #289 generic bot                [stormagnet]
+  2K #249 tracery windows            Northern Entrance->*North Vestibule
+  1K #292 Northeast Tower           
+ <1K #293 east                       Great Hall->Northeast Tower
+  1K #294 Northwest Tower           
+ <1K #295 west                       Great Hall->Northwest Tower
+  1K #296 East Hall                 
+ <1K #297 south                      Northeast Tower->East Hall
+  1K #298 Atrium                    
+ <1K #300 north                      East Hall->Northeast Tower
+ <1K #301 west                       Northeast Tower->Great Hall
+  1K #302 Atrium                    
+  1K #303 south                      Great Hall->Atrium
+  1K #304 West Hall                 
+ <1K #305 south                      Northwest Tower->West Hall
+ <1K #306 north                      West Hall->Northwest Tower
+ <1K #307 east                       West Hall->Atrium
+ <1K #308 east                       Northwest Tower->Great Hall
+ <1K #309 north                      Great Hall->*North Vestibule
+  1K #310 East Foyer                
+ <1K #311 east                       East Hall->East Foyer
+ <1K #299 west                       East Hall->Atrium
+  1K #312 Southeast Tower           
+ <1K #313 south                      East Hall->Southeast Tower
+ <1K #314 north                      Southeast Tower->East Hall
+  1K #315 South Hall                
+ <1K #316 west                       Southeast Tower->South Hall
+ <1K #317 north                      South Hall->Atrium
+  1K #318 South Vestibule           
+ <1K #319 south                      South Hall->South Vestibule
+ <1K #320 east                       South Hall->Southeast Tower
+  1K #321 Southwest Tower           
+ <1K #322 west                       South Hall->Southwest Tower
+  1K #323 Muscician's Gallery       
+  1K #324 steps                      East Hall->Muscician's Gallery
+ <1K #325 north                      Atrium->Great Hall
+ <1K #326 south                      Atrium->South Hall
+ <1K #327 east                       Atrium->East Hall
+ <1K #328 west                       Atrium->West Hall
+ <1K #329 west                       East Foyer->East Hall
+  1K #330 Ballroom                  
+  1K #331 south                      East Foyer->Ballroom
+  1K #332 Smoking Room Doorway      
+  1K #333 first northern room        East Foyer->Smoking Room Doorwa
+  1K #334 Dining Room Doorway       
+  1K #335 second northern room       East Foyer->Dining Room Doorway
+  1K #336 Drawing Room Doorway      
+  1K #337 third northern room        East Foyer->Drawing Room Doorwa
+  1K #338 Side Foyer                
+  1K #339 turn corner                East Foyer->Side Foyer
+ <1K #340 north                      Side Foyer->East Foyer
+  1K #341 down                       Muscician's Gallery->East Hall
+ <1K #342 north                      Southwest Tower->West Hall
+ <1K #343 east                       Southwest Tower->South Hall
+ <1K #344 north                      South Vestibule->South Hall
+  1K #345 north                      Ballroom->East Foyer
+  1K #346 Refreshment Room          
+  1K #347 first southern room        Ballroom->Refreshment Room
+  1K #348 Card Room                 
+  1K #349 second southern room       Ballroom->Card Room
+  1K #350 Smoking Room              
+  1K #351 south                      Card Room->Smoking Room
+  1K #352 north                      Card Room->Ballroom
+  1K #353 East Servant's Passage    
+  1K #354 east                       Card Room->East Servant's Pass
+  1K #355 north                      Smoking Room->Card Room
+  1K #356 north                      Refreshment Room->Ballroom
+  1K #357 Fainting Room             
+  1K #358 south                      Refreshment Room->Fainting Room
+  1K #359 north                      Fainting Room->Refreshment Room
+  1K #360 south                      Smoking Room Doorwa->East Foyer
+  1K #361 Smoking Room              
+  1K #362 north                      Smoking Room Doorwa->Smoking Room
+  1K #363 south                      Smoking Room->Smoking Room Doorwa
+  1K #364 Dining Room               
+  1K #365 east                       Smoking Room->Dining Room
+  1K #366 west                       Dining Room->Smoking Room
+  1K #367 south                      Dining Room->Dining Room Doorway
+  1K #368 Red Drawing Room          
+  1K #369 east                       Dining Room->Red Drawing Room
+  1K #370 north                      Dining Room Doorway->Dining Room
+  1K #371 south                      Dining Room Doorway->East Foyer
+  1K #372 west                       Red Drawing Room->Dining Room
+  1K #373 south                      Red Drawing Room->Drawing Room Doorwa
+  1K #374 Blue Drawing Room         
+  1K #375 east                       Red Drawing Room->Blue Drawing Room
+  1K #376 north                      Drawing Room Doorwa->Red Drawing Room
+  1K #377 south                      Drawing Room Doorwa->East Foyer
+  1K #378 west                       Blue Drawing Room->Red Drawing Room
+  1K #379 Solarium                  
+  1K #380 east                       Blue Drawing Room->Solarium
+  1K #381 Morning Room              
+  1K #382 south                      Blue Drawing Room->Morning Room
+  1K #383 north                      Morning Room->Blue Drawing Room
+  1K #384 east                       Morning Room->Solarium
+  1K #385 Breakfast Room            
+  1K #386 south                      Morning Room->Breakfast Room
+  1K #387 north                      Breakfast Room->Morning Room
+  1K #388 east                       Breakfast Room->Solarium
+  1K #389 first western room         Solarium->Blue Drawing Room
+  1K #390 second western room        Solarium->Morning Room
+  1K #391 third western room         Solarium->Breakfast Room
+  1K #392 fourth western room        Solarium->Breakfast Room
+  1K #393 West Foyer                
+ <1K #394 west                       West Hall->West Foyer
+ <1K #395 east                       West Foyer->West Hall
+  1K #396 South Foyer               
+ <1K #397 south                      West Foyer->South Foyer
+  1K #398 Front Parlour             
+  1K #399 first northern room        West Foyer->Front Parlour
+  1K #400 Music Room                
+  1K #401 second northern room       West Foyer->Music Room
+  1K #402 Green Drawing Room        
+  1K #403 third northern room        West Foyer->Green Drawing Room
+  1K #404 Lower Library Doorway     
+  1K #405 first southern room        West Foyer->Lower Library Doorw
+  1K #406 Billiard Room Doorway     
+  1K #407 second southern room       West Foyer->Billiard Room Doorw
+  1K #408 south                      Front Parlour->West Foyer
+  9K #409 west                       Front Parlour->Music Room
+  1K #410 south                      Music Room->West Foyer
+  1K #411 east                       Music Room->Front Parlour
+  1K #412 west                       Music Room->Green Drawing Room
+  1K #413 south                      Green Drawing Room->West Foyer
+  1K #414 east                       Green Drawing Room->Music Room
+  1K #415 Conservatory              
+  1K #416 west                       Green Drawing Room->Conservatory
+  1K #418 northeast                  Conservatory->Green Drawing Room
+  1K #417 southeast                  Conservatory->West Foyer
+  1K #419 Lower Library             
+  1K #420 south                      Lower Library Doorw->Lower Library
+  1K #421 north                      Lower Library Doorw->West Foyer
+  1K #422 West Servant's Passage    
+  1K #423 west                       Lower Library Doorw->West Servant's Pass
+  1K #424 north                      Lower Library->Lower Library Doorw
+  1K #425 east                       West Servant's Pass->Lower Library Doorw
+  1K #426 west                       West Servant's Pass->Billiard Room Doorw
+  1K #427 north                      Billiard Room Doorw->West Foyer
+  1K #428 Billiard Room             
+  1K #429 south                      Billiard Room Doorw->Billiard Room
+  1K #430 east                       Billiard Room Doorw->West Servant's Pass
+  1K #431 Billiard Room Servant's P 
+  1K #432 west                       Billiard Room Doorw->Billiard Room Serva
+  1K #433 north                      Billiard Room->Billiard Room Doorw
+  1K #434 Back Parlour              
+  1K #435 south                      Billiard Room->Back Parlour
+  1K #436 north                      Back Parlour->Billiard Room
+  1K #437 Back Parlour Doorway      
+  1K #438 west                       Back Parlour->Back Parlour Doorwa
+  1K #439 north                      Back Parlour Doorwa->Billiard Room Serva
+  1K #440 east                       Back Parlour Doorwa->Back Parlour
+  1K #441 west                       Back Parlour Doorwa->South Foyer
+  1K #442 Back Parlour Servant's Pa 
+  1K #443 south                      Back Parlour Doorwa->Back Parlour Servan
+  1K #444 north                      Back Parlour Servan->Back Parlour Doorwa
+  1K #446 White Drawing Room Doorwa 
+  1K #447 south                      Back Parlour Servan->White Drawing Room 
+  1K #449 White Drawing Room        
+  1K #450 east                       White Drawing Room ->White Drawing Room
+  1K #451 west                       White Drawing Room ->South Foyer
+  1K #452 Back Scullery Servant's P 
+  1K #453 south                      White Drawing Room ->Back Scullery Serva
+  1K #454 north                      White Drawing Room ->Back Parlour Servan
+  1K #455 west                       White Drawing Room->White Drawing Room 
+  1K #456 north                      Back Scullery Serva->White Drawing Room 
+  1K #457 Back Scullery             
+  1K #458 east                       Back Scullery Serva->Back Scullery
+  1K #459 south                      Billiard Room Serva->Back Parlour Doorwa
+  1K #460 east                       Billiard Room Serva->Billiard Room Doorw
+  1K #461 west                       Back Scullery->South Foyer
+  1K #462 Winter Hall               
+ <1K #463 south                      South Foyer->Winter Hall
+ <1K #464 northeast                  South Foyer->West Foyer
+  1K #465 Dining Room Servant's Pas 
+  1K #466 west                       Dining Room Doorway->Dining Room Servant
+  1K #467 Drawing Room Servant's Pa 
+  1K #468 east                       Dining Room Doorway->Drawing Room Servan
+  1K #469 east                       Dining Room Servant->Dining Room Doorway
+  1K #470 west                       Dining Room Servant->Smoking Room Doorwa
+  1K #471 east                       Smoking Room Doorwa->Dining Room Servant
+  1K #472 west                       Drawing Room Servan->Dining Room Doorway
+  1K #473 east                       Drawing Room Servan->Drawing Room Doorwa
+  1K #474 west                       Drawing Room Doorwa->Drawing Room Servan
+  1K #475 east                       Drawing Room Doorwa->East Servant's Pass
+  1K #476 west                       East Servant's Pass->Card Room
+  1K #477 north                      East Servant's Pass->Drawing Room Doorwa
+ <1K #478 north                      Winter Hall->South Foyer
+  1K #479 first eastern room         South Foyer->Back Parlour Doorwa
+  1K #480 second eastern room        South Foyer->White Drawing Room 
+  1K #481 Water Closet              
+  1K #482 third eastern room         South Foyer->Water Closet
+  1K #483 fourth eastern room        South Foyer->Back Scullery
+  1K #484 first western room         South Foyer->Conservatory
+  1K #485 Summer Hall               
+  1K #486 second western room        South Foyer->Summer Hall
+  1K #487 Theater                   
+  1K #488 third western room         South Foyer->Theater
+  1K #489 Backstage                 
+  1K #490 fourth western room        South Foyer->Backstage
+ <1K #491 east                       Backstage->South Foyer
+  1K #492 Stage                     
+  1K #493 north                      Backstage->Stage
+  1K #494 south                      Stage->Backstage
+ <1K #495 down                       Stage->Theater
+ <1K #496 up                         Theater->Stage
+  1K #497 east                       Theater->South Foyer
+  1K #498 east                       Summer Hall->South Foyer
+  8K #499 chaise longue              [Nowhere]
+  1K #500 chair                      [Nowhere]
+  1K #501 bed                        [Nowhere]
+ <1K #506 tea table                  [Front Parlour]
+  2K #512 floor                      [Nowhere]
+  1K #513 front parlour floor        [Front Parlour]
+ <1K #515 front parlour ceiling      [Front Parlour]
+ <1K #514 brass chandelier           [front parlour ceiling]
+  1K #516 oriental rug               [Front Parlour]
+  4K #502 settee                     [Nowhere]
+  2K #517 settee                     [Front Parlour]
+  1K #518 walls                      [Nowhere]
+ <1K #519 walls                      [Front Parlour]
+ <1K #520 acanthus leaves            [walls]
+  2K #521 picture_rail               [Nowhere]
+ <1K #522 frieze                     [walls]
+  1K #523 cornice                    [walls]
+  1K #524 picture rail               [walls]
+  2K #525 painting                   [Nowhere]
+  1K #526 floor                      [Great Hall]
+ <1K #527 walls                      [Great Hall]
+  1K #528 basalt block               [walls]
+  2K #529 pillar                     [Nowhere]
+  1K #530 pillars                    [Great Hall]
+  3K #534 chaise longue              [Great Hall]
+  1K #535 demi-lune tables           [Great Hall]
+  1K #536 vase                       [Nowhere]
+ <1K #537 crystal vases              [demi-lune tables]
+  4K #538 flower                     [Nowhere]
+  2K #539 bouquet                    [Nowhere]
+  3K #541 desk                       [Nowhere]
+  2K #542 drawer                     [Nowhere]
+  1K #543 bureau a gradin            [Front Parlour]
+  1K #544 bottom drawer              [bureau a gradin]
+  1K #545 left drawer                [bureau a gradin]
+  1K #546 middle drawer              [bureau a gradin]
+  1K #547 right drawer               [bureau a gradin]
+  1K #548 desk chair                 [Front Parlour]
+  1K #549 sideboard                  [Front Parlour]
+  1K #550 left cabinet               [sideboard]
+  1K #551 right cabinet              [sideboard]
+  1K #552 top drawer                 [sideboard]
+  1K #553 middle drawer              [sideboard]
+  1K #554 bottom drawer              [sideboard]
+  1K #555 vaulted ceiling            [Great Hall]
+  1K #556 engraving                  [vaulted ceiling]
+  1K #508 fireplace                  [Nowhere]
+  8K #557 door_secret                <invalid>-><invalid>
+  1K #559 west                       Water Closet->South Foyer
+  1K #245 leather couch              [stormagnet]
+  2K #262 detailed painting         *[North Vestibule]
+  1K #263 bridge                     [detailed painting]
+  2K #282 microphone                 [Nowhere]
+  7K #503 portal_unopenable          <invalid>-><invalid>
+ 10K #258 $portal_unclosable         <invalid>-><invalid>
+  1K #507 front parlour fireplace    [Front Parlour]
+  1K #505 armchair                   [Front Parlour]
+  1K #563 mantle                     [front parlour fireplace]
+ <1K #564 hearth                     [front parlour fireplace]
+  2K #565 mirror                     [Nowhere]
+ <1K #566 tile                       [hearth]
+  2K #568 urn                        [Nowhere]
+  1K #569 left urn                   [mantle]
+  1K #570 right urn                  [mantle]
+  1K #567 pier glass                 [Front Parlour]
+  5K #571 mirror_hand                [stormagnet]
+ <1K #572 fuel                       [stormagnet]
+ <1K #573 daisy                      [stormagnet]
+ <1K #575 occasional table           [Front Parlour]
+  1K #576 cabriole legs              [Front Parlour]
+-- 297 objects.  Total bytes: 487,051.----------------------------------------
+You are already there.
+The Front Parlour
+A room set aside for receiving callers of a more general or unexpected variety. Well appointed, but its formality renders it a bit impersonal.  An oriental rug lies soft underfoot.  A bureau a gradin stands off to the side of the room.  A desk chair is pulled up next to the desk.  A sideboard stands against the wall next to the doors to the foyer.  Across the room, some setees are drawn up in a semi-circle around a tea table.  Opposite the settees, a large marble fireplace occupies the eastern wall. In front of the hearth are a pair of wingback armchairs, with a small occasional table between them.
+You see no "clock" here.
+"clock" is not the name of any player.
+The Front Parlour (#398) contains a front parlour floor (#513), a front parlour ceiling (#515), an oriental rug (#516), a tea table (#506), some walls (#519), a bureau a gradin (#543), a desk chair (#548), a sideboard (#549), some settee (#517), an armchair (#505), a front parlour fireplace (#507), a pier glass (#567), Crag (#243), an occasional table (#575), and a cabriole legs (#576).
+You see no "mantle" here.
+You see no "mant" here.
+The fireplace has been carved from a pale, tawny marble; a broad mantle is strewn with various artifacts and curious. Above, an enormous gilt pier glass reflects back the room.
+Marble corbels engraved in a pattern of acanthus leaves and shells support a broad, bevelled mantle. A matching pair of enamelled urns stand on either end, and in the center is a mantle clock. To the right of the clock is a small framed painting, to the left, a wax flower under a glass bell jar.
+You see no "fire's mant's clock" here.
+You are empty-handed.
+stormagnet (#246) contains a Generic Wind-Up Toy (#260), a leather couch (#245), a butler's key (#276), a generic bot (#289), a mirror_hand (#571), some fuel (#572), a daisy (#573), and Wind-Up Duck (#261).
+Objects owned by stormagnet (from #0 to #577):
+  9K #246 stormagnet                *[Limbo]
+  5K #260 Generic Wind-Up Toy        [stormagnet]
+  2K #261 Wind-Up Duck               [stormagnet]
+  2K #266 tracery windows            *North Vestibule->Northern Entrance
+  1K #267 Northern Entrance         
+  1K #268 north                      *North Vestibule->Northern Entrance
+  1K #259 generic rug                [Nowhere]
+  1K #257 brown Persian rug         *[North Vestibule]
+ <1K #272 generic ceiling           *[generic room]
+ <1K #273 timbered ceiling          *[North Vestibule]
+  2K #274 chaise longue             *[North Vestibule]
+  2K #275 butler's desk             *[North Vestibule]
+ <1K #276 butler's key               [stormagnet]
+  1K #277 demi-lune table           *[North Vestibule]
+  1K #278 silver salver              [demi-lune table]
+  1K #284 calling cards              [silver salver]
+  1K #285 chandelier                 [timbered ceiling]
+  2K #286 porter's chair            *[North Vestibule]
+  1K #287 Great Hall                
+ <1K #288 south                      *North Vestibule->Great Hall
+ <1K #289 generic bot                [stormagnet]
+  2K #249 tracery windows            Northern Entrance->*North Vestibule
+  1K #292 Northeast Tower           
+ <1K #293 east                       Great Hall->Northeast Tower
+  1K #294 Northwest Tower           
+ <1K #295 west                       Great Hall->Northwest Tower
+  1K #296 East Hall                 
+ <1K #297 south                      Northeast Tower->East Hall
+  1K #298 Atrium                    
+ <1K #300 north                      East Hall->Northeast Tower
+ <1K #301 west                       Northeast Tower->Great Hall
+  1K #302 Atrium                    
+  1K #303 south                      Great Hall->Atrium
+  1K #304 West Hall                 
+ <1K #305 south                      Northwest Tower->West Hall
+ <1K #306 north                      West Hall->Northwest Tower
+ <1K #307 east                       West Hall->Atrium
+ <1K #308 east                       Northwest Tower->Great Hall
+ <1K #309 north                      Great Hall->*North Vestibule
+  1K #310 East Foyer                
+ <1K #311 east                       East Hall->East Foyer
+ <1K #299 west                       East Hall->Atrium
+  1K #312 Southeast Tower           
+ <1K #313 south                      East Hall->Southeast Tower
+ <1K #314 north                      Southeast Tower->East Hall
+  1K #315 South Hall                
+ <1K #316 west                       Southeast Tower->South Hall
+ <1K #317 north                      South Hall->Atrium
+  1K #318 South Vestibule           
+ <1K #319 south                      South Hall->South Vestibule
+ <1K #320 east                       South Hall->Southeast Tower
+  1K #321 Southwest Tower           
+ <1K #322 west                       South Hall->Southwest Tower
+  1K #323 Muscician's Gallery       
+  1K #324 steps                      East Hall->Muscician's Gallery
+ <1K #325 north                      Atrium->Great Hall
+ <1K #326 south                      Atrium->South Hall
+ <1K #327 east                       Atrium->East Hall
+ <1K #328 west                       Atrium->West Hall
+ <1K #329 west                       East Foyer->East Hall
+  1K #330 Ballroom                  
+  1K #331 south                      East Foyer->Ballroom
+  1K #332 Smoking Room Doorway      
+  1K #333 first northern room        East Foyer->Smoking Room Doorwa
+  1K #334 Dining Room Doorway       
+  1K #335 second northern room       East Foyer->Dining Room Doorway
+  1K #336 Drawing Room Doorway      
+  1K #337 third northern room        East Foyer->Drawing Room Doorwa
+  1K #338 Side Foyer                
+  1K #339 turn corner                East Foyer->Side Foyer
+ <1K #340 north                      Side Foyer->East Foyer
+  1K #341 down                       Muscician's Gallery->East Hall
+ <1K #342 north                      Southwest Tower->West Hall
+ <1K #343 east                       Southwest Tower->South Hall
+ <1K #344 north                      South Vestibule->South Hall
+  1K #345 north                      Ballroom->East Foyer
+  1K #346 Refreshment Room          
+  1K #347 first southern room        Ballroom->Refreshment Room
+  1K #348 Card Room                 
+  1K #349 second southern room       Ballroom->Card Room
+  1K #350 Smoking Room              
+  1K #351 south                      Card Room->Smoking Room
+  1K #352 north                      Card Room->Ballroom
+  1K #353 East Servant's Passage    
+  1K #354 east                       Card Room->East Servant's Pass
+  1K #355 north                      Smoking Room->Card Room
+  1K #356 north                      Refreshment Room->Ballroom
+  1K #357 Fainting Room             
+  1K #358 south                      Refreshment Room->Fainting Room
+  1K #359 north                      Fainting Room->Refreshment Room
+  1K #360 south                      Smoking Room Doorwa->East Foyer
+  1K #361 Smoking Room              
+  1K #362 north                      Smoking Room Doorwa->Smoking Room
+  1K #363 south                      Smoking Room->Smoking Room Doorwa
+  1K #364 Dining Room               
+  1K #365 east                       Smoking Room->Dining Room
+  1K #366 west                       Dining Room->Smoking Room
+  1K #367 south                      Dining Room->Dining Room Doorway
+  1K #368 Red Drawing Room          
+  1K #369 east                       Dining Room->Red Drawing Room
+  1K #370 north                      Dining Room Doorway->Dining Room
+  1K #371 south                      Dining Room Doorway->East Foyer
+  1K #372 west                       Red Drawing Room->Dining Room
+  1K #373 south                      Red Drawing Room->Drawing Room Doorwa
+  1K #374 Blue Drawing Room         
+  1K #375 east                       Red Drawing Room->Blue Drawing Room
+  1K #376 north                      Drawing Room Doorwa->Red Drawing Room
+  1K #377 south                      Drawing Room Doorwa->East Foyer
+  1K #378 west                       Blue Drawing Room->Red Drawing Room
+  1K #379 Solarium                  
+  1K #380 east                       Blue Drawing Room->Solarium
+  1K #381 Morning Room              
+  1K #382 south                      Blue Drawing Room->Morning Room
+  1K #383 north                      Morning Room->Blue Drawing Room
+  1K #384 east                       Morning Room->Solarium
+  1K #385 Breakfast Room            
+  1K #386 south                      Morning Room->Breakfast Room
+  1K #387 north                      Breakfast Room->Morning Room
+  1K #388 east                       Breakfast Room->Solarium
+  1K #389 first western room         Solarium->Blue Drawing Room
+  1K #390 second western room        Solarium->Morning Room
+  1K #391 third western room         Solarium->Breakfast Room
+  1K #392 fourth western room        Solarium->Breakfast Room
+  1K #393 West Foyer                
+ <1K #394 west                       West Hall->West Foyer
+ <1K #395 east                       West Foyer->West Hall
+  1K #396 South Foyer               
+ <1K #397 south                      West Foyer->South Foyer
+  1K #398 Front Parlour             
+  1K #399 first northern room        West Foyer->Front Parlour
+  1K #400 Music Room                
+  1K #401 second northern room       West Foyer->Music Room
+  1K #402 Green Drawing Room        
+  1K #403 third northern room        West Foyer->Green Drawing Room
+  1K #404 Lower Library Doorway     
+  1K #405 first southern room        West Foyer->Lower Library Doorw
+  1K #406 Billiard Room Doorway     
+  1K #407 second southern room       West Foyer->Billiard Room Doorw
+  1K #408 south                      Front Parlour->West Foyer
+  9K #409 west                       Front Parlour->Music Room
+  1K #410 south                      Music Room->West Foyer
+  1K #411 east                       Music Room->Front Parlour
+  1K #412 west                       Music Room->Green Drawing Room
+  1K #413 south                      Green Drawing Room->West Foyer
+  1K #414 east                       Green Drawing Room->Music Room
+  1K #415 Conservatory              
+  1K #416 west                       Green Drawing Room->Conservatory
+  1K #418 northeast                  Conservatory->Green Drawing Room
+  1K #417 southeast                  Conservatory->West Foyer
+  1K #419 Lower Library             
+  1K #420 south                      Lower Library Doorw->Lower Library
+  1K #421 north                      Lower Library Doorw->West Foyer
+  1K #422 West Servant's Passage    
+  1K #423 west                       Lower Library Doorw->West Servant's Pass
+  1K #424 north                      Lower Library->Lower Library Doorw
+  1K #425 east                       West Servant's Pass->Lower Library Doorw
+  1K #426 west                       West Servant's Pass->Billiard Room Doorw
+  1K #427 north                      Billiard Room Doorw->West Foyer
+  1K #428 Billiard Room             
+  1K #429 south                      Billiard Room Doorw->Billiard Room
+  1K #430 east                       Billiard Room Doorw->West Servant's Pass
+  1K #431 Billiard Room Servant's P 
+  1K #432 west                       Billiard Room Doorw->Billiard Room Serva
+  1K #433 north                      Billiard Room->Billiard Room Doorw
+  1K #434 Back Parlour              
+  1K #435 south                      Billiard Room->Back Parlour
+  1K #436 north                      Back Parlour->Billiard Room
+  1K #437 Back Parlour Doorway      
+  1K #438 west                       Back Parlour->Back Parlour Doorwa
+  1K #439 north                      Back Parlour Doorwa->Billiard Room Serva
+  1K #440 east                       Back Parlour Doorwa->Back Parlour
+  1K #441 west                       Back Parlour Doorwa->South Foyer
+  1K #442 Back Parlour Servant's Pa 
+  1K #443 south                      Back Parlour Doorwa->Back Parlour Servan
+  1K #444 north                      Back Parlour Servan->Back Parlour Doorwa
+  1K #446 White Drawing Room Doorwa 
+  1K #447 south                      Back Parlour Servan->White Drawing Room 
+  1K #449 White Drawing Room        
+  1K #450 east                       White Drawing Room ->White Drawing Room
+  1K #451 west                       White Drawing Room ->South Foyer
+  1K #452 Back Scullery Servant's P 
+  1K #453 south                      White Drawing Room ->Back Scullery Serva
+  1K #454 north                      White Drawing Room ->Back Parlour Servan
+  1K #455 west                       White Drawing Room->White Drawing Room 
+  1K #456 north                      Back Scullery Serva->White Drawing Room 
+  1K #457 Back Scullery             
+  1K #458 east                       Back Scullery Serva->Back Scullery
+  1K #459 south                      Billiard Room Serva->Back Parlour Doorwa
+  1K #460 east                       Billiard Room Serva->Billiard Room Doorw
+  1K #461 west                       Back Scullery->South Foyer
+  1K #462 Winter Hall               
+ <1K #463 south                      South Foyer->Winter Hall
+ <1K #464 northeast                  South Foyer->West Foyer
+  1K #465 Dining Room Servant's Pas 
+  1K #466 west                       Dining Room Doorway->Dining Room Servant
+  1K #467 Drawing Room Servant's Pa 
+  1K #468 east                       Dining Room Doorway->Drawing Room Servan
+  1K #469 east                       Dining Room Servant->Dining Room Doorway
+  1K #470 west                       Dining Room Servant->Smoking Room Doorwa
+  1K #471 east                       Smoking Room Doorwa->Dining Room Servant
+  1K #472 west                       Drawing Room Servan->Dining Room Doorway
+  1K #473 east                       Drawing Room Servan->Drawing Room Doorwa
+  1K #474 west                       Drawing Room Doorwa->Drawing Room Servan
+  1K #475 east                       Drawing Room Doorwa->East Servant's Pass
+  1K #476 west                       East Servant's Pass->Card Room
+  1K #477 north                      East Servant's Pass->Drawing Room Doorwa
+ <1K #478 north                      Winter Hall->South Foyer
+  1K #479 first eastern room         South Foyer->Back Parlour Doorwa
+  1K #480 second eastern room        South Foyer->White Drawing Room 
+  1K #481 Water Closet              
+  1K #482 third eastern room         South Foyer->Water Closet
+  1K #483 fourth eastern room        South Foyer->Back Scullery
+  1K #484 first western room         South Foyer->Conservatory
+  1K #485 Summer Hall               
+  1K #486 second western room        South Foyer->Summer Hall
+  1K #487 Theater                   
+  1K #488 third western room         South Foyer->Theater
+  1K #489 Backstage                 
+  1K #490 fourth western room        South Foyer->Backstage
+ <1K #491 east                       Backstage->South Foyer
+  1K #492 Stage                     
+  1K #493 north                      Backstage->Stage
+  1K #494 south                      Stage->Backstage
+ <1K #495 down                       Stage->Theater
+ <1K #496 up                         Theater->Stage
+  1K #497 east                       Theater->South Foyer
+  1K #498 east                       Summer Hall->South Foyer
+  8K #499 chaise longue              [Nowhere]
+  1K #500 chair                      [Nowhere]
+  1K #501 bed                        [Nowhere]
+ <1K #506 tea table                  [Front Parlour]
+  2K #512 floor                      [Nowhere]
+  1K #513 front parlour floor        [Front Parlour]
+ <1K #515 front parlour ceiling      [Front Parlour]
+ <1K #514 brass chandelier           [front parlour ceiling]
+  1K #516 oriental rug               [Front Parlour]
+  4K #502 settee                     [Nowhere]
+  2K #517 settee                     [Front Parlour]
+  1K #518 walls                      [Nowhere]
+ <1K #519 walls                      [Front Parlour]
+ <1K #520 acanthus leaves            [walls]
+  2K #521 picture_rail               [Nowhere]
+ <1K #522 frieze                     [walls]
+  1K #523 cornice                    [walls]
+  1K #524 picture rail               [walls]
+  2K #525 painting                   [Nowhere]
+  1K #526 floor                      [Great Hall]
+ <1K #527 walls                      [Great Hall]
+  1K #528 basalt block               [walls]
+  2K #529 pillar                     [Nowhere]
+  1K #530 pillars                    [Great Hall]
+  3K #534 chaise longue              [Great Hall]
+  1K #535 demi-lune tables           [Great Hall]
+  1K #536 vase                       [Nowhere]
+ <1K #537 crystal vases              [demi-lune tables]
+  4K #538 flower                     [Nowhere]
+  2K #539 bouquet                    [Nowhere]
+  3K #541 desk                       [Nowhere]
+  2K #542 drawer                     [Nowhere]
+  1K #543 bureau a gradin            [Front Parlour]
+  1K #544 bottom drawer              [bureau a gradin]
+  1K #545 left drawer                [bureau a gradin]
+  1K #546 middle drawer              [bureau a gradin]
+  1K #547 right drawer               [bureau a gradin]
+  1K #548 desk chair                 [Front Parlour]
+  1K #549 sideboard                  [Front Parlour]
+  1K #550 left cabinet               [sideboard]
+  1K #551 right cabinet              [sideboard]
+  1K #552 top drawer                 [sideboard]
+  1K #553 middle drawer              [sideboard]
+  1K #554 bottom drawer              [sideboard]
+  1K #555 vaulted ceiling            [Great Hall]
+  1K #556 engraving                  [vaulted ceiling]
+  1K #508 fireplace                  [Nowhere]
+  8K #557 door_secret                <invalid>-><invalid>
+  1K #559 west                       Water Closet->South Foyer
+  1K #245 leather couch              [stormagnet]
+  2K #262 detailed painting         *[North Vestibule]
+  1K #263 bridge                     [detailed painting]
+  2K #282 microphone                 [Nowhere]
+  7K #503 portal_unopenable          <invalid>-><invalid>
+ 10K #258 $portal_unclosable         <invalid>-><invalid>
+  1K #507 front parlour fireplace    [Front Parlour]
+  1K #505 armchair                   [Front Parlour]
+  1K #563 mantle                     [front parlour fireplace]
+ <1K #564 hearth                     [front parlour fireplace]
+  2K #565 mirror                     [Nowhere]
+ <1K #566 tile                       [hearth]
+  2K #568 urn                        [Nowhere]
+  1K #569 left urn                   [mantle]
+  1K #570 right urn                  [mantle]
+  1K #567 pier glass                 [Front Parlour]
+  5K #571 mirror_hand                [stormagnet]
+ <1K #572 fuel                       [stormagnet]
+ <1K #573 daisy                      [stormagnet]
+ <1K #575 occasional table           [Front Parlour]
+  1K #576 cabriole legs              [Front Parlour]
+-- 297 objects.  Total bytes: 487,051.----------------------------------------
+Objects owned by Crag (from #0 to #577):
+ 13K #243 Crag                      *[Front Parlour]
+  1K #244 generic group              [Nowhere]
+  7K #242 Generic Pile               [Nowhere]
+ <1K #248 Group Utilities            [Nowhere]
+  2K #250 Helpful Object             [Nowhere]
+ <1K #251 MCP parent                 [Nowhere]
+ <1K #252 Parsing objects            [Nowhere]
+ <1K #253 Text generation objects    [Nowhere]
+ <1K #254 Abstract class             [Nowhere]
+  4K #255 Generic Pilable Thing      [Nowhere]
+ <1K #264 adventure party           *[bridge]
+  2K #265 Generic Nesting Decoratio  [Nowhere]
+  7K #269 Delegator                  [Nowhere]
+  1K #270 Delegate                   [Nowhere]
+ <1K #271 New Generic Room           [Nowhere]
+  1K #279 Room Exit Delegate         [Nowhere]
+  3K #280 Generic Table              [Nowhere]
+  3K #290 How $staff will notice pe *[butler's desk]
+ <1K #291 Generic Virtual Reality O  [Nowhere]
+  1K #445 Generic Achievement        [Nowhere]
+ <1K #448 Tested Generic Achievemen  [Nowhere]
+  1K #509 Generic Input Handler      [Nowhere]
+  1K #510 Generic Command Handler    [Nowhere]
+ <1K #511 Beaker's Commands          [Nowhere]
+  1K #531 Generic Command            [Nowhere]
+ <1K #532 Generic English Command    [Nowhere]
+ <1K #533 Grouping Command           [Nowhere]
+ 14K #540 Generic See-through Porta  <invalid>-><invalid>
+ 26K #558 Cardgame Feature           [Nowhere]
+ <1K #560 Blank Root                 [Nowhere]
+ <1K #561 Interface                  [Nowhere]
+ <1K #562 Class                      [Nowhere]
+ <1K #247 Delegation Utilities       [Nowhere]
+  6K #574 Clock                      [Nowhere]
+  2K #504 Source control strategy    [Nowhere]
+-- 35 objects.  Total bytes: 115,214.-----------------------------------------
+A Clock materializes out of thin air, moved by Crag.
+Moved.
+You see nothing special.
+Clock (#574) [ readable ]
+  Child of generic thing (#5).
+  Location Front Parlour (#398).
+  #574:"wake start"             Crag (#243)          rxd    this none this
+  #574:alarm_hour               Crag (#243)          rxd    this none this
+  #574:alarm_quarter_hour       Crag (#243)          rxd    this none this
+-------------------------------- finished ---------------------------------
+That is not a valid command.
+Queue ID    Start Time            Owner         Verb (Line) [This]
+--------    ----------            -----         ------------------
+1880038067  Aug 18 01:00:00 2013  Core-Wizard   #174:measurement_task (12)
+Last modified Sun May 12 12:22:06 2013 PDT by Crag (#243).
+#574:"wake start" this none this
+// :wake(alarm_name, delete_alarm)
+// :start()
+if (verb == "wake" && this.wake_task != task_id() && $code_utils:task_valid(this.wake_task))
+  // TODO: do something better with these errors
+  return "can't wake, already running as task " + tostr(this.wake_task);
+elseif (verb == "start" && this.wake_task)
+  // TODO: do something better with these errors
+  return "can't start, already running as task " + tostr(this.wake_task);
+endif
+if (verb == "wake")
+  {alarm_name, delete_alarm} = args;
+  if (delete_alarm)
+    this.alarms = listdelete(this.alarms, delete_alarm);
+  endif
+  try
+    this:("alarm_" + alarm_name)();
+  except e (E_VERBNF)
+    // TODO: do something better with these
+    return "Failed to call alarm_" + alarm_name;
+  endtry
+endif
+next = {};
+for idx in [1..length(this.alarms)]
+  alarm = this.alarms[idx];
+  {interval, offset, alarm_name, delete_alarm} = alarm;
+  alarm[4] = delete_alarm && idx;
+  delay = interval - (time() + interval) % interval + offset;
+  // NOTE: '<=' means that ties are broken by which alarm comes later in the list.
+  // This means the list must be sorted such that the highest priority alarms
+  // come last.  For a clock with a simple chime three times an hour an a long
+  // chime at the top of the hour, the simple chime comes first so the long
+  // chime will override the simple ones when it comes up.
+  // 
+  // This also means that an alarm clock with multiple deletable alarms will
+  // consume the ties from the end first.
+  if (!next || delay <= next[5] && delay > 0)
+    next = {@alarm, delay};
+  endif
+endfor
+if (next)
+  delay = next[5];
+  fork wake_task (delay)
+    this:wake(next[3], next[4]);
+  endfork
+  this.wake_task = wake_task;
+  return "started. will chime in " + tostr(delay) + " seconds";
+else
+  return "No alarms matched?";
+endif
+return "Impossible exit?!";
+Clock (#574) [ readable ]
+  Child of generic thing (#5).
+  Location Front Parlour (#398).
+.alarms                  Crag (#243)           r c    {{900, 0, "quarter_hour..
+.start_hour_msg          Crag (#243)           r c    {#69, "do", "A complica..
+.continue_hour_msg       Crag (#243)           r c    {#69, "do", {"name", "t..
+.end_hour_msg            Crag (#243)           r c    {#69, "do", "The chime ..
+.chime_delay             Crag (#243)           r c    2
+.quarter_hour_msg        Crag (#243)           r c    {#69, "do", "Something ..
+.wake_task               Crag (#243)           r c    1744804156
+-------------------------------- finished ---------------------------------
+.alarms                  Crag (#243)           r c    {{900, 0, "quarter_hour", 0}, {3600, 0, "hour", 0}}
+-------------------------------- finished ---------------------------------
+@integrate_room clock isn't set.
+@integrate_player clock isn't set.
+@integrate_container clock isn't set.
+@drop_failed clock is "You can't seem to drop %td here."
+@drop_succeeded clock is "You drop %td."
+@odrop_failed clock is "%n:(tries) to drop %ti but %n:(fails)."
+@odrop_succeeded clock is "%n:(drops) %ti."
+@otake_succeeded clock is "%n:(picks) up %td."
+@otake_failed clock isn't set.
+@take_succeeded clock is "You take %td."
+@take_failed clock is "You can't pick up %td."
+@start_hour clock is "A complicated mechanism in %td grinds to life and emits a gentle \"BONG\"."
+@continue_hour clock is "%Td emits another \"BONG\"."
+@end_hour clock is "The chime mechanism in %td winds down."
+@quarter_hour clock is "Something mechanical inside %td whirrs to life, emits a soft \"BONG\" and then spins down."
+Clock (#574) [ readable ]
+  Child of generic thing (#5).
+  Location Front Parlour (#398).
+  #574:"wake start"             Crag (#243)          rxd    this none this
+  #574:alarm_hour               Crag (#243)          rxd    this none this
+  #574:alarm_quarter_hour       Crag (#243)          rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Sun May 12 09:47:20 2013 PDT by Crag (#243).
+#574:"alarm_hour" this none this
+// Emits start_hour once, continue hour (count -1) times, then end_hour
+$you:say_action(this.start_hour_msg);
+hour = tonum($time_utils:ctime()[12..13]);
+for n in [2..hour]
+  suspend(this.chime_delay);
+  $you:say_action(this.continue_hour_msg);
+endfor
+suspend(1);
+$you:say_action(this.end_hour_msg);
+=> "16"
+=> #574 (Clock)
+=> #398 (Front Parlour)
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+=> 0
+Last modified Sun May 12 12:22:06 2013 PDT by Crag (#243).
+#574:"wake start" this none this
+// :wake(alarm_name, delete_alarm)
+// :start()
+if (verb == "wake" && this.wake_task != task_id() && $code_utils:task_valid(this.wake_task))
+  // TODO: do something better with these errors
+  return "can't wake, already running as task " + tostr(this.wake_task);
+elseif (verb == "start" && this.wake_task)
+  // TODO: do something better with these errors
+  return "can't start, already running as task " + tostr(this.wake_task);
+endif
+if (verb == "wake")
+  {alarm_name, delete_alarm} = args;
+  if (delete_alarm)
+    this.alarms = listdelete(this.alarms, delete_alarm);
+  endif
+  try
+    this:("alarm_" + alarm_name)();
+  except e (E_VERBNF)
+    // TODO: do something better with these
+    return "Failed to call alarm_" + alarm_name;
+  endtry
+endif
+next = {};
+for idx in [1..length(this.alarms)]
+  alarm = this.alarms[idx];
+  {interval, offset, alarm_name, delete_alarm} = alarm;
+  alarm[4] = delete_alarm && idx;
+  delay = interval - (time() + interval) % interval + offset;
+  // NOTE: '<=' means that ties are broken by which alarm comes later in the list.
+  // This means the list must be sorted such that the highest priority alarms
+  // come last.  For a clock with a simple chime three times an hour an a long
+  // chime at the top of the hour, the simple chime comes first so the long
+  // chime will override the simple ones when it comes up.
+  // 
+  // This also means that an alarm clock with multiple deletable alarms will
+  // consume the ties from the end first.
+  if (!next || delay <= next[5] && delay > 0)
+    next = {@alarm, delay};
+  endif
+endfor
+if (next)
+  delay = next[5];
+  fork wake_task (delay)
+    this:wake(next[3], next[4]);
+  endfork
+  this.wake_task = wake_task;
+  return "started. will chime in " + tostr(delay) + " seconds";
+else
+  return "No alarms matched?";
+endif
+return "Impossible exit?!";
+=> "can't start, already running as task 1744804156"
+#574:wake start, line 11:  Incorrect number of arguments
+... called from #-1:Input to EVAL, line 4
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+Clock (#574) [ readable ]
+  Child of generic thing (#5).
+  Location Front Parlour (#398).
+.alarms                  Crag (#243)           r c    {{900, 0, "quarter_hour..
+.start_hour_msg          Crag (#243)           r c    {#69, "do", "A complica..
+.continue_hour_msg       Crag (#243)           r c    {#69, "do", {"name", "t..
+.end_hour_msg            Crag (#243)           r c    {#69, "do", "The chime ..
+.chime_delay             Crag (#243)           r c    2
+.quarter_hour_msg        Crag (#243)           r c    {#69, "do", "Something ..
+.wake_task               Crag (#243)           r c    1744804156
+-------------------------------- finished ---------------------------------
+That is not a valid command.
+That is not a valid command.
+You can't clear #574.wake_task; none of the ancestors define that property.
+#-1:Input to EVAL, line 4:  Variable not found
+... called from built-in function eval()
+... called from #52:eval_cmd_string (this == #243), line 21
+... called from #52:eval eval-d eval+d (this == #243), line 16
+(End of traceback)
+=> 0
+=> "started. will chime in 667 seconds"
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#574:wake this none this" name: "MOO verb: #574:wake this none this" type: moo-code content*: "" _data-tag: 950800874285
+#$#* 950800874285 content: // :wake(alarm_name, delete_alarm)
+#$#* 950800874285 content: // :start()
+#$#* 950800874285 content: if (verb == "wake" && this.wake_task != task_id() && $code_utils:task_valid(this.wake_task))
+#$#* 950800874285 content:   // TODO: do something better with these errors
+#$#* 950800874285 content:   return "can't wake, already running as task " + tostr(this.wake_task);
+#$#* 950800874285 content: elseif (verb == "start" && this.wake_task)
+#$#* 950800874285 content:   // TODO: do something better with these errors
+#$#* 950800874285 content:   return "can't start, already running as task " + tostr(this.wake_task);
+#$#* 950800874285 content: endif
+#$#* 950800874285 content: if (verb == "wake")
+#$#* 950800874285 content:   {alarm_name, delete_alarm} = args;
+#$#* 950800874285 content:   if (delete_alarm)
+#$#* 950800874285 content:     this.alarms = listdelete(this.alarms, delete_alarm);
+#$#* 950800874285 content:   endif
+#$#* 950800874285 content:   try
+#$#* 950800874285 content:     this:("alarm_" + alarm_name)();
+#$#* 950800874285 content:   except e (E_VERBNF)
+#$#* 950800874285 content:     // TODO: do something better with these
+#$#* 950800874285 content:     return "Failed to call alarm_" + alarm_name;
+#$#* 950800874285 content:   endtry
+#$#* 950800874285 content: endif
+#$#* 950800874285 content: next = {};
+#$#* 950800874285 content: for idx in [1..length(this.alarms)]
+#$#* 950800874285 content:   alarm = this.alarms[idx];
+#$#* 950800874285 content:   {interval, offset, alarm_name, delete_alarm} = alarm;
+#$#* 950800874285 content:   alarm[4] = delete_alarm && idx;
+#$#* 950800874285 content:   delay = interval - (time() + interval) % interval + offset;
+#$#* 950800874285 content:   // NOTE: '<=' means that ties are broken by which alarm comes later in the list.
+#$#* 950800874285 content:   // This means the list must be sorted such that the highest priority alarms
+#$#* 950800874285 content:   // come last.  For a clock with a simple chime three times an hour an a long
+#$#* 950800874285 content:   // chime at the top of the hour, the simple chime comes first so the long
+#$#* 950800874285 content:   // chime will override the simple ones when it comes up.
+#$#* 950800874285 content:   // 
+#$#* 950800874285 content:   // This also means that an alarm clock with multiple deletable alarms will
+#$#* 950800874285 content:   // consume the ties from the end first.
+#$#* 950800874285 content:   if (!next || delay <= next[5] && delay > 0)
+#$#* 950800874285 content:     next = {@alarm, delay};
+#$#* 950800874285 content:   endif
+#$#* 950800874285 content: endfor
+#$#* 950800874285 content: if (next)
+#$#* 950800874285 content:   delay = next[5];
+#$#* 950800874285 content:   fork wake_task (delay)
+#$#* 950800874285 content:     this:wake(next[3], next[4]);
+#$#* 950800874285 content:   endfork
+#$#* 950800874285 content:   this.wake_task = wake_task;
+#$#* 950800874285 content:   return "started. will chime in " + tostr(delay) + " seconds";
+#$#* 950800874285 content: else
+#$#* 950800874285 content:   return "No alarms matched?";
+#$#* 950800874285 content: endif
+#$#* 950800874285 content: return "Impossible exit?!";
+#$#: 950800874285
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Queue ID    Start Time            Owner         Verb (Line) [This]
+--------    ----------            -----         ------------------
+779667796   Aug 17 17:00:00 2013  Crag          #574:wake start (43)
+1880038067  Aug 18 01:00:00 2013  Core-Wizard   #174:measurement_task (12)
+Queue ID    Start Time            Owner         Verb (Line) [This]
+--------    ----------            -----         ------------------
+779667796   Aug 17 17:00:00 2013  Crag          #574:wake start (43)
+1880038067  Aug 18 01:00:00 2013  Core-Wizard   #174:measurement_task (12)
+0 errors.
+Verb programmed.
+#$#dns-org-mud-moo-simpleedit-content 1025024665 reference: "#574:alarm_hour this none this" name: "MOO verb: #574:alarm_hour this none this" type: moo-code content*: "" _data-tag: 1549402324286
+#$#* 1549402324286 content: // Emits start_hour once, continue hour (count -1) times, then end_hour
+#$#* 1549402324286 content: $you:say_action(this.start_hour_msg);
+#$#* 1549402324286 content: hour = tonum($time_utils:ctime()[12..13]);
+#$#* 1549402324286 content: for n in [2..hour]
+#$#* 1549402324286 content:   suspend(this.chime_delay);
+#$#* 1549402324286 content:   $you:say_action(this.continue_hour_msg);
+#$#* 1549402324286 content: endfor
+#$#* 1549402324286 content: suspend(1);
+#$#* 1549402324286 content: $you:say_action(this.end_hour_msg);
+#$#: 1549402324286
+Crag 0 ? 0 : 1;
+Line 1:  syntax error
+1 error.
+=> 1
+=> "Sat Aug 17 16:57:30 2013 PDT"
+0 errors.
+Verb programmed.
+0 errors.
+Verb programmed.
+Last modified Sat Aug 17 16:55:35 2013 PDT by Crag (#243).
+#574:"wake start" this none this
+// :start()
+// :wake(alarm_name, delete_alarm)
+if (verb == "wake" && this.wake_task != task_id() && $code_utils:task_valid(this.wake_task))
+  // TODO: do something better with these errors
+  return "can't wake, already running as task " + tostr(this.wake_task);
+elseif (verb == "start" && this.wake_task)
+  // TODO: do something better with these errors
+  return "can't start, already running as task " + tostr(this.wake_task);
+endif
+if (verb == "wake")
+  {alarm_name, delete_alarm} = args;
+  if (delete_alarm)
+    this.alarms = listdelete(this.alarms, delete_alarm);
+  endif
+  try
+    this:("alarm_" + alarm_name)();
+  except e (E_VERBNF)
+    // TODO: do something better with these
+    return "Failed to call alarm_" + alarm_name;
+  endtry
+endif
+next = {};
+for idx in [1..length(this.alarms)]
+  alarm = this.alarms[idx];
+  // XXX: BAD DESIGN ALERT
+  // 'delete_alarm' below is a flag meaning "is this alarm a one-off"
+  // After exploding the array, the fourth value is replaced with the index
+  // of the alarm to be deleted. WEIRD.
+  {interval, offset, alarm_name, delete_alarm} = alarm;
+  alarm[4] = delete_alarm && idx;
+  // Figure out how long we need to wait before the alarm 
+  // we are looking at (this.alarms[idx]) will activate.
+  // which is ... magic.
+  delay = interval - (time() - offset) % interval;
+  // NOTE: '<=' means that ties are broken by which alarm comes later in the list.
+  // This means the list must be sorted such that the highest priority alarms
+  // come last.  For a clock with a simple chime three times an hour an a long
+  // chime at the top of the hour, the simple chime comes first so the long
+  // chime will override the simple ones when it comes up.
+  // 
+  // This also means that an alarm clock with multiple deletable alarms will
+  // consume the ties from the end first.
+  if (!next || delay <= next[5] && delay > 0)
+    next = {@alarm, delay};
+  endif
+endfor
+if (next)
+  delay = next[5];
+  fork wake_task (delay)
+    this:wake(next[3], next[4]);
+  endfork
+  this.wake_task = wake_task;
+  return "started. will chime in " + tostr(delay) + " seconds";
+else
+  return "No alarms matched?";
+endif
+return "Impossible exit?!";
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Last modified Sat Aug 17 16:59:33 2013 PDT by Crag (#243).
+#574:"alarm_hour" this none this
+// Emits start_hour once, continue hour (count -1) times, then end_hour
+$you:say_action(this.start_hour_msg);
+hour = tonum($time_utils:ctime()[12..13]);
+hour = hour % 12;
+hour = hour ? hour | 12;
+for n in [2..hour]
+  suspend(this.chime_delay);
+  $you:say_action(this.continue_hour_msg);
+endfor
+suspend(1);
+$you:say_action(this.end_hour_msg);
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+The south (#408) leads to the West Foyer (#393) via {south, s}.
+The west (#409) leads to the Music Room (#400) via {west, w}.
+The Music Room
+You see nothing special.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+A complicated mechanism in the Clock grinds to life and emits a gentle "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The Clock emits another "BONG".
+The chime mechanism in the Clock winds down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+Something mechanical inside the Clock whirrs to life, emits a soft "BONG" and then spins down.
+The Music Room
+You see nothing special.
+Queue ID    Start Time            Owner         Verb (Line) [This]
+--------    ----------            -----         ------------------
+1000453733  Aug 21 23:45:00 2013  Crag          #574:wake start (50)
+659492557   Aug 22 01:00:00 2013  Core-Wizard   #174:measurement_task (12)
+Killed task 1000453733.

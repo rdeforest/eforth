@@ -1,0 +1,40 @@
+Welcome to The Programmer's Manor
+
+For help outside the MOO contact robert@defore.st.
+
+    connect user pass     - log in
+    create  user pass     - create and log in to new user
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+Last connected Wed Nov 17 08:21:54 2004 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 1100640237 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1100640237 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1100640237 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1100640237
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+You sit on the large maroon couch.
+He looks craggy...
+He is awake and looks alert.
+Carrying:
+ the friendly stuff                      
+You are subscribed to the following lists:
+    *Player-Creation-Log        0 new messages
+    *Todo                       0 new messages
+    *Bulletin Board             0 new messages
+    *Quotes Out Of Context      0 new messages
+    *Community-Group            0 new messages
+Message sent to *Todo.
+Message 6 on *Todo:
+Date:     Wed Nov 17 12:32:42 2004 PST
+From:     Robert
+To:       *Todo
+Subject:  clothing
+
+Requires layering modifications to the integration system (hiding).
+
+Clothing modifies descriptions,  Adding and removing clothing generates messages, and possibly other events.
+--------------------------

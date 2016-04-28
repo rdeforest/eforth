@@ -1,0 +1,129 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+Either that person does not exist, or has a different password.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+Last connected Sat Jan 29 13:21:09 2005 PST from localhost
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+Object #2 does not define that verb, but its ancestor #6 does.
+#6:"@add-feature @addfeature" any none none
+ 1:  // Usage:  @add-feature <feature object>
+ 2:  // Add an object to your features list.
+ 3:  set_task_perms(player);
+ 4:  if (dobjstr)
+ 5:    if (dobj == $failed_match)
+ 6:      // dobj = $feature.warehouse:match_object(dobjstr);
+ 7:      if ($feature.registry:feature_match_failed(dobj = $feature.registry:match_feature(dobjstr), dobjstr))
+ 8:        return;
+ 9:      endif
+10:    endif
+11:    if (!$command_utils:object_match_failed(dobj, dobjstr))
+12:      if (dobj in player:features())
+13:        player:tell($string_utils:dnamec_and_number(dobj), " is already one of your features.");
+14:      elseif (player:add_feature(dobj))
+15:        player:tell($string_utils:dnamec_and_number(dobj), " added as a feature.");
+16:      else
+17:        player:tell("You can't seem to add ", $string_utils:dname_and_number(dobj), " to your features list.");
+18:      endif
+19:    endif
+20:  else
+21:    player:tell("Usage:  @add-feature <object>");
+22:    features = {};
+23:    player_features = player:features();
+24:    for f in ($feature.registry:features())
+25:      if (!(f in player_features) && $code_utils:verb_or_property(f, "feature_ok", player))
+26:        features = {@features, f};
+27:      endif
+28:    endfor
+29:    feature_list = $feature.registry:feature_list_lines(player, features);
+30:    // fe = {};
+31:    // long = {};
+32:    // width = abs(player.linelen);
+33:    // half = width / 2;
+34:    // "for c in ($feature.warehouse:contents())";
+35:    // "name = c in player:features() ? c:name() + \" (*)\" | c:name();";
+36:    // if (!(c in player:features()) && $code_utils:verb_or_property(c, "feature_ok", player))
+37:    // name = c:name();
+38:    // if (length(name) > half)
+39:    // long = {@long, name};
+40:    // else
+41:    // fe = {@fe, name};
+42:    // endif
+43:    // endif
+44:    // endfor
+45:    // if (fe || long)
+46:    if (feature_list)
+47:      player:tell("Available features not already in your feature list include:");
+48:      // player:tell_lines($string_utils:columnize(fe, 2, width));
+49:      // player:tell_lines(long);
+50:      player:tell_lines(feature_list);
+51:    else
+52:      player:tell("There are no available features that you don't already have.");
+53:    endif
+54:  endif
+.registry                unknown hacker (#35)  r      #151
+-------------------------------- finished ---------------------------------
+feature object registry (#151) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic thing (#5).
+-------------------------------- finished ---------------------------------
+feature object registry (#151) [ readable fertile ]
+  Owned by unknown hacker (#35).
+  Child of generic thing (#5).
+  #151:features                 unknown hacker (#35) rxd    this none this
+  #151:feature_list             unknown hacker (#35) rxd    this none this
+  #151:add_feature              unknown hacker (#35) rxd    this none this
+  #151:remove_feature           unknown hacker (#35) rxd    this none this
+  #151:"closed_msg empty_msg already_open_msg already_closed_msg index_msg contents_msg feature_msg no_contents_msg contents_header_msg what_page_msg" unknown hacker (#35) rxd this none this
+  #151:open                     unknown hacker (#35) rxd    this none none
+  #151:close                    unknown hacker (#35) rxd    this none none
+  #151:"open_msg close_msg turn_to_contents_msg turn_to_index_msg turn_to_empty_msg turn_to_feature_msg write_msg" unknown hacker (#35) rxd this none this
+  #151:contents                 unknown hacker (#35) rxd    this none this
+  #151:index                    unknown hacker (#35) rxd    this none this
+  #151:feature                  unknown hacker (#35) rxd    this none this
+  #151:look_self                unknown hacker (#35) rxd    this none this
+  #151:"write enter"            unknown hacker (#35) rxd    any in/inside/into this
+  #151:"turn open"              unknown hacker (#35) rxd    this at/to any
+  #151:match_feature            unknown hacker (#35) rx     this none this
+  #151:feature_match_failed     Core-Wizard (#184)   rxd    this none this
+  #151:"empty closed"           unknown hacker (#35) rxd    this none this
+  #151:feature_list_lines       unknown hacker (#35) rxd    this none this
+  #151:read                     unknown hacker (#35) rxd    this none none
+  #151:"read lookup"            unknown hacker (#35) rxd    any in/inside/into this
+  #151:set_open                 unknown hacker (#35) rxd    this none this
+  #151:init_for_core            unknown hacker (#35) rxd    this none this
+-------------------------------- finished ---------------------------------
+#151:"add_feature" (feature)
+ 1:  // Usage:  :add_feature(feature[, whom])
+ 2:  // 
+ 3:  // Add a feature to the registry, if `whom' owns the feature or is a wizard.
+ 4:  // 
+ 5:  // Whom defaults to caller_perms().  If caller != this, whom must be equal to caller_perms().
+ 6:  // 
+ 7:  // Returns the new list of features if successful, or a string explaining the error if not.
+ 9:  if (length(args) > 1)
+10:    whom = args[2];
+11:    if (caller != this && whom != caller_perms())
+12:      return E_PERM;
+13:    endif
+14:  else
+15:    whom = caller_perms();
+16:  endif
+17:  if (feature in this:features())
+18:    return tostr(feature:dnamec(), " ", feature:verb_sub("is"), " already registered in ", this:dname(), ".");
+19:  elseif (!feature.feature_ok && !$object_utils:has_callable_verb(feature, "feature_ok"))
+20:    return tostr(feature:dnamec(), " ", feature:verb_sub("is"), " not a valid feature object.  Please set its .feature_ok bit or give it a :feature_ok verb.");
+21:  elseif (!$perm_utils:controls(whom, feature))
+22:    return tostr(E_PERM);
+23:  endif
+24:  return this.features = {@this.features, feature};
+=> {#67, #68, #149, #169, #83, #238, #910, #1039, #1020}

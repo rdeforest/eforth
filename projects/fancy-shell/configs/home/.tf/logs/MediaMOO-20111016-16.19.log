@@ -1,0 +1,65 @@
+NEWS FLASH!
+MediaMOO has moved to mediamoo.engl.niu.edu at Northern Illinois University. Many of the old addresses will still work, especially those that start with purple-crayon, mediamoo, or media.  Please be patient with possible outages in service as we tweak the system.
+
+
+****************************
+**  Welcome to MediaMOO!  **
+****************************
+
+
+PLEASE NOTE:
+MediaMOO is a professional community, where people come to explore the future of media technology.
+ 
+The operators of MediaMOO have provided the materials for the buildings of this community, but are not responsible for what is said or done in them.  In particular, you must assume responsibility if you permit minors or others to access MediaMOO through your facilities.  The statements and viewpoints expressed here are not necessarily those of the janitors, Michael Day, or Northern Illinois University, and those parties disclaim any responsibility for them.
+
+While MediaMOO has historically limited membership to media researchers, in an effort to help newer generations experience the MOO, we now welcome teachers and their classes, as well as interested individuals. Our vision is to preserve the historic spaces in MediaMOO as a MOOseum while also creating new opportunities for building. A new area of the MOO, the City of New Media, is available for new building initiatives. 
+ 
+If you have questions about MediaMOO, or wish to ask a MOO administrator about bringing your classes to MediaMOO, please contact our ArchJanitor, Michael Day at tb0mxd1@wpo.cso.niu.edu, or assistant janitor Susan Antlitz (a.k.a. Tiger / StormCloud) at SEAntlitz@aol.com.
+
+A note to guests: guests' connection site information is publicly readable, and included on all mail messages posted.
+
+Type:
+'connect <character-name> <password>' to connect to your character,
+'connect Guest'    to connect to a guest character,
+'help @request'    for information on how to get your own character,
+'@who'             just to see who's logged in right now,
+'@quit'            to disconnect, either now or later.
+
+*** Connected ***
+escape
+It is very dark.
+There is new activity on the following list:
+    *Anything (#9008)                    3 new messages
+Last connected Fri Nov 19 15:11:01 2004 CST from 64.81.175.9
+I don't understand that.
+You are currently registered as:  ROBERT10650@DELPHI.COM
+Use @registerme as <address> to change this.
+If you continue, your password will be changed, the new password mailed to `guitar.robot@gmail.com'. Do you want to continue? [Enter `yes' or `no']
+Registering you, and changing your password and mailing new one to guitar.robot@gmail.com.
+Mail sending did not work: . Reregistration terminated.
+Member name    Connected    Idle time    Location
+-----------    ---------    ---------    --------
+Crag (#6382)   a minute     0 seconds    escape
+
+Total: 1 member, who has been active recently.
+There is only one member invisible to you.
+Member name   Last login                    Location
+-----------   ----------                    --------
+jaime (#2)    Wed Jan 16 16:40:06 2002 CST  jaime's capacitor
+
+Total: 1 member, who has not been active recently.
+#32:subst (this == #60), line 33:  Range error
+... called from #32:get_topic (this == #60), line 7
+... called from #60:get_topic, line 2
+... called from #32:forward pass (this == #60), line 8
+... called from #32:get_topic (this == #60), line 7
+... called from #60:get_topic, line 2
+... called from #6:?* help info*rmation @help (this == #6382), line 36
+(End of traceback)
+Showing help on `@password':
+----
+Syntax: @password <old-password> <new-password>
+
+Changes your player's password (as typed in the 'connect' command when you log in to the MOO) to <new-password>.  For security reasons, you are required to type your current (soon to be old) password as the first argument.
+
+Your password is stored in an encrypted form in the MOO database; in principle, not even the wizards can tell what it is, though they can change it, of course.  It is recommended that your password not be your name or a common word; MOO passwords have been stolen or cracked in the past and characters have been made unhappy by such theft.  Your password is your security; choose a safe one.

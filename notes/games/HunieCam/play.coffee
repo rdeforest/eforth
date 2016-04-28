@@ -1,0 +1,1 @@
+(girlMod = require './girls').install()

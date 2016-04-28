@@ -1,0 +1,690 @@
+Waterpoint: perfect turkey button[320]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Coastal Path
+A relatively smooth path along the coast.  The ocean rolls against the rocky coast.  It is dark out and the stars are shining.  It is chilly.  The coastal path continues to the south and northwest.
+You see a quicksilver pez here.
+Last connected Sat Jul 28 19:53:47 2007 PDT from idea-inc.com
+There is new news.  Type `news all' to read all news or `news' to read just new news.
+You have new mail (1 message).  Type 'help mail' for info on reading it.
+There is new activity on the following lists:
+    *Documentation              3 new messages
+    *Bug-reports                53 new messages
+    *server-hacking             1 new message
+    *welcome-messages           5 new messages
+    *core                       13 new messages
+    *News                       5 new messages
+#$#mcp-negotiate-can 1134368039 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1134368039 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1134368039 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-org-waterpoint-tellpriority min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1134368039 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1134368039
+A quicksilver pez goes south.
+Message 5:
+Date:     Thu Aug 30 09:18:36 2007 PDT
+From:     pj
+To:       Crag
+Subject:  hey!
+
+Heya, LTNS!  Was reminiscing about coldmud and etc and came across your name and thought I'd say hi! (you probably remember me as Zachary).  Anyway, hope things are going well.  Show up and hang out sometime!
+--------------------------
+You were working on a letter to *Community-Group entitled "@register me as robert@defore.st"
+Do you wish to delete that session? [Enter `yes' or `no']
+#$#dns-org-mud-moo-simpleedit-content 1134368039 reference: sendmail name: "MOOMail(\"Re: hey!\")" type: string-list content*: "" _data-tag: 465969651455807
+#$#* 465969651455807 content: To:       pj (#232)
+#$#* 465969651455807 content: Subject:  Re: hey!
+#$#* 465969651455807 content: 
+#$#: 465969651455807
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+pj             Living room                   8 minutes                         
+
+Total: 1 person, who has not been active recently.
+Sending...
+Mail actually went to pj.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Xplat          Little point                  6 days                            
+Xeric          Brig                          5 days                            
+Rachelle       Living room                   3 days                            
+James          Living room                   a day                             
+Becky          Living room                   a day       workity work          
+Roy            Living room                   23 hours                          
+Matthew        Living room                   22 hours                          
+Jim            Living room                   21 hours                          
+Llyrica        Living room                   15 hours    sneezing              
+Tobin          Coastal path                  14 hours                          
+Kyle           Living room                   10 hours                          
+Dea            Living room                   10 hours                          
+stucky         Living room                   8 hours                           
+rgm            Living room                   5 hours                           
+Ford           Living room                   4 hours                           
+Eclipse        Living room                   3 hours     bjort                 
+Mordred        Living room                   3 hours                           
+Charkes        Living room                   an hour                           
+Atwood         Living room                   an hour     ballin'               
+Jehk           Living room                   an hour                           
+Chris          Living room                   44 minutes                        
+keith          Living room                   33 minutes                        
+Barry          Living room                   33 minutes  sobering up           
+Ben            Living room                   27 minutes                        
+Ken            Living room                   17 minutes                        
+Robby          Living room                   12 minutes                        
+pj             Living room                   9 minutes                         
+Marn           Living room                   9 minutes   z, really             
+uwiz           Living room                   9 minutes                         
+Kenny          Living room                   3 minutes   Conspiracy            
+Ragnar         Living room                   a minute                          
+Wayne          Living room                   30 seconds                        
+Crag           Coastal path                  0 seconds                         
+
+Total: 33 people, 4 of whom have been active recently.
+Cape Toad
+You see a quicksilver pez here.
+The Harbor
+You see a pin here.
+Gull Point
+You see a quicksilver pez here.
+Crag opens the lighthouse door.
+The Gull Point Lighthouse
+You see a quicksilver pez trap here.
+The Hallway
+You see an operating systems record, a homepage registry, a black chest, a Larry Wall quote factory, a timer.asm, a linking book to Suveh Nux, a stamp, a doorknob, Nakai, a linking book to Zork 1 - The Great Underground Empire, a milk carton, an idol, a birdie, a clam shell, a bag of parrot food, a Favourite Films, a linking book to A Change in the Weather, a word server, a linking book to Heavenly Rest Switcheroo, a linking book to The Hitchhiker's Guide to the Galaxy, a linking book to I-0, a METAR thing, a distance calculator, an Internet health report, a Potential Names for Fasteddie's Band, a title trap, a Time Cube, some vomit, a linking book to Guess the Verb!, a bag of cheese chunks, a Jack O' Lantern, some Mario Kart Wii friend codes, a broom, a box of tissues, a dictionary, a linking book to L.U.D.I.T.E., a lamp, THIS, a duffel bag, a bag of crackers, and a steel spring here.
+The Living Room
+Wayne and Marn are sitting in the large bay window in the southern wall.  Darkness rests like a blanket on the quiet harbor.
+pj, Ford, James, and Robby are sitting in the aging navy blue couch occupying much of the east wall.  Jim is sitting in the rocking chair in the corner.
+A penguin named Bob is here.  stucky and Matthew are sitting on him.  A folding chair is here.  An impossibly large yet portable amphibious weatherproof couch is here.  Mordred is sitting on it.  Llyrica is sitting on a beach blanket.  A giant pink inflatable chair is here.  Charkes and Rachelle are sitting on it.  A Japanese cartoon towel is here.  An impossibly large yet portable ambiguous weatherproof couch is here.  An A-Team beach towel is here.  A dune buggy is parked here.  Someone's canvas camp chair is here.  A blue folding chair is here.  rgm is sitting on it.
+You see an oily spot, a theremin, a box of silly hats, a tactical computer, the rules for the Rack-O! game, a salt shaker, a Project Euler folder, the sequence guesser, a dictionary bookshelf, a Weather Trophy, Urban Dictionary, the KoL boy, a bucket, a stock boy, the URL trap, a gold pezbuster, a candied apple, a pet rock, a homeland security monitor, a kraken box, a jukebox, a fetcher, Abby, a horn of plenty, and a supersoaker here.
+Wayne is here.  Ragnar is distracted.  uwiz and Kenny are daydreaming.  Marn, Barry, and Becky are idling.  Robby, keith, Chris, Ben, pj, and Ken are dozing.  Mordred, rgm, Ford, Dea, Llyrica, stucky, Atwood, James, Rachelle, Jim, Charkes, Matthew, Eclipse, Jehk, Kyle, and Roy are off in another world.
+Crag has arrived.
+Crag says, "wow, so many old-school MOOers are still around.  That's awesome."
+Ragnar says, "CRAG"
+Crag says, "RAGNAR"
+Crag sits on the first couch between pj and Ford.
+Ragnar says, "wzup"
+Crag says, "I'm getting kinda choked up reading @who"
+Ragnar says, "you shoudl see a doctor"
+Crag says, "You think it's hamthrax?"
+The packrat scurries over from the hallway.
+The packrat drops a Jack O' Lantern.
+Crag says, "I'm pretty sure the aporkalypse is over"
+uwiz says, "E169??"
+The packrat scurries north.
+You haven't specified which "jack" you mean.
+A big orange pumpkin with its insides scooped out and a scary face carved into it.
+Contents:
+  an HTTP mapper
+  an httpd module
+A dog. German Shepherd. Mostly black.
+She is awake and looks bored.  She looks friendly.
+An LCD screen with little controls on the frame. A microphone and a video camera are mounted on it. It scans the room for urls and display them.
+uwiz:      http://www.vistahelpforum.com/showthread.php?t=3280
+Ben:       http://a52.g.akamaitech.net/f/52/827/1d/www.space.com/images/080923-shuttles-pad-02.jpg
+stucky:    http://www.instructables.com/id/How-to-Charge-Any-USB-Device-by-Riding-Your-Bike/
+stucky:    http://www.facebook.com/ext/share.php?sid=75847702723&h=cSZif&u=mVQua&ref=nf
+stucky:    http://www.chicagotribune.com/technology/chi-ap-wi-gps-police,0,5867383.story
+stucky:    http://www.last.fm/music/Thin+Lizzy/_/Wild+One?autostart
+Ragnar:    http://googleblog.blogspot.com/2009/05/energy-and-internet.html
+Ragnar:    http://www.env-econ.net/2009/05/capn-trade.html
+stucky:    http://www.mdbelectronics.com/MDB-electric.html
+Kyle:      http://www.hulu.com/watch/72434/saturday-night-live-motherlover
+stucky:    http://www.wired.com/dangerroom/2009/05/cia-our-drones-are-killing-terrorists-promise/
+stucky:    http://graphics8.nytimes.com/images/2009/05/11/world/11intel.600.jpg
+Kenny:     http://functionalhermit.wordpress.com/2009/01/23/burn-notice-a-21st-century-a-team-in-a-good-way/
+Kenny:     http://www.hulu.com/watch/59572/burn-notice-ask-a-spy-dating-a-spy
+Kenny:     http://www.hulu.com/watch/2905/burn-notice-ask-a-spy---burglar-proofing
+Kenny:     http://www.sonatype.com/books/maven-book/reference/installation-sect-compare-ant-maven.html
+swb:       https://www.livemeeting.com/cc/atis/join?id=HC4SH5&role=attend&pw=p%5E%2FX3%7EW
+rgm:       http://rgm.nu/ragnar_ant.xml
+Kenny:     http://news.google.com/archivesearch?as_user_ldate=1997%2F01&as_user_hdate=2009%2F12&q=webinar&scoring=t&hl=en&ned=us&q=webinar&lnav=od&btnG=Go
+Barry:     http://news.google.com/archivesearch?as_q=webinar&num=10&hl=en&btnG=Search+Archives&as_epq=&as_oq=&as_eq=&ned=us&as_user_ldate=1990&as_user_hdate=1996&lr=&as_src=&as_price=p0&as_scoring=
+Kenny:     http://iconalysis.com/ceci-n-est-pas-un-link.png
+Ford:      http://www.savagechickens.com/2009/05/the-art-of-skateboarding.html
+Ford:      http://content.perspicuity.com/?q=node/330
+stucky:    http://thepaperbackexchange.net/
+stucky:    http://www.koco.com/cnn-news/19439675/detail.html
+stucky:    http://www.wired.com/threatlevel/2009/05/lawmaker-defends-imprisoning-hostile-bloggers/
+stucky:    http://www.cio.com/article/print/492484
+Ben:       http://www.amtonline.com/publication/article.jsp?pubId=1&id=1935
+Ben:       http://myweb.accessus.net/~090/as13/as13bill.png
+swb:       http://maps.google.com/maps?q=palo%20alto%2C%20ca
+swb:       http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=146+Honness+Ln,+Ithaca,+NY+14850&sll=37.446199,-122.124788&sspn=0.000838,0.001227&ie=UTF8&ll=42.430062,-76.465156&spn=0.001558,0.002454&t=h&z=19
+Kenny:     http://www.npr.org/templates/story/story.php?storyId=104058879
+Barry:     http://meatcards.com/
+Ben:       http://nethack.wikia.com/wiki/Lembas_wafer
+Marn:      http://www.organic.4max.us/images/Natural-Papaya-Slices.jpg
+Marn:      http://www.greenbulk.com/images/dried-papaya-slices.jpg
+Marn:      http://kpreid.livejournal.com/11404.html
+pj:        http://codecollab.com/
+[urls expire 1 day after their creation]
+Kenny says, "It used to be more"
+Crag says, "I'll take what I can get"
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Xplat          Little point                  6 days                            
+Xeric          Brig                          5 days                            
+Rachelle       Living room                   3 days                            
+James          Living room                   a day                             
+Becky          Living room                   a day       workity work          
+Roy            Living room                   23 hours                          
+Matthew        Living room                   22 hours                          
+Jim            Living room                   21 hours                          
+Llyrica        Living room                   15 hours    sneezing              
+Tobin          Coastal path                  14 hours                          
+Kyle           Living room                   10 hours                          
+Dea            Living room                   10 hours                          
+stucky         Living room                   8 hours                           
+rgm            Living room                   5 hours                           
+Ford           Living room                   4 hours                           
+Eclipse        Living room                   3 hours     bjort                 
+Mordred        Living room                   3 hours                           
+Charkes        Living room                   an hour                           
+Atwood         Living room                   an hour     ballin'               
+Jehk           Living room                   an hour                           
+Chris          Living room                   48 minutes                        
+keith          Living room                   38 minutes                        
+Barry          Living room                   37 minutes  sobering up           
+Ben            Living room                   31 minutes                        
+Ken            Living room                   21 minutes                        
+Robby          Living room                   16 minutes                        
+pj             Living room                   14 minutes                        
+Marn           Living room                   13 minutes  z, really             
+Wayne          Living room                   4 minutes                         
+Ragnar         Living room                   2 minutes                         
+uwiz           Living room                   a minute                          
+Kenny          Living room                   33 seconds  Conspiracy            
+Crag           Living room                   0 seconds                         
+
+Total: 33 people, 5 of whom have been active recently.
+Kenny | Domen 'havesa.rs.' nije registrovan.
+Chris says, "are there cells in the body that don't experience senescence?"
+Chris says, "i.e. never die?"
+uwiz says, "man, .md domains are still $150/year too"
+Kenny says, "damn doctors"
+uwiz says, "more like damn hoping-to-prey-on-doctors"
+Ragnar [to Chris]: IN MY PANTS
+Crag . o O ( i-am-not-really-an.md )
+Crag . o O ( but-i-play-one-on.tv )
+Kenny | Domen 'avata.rs.' nije registrovan.
+Kenny | Domen 'bie.rs.' nije registrovan.
+uwiz says, ".tv is as least only $25 now"
+uwiz says, "s/as/at"
+Eclipse [to Chris]: 05 mazda3 hatchback sp23 special edition
+Chris says, "cool"
+Chris says, "can i have it"
+Eclipse says, "sure, when i'm done with it"
+Ken says, "we've seen how you're done with cars"
+Ken says, "also, cool"
+Eclipse chuckles.
+Eclipse says, "just the ones low to the ground, i drive them into it"
+Kenny | Domen 'invente.rs.' nije registrovan.
+Eclipse says, "it's a sweet ride, tho..that edition comes with a really nice set of options"
+Kenny | Domen 'cza.rs.' nije registrovan.
+Kenny | Domen 'cyphe.rs.' nije registrovan.
+Kenny says, "hmm"
+Jim bdbdbd
+Kenny | Domen 'defame.rs.' nije registrovan.
+uwiz says, "eventually .yu should get released"
+uwiz says, "then people could do fukkk.yu"
+Eclipse whuggles Jim.
+Jim says, "i dislike domain names that are words with periods in the middle"
+Kenny | Domen 'develope.rs.' nije registrovan.
+Jim whuggles Eclipse.
+Ken [to Jim]: me too
+Kenny says, "well, develope.rs could be either"
+Jim says, "a pseudo-french russian domain?"
+uwiz says, "none of the TLDs in .rs are available (according to wikipedia at least)"
+uwiz | The top level domain is intended for all interested users. All sub-domains except in.rs are reserved for legal entities only.
+Kenny says, "You're reading it wrong, I guess."
+---------------------------------- uwiz -----------------------------------
+Regular .rs registrations will be made under the following second-level domains:[3]
+
+    * .co.rs  Corporations
+    * .org.rs  Civil organizations and associations
+    * .edu.rs  Educational institutions and organizations (outside of ac.rs sub-domain)
+    * .ac.rs (delegated)  Academic and research network of Serbia
+    * .gov.rs (delegated)  State and Government authorities
+    * .in.rs  Personal use
+--------------------------- uwiz stops pasting ----------------------------
+Kenny says, "Yeah, all those listed subdomains are reserved for legal entities."
+Kenny says, "But the top level domain is for any interested user"
+Jim says, "did .rs domains just become publicly-gettable?"
+Kenny says, "I think in early 2008"
+uwiz says, "hrm that's true, 'legal entities' is broad"
+Kenny says, "I was just looking for a domain for Marn"
+uwiz says, "but so you'd have to incorporate in serbia?"
+Kenny says, "no..."
+Kenny | The Registrant can be a physical person or legal entity, a citizen of Serbia or a foreigner.
+Kenny says, "From rnids.rs"
+Kenny says, "Looks like it's about $25/year for a top level in .rs"
+Jim says, "serbia owns .rs?"
+Jim says, "oh right russia is .ru"
+uwiz says, "man those are some cheap domains"
+uwiz says, "oh oops that is what RNIDS charges registrars"
+Jim says, "you can become a registrar for US domains easily"
+Jim says, "i dunno from .rs though"
+uwiz says, "i wonder if nic.yu will ever give up .yu"
+Jim says, "according to wikipedia .yu is being abolishe on 30 sep"
+Jim d
+uwiz says, "i wonder what will become of it after that"
+Kenny says, "acquire.rs"
+Eclipse says, "holy cats am i tired"
+Kenny says, "encode.rs"
+Ben | Ken says, "oh yeah, I've been using git-svn in anger at work"
+Ben says, "me too"
+Kenny says, "enhance.rs and enlarge.rs are available"
+Kenny idles: setting up new viagra business
+Jehk says, "tirami.su"
+Jehk says, "I doubt that tld is useable though"
+Ben | Marn says, "my primary motivation for this is to NEVER EVER AGAIN have to change my urls"
+Chris says, "my 20D battery life is beginning to become a real problem"
+Ben [to Marn]: you could become a radio amateur and register your callsign.  they're all garbage 6-7 char strings ;-)
+Ben [to Chris]: new batteries aren't that much
+Ben got 2 for $20 on ebay way back for his D30
+Kenny says, "tweeze.rs"
+Chris says, "i bought a new battery"
+Chris says, "and it quickly went to shit"
+Chris says, "i don't know if it's the charger or the camera or what"
+Kenny says, "typewrite.rs"
+Eclipse says, "cucumbe.rs"
+uwiz says, "spanke.rs"
+Eclipse says, "teabagge.rs"
+Kenny says, "wa.rs"
+uwiz [to Eclipse]: sure to be popular after the teabagging parties just recently!
+Eclipse [to uwiz]: my thoughts exactly
+uwiz says, "wanke.rs"
+Ken cackles at xkcd
+Eclipse says, "leathe.rs"
+Ken [to Chris]: you know the best way to get new 20D batteries?
+Ken says, "buy a pre-owned 40D"
+Ken says, "it'll come with a new battery"
+Ken says, "hth"
+Barry blinks
+Kenny reboots for 10.5.7
+James idly wanders off.
+James stands up from the first couch.
+James goes north.
+Jehk says, "Hmm, you can register .su domains, I guess"
+Jehk says, "600 rubles/year (about $18)"
+Barry . o O ( mudde.rs )
+Jehk says, "tirami.su is taken"
+Barry says, "peggy.su"
+Ben says, "peggy@peggy.peggy.peggy.su"
+Barry says, "a-boy-named.su"
+Barry says, "tan.su"
+Jehk says, "jujit.su"
+Barry says, "gin.su"
+Jehk says, "heh"
+Kenny says, "su should be popular with japanese"
+Jehk nods to Kenny.
+Kenny says, "i.will.su"
+Barry says, "been-in-an-accident-call-me-and.su"
+Barry loses
+Kenny says, "sek.su"
+Jehk [to Kenny]: taken
+Kenny says, "tis.su"
+Kenny says, "pur.su"
+Kenny says, "is.su"
+Jehk says, "those last two look available"
+Jehk says, "but most of my ideas about safeguarding the revolution have already occurred to others"
+Ben says, "gin.su"
+Ben says, "git.su"
+Ben | http://wtpt.org/tu?gxkxpf => http://www.myconfinedspace.com/wp-content/uploads/tdomf/62053/Her%20Vagina-500x400.jpg
+Ben says, "sfw"
+Crag idly wanders off.
+Crag stands up from the first couch.
+The Hallway
+Worn hardwood floor and a dim ceiling light adorns this hallway in the old house attached to the lighthouse.  A high chair facing the wall is here.  The door to the lighthouse tower is open.
+You see an operating systems record, a homepage registry, a black chest, a Larry Wall quote factory, a timer.asm, a linking book to Suveh Nux, a stamp, a doorknob, Nakai, a linking book to Zork 1 - The Great Underground Empire, a milk carton, an idol, a birdie, a clam shell, a bag of parrot food, a Favourite Films, a linking book to A Change in the Weather, a word server, a linking book to Heavenly Rest Switcheroo, a linking book to The Hitchhiker's Guide to the Galaxy, a linking book to I-0, a METAR thing, a distance calculator, an Internet health report, a Potential Names for Fasteddie's Band, a title trap, a Time Cube, some vomit, a linking book to Guess the Verb!, a bag of cheese chunks, some Mario Kart Wii friend codes, a broom, a box of tissues, a dictionary, a linking book to L.U.D.I.T.E., a lamp, THIS, a duffel bag, a bag of crackers, and a steel spring here.
+Crag has arrived.
+Crag sits on the high chair facing the wall.
+Wayne arrives from the living room.
+Wayne goes west.
+Barry arrives from the living room.
+Barry goes west.
+Robby arrives from the living room.
+Robby goes west.
+keith arrives from the living room.
+keith goes west.
+Ken arrives from the living room.
+Ken goes west.
+keith comes into the house from the tower.
+keith goes south.
+James comes into the house from the tower.
+James goes south.
+Barry comes into the house from the tower.
+Barry goes south.
+The packrat comes into the house from the tower.
+The packrat scurries south.
+The packrat scurries over from the living room.
+The packrat scurries west.
+Wayne comes into the house from the tower.
+Wayne goes south.
+Ken comes into the house from the tower.
+Ken goes south.
+Barry arrives from the living room.
+Barry goes west.
+Robby comes into the house from the tower.
+Robby goes south.
+Marn comes into the house from the tower.
+Marn goes south.
+Barry comes into the house from the tower.
+Barry goes south.
+Wayne arrives from the living room.
+Wayne goes west.
+Barry arrives from the living room.
+Barry goes west.
+keith arrives from the living room.
+keith goes west.
+Wayne comes into the house from the tower.
+Wayne goes south.
+Robby arrives from the living room.
+Robby goes west.
+Ken arrives from the living room.
+Ken goes west.
+swb comes into the house from the tower.
+swb goes south.
+Wayne arrives from the living room.
+Wayne goes west.
+keith comes into the house from the tower.
+keith goes south.
+Marn arrives from the living room.
+Jehk follows Marn.
+Jehk arrives from the living room.
+Marn goes west.
+Jehk follows Marn.
+Jehk goes west.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Kenny arrives from the living room.
+Kenny goes west.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+stucky arrives from the living room.
+stucky goes west.
+swb arrives from the living room.
+swb goes west.
+swb comes into the house from the tower.
+swb goes south.
+rgm arrives from the living room.
+rgm goes west.
+A fetcher arrives from the living room.
+The fetcher goes west.
+A fetcher comes into the house from the tower.
+The fetcher goes south.
+A fetcher arrives from the living room.
+The fetcher goes west.
+A fetcher comes into the house from the tower.
+The fetcher picks up the title trap.
+The fetcher goes west.
+Ben arrives from the living room.
+Ben goes west.
+Ragnar arrives from the living room.
+Ragnar goes west.
+Dea arrives from the living room.
+Dea goes west.
+Eclipse arrives from the living room.
+Eclipse goes west.
+Chris arrives from the living room.
+Chris goes west.
+You have mail (6: howdy) from pj.
+Type `help mail' for info on reading it.
+pj arrives from the living room.
+pj goes west.
+Matthew arrives from the living room.
+Matthew goes west.
+Kyle arrives from the living room.
+Kyle goes west.
+swb arrives from the living room.
+swb goes west.
+Jim arrives from the living room.
+Jim goes west.
+Mordred arrives from the living room.
+Mordred goes west.
+Charkes arrives from the living room.
+Charkes goes west.
+Rachelle arrives from the living room.
+Rachelle goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+uwiz arrives from the living room.
+uwiz goes west.
+The packrat comes into the house from the tower.
+The packrat lies down.
+Roy arrives from the living room.
+Roy goes west.
+The packrat stirs.
+The packrat scurries west.
+Llyrica arrives from the living room.
+Llyrica goes west.
+keith arrives from the living room.
+keith goes west.
+A fetcher comes into the house from the tower.
+The fetcher goes south.
+A fetcher arrives from the living room.
+The fetcher goes west.
+Becky arrives from the living room.
+Becky goes west.
+James arrives from the living room.
+James goes west.
+The packrat comes into the house from the tower.
+The packrat scurries south.
+The packrat scurries over from the living room.
+The packrat scurries west.
+A fetcher comes into the house from the tower.
+The fetcher goes south.
+A fetcher arrives from the living room.
+The fetcher goes west.
+Ragnar comes into the house from the tower.
+Barry follows Ragnar.
+Barry comes into the house from the tower.
+Ken follows Barry.
+Ken comes into the house from the tower.
+Perfect Tommy follows Ken.
+Perfect Tommy comes into the house from the tower.
+Ragnar goes south.
+Barry follows Ragnar.
+Barry goes south.
+Ken follows Barry.
+Ken goes south.
+Perfect Tommy follows Ken.
+Perfect Tommy goes south.
+Kenny comes into the house from the tower.
+Kenny goes south.
+Jehk comes into the house from the tower.
+Jehk goes south.
+Roy comes into the house from the tower.
+Roy goes south.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+A gold pezbuster sails over from the living room.
+Ragnar follows a gold pezbuster.
+Ragnar arrives from the living room.
+Barry follows Ragnar.
+Barry arrives from the living room.
+The gold pezbuster touches down and skids to a halt.
+Ragnar takes a roundhouse swing with the sledgehammer, catching the gold pezbuster squarely and launching it southward!
+The gold pezbuster goes hurtling south.
+Ragnar follows a gold pezbuster.
+Ragnar goes south.
+Barry follows Ragnar.
+Barry goes south.
+uwiz comes into the house from the tower.
+uwiz goes south.
+Robby comes into the house from the tower.
+Robby goes south.
+Ben comes into the house from the tower.
+Ben goes south.
+Atwood comes into the house from the tower.
+Atwood goes south.
+Barry arrives from the living room.
+Barry goes west.
+pj comes into the house from the tower.
+pj goes south.
+James comes into the house from the tower.
+James goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Marn comes into the house from the tower.
+Marn goes south.
+Robby arrives from the living room.
+Ken arrives from the living room.
+Robby goes west.
+Ken goes west.
+Marn arrives from the living room.
+Marn goes west.
+stucky comes into the house from the tower.
+stucky goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+keith comes into the house from the tower.
+keith goes south.
+Ragnar comes into the house from the tower.
+Ragnar goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Ragnar follows Abby.
+Ragnar arrives from the living room.
+Abby goes west.
+Ragnar follows Abby.
+Ragnar goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Ragnar comes into the house from the tower.
+Ragnar goes south.
+Becky comes into the house from the tower.
+Becky goes south.
+James arrives from the living room.
+Ragnar follows James.
+Ragnar arrives from the living room.
+James goes west.
+Ragnar follows James.
+Ragnar goes west.
+Becky arrives from the living room.
+Becky goes west.
+keith arrives from the living room.
+keith goes west.
+stucky arrives from the living room.
+stucky goes west.
+Abby arrives from the living room.
+Abby goes west.
+Kenny arrives from the living room.
+Kenny goes west.
+Jehk arrives from the living room.
+Jehk goes west.
+uwiz arrives from the living room.
+uwiz goes west.
+Ben arrives from the living room.
+Ben goes west.
+pj arrives from the living room.
+pj goes west.
+Roy arrives from the living room.
+Roy goes west.
+The packrat comes into the house from the tower.
+The packrat scurries south.
+The packrat scurries over from the living room.
+The packrat scurries west.
+Abby comes into the house from the tower.
+Abby takes the linking book to Zork 1 - The Great Underground Empire.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+The packrat comes into the house from the tower.
+The packrat lies down.
+The packrat stirs.
+The packrat scurries west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+Abby comes into the house from the tower.
+Abby goes south.
+Abby arrives from the living room.
+Abby goes west.
+A fetcher comes into the house from the tower.
+The fetcher goes west.
+rgm comes into the house from the tower.
+rgm [to Nakai]: join ktown
+Nakai goes west.
+rgm goes west.
+Abby comes into the house from the tower.
+Abby takes the Mario Kart Wii friend codes.
+Abby goes west.

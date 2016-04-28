@@ -1,0 +1,41 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.
+Last connected Sat Jul 28 20:24:06 2007 PDT from localhost
+#$#mcp-negotiate-can 1285890486 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1285890486 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1285890486 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1285890486
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Master Bedroom                0 seconds                         
+
+Total: 1 person, who has been active recently.
+The Den
+The Fireplace
+The Prauge-Rahmmer's Parlor
+The East Third Floor Hallway
+You see a west wall here.
+The East Second Floor Balcony
+The North Second Floor Balcony
+The Second Floor Veranda
+The Grand Stair Upper Landing
+The On the Grand Stair
+The Grand Stair Lower Landing
+The Ballroom
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+You see a particularly dreary corner of the room, a Punching Bag for Binder, a bucket, a mop, a round tuit, a hunk of quartz, a cheese, a whitespace, and a Wind-Up Mariachi Band here.
+Crag has arrived.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+
+Total: 1 person, who has been active recently.
+*** Redirecting connection to new port ***

@@ -1,0 +1,154 @@
+Waterpoint: pickled spitfires[326]
+
+*** Redirecting old connection to this port ***
+#$#mcp version: 2.1 to: 2.1
+Last connected Sun Apr 14 16:23:54 2013 PDT from 63.224.54.239
+The Little Point
+A small jut of land sticks out into the sea here. The ocean rolls against the rocky coast.  The Susan Variable is resting here.  It is dark out and the stars are shining.  It is cold.
+#$#mcp-negotiate-can 1654798425 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1654798425 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 1654798425 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1654798425 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1654798425
+administration (#176) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of root class (#1).
+-------------------------------- finished ---------------------------------
+-----
+HELP ON THE ADMINISTRATION
+==========================
+
+No help found.
+
+-----
+ADMIN-INDEX -- NOT FOUND
+========================
+
+Administration group help thinks it knows about `admin-index' but something's messed up.
+
+Please tell James or a documenter.
+
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+James          lost at sea                   Sun Mar 27 12:02:56 2011 PDT
+
+Total: 1 person, who has not been active recently.
+*Review-Group, *RV, *RG  
+    The review group. See the review policy linked off of the waterpoint home page.
+*Review-Requests, *rvr, *requests  
+    Send your review requests here!
+*comics, **comics  [Public]
+    A mailing list for Alex to talk about comics.
+*Topography, *Geography, *theme  [Public]
+    Discussion of the natural and man-made features of the island, its weather, its wildlife, its natural resources and its surrounding water.
+*Boston, *bos  [Public]
+    Announcements of interest to people in the Boston area (and those willing to come to the Boston area).
+*mp3, *mp3s  [Public]
+    For trading MP3 audio files for REVIEW PURPOSES ONLY!
+*animes  [Public]
+    A mailing list to discuss Japanese animation.
+*macintosh, *mac, *macin, *tosh  [Public]
+    Macintoshes and their ilk.
+*recipes, *baking, *cooking, *food  [Public]
+    A list for discussing the art of cooking.
+*movies  [Public]
+    A list for discussion of movies, new or old.
+*games  [Public]
+    Announcements and discussions of games.
+*OOWP, *phrases, *pyohowp  [Public]
+    Only On Waterpoint. Stuff you won't hear anywhere else.
+*twin  [Public]
+    Forum for TWin discussion. See also http://waterpoint.moo.mud.org/twin/
+*feature-announce  [Public]
+    For announcing feature objects, useful VR objects, utilities, and anything else that people would find useful, but might not know about otherwise.
+    This list is intended to be inclusive rather than exclusive. If it's useful (or even just interesting), tell us about it.
+*XMPP, *jabber  [Public]
+    A mailing list to talk about Jabber/XMPP on MOO.
+*openpit  [Public]
+    Stuff about openpit, especially hacking.
+-------- end of @subscribe -------
+You are subscribed to the following lists:
+    *Bug-reports                0 new messages
+    *welcome-messages           0 new messages
+    *server-hacking             0 new messages
+    *Documentation              0 new messages
+    *core                       0 new messages
+    *News                       0 new messages
+    *Seattle                    0 new messages
+    *help                       0 new messages
+    *db-issues                  0 new messages
+    *PERIL-Ideas                0 new messages
+    *building-issues            0 new messages
+15 messages on *Bug-reports:
+ 962:  May 23 2010    Xeric             There are 503 $recycler.orphans again.
+ 963:  Jun  9 2010    Kenny             $jaddress:unescape_for_url doesn't chec
+ 964:  Jul 30 2010    Ben               If #4441.handler.owner is out of quota 
+ 965:  Feb  2 2011    keith             stock boy
+ 966:  Aug 16 2011    Marn              'help room matching' should turn up #44
+ 967:  Sep 28 2011    keith             take blame
+ 968:  Oct 20 2011    Feoh              XMPP feature induced bug on login
+ 969:  Nov  1 2011    Perfect Tommy     looks like the www server is down -- i 
+ 970:  Nov  1 2011    Ken               >  looks like the www server is down --
+ 971:  Nov  1 2011    Marn              $maxint is 32-bit and the server is 64-
+ 972:  Nov  1 2011    Marn              #1495::unpack_name traceback
+ 973:  Nov  6 2011    Luke-Jr           Getting verb help should tolerate paren
+ 974:  Nov  6 2011    Xeric             what's with the excess of "To: X (now X
+ 975:  Dec  7 01:12   Rob               $http proxy
+>976:  Mar 22 06:40   stucky            bob's url announcement crashed the room
+----+
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+craque         Moccasin Falls                59 days                           
+Xythian        Tent                          38 days                           
+Donovan        Moccasin Falls                10 days                           
+Ken            Moccasin Falls                3 days                            
+Becky          Moccasin Falls                2 days                            
+pj             Moccasin Falls                2 days                            
+Lly            Moccasin Falls                2 days      sneezing              
+Rachelle       Moccasin Falls                a day                             
+Eclipse        Moccasin Falls                a day       bjort                 
+Matthew        Moccasin Falls                a day                             
+rgm            Nature trail                  a day       beer                  
+Charkes        Moccasin Falls                14 hours    Workin'               
+Kyle           Moccasin Falls                12 hours                          
+keith          Moccasin Falls                11 hours    Even if I tried...    
+Chris          Moccasin Falls                7 hours                           
+Ben            Moccasin Falls                7 hours                           
+Marn           Moccasin Falls                6 hours                           
+stucky         Moccasin Falls                5 hours                           
+Roy            Moccasin Falls                4 hours                           
+Rob            Moccasin Falls                4 hours                           
+Barry          Moccasin Falls                4 hours                           
+Jim            Shady pond                    4 hours     zzz                   
+Ford           Moccasin Falls                2 hours                           
+Tobin          Apple tree fort               2 hours                           
+Crag           Little point                  0 seconds                         
+
+Total: 25 people, 1 of whom has been active recently.

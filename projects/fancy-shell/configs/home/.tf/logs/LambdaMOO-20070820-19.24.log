@@ -1,0 +1,55 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 113 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              1 new message
+Last connected Sat Jul 28 19:56:27 2007 PDT from idea-inc.com
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 856 on *News (#123):
+Date:     Sun Jul 29 00:00:14 2007 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Architecture Review Board has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        57        16         8   *   Kagan (#102427)
+        50        14         8   *   Profane (#30788)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+Message 5096 on *Core-DB-Issues (#8175):
+Date:     Wed Aug 15 01:47:29 2007 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+Since one concerned user paged me about this: I made up the $registration_db example in 5090.  I don't have access to $registration_db.  I found the first email address by doing a web search; the others are fictitious.
+--------------------------
+< connected: Crag. Total: 115 >

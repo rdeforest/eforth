@@ -1,0 +1,136 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+Minty is here.  enceladus and Crag are distracted.  stormagnet is off in another world.
+Last connected Sat Jan 29 13:15:13 2005 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 1841766147 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1841766147 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1841766147 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1841766147
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+You can't go that way.
+The West Hallway
+You see nothing special.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+The East Hallways
+You see nothing special.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Obvious exits:  south, the soth east, the south west, the north east, the north west, east, west, and north.
+The Eastern Fireplace
+You are beside the eastern fireplace at the northern end of the ballroom. An elevator is to the north.  A huge brick fireplace is set into the center of the wall.  Plants hang from the ledge of the balcony overhead, and two vases of flowers flank the portrait hanging over the mantle.  A thick red rug lies beneath your feet.  A pair of sofas face each other across the fireplace.
+Obvious exits:  the south west, north, south, and the elevator.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+The Western Fireplace
+You are beside the western fireplace, at the northern end of the ballroom. An elevator is to the north.  A huge brick fireplace is set into the center of the wall.  A soft red rug lies under your feet.  A pair of dark green sofas face each other across the fireplace, with a coffee table standing between them.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Obvious exits:  south, the soth east, the south west, the north east, the north west, east, west, and north.
+The Grand Stair Lower Landing
+You see nothing special.
+The On the Grand Stair
+You see nothing special.
+The Grand Stair Upper Landing
+You see nothing special.
+The Second Floor Veranda
+You see nothing special.
+Obvious exits:  south, west, and the stair.
+The Second Floor Veranda
+You see nothing special.
+Obvious exits:  south and east.
+The North Second Floor Balcony
+You see nothing special.
+Obvious exits:  west, north, and east.
+The West Second Floor Balcony
+You see nothing special.
+The West Hallway
+You see nothing special.
+The West Hallway
+You see nothing special.
+The West Hallway
+You see nothing special.
+The West Hallway
+You see nothing special.
+Obvious exits:  east, north, and west.
+The Servant's Quarters
+You see nothing special.
+The West Hallway
+You see nothing special.
+Obvious exits:  east, north, and west.
+The West Hallway
+You see nothing special.
+The West Hallway
+You see nothing special.
+The West Hallway
+You see nothing special.
+You can't go that way.
+Obvious exits:  east and north.
+The Servant's Quarters
+You see nothing special.
+Obvious exits:  south.
+You now have sam-person with object number #1167 and parent generic thing (#5).
+Description set.
+Property added with value 0.
+Property removed.
+Carrying:
+ the Builders Tools                      the Elevator Car
+ some Conversion Utilities               an Elevator Door Out
+ the Elevator Stop                       a sam-person
+ the Elevator Shaft                      
+"d" could refer to Sherman (#847), Devil (#959), or Devlyn_Syde (#849).
+Objects owned by Robert (from #0 to #1167):
+  5K  #909 Robert                    *[Servant's Quarters]
+ <1K  #897 In front of the East Elev 
+ <1K  #911 East Elevator Shaft       
+ <1K  #912 East Elevator First Floor  [East Elevator Shaft]
+ <1K  #914 In front of the East Elev 
+ <1K  #430 East Elevator Second Floo  [East Elevator Shaft]
+ <1K  #433 East Elevator Third Floor  [East Elevator Shaft]
+ <1K  #918 East Elevator              [In front of the East Elevator]
+ <1K  #921 Grand Stair Lower Landing 
+ <1K  #923 On the Grand Stair        
+ <1K  #925 Grand Stair Upper Landing 
+ <1K  #941 East Elevator Car          [East Elevator First Floor Stop]
+ <1K  #906 elevator                   *Eastern Fireplace->In front of the Eas
+ <1K  #931 out                        East Elevator First->In front of the Eas
+ <1K  #913 enter                      In front of the Eas->East Elevator First
+ <1K  #915 elevator                   *East Second Floor ->In front of the Eas
+ <1K  #933 out                        East Elevator Secon->In front of the Eas
+ <1K  #916 enter                      In front of the Eas->East Elevator Secon
+ <1K  #917 elevator                   *East Third Floor H->East Elevator Third
+ <1K  #922 north                      *Ballroom->Grand Stair Lower L
+ <1K  #930 down                       On the Grand Stair->Grand Stair Lower L
+ <1K  #924 up                         Grand Stair Lower L->On the Grand Stair
+ <1K  #929 down                       Grand Stair Upper L->On the Grand Stair
+ <1K  #926 up                         On the Grand Stair->Grand Stair Upper L
+ <1K  #927 stair                      *Second Floor Veran->Grand Stair Upper L
+ <1K  #910 Builders Tools             [Robert]
+ <1K  #834 Conversion Utilities       [Robert]
+  3K  #938 Elevator Button            [Nowhere]
+  1K  #903 Elevator Stop              [Robert]
+  5K  #939 Elevator Shaft             [Robert]
+ <1K  #940 Elevator Car               [Robert]
+  1K  #907 Elevator Door In           <invalid>-><invalid>
+ <1K  #937 Elevator Call Button       [In front of the East Elevator]
+  1K  #942 Elevator Door Out          [Robert]
+ <1K  #943 out                        East Elevator Car-><invalid>
+ <1K  #944 1                          [East Elevator Car]
+ <1K  #945 2                          [East Elevator Car]
+ <1K  #946 3                          [East Elevator Car]
+ <1K  #947 Inside Elevator Button     [Nowhere]
+ <1K #1167 sam-person                 [Robert]
+-- 40 objects.  Total bytes: 42,503.------------------------------------------

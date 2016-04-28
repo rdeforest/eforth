@@ -1,0 +1,206 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+You see a particularly dreary corner of the room, a Punching Bag for Binder, a bucket, a mop, a Binder's pet rock, a round tuit, a hunk of quartz, a cheese, a whitespace, and a Wind-Up Mariachi Band here.
+Binder is here, asleep.
+Last connected Sun May 28 20:35:38 2006 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 2091732574 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 2091732574 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 2091732574 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 2091732574
+Binder's friends arrive to cart him off to bed.
+< Binder has connected.  Total: 2 >
+Binder arrives from the Ballroom.
+Binder punches the bag HARD.   >>THUMP!<<
+Devil has connected.
+Devil slumps in the particularly dreary corner of the room.
+< GhostOfTheManor has connected.  Total: 4 >
+Binder says, "Spooookeeeee."
+Devil glooms
+Binder glowers.
+Crag sits on an easy chair.
+Devil stands up from the particularly dreary corner of the room.
+Devil sits on an easy chair.
+Binder sits on an easy chair.
+Devil cheers for chairs!
+Binder says, "So I had a crazy idea this morning."
+Binder says, "Use a revision control system which supports the idea of particular point in time instances of files as changeset ... to be your Linux distribution package repository."
+Binder says, "Assume that from the user's side of things, a request for a package takes the form of RELEASE-NAME::PACKAGE-NAME."
+Binder says, "It's fulfilled by the repository with all the point in time [tagged RELEASE-NAME] files from that subtree [PACKAGE-NAME], probably in the form of a compressed archive bundled with metadata such as deploy top of tree information."
+Binder says, "Server side storage is a black box but probably would need to be stored as individual changesets in compressed archives for conservation of disk."
+Binder says, "So what does this get us?"
+Binder says, "It gets us version-reverting."
+Binder says, "Gosh, Foonix Unstable is too crashy, I'm going to roll my entire system back to Foonix Stable."
+Binder says, "Heck, smashmail-0.3 is missing several mail smashing features I require, I'll grab mashmail-0.5 in one smooth lubricated motion."
+Binder says, ""
+Binder says, "Oops, too far, I'll roll back to smashmail-0.4, ta-da, all done."
+Binder says, "What does this cost us?"
+Binder says, "Enormous quantities of disk space on the server side and probably enormous quantities of bandwidth transferring arbitrary blobs of data out."
+Binder says, "What does it require?"
+Binder says, "A revision control system which tracks changesets AND dependencies among them."
+Binder says, "Probably some kind of user-friendly frontend so that people don't have to spend a lot of time figuring out the syntax for a particular state change."
+Binder says, "What problem does this solve?"
+Binder says, "Smooth reversion of an entire set of software packages."
+Binder says, "Hm.  On further reflection [that is, monologuing] I think it's too much work for that pay off.  Probably easier to hang hooks on something like apt-get to allow roll-back scripts for going to an earlier version in the pre-, post-install stuff."
+Crag says, "I think slash-package is very close to what you want"
+Crag says, "What it lacks is development community energy and completeness"
+Crag says, "But I think you can get the roll-back/roll-forward features you want out of it...eventually"
+Crag says, "Oh and it needs centralized dependancy resolution"
+Crag says, "But I have some notes on that I've been working on"
+Crag says, "Soon as I'm done with the awesomefication of the TNdO network I'm going to start working on XOS"
+Binder says, "Fun!"
+Crag says, "I'm considering making Xen a default XOS feature in order to encourage thinking in terms of many simple nodes working together"
+Binder says, "Sounds about right."
+Crag says, "So the install would be: setup hardware, setup xen, setup domain0, setup admin domain"
+Crag says, "The admin domain is the user interface for the whole XOS thingie"
+Crag says, "Installing packages and such would spawn domains as needed to satisfy the user's specified goals"
+Crag says, "One of the goals could be 'netboot hosts I plug in after this one and join them to the XOS world'"
+Binder nods.
+Crag says, "Another could be 'serve DNS'"
+Crag says, "yadda"
+Binder nods.
+Crag says, "The stuff you're talking about would probably be more useful for the Desktop Edition of XOS :)"
+Crag says, "I've been trying to separate the concepts which need not be tied to each other in my notes"
+Crag says, "It's hard"
+Crag says, "But I keep getting this feeling that we're really close to something incredible"
+Crag says, "I've come up with a five-level scale of dependancy that I like:"
+Crag says, "needs, wants, has, avoids, hates"
+Crag says, "Names could be less anthropomorphic, but you get the idea"
+Crag says, "And then those levels can apply orthogonally to various transitions a module may be capable of"
+Crag says, "Going from 'heard of' to 'downloaded' might 'need' a minimal version of xos-get"
+Crag says, "or xpkg"
+Crag says, "States I've come up with so far are: known, acquired, unpacked, built, 'installed' (fuzzy here), instantiated (for packages which spawn, such as website templates), running (services), runnable (user apps)"
+Crag says, "I suppose I could add 'deinstalled' to that to indicate that the package is no longer integrated into the system, but if re-installed it would still have the configuration it had previously."
+Crag says, "But some of these states are orthogonal"
+Crag says, "Depending on how large of a scope a package is permitted to have"
+Crag says, "anyway"
+Crag says, "I think I may make pacakge states after 'unpacked' be free-form/defined-by-packages"
+Crag says, "Which would allow users to specify their needs in terms of dependancies"
+Crag says, "need: tinydns==running & tinydns==site-redundant"
+Crag says, "or something"
+Crag says, "But getting back to what you were saying, I like the goal of goal-oriented package management, whether the goal be point-in-time or specific package versions"
+Crag says, "And the ability to revert package versions or package configurations independently seems necessary for achieving that"
+Crag says, "I think it would be nice to specify a design goal for packages that they be able to convert their data and configuration files backwards as well as forwards, wherever possible."
+Crag says, "So of course when a new version provides a feature which didn't exist before, there's no way to convert information about that feature, but that shouldn't be a problem most of the time, and it will probably still be possible to generate an acceptable configuration/datafile for the older version"
+Crag says, "Hm.  Dependancies could applie to package states, package transitions, and package actions."
+Crag says, "Though actions could just be a transition whose source and destination state are the same."
+Crag says, "The other problem with what I'm saying is that a package might have multiple simultaneous states from the list I gave"
+Crag says, "Something might well be built or not while also being installed or not"
+Crag says, "But maybe that's not important"
+Crag says, "I need to think about what these words really mean and what it is I'm really trying to accomplish"
+Crag says, "I was browsing around on Paul Jarc's site again, as well as some other DJB fans, and found that there just aren't any rigorous definitions or specifications in that part of the world."
+Crag says, "DJB himself says some vague things about slash-package, but it all sounds hypothetical"
+Crag says, "From the package system'"
+Crag says, "grr"
+Crag says, "system's point of view, there are very few states.  The package system doesn't have to care about built, spawned, running or runnable.  Those are all package-specific details."
+Crag says, "known, ackquired, unpacked and installed apply to all packages, though the meaning of installed will depend on the package"
+Crag says, "Though (as you may recall) in slash-package 'installed' just means /package/.../packagename is a symlink to packagename-version"
+Crag says, "sortof"
+Crag says, "I guess there's a little more to it"
+Crag says, "gah, nevermind, my meds are wearing off. :)"
+Crag wanders off and stuff
+Binder returns from various crashes of X.
+Binder has changed from the ati to radeon driver to see if it helps.
+Crag says, "Wrack's going down again either tonight or tomorrow as part of the ongoing effort to improve my confidence in this network which I have neglected for so long."
+Devil cheers
+Crag [to Devil]: you just like to hear about 'going down'
+Crag says, "but not for the reason I think"
+Crag . o O ( and rots )
+Crag says, "At some point I'm going to hook up my two Xen servers' serial ports so that they can log each other's console messages and even reboot each other if necessary."
+Crag says, "SO HELP ME JAH"
+Binder says, "STONITH."
+Crag says, "I'm now wondering if it's necessary for the initrd to ever do its pivot_root and hand-off of startup to the 'real' root fs."
+Crag says, "I suppose it's taking up ram that the kernel could use more wisely"
+Crag says, "nevermind :)"
+Crag says, "Still, I think I'm going to try to cram more functionality into an initrd image"
+Crag says, "like auto-detecting the presence of any XOS configuration servers"
+Crag says, "my fancy initrd itself will ask the network for instructions before it looks at any local devices."
+Crag says, "And obviously I can serve the kernel and initrd via PXE/DHCP/tftp/etc"
+Binder nods.
+Binder says, "Heck, if you have LinuxBIOS-supported hardware you could do it all at the pseudo-firmware level.  If you could get it lean enough."
+Binder says, "So you could run XOS diskless."
+Binder updates this laptop to dapper drake.
+Crag says, "Yes, disklessness is one of my goals, and I assume yours since it was you who took Paul's idea and merged it with what you and I had been talking about"
+Crag says, "I love the idea of integrating LinuxBIOS into the XOS design, though it does complicate certain aspects"
+Crag says, "Such as, I don't know if it's possible to combine LinuxBIOS and Xen yet"
+Crag says, "On the other hand, it might be possible to create a XenBIOS, which would be... perfect?"
+Crag says, "I'm not nearly advanced enough in my studies to think any more deeply about that"
+Binder says, "Something to drop onto the maybe/someday list."
+Binder says, "Probably my next big work project will be system-imager based stuff."
+Crag says, "system-imager?"
+Crag says, "Is that like 'Ghost'?"
+Binder has very nearly got the tinydns->bind migration done, in among the other emergency stuff.
+Binder says, "Yeah."
+Binder says, "Ghost for Linux."
+Crag says, "interesting"
+Binder says, "It overlaps substantially with FAI and cfengine."
+Crag says, "I can see that"
+Crag says, "I was disappointed in FAI when I looked at it three years ago"
+Crag says, "It seemed unhelpfully complicated"
+Binder agrees.
+Crag says, "Inelligant"
+Binder says, "Like, they optimized it for installing that release of Debian in their environment."
+Binder says, "A heinous case of premature optimization."
+Crag says, "Yes, I got that impression too"
+Crag says, "I can certainly understand how it could come to that"
+Crag says, "But it was frustrating"
+Binder says, "Yeah.  Made me itch to build a unit test framework around it and refactor it to make it more useful for my uses."
+Crag says, "Since it was solving a problem similiar to the one I wanted to solve, but seemed a poor fit to my situation"
+Crag says, "heh"
+Crag says, "Xen makes testing system boots and such a little easier, I think"
+Binder says, "Rebuilding mythtv to use xvmc has given my mythtv box +2 WAF."
+Crag says, "WAF?"
+Binder says, "I think you're right.  I remember using UML to do boot tests on a limited basis."
+Binder says, "It helped me get initrds right."
+Binder says, "Wife Approval Factor."
+Crag says, "Oh ah!"
+Binder says, "Vy no longer considers dvr'ed tv 'unwatchable'."
+Crag laughs
+Binder says, "It's not yet 'good' but I'll get there with more hardware."
+Binder says, "So it's now feature complete for -both- of our requirement sets."
+Binder says, "Well.  ALMOST feature complete."
+Binder says, "There's one thing we can't yet do with it and that's record Vy's absolute favorite TV show."
+Binder says, "But I haven't yet seen how to achieve it."
+Crag says, "Why is her show an exception?"
+Binder says, "Because all of the sources of scheduling data lie about when it's on."
+Crag says, "oh yes, that problem"
+Crag says, "bitchcakes"
+Crag says, "OH OH OH"
+Crag says, "Nicole got a nine month contract position at DIG working in the SOC"
+Binder falls over.
+Binder says, "IS SHE GOING TO HAVE WDIG'S BABY?!"
+Crag laughs
+Crag says, "I think WDIG is going to want to have Nicole's babies before her contract period is over"
+Binder hoses up his upgrade to dapper but saves it with sysresccd.
+Binder whuggles System Rescue.
+Binder says, "Important safety tip:  after doing something which will install new software, before rebooting, check your filesystem usage to make sure you haven't filled a partition 100%."
+Binder says, "Say, hypothetically, the boot partition."
+Crag says, "oh my"
+Crag says, "that is a good tip"
+Crag says, "makes a case for some sort of resource usage threshold crossing notification mechanism..."
+Crag says, "Moving wrack's storage and vm to xeny now.  Be back... sooner or later.  Heh."
+-----
+`HELP SHUTDOWN' AMBIGUOUS
+=========================
+
+Sorry, the topic `shutdown' is ambiguous.  I don't know which of the following topics you mean:
+
+`help @shutdown'[1]     `help shutdown()'[2]    
+
+-----
+SHUTDOWN()
+==========
+
+Syntax:  shutdown ([str <message>])   => none
+
+Requests that the server shut itself down at its next opportunity.  Before doing so, a notice (incorporating <message>, if provided) is printed to all connected players.  If the programmer is not a wizard, then `E_PERM' is raised.
+
+=> 0
+[used 3 ticks, 0 seconds.]
+*** Shutting down: shutdown() called by Crag (#958): WHEEEEEE!!!!!!! ***

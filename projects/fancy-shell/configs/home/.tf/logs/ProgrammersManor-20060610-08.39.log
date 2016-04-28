@@ -1,0 +1,643 @@
+Welcome to ProgrammersManor.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+You see a particularly dreary corner of the room, a Punching Bag for Binder, a bucket, a mop, a Binder's pet rock, a round tuit, a hunk of quartz, a cheese, a whitespace, and a Wind-Up Mariachi Band here.
+Binder is here, asleep.
+Last connected Sat Jun  3 13:38:11 2006 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 667912920 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 667912920 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 667912920 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 667912920
+Binder's friends arrive to cart him off to bed.
+< Binder has connected.  Total: 2 >
+Binder arrives from the Ballroom.
+Binder says, "Yes.  Perhaps a package installer should check before and after deploying files and bail out noisily if it's at or too near 100% usage on the fs it's writing to."
+Crag says, "Hi"
+Crag says, "That's a good idea too"
+Crag says, "evms and xen kick ass, by the way"
+Crag says, "because of them I didn't have to worry about wrack's storage's device name changing"
+Crag says, "But yes, the package system should do whatever it can to detect problems as early as possible, but should continue to try to detect problems at all times, and report them all in as useful a way as possible"
+Crag says, "With the option to revert as necessary, automatically, with permission, or whatever"
+Crag says, "I think it's just a matter of taking the usual GNU/*nix aethetic farther than it has been taken so far"
+Crag says, "do what I mean, or if you can't, do what I told you to do when you to do when you can't do what I mean, and if you don't have instructions for this case, ask me"
+Crag says, "And wherever necessary and possible, assume the answer which is easiest to recover from"
+Binder says, "Truly user friendly software."
+Crag says, "even if the users are geniuses like us"
+Binder says, "XOS:  *nix for Smart People."
+Crag grins.
+Crag says, "I like that"
+Crag says, "I should go to cafe press right now and make bumperstickers and shirts like that"
+Binder grins.
+Crag says, "W00t!  The migration of wrack's data onto half of a mirror is done!"
+Crag says, "That was quick"
+The server has been up for 16 minutes and 15 seconds.
+Crag says, "Less than 15 minutes to move 100g between two regular ata100 drives"
+Binder boggles.
+Crag says, "These machines keep startling me with their performance and good behavior"
+Binder says, "Are they all new hardware?"
+Crag says, "new-ish"
+Crag says, "Most important I think is that they're both amd64"
+Crag says, "I suppose the motherboards have a lot to do with I/O.  Those are Asus k8v-somethings"
+Binder says, "Yessssss."
+Crag heh
+Binder says, "Hey, I think that's what I've got in my desktop at work."
+Crag says, "the k8v came well recommended by a guy at work who used to drive me nuts, but knew his stuff when it comes to modern PC hardware"
+Crag says, "Not too deep on the technical stuff, but he was a hardware tweaker"
+Crag says, "Apparently all the hardware I got could run 5-20% faster if I felt like experimenting with overclocking, which I don't"
+Crag says, "speed is the least of my concerns for the time being"
+Binder says, "Yeah."
+Binder has never been an overclocker.
+Binder has never really been tempted to be an overclocker.
+Crag says, "it's too close to automotive wanking for my tastes"
+Binder says, "It smacks to me of optimization for one particular subset of tasks and increased total system failure."
+Crag says, "exactly"
+Crag says, "lower the car for handling, get high-centered on speedbumps.  put a fin on the back for handling, get more speeding tickets and look like a dork."
+Binder says, "How strange.  Updating my work desktop made the fonts much better and updating my work laptop made the fonts much worse."
+Binder maybe should reinstall 915resolution.
+Crag says, "chip the car's computer for performance, void the warrentee and do unknown damage to the car"
+Crag says, "915resolution?"
+Binder says, "Yeah, it's a kludge to make the Intel 915 family of video cards more useful under X."
+Crag says, "Ah"
+Binder says, "It over-writes their in-RAM screen definitions to replace one of the ones you don't think you'll use with a different aspect ratio one."
+Crag says, "Happily I am not in a position to profit from that"
+Binder says, "When I was running Ubuntu Breezy Badger, without it, I only could use part of the laptop lcd."
+Binder says, "With it, fullscreen."
+Binder says, "But I remembered reading that it wasn't needed with X6.9 or X7 so I removed it when updating."
+Crag says, "and lost its functionality"
+Crag says, "heh"
+Binder says, "And I have full screen, but the ratio is annoying."
+Binder says, "Half the functionality, anyway.  I gained the full screen without it, lost the ability to look at test."
+Binder says, "Er, text."
+Crag nods.
+Crag says, "looks like the migration between the drives was fast because it aborted without telling me or something"
+Crag says, "I think maybe evms, lvm or the md driver gets confused by use of drives with no partitions or something"
+Binder says, "Oops."
+Crag shrugs
+Binder says, "It's like starting up a java engine.  Fast means It Failed."
+Crag nods knowingly.
+Binder says, "Slow and jerky wins^wloses^wok, fine, loads the race."
+Crag says, "I'm a little irritated that it didn't indicate its failure to me in a way that was noticable to my groggy just waking up self"
+Strongbad samples: The race.  Is Loaded.  The Race.  Is Loaded.     --Crag
+Crag says, "Doo DOO do DOO doo"
+Crag says, "Doo DOO do DOO doo"
+Binder says, "Like by going to get you a croissant and some tea and as it handed them to you saying, "Oh, hey, I like, totally failed to copy that data, OOPS!""
+Crag laughs
+Crag says, "That's coming out of xeny's tip"
+Crag says, "Beginning second attempt at moving wrack data"
+Crag says, "Interestingly it seems to be estimating 10 hours to complete the operation"
+Crag |  LVM2: Moving 3200 extents for region lvm2/data/wrack from PV hdd5,PE 0 to PV md/md0,PE 0  (Time remaining:  10:05:00)
+Crag says, "Ah, it's being conservative.  Estimate is under 5h now."
+Binder says, "Yeah."
+Crag says, "free software has come a long way, baby"
+Binder says, "That seems to be an artifact of how the data-throughput-so-far is calculated as a running average."
+Binder says, "Virginia Slim OS."
+Crag says, "ew"
+Crag says, "back up to 10h... :)"
+Crag says, "well whatever"
+Crag says, "When that's done I'll take the non-mirror drive out of that lvm volume group and add it to the mirror"
+Crag says, "and then wrack will be secured against single-drive failure"
+Binder says, "woohoo!"
+Crag heh
+Binder says, "Software mirror is better than no mirror."
+Crag says, "that's what I figure"
+Crag says, "I'm planning to buy two seagate SATA drives in a few weeks to replace these"
+Binder says, "When I was at UW and playing around with poc soft raid stuff, I did a three disk partition raid5 ... using three partitions on the same physical disk."
+Binder says, "DAMN that was slow."
+Binder says, "AND funny."
+Crag heh
+Crag says, "I'm going to try out the 'hardware' raid built in to these k8v motherboards"
+Binder nods.
+Binder will be interested to hear the results.
+Crag says, "I thought you might"
+Binder says, "I gather it's decently supported under openbsd."
+Crag says, "That's a good sign"
+Binder says, "Since that was a factor in my boss's select of this motherboard for the work desktop machine I inherited."
+Crag says, "Music to my ears"
+Crag says, "Once I have all the mirroring and stuff setup I'm going to investigate nbd and nfs"
+Crag says, "And then I'm going to work on either XOS-inspired changes to booting or familiarize myself with and try to implement some prjware slash-package stuff"
+Crag says, "tools like Xen and UML will remove a lot of the obstacles for both of those"
+Binder nods.
+Binder says, "Abstraction is awesome."
+Crag says, "YES!!!"
+Crag says, "or..."
+Crag says, "INDEED!!!"
+Crag says, "I must catch up on pokey today"
+Crag idles: massage! yay!
+[Idling at 9:43 A.M. on Sat, Jun 10: massage! yay!]
+Binder hms.
+Binder gets a solicitation for a charitable donation by snail mail, searches the web, finds a wikipedia page about it, finds that it's disputed, reads the talk page, decides its worthy of donation.
+Binder idles: perlmongers
+Crag says, "ARG"
+Crag says, "Resizing the evms window aborted the data migration"
+Crag says, "I should have detached that screen session and started another"
+Crag sighs
+Binder says, "Resizing is an unanticipated event."
+Binder says, "Hey, maybe they learned that from MSFT."
+Binder says, "evms: ENTERPRISE READY!  BY DESIGN, BITCHES."
+Crag says, "heh"
+Binder grins.
+Binder donates $20 to spot@draves.org, whee.
+Crag says, "Happily, the data migration to the degraided mirror is complete and I've added the old drive and activated it.  The mirror syncing is about 2/3rds done."
+Crag says, "So in an estimated 50 minutes wrack will tolerate a single drive failure"
+Crag says, "Any thoughts on the safety of upgrading directly from sarge to dapper? :)"
+Crag says, "I'm about to try it on the colinux on my laptop"
+Crag says, "Why?  I don't know."
+Crag says, "Maybe because I'm at work and I want to take advantage of the aggregated 10gig of peering"
+Binder laughs.
+Crag says, "of which I will probably see no more than 50mbit"
+Binder says, "I don't anticipate any real problem going from sarge to dapper."
+Crag says, "sweet"
+Binder says, "apt-get dist-upgrade should be smart enough to resolve the major distinctions."
+Binder says, "There are sometimes migration guides floating around the web."
+Crag says, "I don't need no stinkin' guide"
+Crag says, "I survived the libc5->libc6 transition!"
+Binder sings, "I'm gotta be a macho man!"
+Crag says, "And I think I may have been around for libc4->libc5"
+Binder met a guy at Oakland Perl Mongers yesterday who's been using Perl for 14 years.
+Binder says, "Since Perl 2."
+Crag says, "wow"
+Crag says, "that's a grey-beard if I ever heard of one"
+Binder says, "In fact, that was my impression of the OPM group over all."
+Binder says, "I was the youngest person there."
+Binder says, "But I came away with a nice haul of books."
+Crag says, "sweet"
+Crag says, "I've been thirsting for knowledge myself"
+Crag says, "I'm about half-way through A Brief History Of Time"
+Crag says, "Hawking is... odd"
+Binder found that book thoroughly readable.
+Crag says, "It's certainly easy to read"
+Binder zipped through it in one sitting.
+Crag says, "After Brian Greene's books it's like a kids book"
+Binder says, "Hawking's writing makes even the most outrageous revelation seem perfectly intuitive."
+Binder says, "Yes."
+Crag says, "However!"
+Crag says, "I'm disturbed by quantum mechanics"
+Binder . o O ( but wait, there's more )
+Crag says, "I thought I'd understood hawking radiation until I read his explination"
+Crag says, "He talks about virtual particles becoming real"
+Crag says, "I did a double-take at that point in the book"
+Crag says, "And realized how little I really know"
+Crag says, "It was one of those master-student boot-to-the-head things"
+Binder says, "Are you ready now, Crag Gruberman?"
+Binder listens to Vy thoroughly curse out pikmin for their vegetable brains.
+Binder says, "Good help is so hard to find."
+Crag says, "stupid pikmin"
+Crag says, "I had to stop playing pikmin2 before finishing the whole game because it was too hard for me"
+Crag says, "I got very frustrated"
+Crag says, "And not usefully so"
+Crag summons the groundskeeper, who drops a topic sign off.  He writes `CPAN integration w/ Debian and its children' on a slip of paper and puts it on the sign.
+Crag says, "It seems like it ought not to be hard to implement this"
+Crag says, "CPAN is a module, dpkg is relatively cleanly defined and well documented (I think)"
+Crag says, "It ought to be 'a simple matter of programming' for someone with the patience to seek out and manage the exceptions"
+Crag says, "But the unexceptional case is probably a mixture of CPAN.pm and dpkg-buildpackage commands"
+Binder says, "Yeah.  I've been envisioning idly a sort of make-perl-pkg akin go the make-kpkg and make-java-package stuff."
+Binder says, "To wrap the whole module fetch-build-install process inside of the dh_* scripts to register it with the dpkg db."
+Crag says, "right, make-kpkg was what I was trying to remember as an example"
+Crag says, "What I'm betting is that make-perl-pkg could delegate all of the perl side of things to CPAN, and could query CPAN for metadata"
+Crag says, "But of course I don't know enough about dpkg or CPAN to speak authoritatively on the subject"
+Crag idly performs the sarge->dapper upgrade he mentioned earlier.
+Crag says, "I think I'm going to do a lot of free software work this summer"
+Crag says, "This move to Xen and two fast servers has energized me"
+Crag says, "I'm going to buy a couple SATA drives and some RAM in a few weeks"
+Crag says, "And I'm going to try to get Nicole and Raine involved too"
+Crag says, "Though I doubt I'll be able to pry Raine away from her studies"
+Binder says, "Maybe you can see a way to integrate Raine's studies and your projects."
+Crag says, "That's a good idea"
+Crag says, "I know she's interested"
+Crag says, "She gives good feedback on my ramblings"
+Binder says, "She studying Japanese?"
+Crag says, "Yep"
+Crag says, "She's going to study French again and pursue some advanced linguistics degree"
+Crag says, "Decided she wants to teach linguistics"
+Crag says, "And do research"
+Crag says, "I think it's great that she's finally doing what she really wants to do"
+Crag says, "Instead of doing things people told her she couldn't do, just to show them she could"
+Crag says, "She is so stubborn..."
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds   virtually everything  
+Binder         Entrance Hall                 4 minutes                         
+
+Total: 2 people, both of whom have been active recently.
+Crag says, "I wish tinyfugue wouldn't clear on window size changes"
+Crag says, "I guess it's better than evms's behavior"
+Crag says, "I am dissatisfied with all my ssh securing options"
+Crag says, "running on a different port adds the hassle of modifying .ssh/config on all the hosts I connect from"
+Binder nods.
+Crag says, "only accepting connections from trusted IPs is also a hassle"
+Crag says, "host-key checking is partial protection AND requires effort managing hostkey distribution"
+Crag says, "I was thinking of using my second IP as a sort of 'honeypot', but that's a half measure too"
+Binder says, "Security is a hassle!"
+Crag heh
+Binder says, "Let's go shopping."
+Crag says, "In this case it seems like it's an unnecessary hassle"
+Binder says, "Well."
+Binder stops there.
+Crag heh
+Crag says, "I guess what I'm saying is I may decide to accept the risks associated with having ssh listen on 22"
+Crag says, "so there"
+Crag says, "But not before I get my backup system fixed up the way I want it"
+Binder says, "Yeah."
+Crag says, "In the long run I may end up doing host key checking anyway"
+Crag says, "But not until I have an easy way of managing it"
+Crag says, "I may setup a special xen domain for access management"
+Binder idles: rpg
+Crag says, "I need to get back into rpg stuff after I've caught up on some of these other 'one of these days' things I'm working on"
+Crag says, "The downside to the sarge->dapper dist-upgrade is having to answer all the config file change confirmation promts"
+Crag says, "What I probably should have done (too late now) is to resize my colinux partition to make room for dapper, done a debootstrap install into that and etc"
+Crag says, "oh well"
+Crag says, "hm, not as many prompts as I expected."
+Binder says, "Exactly."
+Binder says, "One of the big wins of Ubuntu is that they have better defaults."
+Binder says, "So installing their packages are less annoying than installing Debian."
+Binder finishes his weekly review.
+Binder says, "My weekend was too full.  It took me all weekend to get through it because I kept getting interrupted and because it's not possible for me to have quiet time to do it."
+Devil has connected.
+Crag [to Devil]: Welcome back
+Crag [to Binder]: Interruptions are deceptively expensive
+Binder agrees.
+Devil pets the rock.  Nothing happens.
+Binder aw
+Binder grins.
+Binder | <Princess QA> he's baaaaaack
+Binder | <shannon> I took advantage of apt-get source ratpoison && apt-get build-dep ratpoison to build a ratpoison package locally on this box.
+Binder | <Princess QA> ooooh
+Binder | <Princess QA> locally made ratpoison
+Binder | <shannon> Worst case scenario, I've now got an unstripped debug executable to give me a sane gdb backtrace.
+Binder | <shannon> Best case scenario, it won't crash again because now it's properly built for this environment.
+Binder | * Princess QA nods knowingly
+Binder | * shannon eyes Princess QA.
+Binder | <Princess QA> ?
+Binder | <Princess QA> !
+Binder | <shannon> .
+Binder | <yes-it's-who-you-think> whoah
+Binder | <yes-it's-who-you-think> is ratpoison what you normally use, shannon?
+Binder | <shannon> Yes.
+Binder | <yes-it's-who-you-think> you are so Hard Core.
+Binder <- HARD CORE
+Crag says, "nice"
+Crag says, "You definitely qualify as Hard Core."
+Binder says, "Incidentally, I got a core file out of my DEB_BUILD_OPTIONS="debug nostrip" build of ratpoison."
+Binder says, "It's trying to XGetClassHint and heading down into glibc territory where it trips a SIGABRT."
+Binder is not happy about that, is trying to decide what to do about it, will probably go to ion2 to see if it's a problem with ratpoison or X.
+Crag says, "I've never seen SIGABRT"
+Crag says, "I had to look it up just now"
+Crag says, "I also have no idea what XGetClassHint is supposed to do"
+Binder says, "Yeah.  It's one you generally only get if your code is Doing Something Wrong."
+Binder says, "glibc tends to throw SIGABRT for cases where the library wants to say: YOU WANT TO DO WHAT?!"
+Binder says, "Like double-frees and mishandling allocations."
+Binder says, "XGetClassHint looks up information about an X object."
+Crag says, "hm"
+Binder says, "Like, say, the object name or the title bar info in an xterm."
+Crag says, "Not the kind of context one would expect that sort of error in"
+Crag says, "wild"
+Binder says, "Yeah."
+Binder says, "So my suspicion is that there is something about x86_64 which makes ratpoison do something funny, inadvertantly, with memory."
+Binder says, "But the code I was looking at didn't have any of the obvious gotchas."
+Binder says, "It was using NULL instead of 0 for comparisons, which is right, because using 0 can produce unexpected results with some libc operations on x86_64."
+Binder says, "The backtrace showed all the parameters as being set when they should be."
+Binder says, "So not a deref boohoohah."
+Binder says, "It -seems- to occur in conditions where memory usage is at or near the physical RAM limit."
+Binder says, "But I haven't consistently been able to reproduce the problem and ratpoison is the only application I see afflicted with any kind of a crash."
+Binder says, "So it's more plausible to me that ratpoison is not x86_64 ready for some reason."
+Crag says, "Sounds logical to me"
+Crag says, "and now: band practice"
+Crag idles: SgWD.org
+[Idling at 7:09 P.M. on Tue, Jun 13: SgWD.org]
+You hear a quiet popping sound; Devil has disconnected.
+< Devil has disconnected.  Total: 2 >
+Binder says, "So far so good.  ion2 hasn't crashed yet this morning under a full work out and I'm slowly remembering the interface."
+Binder says, "It helps that the first thing it does is put up its own man page."
+Binder says, "And now I've got this system on the gig net at work, whee."
+Binder flexes.
+Binder boots his laptop at work and goes between ratpoison there and ion2 here.
+Binder thereby drives himself crazy.
+Binder [to Crag]: I have just for:warded you a link.
+Binder [to Crag]: You will want to read the PDF linked to at the bottom of the page.
+Binder [to Crag]: Also, unrelated, my boss is for some reason excited about Xen all of a sudden.
+Binder [to Crag]: So I may be passing by to pick your brain about it on odd tangents.
+Devil has connected.
+Crag checks out three for/Crag links
+Binder whee
+Binder has a 'look at for: links' as part of his WR.
+Crag says, "I haven't Gotten Things Done in months"
+Binder whips out the NtM finger!
+Binder POINTS!
+Binder POINTS!
+Binder POINTS!
+Crag nods solemnly.
+Crag says, "The NetApp link sounds a LOT like what I had in mind for managing XOS"
+Binder nod nod nods.
+Binder says, "I thought you'd want to see it."
+Crag says, "My version would use mountpoints and clever scripts instead of some kind of fancy image magic"
+Crag says, "Their way trades a lot of hard dev up front for not having to deal with a lot of easy hassles all the time"
+Crag says, "Which would be fine with me if I could just use the results of their hard dev"
+Crag says, "I'm sure not going to duplicate their work"
+Binder says, "ie, if you were netapp and there was ZERO cost to you to deploy a farm of netapp devices."
+Crag says, "yes"
+Binder says, "I read the slidedeck and I'm thinking:  ok, but how do I do this in the REAL WORLD?!"
+Crag says, "that's what I was thinking too"
+Binder says, "But they had some interesting solutions which you might be able to swipe the method from."
+Binder says, "If not their specific hardware."
+Binder says, "/software"
+Crag says, "Like, "tell me another story, mr. salesman..""
+Crag says, "yeah"
+Crag says, "I'm curious how they handle the potentially enormous bandwidth needs of the storage network"
+Crag says, "But the slides will probably tell me something about that"
+Binder thinks that's covered in the slides, yeah.
+Binder skimmed that page, spent more time reading the PDF of slides.
+Binder says, "Since they walk through their decision process in implementing it."
+Binder says, "Semimeaty."
+Crag nods.
+Crag says, "The whole disk-full/disk-less thing is so 2002/Paul Ruiz :P"
+Crag says, "I've been ready to do disk-less for four years"
+Crag says, "It kinda irritates me that NetApp is sitting on certain tasty proprietary technologies"
+Crag says, "I think I'm still under NDA from when they tried to sell us an upgrade"
+Crag says, "But what they told me is Information That Wants To Be Free"
+Crag whatevers
+Binder nods.
+Crag says, "There is one thing I like better about my way"
+Crag says, "A couple of things, actually"
+Crag says, "My way wouldn't work for Windows, which is a big plus. :)"
+Crag says, "But in particular I like making explicit decisions about what changes and what's shared"
+Crag says, "I don't like how the the image/clone stuff hides details"
+Crag says, "Devil Crayon is in the details"
+Crag says, "My way puts a little more responsibility on the administrator"
+Crag says, "maybe more than a little"
+Binder says, "Right.  With great power comes great responsibility."
+Crag says, "exactly"
+Binder just recently read the Ultimate Spiderman tpbs, 1 & 2.
+Crag says, "Was it everything you'd hoped for? :)"
+Binder says, "No."
+Binder says, "It was kind of a weak retreat."
+Binder says, "Er, retread."
+Binder says, "vol 1: retell the story of Spiderman's origin, but set it in the early 200x era."
+Binder says, "So he's in high school in contemporary culture, his dad was a chemist genius who was working on an adhesive, he goes on a school field trip, bit by a spider."
+Binder says, "But in this variant, it's a spider which Normon Osborn's company was experimenting on, and Osborn becomes the green goblin in the same time frame that Parker realizes he's got powers."
+Binder says, "Uncle Ben's death happens according to formula, etc, etc."
+Binder says, "What's different is that Parker reveals his secret identity to Mary [Jane] Watson."
+Crag says, "Hrm"
+Binder says, "vol 2: Spider-man tackles the Kingpin and his minions."
+Binder says, "It's my only experience with the 'Ultimate' line of Marvel titles so maybe I'm missing something or maybe it's not representative but my understanding of the Ultimate line was that they were re-envisionings of characters, taken to extremes."
+Binder says, "In this case, the most interesting part of it for me was the revelation to Mary Watson and the Kingpin's presentation."
+Binder says, "It was co-written by Brian Michael Bendis, so I was expecting a lot out of it [from enjoying the hell out of his Powers book] but, ehn."
+Binder says, "I'm glad I borrowed rather than buying these books."
+Crag says, "Good call"
+Binder says, "I'm enjoying All Star Superman MUCH more.  Even though it's superficially similar, a retelling of Superman.  But it's got Morrisonian twists to it."
+Binder says, "And, again, Superman tells Lois Lane that he's Superman."
+Binder says, "But instead of doing it at the start of his career [as in Ultimate Spiderman] he does it after years of keeping it secret."
+Binder says, "Because he's dying."
+Crag says, "Ah"
+Binder says, "All Star Superman #1: Lex Luthor decides that to celebrate his birthday, he'll really get SERIOUS about killing Superman."
+Binder says, "The next three issues show Superman's preparations for dealing with it."
+Binder is going to be REALLY interested to see how Morrison resolves it.
+Binder says, "Since he's not noted for pulling punches."
+Crag says, "Hm"
+Binder says, "Not being much of a comic fan you probably missed Morrison's DC 1Million project."
+Crag says, "yeah"
+Binder says, "But in the late 90s DC was desperate for An Idea."
+Binder says, "And Morrison had one."
+Binder says, "For one month, every character concept was advanced 1 million years into the future of the DCU."
+Binder says, "To challenge writers and artists to go beyond their formulas."
+Binder says, "It worked reasonably well."
+Binder says, "So it was things like 'if there was a Batman a million years in the future, what would he/she/it be like?'"
+Crag says, "Wild"
+Crag says, "This Morrison guy sounds interesting"
+Binder says, "Yeah, he's one of my favorite comic writers."
+Binder says, "He's from the British Punk on Drugs school of writing."
+Binder says, "You could probably find several of his standalone comic books in a local shop ... or I bet Raine might have some of it."
+Binder says, "Things like Kill Your Boyfriend or The Filth."
+Binder would probably recommend AGAINST his comic The Mystery Play unless you were planning to use it in the prescribed manner.
+Crag ..
+Binder says, "His run on Doom Patrol, Animal Man and his title The Invisibles are probably too long to really judge by a single volume whether you dig it or not."
+Binder owns a lot of Morrison but not all of it.
+Binder says, "Oh, there's like a $6 tpb of the first four issues he did for JLA."
+Binder says, "Which will really show you what he does with traditional comic book heroes."
+Binder says, "The premise is that the JLA re-forms to deal with the arrival of an alien team of superheroes who are up to No Good."
+Binder says, "So you get to see Morrison's version of Batman, Superman, The Flash, and so on."
+Binder says, "The Mystery Play is meant to be used for bibliomancy."
+Binder says, "It's a comic book designed to be a divinatory instrument like Tarot."
+Crag says, "JLA?"
+Binder says, "As a story, it's alternately 'oh shut UP' goofy and 'WHOA MAN DEEP' drug trippy."
+Binder says, "JLA was the name for Morrison's Justice League of America title."
+Crag says, "Ah"
+Binder says, "To differentiate it from the many many other versions of it."
+Binder says, "Justice League, Justice League of America, Justice League International, JLI, Justice, I Can't Believe It's Not the Justice League <- not made up, sadly"
+Crag says, "nice"
+Binder says, "Yeah, most of those are Keith Giffen books."
+Binder says, "By which I mean:  THEY FUCKING SUCK."
+Crag shakes a tiny fist
+Crag says, "oog"
+Crag says, "I must requisition food and caffine"
+Crag says, "Don't let that stop you from educating me about good comics, though"
+Crag grins
+Binder grins.
+Binder says, "I recommend picking up JLA: New World Order."
+Binder says, "If you want something less superhero and more real world, I recommend picking up Kill Your Boyfriend."
+Crag says, "real world could be good"
+Crag hails from the coffee shop
+Crag says, "I asked Raine if she knew who this Morrison person was and she said "hell yeah!" or something"
+Crag says, "I feel so sheltered"
+Crag says, "It's a big world out there, or so I hear"
+Binder says, "It's only a model."
+Binder says, "Kill Your Boyfriend is kind of a Sid & Nancy romance with UK teenagers."
+Binder says, "A very unreal world comic I'm enjoying these days is Mouse Guard."
+Binder says, "It's effectively Three Musketeers style fiction ... done with mice."
+Binder says, "So they face a lot of threats."
+Binder says, "Like a feeding frenzy of fiddler crabs."
+Binder says, "Where their foils are useless against their armor."
+Binder says, "But, hey, it's not standard cape & tights fare."
+Crag says, "Sid and Nancy?"
+Crag says, "Am I a total loser for not knowing who Sid and Nancy are?"
+Binder says, "Quite the opposite.  A total winner!"
+Binder bedecks Crag with a sash.
+Crag laughs
+Binder says, "Sid & Nancy is a movie about the life and death of Sid Vicious and his girlfriend, Nancy Somethingmumble."
+Binder says, "It's got Gary Oldman as Sid Vicious."
+Crag says, "ahh"
+Crag says, "I like Gary Oldman"
+Binder says, "It's about what you would expect from a love story concerning the lead singer for the Sex Pistols."
+Binder says, "Best of all, it's biographical!"
+Crag says, "Not remotely interested in anything to do with Punk"
+Crag says, "hm"
+Binder says, "Kill Your Boyfriend is a much funnier send up of the same kind of unsentimental love story."
+Binder re-reads what he just typed.
+Crag grins.
+Binder says, "Unsentimental love story.  An odd phrase but accurate."
+Crag says, "KYB sounds amusing"
+Binder says, "It is."
+Binder says, "It's a fast read and funny throughout, moving in places, and disturbing in others."
+Crag says, "I know how you like disturbing"
+Crag says, "I sorta take it for granted that anything you like more than a little bit will be at least slightly disturbing in some way."
+Crag grins
+Crag says, "It's gotten to the point where I would find it disturbing if I couldn't figure out what the disturbing part of something you recommended was."
+Binder laughs.
+Binder . o O ( there's something creepy here and if I can't spot it ... what does that say about me? )
+Binder says, "Almost all of Morrison's comic writing is in the sf part of the spectrum."
+Binder says, "Quite a lot of it is pulling on new threads in the costumed-do-gooder tropes."
+Binder says, "KYB and The Mystery Play are real world-ish stories."
+Binder says, "No superheroes, very little divine meddling by forces beyond humanity."
+Crag nods.
+Binder says, "So if you're looking to avoid the cape + mask crowd, KYB is my recommendation."
+Binder says, "If you like Superman, you might wait for the All Star Superman stuff to get tradebound."
+Binder says, "It's sort of what might happen if you gave David Brin a heavy dose of drugs and a crash course in the Getting Things Done methodology."
+Crag says, "I've never really liked any superheros, Superman or otherwise"
+Binder says, "Because it pursues a very aggressive and surreal course of How Can We Make Superman's Life Optimized for Chaos?"
+Binder says, "OK then."
+Crag says, "What I have liked (Batman) has been farthest from standard, and always in other media (animated, live action)"
+Binder hms.
+Crag says, "For example"
+Crag says, "I really liked Michael Keaton as Batman"
+Crag says, "Which I understand is some kind of crime in some jurisdictions"
+Binder says, "It's a crime punishable by shrugging in these parts."
+Binder shrugs FOR JUSTICE.
+Crag says, "the maximum sentance!"
+Crag laughs
+Crag says, "Atlas Shrugged, too"
+Crag says, "or something"
+Binder says, "Look where it got him!"
+Crag says, "totally"
+Crag . o O ( I am so lost )
+Binder says, "Did you see Batman Begins?"
+Crag says, "The latest movie, right?  I liked that one"
+Crag says, "Though something seemed not quite right"
+Binder has seen all Batman movies save the one[s?] with Mr. Freeze and Poison Ivy and prefers Batman Begins over all previous contenders.
+Binder says, "But that's perhaps because it's the least mired in atmosphere, with the most actual, you know, STORY."
+Crag says, "yes, I liked that"
+Crag says, "And I liked that it took itself a little more seriously"
+Crag says, "Not so... silly, as many of its predecessors"
+Binder says, "There's something to be said for camp but it shouldn't be the GOAL."
+Binder says, "Unless you're, say, John Waters."
+Crag says, "I quite agree"
+Crag says, "heh"
+Binder briefly horrifies himself with the notion of a John Waters directed Batman movie.
+Binder says, "In any case, you're not the typical comic book reader."
+Binder says, "You're not interested in the standard issue tropes."
+Crag says, "Though, as The Family Guy has shown, Adam West's voice can take anything a lot farther than would otherwise be possible."
+Crag says, "yes"
+Binder says, "So in that regard, Morrison is perhaps one of the two best fits for your comic book tastes."
+Binder says, "Because he approaches superhero titles with the idea of 'how can I make this different?'"
+Binder says, "Sometimes it works.  Sometimes it doesn't."
+Binder says, "There's a -really- clever bit in his run on Animal Man."
+Binder says, "Where he posits that the universe of the Roadrunner cartoons has as much 'realness' as the universe of the titular character, Animal Man."
+Crag says, "Hm"
+Binder says, "So Coyote crosses over and is persecuted as a messiah of animal rights."
+Crag says, "heh"
+Binder says, "It works on several different levels and the art for that is spectacular."
+Crag says, "Sounds pretty adventurous"
+Binder says, "But some other bits of Animal Man are more rough."
+Crag says, "Not to mention pushing the Fair Use envelope"
+Binder says, "Yup."
+Binder says, "Of course, he did this during the late 80s when Fair Use was still Fairely Useful."
+Binder -e
+Crag laughs
+Crag says, "well played"
+Binder grins.
+Crag gives Binder an xp for 'clever bitch'.
+Binder hee
+Binder tries to think of other Crag-safe comics.
+Binder will have to re-read 2020 Visions, which is now tradebound.
+Binder remembers it being somewhat like a more plausible Transmetropolitan.
+Crag cracks up over:
+Crag | ome XPCOM technology is inherited from OMG CORBA.
+Crag says, "OH MY GOD, CORBA!"
+Crag says, "er, s/ome/Some/, of course"
+Binder LAUGHS.
+Crag says, "Today I've been reading a little about mozilla development (hence the XPCOM quote), and I have suspicion that an unsafe number (>0?) of participants in the project have failed to heed the "it's twice as hard to debug as to program, so when you write clever code you write code you can't debug" maxim."
+Crag says, "I think think Mozilla needs a Linus"
+Crag s/think //
+Crag says, "I've been in the magical land of Perl so long I'd forgotten about some of the silly superstitions propagated in the C/C++ world, such as "one entrance and exit per block""
+Crag says, "I wonder if I would like C/C++/Java better if I approached it again with the kind of assumptions I picked up from shell, perl, coldmud, MOO and all the other garbage-collected languages."
+Crag says, "Woof!  I think I may be on the trail of some of the memory difficulties Gecko exhibits.  Here's a blog entry detailing the memory mess created by adding SVG support:"
+Crag | http://weblogs.mozillazine.org/roc/archives/2006/02/anatomy_of_bloat.html
+Binder loads the url, remarks that the table looks like crap on his Firefox instance for some reason.
+Binder says, "Fonts, maybe."
+Binder says, "Ah, yes."
+Binder fixes it by sizing up fonts twice with ctrl-+
+Binder says, "INteresting post."
+Crag says, "I came to the conclusion this morning that the Mozilla project needs a hero"
+Crag says, "Someone like Audrey Tang of pugs/perl6"
+Crag says, "Or Linus"
+Crag says, "But I may be mistaken"
+Binder says, "A Larry Wall or at least a Damien Conway or Mark Jason-Dominus?"
+Crag says, "yes"
+Crag says, "Specifically, a focal point and a cheerleader"
+Crag says, "Not necessarily in one person"
+Binder says, "Yeah."
+Binder says, "Good cop bad cop."
+Binder . o O (  Connection to peg closed: recv: Connection timed out )
+Binder . o O (  Activity in world dino )
+Binder | Get Peg news, maps, and building docs from the new Peg page:         |
+Binder | http://peg.evermore.com/                             |
+Binder | handy globals previously mentioned on the motd: 'nifty globals'      |
+Binder whoops.
+Binder leaned on the mouse while reading Previews.
+Binder pasted teh tail end of his Peg session here.
+Binder finishes his weekly review, goes WHEE.
+Crag says, "OHMYGAWDWHEEEEEEEEE!!!!!"
+Crag says, "or something"
+Crag reidles
+[Idling at 8:05 P.M. on Wed, Jun 21: SgWD.org]
+Binder says, "Yesss."
+Binder burps.
+Binder scratches.
+Crag says, "RIGHT"
+Crag says, "It has come to my attention that one 'Wax Tailor' has an album named 'Tales of the Forgotten Melodies', and that this album is marvelous"
+Crag says, "All hail eMusic"
+Crag says, "and kexp"
+Binder ok
+Crag says, "please excuse my excessive idleness"
+Binder says, "No!"
+Binder stabs Crag with a Leatherman blade.  Neat!
+Binder reboots.
+Binder has disconnected.
+Binder's friends arrive to cart him off to bed.
+< Binder has connected.  Total: 3 >
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds   virtually everything  
+Binder         Guest Room                    59 minutes                        
+Devil          Entrance Hall                 22 hours                          
+
+Total: 3 people, 1 of whom has been active recently.
+Crag stands up from his easy chair.
+The Ballroom
+The Grand Stair Lower Landing
+The On the Grand Stair
+The Grand Stair Upper Landing
+The Second Floor Veranda
+The North Second Floor Balcony
+The East Third Floor Hallway
+You see a west wall here.
+The South Third Floor Hallway
+You see an Elevator Door here.
+The Guest Room
+Binder appears to be staying here, as his junk is piled all over.  There's a door in the north wall which exits back out into the hallway.  A hammock is here.
+You see a Lunch Bag, a rack, a Scrabble board, a card, and a timer here.
+Binder is here, dozing.
+Crag has arrived.
+Crag says, "I'VE BEEN UP SINCE 5am YESTERDAY"
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+Crag says, "that is all"
+Binder blinks.
+Binder says, "Um.  Dude?  GO TO BED."
+Devil arrives from the South Third Floor Hallway.
+Devil waves hello
+Binder says, "Hi there."
+Devil says, "Howdy."
+Devil says, "Man. Vista is ... wakky."
+Binder says, ""
+Binder says, "."
+Binder says, ".."
+Binder says, "..."
+Devil says, "It is very very slow on the boss's 6yr old dell"
+Devil says, "i'm shocked. realy. esp since he's got like 256mb of ram in the beast"
+Binder LAUGHS.
+Binder picks up the card.

@@ -1,0 +1,611 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 141 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             5 new messages
+    *Core-DB-Issues (#8175)              8 new messages
+    *Ballot:StopReaping (#62497)         24 new messages
+Last connected Wed Apr 19 08:22:55 2006 PDT from dsl081-175-009.sea1.dsl.speakeasy.net
+< connected: Crag. Total: 142 >
+Message 119 on *Ballot:StopReaping (#62497):
+Date:     Sat May 13 21:13:01 2006 PDT
+From:     active (#91798)
+To:       *Documentation (#33586) and *Ballot:StopReaping (#62497)
+Subject:  #3223.reaping
+
+My suggested updated text for "help reaping":
+
+Reaping on LambdaMOO refers to the removal of a player, their objects, and aliases.  The ballot *b:UEE (#80483) established elected reapers who actually do the determination of worth and granting of objects to caretakers; see this ballot for details.  See also help @will for control over your objects' disposition.
+
+As per passage of *b:StopReaping and modification by wizardly fiat, only "easy-reap" players shall have their player-object reaped.
+
+If said player has objects that are deemed of "significant worth" (objects with children owned by others, public objects with many verbs and obviously a lot of effort put into them, objects which have become central to LambdaMOO culture by virtue of their location in a centrally connected area such as the living room or dining room), then said player is not easily reapable and shall not be reaped.  Such a "hard-reap" player is instead given a warning after all aliases are removed except for current .name and primary alias.  Also, objects owned may then be offered to other players as caretakers for said objects.
+
+The present reaping policy is to reap after a disconnection period of five months.  (A month is 30 1/2 days.)  This period is extended due to two other factors, and may be extended by special request.  The two additional factors are 1) autonotify: players whose object numbers preceed the object number held in #41111.autonotify are reaped after an extra grace period of 2 weeks during which they are automatically notified at their registered email address, and 2) *b:ss: players who are 1 year old or older have an extra month added to their original four for every year of age they are on LambdaMOO.
+
+Send special requests to the mailing list *reapers, or contact a reaper for help extending your reaping period.  Before making such a request, if it is for longer than an additional month, consider that your request *will* prevent another player from using LambdaMOO (see *b:mpg, and *b:lower, which modifies it).  It is considered highly antisocial to request that your character be held for more than about double your default period.
+--------------------------
+Message 120 on *Ballot:StopReaping (#62497):
+Date:     Sun May 14 08:41:50 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497)
+Subject:  #41111:@reap-aliases
+
+@verb #41111:@reap-aliases any none none rxd
+@program #41111:@reap-aliases
+"@reap-aliases <player>"
+"Remove the non-primary aliases of a hard-reap player."
+{su, cu, executable} = {$string_utils, $command_utils, 0};
+if (caller_perms() != #-1 && !(caller_perms() == player || caller == this) || !this:trust(caller_perms()))
+  return player:tell(E_PERM);
+elseif (!dobjstr)
+  return player:tell($code_utils:verb_usage());
+elseif (cu:player_match_failed(who = su:match_player(dobjstr), dobjstr))
+  "...<player> specified didn't match...";
+  return;
+elseif (!(who in this.hard_reaps))
+  return player:tell("Aborted; " + su:nn(who) + " is not a hard-reap player.");
+endif
+"If there's an executable :set_aliases verb on the player itself, we disable it first JIC";
+"Below is modified $object_utils:is_callable_verb minus the verb_code check";
+"Note: unprogrammed verbs can still be executed without verb code";
+object = who;
+while (valid(object) && !executable)
+  if (`index((vb = verb_info(object, "set_aliases"))[2], "x") ! E_VERBNF => 0')
+    if (object == who)
+      "Executable :set_aliases on the player object, disable it";
+      set_verb_info(who, "set_aliases", {vb[1], su:strip_chars(vb[2], "x"), vb[3]})
+      object = parent(object);
+    else
+      executable = 1;
+    endif
+  else
+    object = parent(object);
+  endif
+endwhile
+if (executable)
+  "Do the alias setting";
+  who:set_aliases(setadd({who.name}, who.aliases[1]));
+  player:tell(su:nn(who) + "'s non-primary aliases have been removed.");
+else
+  player:tell(su:nn(who) + " is not a descendant of root class.  Uh oh, contact a wizard.");
+endif
+--------------------------
+Message 121 on *Ballot:StopReaping (#62497):
+Date:     Sun May 14 09:51:36 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497)
+Subject:  Suggested Change #41111:send_monthly_message
+
+@edit #41111:send_monthly_message
+del 13
+enter
+message = tostr("Your LambdaMOO character has been unused for ", nmonths, " month", nmonths == 1 ? "" | "s", ".  We remind you that it will only remain available for four months, after which time ");
+if (this:useless_check(who, {})
+  "Will be an easy-reap";
+  message = message + "it will be reaped (removed due to inactivity).";
+else
+  "Will be a hard-reap";
+  message = message + "its non-primary aliases will be reaped (removed due to inactivity) and your objects may be transferred to other players.  If your aliases are reaped, you will be limited to connecting via the following user ids: ";
+  message = message + $string_utils:english_list($list_utils:remove_duplicates({who.name, who.aliases[1], tostr(who)}), "", " or ");
+endif
+.
+compile
+--------------------------
+Message 122 on *Ballot:StopReaping (#62497):
+Date:     Tue May 16 10:20:02 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: Suggested Change #41111:send_monthly_message
+
+Implemented.  I took the time to give the proper number of months that an individual will be reaped after, using #41111:reap_cycle, instead of perpetuating the false "four".
+--------------------------
+Message 123 on *Ballot:StopReaping (#62497):
+Date:     Tue May 16 17:30:49 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Re: Suggested Change #41111:send_monthly_message
+
+Kudos on the improvement.
+
+For #41111:@reap-aliases, just realized missed the semi-colon when I passed from my local editor the line that does set_verb_info call.
+Line 22 should be: set_verb_info(who, "set_aliases", {vb[1], su:strip_chars(vb[2], "x"), vb[3]});
+
+Let me know if you have trouble,
+active
+--------------------------
+Message 124 on *Ballot:StopReaping (#62497):
+Date:     Tue May 16 20:05:42 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: #41111:@reap-aliases
+
+Implemented.  It looks OK (security-etc-wise) to me.  I have not tested it.  We should probably be very careful about it.
+
+Should a player be removed from the hard reaps list after their aliases are reaped?  Hm, perhaps not, since their stuff can still be doled out, and they have to be in the reap list to get processed by #41111:@grant.  But then we need something to remove them after they've been denuded.  Want to propose something?  Thanks.  You've been very helpful with these verbs!
+
+--Nosredna
+--------------------------
+I don't understand that.
+Message 125 on *Ballot:StopReaping (#62497):
+Date:     Tue May 16 20:19:32 2006 PDT
+From:     Zombie_Jesus (#110777)
+To:       *Ballot:StopReaping (#62497)
+
+I suppose you could put in a new property .alias_reaped and modify other verbs to use that property instead of .hard_reaps. (This would mean that you couldn't @grant an object until the aliases are handled first.)
+
+It may also be possible to save the deleted aliases when it's moved to the .alias_reaped property. It's not mandated by the ballot, but some people might find it useful to note what the living dead used to be known as.
+--------------------------
+Message 126 on *Ballot:StopReaping (#62497):
+Date:     Tue May 16 22:06:56 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Re: #41111:@reap-aliases
+
+I agree player's should not be removed from the hard reaps list after their aliases are reaped.  Also, @reap-aliases should be repeatable if somehow a hard-reap player receives an additional alias.  This may happen one of two ways:
+1) Programmatically such as a morphing system that changes their alias set at certain times
+2) They are granted/transferred aliases from someone else... such as by an  alias-transfer station.
+
+If you are referring to changing a player from hard to easy reap after all @grant-ing is done, that could be done by modifying @grant.  But I would just leave as-is now since this ballot essentially stated that players who have made something useful have the right to have their main name and player object preserved for eternity (or however long LambdaMOO the db lasts).
+
+Still need to update #3223.reaping help text as I suggested.  You also may want to consider an @alias-reapable command that sorts thru all of the hard reaps and spits out the name and numbers (I think this is easier to do real-time rather than store it in .alias_reaps, your choice though).  And Zombie_Jesus's made a good reminder recording the aliases as they are removed in @reap-aliases would be ideal.  I think a $generic_db would be better than a fo prop.  Let me know if you'd like the additional code.
+--------------------------
+Message 127 on *Ballot:StopReaping (#62497):
+Date:     Wed May 17 18:35:20 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: #41111:@reap-aliases
+
+I guess we need some way to transfer an alias-reaped person to a "don't kill me" list, since as pointed out they are now indistinguishable from an easy reap.  So maybe another command, "@finish-reaping" (bad name, I dunno), that clears the player from .hard_reaps.  I haven't really thought about it.  Since you have, yes, please, additional code is helpful.  See how quick I installed it when it was cut-n-paste and just the occasional semicolon added?
+--------------------------
+Message 128 on *Ballot:StopReaping (#62497):
+Date:     Wed May 17 22:07:57 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Suggested #41111:@alias-reapable code
+
+@verb #41111:@alias-reapable none none none rxd
+@program #41111:@alias-reapable
+"@alias-reapable - Displays a listing of hard-reap players with reapable aliases.";
+alias_reaps = this.hard_reaps;
+"Start with the entire list and weed out those previously reaped.";
+for who in (alias_reaps)
+  if (!$set_utils:diff(who.aliases, aset = $list_utils:remove_duplicates({who.name, who.aliases[1]})))
+    "If there's no difference between the set of current aliases and the set for primary name, then no aliases avail to reap, so remove from list variable";
+    alias_reaps = setremove(alias_reaps, who);
+  endif
+endfor
+if (!alias_reaps)
+  player:tell("There are no hard-reap players with reapable aliases.");
+else
+  "Tell name names and numbers";
+  player:tell("The following is a listing of hard-reap players with reapable aliases:");
+  player:tell($string_utils:nn_list(alias_reaps));
+endif
+--------------------------
+Message 129 on *Ballot:StopReaping (#62497):
+Date:     Wed May 17 22:25:00 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Re: #41111:@reap-aliases
+
+I'll work up the $generic_db code tommorrow or so, or someone else feel free to take the lead. :)
+
+Please note the @reap-aliases command only removes aliases, and does not affect the objects one owns, so there's no way an alias-reaped person becomes indistinguishable from easy reap.
+.easy_reap is set based only on if one's objects have properties and programmed verbs.  If they do, the player is considered a hard-reap and added to .hard_reaps.  If you want to change @grant to check to see if hard-reap status should be changed, that's possible, although it goes against the intent of this ballot that players who are intially hard-reaps should be kept forever.  Am I missing something?
+--------------------------
+Message 130 on *Ballot:StopReaping (#62497):
+Date:     Thu May 18 18:49:16 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: Suggested #41111:@alias-reapable code
+
+Implemented.
+--------------------------
+Message 131 on *Ballot:StopReaping (#62497):
+Date:     Thu May 18 18:50:36 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: #41111:@reap-aliases
+
+>Am I missing something?
+
+Mmm, perhaps not.  On the other hand, it's nice to get players OUT of .hard_reaps when they've been processed..,.
+--------------------------
+Message 132 on *Ballot:StopReaping (#62497):
+Date:     Thu May 18 23:45:20 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Suggested #41111:@alias-reaped
+
+Someone from .hard_reaps should only be removed if they wakeup/login.  But I think what you may be asking for is a way to view those who have been alias-reaped and are still in .hard_reaps.  For that, add the following:
+
+@prop #41111.alias_db #34564 r
+@grant #34564 to me
+
+@verb #41111:@alias-reaped none none none rxd
+@program #41111:@alias-reaped
+"@alias-reaped - Displays a listing of hard-reap players with reaped aliases.";
+"Note: Doesn't show players removed from .hard_reaps when they woke up.";
+@program #41111:@alias-reaped
+alias_reaped = this.hard_reaps;
+if (!$recycler:valid(this.alias_db))
+  return player:tell("There is no listing of hard-reaped players.");
+endif
+"Start with the entire list and weed out those previously reaped.";
+for who in (alias_reaped)
+  if (!this.alias_db:find_player(who))
+    alias_reaped = setremove(alias_reaped, who);
+  endif
+endfor
+if (!alias_reaped)
+  player:tell("There are no hard-reap players with reaped aliases.");
+else
+  "Tell name names and numbers";
+  player:tell("The following is a listing of hard-reap players with reaped aliases:");
+  player:tell($string_utils:nn_list(alias_reaped));
+endif
+
+#34564 is the Alias Reaping Storage Db, which I ask you @grant to yourself.  I coded it to store by player# the alias-removal time, reaper and aliases removed for said player.  I expect this information could get large like $player_db, so I figure it's better to store in a db rather than a fo property.  If you disagree, I am open to recoding it.
+
+Modification @reap-aliases to use Storage Db
+
+@edit #41111:@reap-aliases
+del 33
+enter
+new_aliases = setadd({who.name}, who.aliases[1]);
+reaped_aliases = $set_utils:diff(who.aliases, new_aliases);
+"Do the alias setting";
+who:set_aliases(new_aliases);
+if ($recycler:valid(this.alias_db))
+  this.alias_db:insert(who, {time(), player, reaped_aliases});
+endif
+--------------------------
+Message 133 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 03:54:55 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Re: #41111:@reap-aliases
+
+Forgot to include a method to catch if player was already in db, so before the this.alias_db:insert call insert also the following 3 lines:
+
+  if (old = this.alias_db:find_player(who))
+    reaped_aliases = $set_utils:union(reaped_aliases, old[3]);
+  endif
+
+Thanks,
+active
+--------------------------
+Message 134 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 07:36:44 2006 PDT
+From:     Nosredna (#2487)
+To:       *Ballot:StopReaping (#62497)
+Subject:  Moving from .hard_reaps
+
+I meant, have a separate property, to hold those for whom no further action is required, other than not killing them.  Just so .hard_reaps doesn't get full, and it's easy to see who needs more work.  Maybe a separate verb that trolls through (set_difference on alias_reaped?) to indicate them.
+--------------------------
+Message 135 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 07:43:34 2006 PDT
+From:     Etoile (#113614)
+To:       *Ballot:StopReaping (#62497)
+
+Well, there are three categories, as far as I can tell.  hard_reaps, hard_reaps_aliases_removed, and hard_reaps_objects_removed.  The last one is what would fill up, mostly, since that's the final status once you've been stripped of your aliases and your objects.  Perhaps the word "ghost" could be used to refer to those who have already been fully stripped, or something like that.
+--------------------------
+Message 136 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 07:46:12 2006 PDT
+From:     Nosredna (#2487)
+To:       *Ballot:StopReaping (#62497)
+Subject:  Implemented
+
+I didn't @grant yet, in case you want to add more stuff.  I'll do it before it gets big, I promise!
+--------------------------
+Message 137 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 07:47:51 2006 PDT
+From:     Nosredna (#2487)
+To:       *Ballot:StopReaping (#62497)
+Subject:  ghost
+
+Oh, I love this name!  Thanks Etoile!
+--------------------------
+Message 138 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 07:53:04 2006 PDT
+From:     Nosredna (#2487)
+To:       *Ballot:StopReaping (#62497)
+Subject:  Re: ghost
+
+I've added #41111.ghosts, but not really done anything with it other than add it to :here_already.
+--------------------------
+Message 139 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 14:22:25 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497)
+Subject:  Re: ghost
+
+In #41111:@reap-aliases, please move line 39 (the $recycler:valid check) before line 36.
+Please update #3223.reaping (help reaping) as post 119 of this list.
+
+I'll look into @ghosts later.   Doesn't look that hard.  @ghosts should display .ghosts, those in the alias-reaped database who have no useful objects anymore...  Can put checks in both @grant and @reap-aliases to do the move.  The code that removes a waking player from .easy_reaps and .hard_reaps needs to also remove from .ghosts.  Will the change you made Nosredna, cover this?
+--------------------------
+Message 140 on *Ballot:StopReaping (#62497):
+Date:     Fri May 19 17:04:56 2006 PDT
+From:     Nosredna (#2487)
+To:       active (#91798) and *Ballot:StopReaping (#62497)
+Subject:  Re: ghost
+
+> In #41111:@reap-aliases, please move line 39 (the $recycler:valid check) before line 36.
+Done.
+> Please update #3223.reaping (help reaping) as post 119 of this list.
+Some discussion of the exact text is occuring on *reapers.
+> The code that removes a waking player from .easy_reaps and .hard_reaps needs to also remove from .ghosts.  Will the change you made Nosredna, cover this?
+No, not yet.
+--------------------------
+Message 141 on *Ballot:StopReaping (#62497):
+Date:     Sat May 20 06:07:54 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Spam Warning: Next Msg
+
+Next message is 88 lines (roughly 3-4 pgs.)
+--------------------------
+Message 142 on *Ballot:StopReaping (#62497):
+Date:     Sat May 20 06:07:58 2006 PDT
+From:     active (#91798)
+To:       *Ballot:StopReaping (#62497) and Nosredna (#2487)
+Subject:  Re: ghost
+
+Modifications of #41111:@reap-aliases:
+>  > In #41111:@reap-aliases, please move line 39 (the
+>  $recycler:valid check) before line 36.
+>  Done.
+Not quite...  this.alias_db:insert needs to be called within the $recycler:valid check but after the 3 lines that check if there's already aliases stored for said player.  Move line 37 to 41 (between the two endif's).
+
+Also, add the following:
+ins 42
+enter
+"If who has no useful objects, then add to .ghosts and remove from .hard_reaps";
+if (this:useless_check(who, {}))
+  this.ghosts = setadd(this.ghosts, who);
+  this.hard_reaps = setremove(this.hard_reaps, who);
+endif
+.
+com
+
+@edit #41111:@grant
+del 16
+"if (!(this:here_already_anywhere(owner = object.owner) || owner == this.bag))
+s /object.owner/owner/g 18-58
+ins 70
+enter
+if (owner in this.hard_reaps && this:useless_check(owner, {}) && !$set_utils:diff(owner.aliases, {owner.name, owner.aliases[1]}))
+  this.ghosts = setadd(this.ghosts, owner);
+  this.hard_reaps = setremove(this.hard_reaps, owner);
+endif
+.
+com
+
+@edit #41111:gc
+s /|| x/|| x in this.ghosts || x/ 4
+del 16
+"   for p in ({@playerprops, "hard_reaps", "easy_reaps", "ghosts"})
+ins 1 ""Internal verb called by :daily() to check if someone woke up, and remove them from appropriate props";
+com
+
+@edit #41111:undoom
+ins 6 "  this.ghosts = setremove(this.ghosts, who);
+ins 1 ""Internal verb called by :notify() and @immortalize that removes a player from all reaping properties.";
+com
+
+@edit #41111:report
+del 13
+enter
+  lines = {"Report of current " + l + ", " + player:ctime(time()) + ":", $string_utils:nn_list(this.(l))};
+  $mail_agent:send_message(this, player, {"Report of current " + l, {this.public_reapers}}, lines);
+  player:tell("Report of current " + l + " sent to your moomail.");
+.
+ins 10
+enter
+  elseif (index("ghosts", argstr))
+      l = "ghosts";
+.
+com
+
+@edit #41111:rclaim
+ins 10
+enter
+elseif (dobj in this.ghosts)
+  return player:tell($string_utils:nn(dobj) + " is a ghost.  Aborted, no reason to work on " + dobj.po + " anymore.");
+.
+com
+
+@rmverb #41111:add_reapee
+"It's an empty verb, no code...
+
+@verb #41111:@ghosts none none none rxd
+@program #41111:@ghosts
+"@ghosts - Display a listing of hard-reap players whose aliases have been removed and useful objects given away.";
+player:tell("There are currently " + tostr(length(this.ghosts)) + " ghosts:");
+if (length(this.ghosts) > 60 && !($command_utils:yes_or_no("This could be spammy, are you sure?")))
+  return player:tell("Ok, aborted.");
+endif
+items = {};
+for who in (this.ghosts)
+  tstr = $string_utils:explode($time_utils:english_time(time() - who.first_connect_time), ",")[1];
+  tstr = $string_utils:subst(tstr, {{"months", "mos"}, {"years", "yrs"}});
+  items = {@items, tostr(who.name, " (", who, ", ", tstr, ")")};
+  $command_utils:suspend_if_needed(0);
+endfor
+lines = $string_utils:columnize(items, 2, player:linelen());
+player:tell_lines({@lines, "---- @ghosts display finished. ----"});
+.
+
+@edit #41111:active_claims
+s /#68668/this.estate/ 4
+com
+--------------------------
+*Ballot:StopReaping (#62497) has no next message.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             5 new messages
+    *Core-DB-Issues (#8175)              8 new messages
+-- End of listing
+Message 1081 on *Server-Hackers (#24451):
+Date:     Mon May 15 10:13:38 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+I hacked up something to do "moo scripting" about 3 or 4 years ago, writing command line scripts in the MOO language.  #0:server_started read files, then parsed them to create moo objects, verbs, and properties and then started the whole thing executing.  It was all bootstrapped, using MOO code to do the (admittedly rudementary) script/input/file parsing.  The majority of my changes to the server we related to getting rid of the inherient, assumed networking, making the database load from another file (that contained the bootstrapping code) and adding automatic preemption (and the necessary support for resource locking that results) when tasks start running low on ticks.
+
+Looks like my working directories are dated 2003, so there you go.  Closer inspection shows that I had a #0:* verb populated with bootstrap code of 267 lines that actually implemented everything.  Requires fileio.  I can put this code up somewhere if someone wants to look at it or further hack on it.  I really should check it into my main source control repo for posterity.
+--------------------------
+Message 1082 on *Server-Hackers (#24451):
+Date:     Mon May 15 11:51:11 2006 PDT
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+> and adding automatic preemption (and the necessary
+> support for resource locking that results) when tasks start running low on
+> ticks.
+
+What builtins did you add to support locking?  Did you change the core to be preemptible?
+--------------------------
+Message 1083 on *Server-Hackers (#24451):
+Date:     Mon May 15 15:24:34 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+There is no "core", since there is no predefined database, so backward compatiblity was not an issue.  Any code in the included "libraries" ($utils) would have to be reviewed for contention issues, but I never got far enough to warrant starting to build the stdlib -- although I don't think non-VR-related $utils use what amounts to global/static variables (think C's strtok; $lock_utils uses properties on the object itself during processing), but they'd have to be rewritten, or wouldn't apply in a non-VR scripting environment.
+
+I was working on a new syntax that defined a synchronized block, a la java, that would lock on an object (or property), effectively implementing a mutex:
+
+sync($sys)
+  do stuff;
+endsync
+
+.  Entering the sync scope would block the verb (if there was contention) by forcifully doing an implied suspend(), adding the task to a queue suspended on that object.  When the scope is exited, the queue of tasks suspended on the given object would have it's head woken up -- this is, uh, pretty standard computer science for dealing with this.  I'd have to review the state of the code, but I think I was having problems changing the grammar to support this syntax, although I do remember that I did have it working.  I believe it also properly handled unrolling and unlocking through the stack during raising an error (this was easy because the syntax doesn't let you have improperly nested sync() blocks.
+
+I was going to add support for semaphores too, but again, didn't get that far.  It's effectively the same thing though.  down() does an implicit suspend() if there is contention, up() resumes tasks.
+
+Task limits (ticks and seconds) end up having no meaning, which was part of the design goals.  The arbitrary execution limits are there to avoid a single task taking over in this shared environment, in a script, the idea of "shared resources" takes on a different meaning.
+
+Lest you think I modified the MOO server to be multi-threaded, let me assure you that I did not do that.  It would require a major overhaul, perhaps even a complete rewrite.  The single MOO server process/thread does preemptive implicit co-operative multi-tasking, similar to how it works normally except you don't use to use $command_utils:suspend_if_needed.  MOO code does have the apperance of being multi-tasking though, although in a scripting language, there might be little use for it (depending on your program domain -- makes writing network servers easier, that's for sure).
+--------------------------
+Message 1084 on *Server-Hackers (#24451):
+Date:     Mon May 15 15:28:50 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+Threads were/are created by #0:server_started; if you're using listen(), by :user_connected; fork() creates a new thread (I don't think fork() was allowed inside a sync() block, or if it was, it did not inherit the locks).
+--------------------------
+Message 1085 on *Server-Hackers (#24451):
+Date:     Mon May 15 15:31:51 2006 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+Oh, I wanted to add that, while it was an interesting thing to work on at the time, I think time would be better spent these days (and at the time) writing a MOO code frontend (parser/compiler) that would run bytecodes on Parrot.  This position would have more weight if Parrot was a fully delivered and popular product at this time.
+--------------------------
+Message 5024 on *Core-DB-Issues (#8175):
+Date:     Fri May  5 16:09:00 2006 PDT
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  $network:open()
+
+I look at lines 10-14 and they just scream to me "rewrite us with a scatter assignment, please!"
+a scatter assignment saves ticks over the individual indexes and assignments used now
+Lines 10-14 should be replaced with the following:
+
+{address, port, ?connect_to} = args;
+if (length(args) < 3)
+  connect_to = $nothing;
+elseif (typeof(connect_to) == OBJ && valid(connect_to) && is_player(connect_to))
+--------------------------
+Message 5025 on *Core-DB-Issues (#8175):
+Date:     Sat May  6 06:02:56 2006 PDT
+From:     Nosredna (#2487)
+To:       Galatea (#122047) and *Core-DB-Issues (#8175)
+Subject:  Re: $network:open()
+
+Done. In our defense, you know, scatter assignments were only recently added...
+--------------------------
+Message 5026 on *Core-DB-Issues (#8175):
+Date:     Sun May  7 10:36:55 2006 PDT
+From:     Quad (#105557)
+To:       *Core-DB-Issues (#8175)
+
+Recent is such a relative term. ;-)
+--------------------------
+Message 5027 on *Core-DB-Issues (#8175):
+Date:     Sun May  7 17:59:28 2006 PDT
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: $network:open()
+
+Wouldn't this be better:
+
+{address, port, ?connect_to = $nothing} = args;
+if (connect_to == $nothing)
+elseif (typeof(connect_to) == OBJ && valid(connect_to) && is_player(connect_to))
+
+This does change behaviour slightly, as it permits $nothing to be explicitly passed in as the third parameter.  But that seems reasonable.
+--------------------------
+Message 5028 on *Core-DB-Issues (#8175):
+Date:     Tue May  9 23:31:12 2006 PDT
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: $network:open()
+
+I purposely did not use defaulting scatter assignment syntax in my code because that would have changed the behavior of the function.
+My code changes present the efficiency of scatter assignment in the implementation without changing the interface upon which God Emself only knows what code out there relies.
+While I believe there are core functions whose interface needs to be changed for efficiency ($network:open() not being one of them), far be it for me to impose my vision of interface here on LambdaMOO that would more than likely affect (re: break) huge swaths of code both here and abroad.
+Thus, I do my utmost not to affect the interface of core code for which I submit fixes and suggestions
+--------------------------
+Message 5029 on *Core-DB-Issues (#8175):
+Date:     Wed May 10 00:00:39 2006 PDT
+From:     Miral (#107983)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: $network:open()
+
+That's fair enough, but really, who would be depending on $network:open(x, y, #-1) to return E_INVARG?  Rather than simply calling $network:open(x, y)?
+
+Even if someone was doing a find/match and simply passing the result in (which is a fairly insane use case anyway), it would be $failed_match that got passed in, not $nothing.
+--------------------------
+Message 5032 on *Core-DB-Issues (#8175):
+Date:     Wed May 10 01:34:10 2006 PDT
+From:     Galatea (#122047)
+To:       *Core-DB-Issues (#8175)
+Subject:  $player:notify()
+
+Move lines 3-8 to 1 and delete lines 54-56
+This puts the security check stuff at the top, before any actual code gets evaluated
+--------------------------
+Message 5033 on *Core-DB-Issues (#8175):
+Date:     Fri May 12 14:43:06 2006 PDT
+From:     Nosredna (#2487)
+To:       Galatea (#122047) and *Core-DB-Issues (#8175)
+Subject:  Re: $player:notify()
+
+OK, I've made this change.  I note that the second security check, caller != this, was not replicated in the else clause.  Not sure if this was a bug, but it's a potential change of behavior, so I thought I'd note it.
+--------------------------
+No News (is good news)

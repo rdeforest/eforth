@@ -1,0 +1,21 @@
+Welcome to The Programmer's Manor
+
+For help outside the MOO contact robert@defore.st.
+
+    connect user pass     - log in
+    create  user pass     - create and log in to new user
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+Last connected Thu Nov 18 12:50:59 2004 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 589261213 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 589261213 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 589261213 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 589261213
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Robert         Reading Room in the Library   0 seconds                         
+
+Total: 1 person, who has been active recently.

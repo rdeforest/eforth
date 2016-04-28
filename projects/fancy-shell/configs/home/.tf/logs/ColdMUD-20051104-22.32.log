@@ -1,0 +1,34 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+I don't understand that.
+--> $admin_1
+--> $admin_1
+ERROR: Can't find object name admin_2.
+Thrown by function get_name().
+~namenf in #40.tmp_eval (defined on #40), line 1
+~methoderr in #40.eval (defined on #1), line 19
+~methoderr in #40.eval_cmd (defined on #26), line 11
+~methoderr in #40.parse_command (defined on #31), line 32
+~methoderr in #40.parse_command (defined on #26), line 12
+--> ~namenf
+ERROR: Method get_name not found.
+Thrown by interpreter opcode MESSAGE.
+~methodnf in #40.tmp_eval (defined on #40), line 1
+~methoderr in #40.eval (defined on #1), line 19
+~methoderr in #40.eval_cmd (defined on #26), line 11
+~methoderr in #40.parse_command (defined on #31), line 32
+~methoderr in #40.parse_command (defined on #26), line 12
+--> 'admin_1
+--> "o"
+--> "f"

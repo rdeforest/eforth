@@ -1,0 +1,354 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Master Bedroom
+A bed is here.  stormagnet and you are sitting on it.
+stormagnet is here, off in another world.
+Last connected Wed Aug 17 08:02:13 2005 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 2141771789 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 2141771789 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 2141771789 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 2141771789
+#$#dns-org-mud-moo-simpleedit-content 2141771789 reference: "str:#10.welcome_message" name: "Login Commands.welcome_message" type: string-list content*: "" _data-tag: 706257349
+#$#* 706257349 content: Welcome to ProgrammersManor.
+#$#* 706257349 content: 
+#$#* 706257349 content: If you're unfamiliar with MOO, you may find
+#$#* 706257349 content:   http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+#$#* 706257349 content: to be helpful.
+#$#* 706257349 content: 
+#$#* 706257349 content:     connect username password            to login
+#$#* 706257349 content:     create  username password            if you are new here
+#$#* 706257349 content: 
+#$#: 706257349
+Set welcome_message property of the Login Commands (#10).
+Crag | http://money.cnn.com/services/tickerheadlines/prn/200508150955PR_NEWS_USPR_____CGM030.htm
+Crag says, "Also, unrelated:"
+Crag | When you.ve evolved over 235 million years, and your daily social behaviour involves biting limbs off other crocs, you need a good immune system!
+Crag says, "The Slashdot username of the guy who posted that is "krazykrok" :)"
+Crag says, "free pizza for lunch again today"
+Crag says, "yum"
+stormagnet says, "yay free food!"
+stormagnet peers
+stormagnet blinks
+stormagnet says, "YOU'RE SHITTING ME!!!!!!"
+Crag heh
+Crag says, "It's for real"
+stormagnet busts a gut
+stormagnet says, "Man, there's a lot of no-shit headlines today"
+stormagnet says, "It's irritating"
+Crag says, "heh"
+Crag says, "I'm happy to report that the datacenter temperature has stabilized under 70 since I did all that tweaking"
+Crag says, "And there are no more short cycle problems"
+Crag says, "yay me"
+stormagnet CHEERS!
+stormagnet says, "That's awesome"
+Crag says, "I'm going crazy here"
+Crag says, "I've got coLinux running again, and I'm using the cygwin unix tools for wnidows"
+Crag says, "And I'm using the regular NT shell"
+stormagnet LAUGHS
+stormagnet says, "good lord, man"
+Crag says, "ANd I keep copying files back and forth between colinux and windows"
+Crag says, "Moving the files to the environment where I can do the best work on them"
+Crag says, "For example, the windows version of ping will timeout eventually, but GNU ping won't (apparently)"
+Crag says, "SO I can use windows ping to see if a machine is up"
+stormagnet says, "Weird"
+Crag says, "But the unix 'host' command is way better than 'nslookup' in windows"
+stormagnet sighs
+stormagnet says, "When we get ildana set up"
+stormagnet says, "And booty, and all that"
+stormagnet says, "Maybe we could try loading vmware on navi?"
+stormagnet says, "It wouldn't HAVE to play well with Xen, then, because the Xen would all be running on ildana"
+stormagnet says, "right?"
+Crag says, "You mean in order to regain access to Windows?"
+Crag says, "So you can do windows stuff?"
+Crag says, "If so, I'd say just run windows"
+Crag says, "And then use vnc if you want a linux desktop"
+Crag says, "You wouldn't want to try to watch anime under VMware, I think"
+Crag says, "I doubt it would perform well"
+Crag says, "I dunno, maybe I'm wrong"
+Crag says, "oh, you mean run windows under vmware"
+Crag says, "or something"
+Crag says, "my brain is scrambpled"
+Crag says, "Let's talk about projects like that tonight"
+Crag says, "We'll go to hotwire :)"
+stormagnet says, "Before Hwy 99?"
+stormagnet says, "AUIGH"
+Crag?
+stormagnet says, "Here is an excellent example of why I only shop online for electronics"
+stormagnet says, "Prepare for a fat paste"
+Crag says, "I'm ready"
+------------------------------- stormagnet --------------------------------
+In Retail, Profiling for Profit
+Best Buy Stores Cater to Specific Customer Types
+
+By Ariana Eunjung Cha
+Washington Post Staff Writer
+Wednesday, August 17, 2005; A01
+
+SANTA ROSA, Calif. -- Store manager Jenine Bryant scanned the entrance of the Best Buy, sizing up each customer who passed through. Just before noon, a blond woman in a fashionable white sleeveless shirt and flower-patterned pants wandered in unsteadily, fumbling inside her purse for a scrap of paper.
+
+She looked at it, then looked up at the signs denoting how the store is laid out, and then she looked down and up again. Bryant recognized her immediately and rushed over.
+
+The woman was a "Jill," code name for a soccer-mom type who is the main shopper for the family but usually avoids electronics stores. She is well-educated and usually very confident, but she is intimidated by the products at Best Buy and the store clerks who spout words like gigabytes and megapixels.
+
+Best Buy Co. is trying to change that by giving her the rock star treatment at selected stores: Sending sales associates with pink umbrellas to escort the Jills to and from their cars on rainy days and hoisting giant posters in the stores that pay homage to the Jills and their children, who are shown playing with the latest high-tech gadgets.
+
+Big chain stores used to be among the most egalitarian of places. They were aimed at the average person, the generic "shopper," without conscious regard to background, race, religion or sex. That is changing as computer databases have allowed corporations to gather an unparalleled amount of data about their customers. Many retailers, like Best Buy, are analyzing the data to figure out which customers are the most profitable -- and the least -- and to adjust their policies accordingly.
+
+Express clothing stores no longer accept returns from those the company deems to be serial returners. Filene's Basement has even gone so far as to ban a few customers from its stores because of excessive returns and complaints.
+
+Such endeavors have proved controversial, because the computer programs that try to determine a customer's true value are still a work in progress, with the potential to alienate as well as attract good spenders.
+
+But inspired by Columbia University Professor Larry Selden's book, "Angel Customers and Demon Customers," Best Buy chief executive Bradbury H. Anderson is on a mission to reinvent how the company thinks about its customers. Best Buy has pared some less desirable shoppers from its mailing lists and has tightened up its return policy to prevent abuse. At the same time, it has begun to woo a roster of shopper profiles, each given a name: Buzz (the young tech enthusiast), Barry (the wealthy professional man), Ray (the family man) and, especially, Jill.
+
+Based on analyses of databases of purchases, local census numbers, surveys of customers and targeted focus groups, Best Buy last fall started converting its 67 California stores to cater to one or more of those segments of its shopping population. It plans to roll out a similar redesign at its 660 stores nationwide -- including about 15 in the Washington area -- over the next three years. The Best Buys in the Springfield Mall, the Fairlakes shopping center and Potomac Mills, for instance, are being transformed into stores for Barrys, featuring leather couches where one might imagine enjoying a drink and a cigar while watching a large-screen TV hooked up to a high-end sound system.
+
+The Santa Rosa Best Buy, Store #120, is a Jill store.
+
+Pink, red and white balloons festoon the entrance. TVs play "The Incredibles." There is an expanded selection of home appliances as well as new displays stocked with Hello Kitty, Barbie and SpongeBob SquarePants electronic equipment. Nooks are set up to look like dorms or recreation rooms where mom and the children can play with the latest high-tech gadgets at their leisure. Best Buy has new express checkout lines for the Jills; store managers say anyone can use them, but if you are not escorted by a special service representative they can be easy to miss. The music over the loudspeakers has been turned down a notch and is usually a selection of Jill's favorites, such as James Taylor and Mariah Carey.
+
+But who exactly is a Jill?
+
+"She's very smart and affluent," said Best Buy employee Jenn Metzger.
+
+"Jill is a decision maker. She is the CEO of the household," said Tony Sagastume, the general manager for the Santa Rosa Best Buy.
+
+"Jill's children are the most important thing in her life," Bryant added.
+
+According to the data Best Buy has collected, Jill shops a few times a year -- usually twice -- at an electronics store, but she usually spends a significant amount.
+
+Since the redesign was rolled out in October, Jills have increased their spending at the Santa Rosa store by 30 percent, helping boost the store's revenue to what is expected to be $75 million to $80 million this year from around $50 million a year before the redesign and pushing its customer loyalty rating to among the top five in the country.
+
+Nationwide, such "customer centricity" stores had an 8.4 percent increase in sales in the quarter ended May 28, compared with the same period a year ago, Best Buy executive John C. Walden said in June.
+
+About 20 percent of the overhaul has to do with store merchandise, but the other 80 percent is more about the customer experience, said Susan Busch, a Best Buy spokeswoman. About a dozen of the Santa Rosa store's 210 employees are dedicated to what is known internally as the Jill segment team. To customers, this group is known as personal shopping associates, and its members wear pastels instead of the royal blue shirts that other salespeople in the store sport. They are stationed at an island smack in the center of the store decorated with fake purple flowers and stuffed animals.
+
+"Is there anything special you're looking for today?" Bryant asked the blond woman.
+
+"Oh, yes," she said, glancing down at the paper in her hand. "Playstation-2-Charlie-and-the-Chocolate-Factory?"
+
+Bryant introduced the woman, Ann Facciano, 59, to another member of the Jill team, 18-year-old Jeremy Herman. Herman beamed at her and walked her over to the selection of games, pulled the appropriate box out of the stack, and then walked her back to the express checkout counter.
+
+"Perfect!" Facciano exclaimed, admitting that she usually avoids Best Buys and asks her husband to come here whenever she needs something.
+
+When Herman explained the store's new focus and handed her a card with his work e-mail address and a phone number for the specially trained Jill associates, Facciano squinted at the balloons and the new children's displays. "I guess I had better start coming in here more and figuring out what you have."
+
+In the few minutes Herman had been helping Facciano, another woman in an almost identical crisp white shirt walked in, looking confused. Another Jill.
+
+Bryant jumped in front of her. "Are you finding everything all right?"
+
+"Uh, no," the woman said. "Uh, I have this Dell computer and . . . " Bryant smiled and nodded, and they were off.
+------------------------ stormagnet stops pasting -------------------------
+Crag snorts
+stormagnet says, "I MUST INSIST YOU APOLOGIZE FOR THE PATRIARCHY NOW"
+Crag blinks
+stormagnet laughs
+Crag says, "Er, sorry about that"
+stormagnet LAUGHS
+Crag says, "I thought it was a good idea at the time?"
+Crag says, "way back... in 700BC"
+Crag says, "Next time I have a pivotal role in culture I'll be more careful"
+Crag grins.
+stormagnet giggles
+stormagnet says, "So- Hotwire + Hwy 99?"
+Crag says, "yeah"
+Crag says, "I just got an SMS spam on my phone"
+Crag says, "bleah"
+stormagnet laughs
+Crag says, "I can't run tmda on my phone, dammit!"
+stormagnet says, "YET"
+stormagnet says, "Oh goddammit- BofA overdrew"
+Crag says, "yeah"
+stormagnet shakes her tiny fist
+Crag sighs
+stormagnet says, "I'm sorry"
+Crag says, "maybe no hotwire/99 afterall"
+stormagnet says, "I should have gone easy on the groceries"
+Crag says, "I have $14 in my wallet"
+Crag says, "I should take a more active role in managing our finances, shouldn't I"
+stormagnet sighs
+Crag says, "It's irresponsible of me to make you take care of me"
+stormagnet says, "I should stop sucking at it"
+Crag says, "We should do it together"
+Crag says, "We're a team"
+stormagnet nods
+stormagnet hugs!
+Crag says, "And I'm just a big crybaby scardycat"
+stormagnet laughs
+Crag says, "MONEY!? DENTIST?!"
+stormagnet says, "You've got plenty on your plate"
+Crag ducks under the pillows
+stormagnet LAUGHS
+Crag says, "Yes, but I'm an adult"
+Crag says, "I have been for a long time"
+stormagnet says, "aw"
+Crag says, "THis is the bad side of the Pisces type"
+Crag says, "Well, not THE bad side.  If it were the only one I'd be stokde"
+Crag says, "stoked"
+Crag says, "anyway"
+Crag says, "We'll talk about all of this tonight"
+Crag says, "I think I'm going to bow out of the 99 jam"
+stormagnet says, "Aw, nuts"
+Crag says, "My week is already very full"
+stormagnet nods
+stormagnet says, "'Tis true"
+stormagnet says, "I think, when we re-fi, that we should do one of those equity-linked revolving lines of credit"
+stormagnet says, "NOT a big one, but a couple grand"
+stormagnet says, "And use it for all our bill baying"
+stormagnet says, "PAYING"
+stormagnet says, "gah"
+Crag says, "I think I see what you're saying."
+Crag says, "And I think I like it"
+Crag says, "BUT"
+stormagnet nods
+Crag says, "I want that account to count against our buffer, even if it's paid off"
+Crag says, "So if it's a $3k account, we need $6k liquid to consider ourselves 'safe'"
+stormagnet says, "We could, but it doesn't make math sense"
+stormagnet says, "It should count against our house equity requirement"
+Crag says, "good point"
+stormagnet says, "Because extending our credit availability ADDS buffer"
+Crag says, "Because 'worst case', we just lose equity"
+stormagnet says, "Which is what I'd been misunderstanding/avoiding"
+stormagnet nods
+Crag says, "right"
+Crag says, "ok"
+Crag says, "Tonight we'll talk about all our projects and how I can be more helpful"
+stormagnet says, "Overdrafts and late fees cost us far more than any interest on that would"
+stormagnet nods
+stormagnet is still learning how to be a grownup
+Crag says, "I'm not setting a very good example :/"
+stormagnet says, "But it adds to your youthful charm?"
+Crag [to stormagnet]: Be like me!  Foist responsibility on other people and then get depressed about it!
+Crag says, "heh, I like your interpretation"
+stormagnet says, "Try what I did! Only $10k up front!"
+Crag laughs
+Crag says, "I didn't read very far into that"
+stormagnet says, "Meep!"
+stormagnet says, "It's past 1:30!"
+Crag says, "Oh good lord"
+stormagnet baps herself on the head
+Crag says, "I'm only going to be here 90 more minutes :P"
+stormagnet says, "But I already did this on Monday"
+Crag says, "I'm sure as heck not going to stay late today"
+Crag says, "well"
+Crag says, "yes"
+Crag says, "but I NEED you :)"
+Crag <- not helping
+stormagnet melts
+Crag says, "yay!"
+Crag says, "You know you'll make up for it"
+Crag says, "Today is special"
+stormagnet doesn't really know
+Crag says, "We really need to talk about all this stuff"
+stormagnet says, "aw!"
+stormagnet says, "okay"
+Crag says, "_I_ need to :)"
+stormagnet hugs!
+Crag hugs :)
+Crag says, "You've been wonderfully patient with me."
+Crag says, "I don't think I could grow any faster than I am with you"
+stormagnet says, "Don't let me push you too hard, though"
+stormagnet <- worries
+stormagnet says, "The more I learn, the more I found out that my debt-aversion has been a financial liability"
+stormagnet sighs
+stormagnet says, "For instance, college loans are tax-deductible"
+Crag says, "You're not pushing me too hard at all"
+Crag says, "Wow, cool!"
+stormagnet says, "Interest deffered"
+Crag says, "We have so much to learn :)"
+stormagnet says, "Deferred, that is"
+stormagnet nods
+stormagnet says, "So, if I take out some fat college loans, then pay them off as soon as I graduate, there will be a PROFIT"
+stormagnet says, "Because of the tax-deduction and interest deferral"
+stormagnet says, "And to think I was avoiding those like the plague"
+Crag says, "Wow"
+stormagnet says, "Just because other people abuse them doesn't mean I have to"
+Crag says, "That sounds too good to me true"
+Crag says, "to good to be"
+stormagnet nods
+stormagnet says, "It's meant to be an INCENTIVE"
+Crag says, "Lowering tuition and book costs would be a big incentive"
+stormagnet nods
+Crag says, "But I'm not bitter!"
+stormagnet LAUGHS
+Crag growls
+stormagnet says, "It's one of those incentives that only helps rich people"
+stormagnet says, "And screws poor ones"
+Crag says, "The college book market pisses me off way more than issues like the environment"
+stormagnet says, "But I'm not above taking advantage of what I can"
+Crag says, "good"
+Crag says, "A lot of rich people are former poor people who weren't above etc"
+stormagnet laughs
+Crag says, "The rest just inherited it"
+stormagnet nods
+Crag says, "There are a statistically insignificant few who earned it :)"
+stormagnet grins
+stormagnet says, "You have to be making a good chunk of money in the first place for tax-deductions to be useful, for instance"
+stormagnet says, "If you're at or below the poverty level, they're worthless"
+Crag says, "This just leads into the converstaion we were having about indentured servitude"
+stormagnet nods
+Crag says, "If it were made public and official it wouldn't have the power it does."
+Crag says, "It would be an equalizer"
+stormagnet laughs
+stormagnet says, "Well, with indentured servitude, there was always a sunset clause"
+stormagnet says, "A success condition"
+Crag says, "yes, that's what it is"
+stormagnet says, "With the current system, it's more like an ARM"
+stormagnet mixes and remixes metaphores
+stormagnet says, "The bar keeps moving"
+Crag says, "But also, since it's not explicit, it's not clear to most people that they COULD free themselves."
+stormagnet nods
+stormagnet says, "Or how"
+stormagnet says, "Mostly how"
+Crag says, "Well yeah"
+stormagnet says, "Because how keeps changing"
+stormagnet says, "How used to be, stay out of debt"
+stormagnet says, "Now it's, get into debt, but only the right kind"
+That is not a valid command.
+Crag says, "yeah"
+stormagnet says, "Poor people used to be skinny, now they're obese"
+stormagnet says, "Etc"
+Crag says, "Good point"
+stormagnet says, "Everything keeps moving around"
+Crag says, "We'll have to talk about _this_ tonight too :)"
+Crag says, "We'll save it for desert"
+stormagnet laughs
+stormagnet says, "Indeed"
+Crag says, "I've got to figure out what else I have to do today to feel OK leaving at 3"
+Crag says, "Ah, I know"
+Crag idles: teaching linux
+[Idling at 1:45 P.M. on Wed, Aug 17: teaching linux]
+Crag wakes
+Crag says, "it was a short lesson"
+Crag sighs
+Crag says, "I could do so much for this company"
+stormagnet nods
+Crag says, "gah, I'm feeling panicky"
+stormagnet hugs!
+stormagnet says, "Hang in there"
+stormagnet says, "Not much longer now"
+Crag idles: home again home again, jiggity jig
+[Idling at 2:51 P.M. on Wed, Aug 17: home again home again, jiggity jig]
+Crag yawn, stretch
+Crag says, "I want something like snopes for non-funny misconceptions people have"
+Crag says, "Debunking of 'common sense' ideas like that correlation/causation thing that keeps comnig up"
+Crag says, "Or 'increasing funding' == 'increasing service'"
+Crag says, "Of course, it would have to track both logical fallacies and factual inaccuracies (lies :)."
+Crag laughs
+Crag says, "From wikipedia:"
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+---------------------------------- Crag -----------------------------------
+H. L. Mencken defined a demagogue as
+
+    "one who preaches doctrines he knows to be untrue to men he knows to be idiots." 
+--------------------------- Crag stops pasting ----------------------------
+Done @pasting.
+Crag be back

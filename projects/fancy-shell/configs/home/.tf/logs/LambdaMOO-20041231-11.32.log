@@ -1,0 +1,246 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 130 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             6 new messages
+    *Core-DB-Issues (#8175)              11 new messages
+Last connected Thu Dec  9 09:41:03 2004 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Name          Conn Idle G Location     Pop Age
+------------- ---- ---- - ------------ --- ---
+Crag (#58746) 3s   0s   m Storage room 1   30 
+
+Total 1 player.
+< connected: Crag. Total: 131 >
+Message 1006 on *Server-Hackers (#24451):
+Date:    Thursday 30-Dec-04 13:23:05
+From:    Sych (#114174)
+To:      *Server-Hackers (#24451)
+Subject: Bug? Precedence issue? lack of error raised?....
+
+List element assignment not working 
+The following MOO-code does not work as expected: 
+
+l = {1, 2}; 
+l[1] = l[2] = 3; 
+return l; 
+
+It returns {3, 2}, when it should return {3, 3}. The inner 
+assignment to l[2] seems to be 'forgotten' somehow. 
+
+"disclaimer: I didnt find it but no-one has brought it up either"
+--------------------------
+Message 1007 on *Server-Hackers (#24451):
+Date:    Thursday 30-Dec-04 14:13:26
+From:    Menace (#114174)
+To:      *Server-Hackers (#24451)
+
+I think the issue is the lack of precedence for = or it should be flat out bringing up an error, cuz I dont see how its getting {3,2} if anything going left > right it would have been {2,3} or right < left would be {3,3} so I dunno.
+--------------------------
+Message 1008 on *Server-Hackers (#24451):
+Date:    Thursday 30-Dec-04 15:13:00
+From:    Xeric (#112019)
+To:      *Server-Hackers (#24451)
+
+Yes, indexset is broken.  The order of the arguments in the internal stack machine representation pushes 'l' first, then the index, and then the rvalue of the expression.  If the rvalue has a side-effect that modifies l, it will ultimately be overwritten because the 'base' value of l is pushed first.  The index of the lvalue is also pushed before the rvalue is evaluated, so you get an odd result from
+
+;;i=1;l={11,17};l[i]=(i=2);return l
+
+because the l[i]'s i is pushed before (i=2) happens (parenthesis just for clarity).
+--------------------------
+Message 1009 on *Server-Hackers (#24451):
+Date:    Thursday 30-Dec-04 15:14:04
+From:    Sych (#114174)
+To:      *Server-Hackers (#24451)
+
+well is anyone going to fix the source code for it 8) or point out where it might be located at to be fixed? 8)
+--------------------------
+Message 1010 on *Server-Hackers (#24451):
+Date:    Thursday 30-Dec-04 15:18:28
+From:    Xeric (#112019)
+To:      *Server-Hackers (#24451)
+
+Oh, and it can't easily be fixed because suspended and forked tasks save their stopping point by the offset into the compiled bytecode, but they save the original source code.  If the source doesn't compile to the same thing then suspended/forked tasks could blow up.  James did a lot of work to fix this saved-PC problem in the SF CVS branch INLINEPC but I don't know the state of that work.  It saves PCs by unparsing a special token (I think he actually chose :-) ) at the suspend/fork point so that the code can be compiled to a new form while preserving the offset.  This would still force you to enshrine the existing code generator so that old DBs could be updated by first compiling to the legacy format, then unparsing into the INLINEPC format, then recompiled into whatever new internal representation you wanted.
+--------------------------
+Message 1011 on *Server-Hackers (#24451):
+Date:    Friday 31-Dec-04 09:04:50
+From:    Luke-Jr (#115349)
+To:      Xeric (#112019) and *Server-Hackers (#24451)
+
+>  Oh, and it can't easily be fixed because suspended and forked
+Any reason a mini-parser couldn't be created that *only* counts the position for the stopping point?
+Of course, I'm not sure it would be worth the effort, seeing as the testing it would need to make sure it properly counts all possible code.
+Perhaps the best way would be to simply have the bugfixed servers reject non-inlinepc tasks and require the admin convert it with an older inlinepc-capable server.
+--------------------------
+Message 799 on *News (#123):
+Date:    Wednesday 22-Dec-04 00:00:06
+From:    ARB Elections Core (#52221)
+To:      *News (#123)
+Subject: ARB election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Architecture Review Board has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        75        11         5   *   Stetson (#65101)
+        76        16         5   *   deLaMer (#111890)
+        61        17         6   *   aldon (#96778)
+        62        24         6   *   Peri (#86631)
+        46        11         9   *   the_grinch (#116601)
+        51        17         6   *   GrinchDruid (#110777)
+        46        13         7   *   Griffen (#93228)
+        37        14         8   *   Eins (#113451)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+Message 800 on *News (#123):
+Date:    Wednesday 22-Dec-04 00:00:07
+From:    ARB Elections Core (#52221)
+To:      *News (#123)
+Subject: ARB Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Architecture Review Board currently being held by nothing.  Nominations for the ballot will be accepted until Wednesday, December 29, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for ARB' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 801 on *News (#123):
+Date:    Wednesday 22-Dec-04 00:00:08
+From:    ARB Elections Core (#52221)
+To:      *News (#123)
+Subject: ARB Election Yields No New Members
+Sender:   Petitioner (#4)
+
+   The ARB election that ended on Wednesday, December 22, at 12:00 am, LambdaMOO Standard Time failed to produce enough new members, so the election process must be restarted, beginning with a new nominating period just as before.  See below for details.
+--------------------------
+Message 802 on *News (#123):
+Date:    Wednesday 29-Dec-04 00:00:08
+From:    ARB Elections Core (#52221)
+To:      *News (#123)
+Subject: ARB Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are four candidates which have been generated for balloting for the ARB election.  Type `@arb-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Wed Jan 12 00:00:08 2005 PST; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 4850 on *Core-DB-Issues (#8175):
+Date:    Wednesday 15-Dec-04 00:23:28
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+Subject: $perm_utils:controls()
+
+ this verb doesn't do any validation of the first-argument object, thus, if said object is, say, $nothing, trying to access .wizard on it will blow up with an E_INVIND, at line 3.  suggestion:  s/args[1].wizard/`args[1].wizard ! E_INVIND'/3
+--------------------------
+Message 4851 on *Core-DB-Issues (#8175):
+Date:    Wednesday 15-Dec-04 20:45:18
+From:    Nosredna (#2487)
+To:      Galatea_Stardancer (#122047) and *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+Well, exception handling is expensive, you know.  How about adding "valid(args[1])" instead?  That's what I did.  (I made it slightly fewer ticks by setting args[1] to a variable, now that it's used thrice.  I think.  I didn't actually count ticks.)
+Ah, fooey.  So I did count ticks.  Nine either way!!  I'm leaving it with the variable.
+--------------------------
+Message 4852 on *Core-DB-Issues (#8175):
+Date:    Wednesday 15-Dec-04 20:46:32
+From:    Nosredna (#2487)
+To:      Galatea_Stardancer (#122047) and *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+...And next you'll complain about args[2], so I checked that too.
+--------------------------
+Message 4853 on *Core-DB-Issues (#8175):
+Date:    Wednesday 15-Dec-04 21:01:07
+From:    Loufah (#116455)
+To:      *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+You can shave off a couple more ticks by replacing lines 3 and 4 with {who, what} = args;
+--------------------------
+Message 4854 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 10:02:53
+From:    Nosredna (#2487)
+To:      Loufah (#116455) and *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+Are you sure that changes the number of ticks?  An experiment where I said ;{foo, bar} = {1,2} vs. ;;foo = 1; bar = 2; gave me the same 2 ticks used.
+--------------------------
+Message 4855 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 10:09:24
+From:    Loufah (#116455)
+To:      *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+Yes. Compare
+
+    ;; args={1,2}; {who, what}=args;
+
+with
+
+    ;; args={1,2}; who=args[1]; what=args[2];
+--------------------------
+=> 0
+[used 5 ticks, 0 seconds.]
+=> 0
+[used 8 ticks, 0 seconds.]
+Message 4856 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 10:28:46
+From:    Nosredna (#2487)
+To:      Loufah (#116455) and *Core-DB-Issues (#8175)
+Subject: Re: $perm_utils:controls()
+
+Aha.  My test didnt take into consideration the array indexes to access args.
+--------------------------
+Message 4857 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 20:16:43
+From:    Blob (#21528)
+To:      *Core-DB-Issues (#8175) and *Wizard-List (#6428)
+Subject: timezone?
+
+Is there a standard property anywhere that will tell me what timezone (wrt GMT) the time() command will return the time for? If not, could something be added to $local? Or maybe $time_utils?
+
+Blob
+--------------------------
+Message 4858 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 20:23:45
+From:    Galatea_Stardancer (#122047)
+To:      *Core-DB-Issues (#8175)
+
+Well, the timezone, in string format at least, appears to be $string_utils:explode(ctime())[$]
+--------------------------
+Message 4859 on *Core-DB-Issues (#8175):
+Date:    Thursday 16-Dec-04 20:35:57
+From:    Nosredna (#2487)
+To:      *Core-DB-Issues (#8175)
+
+Well there's $time_utils.zones, which sort of implies it.  The problem with such a thing is it has to be manually updated, and who's going to remember?  I would think the ctime() hack is best, unless you're concerned with efficiency.  (What is it with me and efficiency these days?)
+--------------------------
+Message 4860 on *Core-DB-Issues (#8175):
+Date:    Thursday 30-Dec-04 12:13:09
+From:    Sych (#114174)
+To:      *Core-DB-Issues (#8175)
+
+has anyone extracted a recent core?  I did a core-db extraction in 2003. anyone do one more recent then that? if you want it I do have it up for download.
+--------------------------
+No News (is good news)

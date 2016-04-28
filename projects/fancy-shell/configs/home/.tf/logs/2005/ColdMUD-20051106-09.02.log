@@ -1,0 +1,488 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+$admin_1
+$admin
+  definer * this * eval *
+  as * eval *
+$programmer
+  eval *
+  @program * on *
+  @show *
+  @params *
+  @methods *
+  @verbs *
+  @list * on *
+$builder
+  @dig * to *
+  @dig *
+$user
+  @who
+  @doing *
+  @quit
+  i?nventory
+  p?age * with *
+  sample_edit *
+  h?elp
+$proto_user
+$has_commands
+$person
+$container
+$located
+$vr
+$described
+$has_verbs
+$root
+Enter text for method help-cmd.
+Method compiled.
+Enter text for method help_cmd.
+Method compiled.
+I don't understand that.
+I don't understand that.
+$admin
+  definer * this * eval *
+  as * eval *
+$programmer
+  eval *
+  @program * on *
+  @show *
+  @params *
+  @methods *
+  @verbs *
+  @list * on *
+$builder
+  @dig * to *
+  @dig *
+$user
+  @who
+  @doing *
+  @quit
+  i?nventory
+  p?age * with *
+  sample_edit *
+  h?elp
+Methods:
+  check_password
+  connected
+  connected_at
+  connection_gone
+  connection_logged_in
+  connections
+  did_move
+  doing
+  doing_cmd
+  help_cmd
+  init_user
+  inventory_cmd
+  last_command_at
+  login
+  login_again
+  logout
+  page_cmd
+  parse_command
+  parse_line
+  quit_cmd
+  sample_edit_cmd
+  sample_edit_done
+  set_doing
+  set_password
+  set_vr_name
+  spawn
+  tell
+  uninit_user
+  who_cmd
+  will_move
+  help-cmd
+Parents: []
+Parameters:
+  fertile
+  method_source
+  name
+  owners
+  public
+Methods:
+  add_owner
+  add_parameter
+  ancestors
+  change_parents
+  children
+  chparents
+  compile
+  del_method
+  del_owner
+  del_parameter
+  destroy
+  dump
+  dump_root
+  eval
+  fertile
+  find_method
+  find_next_method
+  has_ancestor
+  init_root
+  initialize
+  is_owned_by
+  list_method
+  methods
+  name
+  name_str
+  owners
+  parameters
+  parents
+  public
+  set_fertile
+  set_name
+  set_owners
+  set_public
+  show
+  spawn
+  uninitialize
+  will_inherit
+#1 variables:
+  fertile: 0
+  method_source: #[]
+  name: 'root
+  owners: [#1]
+  public: 1
+ERROR: No such parameter cmd.
+Thrown by interpreter opcode GET_OBJ_VAR.
+~paramnf in #48.tmp_eval (defined on #48), line 1
+~methoderr in #48.eval (defined on #1), line 19
+~methoderr in #48.eval_cmd (defined on #44), line 11
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+--> $user
+Nowhere
+You see nothing special.
+$admin
+  definer * this * eval *
+  as * eval *
+$programmer
+  eval *
+  @program * on *
+  @show *
+  @params *
+  @methods *
+  @verbs *
+  @list * on *
+$builder
+  @dig * to *
+  @dig *
+$user
+  @who
+  @doing *
+  @quit
+  i?nventory
+  p?age * with *
+  sample_edit *
+  h?elp
+--> $programmer
+I don't see "" here.
+#48.match_command() (defined on #9):
+@program #9.match_command
+    arg str;
+    var shortcut, cmd, fields;
+    
+    // Try shortcuts.
+    for shortcut in (.all_shortcuts()) {
+        fields = match_pattern(shortcut[1], str);
+        if (fields)
+            return [shortcut[2], .sub_shortcut_fields(shortcut[3], fields)];
+    }
+    
+    // Try commands.
+    for cmd in (.all_commands()) {
+        fields = match_template(cmd[1], str);
+        if (fields)
+            return [cmd[2], fields];
+    }
+    
+    // Give up.
+    return 0;
+.
+--> ["\"my test\""]
+--> ["@d", "\"my test\""]
+--> ["@d", "\"my test\""]
+--> [[1, 7], [1, 3], [4, 4], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+--> [[1, 8], [1, 0], [1, 8], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+--> [[2, 7], [2, 3], [5, 4], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [0, 0]]
+--> 0
+Line 1: syntax error
+--> "o"
+ERROR: The substring extends to 4, past the end of the string (3).
+Thrown by function substr().
+~range in #48.tmp_eval (defined on #48), line 1
+~methoderr in #48.eval (defined on #1), line 19
+~methoderr in #48.eval_cmd (defined on #44), line 11
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+--> "oo"
+ERROR: Start (0) is less than one.
+Thrown by function substr().
+~range in #48.tmp_eval (defined on #48), line 1
+~methoderr in #48.eval (defined on #1), line 19
+~methoderr in #48.eval_cmd (defined on #44), line 11
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+Methods:
+Methods:
+  check_password
+  connected
+  connected_at
+  connection_gone
+  connection_logged_in
+  connections
+  did_move
+  doing
+  doing_cmd
+  help_cmd
+  init_user
+  inventory_cmd
+  last_command_at
+  login
+  login_again
+  logout
+  page_cmd
+  parse_command
+  parse_line
+  quit_cmd
+  sample_edit_cmd
+  sample_edit_done
+  set_doing
+  set_password
+  set_vr_name
+  spawn
+  tell
+  uninit_user
+  who_cmd
+  will_move
+I don't understand that.
+I don't understand that.
+Line 1: syntax error
+--> [$help_user, $builder]
+Line 1: syntax error
+--> [$admin_1, $admin, $programmer, $builder, $user, $proto_user, $has_commands, $person, $container, $located, $vr, $described, $has_verbs, $root]
+Methods:
+  did_move
+  environment
+  init_located
+  location
+  match_environment
+  move
+  uninit
+  will_move
+#48.match_environment() (defined on #31):
+@program #31.match_environment
+    arg s;
+    
+    if (s == "here")
+        return location;
+    else
+        return (> pass(s) <);
+.
+I don't understand that.
+Line 1: syntax error
+--> [$admin]
+Line 1: syntax error
+--> [$proto_user]
+--> [$has_commands, $person]
+Methods:
+I don't understand that.
+Parents: [#9, #36]
+Parameters:
+Methods:
+#9 variables:
+  commands: []
+  shortcuts: []
+#33 variables:
+  contents: []
+#31 variables:
+  location: #39
+#23 variables:
+  vr_name: "Proto-user object"
+#19 variables:
+  description: "You see nothing special."
+#8 variables:
+  verbs: #[]
+#1 variables:
+  name: 'proto_user
+  owners: [#40]
+  fertile: 1
+  public: 1
+Parents: [#33, #31]
+Parameters:
+Methods:
+  environment
+  tell
+  whisper_verb
+#31 variables:
+  location: #39
+#23 variables:
+  vr_name: "person"
+#19 variables:
+  description: "You see nothing special."
+#8 variables:
+  verbs: #[]
+#1 variables:
+  name: 'person
+  owners: [#36]
+  fertile: 0
+  public: 1
+#36.environment() (defined on #36):
+@program #36.environment
+    return pass() + .contents();
+.
+--> $admin_1
+ERROR: No object x in environment.
+Thrown by #48.match_environment (defined #23), line 29.
+~objnf in #48.match_environment (defined on #31), line 6
+~objnf in #48.tmp_eval (defined on #48), line 1
+~methoderr in #48.eval (defined on #1), line 19
+~methoderr in #48.eval_cmd (defined on #44), line 11
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+--> $list
+Parents: [#3]
+Parameters:
+Methods:
+  _sort
+  columnize
+  english_vr_object_list
+  filter
+  filter_on
+  map
+  map_on
+  map_tostr
+  range
+  sort
+  to_english
+  to_string
+#1 variables:
+  name: 'list
+  owners: [#11]
+  fertile: 0
+  public: 1
+#11.to_english() (defined on #11):
+@program #11.to_english
+    arg l, [rest];
+    var empty, and, sep;
+    
+    empty = [@rest, "nothing"][1];
+    switch (listlen(l)) {
+        case 0:
+            return empty;
+        case 1:
+            return l[1];
+    }
+    and = [@rest, " and ", " and "][2];
+    sep = [@rest, ", ", ", ", ", "][3];
+    return .to_string(delete(l, listlen(l)), sep) + and + l[listlen(l)];
+.
+Enter text for method display_cmd.
+Method compiled.
+ERROR: Method display_arg_regexp not found.
+Thrown by interpreter opcode MESSAGE.
+~methodnf in #48.display_cmd (defined on #44), line 15
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+Enter text for method display_cmd.
+Method compiled.
+ERROR: No such parameter match.
+Thrown by interpreter opcode GET_OBJ_VAR.
+~paramnf in #48.display_cmd (defined on #44), line 18
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+Enter text for method display_cmd.
+Method compiled.
+Subject:   $admin_1
+ERROR: Cannot add "  Parents: " and #45.
+Thrown by interpreter opcode +.
+~type in #48.display_cmd (defined on #44), line 27
+~methoderr in #48.parse_command (defined on #41), line 32
+~methoderr in #48.parse_command (defined on #44), line 12
+--> $admin
+--> [$admin]
+#11.to_english() (defined on #11):
+@program #11.to_english
+    arg l, [rest];
+    var empty, and, sep;
+    
+    empty = [@rest, "nothing"][1];
+    switch (listlen(l)) {
+        case 0:
+            return empty;
+        case 1:
+            return l[1];
+    }
+    and = [@rest, " and ", " and "][2];
+    sep = [@rest, ", ", ", ", ", "][3];
+    return .to_string(delete(l, listlen(l)), sep) + and + l[listlen(l)];
+.
+--> 'dbref
+#11.map() (defined on #11):
+@program #11.map
+    arg l, method, [args];
+    var r, e;
+    
+    r = [];
+    for e in (l)
+        r = [@r, e.(method)(@args)];
+    return r;
+.
+Parents: [#3]
+Parameters:
+Methods:
+  _sort
+  columnize
+  english_vr_object_list
+  filter
+  filter_on
+  map
+  map_on
+  map_tostr
+  range
+  sort
+  to_english
+  to_string
+#1 variables:
+  name: 'list
+  owners: [#11]
+  fertile: 0
+  public: 1
+#11.map_tostr() (defined on #11):
+@program #11.map_tostr
+    arg l;
+    var n;
+    
+    for n in [1 .. listlen(l)]
+        l = replace(l, n, tostr(l[n]));
+    return l;
+.
+#11.map_on() (defined on #11):
+@program #11.map_on
+    arg l, object, method, [args];
+    var r, e;
+    
+    r = [];
+    for e in (l)
+        r = [@r, object.(method)(e, @args)];
+    return r;
+.
+Line 1: syntax error
+--> ["$admin_1", "$admin", "$programmer", "$builder", "$user", "$proto_user", "$has_commands", "$person", "$container", "$located", "$vr", "$described", "$has_verbs", "$root"]
+Enter text for method display_cmd.
+Method compiled.
+Subject:   $admin_1
+  Parents: $admin
+Subject:   $proto_user
+  Parents: $has_commands and $person

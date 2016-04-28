@@ -1,0 +1,1503 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+enceladus is here, distracted.  stormagnet is off in another world.
+Last connected Sat Jan 29 17:46:12 2005 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 1311864794 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1311864794 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1311864794 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1311864794
+#$#dns-org-mud-moo-simpleedit-content 1311864794 reference: "str:#1150.text" name: theme.text type: string-list content*: "" _data-tag: 2097338914
+#$#: 2097338914
+Crag says, "yay, now it's working"
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+Jacque         Entrance Hall                 Mon Dec 16 19:56:55 2002 PST
+
+Total: 1 person, who has not been active recently.
+enceladus grins.
+enceladus says, "so what will this client side editing allow us to edit?"
+Crag says, "It makes it so I can use vi to edit notes and code"
+Crag says, "What MOO client do you use?"
+enceladus says, "simplemu. i'm on 'doze"
+Crag says, "Hm"
+Crag says, "Do you know if it supports MCP?"
+Crag says, "MCP is the MUD Client Protocol"
+enceladus says, "it does MCCP but not MCP"
+Crag says, "I don't know what MCCP is"
+enceladus says, "apparently it's text compression"
+Crag says, "Interesting"
+Crag says, "well"
+Crag says, "If you switch to an MCP client you can turn on local editing and use your favorite Windows editor to edit text on the MOO"
+enceladus nods.
+Crag says, "It's great because I can edit this note while I'm talking to you"
+Crag says, "And as you know, the MOO editor is pretty old-fashioned and awkward"
+enceladus says, "i may at some point if get back into coding MOO heavily again."
+Crag says, "That's what I'm hoping. :)"
+Crag says, "If you want a client recommendation, I've heard Trebuchet is great: http://www.belfry.com/fuzzball/trebuchet/faq.html"
+enceladus goes to check it out
+Minty has connected.
+Crag says, "Hooray!"
+Crag grins.
+Minty says, "Hooray!"
+Crag [to Minty]: I'm writing up the theme now.
+Minty giggles.
+Crag says, "I should setup a building mailing list."
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+*qooc  [Writable]
+    ...as if you didn't know
+-------- end of @subscribe -------
+Crag says, "I haven't setup the bulletin board yet either"
+Crag says, "better do that"
+Quotes Out Of Context (#1161)   Generic Administrators Mailing List (#107)   Generic Mail Recipient (#41)   root class (#1)
+You now have Construction And Maintenance (aka cam and building) with object number #1160 and parent Generic Administrators Mailing List (#107).
+The created object is now your current object.
+=> 1
+[used 2 ticks, 0 seconds.]
+=> #42 (Mail Distribution Center)
+[used 2 ticks, 0 seconds.]
+Moved.
+You now have Bulletin Board (aka bb) with object number #1090 and parent Generic Administrators Mailing List (#107).
+The created object is now your current object.
+=> 1
+[used 2 ticks, 0 seconds.]
+Moved.
+Crag says, "done"
+*Bulletin Board has 0 messages.
+*Construction And Maintenance has 0 messages.
+Minty yays!
+Set text property of the theme (#1150).
+Minty says, "How does a person subscribe to it?  I just tried."
+Crag [to Minty]: @subscribe *bb
+Crag says, "and *cam is the building one"
+Minty says, "Ahhh"
+Crag says, "I should describe them, heh"
+You drop the theme.
+Minty says, "Gonna have one for *qooc too?"
+Crag [to Minty]: the theme I dropped is a draft for 'help theme'
+You are already subscribed to *Quotes Out Of Context.
+Crag [to Minty]: already done with *qooc
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+*qooc  [Writable]
+    ...as if you didn't know
+*cam, *building  [Writable]
+    The Generic Administrators Mailing List.  Members of .owner_group (assumed to be a descendent of $admin_group) have write-privilege; members of any of the .reader_groups have read-privileges; members of any of the .moderator_groups have send-privileges.
+*bb  [Writable]
+    The Generic Administrators Mailing List.  Members of .owner_group (assumed to be a descendent of $admin_group) have write-privilege; members of any of the .reader_groups have read-privileges; members of any of the .moderator_groups have send-privileges.
+-------- end of @subscribe -------
+Minty [to Crag]: Ohhh
+Minty lags some.
+Construction And Maintenance (#1160) [ readable ]
+  Child of Generic Administrators Mailing List (#107).
+  Location Mail Distribution Center (#42).
+-------------------------------- finished ---------------------------------
+Description set.
+That is not a valid command.
+Description set.
+Minty picks up the theme.
+Minty drops a theme.
+Minty grins.
+enceladus has reconnected.
+Minty eeps.
+Minty [to enceladus]: WB
+-----
+HELP
+====
+
+Syntax:  help
+         help <topic>
+         help index
+
+Print out entries from the online documentation system.  The commands `?' and `information' (usually abbreviated `info') are synonyms for `help'.
+
+The first form prints out a summary table of contents for the entire help system.  
+
+The second form prints out the documentation available on the given topic.  Many help system entries contain references to other entries accessible in this way.  The topic name may be abbreviated; if there is no topic exactly matching the name you give, the help system checks for topics for which the name is a prefix, perhaps with the addition or omission of an initial `@', or perhaps with some confusion beween dashes (-) and underscores (_), e.g., 
+
+      `bui' instead of `building', 
+      `who' instead of `@who', 
+     `@wri' instead of `write',
+  `add_ent' instead of `@add-entrance',
+ `unlock-'  instead of `@unlock_for_open'
+
+If the abbreviation you give is ambiguous, you will be presented with a list of the matching complete topic names.
+
+The `help index'[1] commands prints out a list of indices for the various help databases.  Each index gives a list of topics available on that database.  It is sometimes easier to find the topics you're interested in this way, rather than tracing through the chain of cross references.
+
+For programmers, the help system provides the following additional forms:
+
+  help object:verbname   -- prints any documentation strings that are present
+                            at the beginning of the program for that verb.
+  help $<whatever>_utils -- prints general information about one of the 
+                            $..._utils objects (e.g., $string_utils, 
+                            $list_utils, etc...), which are all libraries 
+                            of generally used verbs.
+  help builtin()         -- prints documentation from the programmers manual
+                            about the named primitive, for example length()
+
+For information about how the help system itself works and about how to associate local help databases with specific rooms or player classes, see `help $help'[2].
+
+enceladus glances around.
+-----
+Available Help Indices
+======================
+
+wiz-index[1]
+      Wizard Help Topics
+prog-index[2]
+      Programmer Help Topics
+builtin-index[3]
+      Server Built-in Functions
+core-index[4]
+      Core Utility Help Topics
+jtext-index[5]
+      Jtext Help Topics
+mcp-index[6]
+      MCP help topics
+tkmoo-index[7]
+      tkmoo help topics
+policy-index[8]
+      policy help database
+admin-index[9]
+      administration group help
+gen-index[10]
+      General Help Topics
+
+full-index[11]
+      EVERYTHING
+
+Minty grins.
+-----
+POLICY HELP DATABASE (#234)
+===========================
+
+admin[1]                admin-policy[2]         administrator-policy[3]
+administrators[4]       builder-policy[5]       manners[6]
+objective[7]            point[8]                policy-index[9]
+programmer-policy[10]   programming-policy[11]  purpose[12]
+quota-policy[13]        steering-committee[14]  user-policy[15]
+
+-----
+OBJECTIVE
+=========
+
+You're not cleared for that.
+
+-----
+POINT
+=====
+
+You're not cleared for that.
+
+-----
+ADMIN
+=====
+
+There are three separate (but not necessarily disjoint) groups of administrators, with different roles and responsibilities.  You can get help about each of the following groups, listed here with a brief explanation of what it is they're responsible for.
+
+steering-committee[1]
+      defining and maintaining the MOO's goals and objectives
+tech-group[2]
+      technical development and maintenance of the MOO
+community-group[3]
+      handling social problems and promoting a sense of community
+
+By defining the responsibilities of the various types of administrators, we hope to clear up any confusion about what a person `in charge' is supposed to be doing, and what authority that person has.
+
+-----
+Available Help Indices
+======================
+
+wiz-index[1]
+      Wizard Help Topics
+prog-index[2]
+      Programmer Help Topics
+builtin-index[3]
+      Server Built-in Functions
+core-index[4]
+      Core Utility Help Topics
+jtext-index[5]
+      Jtext Help Topics
+mcp-index[6]
+      MCP help topics
+tkmoo-index[7]
+      tkmoo help topics
+policy-index[8]
+      policy help database
+admin-index[9]
+      administration group help
+gen-index[10]
+      General Help Topics
+
+full-index[11]
+      EVERYTHING
+
+-----
+JTEXT HELP TOPICS
+=================
+
+coordinators[1]         dispatchers[2]          jaddress-types[3]
+jaddresses[4]           jtext[5]                jtext-addressing[6]
+jtext-construction[7]   jtext-document[8]       jtext-forms[9]
+jtext-index[10]         jtext-input[11]         jtext-intro[12]
+jtext-output[13]        jtext-timeline[14]      tagged-lists[15]
+targets[16]             
+
+-----
+CORE UTILITY HELP TOPICS
+========================
+
+$biglist_utils[1]       $building_utils[2]      $code_utils[3]
+$command_utils[4]       $english[5]             $english_utils[6]
+$exit[7]                $gender_utils[8]        $generic_db[9]
+$generic_editor[10]     $generic_help[11]       $generic_options[12]
+$help[13]               $housekeeper[14]        $integration_utils[15]
+$list_utils[16]         $lock_utils[17]         $login[18]
+$mail_agent[19]         $mail_recipient[20]     $math_utils[21]
+$name_utils[22]         $no_one[23]             $object_utils[24]
+$openable_container[25]                         $parse_utils[26]
+$perm_utils[27]         $player_db[28]          $quota_utils[29]
+$relation_utils[30]     $room[31]               $room_matching_utils[32]
+$seq_utils[33]          $set_utils[34]          $string_utils[35]
+$time_utils[36]         $trig_utils[37]         $walking_utils[38]
+$who_utils[39]          $wiz_utils[40]          core-index[41]
+mail-format[42]         mail-recipient[43]      mail-resolve[44]
+mail-system[45]         MR-access[46]           MR-naming[47]
+MR-reading[48]          MR-searching[49]        MR-sequences[50]
+MR-subscribing[51]      MR-writing[52]          object-matching[53]
+receiving-mail[54]      sending-mail[55]        
+
+< GhostOfTheManor has connected.  Total: 5 >
+Crag says, "I connected as the ghost so I can read help in another window."
+Minty says, "Ahh, I was wondering who that was this afternoon."
+Crag says, "It's our version of the main wizard"
+Crag says, "Object #2"
+=> #2 (GhostOfTheManor)
+Crag says, "Theme-wise wizards aren't appropriate."
+Minty says, "Ahhh"
+Crag says, "Eventually I want to have code in place to enforce in-charachter/out-of-charachter distinctions."
+Crag says, "THen people can role-play on here without feeling silly."
+Minty grins.
+Crag says, "Our housemates are avid gamers"
+Minty says, "I'm not into role-playing.. I used to go to Mithreal, only went there a few times and stopped, so they reaped my char."
+Generic Help Database(#30) has 1 kid.
+Generic Core Help Database (#197)
+Minty says, "Ahhh"
+Crag says, "I don't like most of it, but I've been enjoying the game Kia's running."
+Minty nods.
+Crag says, "I think it's very important to play with the right people."
+Crag says, "like anything."
+Minty says, "exactly"
+Crag says, "And I also think it's important to not keep playing when one knows one is not having fun."
+Minty nods.
+Crag says, "ANd some people will just never like it."
+Minty nods.
+Crag shrugs.
+Generic Core Help Database(#197) has 18 kids.
+Verb Help (#20)   Core Utility Help (#21)   Programmer Help (#22)   Wizard Help (#23)   Builtin Function Help (1.8.0) (#28)   Editor Help (#40)   main help database (#54)   Object Help Database (#173)   last resort help database (#127)   Builder Help (#155)   guest help database (#168)   policy help database (#234)   administration group help (#236)   JHCore Help DB (#235)   jtext help database (#152)   MCP help (#186)   tkmoo help (#187)   generic personal help database (#115)
+Minty grins.
+You now have Manor Help with object number #1166 and parent Generic Core Help Database (#197).
+The created object is now your current object.
+,help                    Crag (#958)           r c    0
+-------------------------------- finished ---------------------------------
+=> {#1166}
+[used 3 ticks, 0 seconds.]
+-----
+Available Help Indices
+======================
+
+wiz-index[1]
+      Wizard Help Topics
+prog-index[2]
+      Programmer Help Topics
+builtin-index[3]
+      Server Built-in Functions
+core-index[4]
+      Core Utility Help Topics
+jtext-index[5]
+      Jtext Help Topics
+mcp-index[6]
+      MCP help topics
+tkmoo-index[7]
+      tkmoo help topics
+policy-index[8]
+      policy help database
+admin-index[9]
+      administration group help
+gen-index[10]
+      General Help Topics
+
+full-index[11]
+      EVERYTHING
+
+-----
+HELP ON THE THEME
+=================
+
+mailme
+======
+
+Usage:  mailme <note>
+  uses the 'internet mail' object
+  sends the text of this note to your REAL internet email address.
+  This only works for players who have a valid registration .email_address
+
+read-new
+========
+
+Copied from jtext note (#701):read by Jay (#88) Wed Apr 20 13:04:10 1994 EDT
+
+g*et t*ake
+==========
+
+Usage: get/take <thing>
+  This allows you to pick up things.
+
+d*rop
+=====
+
+Usage: drop <thing>
+ This drops things in the room the dropper is in.
+
+gi*ve ha*nd
+===========
+
+Usage: give <thing> to <person>
+This lets you experience the joy of giving things to others.
+
+No help found on read, erase, write, delete, encrypt, decrypt, or show.
+
+----
+
+"theme" is not the name of any player.
+Name of #1150 changed to "Programmer's Manor Theme notes", with aliases {"Programmer's Manor Theme notes"}.
+-----
+`HELP THEME' NOT FOUND
+======================
+
+Sorry, but no help is available on `theme'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+=> #1166 (Manor Help)
+[used 1 tick, 0 seconds.]
+Manor Help (#1166) [ readable ]
+  Child of Generic Core Help Database (#197).
+  Location Crag (#958).
+-------------------------------- finished ---------------------------------
+Manor Help (#1166) [ readable ]
+  Child of Generic Core Help Database (#197).
+  Location Crag (#958).
+ unconvertible_topics    unknown hack (#35)    r      {}
+ help_directives         unknown hack (#35)    r      {"forward", "pass", "un..
+,key                     Crag (#958)             c    0
+,aliases                 Crag (#958)           r c    {"Manor Help"}
+ description             Crag (#958)           r c    "A help database of the..
+ visible                 unknown hack (#35)    r      1
+ integrate_room_msg      Crag (#958)           r c    ""
+ integrate_player_msg    Crag (#958)           r c    ""
+ integrate_container_msg Crag (#958)           r c    ""
+ unique                  Crag (#958)           r c    1
+ proper                  Crag (#958)           r c    1
+ integrate_in            unknown hack (#35)    r      {#145}
+ handlers                unknown hack (#35)    r      {}
+ number                  unknown hack (#35)    r      1
+,offered                 Core-Wizard (#184)    r      #-1
+,object_size             Quota (#185)          r      {321, 1107051357}
+-------------------------------- finished ---------------------------------
+*Quota-Log, *QL  [Writable] [Approved]
+    Record of whose quota has been messed with and why.
+*New-Prog-Log, *NPL  [Writable] [Approved]
+    Record of who's been made a @programmer.
+*Site-Locks  [Writable] [Approved]
+    Notes on annoying sites.
+*Player-Creation-Log, *PCL  [Writable] [Approved]
+    Log of player creations.
+*Bug-reports, *bugs  [Writable]
+    Bug reports here.
+*News  [Writable] [Approved]
+    It's the current issue of the News, dated Wed Dec 31, 1969.
+*Steering-Committee, *SC, *Steering  [Writable] [Approved]
+    The Steering Committee is responsible for defining and maintaining this MOO's goals and objectives.
+*security  [Writable] [Approved]
+    This mailing list is readable only by members of the DB Group, and should be used to send reports of possible security holes.
+*Community-Group, *CG  [Writable] [Approved]
+    The Community Group is responsible for handling social problems and promoting a sense of community.
+*Boot-Log, *bootlog  [Writable] [Approved]
+    A log of bootings.
+*qooc  [Writable]
+    ...as if you didn't know
+*cam, *building  [Writable]
+    Construction and Maintenance - discussion of MOO building and improvement
+*bb  [Writable]
+    Bulletin Board - MOO-wide messages not important enough to go in *news
+-------- end of @subscribe -------
+*Bug-reports has 0 messages.
+*Steering-Committee has 0 messages.
+*security has 0 messages.
+*Community-Group has 2 messages.
+You are already subscribed to *Quotes Out Of Context.
+You are subscribed to the following lists:
+    *Quotes Out Of Context      0 new messages
+    *Bulletin Board             0 new messages
+    *Construction And Maintenance 0 new messages
+    *Bug-reports                0 new messages
+    *Steering-Committee         0 new messages
+    *security                   0 new messages
+    *Community-Group            2 new messages
+Message 1 on *Community-Group:
+Date:     Thu Dec  5 11:44:35 2002 PST
+From:     Binder
+To:       *Community-Group
+Subject:  @newt Devlyn_Syde (#845)
+
+vdsl-130-13-93-94.phnx.uswest.net
+Recreation request.
+--------------------------
+Message 2 on *Community-Group:
+Date:     Thu Jan 30 13:04:15 2003 PST
+From:     Binder
+To:       *Community-Group
+Subject:  forward from @911/@helpme
+
+--------------------------
+=> #1166 (Manor Help)
+[used 1 tick, 0 seconds.]
+Property added with value {}.
+#$#dns-org-mud-moo-simpleedit-content 1311864794 reference: "str:#1166.theme" name: "Manor Help.theme" type: string-list content*: "" _data-tag: 12903355175
+#$#: 12903355175
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+You see a Programmer's Manor Theme notes here.
+enceladus and Minty are here, dozing.  stormagnet is off in another world.
+-----
+There appears to be some writing on the note ...
+
+PROGRAMMER'S MANOR THEME NOTES
+==============================
+
+Programmer's Manor Theme
+
+Setting:
+
+    The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an
+    enormous building surrounded by groomed property and a large wall.
+    The time period could be somewhere between 1400CE and a little
+    past the present, and the place could be anywhere in the western
+    world.  The weather is mild.  There are no vehicals.
+
+Mood:
+
+    The MOO itself should be friendly at all times.  There is a
+    currently a generic butcher knife with which to stab people, but
+    you should only do so in a friendly way.  Victims who are mortally
+    wounded will find themselves suddenly transported to The Heavens,
+    but they need only join someone or walk somewhere to be
+    re-incarnated.
+
+Building:
+
+    If you want to add to the MOO, please try to make your additions
+    as seamless as possible.  For example, if you want to add a
+    vehical, it should be something which would not be out of place
+    int his setting, like a horse-drawn cart.  If you want to build a
+    room of your own, it needs to be attached to the rest of the
+    world, and in a way which 'makes sense'.  A gazebo would be
+    appropriate, and a space ship would not.
+
+If you have any questions, mail the Comstruction and Maintenance
+mailing list, or *cam for short.
+
+(You finish reading.)
+Set theme property of Manor Help (#1166).
+-----
+THEME
+=====
+
+Setting:
+
+    The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an
+    enormous building surrounded by groomed property and a large wall.
+    The time period could be somewhere between 1400CE and a little
+    past the present, and the place could be anywhere in the western
+    world.  The weather is mild.  There are no vehicals.
+
+Mood:
+
+    The MOO itself should be friendly at all times.  There is a
+    currently a generic butcher knife with which to stab people, but
+    you should only do so in a friendly way.  Victims who are mortally
+    wounded will find themselves suddenly transported to The Heavens,
+    but they need only join someone or walk somewhere to be
+    re-incarnated.
+
+Building:
+
+    If you want to add to the MOO, please try to make your additions
+    as seamless as possible.  For example, if you want to add a
+    vehical, it should be something which would not be out of place
+    int his setting, like a horse-drawn cart.  If you want to build a
+    room of your own, it needs to be attached to the rest of the
+    world, and in a way which 'makes sense'.  A gazebo would be
+    appropriate, and a space ship would not.
+
+If you have any questions, mail the Comstruction and Maintenance
+mailing list, or *cam for short.
+
+=> {#173, #100, #234, #236, #235}
+[used 2 ticks, 0 seconds.]
+=> {#1166}
+[used 2 ticks, 0 seconds.]
+=> {#173, #100, #234, #236, #235, #1166}
+[used 4 ticks, 0 seconds.]
+=> 0
+[used 2 ticks, 0 seconds.]
+-----
+THEME
+=====
+
+Setting:
+
+    The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an
+    enormous building surrounded by groomed property and a large wall.
+    The time period could be somewhere between 1400CE and a little
+    past the present, and the place could be anywhere in the western
+    world.  The weather is mild.  There are no vehicals.
+
+Mood:
+
+    The MOO itself should be friendly at all times.  There is a
+    currently a generic butcher knife with which to stab people, but
+    you should only do so in a friendly way.  Victims who are mortally
+    wounded will find themselves suddenly transported to The Heavens,
+    but they need only join someone or walk somewhere to be
+    re-incarnated.
+
+Building:
+
+    If you want to add to the MOO, please try to make your additions
+    as seamless as possible.  For example, if you want to add a
+    vehical, it should be something which would not be out of place
+    int his setting, like a horse-drawn cart.  If you want to build a
+    room of your own, it needs to be attached to the rest of the
+    world, and in a way which 'makes sense'.  A gazebo would be
+    appropriate, and a space ship would not.
+
+If you have any questions, mail the Comstruction and Maintenance
+mailing list, or *cam for short.
+
+Crag says, "yay, we have help theme now"
+#$#dns-org-mud-moo-simpleedit-content 1311864794 reference: "val:#1166.theme" name: "Manor Help.theme" type: string-list content*: "" _data-tag: 12932465776
+#$#* 12932465776 content: {#101, "Setting:"}
+#$#* 12932465776 content: {#128, "    The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an", "    enormous building surrounded by groomed property and a large wall.", "    The time period could be somewhere between 1400CE and a little", "    past the present, and the place could be anywhere in the western", "    world.  The weather is mild.  There are no vehicals."}
+#$#* 12932465776 content: {#101, "Mood:"}
+#$#* 12932465776 content: {#128, "    The MOO itself should be friendly at all times.  There is a", "    currently a generic butcher knife with which to stab people, but", "    you should only do so in a friendly way.  Victims who are mortally", "    wounded will find themselves suddenly transported to The Heavens,", "    but they need only join someone or walk somewhere to be", "    re-incarnated."}
+#$#* 12932465776 content: {#101, "Building:"}
+#$#* 12932465776 content: {#128, "    If you want to add to the MOO, please try to make your additions", "    as seamless as possible.  For example, if you want to add a", "    vehical, it should be something which would not be out of place", "    int his setting, like a horse-drawn cart.  If you want to build a", "    room of your own, it needs to be attached to the rest of the", "    world, and in a way which 'makes sense'.  A gazebo would be", "    appropriate, and a space ship would not."}
+#$#* 12932465776 content: {#128, "If you have any questions, mail the Comstruction and Maintenance", "mailing list, or *cam for short."}
+#$#: 12932465776
+Minty yays!
+Set theme property of Manor Help (#1166).
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current edit options:
+
+-quiet-insert       Report line numbers on insert or append.
+-eval-subs          Ignore .eval_subs when compiling verbs.
++local              Ship text to client for local editing.
+Current client options:
+
++edit          Your client can do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
++mcp-edit      Your client can do MCP standard editing.
+Property added with value {}.
+#$#dns-org-mud-moo-simpleedit-content 1311864794 reference: "str:#1166.new_theme" name: "Manor Help.new_theme" type: string-list content*: "" _data-tag: 16025809107
+#$#: 16025809107
+Set new_theme property of Manor Help (#1166).
+-----
+NEW_THEME
+=========
+
+Setting
+=======
+
+The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an enormous building surrounded by groomed property and a large wall.  The time period could be somewhere between 1400CE and a little past the present, and the place could be anywhere in the western world.  The weather is mild.  There are no vehicals.
+
+Mood
+====
+
+The MOO itself should be friendly at all times.  There is a currently a generic butcher knife with which to stab people, but you should only do so in a friendly way.  Victims who are mortally wounded will find themselves suddenly transported to The Heavens, but they need only join someone or walk somewhere to be re-incarnated.
+
+Building
+========
+
+If you want to add to the MOO, please try to make your additions as seamless as possible.  For example, if you want to add a vehical, it should be something which would not be out of place int his setting, like a horse-drawn cart.  If you want to build a room of your own, it needs to be attached to the rest of the world, and in a way which 'makes sense'.  A gazebo would be appropriate, and a space ship would not.
+
+If you have any questions, mail the Comstruction and Maintenance mailing list, or *cam for short.
+
+=> {"Setting", "=======", "", "The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an enormous building surrounded by groomed property and a large wall.  The time period could be somewhere between 1400CE and a little past the present, and the place could be anywhere in the western world.  The weather is mild.  There are no vehicals.", "", "Mood", "====", "", "The MOO itself should be friendly at all times.  There is a currently a generic butcher knife with which to stab people, but you should only do so in a friendly way.  Victims who are mortally wounded will find themselves suddenly transported to The Heavens, but they need only join someone or walk somewhere to be re-incarnated.", "", "Building", "========", "", "If you want to add to the MOO, please try to make your additions as seamless as possible.  For example, if you want to add a vehical, it should be something which would not be out of place int his setting, like a horse-drawn cart.  If you want to build a room of your own, it needs to be attached to the rest of the world, and in a way which 'makes sense'.  A gazebo would be appropriate, and a space ship would not.", "", "If you have any questions, mail the Comstruction and Maintenance mailing list, or *cam for short.", ""}
+[used 2 ticks, 0 seconds.]
+=> {{#101, "Setting:"}, {#128, "    The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an", "    enormous building surrounded by groomed property and a large wall.", "    The time period could be somewhere between 1400CE and a little", "    past the present, and the place could be anywhere in the western", "    world.  The weather is mild.  There are no vehicals."}, {#101, "Mood:"}, {#128, "    The MOO itself should be friendly at all times.  There is a", "    currently a generic butcher knife with which to stab people, but", "    you should only do so in a friendly way.  Victims who are mortally", "    wounded will find themselves suddenly transported to The Heavens,", "    but they need only join someone or walk somewhere to be", "    re-incarnated."}, {#101, "Building:"}, {#128, "    If you want to add to the MOO, please try to make your additions", "    as seamless as possible.  For example, if you want to add a", "    vehical, it should be something which would not be out of place", "    int his setting, like a horse-drawn cart.  If you want to build a", "    room of your own, it needs to be attached to the rest of the", "    world, and in a way which 'makes sense'.  A gazebo would be", "    appropriate, and a space ship would not."}, {#128, "If you have any questions, mail the Comstruction and Maintenance", "mailing list, or *cam for short."}}
+[used 2 ticks, 0 seconds.]
+=> {"Setting", "=======", "", "The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an enormous building surrounded by groomed property and a large wall.  The time period could be somewhere between 1400CE and a little past the present, and the place could be anywhere in the western world.  The weather is mild.  There are no vehicals.", "", "Mood", "====", "", "The MOO itself should be friendly at all times.  There is a currently a generic butcher knife with which to stab people, but you should only do so in a friendly way.  Victims who are mortally wounded will find themselves suddenly transported to The Heavens, but they need only join someone or walk somewhere to be re-incarnated.", "", "Building", "========", "", "If you want to add to the MOO, please try to make your additions as seamless as possible.  For example, if you want to add a vehical, it should be something which would not be out of place int his setting, like a horse-drawn cart.  If you want to build a room of your own, it needs to be attached to the rest of the world, and in a way which 'makes sense'.  A gazebo would be appropriate, and a space ship would not.", "", "If you have any questions, mail the Comstruction and Maintenance mailing list, or *cam for short.", ""}
+[used 3 ticks, 0 seconds.]
+-----
+THEME
+=====
+
+Setting
+=======
+
+The Manor is the home of Ida Prauge and Jacque Rhammer.  It is an enormous building surrounded by groomed property and a large wall.  The time period could be somewhere between 1400CE and a little past the present, and the place could be anywhere in the western world.  The weather is mild.  There are no vehicals.
+
+Mood
+====
+
+The MOO itself should be friendly at all times.  There is a currently a generic butcher knife with which to stab people, but you should only do so in a friendly way.  Victims who are mortally wounded will find themselves suddenly transported to The Heavens, but they need only join someone or walk somewhere to be re-incarnated.
+
+Building
+========
+
+If you want to add to the MOO, please try to make your additions as seamless as possible.  For example, if you want to add a vehical, it should be something which would not be out of place int his setting, like a horse-drawn cart.  If you want to build a room of your own, it needs to be attached to the rest of the world, and in a way which 'makes sense'.  A gazebo would be appropriate, and a space ship would not.
+
+If you have any questions, mail the Comstruction and Maintenance mailing list, or *cam for short.
+
+Property removed.
+Crag says, "I guess I can recycle the note"
+You take the Programmer's Manor Theme notes.
+Sure you want to recycle the Programmer's Manor Theme notes (#1150)? [Enter `yes' or `no']
+The Programmer's Manor Theme notes (#1150) recycled.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+Minty is here, daydreaming.  enceladus is dozing.  stormagnet is off in another world.
+That is not a valid command.
+That is not a valid command.
+That is not a valid command.
+In the Ballroom, you see a western fireplace.
+Message sent to *Bug-reports.
+enceladus has reconnected.
+Minty glances at enceladus.
+Minty says, "Nope"
+Message sent to *Bug-reports.
+Minty says, "Says it's down."
+Crag ...
+Message 1 on *Bug-reports:
+Date:     Sat Jan 29 18:41:00 2005 PST
+From:     Crag
+To:       *Bug-reports
+Subject:  relativity and internal compasses
+
+The players orientation and location in space will be tracked.  Scenery descriptions will be rendered in terms of the players physical situation.  The cardinal directions will become 'forward', 'left', 'right', etc.
+--------------------------
+Message 2 on *Bug-reports:
+Date:     Sat Jan 29 18:48:05 2005 PST
+From:     Crag
+To:       *Bug-reports
+Subject:  sense and sensitivity
+
+The obverservational processes will be refined so that the player is only given information they would be likely to receive in light of how perceptive they are and how hard they are trying to perceive.  All five senses will be implemented independently.  Information will be brought to the player gradually as they experience it, rather than being dumped on them when they enter a room.
+
+> forward
+You proceed through the door.  This room is unfamiliar.  On your left some people who are talking turn to see you enter.
+>
+Ahead of you is a door.
+>
+On your right a fireplace contains a blazing, crackling fireplace.  The room smells faintly of the burning wood.
+>look people
+You recognize Jacque and Ida.  They are well dressed and smiling.
+
+Etc.
+--------------------------
+Minty says, "err, closed"
+Robert has connected.
+Robert goes north.
+enceladus has reconnected.
+Minty eeps.
+Crag grins.
+Minty forgot to lick, shag hug and stuff.
+Minty sorries.
+Minty forgot a comma too.
+Minty laughs.
+Crag wiggles his eyebrows.
+Minty grins.
+Crag [to Minty]: So would you like me to tell you more about the MOO?
+Crag says, "Or something?"
+Minty [to Crag]: yours?
+Crag says, "Yes"
+Minty [to Crag]: So far, it looks good :)
+Crag says, "This one"
+Crag smiles.
+Minty nods.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+Minty is here.  enceladus is daydreaming.  stormagnet is off in another world.
+Crag says, "There are vast swathes of undescribed areas"
+Crag says, "Stormagnet went wild building the manor to match the map we drew on paper."
+Minty [to Crag]: Ok, so how do we get to them?
+Minty lags.
+Crag says, "She did a great job, but afterwords neither of us had the energy to describe them"
+Crag [to Minty]: type 'follow crag'
+Minty says, "k"
+Minty starts to follow Crag.
+Crag says, "Here goes the tour"
+Crag stands up from his easy chair.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty follows Crag.
+Minty arrives from the Entrance Hall.
+Minty yays!
+Crag says, "This ballroom is actually several MOO rooms"
+Crag says, "Six of them, I think,"
+Minty says, "Cool!"
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty is here.
+Crag says, "there's a big painting around here somewhere..."
+Crag says, "But whatever"
+Minty grins.
+Crag says, "To the west is the kitchen and such"
+Crag says, "laundry, utility closets, that sort of thing"
+Minty says, "I just type west?"
+Crag says, "Where the servents do their magic for entertaining"
+The West Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+Crag says, "I don't remember if it's built or not"
+The The West Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the West Hallway.
+You can't go that way.
+East (#495) leads to the West Hallway (#484) via {east, e}.
+North (#499) leads to Storage (#496) via {north, n}.
+South (#507) leads to the Maintenance Workshops (#503) via {south, s}.
+Crag says, "Hm"
+Crag says, "Sortof"
+The Maintenance Workshops
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the The West Hallway.
+Minty says, "hmm?"
+Crag says, "As I was saying, lots of empty rooms"
+East (#505) leads to the Laundry (#490) via {east, e}.
+North (#504) leads to the The West Hallway (#493) via {north, n}.
+Minty grins.
+The Laundry
+Clouds of thick steam hang in the air, scented of bleach and cleaning products.  The walls are slick with condensation and the sound of water rushing from one place to another is audible.  A Washing tub is here.  A Wringer is here.  A Laundry Table is here.
+You see a Clothesline and a box of Tide(tm) brand detergent here.
+Minty follows Crag.
+Minty arrives from the Maintenance Workshops.
+Crag heh
+Crag sits on the Laundry Table.
+Minty giggles.
+Crag says, "But some rooms are described"
+Crag stands up from the Laundry Table.
+The West Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Laundry.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty follows Crag.
+Minty arrives from the West Hallway.
+The Grand Stair Lower Landing
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+Crag says, "There's a multi level Grand Stair"
+Crag says, "It goes up to the second floor which has servents quarters"
+Crag says, "and guest rooms"
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty follows Crag.
+Minty arrives from the Grand Stair Lower Landing.
+The East Hallways
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+West (#371) leads to the Ballroom (#304) via {west, w}.
+East (#458) leads to the East Hallway (#453) via {east, e}.
+North (#461) leads to the Dining Hall (#460) via {north, n}.
+South (#481) leads to the Media Center (#477) via {south, s}.
+The East Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the East Hallways.
+West (#459) leads to the East Hallways (#254) via {west, w}.
+North (#470) leads to the Parlor (#466) via {north, n}.
+South (#472) leads to the Recreation Room (#471) via {south, s}.
+The Parlor
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the East Hallway.
+West (#468) leads to the The North Hallway (#463) via {west, w}.
+South (#469) leads to the East Hallway (#453) via {south, s}.
+The East Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Parlor.
+The Recreation Room
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the East Hallway.
+Crag says, "Lots of rooms"
+The East Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Recreation Room.
+The East Hallways
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the East Hallway.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty follows Crag.
+Minty arrives from the East Hallways.
+The West Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+The Ballroom
+You are in a massive ballroom, with a vaulted ceiling, surrounded by a balcony on the second floor.  Two huge fireplaces flank the walls to the east and west.
+Minty follows Crag.
+Minty arrives from the West Hallway.
+Minty says, "I'm getting dizzy ;)"
+Crag laughs
+Minty laughs.
+Crag says, "Let's see if I can get us to the third floor..."
+"ida" is not the name of any player.
+Jacque is asleep right now.
+Minty says, "k"
+Jacque (#245) is on the Entrance Hall.
+Crag says, "jussec"
+generic player(#6) has 18 kids.
+generic builder (#4)   nobody (#36)   J. Text (#176)   topic-owner (#181)   Quota (#185)   generic guest (#31)   secretary (#251)   Gwaine (#450)   ChacMool (#851)   Jacque (#245)   Gamekeepers (#932)   Svlad (#969)   strangely alluring toad of Vylar (#1017)   Samurai (#1043)   beezer (#1079)   username (#1119)   Mintie (#1162)   Marcie (#1163)
+Minty says, "k"
+Objects owned by Jacque (from #0 to #1167):
+  2K  #245 Jacque                    *[Limbo]
+-- 1 object.  Total bytes: 2,789.---------------------------------------------
+Objects owned by secretary (from #0 to #1167):
+  2K  #251 secretary                 *[Limbo]
+-- 1 object.  Total bytes: 2,419.---------------------------------------------
+The generic room(#3) has 158 kids.
+Generic Editor (#46)   Entrance Hall (#70)   Front Desk (#246)   Cloak Room (#248)   Cloak Room (#292)   Ballroom (#301)   Ballroom (#304)   Front Porch (#307)   Main Office (#344)   Eastern Fireplace (#347)   East Veranda (#377)   Western Fireplace (#382)   Basement (#423)   (#347) (#420)   East Elevator (#417)   East Second Floor Balcony (#428)   East Third Floor Hallway (#431)   Basement (#434)   Roof (#437)   East Hallways (#254)   East Hallway (#453)   Dining Hall (#460)   The North Hallway (#463)   Parlor (#466)   Recreation Room (#471)   The South Hallway (#474)   Media Center (#477)   West Hallway (#484)   Kitchens (#487)   Laundry (#490)   The West Hallway (#493)   Storage (#496)   Maintenance Workshops (#503)   Guest Room (#511)   The West Hallway (#514)   The East Hallway (#518)   Guest Room (#519)   The East Hallway (#522)   Guest Room (#525)   The East Hallway (#527)   Master Guest Room (#530)   East Second Floor Balcony (#533)   Library (#536)   South Second Floor Balcony (#539)   Guest Room (#542)   South Second Floor Balcony (#545)   Guest Room (#548)   South Second Floor Balcony (#551)   Guest Room (#554)   South Second Floor Balcony (#557)   Guest Room (#560)   South Second Floor Balcony (#563)   Guest Room (#566)   Offices (#572)   West Second Floor Balcony (#575)   The West Hallway (#578)   Servant's Quarters (#581)   The West Hallway (#584)   Servant's Quarters (#587)   Servant's Quarters (#590)   The West Hallway (#593)   Servant's Quarters (#596)   The West Hallway (#599)   Servant's Quarters (#602)   The West Hallway (#605)   Servant's Quarters (#608)   The West Hallway (#611)   Servant's Quarters (#614)   The West Hallway (#617)   Servant's Quarters (#620)   North Second Floor Balcony (#623)   Second Floor Veranda (#626)   North Second Floor Balcony (#629)   Second Floor Veranda (#632)   Prauge-Rahmmer's Parlor (#639)   Gwaine's Suite (#642)   South Third Floor Hallway (#645)   Guest Room (#648)   South Third Floor Hallway (#651)   Guest Room (#654)   South Third Floor Hallway (#657)   Guest Room (#660)   South Third Floor Hallway (#663)   Guest Room (#666)   South Third Floor Hallway (#669)   Guest Room (#672)   West Hallway (#675)   Storage (#678)   Servant's Quarters (#681)   West Hallway (#684)   Servant's Quarters (#687)   Servant's Quarters (#690)   West Hallway (#693)   Servant's Quarters (#696)   Servant's Quarters (#699)   West Hallway (#702)   Servant's Quarters (#705)   Servant's Quarters (#708)   West Hallway (#711)   Servant's Quarters (#714)   Servant's Quarters (#717)   West Hallway (#720)   Servant's Quarters (#723)   Servant's Quarters (#726)   West Hallway (#729)   Servant's Quarters (#732)   Servant's Quarters (#735)   West Hallway (#738)   Servant's Quarters (#741)   Servant's Quarters (#744)   West Third Floor Hallway (#747)   Computer Lab (#750)   Computer Lab (#753)   Kitchen (#758)   Hallway (#761)   Fireplace (#764)   Den (#767)   Master Bedroom (#772)   Recreation Room (#775)   Second Bedroom (#778)   Bathroom (#783)   Rooftop Patio (#790)   Boiler Room (#793)   West Veranda (#404)   Patio (#405)   Bedroom (#804)   Bathroom (#812)   heavens (#850)   Circular Driveway (#857)   South West Lawn (#860)   West Lawn (#863)   North West Lawn (#866)   The Gingerbread House Foyer (#878)   Light Forest (#877)   Dense Forest (#872)   Forest Clearing (#879)   Parlor (#887)   South East Lawn (#853)   East Lawn (#848)   North East Lawn (#837)   In front of the East Elevator (#897)   In front of the East Elevator (#914)   East Elevator Second Floor Stop (#430)   East Elevator Third Floor Stop (#433)   East Elevator (#918)   Grand Stair Lower Landing (#921)   On the Grand Stair (#923)   Grand Stair Upper Landing (#925)   Elevator Stop (#903)   Elevator Shaft (#939)   Elevator Car (#940)   Green Forest (#953)   Kitchen (#988)   Dinning Room (#991)   Marcy's Igloo (#1009)   Yurt (#1050)   Cellar (#1067)   Elbow Room (#1146)
+The Grand Stair Lower Landing
+Minty follows Crag.
+Minty arrives from the Ballroom.
+The On the Grand Stair
+Minty follows Crag.
+Minty arrives from the Grand Stair Lower Landing.
+The Grand Stair Upper Landing
+Minty follows Crag.
+Minty arrives from the On the Grand Stair.
+The Second Floor Veranda
+Minty follows Crag.
+Minty arrives from the Grand Stair Upper Landing.
+The North Second Floor Balcony
+Minty follows Crag.
+Minty arrives from the Second Floor Veranda.
+The East Third Floor Hallway
+You see a west wall here.
+Minty follows Crag.
+Minty arrives from the North Second Floor Balcony.
+The South Third Floor Hallway
+Minty follows Crag.
+Minty arrives from the East Third Floor Hallway.
+The South Third Floor Hallway
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the South Third Floor Hallway.
+Crag has arrived.
+East (#653) leads to the South Third Floor Hallway (#645) via {east, e}.
+South (#655) leads to the Guest Room (#654) via {south, s}.
+West (#658) leads to the South Third Floor Hallway (#657) via {west, w}.
+North (#754) leads to the Computer Lab (#753) via {north, n}.
+The Guest Room
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the South Third Floor Hallway.
+Crag sighs
+Minty gets the puke bucket out.
+Crag says, "LOTS of empty rooms :)"
+Minty winks.
+Crag laughs
+Crag says, "ok, now to see the outside"
+Minty giggles.
+Minty says, "k"
+The South Third Floor Hallway
+Minty follows Crag.
+Minty arrives from the Guest Room.
+The South Third Floor Hallway
+Minty follows Crag.
+Minty arrives from the South Third Floor Hallway.
+The East Third Floor Hallway
+You see a west wall here.
+Minty follows Crag.
+Minty arrives from the South Third Floor Hallway.
+The East Second Floor Balcony
+Minty follows Crag.
+Minty arrives from the East Third Floor Hallway.
+The North Second Floor Balcony
+Minty follows Crag.
+Minty arrives from the East Second Floor Balcony.
+The Second Floor Veranda
+Minty follows Crag.
+Minty arrives from the North Second Floor Balcony.
+The Grand Stair Upper Landing
+Minty follows Crag.
+Minty arrives from the Second Floor Veranda.
+The On the Grand Stair
+Minty follows Crag.
+Minty arrives from the Grand Stair Upper Landing.
+The Grand Stair Lower Landing
+Minty follows Crag.
+Minty arrives from the On the Grand Stair.
+The Ballroom
+Minty follows Crag.
+Minty arrives from the Grand Stair Lower Landing.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+enceladus is here, dozing.  stormagnet is off in another world.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+Crag has arrived.
+Crag says, "This is the room new people show up in, obviously"
+Minty whews!
+Crag says, "South of here is the front of the building..."
+The Front Porch
+This is the front porch of the enormous Prauge-Rhammer Manor. The porch is covered by a roof some twenty feet above you, supported by enormous columns. Enormous wooden doors dominate the middle of the porch, and the sides are rounded towards building at the sides, making a shallow semi-circle of the porch. There are some half-dozen large steps down to the circle drive below. Facing the drive, there is a service road to the right which turns around the side of the Manor.
+Minty follows Crag.
+Minty arrives from the Entrance Hall.
+Crag says, "I described a lot of this area."
+North (#309) leads to the Entrance Hall (#70) via {north, n}.
+South (#858) leads to the Circular Driveway (#857) via {south, s}.
+The Circular Driveway
+I have a friend who has a circular driveway and he can't get out. -- Steven Wright
+Minty follows Crag.
+Minty arrives from the Front Porch.
+Minty nods.
+Minty laughs.
+North (#859) leads to the Front Porch (#307) via {north, n}.
+West (#861) leads to the South West Lawn (#860) via {west, w}.
+East (#884) leads to the South East Lawn (#853) via {east, e}.
+Crag grins.
+Crag says, "The way off the property would be south from here, but that doesn't exist yet."
+The South West Lawn
+You are in front of the manor. To the west is the circular driveway where guests stop to disembark. A road runs through this area and to the north. To the south and west you can see the great wall which encircles the property.
+Minty follows Crag.
+Minty arrives from the Circular Driveway.
+Crag says, "There's a road here which is how the Manor would take deliveries, if there ever were any."
+You can't go that way.
+East (#862) leads to the Circular Driveway (#857) via {east, e}.
+North (#864) leads to the West Lawn (#863) via {north, n}.
+The West Lawn
+You are between the manor to the east, and the great encircling wall to the west. A road runs down into a closed garage under the manor, and to the south. To the north you see more wall and some forest.
+Minty follows Crag.
+Minty arrives from the South West Lawn.
+South (#865) leads to the South West Lawn (#860) via {south, s}.
+North (#867) leads to the North West Lawn (#866) via {north, n}.
+Minty says, "Cool!"
+Crag says, "The road is only in the descriptions though"
+Minty nods.
+Crag says, "There isn't actually a way into the basement here yet"
+The North West Lawn
+You are north west of the manor. To the west the great wall stretches north into forest and south past the manor. To the east you see the hedgemaze which guards the manor pool and the rear entrances to the manor. Farther north you see trees which thinken into a dense forest.
+Minty follows Crag.
+Minty arrives from the West Lawn.
+Crag says, "The wall to the west is enormous.  It's two stories tall and like 10-15 feet thick"
+Crag says, "It might have secret passages ;)"
+South (#868) leads to the West Lawn (#863) via {south, s}.
+East (#882) leads to the West Veranda (#404) via {east, e, veranda}.
+North (#869) leads to the Light Forest (#877) via {north, n}.
+Crag says, "To the east of here is the veranda which connects to the ballroom"
+Minty says, "Ahhh, you've been busy!"
+Crag says, "And if you keep going east and south it loops back around to the driveway "
+Crag says, "We did all this over a year ago"
+Crag says, "I was very sad when I thought we'd lost it all"
+Minty says, "Ohhh"
+The Light Forest
+All around you are young trees encroaching on the residents at the manor below. You hear a creek nearby. Further into the forest the foliage is far thicker, blocking the view. From where you stand you can still see the great wall which surrounds the Manor, and you guess that way is west.
+Minty follows Crag.
+Minty arrives from the North West Lawn.
+Crag says, "This forest has a secret..."
+South (#870) leads to the North West Lawn (#866) via {south, s}.
+North (#874) leads to the Dense Forest (#872) via {north, n}.
+The Dense Forest
+Thick-bodied trees rise to epic heights and block out most light.  The trees seem to thin out to the south and to the north you see some twinkling lights.  Trees block passage in other directions.
+You see a Bluegum Eucalyptus here.
+Minty follows Crag.
+Minty arrives from the Light Forest.
+Minty gasps!
+Crag says, "Somewhere around here..."
+Standing over a hundred feet tall with a wide trunk, it lacks low limbs for easy climbing.
+Minty says, "A secret??"
+Crag says, "yes..."
+South (#873) leads to the Light Forest (#877) via {south, s}.
+The clearing (#876) leads to the Forest Clearing (#879) via {clearing, n, north}.
+The Forest Clearing
+The forest opens in to a clearing.  There's a house built of an unusual tan substance, akin to bread in the center of this space.  To the west, there's a colorful round building surrounded by trees and woodland flowers.  A small hole sits before the house.  A patch of lolipops sprout like flowers in a bed.  A topiary of dark chocolate is prominently displayed.  A tree stump is here.  A tree stump too is here.  To the south, a path leads through the dense forest.  Stepping stones of gumdrops lead up to an arched doorway which is trimmed in icing.  The screen door to the Yurt is closed.
+You see a Thin Kamani and a Thick Kamani here.
+Minty follows Crag.
+Minty arrives from the Dense Forest.
+Minty says, "Hrm"
+Crag says, "ahh, here we go"
+Crag says, "You may remember the user PG or 'Pig Girl'"
+Crag says, "She likes food a lot and wanted to have a gingerbread house"
+Minty says, "Chocolate!!"
+Minty drools.
+Crag says, "That wouldn't have fit into the theme very well, so I setup a spot for her in the forest."
+Minty says, "awww"
+Crag says, "basically, anything anyone can come up with, we can probably squeeze in eventually, with some imagination."
+Minty nods.
+Crag says, "The story here is that it's not REALLY a gingerbread house... or is it?!"
+Crag grins.
+Minty giggles.
+Crag says, "It might all be fake, or it might be magic."
+Crag says, "That's sorta the ongoing theme."
+Minty grins.
+Minty nods.
+Crag says, "It's supposed to be more subtle, but we haven't spent much energy on it yet"
+Crag says, "But otherwise it's little more than magical realism."
+The out (#871) leads to the Dense Forest (#872) via {out, s, south}.
+The house (#880) leads to the The Gingerbread House Foyer (#878) via {house, enter, in, doorway, arched}.
+The screen door (#1049) leads to the Yurt (#1050) via {screen door, west, w, door, yurt}.
+Minty says, "you've been busy people though."
+Crag says, "We were"
+Crag says, "There used to be people logged in all the time."
+Minty nods.
+Crag says, "PG, Binder, Davil Crayon"
+Minty says, "Yep"
+The The Gingerbread House Foyer
+Foyer in PG's Gingerbread house, illuminated by an ornate chandelier. In front of you a large vase of fresh flowers. A silver gilded mirror is on the floor leaning against a wall waiting to be hung. The smell of Spring envelopes you. Exits: Out (Outside), Door (to Parlor), Hallway_right (to Kitchen).
+You see a Salad, a Salad container, and a Punching Bag for Binder here.
+PG is here, asleep.
+Minty follows Crag.
+Minty arrives from the Forest Clearing.
+The out (#875) leads to the Forest Clearing (#879) via {out}.
+The door (#888) leads to the Parlor (#887) via {door}.
+The Hallway_right (#993) leads to the Kitchen (#988) via {Hallway_right}.
+Crag says, "All this is PG's doing"
+Minty says, "Colin hasn't been around lately though, eh?"
+Crag says, "The MOO was dead for a long time"
+Crag says, "I have talked to him though"
+Minty nods.
+The Forest Clearing
+The forest opens in to a clearing.  There's a house built of an unusual tan substance, akin to bread in the center of this space.  To the west, there's a colorful round building surrounded by trees and woodland flowers.  A small hole sits before the house.  A patch of lolipops sprout like flowers in a bed.  A topiary of dark chocolate is prominently displayed.  A tree stump is here.  A tree stump too is here.  To the south, a path leads through the dense forest.  Stepping stones of gumdrops lead up to an arched doorway which is trimmed in icing.  The screen door to the Yurt is closed.
+You see a Thin Kamani and a Thick Kamani here.
+Minty follows Crag.
+Minty arrives from the The Gingerbread House Foyer.
+The Dense Forest
+Thick-bodied trees rise to epic heights and block out most light.  The trees seem to thin out to the south and to the north you see some twinkling lights.  Trees block passage in other directions.
+You see a Bluegum Eucalyptus here.
+Minty follows Crag.
+Minty arrives from the Forest Clearing.
+South (#873) leads to the Light Forest (#877) via {south, s}.
+The clearing (#876) leads to the Forest Clearing (#879) via {clearing, n, north}.
+That is not a valid command.
+The Light Forest
+All around you are young trees encroaching on the residents at the manor below. You hear a creek nearby. Further into the forest the foliage is far thicker, blocking the view. From where you stand you can still see the great wall which surrounds the Manor, and you guess that way is west.
+Minty follows Crag.
+Minty arrives from the Dense Forest.
+South (#870) leads to the North West Lawn (#866) via {south, s}.
+North (#874) leads to the Dense Forest (#872) via {north, n}.
+The North West Lawn
+You are north west of the manor. To the west the great wall stretches north into forest and south past the manor. To the east you see the hedgemaze which guards the manor pool and the rear entrances to the manor. Farther north you see trees which thinken into a dense forest.
+Minty follows Crag.
+Minty arrives from the Light Forest.
+South (#868) leads to the West Lawn (#863) via {south, s}.
+East (#882) leads to the West Veranda (#404) via {east, e, veranda}.
+North (#869) leads to the Light Forest (#877) via {north, n}.
+The West Veranda
+You see nothing special.
+Minty follows Crag.
+Minty arrives from the North West Lawn.
+South (#800) leads to the Western Fireplace (#382) via {south, s}.
+East (#801) leads to the East Veranda (#377) via {east, e}.
+West (#881) leads to the North West Lawn (#866) via {west, w, out}.
+The Western Fireplace
+You are beside the western fireplace, at the northern end of the ballroom. An elevator is to the north.  A huge brick fireplace is set into the center of the wall.  A soft red rug lies under your feet.  A pair of dark green sofas face each other across the fireplace, with a coffee table standing between them.
+Minty follows Crag.
+Minty arrives from the West Veranda.
+Crag says, "And now we're back inside."
+Minty yays!
+Crag says, "So that's the quick tour"
+Minty says, "All this is way cool!"
+Crag says, "There's a lot more on paper that isn't in the MOO, besides the descriptions"
+Minty says, "Yep, it was quick ;)"
+Crag says, "THe grounds are much larger than all that"
+Minty nods.
+Crag says, "In the courners are turrets, there's more forest, there's a hedgemaze containing a swimming pool, and a gazebo."
+Minty says, "Wow!"
+Crag says, "Also, the grounds slope gently up towards the north east, with the implication that we're at the base of a mountain."
+Minty says, "Ahhhh"
+Crag says, "There's a creek that runs around the manor and its tapped upstream to feed water to us."
+Crag says, "All of this is just in my mind and written down right now, but eventually it's going into the MOO."
+Minty says, "Cool!"
+Crag says, "The reason I wanted to show you all this"
+Crag says, "Is that as someone who'se likely to be online as much as me, and who will be bringing people here, I want you to empart the theme to them too"
+Crag says, "I want to make sure that the feeling of the MOO is consistant"
+Minty nods.
+Crag says, "I'm not the pushy type to make people do things my way, but I like things to be smooth"
+Minty says, "Exactly"
+Crag says, "So your main responsibility as a Wizard(ess) is to pass this information on and help people out as best you can."
+Minty grins.
+Minty nods.
+Crag says, "In return, you have a new MOO to replace that old sjr dump :)"
+Minty yays!
+Crag says, "The only thing I'm afraid of is that people will just cut-n-paste code from other MOOs here"
+Crag says, "I want to encourage people to do original work and try to stick with the style of the MOO"
+Minty says, "I wouldn't."
+Minty nods.
+Crag says, "I'm not worried about you"
+Crag says, "I'm worried about people showing up later and doing it"
+Crag says, "I don't want "bonking" features and sophmoric humor about sex and drugs."
+Minty says, "Basically what we use copy and paste for is *qooc and things that we might get in our emails, like jokes to copy and paste to the *bb.. at least that's what we did in sjr."
+Crag says, "Well yeah"
+Minty nods.
+Crag says, "I was specifically thinking of copy-n-paste programming"
+Minty nods.
+Crag says, "There are a lot of MOOs with very badly written features and toys"
+Crag says, "And it would be trivial to bring them here"
+Minty says, "I doubt you have to worry about that."
+Crag says, "cool"
+Crag says, "I also don't want to stifle people"
+Minty says, "Coz sjr was a social moo for us."
+Minty nods.
+Crag says, "I'm a little elitist about programming, and I don't want that to discourage anyone"
+Crag says, "Most MOOs are social"
+Minty nods.
+Crag says, "it's what they do best."
+Crag says, "But I want this to be more than that too, as you can tell."
+Minty nods.
+Current score for Minty
+type     value  donors
+----     -----  ------
+stabbed  2      Marcy and Minty
+----     -----  ------
+Crag says, "I want people to program interactive things"
+Crag says, "Like the stabbing game"
+Minty says, "Yep, me too"
+Crag says, "But they have to be low-stress, like the stabbing game"
+Minty nods.
+Crag says, "so that's about it."
+Minty says, "cool, sounds good to me!"
+Crag says, "Since you're helping me out so much, please feel free to email me if I'm gone to long."
+Minty says, "okie"
+Crag says, "You should feel free to email me anyway, but in particular, you should be demanding"
+Minty giggles.
+Crag says, "Or at least have some expectations of me"
+Crag says, "I'm a bit of a slacker and forgetful and stuff"
+Minty grins.
+Crag says, "But I want you and your friends to have fun here"
+Crag says, "ANd I know that means I need to participate"
+Minty says, "We will!"
+Crag says, "So don't let me off easy"
+Crag says, "Good"
+Crag smiles.
+Minty grins.
+Crag says, "Let's go back to the entrance"
+The Ballroom
+Minty follows Crag.
+Minty arrives from the Western Fireplace.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+enceladus is here, dozing.  stormagnet is off in another world.
+Minty follows Crag.
+Minty arrives from the Ballroom.
+Crag has arrived.
+Minty says, "k"
+-----
+FOLLOWING
+=========
+
+"follow <player>" will cause you to follow <player> everywhere <player> goes, as long as you can go there too, and <player> uses a valid exit.
+
+"unfollow <player>" will stop you from following <player> if <player> is in the room.
+
+"lose <player>" will stop a player from following you, if you're in the same room.
+
+"following" will show you who you are currently following, should they be in the room, or happen to come into the room.
+
+"followers" will tell you who's following you, and if you can be followed.
+
+"followers on" will allow others to follow you, and announce it to the room.
+
+"followers off" will not allow others to follow you, and announce it to the room.
+
+Crag [to Minty]: you can unfollow crag now
+Minty no longer follows Crag.
+Minty whews!
+Crag . o O ( I like having followers )
+Minty says, "done"
+Crag grins.
+Minty says, "lol"
+Crag says, "Oh, and you should send feature requests to *bug"
+Crag says, "And building requests to *cam"
+Minty says, "k"
+Crag says, "Maybe next weekend I'll setup a web page for the MOO to explain some of the stuff I was talking about"
+Crag says, "Then we could refer people to those pages for reference."
+Minty says, "Cool!"
+Crag says, "And now that I've been typing a lot I'm going to take a break"
+Crag idles: wrist break
+[Idling at 7:27 P.M. on Sat, Jan 29: wrist break]
+Minty is gonna go to bed.
+Minty hugs everyone.
+You hear a quiet popping sound; Minty has disconnected.
+< Minty has disconnected.  Total: 5 >
+stormagnet pages, "navi:/home/stormagnet/docs/manga/ichigo/"
+You hear a quiet popping sound; enceladus has disconnected.
+< enceladus has disconnected.  Total: 4 >
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+stormagnet     Entrance Hall                 10 hours                          
+GhostOfTheMan  Heavens                       14 hours                          
+Robert         Servant's Quarters            14 hours                          
+
+Total: 4 people, 1 of whom has been active recently.
+enceladus has connected.
+You hear a quiet popping sound; enceladus has disconnected.
+< enceladus has disconnected.  Total: 4 >
+Minty has connected.
+You hear a quiet popping sound; Minty has disconnected.
+< Minty has disconnected.  Total: 4 >
+kirsty has connected.
+Minty has connected.
+kirsty says, "ooooh"
+kirsty giggle.
+Minty says, "oooooh, sugarplum!"
+kirsty says, "uh, +s"
+Minty giggles.
+kirsty says, "I was just describing myself."
+Minty yays!
+Minty looks.
+Minty drools.
+Minty grins.
+Minty says, "Everyone idles!"
+Minty tuts.
+Minty [to kirsty]: aww, yer 4 minutes old.. how kewt!
+Minty winks.
+kirsty giggles.
+Minty [to kirsty]: been to Encie's MOO yet?
+kirsty says, "It didn't remember me from last time, but I didn't do anything when I was last here, so maybe that's why? Like setting gender, etc?"
+Minty says, "ohhh, he switched DB's."
+kirsty [to Minty]: Nope.
+Minty eeps.
+kirsty oohs.
+Minty [to kirsty]: you know about it?
+kirsty says, "I haven't spoken to Encie for like a week now :("
+Minty gasps!
+kirsty says, "Been busy."
+Minty says, "He just made it a couple of days ago."
+Minty says, "4 I think."
+kirsty says, "Paris, he's always working, he mentioned something when I was idle on MSN I think."
+Minty says, "Ohhh"
+kirsty shrugs.
+Minty grins.
+Minty says, "you got the addy for it?"
+Minty isn't there right now though.
+Minty says, "He changed the port number if you have the addy."
+kirsty shakes her head.
+kirsty says, "I'll ask him later."
+Minty says, "okies"
+kirsty giggles.
+Minty grins.
+Marcy has connected.
+Marcy says, "boo"
+Minty gasps!
+Marcy gasps!
+Marcy huggles Minty.
+Marcy shag kirsty.
+Minty huggles Marcy
+Minty says, "lol"
+Marcy says, "doh"
+Marcy shags kirsty.
+Marcy says, "there"
+Minty yays!
+kirsty laughs.
+Minty shags kirsty too.
+Marcy says, "hi gals"
+kirsty says, "I giggle'd earlier, s'ok."
+Minty laughs.
+kirsty says, "Just one little giggle, no more, no less."
+Minty nods.
+Minty says, "Babsy is sicky today :("
+Marcy says, "awww"
+kirsty eeks.
+Minty nods.
+Marcy says, "I just checked into Encies moo, but no one is there!"
+Marcy cries.
+Minty says, "I spoke with her in Encie's MOO, she said she had to leave."
+Minty says, "I was there earlier."
+Marcy says, "aww, what's wrong with her?"
+Minty pats Marcy onna back.
+Minty says, "Flu like stuff."
+Marcy says, "ick"
+Minty nods.
+kirsty says, "Who is Descendent and why is he being nice to me?"
+Marcy says, "he's Shaun"
+Minty shrugs.
+Marcy says, "Jake"
+Minty says, "oh yeah, that's right."
+kirsty says, "Boy/girl?"
+Marcy says, "etc"
+Marcy [to kirsty]: hard to say
+Marcy giggles.
+kirsty says, "The one whose gender remains a mystery?"
+Minty giggles.
+Marcy nods nods and nods.
+Minty laughs.
+kirsty says, "I just asked him who he is."
+Minty grins.
+Marcy says, "hehe"
+Minty says, "He/she seems nice enough."
+Marcy says, "Jackal says it's Jake, who was also nice enough"
+Minty says, "I never knew Jake.. I don't think."
+kirsty says, "[TS] You shout, "Are you like 'Symbol' formly known as Prince. Descendent, formly known as Shaun? Jake? If you are Jake, why did you gag me?""
+Marcy [to kirsty]: woo
+kirsty giggles.
+Minty giggles.
+kirsty says, "I'll find out the truth!"
+Marcy says, "yay!"
+Minty nodsnodsnods.
+kirsty says, "Jake showed me and Julie a picture once, if it was him, he was cute!"
+Minty says, "yay!"
+kirsty says, "Probably was from a magazine though."
+kirsty sigh.
+Marcy says, "yep, I sent that pic to my mom one Christmas in Florida.  Coz he used to lick her"
+Marcy giggles.
+kirsty laughs.
+Minty giggles.
+kirsty laughed out loud then and hiccuped!
+Minty says, "lol"
+Marcy says, "oh, speaking of mom, she's home.  Wasn't supposed to come home until April, but they may go back.  She's inna hospital here, heart institute"
+Minty eeks!
+Marcy nods.
+Minty [to Marcy]: sorry to hear that :(
+Minty says, "brb, phone"
+Marcy [to Minty]: thanks
+kirsty eeps.
+kirsty [to Marcy]: She'll be okay though?
+Marcy [to kirsty]: I think so, they're doing a bunch of tests so far
+kirsty whews :)
+Marcy nods.
+kirsty says, "He admits to being Jake, and can't remember why he gagged me."
+Marcy says, "lol"
+kirsty says, "Just asking about Shaun now."
+kirsty says, "Then I'll ask why kisses said he was a she."
+kirsty cackles!
+Marcy laughs.
+kirsty says in a deep voice, "I don't work with the boys, because I used to be one!"
+Marcy says, "lol"
+kirsty giggles.
+kirsty says, "That's from Mrs. Doubtfire, no idea why I remember it, never really liked the film :) When he's phoning pretending to be Nannies answering the advert, and says that in a funny voice."
+Marcy laughs.
+Marcy [to kirsty]: I'm glad you had such a wonderful time in Paris.  It sounds wonderful.
+kirsty giggles.
+kirsty says, "Thanks :)"
+kirsty says, "He says he never was Shaun - but that picture we all drooled over, wasn't him either."
+kirsty tuts.
+Marcy giggles.
+Marcy says, "he said he is not Shaun? hmm"
+kirsty says, "Yeh."
+Marcy says, "ah well, who knows.  who cares.  I always liked Jake"
+kirsty says, "[TS] Descendent shouts, "Well that fake ass picture definitely isn't me, but I figured you all knew that. But as far as me being Shaun? No that wasn't true.""
+Marcy says, "weird"
+kirsty nods.
+Marcy says, "Minty is yakking to a telemarketer I bet.  Asking if it likes red undies or something."
+kirsty laughs.
+kirsty says in a husky voice, "Whatcha wearin', puddin' pie?"
+Marcy giggles.
+Minty says, "lol"
+Minty says, "silly girls"
+Marcy nods.
+kirsty says, "Who wants to be bored by silly pics?"
+Minty says, "My phone has been ringing alllll day."
+Minty says, "I do!"
+Marcy says, "meeee"
+Minty says, "lol"
+Marcy [to Minty]: how's Dinah?  How's Zoie?
+Marcy [to Minty]: oh, and how's you too?
+Marcy giggles.
+Minty [to Marcy]: Dinah is good, Zoie is good, Doogie might have asperation pnemonia and I'm good.
+Minty whews!
+Marcy whews.  Oh, oops, it was Doogie with the cough?
+Minty [to Marcy]: I told Babs about Doogie getting that chaff in his throat, I was suspecting Blasto, but she said she didn't think it was that.. mentioned the pnemonia, and now that makes sense.
+kirsty cough/woofs.
+Minty nods.
+Marcy says, "ohhh"
+Minty laughs at kirsty.
+Marcy giggles.
+Minty was scared though.
+Marcy says, "I bet"
+Minty says, "I have to bring him in to make sure though."
+Marcy says, "yeppers"
+kirsty says, "sent"
+kirsty says, "a lot are rather silly"
+Minty says, "Oooooh, piccies sent to me too?"
+kirsty says, "and one is from new yrs (it's pretty obvious, a xmas tree is in the background)"
+kirsty nods.
+Minty yays!
+Minty says, "Outlook Express is soooo slow."
+*** Redirecting connection to new port ***

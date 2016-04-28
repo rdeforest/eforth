@@ -1,0 +1,368 @@
+ _       _             
+(_) __ _| | ___   ___  
+| |/ _` | |/ _ \ / _ \ 
+| | (_| | | (_) | (_) |
+|_|\__, |_|\___/ \___/ 
+   |___/ coldmud/nunavut
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+*** Connected ***
+Nowhere
+You see nothing special.
+User Name          On For Idle  Doing
+Crag                00:00   0s  
+One user logged in.
+@program $programmer.parse_command
+    arg str;
+    var err;
+    
+    if (!.is_owned_by(sender()))
+        throw(~perm, "Sender not an owner.");
+    
+    // Catch errors and display a stack trace.
+    catch any {
+        if (programming)
+            .programming_line(str);
+        else
+            return pass(str);
+    } with handler {
+        .tell($traceback.formatted(traceback()));
+        return;
+        for err in (traceback())
+            .err(err);
+    }
+.
+@program $user.parse_command
+    arg str;
+    var cmd, loc, result, i, j, templates, template, word, fields, obj, verb_info;
+    
+    if (!.is_owned_by(sender()))
+        throw(~perm, "Sender not an owner.");
+    
+    // Are we editing?
+    if (editor) {
+        if (substr(str, 1, 1) == "<") {
+            str = substr(str, 2);
+            if (!str)
+                return;
+        } else {
+            result = editor.handle_editor_command(str);
+            switch (result[1]) {
+                case 'not_done:
+                    editor = result[2];
+                case 'abort:
+                    editor = 0;
+                case 'done:
+                    .(editor_method)(result[2]);
+            }
+            return;
+        }
+    }
+    
+    // Check commands on this.
+    cmd = .match_command(str);
+    if (cmd)
+        return .(cmd[1])(@cmd[2]);
+    
+    // Check commands on location.
+    loc = .location();
+    cmd = loc.match_command(str);
+    if (cmd) {
+        loc.(cmd[1])(@cmd[2]);
+        return;
+    }
+    
+    // Try exit names.
+    for obj in (loc.exits()) {
+        if (str == obj.vr_name()) {
+            obj.go_through();
+            return;
+        }
+    }
+    
+    // Resort to verb cache.
+    templates = $verb_cache.templates();
+    catch ~objnf, ~verbnf {
+        for template in (templates) {
+            fields = match_template(strsub(template, "%this", "*"), str);
+            if (type(fields) != 'list)
+                continue;
+            j = 1;
+            for word in (explode(template)) {
+                if (word == "%this") {
+                    obj = sender().match_environment(fields[j]);
+                    verb_info = obj.verb_info(template);
+                    if (verb_info[2] != 'remote && !.local_to_environment(obj))
+                        .err("You cannot do that from here.");
+                    else
+                        obj.(verb_info[1])(@fields);
+                    return;
+                } else if (word == "*=*") {
+                    j = j + 2;
+                } else {
+                    j = j + 1;
+                }
+            }
+        }
+    } with handler {
+        switch (error()) {
+            case ~objnf:
+                //.err("I don't see \"" + error_arg() + "\" here.");
+                .err("I don't see that here.");
+            case ~verbnf:
+                .err("You can't do that to that object.");
+        }
+        return;
+    }
+    
+    // No luck.
+    .err("I don't understand that.");
+.
+@program $connection.parse
+    arg incoming;
+    var lines, line;
+    
+    lines = buffer_to_strings(buffer_append(buffer, incoming));
+    buffer = lines[listlen(lines)];
+    for line in (sublist(lines, 1, listlen(lines) - 1))
+        (| .parse_line(line) |);
+.
+@program $connection.parse_line
+    arg str;
+    var cmd, logstr;
+    
+    if (caller() != definer() || sender() != this())
+        throw(~perm, "Invalid access to private method.");
+    logstr = addr + " " + toliteral(port);
+    if (user)
+        logstr = logstr + " " + toliteral(user.name()) + " (" + user.vr_name() + ")";
+    logstr = logstr + ": " + str;
+    $sys.log(logstr);
+    
+    // If we're logged in, forward the line to the player.
+    if (user) {
+        if (user.parse_line(str) == 'disconnect)
+            disconnect();
+        return;
+    }
+    
+    // Display tracebacks, even though user may be clueless.
+    catch any {
+        cmd = .match_command(str);
+        if (cmd)
+            .(cmd[1])(@cmd[2]);
+        else
+            .echo_welcome();
+    } with handler {
+        for str in (traceback())
+            .err(str);
+    }
+.
+--> "nice"
+--> 'err
+--> 'integer
+--> 1048576
+--> 1073741824
+--> 1099511627776
+--> 1125899906842624
+--> 1152921504606846976
+--> 0
+--> 'dbref
+--> 1
+!Neither the object nor its ancestors define a method by that name.
+@program $root.find_method
+    arg name;
+    
+    if (!public && !.is_owned_by(sender()))
+        throw(~perm, "Not public and sender not an owner.");
+    return (> find_method(name) <);
+.
+@program $root.is_owned_by
+    disallow_overrides;
+    arg obj;
+    
+    return (| obj in owners |) || $sys.is_admin(obj);
+.
+Methods:
+  init_root
+  initialize
+  uninitialize
+  change_parents
+  chparents
+  will_inherit
+  name
+  name_str
+  owners
+  is_owned_by
+  public
+  fertile
+  set_fertile
+  set_name
+  set_public
+  set_owners
+  add_owner
+  del_owner
+  spawn
+  destroy
+  add_parameter
+  parameters
+  del_parameter
+  del_method
+  methods
+  parents
+  children
+  ancestors
+  find_method
+  find_next_method
+  list_method
+  compile
+  show
+  has_ancestor
+  eval
+--> ['init_root, 'initialize, 'uninitialize, 'change_parents, 'chparents, 'will_inherit, 'name, 'name_str, 'owners, 'is_owned_by, 'public, 'fertile, 'set_fertile, 'set_name, 'set_public, 'set_owners, 'add_owner, 'del_owner, 'spawn, 'destroy, 'add_parameter, 'parameters, 'del_parameter, 'del_method, 'methods, 'parents, 'children, 'ancestors, 'find_method, 'find_next_method, 'list_method, 'compile, 'show, 'has_ancestor, 'eval]
+!Line 1: Unknown function sort.
+--> ['add_owner, 'add_parameter, 'ancestors, 'change_parents, 'children, 'chparents, 'compile, 'del_method, 'del_owner, 'del_parameter, 'destroy, 'eval, 'fertile, 'find_method, 'find_next_method, 'has_ancestor, 'init_root, 'initialize, 'is_owned_by, 'list_method, 'methods, 'name, 'name_str, 'owners, 'parameters, 'parents, 'public, 'set_fertile, 'set_name, 'set_owners, 'set_public, 'show, 'spawn, 'uninitialize, 'will_inherit]
+@program $list.columnize
+    arg l, n, [rest];
+    var sep, len, width, ret, line, i;
+    
+    sep = [@rest, "   "][1];
+    len = [@rest, 78, 78][2];
+    width = (len - (n - 1) * strlen(sep)) / n;
+    ret = [];
+    while (l) {
+        line = pad(l[1], width);
+        for i in [2 .. n] {
+            if (i > listlen(l))
+                line = line + sep + pad("", width);
+            else
+                line = line + sep + pad(l[i], width);
+        }
+        ret = [@ret, line];
+        l = n >= listlen(l) ? [] | sublist(l, n + 1);
+    }
+    return ret;
+.
+!Line 1: syntax error
+Caught error ~numargs (#5.columnize called with one argument, requires two or more.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~numargs
+  $root.eval (on $admin_1): ~methoderr
+Caught error ~type (The first argument ('init_root) is not a string.)
+    Extra data was: 0
+    tb[2]      was: ['function, 'pad]
+  $list.columnize (on $list): ~type
+  $admin_1.tmp_eval (on $admin_1): ~methoderr
+  $root.eval (on $admin_1): ~methoderr
+@program $list.map
+    arg l, method, [args];
+    var r, e;
+    
+    r = [];
+    for e in (l)
+        r = [@r, e.(method)(@args)];
+    return r;
+.
+Methods:
+Enter text for method list_to_strings.
+!Line 1: syntax error
+!Line 2: syntax error
+Enter text for method list_to_strings                                                                                                                                                                   .
+!Line 1: syntax error
+!Line 2: syntax error
+!Line 8: syntax error
+!Line 9: syntax error
+Enter text for method list_to_strings.
+!Line 1: syntax error
+!Line 2: syntax error
+Caught error ~methodnf (Method list_to_strings not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+Enter text for method list_to_strings                                                                                                                                                                   .
+!Line 8: syntax error
+!Line 9: syntax error
+Enter text for method list_to_strings                                                                                                                                                                   .
+!Line 8: syntax error
+!Line 9: syntax error
+Enter text for method list_to_strings                                                                                                                                                                   .
+!Line 8: syntax error
+!Line 9: syntax error
+Enter text for method list_to_strings                                                                                                                                                                   .
+Method compiled.
+Caught error ~methodnf (Method list_to_strings not found.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~methodnf
+  $root.eval (on $admin_1): ~methoderr
+Methods:
+  list_to_strings                                                                                                                                                                   
+--> $admin_1
+--> ['"list_to_strings                                                                                                                                                                   ", 'tmp_eval]
+Enter text for method list_to_strings.
+!Line 8: syntax error
+Enter text for method list_to_strings.
+Method compiled.
+--> ["init_root", "initialize", "uninitialize", "change_parents", "chparents", "will_inherit", "name", "name_str", "owners", "is_owned_by", "public", "fertile", "set_fertile", "set_name", "set_public", "set_owners", "add_owner", "del_owner", "spawn", "destroy", "add_parameter", "parameters", "del_parameter", "del_method", "methods", "parents", "children", "ancestors", "find_method", "find_next_method", "list_method", "compile", "show", "has_ancestor", "eval"]
+init_   initi   unini   chang   chpar   will_   name    name_   owner   is_ow
+publi   ferti   set_f   set_n   set_p   set_o   add_o   del_o   spawn   destr
+add_p   param   del_p   del_m   metho   paren   child   ances   find_   find_
+list_   compi   show    has_a   eval                                         
+--> $admin_1
+i   i   u   c   c   w   n   n   o   i   p   f   s   s   s   s   a   d   s   d
+a   p   d   d   m   p   c   a   f   f   l   c   s   h   e                    
+--> $admin_1
+init_root                               initialize                           
+uninitialize                            change_parents                       
+chparents                               will_inherit                         
+name                                    name_str                             
+owners                                  is_owned_by                          
+public                                  fertile                              
+set_fertile                             set_name                             
+set_public                              set_owners                           
+add_owner                               del_owner                            
+spawn                                   destroy                              
+add_parameter                           parameters                           
+del_parameter                           del_method                           
+methods                                 parents                              
+children                                ancestors                            
+find_method                             find_next_method                     
+list_method                             compile                              
+show                                    has_ancestor                         
+eval                                                                         
+--> $admin_1
+init_root                  initialize                 uninitialize            
+change_parents             chparents                  will_inherit            
+name                       name_str                   owners                  
+is_owned_by                public                     fertile                 
+set_fertile                set_name                   set_public              
+set_owners                 add_owner                  del_owner               
+spawn                      destroy                    add_parameter           
+parameters                 del_parameter              del_method              
+methods                    parents                    children                
+ancestors                  find_method                find_next_method        
+list_method                compile                    show                    
+has_ancestor               eval                                               
+--> $admin_1
+--> [$admin_1, $admin, $programmer, $builder, $user, $proto_user, $person, $located, $container, $vr, $described, $has_verbs, $has_commands, $root]
+Enter text for method implements.
+Method compiled.
+Caught error ~numargs (#47.implements called with one argument, requires none.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'MESSAGE]
+  $admin_1.tmp_eval (on $admin_1): ~numargs
+  $root.eval (on $admin_1): ~methoderr
+Enter text for method implements.
+Method compiled.
+--> 0
+--> ["foo", "bar"]
+--> ["f", " bar"]
+--> 16094
+--> 16096
+--> 16097
+--> 16098

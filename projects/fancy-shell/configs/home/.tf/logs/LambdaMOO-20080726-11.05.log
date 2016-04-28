@@ -1,0 +1,58 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 95 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Core-DB-Issues (#8175)              1 new message
+Last connected Wed Jun 25 12:13:33 2008 PDT from pontius.thatsnice.org
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 868 on *News (#123):
+Date:     Tue Jul  1 00:00:00 2008 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Architecture Review Board currently being held by Profane (#30788) and Kagan (#102427).  Nominations for the ballot will be accepted until Tuesday, July 15, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for ARB' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 869 on *News (#123):
+Date:     Tue Jul 15 02:42:04 2008 PDT
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are five candidates which have been generated for balloting for the ARB election.  Type `@arb-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Tue Jul 29 02:42:04 2008 PDT; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+Message 5104 on *Core-DB-Issues (#8175):
+Date:     Mon Jun 30 07:00:40 2008 PDT
+From:     Heathcliff (#89987)
+To:       *Core-DB-Issues (#8175)
+Subject:  :confunc / :check_mail
+
+By request, I have edited #100068:confunc [Generic Mail Receiving Player's confunc] to take out the personal mail check and move it to its own verb, :check_mail.  Users should see no changes.
+--------------------------
+No News (is good news)

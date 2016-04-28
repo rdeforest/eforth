@@ -1,0 +1,369 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A leather couch is here.
+Last connected Sat Apr  6 16:27:58 2013 PDT from localhost
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 636190727 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 636190727 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 636190727 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 636190727
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           First room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+Description set.
+Description set.
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+-------------------------------- finished ---------------------------------
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+.legal_name_regexp       unknown hack (#35)    r      "^[a-z_][a-z0-9_]*$"
+.free_addition           unknown hack (#35)    r      0
+-------------------------------- finished ---------------------------------
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+  #193:"@reg*ister @@reg*ister" unknown hacker (#35) rxd    any on top of/on/onto/upon this
+  #193:"@unreg*ister @@unreg*ister" unknown hacker (#35) rxd any on top of/on/onto/upon this
+  #193:add_property             Core-Wizard (#184)   rxd    this none this
+  #193:delete_property          Core-Wizard (#184)   rxd    this none this
+  #193:description              unknown hacker (#35) rxd    this none this
+  #193:init_for_core            unknown hacker (#35) rx     this none this
+  #193:non_core_properties      unknown hacker (#35) rxd    this none this
+  #193:help_text                Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+-----
+@REGISTER
+=========
+
+Usage:  @register [<someone>]
+        @register <someone> as <email-address>[ <commentary>]
+
+Check or update an email address.
+
+The first form just tells you the person's email address.  It works only if you are that person or are on the community group (see `help cg'[1]), or if the person has made eir address public (with `@miscoption +public_email').  It may also tell you about others registered to the same address.
+
+The second form will change the database entry, assign a new password, and mail the new password to the given email address.
+
+Most people can only register themselves, and can't provide commentary (additional text that's stored with the email address).  Community group members can register others and add comments.
+
+This is different from the @request/@register command for guests.
+
+-----
+$LOCAL:@REG
+===========
+
+@register <object> on $local
+
+Add a property to $local with the name as you specify on the command line and the value the matching object.  The name should be a legal MOO identifier so that no quoting is necessary when refering to it from verbs.  You may have to give the object an additional suitable alias before registering it.
+
+-----
+`HELP $_' NOT FOUND
+===================
+
+Sorry, but no help is available on `$_'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+`HELP CURRENT' AMBIGUOUS
+========================
+
+Sorry, the topic `current' is ambiguous.  I don't know which of the following topics you mean:
+
+`help current-object'[1]                        `help @current-object'[2]
+`help @currentobject'[3]                        
+
+-----
+CURRENT-OBJECT
+==============
+
+Your `current object' is an object that you can refer to in most commands without using its name, just by using the symbol "_".  It's intended primarily for programming.
+
+For example, you can type
+
+   @co $jtext.link
+   @d _:
+
+and get a list of verbs defined on the link dispatcher tag.
+
+In addition, if your .eval_env property (see `help eval'[1]) sets _ to player.current_object, you can use it in evaluations.  The default .eval_env includes this binding.  So, to continue the example:
+
+   >;_:dname()
+   => "the link dispatcher tag"
+
+A stack is kept of the current objects you've been using, so you can change your current object for a while and then switch back to the previous one without needing to identify it again.
+
+To find out how to set or view your current object, read the following help topics:
+
+@currentobject[2]
+      Set current object, or find out what it is.
+@pushobject[3]
+      Push a current object onto the stack.
+@popobject[4]
+      Return to the previous current object.
+@swapobject[5]
+      Switch between current and previous object.
+
+-----
+@CREATE
+=======
+
+Syntax:  @create <parent-object> named "<names>"
+
+The main command for creating objects other than rooms and exits (for them, see `help @dig'[1]; it's much more convenient).
+
+The first argument specifies the 'parent' of the new object: loosely speaking, the 'kind' of object you're creating.  You can use a `class name' such as $note, $letter, $thing, or $container; you can also specify a parent object by object number or just by name, if it's nearby.
+
+The <names> are given in the same format as in the @rename command:
+
+        <name-and-alias>,<alias>,...,<alias> [preferred]
+        <name>:<alias>,...,<alias>           [not preferred]
+
+See `help @rename' for a discussion of the difference between a name and an alias.
+See `help naming' for a discussion of names and articles.
+
+-----
+@CO
+===
+
+Usage:  @current-object
+        @current-object <ref>[..]
+        @current-object <base>[<ref>[..]]
+
+The @current-object (@co) command is used to set your current object--an object referred to as _ in commands.  For more information on how to use the current object, see `help current-object'[1].
+
+With no arguments, the command just tells you what your current object is.
+
+If an argument is given, it indicates the object to go to, beginning with an optional `base object' and continuing with a series of references.  (If a base is given, no references need follow.)  The base object, if present, is matched as an ordinary object.  For example, "@co $jtext" would set your current object to the Jtext Dispatcher.
+
+The <ref> segments are mostly properties.  For example, "@co $jtext.link" would set your object to the Link Dispatcher Tag.
+
+If no base is identified, the current object you're already using is used as the base.  For example, after typing the previous command, you could type "@co .preceding" to change your current object to $jtext.link.root, the generic preceding link tag.
+
+In addition to property references, there are two special kinds of <ref> segments for navigation through the object hierarchy.  One of them is ".<", and it works by retracing the steps by which your current object was determined.  For example, again following the preceding commands, "@co .<" would take you back to the Link Dispatcher Tag.
+
+Finally, the ".^" <ref> segment gets you the parent of the current object.  Continuing the example, "@co .^" would bring you to the root class, the parent of the link dispatcher tag.
+
+As indicated, any number of references can be combined; for example, "@co $jtext.link.preceding.<.<.<.string_utils.^" would be an exceedingly complicated way to get your current object to be the generic utilities.
+
+Your current object is the System Object (#0).
+Your current object is now $local, the Local Namespace (#193).
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+.legal_name_regexp       unknown hack (#35)    r      "^[a-z_][a-z0-9_]*$"
+.free_addition           unknown hack (#35)    r      0
+-------------------------------- finished ---------------------------------
+You must give the name of some object.
+  ** property not found, "^" **
+-------------------------------- finished ---------------------------------
+Your current object is now $local.^, a generic property farm (#206).
+Your current object is now $local.^.^, the root class (#1).
+Your current object is now $local.^, a generic property farm (#206).
+Your current object is now $local, the Local Namespace (#193).
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+.legal_name_regexp       unknown hack (#35)    r      "^[a-z_][a-z0-9_]*$"
+.free_addition           unknown hack (#35)    r      0
+-------------------------------- finished ---------------------------------
+-----
+_
+=
+
+Your `current object' is an object that you can refer to in most commands without using its name, just by using the symbol "_".  It's intended primarily for programming.
+
+For example, you can type
+
+   @co $jtext.link
+   @d _:
+
+and get a list of verbs defined on the link dispatcher tag.
+
+In addition, if your .eval_env property (see `help eval'[1]) sets _ to player.current_object, you can use it in evaluations.  The default .eval_env includes this binding.  So, to continue the example:
+
+   >;_:dname()
+   => "the link dispatcher tag"
+
+A stack is kept of the current objects you've been using, so you can change your current object for a while and then switch back to the previous one without needing to identify it again.
+
+To find out how to set or view your current object, read the following help topics:
+
+@currentobject[2]
+      Set current object, or find out what it is.
+@pushobject[3]
+      Push a current object onto the stack.
+@popobject[4]
+      Return to the previous current object.
+@swapobject[5]
+      Switch between current and previous object.
+
+-----
+HELP ON THE LOCAL NAMESPACE
+===========================
+
+A namespace for local (non-core) objects and values.
+
+See `help $local:@register'[1] and `help $local:@unregister'[2].
+
+The local namespace contains:
+$local.free_addition = 0
+$local.legal_name_regexp = "^[a-z_][a-z0-9_]*$"
+
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+  #193:"@reg*ister @@reg*ister" unknown hacker (#35) rxd    any on top of/on/onto/upon this
+  #193:"@unreg*ister @@unreg*ister" unknown hacker (#35) rxd any on top of/on/onto/upon this
+  #193:add_property             Core-Wizard (#184)   rxd    this none this
+  #193:delete_property          Core-Wizard (#184)   rxd    this none this
+  #193:description              unknown hacker (#35) rxd    this none this
+  #193:init_for_core            unknown hacker (#35) rx     this none this
+  #193:non_core_properties      unknown hacker (#35) rxd    this none this
+  #193:help_text                Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+-----
+$LOCAL:@REGISTER
+================
+
+@register <object> on $local
+
+Add a property to $local with the name as you specify on the command line and the value the matching object.  The name should be a legal MOO identifier so that no quoting is necessary when refering to it from verbs.  You may have to give the object an additional suitable alias before registering it.
+
+Your current object is now $local.^, a generic property farm (#206).
+generic property farm (#206) [ readable fertile ]
+  Owned by Core-Wizard (#184).
+  Child of root class (#1).
+.non_core_props          Core-Wizard (#184)    r      {}
+-------------------------------- finished ---------------------------------
+generic property farm (#206) [ readable fertile ]
+  Owned by Core-Wizard (#184).
+  Child of root class (#1).
+  #206:nominate_for_core        Core-Wizard (#184)   rxd    this none this
+  #206:core_objects             Core-Wizard (#184)   rx     this none this
+  #206:module_finish_unpack     Core-Wizard (#184)   rxd    this none this
+  #206:init_for_core            Core-Wizard (#184)   rxd    this none this
+  #206:named_objects            Core-Wizard (#184)   rxd    this none this
+  #206:all_named_objects        Core-Wizard (#184)   rxd    this none this
+  #206:non_core_properties      Core-Wizard (#184)   rxd    this none this
+-------------------------------- finished ---------------------------------
+Last modified Sun Aug  5 15:51:30 2001 PDT by Xythian (#199) (on Waterpoint).
+#206:"named_objects" this none this
+ 1:  {?prefix = ""} = args;
+ 2:  result = {};
+ 3:  for item in (properties(this))
+ 4:    if (typeof(this.(item)) == OBJ)
+ 5:      result = {@result, {prefix + item, this.(item)}};
+ 6:    endif
+ 7:  endfor
+ 8:  return result;
+=> {}
+Your current object is now $local, the Local Namespace (#193).
+=> {}
+-----
+@CREATE
+=======
+
+Syntax:  @create <parent-object> named "<names>"
+
+The main command for creating objects other than rooms and exits (for them, see `help @dig'[1]; it's much more convenient).
+
+The first argument specifies the 'parent' of the new object: loosely speaking, the 'kind' of object you're creating.  You can use a `class name' such as $note, $letter, $thing, or $container; you can also specify a parent object by object number or just by name, if it's nearby.
+
+The <names> are given in the same format as in the @rename command:
+
+        <name-and-alias>,<alias>,...,<alias> [preferred]
+        <name>:<alias>,...,<alias>           [not preferred]
+
+See `help @rename' for a discussion of the difference between a name and an alias.
+See `help naming' for a discussion of names and articles.
+
+-----
+$LOCAL:@REG
+===========
+
+@register <object> on $local
+
+Add a property to $local with the name as you specify on the command line and the value the matching object.  The name should be a legal MOO identifier so that no quoting is necessary when refering to it from verbs.  You may have to give the object an additional suitable alias before registering it.
+
+Last modified Sat Feb  2 20:11:12 2002 PST by Xeric (#999) (on Waterpoint).
+#193:"@reg*ister @@reg*ister" any (on top of/on/onto/upon) this
+ 1:  "@register <object> on $local";
+ 2:  "";
+ 3:  "Add a property to $local with the name as you specify on the command line and the value the matching object.  The name should be a legal MOO identifier so that no quoting is necessary when refering to it from verbs.  You may have to give the object an additional suitable alias before registering it.";
+ 4:  cp = valid(cp = caller_perms()) ? cp | player;
+ 5:  if (!this.free_addition && !$perm_utils:controls(cp, this))
+ 6:    player:tell("Sorry, only wizards may register objects on $local.");
+ 7:  elseif (!cp.programmer)
+ 8:    player:tell("Sorry, only programmers may register objects on $local.");
+ 9:  elseif (!valid(dobj) && $command_utils:object_match_failed(dobj = player:my_match_object(dobjstr), dobjstr))
+10:  elseif (!$perm_utils:controls(cp, dobj))
+11:    player:tell("You can only register your own objects on $local.  Please contact ", dobj.owner:dname(), " about registering ", dobj:name("d#"), ".");
+12:  elseif (!match(dobjstr, this.legal_name_regexp))
+13:    player:tell("Please use a legal MOO identifier to register the object; you don't want people to have to use something like `$pronoun_sub.(\"two-letter\")' in their code, do you?");
+14:  elseif (`old = this.(dobjstr) ! E_PROPNF' != E_PROPNF)
+15:    player:tell(old:name("dc#"), " is already registered as $local.", dobjstr, ".");
+16:  else
+17:    for p in (properties(this))
+18:      if (this.(p) == dobj)
+19:        player:tell("Warning: ", dobj:name("d#"), " is already registered as $local.", p, ".");
+20:      endif
+21:    endfor
+22:    this:add_property(dobjstr, dobj, cp);
+23:    player:tell("Registered ", dobj:name("d#"), " as $local.", dobjstr, ".");
+24:  endif
+.local                   unknown hacker (#35)  r c    #193
+-------------------------------- finished ---------------------------------
+Local Namespace (#193) [ readable ]
+  Owned by unknown hacker (#35).
+  Child of generic property farm (#206).
+-------------------------------- finished ---------------------------------
+-----
+$LOCAL:@REG
+===========
+
+@register <object> on $local
+
+Add a property to $local with the name as you specify on the command line and the value the matching object.  The name should be a legal MOO identifier so that no quoting is necessary when refering to it from verbs.  You may have to give the object an additional suitable alias before registering it.
+
+-----
+`HELP @DELETE' AMBIGUOUS
+========================
+
+Sorry, the topic `@delete' is ambiguous.  I don't know which of the following topics you mean:
+
+`help delete'[1]        `help delete_property()'[2]
+`help delete_verb()'[3]                         
+
+-----
+`HELP @DESTROY' NOT FOUND
+=========================
+
+Sorry, but no help is available on `@destroy'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+`HELP DESTROY' NOT FOUND
+========================
+
+Sorry, but no help is available on `destroy'.  If you can't find what you're looking for, you may want to send mail (see `help mail'[1]) to *Bug-reports.
+
+-----
+@RECYCLE
+========
+
+Syntax:  @recycle <object-name-or-number>
+
+Destroys the indicated object utterly and irretrievably.  Naturally, you may only do this to objects that you own.
+
+
+Of course, wizards are allowed to @recycle anything at all.
+
+There is, however, a block (in $player:recycle) against recycling actual players, i.e., descendants of $player that have the player flag set.  This is mainly to prevent stupid mistakes.  If, for some reason, you want to recycle a player, you need to @toad it first.
+

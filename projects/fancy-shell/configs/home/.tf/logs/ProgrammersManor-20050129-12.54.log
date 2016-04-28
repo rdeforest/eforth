@@ -1,0 +1,661 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Elbow Room
+The Elbow Room. You will no longer have to fight for it. But you do have to elbow your way in.  A Lux's nifty egg chair is here.  A Woven Morris Mat is here.
+A sign here says, `Topic: Friday'
+You see a crankcase here.
+stormagnet, Devlyn_Syde, and Devil are here, asleep.
+Last connected Tue Aug  5 23:05:01 2003 PDT from wrack.thatsnice.org
+#$#mcp-negotiate-can 57821474 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 57821474 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 57821474 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 57821474
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Elbow Room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#238    Touchy Feely Socials Feature Object
+#83     login watcher mark 2
+#1039   Working Hard Feature
+------- ----
+-----
+HELP ON THE LOGIN WATCHER MARK 2
+================================
+
+This feature can notify you when people connect and disconnect.   Try typing `@add-feature login' and `@login' to get started.
+
+@login-o*ptions @Logino*ptions
+==============================
+
+@login-option <option> [is] <value>   sets <option> to <value>
+@login-option <option>=<value>        sets <option> to <value>
+@login-option +<option>     sets <option>   (usually equiv. to <option>=1
+@login-option -<option>     resets <option> (equiv. to <option>=0)
+@login-option !<option>     resets <option> (equiv. to <option>=0)
+@login-option <option>      displays value of <option>
+
+@login-options for a listing of available options.
+
+@inter*esting
+=============
+
+Usage: @inter*esting [player] ...
+Declares players interesting to you.
+Displays current list of interesting players if called with no arguments.
+An empty interesting list means you see all logins/logouts.
+
+@uninter*esting
+===============
+
+Usage: @unint*eresting player [player ...]
+Declares players to be uninteresting to you.  (I.e. removes them from your .interesting list.)
+
+@login
+======
+
+Usage: @login [on|off|all|interesting]
+Without arguments, tells you your current login-watcher settings.
+@login on and @login off do the obvious.  If `all' is specified, sets the login watcher to show all login announcements, even those for people not in your interesting list.  If `interesting' is specified, sets the login watcher to show only login announcements for people in your interesting list.
+
+You are currently listening to login watcher announcements for everyone.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Elbow Room                    0 seconds                         
+
+Total: 1 person, who has been active recently.
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+[with the ice pick]
+Crag stabs Crag with an ice pick.  Neat!
+Crag dies from a wound inflicted by Crag with the ice pick.
+The Heavens
+Well, this is the afterlife.  It's not very interesting.  If only you could live again.  A Happy Angel Food Cake Factory is here.
+GhostOfTheManor is here, asleep.
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  Some easy chairs are here.
+Match failed, showing your score.
+Current score for Crag
+type                           value  donors
+----                           -----  ------
+binder cackles                 1      Crag
+melodrama                      1      Binder
+word square guru!              2      stormagnet
+                               1      Sherman
+brain smelling                 1      Sherman
+buzzwords                      1      Binder
+blame                          1      Devil
+strippers                      1      Devil
+confusing                      -1     Binder
+stabbed                        206    Crag, PG, Devil, Cerebus, Binder, Mo...
+distractination                1      Binder
+orpheus                        1      Binder
+cultured                       -1     Crag
+PGsammich                      1      Binder
+'inappropriate invocation ...  -1     Binder
+goats                          1      Binder
+vocapillary action             1      Binder
+oh, I get it                   1      Vylar
+codemonkey                     1      Devil
+random death                   1      Binder
+Crag likes xp                  1      Vylar
+well played                    1      Binder
+misspelling                    -1     Binder
+gold star giver                1      Binder
+The Princess Crag              1      Vylar
+encouragment                   1      Devil
+plush                          1      Binder
+lean                           -1     Binder
+meatspace funny                1      Binder
+not binder's xp                1      Vylar
+thatsnice                      1      PG
+craggy features                1      Vylar
+robot                          1      Devil
+test                           1      Crag
+s & m                          1      Vylar
+successful turkey              1      Vylar
+dodgy                          27     Crag and Vylar
+dodged stab                    20     Crag, Morris, and Binder
+bagel hoarding                 1      stormagnet
+bagel herding                  1      Vylar
+the simplest person which ...  1      Binder
+brutalized by work             1      Binder
+cow                            2      Vylar and Devil
+quicky                         1      Devil
+gamer geek                     1      Binder
+denial                         1      Crag
+undocumented non-intuitive...  1      Devlyn_Syde
+again with my lines            1      Binder
+my lines                       1      Binder
+stole my line                  1      PG
+good one, ted                  1      Binder
+not lazy                       1      Binder
+programmer                     1      Binder
+creme brulee                   1      Vylar
+tethercrag                     1      Vylar
+porntropic                     1      Binder
+zen cream                      1      Binder
+speedy                         1      Devil
+weak wordsquare                -1     Binder
+So tired, Les Schwab keeps...  1      Binder
+xarg                           1      Binder
+----                           -----  ------
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+
+Total: 1 person, who has been active recently.
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+Minty          Entrance Hall                 Tue Jul 15 10:22:48 2003 PDT
+
+Total: 1 person, who has not been active recently.
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+Minty          Entrance Hall                 Tue Jul 15 10:22:48 2003 PDT
+
+Total: 1 person, who has not been active recently.
+=> #951 (Minty)
+Crag (#958) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Entrance Hall (#70).
+-------------------------------- finished ---------------------------------
+Parent changed.
+=> 1
+[used 2 ticks, 0 seconds.]
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+
+Total: 1 person, who has been active recently.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+
+Total: 1 person, who has been active recently.
+< stormagnet has connected.  Total: 2 >
+(to stormagnet) Crag waves
+The verb :@paste is nowhere to be found.
+Usage:  @add-feature <object>
+Available features not already in your feature list include:
+Builders Tools                          documentation feature
+Community Group Commands                
+stormagnet arrives from the Ballroom.
+That is not a valid command.
+Feature Name
+------- ----
+#67     Stage-Talk Feature
+#68     Thinking Feature
+#238    Touchy Feely Socials Feature Object
+#83     login watcher mark 2
+#1039   Working Hard Feature
+------- ----
+-----
+HELP ON THE WORKING HARD FEATURE
+================================
+
+The Generic Feature Object--not to be used as a feature object.
+
+No help found on using.
+
+Working Hard Feature (#1039) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location Crag (#958).
+ #1039:code                     Crag (#958)          rxd    none none none
+ #1039:request-code             Crag (#958)          rxd    none out of/from inside/from any
+ #1039:combinations             Crag (#958)          rxd    this none this
+ #1039:description              Crag (#958)          rxd    this none this
+-------------------------------- finished ---------------------------------
+Crag (#958) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Entrance Hall (#70).
+-------------------------------- finished ---------------------------------
+That is not a valid command.
+generic player (#6) [ readable fertile ]
+  Owned by Core-Wizard (#184).
+  Child of generic containing object (#145).
+    #6:init_for_core            Core-Wizard (#184)   rxd    this none this
+    #6:confunc                  Core-Wizard (#184)   rxd    this none this
+    #6:disfunc                  Core-Wizard (#184)   rxd    this none this
+    #6:initialize               Core-Wizard (#184)   rxd    this none this
+    #6:recycle                  Core-Wizard (#184)   rxd    this none this
+    #6:my_huh                   Core-Wizard (#184)   rxd    this none this
+    #6:last_huh                 Core-Wizard (#184)   rxd    this none this
+    #6:my_match_object          Core-Wizard (#184)   rxd    this none this
+    #6:tell_contents            Core-Wizard (#184)   rxd    this none this
+    #6:notify                   Core-Wizard (#184)   rxd    this none this
+    #6:notify_lines             Core-Wizard (#184)   rxd    this none this
+    #6:linesplit                Core-Wizard (#184)   rxd    this none this
+    #6:linelen                  unknown hacker (#35) rxd    this none this
+    #6:@more                    Core-Wizard (#184)   r d    any none none
+    #6:@wrap                    unknown hacker (#35) r d    none any none
+    #6:@linelen*gth             unknown hacker (#35) r d    any none none
+    #6:@pagelen*gth             Core-Wizard (#184)   r d    any none none
+    #6:tell                     Core-Wizard (#184)   rxd    this none this
+    #6:gag_p                    Core-Wizard (#184)   rxd    this none this
+    #6:"set_gaglist set_gaglist_noisy" Core-Wizard (#184) rxd this none this
+    #6:@gag                     Core-Wizard (#184)   r d    any any any
+    #6:"@listgag @gaglist @gagged" Core-Wizard (#184) rxd   none none none
+    #6:@ungag                   Core-Wizard (#184)   rxd    any none none
+    #6:whodunnit                Core-Wizard (#184)   rxd    this none this
+    #6:@paranoid                Core-Wizard (#184)   r d    any any any
+    #6:@sw*eep                  Core-Wizard (#184)   r d    none none none
+    #6:wh*isper                 Core-Wizard (#184)   rxd    any at/to this
+    #6:receive_page             Core-Wizard (#184)   rxd    this none this
+    #6:"page_origin_msg page_echo_msg page_absent_msg" unknown hacker (#35) rxd this none this
+    #6:"i inv*entory"           Core-Wizard (#184)   r d    none none none
+    #6:look_self                Core-Wizard (#184)   rxd    this none this
+    #6:home                     Core-Wizard (#184)   r d    none none none
+    #6:@sethome                 Core-Wizard (#184)   r d    none none none
+    #6:"g*et take"              Core-Wizard (#184)   rxd    this none none
+    #6:@eject                   Core-Wizard (#184)   r d    any out of/from inside/from any
+    #6:"where*is @where*is"     Core-Wizard (#184)   rxd    any any any
+    #6:@wizards                 Core-Wizard (#184)   rxd    any none none
+    #6:"mail_forward mail_notify" Core-Wizard (#184) rxd    this none this
+    #6:receive_message          Core-Wizard (#184)   rxd    this none this
+    #6:display_message          Core-Wizard (#184)   rxd    this none this
+    #6:"parse_message_seq from_msg_seq %from_msg_seq to_msg_seq %to_msg_seq subject_msg_seq body_msg_seq display_seq_headers display_seq_full messages_in_seq list_rmm new_message_num length_num_le length_date_le length_date_gt length_all_msgs exists_num_eq rm_message_seq undo_rmm expunge_rmm renumber" Core-Wizard (#184) rxd this none this
+    #6:msg_summary_line         unknown hacker (#35) rxd    this none this
+    #6:msg_text                 Core-Wizard (#184)   rxd    this none this
+    #6:notify_mail              Core-Wizard (#184)   rxd    this none this
+    #6:current_message          Core-Wizard (#184)   rxd    this none this
+    #6:get_current_message      Core-Wizard (#184)   rxd    this none this
+    #6:set_current_message      Core-Wizard (#184)   rxd    this none this
+    #6:make_current_message     Core-Wizard (#184)   rxd    this none this
+    #6:kill_current_message     Core-Wizard (#184)   rxd    this none this
+    #6:current_folder           Core-Wizard (#184)   rxd    this none this
+    #6:set_current_folder       Core-Wizard (#184)   rxd    this none this
+    #6:parse_folder_spec        Core-Wizard (#184)   rxd    this none this
+    #6:parse_mailread_cmd       Core-Wizard (#184)   rxd    this none this
+    #6:@mail                    Core-Wizard (#184)   rxd    any any any
+    #6:"@read @peek"            Core-Wizard (#184)   rxd    any any any
+    #6:"@next @prev"            Core-Wizard (#184)   r d    any any any
+    #6:@rmm*ail                 Core-Wizard (#184)   r d    any any any
+    #6:@renumber                Core-Wizard (#184)   r d    any none none
+    #6:@unrmm*ail               Core-Wizard (#184)   r d    any any any
+    #6:@send                    Core-Wizard (#184)   rxd    any any any
+    #6:"@answer @repl*y"        Core-Wizard (#184)   r d    any any any
+    #6:@forward                 Core-Wizard (#184)   rxd    any any any
+    #6:@gripe                   Core-Wizard (#184)   r d    any any any
+    #6:"@typo @bug @suggest*ion @idea @comment" Core-Wizard (#184) r d any any any
+    #6:"@skip @unsub*scribe"    Core-Wizard (#184)   r d    any any any
+    #6:@subscribe               Core-Wizard (#184)   r d    any any any
+    #6:mail_catch_up            Core-Wizard (#184)   rxd    this none this
+    #6:"@rn check_mail_lists @subscribed" Core-Wizard (#184) rx none none none
+    #6:mail_option              Core-Wizard (#184)   rxd    this none this
+    #6:edit_option              Core-Wizard (#184)   rxd    this none this
+    #6:"set_mail_option set_edit_option set_misc_option set_client_option set_who_option set_parse_option" Core-Wizard (#184) rxd this none this
+    #6:"@mailo*ptions @mail-o*ptions @edito*ptions @edit-o*ptions @misco*ptions @misc-o*ptions @cliento*ptions @client-o*ptions @whoo*ptions @who-o*ptions @parseo*ptions @parse-o*ptions" Core-Wizard (#184) r d any any any
+    #6:set_name                 Core-Wizard (#184)   rxd    this none this
+    #6:set_aliases              Core-Wizard (#184)   rxd    this none this
+    #6:@rename*#                Core-Wizard (#184)   r d    any at/to any
+    #6:"@add-alias*# @addalias*# @add_alias*#" Core-Wizard (#184) r d any at/to any
+    #6:"@rmalias*# @rm-alias*#" Core-Wizard (#184)   r d    any out of/from inside/from any
+    #6:@desc*ribe               Core-Wizard (#184)   r d    any as any
+    #6:@mess*ages               Core-Wizard (#184)   r d    any none none
+    #6:@notedit                 unknown hacker (#35) r d    any none none
+    #6:@password                Core-Wizard (#184)   r d    any any any
+    #6:@last-c*onnection        Core-Wizard (#184)   rxd    any none none
+    #6:"set_gender set_gender_name set_gender_obj" Core-Wizard (#184) rxd this none this
+    #6:@gender                  Core-Wizard (#184)   r d    any none none
+    #6:@ex*amine                Core-Wizard (#184)   rxd    any none none
+    #6:ex*amine                 Core-Wizard (#184)   r d    any none none
+    #6:add_feature              unknown hacker (#35) rx     this none this
+    #6:remove_feature           unknown hacker (#35) rxd    this none this
+    #6:"@add-feature @addfeature" Core-Wizard (#184) r d    any none none
+    #6:"@remove-feature @rmfeature @rm-feature" Core-Wizard (#184) r d any none none
+    #6:@features                Core-Wizard (#184)   rxd    any for/about any
+    #6:@features                Core-Wizard (#184)   r d    any none none
+    #6:@memory                  unknown hacker (#35) r d    none none none
+    #6:@version                 unknown hacker (#35) r d    none none none
+    #6:@uptime                  unknown hacker (#35) r d    none none none
+    #6:@quit                    Core-Wizard (#184)   r d    none none none
+    #6:QUIT-IN-ALL-CAPS         Core-Wizard (#184)   r d    none none none
+    #6:notify(new)              Core-Wizard (#184)   r d    this none this
+    #6:examine_commands_ok      Core-Wizard (#184)   rxd    this none this
+    #6:is_listening             Core-Wizard (#184)   rxd    this none this
+    #6:"@quicksend @qsend"      Core-Wizard (#184)   r d    any any any
+    #6:!*                       unknown hacker (#35) r d    any any any
+    #6:'*                       unknown hacker (#35) r      any any any
+    #6:"@pronoun_sub @pronoun-sub" Core-Wizard (#184) r d   none with/using any
+    #6:"@set-note-string @set-note-text @set-note-value" Core-Wizard (#184) r d any none none
+    #6:description              unknown hacker (#35) rxd    this none this
+    #6:@nn                      Core-Wizard (#184)   r d    none none none
+    #6:mu*rmur                  Core-Wizard (#184)   r d    any any any
+    #6:look_in                  Core-Wizard (#184)   rxd    this none this
+    #6:@option*s                Core-Wizard (#184)   r d    any any any
+    #6:options_packages         Core-Wizard (#184)   rxd    this none this
+    #6:options_command          Core-Wizard (#184)   rxd    this none this
+    #6:contribute_partial       Core-Wizard (#184)   rxd    this none this
+    #6:contribute_reset         Core-Wizard (#184)   rxd    this none this
+    #6:contribute_link          Core-Wizard (#184)   rxd    this none this
+    #6:receive_vbox             unknown hacker (#35) rxd    this none this
+    #6:contribute_title         Core-Wizard (#184)   rxd    this none this
+    #6:moveto                   Core-Wizard (#184)   rxd    this none this
+    #6:ok_to_integrate          unknown hacker (#35) rxd    this none this
+    #6:visible_of               unknown hacker (#35) rxd    this none this
+    #6:@set-jtext-form          Core-Wizard (#184)   r d    any none none
+    #6:idle_suffix              Core-Wizard (#184)   rxd    this none this
+    #6:modname_v                Core-Wizard (#184)   rxd    this none this
+    #6:@edit*#                  Core-Wizard (#184)   r d    any any any
+    #6:set_focus_object         Core-Wizard (#184)   rxd    this none this
+    #6:email_address            Core-Wizard (#184)   rxd    this none this
+    #6:"misc_option client_option who_option parse_option" Core-Wizard (#184) rxd this none this
+    #6:"@forward-me @forwardme" Core-Wizard (#184)   r d    any any any
+    #6:ownership_quota          Core-Wizard (#184)   rxd    this none this
+    #6:contribute_newline       Core-Wizard (#184)   rxd    this none this
+    #6:"set_current_object set_current_object_stack set_authentication_key" Core-Wizard (#184) rxd this none this
+    #6:client_notify            Core-Wizard (#184)   rxd    this none this
+    #6:brief                    Core-Wizard (#184)   rxd    this none this
+    #6:picknew                  unknown hacker (#35) r d    any none none
+    #6:"walk go"                unknown hacker (#35) rxd    none at/to any
+    #6:_find_path               Core-Wizard (#184)   rxd    this none this
+    #6:join                     Core-Wizard (#184)   rxd    any none none
+    #6:pick                     unknown hacker (#35) rxd    any on top of/on/onto/upon this
+    #6:pop                      unknown hacker (#35) rxd    none on top of/on/onto/upon this
+    #6:match_command            unknown hacker (#35) rxd    this none this
+    #6:my_match_room            Core-Wizard (#184)   rxd    this none this
+    #6:features                 Core-Wizard (#184)   rxd    this none this
+    #6:receive_document         Core-Wizard (#184)   rxd    this none this
+    #6:"@co @currentobject @current-object" Core-Wizard (#184) r d any none none
+    #6:parse_current_object     unknown hacker (#35) rxd    this none this
+    #6:@pusho*bject             Core-Wizard (#184)   r d    any none none
+    #6:@popo*object             Core-Wizard (#184)   r d    none none none
+    #6:@swapo*bject             Core-Wizard (#184)   r d    none none none
+    #6:jdetails                 Core-Wizard (#184)   r d    any none none
+    #6:@@sendmail               Core-Wizard (#184)   r d    any any any
+    #6:fol*low                  unknown hacker (#35) r d    this none none
+    #6:unfol*low                unknown hacker (#35) r d    any any any
+    #6:followers                unknown hacker (#35) r d    any any any
+    #6:following                unknown hacker (#35) r d    none none none
+    #6:my_match_player          Core-Wizard (#184)   rxd    this none this
+    #6:news                     Core-Wizard (#184)   r d    any none none
+    #6:"@helpme @911"           Core-Wizard (#184)   r d    any any any
+    #6:"@admin*istrators @admins" Core-Wizard (#184) rxd    any none none
+    #6:"parse_message unparse_message" Core-Wizard (#184) rxd this none this
+    #6:@url                     Core-Wizard (#184)   r d    any any any
+    #6:@read-all-new*-mail      Core-Wizard (#184)   rxd    any none none
+    #6:send_self_netmail        Core-Wizard (#184)   rxd    this none this
+    #6:@add-help-db             Core-Wizard (#184)   r d    any none none
+    #6:@rm-help-db              Core-Wizard (#184)   r d    any none none
+    #6:@unsubscribed            Core-Wizard (#184)   r d    none none none
+    #6:reconfunc                Core-Wizard (#184)   rxd    this none this
+    #6:@resend                  Core-Wizard (#184)   r d    any any any
+    #6:"help ?*"                Core-Wizard (#184)   rxd    any any any
+    #6:match_help_object        unknown hacker (#35) rxd    this none this
+    #6:@aliases                 Core-Wizard (#184)   r d    any none none
+    #6:contribute_newline_maybe Core-Wizard (#184)   rxd    this none this
+    #6:contribute_hr            Core-Wizard (#184)   rxd    this none this
+    #6:set_last_player_paged    Core-Wizard (#184)   rxd    this none this
+    #6:visible                  unknown hacker (#35) rxd    this none this
+    #6:set_number               unknown hacker (#35) rxd    this none this
+    #6:you                      unknown hacker (#35) rxd    this none this
+    #6:page                     Core-Wizard (#184)   rxd    any any any
+    #6:is_idle                  Core-Wizard (#184)   rxd    none none none
+    #6:start_dozing             Core-Wizard (#184)   rxd    this none this
+    #6:start_idling             Core-Wizard (#184)   rxd    this none this
+    #6:"idle reidle"            Core-Wizard (#184)   rxd    any any any
+    #6:idle_msg                 Core-Wizard (#184)   rxd    this none this
+    #6:dozing_msg               Core-Wizard (#184)   rxd    this none this
+    #6:start_doing              unknown hacker (#35) rxd    this none this
+    #6:doing_msg                Core-Wizard (#184)   rxd    this none this
+    #6:"doing undoing"          Core-Wizard (#184)   r d    any any any
+    #6:@who                     Core-Wizard (#184)   rxd    any any any
+    #6:debug_if_player          Core-Wizard (#184)   rxd    this none this
+    #6:match_type_object        Core-Wizard (#184)   rxd    this none this
+    #6:dependents_event_really_disconnected Core-Wizard (#184) rxd this none this
+    #6:event_really_disconnected Core-Wizard (#184)  rxd    this none this
+    #6:maybe_really_disconnected Core-Wizard (#184)  rxd    this none this
+    #6:modname_c                unknown hacker (#35) rxd    this none this
+    #6:@desc*ribe               Core-Wizard (#184)   r d    any none none
+    #6:@netforw*ard             Core-Wizard (#184)   r d    any any any
+    #6:@register                Core-Wizard (#184)   r d    any as any
+    #6:"@register @email-address" Core-Wizard (#184) r      any none none
+    #6:more_string              Core-Wizard (#184)   rxd    this none this
+    #6:desc_idle_msg            Core-Wizard (#184)   rxd    this none this
+    #6:nominate_for_core        Core-Wizard (#184)   rxd    this none this
+    #6:sit                      Core-Wizard (#184)   r d    none with/using this
+    #6:acceptable               Core-Wizard (#184)   rxd    this none this
+    #6:@shout                   Core-Wizard (#184)   r d    any any any
+    #6:set_home                 unknown hacker (#35) rx     this none this
+    #6:anyconfunc               Core-Wizard (#184)   rxd    this none this
+    #6:@ch*eck-full             Core-Wizard (#184)   r d    any any any
+    #6:"@add-handler @addhandler" Core-Wizard (#184) r d    any none none
+    #6:handlers                 Core-Wizard (#184)   rxd    this none this
+    #6:"@remove-handler @rmhandler @rm-handler" Core-Wizard (#184) r d any none none
+    #6:@handlers                Core-Wizard (#184)   rx     any for/about any
+    #6:@handlers                Core-Wizard (#184)   r      any none none
+    #6:total_connect_times      Core-Wizard (#184)   rxd    this none this
+    #6:_set_mail_task           Core-Wizard (#184)   rxd    this none this
+    #6:add_handler              unknown hacker (#35) rxd    this none this
+    #6:remove_handler           unknown hacker (#35) rxd    this none this
+    #6:"set_walking_dest set_walking_task" unknown hacker (#35) rx this none this
+    #6:move_by_exits            unknown hacker (#35) rxd    this none this
+    #6:walking_step             unknown hacker (#35) rxd    this none this
+    #6:begin_walking            unknown hacker (#35) rxd    this none this
+    #6:end_walking              unknown hacker (#35) rxd    this none this
+    #6:"walkto walkto_blocking" unknown hacker (#35) rxd    this none this
+    #6:find_path                unknown hacker (#35) rxd    this none this
+    #6:stop                     unknown hacker (#35) r d    none none none
+    #6:timestamp_string         Core-Wizard (#184)   rxd    this none this
+    #6:@age                     Core-Wizard (#184)   r d    any none none
+    #6:+*                       Core-Wizard (#184)   rxd    any any any
+    #6:lose                     unknown hacker (#35) rxd    any any any
+    #6:display_current_object   Core-Wizard (#184)   rxd    this none this
+    #6:current_object_string    Core-Wizard (#184)   rxd    this none this
+    #6:edit_set_note_value      Core-Wizard (#184)   rxd    this none this
+    #6:edit_sendmail            Core-Wizard (#184)   rxd    this none this
+    #6:absent_for_page          unknown hacker (#35) rxd    this none this
+    #6:send_forwarded_moomail   Core-Wizard (#184)   rxd    this none this
+    #6:walking_delay            unknown hacker (#35) rxd    this none this
+    #6:walk_failed              Core-Wizard (#184)   rxd    this none this
+    #6:my_walk_failed           Core-Wizard (#184)   rxd    this none this
+    #6:dwim_objects             Core-Wizard (#184)   rxd    this none this
+    #6:@room*s                  unknown hacker (#35) rxd    any any any
+    #6:set_timezone             unknown hacker (#35) rxd    this none this
+    #6:ctime                    unknown hacker (#35) rxd    this none this
+    #6:time_sub                 unknown hacker (#35) rxd    this none this
+    #6:@lastlog                 unknown hacker (#35) rxd    any none none
+    #6:givexp                   Core-Wizard (#184)   r d    any at/to any
+    #6:revokexp                 Core-Wizard (#184)   r d    any out of/from inside/from any
+    #6:"addxp donatexp"         Core-Wizard (#184)   rxd    this none this
+    #6:score                    Core-Wizard (#184)   rxd    any any any
+    #6:"duck dodge"             Crag (#958)          r d    any any any
+    #6:getxp                    Crag (#958)          rxd    this none this
+-------------------------------- finished ---------------------------------
+Crag gives stormagnet an xp for 'huggable'.
+Current score for stormagnet
+type                       value  donors
+----                       -----  ------
+strippers                  1      Devil
+Classroom MOOing           1      Devil
+confuse-a-crag             1      Crag
+stabbed                    33     Binder, PG, Devil, Crag, Vylar, and ...
+inexperienced              1      Crag
+DIY                        1      PG
+domestic goddess           2      Vylar and Crag
+this                       1      Vylar
+that                       1      Vylar
+the other thing            1      Vylar
+understanding              1      Devil
+salt cellar foilgami       1      Binder
+phone company shenanigans  1      Binder
+dodgy                      2      stormagnet
+Houston Euler              1      Vylar
+sweet girl                 1      Devil
+a big girl                 1      PG
+little orphan              1      Binder
+diabetes fascist           1      Binder
+moosharkbait               1      Vylar
+huggable                   1      Crag
+----                       -----  ------
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Crag           Entrance Hall                 0 seconds                         
+stormagnet     Entrance Hall                 2 minutes                         
+
+Total: 2 people, both of whom have been active recently.
++create-set-co @create sets your current object to the one created.
+You now have Pasting Feature (aka paste) with object number #1150 and parent Generic Feature Object (#65).
+The created object is now your current object.
+=> {"|", "@paste", "@|"}
+[used 3 ticks, 0 seconds.]
+=> 1
+[used 2 ticks, 0 seconds.]
+=> {"|*", "@pasteto @paste @pasteto2", "@|"}
+[used 3 ticks, 0 seconds.]
+=> "The Pasting Feature is mostly useful to people with fancy clients (such as Emacs) or who connect using a windowing system that allows them to copy text they've already seen.  It's intended to give people a way to quote verbatim text at other people in the room."
+[used 2 ticks, 0 seconds.]
+Crag says, "_.("key") => E_PERM (Permission denied)"
+=> {"Pasting Feature", "paste"}
+[used 3 ticks, 0 seconds.]
+=> "Verbs useful to people using a windowing system to paste text at people."
+[used 2 ticks, 0 seconds.]
+=> 0
+[used 2 ticks, 0 seconds.]
+=> #-1 <$nothing>
+[used 2 ticks, 0 seconds.]
+=> {7779, 1002603771}
+[used 3 ticks, 0 seconds.]
+Crag says, "_.("review_history") => E_PERM (Permission denied)"
+Crag says, "Skipping #212:"@paste(old)"..."
+Verb added [1] (0).
+Now programming Pasting Feature:|*[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+"#999" is not the name of any player.
+That object does not have that verb definition.
+Now ignoring code for _:@pasteto.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Verb code ignored.
+Crag says, "Skipping #212:"@pasteto2(old)"..."
+"#269" is not the name of any player.
+That object does not have that verb definition.
+Now ignoring code for _:@|.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Verb code ignored.
+Crag says, "***finished***"
+Objects owned by Crag (from #0 to #1161):
+ 26K  #958 Crag                      *[Entrance Hall]
+  1M  #948 random stats              *[GhostOfTheManor]
+  3K  #908 die                        [Nowhere]
+ <1K  #968 d6                        *[Samurai]
+  1K  #967 Magic Eight Die           *[xantha]
+ <1K  #984 d100                       [Crag]
+ <1K  #995 ice pick                   [Crag]
+  1K  #998 Entity                     [Crag]
+  1K #1002 Relationship               [Crag]
+ <1K  #975 Transition                 [Crag]
+ <1K #1003 Comparison                 [Crag]
+ <1K #1004 Quality                    [Crag]
+  1K #1007 relationship utils         [Crag]
+ <1K #1026 box of Tide(tm) brand det *[Laundry]
+ <1K  #456 bandages                   [Crag]
+  5K #1039 Working Hard Feature       [Crag]
+ <1K  #772 Master Bedroom            <-*east, <-*north
+ <1K #1132 Legato NetWorker          *[crankcase]
+  7K #1150 Pasting Feature            [Crag]
+-- 19 objects.  Total bytes: 1,085,920.---------------------------------------
+Pasting Feature (#1150) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location Crag (#958).
+ #1150:|*                       Crag (#958)          rxd    any any any
+-------------------------------- finished ---------------------------------
+=> #984 (d100)
+Pasting Feature (#1150) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location Crag (#958).
+-------------------------------- finished ---------------------------------
+The Pasting Feature (#1150) has 1 verb.  Sure you want to recycle it? [Enter `yes' or `no']
+The Pasting Feature (#1150) recycled.
+Crag says, "attempting to port pasting feature..."
+No change.
+You now have Pasting Feature (aka paste) with object number #1020 and parent Generic Feature Object (#65).
+The created object is now your current object.
+=> {"|", "@paste", "@|"}
+[used 3 ticks, 0 seconds.]
+=> 1
+[used 2 ticks, 0 seconds.]
+=> {"|*", "@pasteto @paste @pasteto2", "@|"}
+[used 3 ticks, 0 seconds.]
+=> "The Pasting Feature is mostly useful to people with fancy clients (such as Emacs) or who connect using a windowing system that allows them to copy text they've already seen.  It's intended to give people a way to quote verbatim text at other people in the room."
+[used 2 ticks, 0 seconds.]
+=> {"Pasting Feature", "paste"}
+[used 3 ticks, 0 seconds.]
+=> "Verbs useful to people using a windowing system to paste text at people."
+[used 2 ticks, 0 seconds.]
+=> 0
+[used 2 ticks, 0 seconds.]
+=> #-1 <$nothing>
+[used 2 ticks, 0 seconds.]
+=> {7779, 1002603771}
+[used 3 ticks, 0 seconds.]
+Verb added [1] (0).
+Now programming Pasting Feature:|*[1](0).
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+0 errors.
+Verb programmed.
+"#999" is not the name of any player.
+That object does not have that verb definition.
+Now ignoring code for _:@pasteto.
+[Type lines of input; use `.' to end or `@abort' to abort the command.]
+Mintie has connected.
+Mintie says, "Hah!"
+Robert has connected.
+Robert says, "Trying to bring @paste here"
+Mintie says, "I need to be @toaded and @recycled so I can get back in using Minty"
+Mintie says, "Ahhh"
+Marcie has connected.
+Robert says, "I could just reset your password"
+Marcie says, "yo, hiii"
+Mintie says, "lol"
+Marcie says, "lol"
+Mintie says, "But I want to use Minty, not Mintie  lol"
+Marcie says, "hiiiiiiiiii Robert"
+Robert says, "That's what I mean"
+Marcie is Marcy.
+Marcie giggles.
+Mintie giggles.
+Mintie knew that.
+Robert says, "I could reset the Minty password and then you could toad and recycle Mintie yourself."
+Robert says, "oh ok"
+Robert [to Marcie]: `hi
+Mintie [to Robert]: Okies
+Robert [to Marcie]: Did you forget your password too?
+Marcie [to Robert]: no, it wouldn't let me in
+Marcie says, "unless the password changed somehow"
+Mintie says, "I used my name for a password.. easy to remember."
+Robert says, "Ah"
+Robert says, "Well whatever the case, I'm setting both your passwords to 'password'"
+Robert says, "Hold on :)"
+Marcie says, "k"
+Mintie says, "k"
+Marcie holds on.
+Mintie does too.
+Mintie also lags a lil.

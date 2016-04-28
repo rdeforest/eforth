@@ -1,0 +1,300 @@
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Wed Nov  3 19:05:16 2004 PST from wrack.thatsnice.org
+You have new mail (1 message).
+There is new activity on the following lists:
+    *Todo                       1 new message
+    *Player-Creation-Log        2 new messages
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+Message 3 on Robert:
+Date:     Mon Nov  8 12:41:58 2004 PST
+From:     Minty
+To:       Robert
+Subject:  Yo!
+
+I was here, but you weren't.. and colin was idle.
+Be back later, or another time.
+HUGS!
+--------------------------
+Message 5 on *Todo:
+Date:     Wed Nov  3 19:18:21 2004 PST
+From:     Robert
+To:       *Todo
+Subject:  @paste
+
+and @paste-to
+--------------------------
+Message 3 on *Player-Creation-Log:
+Date:     Wed Nov  3 22:29:04 2004 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  colin (#249)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+Message 4 on *Player-Creation-Log:
+Date:     Thu Nov  4 10:02:31 2004 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  AlsoColin (#251)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+No News (is news)
+-----
+MCP
+===
+
+Rewritten from `help mcp-spec'[1] June 7, 1994 by Jay Carlson.  Comments solicited; send mail to the `@proj usability client MCP' mailing list, moo-cows, or private email to j@io.com.
+
+The MOO Client Protocol is a standard for transmitting structured "requests" between MUD clients and servers.  The original specification is available as `help mcp-spec'[2], but the skeleton of a rewrite is here:
+
+mcp-goals[3]
+      History and goals of the MCP protocol
+mcp-syntax[4]
+      Syntactic description of MCP requests
+mcp-semantics[5]
+      Semantics of MCP requests
+mcp-requests[6]
+      Documented request types
+
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current client options:
+
+-edit          Your client can't do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
+-mcp-edit      Your client can't do MCP standard editing.
++edit          Your client can do local editing.
++mcp-edit      Your client can do MCP standard editing.
+Carrying:
+ the friendly stuff                      
+friendly stuff (#246) [ readable ]
+  Child of Generic Feature Object (#65).
+  Location Robert (#238).
+  #246:@social                  Robert (#238)        rxd    any any any
+-------------------------------- finished ---------------------------------
+Your current object is now frie, the friendly stuff (#246).
+The Verb Editor
+
+Do a 'look' to get the list of commands, or 'help' for assistance.
+
+Now editing #246:"@social" any any any.
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+-----
+MCP
+===
+
+Rewritten from `help mcp-spec'[1] June 7, 1994 by Jay Carlson.  Comments solicited; send mail to the `@proj usability client MCP' mailing list, moo-cows, or private email to j@io.com.
+
+The MOO Client Protocol is a standard for transmitting structured "requests" between MUD clients and servers.  The original specification is available as `help mcp-spec'[2], but the skeleton of a rewrite is here:
+
+mcp-goals[3]
+      History and goals of the MCP protocol
+mcp-syntax[4]
+      Syntactic description of MCP requests
+mcp-semantics[5]
+      Semantics of MCP requests
+mcp-requests[6]
+      Documented request types
+
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Mon Nov  8 12:49:26 2004 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+Current client options:
+
++edit          Your client can do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
++mcp-edit      Your client can do MCP standard editing.
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current misc options:
+
+-public-email  Your email address is known only to you and administrators
+-expert-user   You will receive normal prompting and usage information
+-brief         You will receive long descriptions upon entering a room.
+-page-dwim     The ' command won't do automagic whispering.
+-third-person  You will see `you' when other people see your name.
+-tstamp        Don't time stamp.
+ fstamp        Format string: [ $o:$M $p ]
+               looks like: [ 12:57 pm ]
+-public-connectYour total connection time is private.
+Current edit options:
+
+-quiet-insert       Report line numbers on insert or append.
+-eval-subs          Ignore .eval_subs when compiling verbs.
+-local              Use in-MOO text editors.
++local              Ship text to client for local editing.
+Your current object is frie, the friendly stuff (#246).
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Mon Nov  8 12:57:20 2004 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Mon Nov  8 12:58:10 2004 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 1748933618 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1748933618 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1748933618 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1748933618
+#$#dns-org-mud-moo-simpleedit-content 1748933618 reference: "#246:@social any any any" name: "MOO verb: #246:@social any any any" type: moo-code content*: "" _data-tag: 10931791930
+#$#: 10931791930
+That is not a valid command.
+0 errors.
+Verb programmed.
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Mon Nov  8 13:01:16 2004 PST from wrack.thatsnice.org
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+#$#mcp-negotiate-can 1407083939 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1407083939 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1407083939 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1407083939
+#$#dns-org-mud-moo-simpleedit-content 1407083939 reference: "#246:@social any any any" name: "MOO verb: #246:@social any any any" type: moo-code content*: "" _data-tag: 4112495971
+#$#: 4112495971
+That is not a valid command.
+0 errors.
+Verb programmed.
+=> #248 (session for #238)
+Category  Command            Used for
+--------  -------            --------
+edit      @edit-options      the editors
+mail      @mail-options      the mail system
+who       @who-options       the @who command
+misc      @misc-options      assorted preferences
+client    @client-options    client capabilities
+parse     @parse-options     command parsing
+building  @building-options  options for building
+list      @list-options      the @list command
+display   @display-options   the @display command
+eval      @eval-options      the eval command
+--------  -------            --------
+Current client options:
+
++edit          Your client can do local editing.
+-ftp           Your client can't fetch FTP documents.
+-gopher        Your client can't handle gopher requests locally.
+-help-urls     The help system should display help as jtext.
+-urls          Your client won't fetch and display URLs locally.
++mcp-edit      Your client can do MCP standard editing.
+#$#dns-org-mud-moo-simpleedit-content 1407083939 reference: "str:#238.description" name: Robert.description type: string content*: "" _data-tag: 8757350762
+#$#* 8757350762 content: You see a wizard who chooses not to reveal eir true appearance.
+#$#: 8757350762
+That is not a valid command.
+Set description property of Robert (#238).
+=> "You see a wizard who chooses not to reveal eir true appearance."
+#$#dns-org-mud-moo-simpleedit-content 1407083939 reference: "str:#238.description" name: Robert.description type: string content*: "" _data-tag: 19521595433
+#$#* 19521595433 content: You see a wizard who chooses not to reveal eir true appearance.
+#$#: 19521595433
+That is not a valid command.
+Set description property of Robert (#238).
+Welcome to RobotThing
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A couch is here.
+You see a Principles Of The MOO here.
+colin is here, off in another world.
+Last connected Mon Nov  8 13:01:47 2004 PST from wrack.thatsnice.org
+#$#mcp-negotiate-can 2132435252 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 2132435252 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 2132435252 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 2132435252
+#$#dns-org-mud-moo-simpleedit-content 2132435252 reference: "str:#238.description" name: Robert.description type: string content*: "" _data-tag: 19595154154
+#$#* 19595154154 content: You see a wizard who chooses not to reveal eir true appearance.
+#$#: 19595154154
+That is not a valid command.
+Set description property of Robert (#238).
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Robert         First room                    0 seconds                         
+colin          First room                    9 hours                           
+
+Total: 2 people, 1 of whom has been active recently.
+colin | http://sorryeverybody.com
+colin says, "Cute and sad."
+Robert wakes, kinda
+Robert gets no dns for http://sorryeverybody.com
+Robert sees it in googlecache though
+colin | http://fuckthesouth.com/
+Minty has connected.
+Minty says, "Anyone awake?"
+You hear a quiet popping sound; Minty has disconnected.
+Message sent to Minty.
+No new activity on any of your lists.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Robert         First room                    0 seconds                         
+colin          First room                    5 hours                           
+
+Total: 2 people, 1 of whom has been active recently.
+#$#dns-org-mud-moo-simpleedit-content 2132435252 reference: "str:#238.description" name: Robert.description type: string content*: "" _data-tag: 15309335055
+#$#* 15309335055 content: You see a wizard who chooses not to reveal eir true appearance.
+#$#: 15309335055
+That is not a valid command.
+Set description property of Robert (#238).
+*** Redirecting connection to new port ***

@@ -1,0 +1,754 @@
+ColdGOO
+
+    create  name password    To create a new character
+    connect name password    To connect to an existing character
+    @quit                    To leave
+
+!The user "Crag" does not exist.
+*** Connected ***
+Nowhere
+You see nothing special.
+--> $table
+Enter text for method valid.
+!Line 7: syntax error
+!Line 11: syntax error
+--> 0
+Enter text for method valid.
+!Line 6: syntax error
+!Line 10: syntax error
+!Line 1: syntax error
+Enter text for method valid.
+Method compiled.
+Enter text for method column_widths.
+!Line 14: syntax error
+Enter text for method column_widths.
+!Line 10: syntax error
+!Line 13: syntax error
+!Line 15: syntax error
+Enter text for method column_widths.
+!Line 11: syntax error
+!Line 14: syntax error
+!Line 16: syntax error
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+!Line 14: syntax error
+@program $table.column_widths
+    arg table;
+    var widths, row, c, valid, l;
+    
+    if (!valid = .valid(table))
+        throw(valid, "Cannot analyze invalid table.");
+    if (!table)
+        return [];
+    widths = [];
+    for c in (table[1])
+        widths = widths + [strlen(tostr(c))];
+    for row in (sublist(table, 2)) {
+        for c in [1 .. listlen(row)] {
+            l = strlen(tostr(row[c]));
+    
+            //if (l > widths[c])
+            //   widths[c] = l;
+        }
+    }
+    return widths;
+.
+Enter text for method column_widths.
+!Line 14: syntax error
+Enter text for method column_widths.
+!Line 14: syntax error
+Enter text for method column_widths.
+!Line 14: syntax error
+Enter text for method column_widths.
+Method compiled.
+Enter text for method column_widths.
+Method compiled.
+@program $table.column_widths
+    arg table;
+    var widths, row, c, valid, l;
+    
+    if (!valid = .valid(table))
+        throw(valid, "Cannot analyze invalid table.");
+    if (!table)
+        return [];
+    widths = [];
+    for c in (table[1])
+        widths = widths + [strlen(tostr(c))];
+    for row in (sublist(table, 2)) {
+        for c in [1 .. listlen(row)] {
+            l = strlen(tostr(row[c]));
+            if (l > widths[c])
+                widths = replace(widths, c, l);
+        }
+    }
+    return widths;
+.
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+---
+Caught error ~paramnf (No such parameter me.)
+    Extra data was: 0
+    tb[2]      was: ['opcode, 'GET_OBJ_VAR]
+  $admin_1.tmp_eval (on $admin_1): ~paramnf
+  $root.eval (on $admin_1): ~methoderr
+--> [$admin_1, $admin, $programmer, $builder, $user, $proto_user, $person, $located, $container, $vr, $described, $has_verbs, $has_commands, $root]
+--- $has_commands - (defines 12 methods and 2 variables)
+Child of: [$root]
+Children: [$room, $connection, $proto_user]
+Owned by: [$has_commands]
+Methods:
+    $has_commands.init_has_commands()
+    $has_commands.uninit_has_commands()
+    $has_commands.add_command(template, method)
+    $has_commands.del_command(method)
+    $has_commands.add_shortcut(pattern, method, subs)
+    $has_commands.del_shortcut(method)
+    $has_commands.match_command(str)
+    $has_commands.commands()
+    $has_commands.all_commands()
+    $has_commands.shortcuts()
+    $has_commands.all_shortcuts()
+    $has_commands.sub_shortcut_fields(subs, fields)
+---
+!I don't see that here.
+@program $has_commands.match_command
+    arg str;
+    var shortcut, cmd, fields;
+    
+    // Try shortcuts.
+    for shortcut in (.all_shortcuts()) {
+        fields = match_pattern(shortcut[1], str);
+        if (fields)
+            return [shortcut[2], .sub_shortcut_fields(shortcut[3], fields)];
+    }
+    
+    // Try commands.
+    for cmd in (.all_commands()) {
+        fields = match_template(cmd[1], str);
+        if (fields)
+            return [cmd[2], fields];
+    }
+    
+    // Give up.
+    return 0;
+.
+--- $connection - (defines 17 methods and 4 variables)
+Child of: [$has_commands]
+Children: [$connection_1, $connection_2]
+Owned by: [$connection]
+Methods:
+    $connection.init_connection()
+    $connection.uninit_connection()
+    $connection.msg(s)
+    $connection.err(s)
+    $connection.tell(s)
+    $connection.connect(addr_arg, port_arg)
+    $connection.disconnect()
+    $connection.parse(incoming)
+    $connection.parse_line(str)
+    $connection.user()
+    $connection.addr()
+    $connection.port()
+    $connection.echo_welcome()
+    $connection.connect_cmd(dummy, words)
+    $connection.create_cmd(dummy, words)
+    $connection.quit_cmd(dummy)
+    $connection.user_going_away()
+---
+@program $connection.parse_line
+    arg str;
+    var cmd, logstr;
+    
+    if (caller() != definer() || sender() != this())
+        throw(~perm, "Invalid access to private method.");
+    logstr = addr + " " + toliteral(port);
+    if (user)
+        logstr = logstr + " " + toliteral(user.name()) + " (" + user.vr_name() + ")";
+    logstr = logstr + ": " + str;
+    $sys.log(logstr);
+    
+    // If we're logged in, forward the line to the player.
+    if (user) {
+        if (user.parse_line(str) == 'disconnect)
+            disconnect();
+        return;
+    }
+    
+    // Display tracebacks, even though user may be clueless.
+    catch any {
+        cmd = .match_command(str);
+        if (cmd)
+            .(cmd[1])(@cmd[2]);
+        else
+            .echo_welcome();
+    } with handler {
+        .tell($traceback.formatted(traceback()));
+    }
+.
+--- $connection - (defines 17 methods and 4 variables)
+Child of: [$has_commands]
+Children: [$connection_1, $connection_2]
+Owned by: [$connection]
+Variables:
+    $connection:user == 0
+    $connection:addr == 0
+    $connection:port == 0
+    $connection:buffer == 0
+---
+@program $user.parse_line
+    arg s;
+    
+    if (caller() != $connection)
+        throw(~perm, "Caller is not $connection.");
+    
+    // Don't let regular users see stack traces.
+    catch any {
+        last_command_at = time();
+        while (s && s[1] == " ")
+            s = substr(s, 2);
+        if (!s)
+            return;
+        return .parse_command(s);
+    } with handler {
+        .err("Internal error processing command: " + s);
+    }
+.
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+Methods:
+---
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+Methods:
+    $programmer.parse_command(str)
+    $user.parse_line(s)
+    $user.parse_command(str)
+---
+@program $programmer.parse_command
+    arg str;
+    var err;
+    
+    if (!.is_owned_by(sender()))
+        throw(~perm, "Sender not an owner.");
+    
+    // Catch errors and display a stack trace.
+    catch any {
+        if (programming)
+            .programming_line(str);
+        else
+            return pass(str);
+    } with handler {
+        .tell($traceback.formatted(traceback()));
+        return;
+    }
+.
+@program $programmer.programming_line
+    arg str;
+    
+    if (sender() != this() || caller() != definer())
+        throw(~perm, "Sender not this.");
+    if (str == ".")
+        .program_done();
+    else if (programming != 'ignore)
+        program_buf = program_buf + [str];
+.
+@program $programmer.list_cmd
+    arg dummy1, method, dummy2, name;
+    var obj, anc, header, code;
+    
+    if (sender() != this())
+        throw(~perm, "Sender not this.");
+    
+    // Find the object to show.
+    method = tosym(method);
+    catch ~objnf, ~perm, ~methodnf {
+        obj = .match_environment(name);
+        anc = obj.find_method(method);
+        code = anc.list_method(method);
+    } with handler {
+        switch (error()) {
+            case ~objnf:
+                .err("I don't see that here.");
+            case ~perm:
+                .err("Permission denied.");
+            case ~methodnf:
+                .err("Neither the object nor its ancestors define a method by that name.");
+        }
+        return;
+    }
+    
+    // List the method.
+    header = toliteral(obj) + "." + tostr(method) + "() (defined on ";
+    header = header + toliteral(anc) + "):";
+    header = "@program " + anc.name_str() + "." + tostr(method);
+    .msg(header);
+    .msg($list.indent("    ", code));
+    .msg(".");
+.
+@program $user.msg
+    arg what;
+    var line, conn;
+    
+    if (type(what) == 'list) {
+        for line in (what)
+            .msg(line);
+    } else {
+        for conn in (connections)
+            conn.msg(tostr(what));
+    }
+.
+@program $connection.msg
+    arg s;
+    var b;
+    
+    // .msg(str)
+    // Relay a message to this connection.
+    if (sender() != this() && sender() != user)
+        throw(~perm, "Sender not this or the user.");
+    b = `[27, 91, 49, 109];
+    b = buffer_append(b, buffer_from_strings([tostr(s)]));
+    b = buffer_truncate(b, buffer_len(b) - 2);
+    b = buffer_append(b, `[27, 91, 48, 109, 10, 13]);
+    echo(b);
+.
+--- $connection - (defines 17 methods and 4 variables)
+Child of: [$has_commands]
+Children: [$connection_1, $connection_2]
+Owned by: [$connection]
+Methods:
+    $connection.init_connection()
+    $connection.uninit_connection()
+    $connection.msg(s)
+    $connection.err(s)
+    $connection.tell(s)
+    $connection.connect(addr_arg, port_arg)
+    $connection.disconnect()
+    $connection.parse(incoming)
+    $connection.parse_line(str)
+    $connection.user()
+    $connection.addr()
+    $connection.port()
+    $connection.echo_welcome()
+    $connection.connect_cmd(dummy, words)
+    $connection.create_cmd(dummy, words)
+    $connection.quit_cmd(dummy)
+    $connection.user_going_away()
+---
+@program $connection.tell
+    arg s;
+    
+    // .tell(str)
+    // Receive sensory input from the VR.
+    if (sender() != this() && sender() != user)
+        throw(~perm, "Sender not this or the user.");
+    echo(buffer_from_strings([s]));
+.
+--> [`[91, 49, 109]]
+--> `[102, 111, 111, 13, 10]
+--> ["[1m"]
+--> ["[0m"]
+!I don't see that here.
+@program $user.parse_line
+    arg s;
+    
+    if (caller() != $connection)
+        throw(~perm, "Caller is not $connection.");
+    
+    // Don't let regular users see stack traces.
+    catch any {
+        last_command_at = time();
+        while (s && s[1] == " ")
+            s = substr(s, 2);
+        if (!s)
+            return;
+        return .parse_command(s);
+    } with handler {
+        .err("Internal error processing command: " + s);
+    }
+.
+Enter text for method list_cmd.
+Method compiled.
+Caught error ~objnf (No object "" in environment.)
+    Extra data was: ""
+    tb[2]      was: ['method, 'match_environment, $admin_1, $vr, 13]
+  $located.match_environment (on $admin_1): ~objnf
+  $programmer.match_subject (on $admin_1): ~objnf
+  $programmer.display_cmd (on $admin_1): ~methoderr
+  $user.parse_command (on $admin_1): ~methoderr
+  $programmer.parse_command (on $admin_1): ~methoderr
+Enter text for method match_subject.
+Method compiled.
+--- $connection - (defines 17 methods and 4 variables)
+Child of: [$has_commands]
+Children: [$connection_1, $connection_2]
+Owned by: [$connection]
+---
+@program $connection.tell
+    arg s;
+    
+    // .tell(str)
+    // Receive sensory input from the VR.
+    if (sender() != this() && sender() != user)
+        throw(~perm, "Sender not this or the user.");
+    echo(buffer_from_strings([s]));
+.
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+---
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+Methods:
+---
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+Methods:
+---
+--- $admin_1 - (defines 0 methods and 0 variables)
+Child of: [$admin]
+Owned by: [$admin_1]
+Methods:
+    $admin.init_admin()
+    $admin.uninit_admin()
+    $admin.eval_as_cmd(dummy1, objname, dummy2, line)
+    $admin.eval_as_to_cmd(dummy1, objname, dummy2, targetname, dummy3, line)
+    $programmer.init_programmer()
+    $programmer.uninit_programmer()
+    $programmer.parse_command(str)
+    $programmer.programming_line(str)
+    $programmer.program_done()
+    $programmer.eval_cmd(dummy1, s)
+    $programmer.program_cmd(dummy1, name, dummy2, obj)
+    $programmer.show_cmd(dummy1, name)
+    $programmer.params_cmd(dummy1, name)
+    $programmer.methods_cmd(dummy1, name)
+    $programmer.verbs_cmd(dummy1, name)
+    $programmer.list_cmd(dummy1, method, dummy2, name)
+    $programmer.display_cmd(dummy1, subject)
+    $programmer.display_methods(pattern, ancestors)
+    $programmer.display_vars(pattern, ancestors)
+    $programmer.summarize_object(o)
+    $programmer.current_object([set_to])
+    $programmer.match_subject(subject_str)
+    $programmer.object_cmd(cmd, o)
+    $programmer.parent_cmd(cmd, p)
+    $programmer.var_cmd(cmd, definer, name, value)
+    $programmer.method_cmd(cmd, name)
+    $programmer.eval(cmd)
+    $builder.dig_cmd(dummy1, name)
+    $builder.dig_to_cmd(dummy1, exitname, dummy2, roomname)
+    $user.init_user()
+    $user.uninit_user()
+    $user.set_vr_name(new_name)
+    $user.spawn([args])
+    $user.will_move(mover, place)
+    $user.doing()
+    $user.set_doing(s)
+    $user.connected_at()
+    $user.last_command_at()
+    $user.tell(what)
+    $user.err(what)
+    $user.msg(what)
+    $user.set_password(str)
+    $user.check_password(str)
+    $user.did_move([args])
+    $user.parse_line(s)
+    $user.parse_command(str)
+    $user.connection_logged_in(addr, port)
+    $user.connection_gone(addr, port)
+    $user.login(connection)
+    $user.login_again(connection)
+    $user.logout(connection)
+    $user.connections()
+    $user.connected()
+    $user.who_cmd(dummy)
+    $user.doing_cmd(dummy, s)
+    $user.quit_cmd(dummy)
+    $user.inventory_cmd(dummy)
+    $user.page_cmd(dummy1, recipient, dummy2, message)
+    $user.sample_edit_cmd(dummy, str)
+    $user.sample_edit_done(text)
+    $user.report_traceback(t, [s])
+    $person.environment()
+    $person.msg()
+    $person.err()
+    $person.tell()
+    $person.whisper_verb(dummy1, message, dummy2, dummy3)
+    $located.init_located()
+    $located.uninit()
+    $located.environment()
+    $located.match_environment(s)
+    $located.location()
+    $located.move(place)
+    $located.will_move(mover, place)
+    $located.did_move(mover, old_place)
+    $container.init_container()
+    $container.uninit_container()
+    $container.environment()
+    $container.contents()
+    $container.contains(obj)
+    $container.put(obj)
+    $container.take(obj)
+    $container.will_arrive(old_place)
+    $container.will_leave(place)
+    $container.did_arrive(place)
+    $container.did_leave(place)
+    $container.add_sender_to_contents()
+    $container.remove_sender_from_contents()
+    $vr.init_vr()
+    $vr.uninit_vr()
+    $vr.set_vr_name(new_name)
+    $vr.vr_name()
+    $vr.environment()
+    $vr.match_environment(s)
+    $vr.local_to_environment(obj)
+    $described.init_described()
+    $described.description()
+    $described.full_description()
+    $described.set_description(s)
+    $described.look_verb(dummy1, dummy2)
+    $described.describe_verb(dummy1, dummy2, dummy3, desc)
+    $has_verbs.init_has_verbs()
+    $has_verbs.uninit_has_verbs()
+    $has_verbs.verb_templates()
+    $has_verbs.add_verb(template, method, remote)
+    $has_verbs.del_verb(template)
+    $has_verbs.verb_info(template)
+    $has_verbs.local_verb_info(template)
+    $has_commands.init_has_commands()
+    $has_commands.uninit_has_commands()
+    $has_commands.add_command(template, method)
+    $has_commands.del_command(method)
+    $has_commands.add_shortcut(pattern, method, subs)
+    $has_commands.del_shortcut(method)
+    $has_commands.match_command(str)
+    $has_commands.commands()
+    $has_commands.all_commands()
+    $has_commands.shortcuts()
+    $has_commands.all_shortcuts()
+    $has_commands.sub_shortcut_fields(subs, fields)
+    $root.init_root()
+    $root.notify_ancestors(event_name, [rest])
+    $root.initialize()
+    $root.uninitialize()
+    $root.change_parents(parents)
+    $root.chparents(parents)
+    $root.will_inherit(obj)
+    $root.name()
+    $root.name_str()
+    $root.owners()
+    $root.is_owned_by(obj)
+    $root.public()
+    $root.fertile()
+    $root.set_fertile(val)
+    $root.set_name(new_name)
+    $root.set_public(val)
+    $root.set_owners(owners_arg)
+    $root.add_owner(obj)
+    $root.del_owner(obj)
+    $root.spawn([suffix])
+    $root.destroy()
+    $root.add_parameter(name)
+    $root.parameters()
+    $root.del_parameter(name)
+    $root.del_method(name)
+    $root.methods()
+    $root.parents()
+    $root.children()
+    $root.ancestors()
+    $root.find_method(name)
+    $root.find_next_method(name, after)
+    $root.list_method(name)
+    $root.method_args(name)
+    $root.compile(code, name)
+    $root.show()
+    $root.has_ancestor(obj)
+    $root.eval(code, [dest])
+    $root.implements(interface)
+    $root.data()
+    $root.all_children()
+---
+@program $programmer.program_cmd
+    arg dummy1, name, dummy2, obj;
+    
+    if (sender() != this())
+        throw(~perm, "Sender not this.");
+    
+    // Find the object to program.
+    catch ~objnf {
+        obj = .match_environment(obj);
+    } with handler {
+        .err("I don't see that here.");
+        return;
+    }
+    if (!obj.is_owned_by(this())) {
+        .err("You can't program that object; ignoring text.");
+        programming = 'ignore;
+        return;
+    }
+    programming = [obj, tosym(name)];
+    program_buf = [];
+    .msg("Enter text for method " + name + ".");
+.
+@program $user.parse_line
+    arg s;
+    
+    if (caller() != $connection)
+        throw(~perm, "Caller is not $connection.");
+    
+    // Don't let regular users see stack traces.
+    catch any {
+        last_command_at = time();
+        while (s && s[1] == " ")
+            s = substr(s, 2);
+        if (!s)
+            return;
+        return .parse_command(s);
+    } with handler {
+        .err("Internal error processing command: " + s);
+    }
+.
+@program $programmer.parse_command
+    arg str;
+    var err;
+    
+    if (!.is_owned_by(sender()))
+        throw(~perm, "Sender not an owner.");
+    
+    // Catch errors and display a stack trace.
+    catch any {
+        if (programming)
+            .programming_line(str);
+        else
+            return pass(str);
+    } with handler {
+        .tell($traceback.formatted(traceback()));
+        return;
+    }
+.
+--> "method"
+--> ["method", "foo"]
+--- $string - (defines 2 methods and 0 variables)
+Child of: [$utils]
+Owned by: [$string]
+Methods:
+    $string.matchr(pat, str)
+    $string.substr(str, begin, [end])
+---
+--> ["o    bar", "o", "bar"]
+--> ["foo    bar", "foo", "bar"]
+--> ["foo    bar baz", "foo", "bar baz"]
+--> ["foo    bar baz", "foo", "bar baz"]
+--> ["foo bar baz", "foo", "bar baz"]
+--> ["foo", "foo", ""]
+--- $root - (defines 40 methods and 6 variables)
+Children: [$sys, $server_args, $server, $socket, $frob_class, $user_db, $utils, $has_verbs, $verb_cache, $has_commands, $help_node, $lock_parser]
+Owned by: [$root]
+Methods:
+    $root.init_root()
+    $root.notify_ancestors(event_name, [rest])
+    $root.initialize()
+    $root.uninitialize()
+    $root.change_parents(parents)
+    $root.chparents(parents)
+    $root.will_inherit(obj)
+    $root.name()
+    $root.name_str()
+    $root.owners()
+    $root.is_owned_by(obj)
+    $root.public()
+    $root.fertile()
+    $root.set_fertile(val)
+    $root.set_name(new_name)
+    $root.set_public(val)
+    $root.set_owners(owners_arg)
+    $root.add_owner(obj)
+    $root.del_owner(obj)
+    $root.spawn([suffix])
+    $root.destroy()
+    $root.add_parameter(name)
+    $root.parameters()
+    $root.del_parameter(name)
+    $root.del_method(name)
+    $root.methods()
+    $root.parents()
+    $root.children()
+    $root.ancestors()
+    $root.find_method(name)
+    $root.find_next_method(name, after)
+    $root.list_method(name)
+    $root.method_args(name)
+    $root.compile(code, name)
+    $root.show()
+    $root.has_ancestor(obj)
+    $root.eval(code, [dest])
+    $root.implements(interface)
+    $root.data()
+    $root.all_children()
+---
+--- $programmer - (defines 23 methods and 4 variables)
+Child of: [$builder]
+Children: [$admin]
+Owned by: [$programmer]
+Methods:
+    $programmer.init_programmer()
+    $programmer.uninit_programmer()
+    $programmer.parse_command(str)
+    $programmer.programming_line(str)
+    $programmer.program_done()
+    $programmer.eval_cmd(dummy1, s)
+    $programmer.program_cmd(dummy1, name, dummy2, obj)
+    $programmer.show_cmd(dummy1, name)
+    $programmer.params_cmd(dummy1, name)
+    $programmer.methods_cmd(dummy1, name)
+    $programmer.verbs_cmd(dummy1, name)
+    $programmer.list_cmd(dummy1, method, dummy2, name)
+    $programmer.display_cmd(dummy1, subject)
+    $programmer.display_methods(pattern, ancestors)
+    $programmer.display_vars(pattern, ancestors)
+    $programmer.summarize_object(o)
+    $programmer.current_object([set_to])
+    $programmer.match_subject(subject_str)
+    $programmer.object_cmd(cmd, o)
+    $programmer.parent_cmd(cmd, p)
+    $programmer.var_cmd(cmd, definer, name, value)
+    $programmer.method_cmd(cmd, name)
+    $programmer.eval(cmd)
+---
+--- $connection - (defines 17 methods and 4 variables)
+Child of: [$has_commands]
+Children: [$connection_1, $connection_2]
+Owned by: [$connection]
+Methods:
+    $connection.init_connection()
+    $connection.uninit_connection()
+    $connection.msg(s)
+    $connection.err(s)
+    $connection.tell(s)
+    $connection.connect(addr_arg, port_arg)
+    $connection.disconnect()
+    $connection.parse(incoming)
+    $connection.parse_line(str)
+    $connection.user()
+    $connection.addr()
+    $connection.port()
+    $connection.echo_welcome()
+    $connection.connect_cmd(dummy, words)
+    $connection.create_cmd(dummy, words)
+    $connection.quit_cmd(dummy)
+    $connection.user_going_away()
+---

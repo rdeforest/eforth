@@ -1,0 +1,18 @@
+Welcome to the JHCore database.
+  Extracted March 31, 2013 (under LambdaMOO 1.8.3+?_ad_hoc_??)
+
+Type 'connect wizard' to log in.
+
+You will probably want to change this text, which is stored in $login.welcome_message.
+
+Before you do, though, please read `help core-copyright' (linked to `help copyright') for the exceedingly broad copyright on JHCore.
+
+You will also want to read `help getting-started' for some more information about starting a JHCore MOO.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.
+Your previous connection was before we started keeping track.
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+=> 0
+*** Shutting down: shutdown() called by Wizard (#2) ***

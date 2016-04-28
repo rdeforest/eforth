@@ -1,0 +1,22 @@
+Welcome to ProgrammersManor.
+
+If you're unfamiliar with MOO, you may find
+  http://wiki.thatsnice.org/cgi-bin/view/Pm/PmTutorial
+to be helpful.
+
+    connect username password            to login
+    create  username password            if you are new here
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Entrance Hall
+You are in the Entrance Hall of Programmer's Manor, a long and echoing room filled with potted plants.  There are some easy chairs pushed up against the walls, one on either side of the north and south doors.
+stormagnet is here, asleep.
+Last connected Tue Jun 21 08:39:12 2005 PDT from 64.81.175.9
+#$#mcp-negotiate-can 1164162781 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1164162781 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1164162781 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1164162781
+=> 0
+[used 2 ticks, 0 seconds.]
+*** Shutting down: shutdown() called by Crag (#958) ***

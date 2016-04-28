@@ -1,0 +1,51 @@
+Welcome to The Programmer's Manor
+
+For help outside the MOO contact robert@defore.st.
+
+    connect user pass     - log in
+    create  user pass     - create and log in to new user
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+Last connected Fri Nov 19 12:49:27 2004 PST from wrack.thatsnice.org
+There is new activity on the following lists:
+    *Player-Creation-Log        1 new message
+#$#mcp-negotiate-can 580970714 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 580970714 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 580970714 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 580970714
+Message 6 on *Player-Creation-Log:
+Date:     Sat Nov 20 19:33:01 2004 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  Binder (#255)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+Binder are now programmers.  Our quota is currently 0.
+Binder and the other admins have been notified.
+[Type a reason for the quota increase or `@abort' to abort the command.]
+Binder's quota set to 100000.
+No News (is news)
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+Binder         Reading Room in the Library   Sun Nov 21 10:52:21 2004 PST
+
+Total: 1 person, who has not been active recently.
+Name           Location                      Last Disconnected                 
+----           --------                      -----------------                 
+colin          Reading Room in the Library   Tue Nov  9 01:09:19 2004 PST
+
+Total: 1 person, who has not been active recently.
+Robert (#238) [ (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location Reading Room in the Library (#70).
+-------------------------------- finished ---------------------------------
+Parent changed.
+=> #255 (Binder)
+=> 1
+=> #256 <invalid>
+Jacque has connected.
+You hear a quiet popping sound; Jacque has disconnected.

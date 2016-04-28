@@ -1,0 +1,176 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 75 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Networking (#52729)                 2 new messages
+    *Server-Hackers (#24451)             3 new messages
+Last connected Fri Jan  1 11:24:31 2010 PST from pontius.thatsnice.org
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 1 on *Networking (#52729):
+Date:     Fri Jan  8 01:57:45 2010 PST
+From:     unlike (#121433)
+To:       *Networking (#52729)
+Subject:  ssh
+
+hi,
+ can someone help me with ssh into
+lambda?  i got the rsa or whatever
+bue then it asks for a password, my
+user passwd doesn't work i can't
+figure it out.
+
+  as;dlkfjas;ldkfh;kwetio
+   unlike_
+
+--------------------------
+Message 2 on *Networking (#52729):
+Date:     Fri Jan  8 02:06:25 2010 PST
+From:     Blackbriar (#30119)
+To:       unlike (#121433) and *Networking (#52729)
+Subject:  Re: ssh
+
+>   can someone help me with ssh into
+>  lambda?
+
+LambdaMOO does not support ssh connections.
+--------------------------
+< connected: Crag. Total: 76 >
+Message 1134 on *Server-Hackers (#24451):
+Date:     Sat Oct 17 14:08:30 2009 PDT
+From:     Puff (#1449)
+To:       *Q&A (#48454) and *Server-Hackers (#24451)
+
+Is anybody familiar with innerspace/txSpace?  It looks kind of
+interesting.  Is there one running, anywhere?
+
+Puff
+
+--------------------------
+Message 1135 on *Server-Hackers (#24451):
+Date:     Sat Oct 17 16:01:16 2009 PDT
+From:     Puff (#1449)
+To:       *Server-Hackers (#24451)
+
+I came across a posting on moo-cows about a security problem found
+with WAIFs.  Somebody replied that the patch was updated to prevent
+the problem, but there was no clear answer from the original poster.
+Are WAIFs pretty safe to install?
+
+Puff
+
+
+--------------------------
+Message 1136 on *Server-Hackers (#24451):
+Date:     Sun Oct 18 13:03:59 2009 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+If we're talking about the concern that waif.wizard could be set to 1, I never really believed it was a security problem because a waif can't be caller_perms().  But waif.wizard has been hardwired to 0 since that patch a lonnng time ago.
+
+FYI, the best place to get WAIFs is from the sf.net CVS.  It's a branch.
+--------------------------
+No new activity on any of your lists.
+Player name                     Connected    Idle time    Location
+-----------                     ---------    ---------    --------
+Crag (#58746)                   2 minutes    0 seconds    Storage room
+m0n0r4il (#120347)              8 hours      17 seconds   FunkyTown
+Hallan (#118105)                3 hours      23 seconds   Ricca's shooting star
+Guest (#5704)                   11 hours     36 seconds   Hiding in The Linen C
+Twar (#63991)                   4 days       57 seconds   Colorado Gathering Pl
+Kayti (#62665)                  4 days       57 seconds   Bedroom
+Dodger (#59267)                 12 days      a minute     Dodger's Mousehole
+Marc (#85344)                   3 hours      2 minutes    Here
+Miz (#104275)                   a day        2 minutes    La Cantina de los THE
+Anxis (#110891)                 2 days       3 minutes    La Cantina de los THE
+MugWump (#89069)                5 days       4 minutes    La Cantina de los THE
+Riccabunny (#114012)            3 hours      6 minutes    Ricca's shooting star
+Sage (#74894)                   17 days      11 minutes   Obvious Research Ltd
+Crow_T_Robot (#110777)          13 hours     13 minutes   Druidic Respites
+Shaddack_the_Dragon (#113663)   a day        13 minutes   Ricca's shooting star
+Technicolor_Guest (#81175)      29 minutes   15 minutes   The Coat Closet
+Ox (#54875)                     21 minutes   21 minutes   Home
+Digbette (#121301)              a day        22 minutes   Outer Office
+The_Ant (#118824)               an hour      27 minutes   Naval Battle I [waiti
+Orac (#122561)                  12 hours     28 minutes   FunkyTown
+MagnusRex (#112208)             17 days      an hour      Shadows and Light
+Les_C (#98773)                  an hour      an hour      Bedroom
+craque (#112500)                17 days      an hour      La Cantina de los THE
+Clent (#116376)                 11 days      2 hours      The Corner Porno Shop
+Lord_Voldemort (#119377)        13 hours     3 hours      Verdant Balcony
+Balor (#116269)                 7 hours      3 hours      La Cantina de los THE
+Rydia (#106587)                 7 hours      3 hours      Silent Waterfall
+kirlan (#74469)                 5 hours      3 hours      Hiding in The Linen C
+Fox-In-Sox (#116440)            4 hours      4 hours      La Cantina de los THE
+Krate (#47498)                  9 hours      5 hours      La Cantina de los THE
+Mordred (#116359)               17 days      5 hours      La Cantina de los THE
+Puff (#1449)                    16 days      5 hours      The space between
+MrEd (#26961)                   5 hours      5 hours      La Cantina de los THE
+Obvious (#54879)                17 days      5 hours      Obvious Research Ltd
+ACW (#116789)                   17 days      6 hours      Linguistics Departmen
+Blackbriar (#30119)             16 days      7 hours      Registrar's Office
+Nosredna (#2487)                3 days       7 hours      Bookcase
+yduJ (#68)                      3 days       7 hours      yduJ's Hideaway
+idle_master (#116601)           4 days       8 hours      Silent Waterfall
+nylecoJ (#123830)               10 hours     9 hours      yduJ's Hairdressing S
+Atara (#121227)                 16 days      10 hours     La Chambre des Papill
+Martax (#101180)                13 days      11 hours     Martax's Place
+ecotone (#123731)               11 hours     11 hours     Hiding in The Linen C
+neuro (#82254)                  14 days      11 hours     Neuromancer's Abode
+Fasteddie (#62668)              14 days      12 hours     A Home
+Manic (#108218)                 15 hours     15 hours     Hiding in The Linen C
+Winter_Wolf (#101504)           16 days      17 hours     Ice Cave
+RiotKrrn (#118488)              16 days      18 hours     Obvious Research Ltd
+GrendelFish (#88093)            18 hours     18 hours     Tammany hall
+crouton (#93202)                17 days      a day        The space between
+Sadric (#46622)                 9 days       a day        Sadric's Room
+le_marquis (#92973)             a day        a day        Ma chambre
+Dylan (#104059)                 10 days      a day        Dylan's Den
+Llyrica (#86080)                16 days      a day        The space between
+Euclid (#94337)                 a day        a day        Bleh.
+Andor (#87313)                  7 days       2 days       Bedroom
+Kenny (#53595)                  16 days      2 days       Golden Eagle
+eep (#94285)                    7 days       2 days       Balcony
+maggot (#49943)                 2 days       2 days       Obvious Research Ltd
+Sick (#41057)                   2 days       2 days       The space between
+ring (#116291)                  14 days      2 days       Bedroom #2
+Druid (#49874)                  9 days       2 days       Hiding in The Linen C
+QuinnFazigu (#19845)            6 days       2 days       Bottle
+Etoile (#113614)                16 days      3 days       Our_Lady_Of_Piss
+Daland (#121218)                6 days       3 days       The Coat Closet
+dustpuppy (#121539)             3 days       3 days       User friendly
+Xeric (#112019)                 6 days       5 days       Luxuriz pallaz
+Monkey (#73364)                 13 days      5 days       Humboldt
+plumduff (#92123)               13 days      6 days       Tunnel of Goats
+SunRay (#82225)                 6 days       6 days       Edweirdo and SunRay's
+kazemi (#121063)                7 days       7 days       Fire escape
+toft (#122136)                  7 days       7 days       The Tea Lounge
+Green_Bird (#112973)            7 days       7 days       A usually empty room
+Je_Saurais (#102591)            10 days      10 days      Je_Saurais' Place
+Maelstorm (#2797)               12 days      12 days      Das blinkenlichten [e
+Mooch (#53577)                  12 days      12 days      Hiding in The Linen C
+
+Total: 76 players, 11 of whom have been active recently.

@@ -1,0 +1,85 @@
+Welcome to IslandMOO
+
+Have a pleasant visit.
+*** Created ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.  A leather couch is here.
+Crag is here, distracted.
+This is your first time connected.
+Before going anywhere, you might want to describe yourself; type `help describe' for information.  You should probably also set a gender (`help gender').
+Description set.
+You are now a programmer.
+You have mail (1: @programmer Beaker (#256)) from Crag.
+Type `help mail' for info on reading it.
+Your current object is now crag, Crag (#243).
+=> E_PERM  (Permission denied)
+=> E_PERM  (Permission denied)
+The First Room
+This is all there is right now.  A leather couch is here.
+Crag is here, dozing.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Beaker         First room                    0 seconds                         
+Crag           First room                    28 minutes                        
+
+Total: 2 people, 1 of whom has been active recently.
+You are empty-handed.
+Objects owned by Beaker (from #0 to #257):
+  2K #256 Beaker                    *[first room]
+-- 1 object.  Total bytes: 2,625.---------------------------------------------
+Crag drops a Generic Pile.
+Crag takes the Generic Pile.
+Crag drops a jar.
+Crag takes the jar.
+stormagnet has connected.
+Crag says, " " /quote '.tf/prefs.tf"
+Crag says, " " NOPE"
+Crag drops a Robert's TF settings.
+stormagnet drops a Wind-Up Duck.
+stormagnet winds up the Wind-Up Duck.
+Crag | a = {}; {@a} == a
+Crag | append: a = {@a, x};
+Crag | prepend: a = {x, @a};
+Crag says, "etc"
+stormagnet picks up the Wind-Up Duck.
+stormagnet winds up the Wind-Up Duck.
+stormagnet drops a Wind-Up Duck.
+Wind-Up Duck {list}
+Wind-Up Duck {list}
+Wind-Up Duck {list}
+Wind-Up Duck {list}
+Wind-Up Duck {list}
+Wind-Up Duck {list}
+The duck is rolling forward, rocking back and forth on its wheels.
+Crag picks up the Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag drops a Wind-Up Duck.
+Wind-Up Duck {list}
+swivels its neck and emits a mechanical "QUACK!"
+swivels its neck and emits a mechanical "QUACK!"
+swivels its neck and emits a mechanical "QUACK!"
+swivels its neck and emits a mechanical "QUACK!"
+creaks, shudders, and rolls to stop.
+Crag picks up the Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag drops a Wind-Up Duck.
+Wind-Up Duck clanks, shudders, and starts rolling forward.
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck creaks, shudders, and rolls to stop.
+Crag picks up Wind-Up Duck.
+Crag winds up the Wind-Up Duck.
+Crag drops Wind-Up Duck.
+Wind-Up Duck clanks, shudders, and %:(starts) rolling forward.
+Crag says, "aw"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck swivels its neck and emits a mechanical "QUACK!"
+Wind-Up Duck creaks, shudders, and rolls to stop.

@@ -1,0 +1,280 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 132 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             30 new messages
+    *Core-DB-Issues (#8175)              95 new messages
+    *Site-Issues (#72243)                4 new messages
+Last connected Sat Mar 11 19:10:34 2006 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 1050 on *Server-Hackers (#24451):
+Date:     Sun Dec 18 05:05:25 2005 PST
+From:     Luke-Jr (#115349)
+To:       Biafra (#61504) and *Server-Hackers (#24451)
+Subject:  Re: 1.8.2
+
+>  Can we get an "official" 1.8.2 release on sourceforge ?
+LambdaMOO's maintainers have strict stability and prior testing requirements for acceptance to their server. As a result, 1.8.1 is quite stable and I'm not sure if there are really enough changes to make it worth a 1.8.2 release-- but that's their decision, and they'll probably decide to do so because I said the opposite. ;)
+If you don't mind risking a bit of untestedness for a more current interpretor, I maintain the GammaMOO server which is at version 1.8.1g3r1:
+http://luke.dashjr.org/programs/gammamoo/
+I do testing and all, so it's still fairly stable (all known bugs are documented in Release Notes), but has more recent code that hasn't had the testing necessary. I found the first 'real' bug in g3 a few months ago that would cause a rare case to crash the server-- hence g3r1.
+--------------------------
+< connected: Crag. Total: 131 >
+Message 1051 on *Server-Hackers (#24451):
+Date:     Thu Jan 19 18:35:58 2006 PST
+From:     Meyer (#116276)
+To:       *Server-Hackers (#24451)
+Subject:  GammaMOO make trouble
+
+Host is OpenBSD 3.5. LambdaMOO 1.8.1 builds without a hitch, but with GammaMOO 1.8.1g3r1, make fails as follows:
+
+gcc -Wall -Wwrite-strings -g -O  -c execute.c
+execute.c: In function `raise_error':
+execute.c:467: syntax error before `*'
+execute.c:468: `s' undeclared (first use in this function)
+execute.c:468: (Each undeclared identifier is reported only once
+execute.c:468: for each function it appears in.)
+execute.c: In function `abort_task':
+execute.c:508: syntax error before `*'
+execute.c:509: `s' undeclared (first use in this function)
+*** Error code 1                                                      
+--------------------------
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             28 new messages
+    *Core-DB-Issues (#8175)              95 new messages
+    *Site-Issues (#72243)                4 new messages
+-- End of listing
+Message 1052 on *Server-Hackers (#24451):
+Date:     Thu Jan 19 18:37:48 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Yes, GammaMOO make trouble.  Author make trouble too, when he around.
+--------------------------
+Message 1053 on *Server-Hackers (#24451):
+Date:     Sat Jan 21 05:25:58 2006 PST
+From:     Radish (#60072)
+To:       *Server-Hackers (#24451)
+Subject:  a bit off topic
+
+The link is a announcement of a new server worth looking at
+
+http://groups.google.com/group/comp.lang.ruby/browse_thread/thread/ac90dd4fd79960b/1d46486fa281ca84?q=MUD+James+Edward+Gray+II&rnum=3#1d46486fa281ca84
+
+oh that was ugly, try this  http://tinyurl.com/bt8gb
+--------------------------
+Message 1055 on *Server-Hackers (#24451):
+Date:     Mon Jan 23 18:27:11 2006 PST
+From:     Meyer (#116276)
+To:       *Server-Hackers (#24451)
+Subject:  MOO shutdown script
+
+I wanted a shell script companion to restart for shutting-down the MOO cleanly from the shell instead of having to log in as a wiz and came up with the following. Any more elegant way of doing it? (I realize that if I take out the confirmation it can be done with one line: kill -INT `ps|grep "[0-9] \./moo"|sed -e"s/^ *\([0-9]*\) .*/\1/"` )
+
+
+#!/bin/sh
+mooproc=`ps | tee .ps.tmp | grep "[0-9] \./moo" | sed -e"s/^ *\([0-9]*\) .*/\1/"`
+echo Confirm MOO process:
+egrep "PID|$mooproc" .ps.tmp
+read kill?"Kill process $mooproc (y[n])? "
+if [ "$kill" = y ] ; then kill -INT $mooproc ; echo MOO shutdown ; \
+else echo Shutdown aborted. ; fi
+--------------------------
+Message 1056 on *Server-Hackers (#24451):
+Date:     Mon Jan 23 20:02:18 2006 PST
+From:     Bwa (#117566)
+To:       *Server-Hackers (#24451)
+
+Use expect.
+--------------------------
+Message 1057 on *Server-Hackers (#24451):
+Date:     Tue Jan 24 08:57:22 2006 PST
+From:     Loufah (#116455)
+To:       *Server-Hackers (#24451)
+
+Many systems have a pgrep command, as an alternative to ps | grep | sed. There's often a pkill command, too.
+--------------------------
+Message 1058 on *Server-Hackers (#24451):
+Date:     Tue Jan 24 19:54:42 2006 PST
+From:     Meyer (#116276)
+To:       *Server-Hackers (#24451)
+Subject:  Loufah's Unix Magic
+
+Thanks. Those are good spells to know.
+--------------------------
+Message 1059 on *Server-Hackers (#24451):
+Date:     Tue Feb  7 05:16:13 2006 PST
+From:     Luke-Jr (#115349)
+To:       Meyer (#116276), *Server-Hackers (#24451), and Xeric (#112019)
+Subject:  Re: GammaMOO make trouble
+
+>  Host is OpenBSD 3.5. LambdaMOO 1.8.1 builds without a hitch, but
+>  with GammaMOO 1.8.1g3r1, make fails as follows:
+What version of GCC? 3.4.3 and whatever SourceForge's compile farm runs seem to work.
+>  
+>  gcc -Wall -Wwrite-strings -g -O  -c execute.c
+>  execute.c: In function `raise_error':
+>  execute.c:467: syntax error before `*'
+That's a simple Stream * declaration... at first glance, I don't see how it could be a problem, since it's syntatically the same as many earlier declarations in the file
+
+P.S. Ignore Xeric; if anyone causes trouble, its the LambdaMOO team by trying to enforce insane-strict testing on any new features, apparently even in non-Lambda servers
+(except, it seems, when a Lambda author is reponsible for writing the feature-- WAIF has an official branch, but is a pretty poor implementation of a numberless object)
+--------------------------
+Message 1060 on *Server-Hackers (#24451):
+Date:     Tue Feb  7 05:22:56 2006 PST
+From:     Luke-Jr (#115349)
+To:       Meyer (#116276), *Server-Hackers (#24451), and Xeric (#112019)
+Subject:  Re: GammaMOO make trouble
+
+Actually, at second glace... that's a variable declaration after code, so might requrie C99 compatibility... if your compiler doesn't like that, move the line up right after 'Var value;'... similar if you encounter more complaints.
+Let me know if that helps the problem, and I'll commit the change for future releases
+Thanks
+--------------------------
+Message 1061 on *Server-Hackers (#24451):
+Date:     Tue Feb  7 14:03:38 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+WAIF isn't an exception at all.  It's not in the main server due to shortcomings I'm too lazy to address.  Your code isn't in the main branch due to shortcomings you don't fully appreciate.
+
+I also find it comical that you bash "insane-strict testing requirements" in the same thread where you're responding to a compile/portability problem with your own code.
+--------------------------
+Message 1062 on *Server-Hackers (#24451):
+Date:     Tue Feb  7 14:15:37 2006 PST
+From:     Kenny (#53595)
+To:       *Server-Hackers (#24451) and Puff (#1449)
+
+Puff, if you're still looking for a MOO-to-IM solution, I've written an Jabber/XMPP interface that implements the server-to-server (s2s) protocol that allows MOO users to message other XMPP servers. You can find more information on it at http://www.the-b.org/~kenny/wiki/index.php/Jabber/XMPP_for_MOO  However, be ware that you have to use the WAIF branch from CVS (which totally rock, by the way).
+--------------------------
+Message 1063 on *Server-Hackers (#24451):
+Date:     Tue Feb 14 11:40:28 2006 PST
+From:     Luke-Jr (#115349)
+To:       Xeric (#112019) and *Server-Hackers (#24451)
+
+>  WAIF isn't an exception at all.  It's not in the main server due
+>  to shortcomings I'm too lazy to address.  Your code isn't in the
+>  main branch due to shortcomings you don't fully appreciate.
+Which shortcomings? There are a few cases I can understand the hackish nature of the code (unknown_bifuncs) wouldn't be acceptable, but in general, I keep GammaMOO-accepted patches pretty clean. In some cases, I have rewritten the patch to do so.
+>  
+>  I also find it comical that you bash "insane-strict testing
+>  requirements" in the same thread where you're responding to a
+>  compile/portability problem with your own code.
+Old compilers aren't extremely important for portability, IMO. What I would consider a portability problem is if it failed to compile on a particular OS.
+Note that this is the first actual problem report for GammaMOO, other than the one I found myself a few months back.
+One or two bugs in a year really isn't that bad, when compared to most software.
+--------------------------
+Message 1064 on *Server-Hackers (#24451):
+Date:     Tue Feb 14 13:39:21 2006 PST
+From:     Luke-Jr (#115349)
+To:       *Server-Hackers (#24451)
+Subject:  GammaMOO and bugs
+
+Just to cover my prior claim, that should read "two unknown bugs", not "two bugs overall"
+I *do* have a list of known-but-not-serious bugs in CVS's ChangeLog...
+(although most are really feature plans, not so much bugs)
+The full list of TODOs is at the end of http://luke.dashjr.org/programs/gammamoo/ChangeLog.txt
+If anyone wants to tackle one, email me for CVS read access (to work w/ latest code) and email patches-- after a few well-written patches, I'll set the CVS access to read-write.
+--------------------------
+Message 1065 on *Server-Hackers (#24451):
+Date:     Sun Feb 19 20:04:51 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Someone quoted a year old moo-cows message at me flaming us so-called server maintainers over the use of lrand48.  Does anyone have a patch to improve the behavior of bf_random?  It looks like the right tradeoff might be to periodically reseed the PRNG with real entropy, such as is possible using srandomdev() on BSD.  The MOO could even generate bits of entropy for the seed itself.
+--------------------------
+Message 1066 on *Server-Hackers (#24451):
+Date:     Sat Feb 25 19:47:52 2006 PST
+From:     Luke-Jr (#115349)
+To:       *Server-Hackers (#24451) and Xeric (#112019)
+Subject:  Potential support for nulls contained in strings
+
+I was reading some Wikipedia artcle... Java apparently does serialization of its strings using some non-standard UTF-8 encodings.
+One of these changes is that the null character is encoded as two bytes instead of one.
+Seeing the MOO server's current problem with being unable to handle a null in a string, that gives a possible alternate solution for someone who might wish to patch it.
+1. (most obvious, nothing new) Make all strings counted.
+2. (depends on UTF-8 support) Write null characters into/from strings as two bytes.
+Just thought I'd throw this up here for commentation for now.
+--------------------------
+Message 1067 on *Server-Hackers (#24451):
+Date:     Sat Feb 25 20:01:36 2006 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+Actually it's pretty easy to do (1).  You can expand the hidden storage used for refcounting to keep a strlen.  I've got that change in a cvs view right now (merged it from an experiment in MOO JIT a few years ago).  I really did it as a shortcut to calling strlen, but you could track down the strcpys and turn them into memcpys (actually slower, in my tests, probably because memcpy has a breakeven at a larger size than most strings).  Then the challenge would be to fix the string indexing operations (O(n) if you don't have constant width character encoding) and do output filtering.  Are there any unicode capable clients?
+--------------------------
+Message 1068 on *Server-Hackers (#24451):
+Date:     Mon Feb 27 09:27:43 2006 PST
+From:     Biafra (#61504)
+To:       Xeric (#112019) and *Server-Hackers (#24451)
+
+>  filtering.  Are there any unicode capable clients?
+
+tkMOO-light and tinyfugue works if your system supports utf-8.
+tkmoo in linux and windows.
+Can't check other windows clients right now.
+--------------------------
+Message 1069 on *Server-Hackers (#24451):
+Date:     Mon Feb 27 09:43:58 2006 PST
+From:     Meyer (#116276)
+To:       *Server-Hackers (#24451)
+Subject:  Unicode-capable clients
+
+I've done limited testing with GammaMOO, but once I figured out how to make basic settings I've found no problems with Unicode support in some versions of telnet (BusyBox, OpenBSD, WinXP), ssh, and MOOzilla. PuTTY has partial support, displaying Unicode from the MOO, but garbling Unicode input by the user.
+--------------------------
+Message 1070 on *Server-Hackers (#24451):
+Date:     Mon Feb 27 09:51:21 2006 PST
+From:     Biafra (#61504)
+To:       Meyer (#116276) and *Server-Hackers (#24451)
+Subject:  Re: Unicode-capable clients
+
+As "support" I mean showing the text in UTF-8. Not client input. Didn't test that.
+--------------------------
+Message 1071 on *Server-Hackers (#24451):
+Date:     Tue Feb 28 06:33:25 2006 PST
+From:     Luke-Jr (#115349)
+To:       Xeric (#112019) and *Server-Hackers (#24451)
+
+>  Actually it's pretty easy to do (1).  You can expand the hidden
+>  storage used for refcounting to keep a strlen.  I've got that
+
+I had planned that a while ago, but I forget where I stopped.
+
+>  change in a cvs view right now (merged it from an experiment in
+
+Which branch? If it's already done, might as well merge it into GammaMOO.
+
+>  MOO JIT a few years ago).  I really did it as a shortcut to
+>  calling strlen, but you could track down the strcpys and turn them
+>  into memcpys (actually slower, in my tests, probably because
+>  memcpy has a breakeven at a larger size than most strings).  Then
+
+Maybe it's just me, but I've never had much of a problem with MOO CPU usage-- the internet latency takes more time usually...
+
+>  Are there any unicode capable clients?
+
+MOOzilla has been, for a long time.
+--------------------------

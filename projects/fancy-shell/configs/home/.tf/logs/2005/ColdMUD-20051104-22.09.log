@@ -1,0 +1,30 @@
+
+Welcome to Cold World.
+
+Enter one of the following commands:
+
+        create name password            To create a new character
+        connect name passsword          To connect to an existing character
+        @quit                           To leave
+
+The user "Crag" does not exist.
+* * * Connected * * *
+Nowhere
+You see nothing special.
+ERROR: Called with one argument, requires none.
+Thrown by function size().
+~numargs in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+--> 862
+ERROR: Method size not found.
+Thrown by interpreter opcode MESSAGE.
+~methodnf in #39.tmp_eval (defined on #39), line 1
+~methoderr in #39.eval (defined on #1), line 19
+~methoderr in #39.eval_cmd (defined on #26), line 11
+~methoderr in #39.parse_command (defined on #31), line 32
+~methoderr in #39.parse_command (defined on #26), line 12
+Line 2: syntax error
+--> 7615

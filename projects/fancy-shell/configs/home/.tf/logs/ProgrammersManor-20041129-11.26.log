@@ -1,0 +1,73 @@
+Welcome to The Programmer's Manor
+
+For help outside the MOO contact robert@defore.st.
+
+    connect user pass     - log in
+    create  user pass     - create and log in to new user
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Reading Room in the Library
+This is a portion of the vast library bounded on three sides by bookcases and on the fourth by a wall hosting a large fireplace.  A coat of arms gleams over the fireplace.  As in all of the library, the floor is plushly carpeted in brick red.  There are gaps between the bookcases leading to other parts of the library.  A large maroon couch is here.  A low table is here.  A bookcase is part of the wall.
+Beta is here, off in another world.
+Last connected Sat Nov 27 16:17:51 2004 PST from wrack.thatsnice.org
+There is new activity on the following lists:
+    *Player-Creation-Log        2 new messages
+#$#mcp-negotiate-can 1245499637 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 1245499637 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 1245499637 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 1245499637
+Message 8 on *Player-Creation-Log:
+Date:     Sat Nov 27 16:17:53 2004 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  Beta (#257)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+Message 9 on *Player-Creation-Log:
+Date:     Sat Nov 27 16:18:06 2004 PST
+From:     *security
+To:       *Player-Creation-Log
+Subject:  Ranger (#258)
+Sender:   Core-Wizard (#184)
+
+--------------------------
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Robert         Reading Room in the Library   0 seconds                         
+Beta           Reading Room in the Library   a day                             
+
+Total: 2 people, 1 of whom has been active recently.
+-----
+@BOOT
+=====
+
+Usage:  @boot[!] <someone> for <reason>
+        @boot[!] <someone>
+
+If a guest is really bothering you, you can use this command (e.g., `@boot Maverick_guest for harassing me in the living room') to disconnect the guest.  If you're in a great hurry, you can omit the reason, and you'll be prompted for it after the guest is booted.
+
+If you use `@boot!' instead, the guest will be disconnected and no guest connections from that site will be allowed for one hour.
+
+You should be aware that guest bootings are logged and monitored; DON'T use this frivolously.
+
+Members of the community group (see `help cg'[1]) are able to boot non-guest users who are overly disruptive.  The same rules apply.
+
+That is not a valid command.
+=> #257 (Beta)
+Line 1:  Unknown built-in function: force_command
+1 error.
+Line 1:  Unknown built-in function: forcecommand
+1 error.
+-----
+FORCE_INPUT()
+=============
+
+Syntax:  force_input (obj <conn>, str <line> [, <at-front>])   => none
+
+Inserts the string <line> as an input task in the queue for the connection <conn>, just as if it had arrived as input over the network.  If <at_front> is provided and true, then the new line of input is put at the front of <conn>'s queue, so that it will be the very next line of input processed even if there is already some other input in that queue.  Raises `E_INVARG' if <conn> does not specify a current connection and `E_PERM' if the programmer is neither <conn> nor a wizard.
+
+=> 0
+You hear a quiet popping sound; Beta has disconnected.
+You sit on the large maroon couch.

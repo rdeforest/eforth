@@ -1,0 +1,498 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 147 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             6 new messages
+    *Core-DB-Issues (#8175)              84 new messages
+Last connected Tue Nov  1 18:22:34 2005 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 1044 on *Server-Hackers (#24451):
+Date:     Tue Nov 22 07:13:39 2005 PST
+From:     Biafra (#61504)
+To:       *Server-Hackers (#24451)
+Subject:  1.8.2
+
+Can we get an "official" 1.8.2 release on sourceforge ?
+--------------------------
+Message 1045 on *Server-Hackers (#24451):
+Date:     Thu Dec  1 08:37:29 2005 PST
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+I just got a little WinCE system (HP Jornada 680, Hitachi SH3 processor, 16MB of RAM split between program memory and a filesystem) and was wondering if anyone's made a MOO server that runs on it.  It's not networked, so even a single-user server that runs in a console window would be fine; it'll just be used to test out code during my long commute.
+--------------------------
+Message 1046 on *Server-Hackers (#24451):
+Date:     Thu Dec  1 08:53:49 2005 PST
+From:     Ko (#113671)
+To:       *Server-Hackers (#24451)
+
+Dear Diopter,
+  You are crazy.
+
+Love, Ko.
+--------------------------
+Message 1047 on *Server-Hackers (#24451):
+Date:     Thu Dec  1 11:52:12 2005 PST
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+I got it running on a Zaurus, but that's a linux base.  Is there a cygwince?  ;-)
+--------------------------
+Message 1048 on *Server-Hackers (#24451):
+Date:     Thu Dec  1 15:00:56 2005 PST
+From:     Ko (#113671)
+To:       *Server-Hackers (#24451)
+
+cygwince, heh.
+--------------------------
+Message 1049 on *Server-Hackers (#24451):
+Date:     Fri Dec  2 06:09:25 2005 PST
+From:     Diopter (#98842)
+To:       *Server-Hackers (#24451)
+
+There seems to be a NetBSD port and maybe a Linux port, so maybe I'll just use one of them.  Hopefully there'll be enough RAM left over to run the MOO server.
+--------------------------
+Message 817 on *News (#123):
+Date:     Thu Sep  8 00:00:00 2005 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reaper/Undertaker Election Voting Begins
+Sender:   Petitioner (#4)
+
+   There are three candidates which have been generated for balloting for the Reapers election.  Type `@reaper-ballots' to see a list of the candidates and instructions on how to cast your vote(s), or `help elections' for complete details on the process.  The voting period will close on Thu Sep 22 00:00:00 2005 PDT; you may alter your vote(s) as often as you wish before that time.
+--------------------------
+< connected: Crag. Total: 148 >
+Message 818 on *News (#123):
+Date:     Fri Sep 16 09:38:38 2005 PDT
+From:     Petition/Ballot Core (#33842)
+To:       *News (#123)
+Subject:  Voting closes on ballot #33225
+Sender:   Petitioner (#4)
+
+The voting period for Ballot:Double (#33225): `Double Everyone's Quota' has ended.  The final vote count is as follows:
+        In favor:   213
+        Against:    30
+        Abstaining: 14
+The proposal has passed and will be implemented by the wizards as soon as possible.
+--------------------------
+Message 819 on *News (#123):
+Date:     Thu Sep 22 00:00:00 2005 PDT
+From:     Undertakers Election Core (#70100)
+To:       *News (#123)
+Subject:  Reapers election results
+Sender:   Petitioner (#4)
+
+   The election to fill vacancies on the LambdaMOO Elected Undertakers and Executors has come to a close with the following results:
+
+       Yes        No   Abstain   *   Candidate
+                                     
+        79        25         6   *   Etoile (#113614)
+        47        27        14   *   Seelie (#122044)
+        46        28        12   +   Jed (#114539)
+
+The name(s) marked with a plus (+) or asterisk (*) above have acquired more `yes' votes than `no' votes; those marked with an asterisk (*) had the greatest spreads between `yes' and `no' and have therefore been elected.
+--------------------------
+Message 820 on *News (#123):
+Date:     Tue Nov  1 13:04:23 2005 PST
+From:     Nosredna (#2487)
+To:       *News (#123)
+Subject:  recent downtimes
+
+Reports are on the lambdamoo status blog, http://lambdamoo.blogspot.com.
+--------------------------
+Message 821 on *News (#123):
+Date:     Thu Dec  1 00:00:00 2005 PST
+From:     ARB Elections Core (#52221)
+To:       *News (#123)
+Subject:  ARB Election Starts: Nominations now accepted
+Sender:   Petitioner (#4)
+
+   An election has begun for positions on the LambdaMOO Architecture Review Board currently being held by Eins (#113451), Griffen (#93228), GrinchDruid (#110777), idle_master (#116601), Peri (#86631), aldon (#96778), deLaMer (#111890), and Stetson (#65101).  Nominations for the ballot will be accepted until Thursday, December  8, at 12:00 am, LambdaMOO Standard Time, at which point a two-week voting period will begin if there are any candidates.  You can use the `@nominate <player-name> for ARB' command to start or sign a nominating petition for any player, including yourself.  See `help elections' for complete details on the process.
+--------------------------
+Message 4901 on *Core-DB-Issues (#8175):
+Date:     Thu Nov  3 14:41:11 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+Can $login:init_for_core set this.current_lag to 0?  It's 24 in the most recent core, and most MOOs don't start up the sampling task, so various things (such as @measure) think the MOOs are lagging even if they aren't.
+--------------------------
+Message 4902 on *Core-DB-Issues (#8175):
+Date:     Thu Nov  3 19:30:57 2005 PST
+From:     Nosredna (#2487)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+
+>Can $login:init_for_core set this.current_lag to 0?
+Done
+--------------------------
+Message 4903 on *Core-DB-Issues (#8175):
+Date:     Wed Nov  9 05:12:21 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Suggestion: $lock_utils:init_for_core
+
+Suggested addition to $lock_utils. Simply clears its props.
+----
+@verb $lock_utils:"init_for_core" this none this "rxd" ~WIZARD
+@prog $lock_utils:init_for_core
+if (caller_perms().wizard)
+  this.player = 0;
+  this.input_index = 0;
+  this.input_length = 0;
+  this.input_string = "";
+  this.index_incremented = 0;
+endif
+----
+--------------------------
+Message 4904 on *Core-DB-Issues (#8175):
+Date:     Mon Nov 14 00:56:28 2005 PST
+From:     Snowy (#87867)
+To:       *Core-DB-Issues (#8175)
+
+Why is there an unreadable verb on #80000?
+--------------------------
+Message 4905 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 03:48:18 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: boring bugs
+
+Several issues reported by Xeric in Message 4708 remain outstanding. What Nosredna fixed is listed in Message 4711.
+--------------------------
+Message 4906 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 05:02:13 2005 PST
+From:     Nosredna (#2487)
+To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+Subject:  Re: boring bugs
+
+Wanna address the questions raised in 4711?
+--------------------------
+Message 4907 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 05:15:06 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: boring bugs
+
+>  Date:     Wed Nov 16 05:02:13 2005 PST
+>  From:     Nosredna (#2487)
+>  To:       Roebare (#109000) and *Core-DB-Issues (#8175)
+>  Subject:  Re: boring bugs
+>  
+>  Wanna address the questions raised in 4711?
+
+I'm sorry, was that me volunteering again?
+
+Xeric never piped up again, s'pose e doesn't know what to do with these either. I don't know diddly about $gopher, so no help there. I poked at $news:_parse, but couldn't get it to parse all the way to the last branch in question -- what obscure mail-hole *does* that catch anyway?
+--------------------------
+Message 4908 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 05:48:25 2005 PST
+From:     Roebare (#109000)
+To:       Nosredna (#2487) and *Core-DB-Issues (#8175)
+
+>  Date:     Thu Dec 16 20:35:57 2004 PST
+>  From:     Nosredna (#2487)
+>  To:       *Core-DB-Issues (#8175)
+>  
+>  Well there's $time_utils.zones, which sort of implies it.  The
+>  problem with such a thing is it has to be manually updated, and
+>  who's going to remember?  I would think the ctime() hack is best,
+>  unless you're concerned with efficiency.  (What is it with me and
+>  efficiency these days?)
+
+[Which was in reply to 4857-4858.]
+
+Would a $timezone_db help? I have one, just stuck at what to actually *do* with the thing (other than implementing an in-DB offset to server time, presuming a DB admin may not have perms to set the server TZ). Useful to have it corified, since every blasted MOO seems to have timezone props littering the place, and rarely are any two of them in synch.
+--------------------------
+Message 4909 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 12:07:18 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> Would a $timezone_db help?
+
+Maybe, although I've found a simple alist (namely, $time_utils.timezones) works fine if you don't need to do much more than figure out the server's offset from UTC.  Enabling players to display time in a timezone of their choice requires writing some MOO code to handle different versions of daylight time.  What's in your $timezone_db?
+--------------------------
+Message 4910 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 16:59:27 2005 PST
+From:     Roebare (#109000)
+To:       Diopter (#98842) and *Core-DB-Issues (#8175)
+
+>  Maybe, although I've found a simple alist (namely,
+>  $time_utils.timezones) works fine if you don't need to do much
+>  more than figure out the server's offset from UTC.
+
+Yes, but there are quite a few simple alists out around. On PCs, on features, and on $time_utils, of course.
+
+>  Enabling players to display time in a timezone of their choice 
+>  requires writing some MOO code to handle different versions of 
+>  daylight time.
+
+Quite a bit of code is spent on doing exactly that, too.
+
+>  What's in your $timezone_db?
+
+314 strings in Time Zone DB(#114)
+
+  Key: STR abrev
+Datum: {STR full-name,
+        {STR ?alt-name[, ...]},
+        {INT UTC-offset, STR time},
+        {BOOL ?dst, STR ?pair-abrev}
+
+Sources:
+  HMNAO, http://www.nao.rl.ac.uk/
+  US Navy, http://aa.usno.navy.mil/faq/docs/us_tzones.html
+  Worldtimezone.com, http://www.worldtimezone.com/
+
+Size of Time Zone DB (#114) is 64,911 bytes.
+
+For example...
+
+; #114:find("pst")
+=> {"Pacific Standard Time", {"Pacific", "US/Pacific", "HNP", "Heure Normale du Pacifique"}, {-8, "08:00:00"}, {1, "pdt"}}
+
+; #114:find("z")
+=> {"Zulu", {"GMT", "UTC"}, {0, "00:00:00"}, {0, 0}}
+
+
+Spark any ideas?
+--------------------------
+Message 4911 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 16:59:53 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  [Xeric (#112019):  Re: boring bugs]
+
+Date:     Wed Nov 16 16:52:57 2005 PST
+From:     Xeric (#112019)
+To:       Roebare (#109000)
+Subject:  Re: boring bugs
+
+I never followed up because I have no idea what those verbs do.  I found those bugs without ever running them -- a static analysis of all of the verbs in lambdacore turned up those problems and I unburdened myself by posting them to *core.
+--------------------------
+Message 4912 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 20:44:29 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175) and Roebare (#109000)
+Subject:  Precision of $time_utils:english_time
+
+I suggest adding `precision' functionality to $time_utils:english_time. The usual output is more than what might be needed. Cheaper to truncate the string at the source. Since the added flag is optional, the change has no impact on existing code.
+
+---old +++new $time_utils:english_time
+
+--- 1-4:  SUBSTITUTE old verbdoc
+"english_time(time [,reference time]): returns the time as a string of";
+"years, months, days, hours, minutes and seconds using the reference time as";
+"the start time and incrementing forwards. it can be given in either ctime()";
+"or time() format. if a reference time is not given, it is set to time().";
+
++++ 1-4:  WITH new verbdoc
+":english_time(TIME time [, TIME reference_time] [, INT precision])  => STR of years, months, days, hours, minutes and seconds";
+"Accepts TIME in either ctime() or time() format.";
+"Increments forward from reference_time, if given, or time().";
+"Precision sets the smallest unit displayed: 0 = seconds (default), 1 = minutes, 2 = hours, 3 = days, 4 = months, and 5 = years.";
+
+--- 5: SUBSTITUTE old args assignment
+{_time, ?reftime = time()} = args;
+
++++ 5: WITH new args assignment
+{_time, ?reftime = time(), ?precision = 0} = args;
+
++++ 31-40: INSERT Precision
+if (typeof(precision) == INT && precision >= 1 && precision <= 5)
+  i = (e = length(units)) - precision + 1;
+  if (i == e)
+    timelist[i] = 0;
+  else
+    for x in [i..e]
+      timelist[x] = 0;
+    endfor
+  endif
+endif
+
+--- 5: SUBSTITUTE old $time_utils.help_msg[3]
+"english_time  (time[, reference time)=> string of y, m, d, h, m, s"
+
++++ 5: WITH new $time_utils.help_msg text
+"english_time  (time[, reference time[, precision]])", "                                     => string of y, m, d, h, m, s"
+--------------------------
+Message 4913 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 20:53:52 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Precision of $time_utils:english_time
+
+The modified $time_utils:english_time can be reviewed from #109000:english_time.
+--------------------------
+Message 4914 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 21:14:06 2005 PST
+From:     DruiDoWriMo (#110777)
+To:       *Core-DB-Issues (#8175)
+
+>;#109000:english_time(time(), me:time(), 1)
+#109000:english_time, line 21:  Property not found
+.. called from #-1:Input to EVAL, line 3
+.. called from builtin-function eval()
+.. called from #217:eval_cmd_string (this == #110777), line 19
+.. called from #217:eval (this == #110777), line 13
+(End of traceback)
+
+
+I think this is because you didn't fully copy the properties of $time_utils, and not just a coding bug.
+--------------------------
+Message 4915 on *Core-DB-Issues (#8175):
+Date:     Wed Nov 16 23:00:20 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Precision of $time_utils:english_time
+
+Yeah, I just copied the code so whoever could look at the whole thing rather than piecemeal. Not executable off of $time_utils.
+--------------------------
+Message 4916 on *Core-DB-Issues (#8175):
+Date:     Thu Nov 17 01:55:03 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> Spark any ideas?
+
+Looks good.  We all might as well explain what we've done elseMOO; it might inspire someone to put something into the core.
+
+Over on YibMOO, where people had requested a :time_sub that used their local time, I made $time_utils fertile, added a :ctime, :is_dst, and a few support verbs to it, and made a kid for each popular timezone:
+
+@kids $time_utils
+time utilities(#43) has 6 kids.
+US/Eastern(#1557)   US/Central(#1558)   US/Mountain(#1559)   US/Pacific(#1560)   UTC(#1778)   time utilities with table-driven DST(#1780)
+
+Players specify one of these as their timezone, and player:ctime and player:time_sub call the corresponding verb on it.  If the timezone follows the same DST rules as the underlying server, a kid just has two properties to set:
+
+@create $time_utils named US/Eastern:US/Eastern,America/New_York
+;;#1557.("timezone") = {"EST", 5}
+;;#1557.("timezone_dst") = {"EDT", 4}
+
+The offset can be INT hours, INT seconds, or FLOAT hours.
+
+To handle timezones with other rules, there's this:
+
+@create $time_utils named time utilities with table-driven DST
+@prop #1780."dst_table" {} rc
+@program #1780:is_dst
+"Return true if the given time (default now) is in daylight time.  this.dst_table is a list that indicates which ranges of times are daylight time and which are standard time.  An (abbreviated) example of .dst_table is {{922582800, 1}, {941331600, 0}, {954032400, 1}, {972781200, 0}}, which denotes that 922582800 <= t < 941331600 is daylight time, 941331600 <= t < 954032400 is standard time, and 954032400 <= t < 972781200 is daylight time.";
+...
+
+@kids #1780
+time utilities with table-driven DST(#1780) has 3 kids.
+GB(#1781)   New Zealand(#1785)   Philippines/HK/Taiwan(#1804)
+
+Miral made this:
+
+@program #1785:make_table
+":make_table() - Creates the .dst_table according to your .dst_pattern.";
+"Uses the DST pattern stored in .dst_pattern, of the form {date1, date2, startDST}.  date1 & date2 are of the form {month, day, weekno, hour} - for example, {\"Mar\", \"Sun\", 3, 2} denotes the third Sunday of March, at 02:00 AM.";
+"These two dates represent the changeover times between DST and nDST, but MUST be in CHRONOLOGICAL order.  The final element (startDST) should be set to 1 if date1 represents the starting date of DST or to 0 if date1 represents the finishing date of DST.";
+"As an alternative, setting .dst_pattern to {} or {0} specifies that your timezone never enters DST (is always in standard time).";
+...
+--------------------------
+Message 4917 on *Core-DB-Issues (#8175):
+Date:     Thu Nov 17 07:05:54 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  Time zones
+
+Nice work, Diopter. Interesting solution. Illustrates very well precisely why I compiled a $timezone_db. That's a lot of coding and for all of it, it still doesn't handle:
+
+{"Australian Central Standard Time", {"CST", "CAST"}, {9.5, "09:30:00"}, {1, "acdt"}}
+
+The one db has every known time zone included, along with whether the TZ observes daylight or summer time, and what abbrev to pair with. Reduces your need from (potentially) 300+ copies of $time_utils. One verb that sets one prop, and $time_utils augmented with all your lookups and special handling.
+
+And consider, that nearly every moo must handle this "problem" alone, each just a little differently. That's a lot of code. Heck, it's a lot of code here.
+
+We have precision to four decimal places (or more) on $trig_utils (`@d $trig_utils.'). I think $time_utils deserves similar precision. We can standardize timezone lookups here. (And yeah, I can put a .trusted and :trusts on it first, if that quenches wizardly hesitation.)
+--------------------------
+Message 4918 on *Core-DB-Issues (#8175):
+Date:     Thu Nov 17 19:20:54 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  Re: boring bugs
+
+> >  $math_utils:arctan uses sqrt(int)
+> Someone with a clue wanna suggest the right thing?  Just tofloat around
+> the arg and toint around the result?  Is there a round function?
+
+In line 7, change sqrt to this:sqrt.  It'll do the tofloat and toint.  It won't round, but the rest of the $math_utils integer code either doesn't round or does so incorrectly (try $math_utils:tan(-45)), so it's not a big deal.  At some point someone will get around to recoding the integer stuff to use the builtins and the accuracy will be fine.  The last three lines of $math_utils:tan can likely be replaced by
+  return this:rint(10000.0*tan(tofloat(theta)*this.pi/180.0));
+but I haven't checked it thoroughly.
+
+Also, the documentation says $math_utils:arctan can optionally have 2 args, but the code only looks at one arg.  That can be fixed in the fullness of time, too. 
+--------------------------
+Message 4919 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 05:34:02 2005 PST
+From:     Roebare (#109000)
+To:       *Core-DB-Issues (#8175)
+Subject:  @forked == E_ARGS
+
+Ran into the following on a pristine May2004 core.
+---
+-  ; $login:sample_lag()
+-  => 0
+-  @forked
+-  Queue ID    Start Time            Owner         {Size} Verb (Line) [This]
+-  --------    ----------            -----         -----------------
+-  #58:@forked (this == #2), line 30:  Incorrect number of arguments
+-  (End of traceback)
+-  ; queued_tasks()
+-  => {{1266849411, 1132319987, 0, 15000, #2, #10, "sample_lag", 22, #10}}
+---
+
+[From $prog:@forked]
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+
+How is `size' (the missing arg) determined?
+--------------------------
+Message 4920 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 08:34:00 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+> How is `size' (the missing arg) determined?
+
+It was added to the server after version 1.8.1.
+  list.v.list[10].type = TYPE_INT;
+  list.v.list[10].v.num = suspended_task_bytes(the_vm);
+
+And similar lines for a forked task.  Change size to ?size=0, I guess.
+--------------------------
+Message 4921 on *Core-DB-Issues (#8175):
+Date:     Fri Nov 18 09:00:27 2005 PST
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+
+I looked through the core, and the only lines of code where the 10th element of the task info list is accessed are these:
+
+$prog:@forked
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+$prog:@forked-v*erbose
+30:      {q_id, start, nu, nu2, owner, vloc, vname, lineno, this, size} = task;
+--------------------------

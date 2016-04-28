@@ -1,0 +1,9 @@
+/wrapspace 1
+/isize 5
+/ptime 0
+/quiet off
+/visual on
+/more on
+/set redef=on
+/histsize 100000
+/unset DISPLAY

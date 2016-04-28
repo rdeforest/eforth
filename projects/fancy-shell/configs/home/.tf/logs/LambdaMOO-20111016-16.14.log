@@ -1,0 +1,46 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 53 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+Last connected Sun Oct 16 15:12:40 2011 PDT from 63.224.54.239
+See help @registerme for information on changing your registered email address.
+See help multiple-characters for information on how to get a character for a friend sharing your email address.
+See help @netforward for information on how to forward a moomail message to your email address.
+See help mail-options for how to get all your moomail forwarded to your email address.
+The Generic Note supports the concept of mailing the text to your email address.  Simply give the command `mailme the-note' where the-note is some $note or sign.
+Note: LambdaMOO is *not* a full-service email provider.  You can only send mail to yourself via the approved mechanisms.  Mail sent from LambdaMOO cannot be replied to.  No mail may be sent from the internet to LambdaMOO.
+  @registerme as <email-address>
+This verb changes your registered email_address property. It will modify the registration, and then, to validate the email address, it will assign a new password and mail the password to the given email_address.
+If, for some reason, this is a problem for you, contact a wizard or registrar to get your email address changed.
+
+  @registerme
+Prints your registered email address.
+You are currently registered as:  robert-lambdamoo@thatsnice.org
+Use @registerme as <address> to change this.
+If you continue, your password will be changed, the new password mailed to `guitar.robot@gmail.com'. Do you want to continue? [Enter `yes' or `no']
+Registering you, and changing your password and mailing new one to guitar.robot@gmail.com.
+Mail with your new password forwarded. If you do not get it, send regular email to registration@lambda.moo.mud.org with your character name.
+< connected: Crag. Total: 54 >

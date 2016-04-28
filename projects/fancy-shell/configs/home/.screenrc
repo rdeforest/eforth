@@ -1,0 +1,3 @@
+startup_message off
+utf8 on
+defscrollback 100000

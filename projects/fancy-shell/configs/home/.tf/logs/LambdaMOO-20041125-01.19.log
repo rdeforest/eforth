@@ -1,0 +1,135 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.2 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 123 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Server-Hackers (#24451)             6 new messages
+Last connected Wed Nov 24 11:05:00 2004 PST from dsl081-175-009.sea1.dsl.speakeasy.net
+Name          Conn Idle G Location     Pop Age
+------------- ---- ---- - ------------ --- ---
+Crag (#58746) 2s   0s   m Storage room 1   30 
+
+Name                Disconn   Last G Location             Pop Age
+------------------- --------- ---- - -------------------- --- ---
+Q33 (#19845)        18h ago   7m   m bottle               0   ?? 
+Chaos (#6853)       1d ago    2h   m satyam               0   27 
+Zachary (#4670)     50d ago   17d  m Zachary's Hangout    0   ?? 
+Cashmere (#69437)   62d ago   3m   f ICU2wd               0   ?? 
+Edge (#75142)       83d ago   4s   m Comfortably Numb     0   33 
+LaTraviata (#50413) 392d ago  2h   f The Serail           0   31 
+Snick (#86403)      1701d ago 40s  f The Broodroom        0   32 
+SamIAm (#41011)     2089d ago 4h   m The Conversation Pit 0   42 
+Mao (#54886)        2089d ago 4h   m Under this Red Rock  0   ?? 
+
+Total 10 players; 1 online, 9 offline.
+Message 999 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 17:18:47
+From:    Meyer (#116276)
+To:      *Server-Hackers (#24451)
+Subject: Build on Zaurus PDA: ast.c Compile Error
+
+Trying to build the server on my Linux-based Sharp Zaurus PDA, make aborts with the following messages:
+---
+bash-2.05$ make
+[ config.h : config.status ]
+/config.status
+creating Makefile
+creating config.h
+config.h is unchanged
+gcc -Wall -Wwrite-strings -g  -O  -c ast.c -o ast.o
+ast.c: In function `free_stmt':
+ast.c:340: parse error before `1'
+ast.c:349: invalid lvalue in assignment
+ast.c:349: `next_arm' undeclared (first use in this function)
+ast.c:349: (Each undeclared identifier is reported only once
+ast.c:349: for each function it appears in.)
+ast.c:350: invalid type argument of `->'
+ast.c:351: invalid type argument of `->'
+ast.c:352: invalid type argument of `->'
+ast.c:353: warning: passing arg 1 of `myfree' makes pointer from integer without a cast
+make: *** [ast.o] Error 1                                                                                 
+---
+Strange because I can find no `1' in any relevant place in the source.
+
+Any insights (other than 'Why the h*ll do you want a MOO on your PDA?') most welcome.
+
+Additional details:
+
+Platform: Sharp Zaurus SL-C860 (Japan domestic version)
+OS: Linux kernel 2.4.18-rmk7-pxa3-embedix
+gcc version: 2.95.1
+Lambda server: 1.8.1
+Unpacked in directory I have rwx permission for.
+configure runs normally.
+options.h set for NS_BSD/NP_TCP.
+--------------------------
+Message 1000 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 17:41:21
+From:    neuro (#82254)
+To:      *Server-Hackers (#24451)
+
+Almost certailny your compiler is running out of RAM.  Either add more swap or build on a real machine iwth a cross-compiler (I strongly recommend the latter).
+--------------------------
+< connected: Crag. Total: 124 >
+Message 1001 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 17:57:49
+From:    Meyer (#116276)
+To:      *Server-Hackers (#24451)
+
+You really think a memory shortage is triggering the parse error? Other packages that have run out of memory during build have died with a nice 'out of memory on device' message.
+--------------------------
+Message 1002 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 18:18:15
+From:    Loufah (#116455)
+To:      *Server-Hackers (#24451)
+
+Maybe your compiler is doing the moral equivalent of "#define arm 1" - this would explain the complaint about "1" in line 340, which is "Cond_Arm *arm, *next_arm;".  Try changing "arm" to something like "this_arm" in ast.c, decompile.c, and parser.y.
+--------------------------
+Message 1003 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 18:21:53
+From:    Loufah (#116455)
+To:      *Server-Hackers (#24451)
+
+Looking forward to messages like *** Server shutdown by wizard (#2): system has been up for more than 4 hours, need to change battery ***
+--------------------------
+Message 1004 on *Server-Hackers (#24451):
+Date:    Tuesday 23-Nov-04 18:53:54
+From:    Meyer (#116276)
+To:      *Server-Hackers (#24451)
+
+>  Date:     Tue Nov 23 18:18:15 2004 PST
+>  From:     Loufah (#116455)
+>  To:       *Server-Hackers (#24451)
+>  
+>  Maybe your compiler is doing the moral equivalent of "#define arm
+>  1" - this would explain the complaint about "1" in line 340, which
+>  is "Cond_Arm *arm, *next_arm;".  Try changing "arm" to something
+>  like "this_arm" in ast.c, decompile.c, and parser.y.
+
+That seems to be exactly what was going on. Not strange since the Zaurus uses an ARM architecture CPU. Replacing 'arm' with 'my_arm' took me through a good part of the build. Now to figure out an error from bison...
+--------------------------
+No News (is good news)
+No News (is good news)

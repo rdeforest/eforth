@@ -1,0 +1,85 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                      Running Version 1.8.3 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is low; there are 83 connected.
+*** Connected ***
+Storage room
+Boxes, crates, scraps of stuff, and a dead rat are strewn about this small room. The air and everything else are dusty. Cough, cough. A hammock has been strung between two walls, and a single 60 watt bulb casts a dim light about the place.
+There is new activity on the following list:
+    *Server-Hackers (#24451)             3 new messages
+Last connected Sat Jul 25 11:37:23 2009 PDT from pontius.thatsnice.org
+There is new news.  Type `news' to read all news or `news new' to read just new news.
+Message 1129 on *Server-Hackers (#24451):
+Date:     Sun Jul 26 19:14:42 2009 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+That's an interesting idea, but you'd have to revisit the decision from the advent of FLOAT that intentionally does not permit automatic promotion.  If you introduced a BIGNUM type that couldn't mix with FLOAT or NUM you could end up with some atrocious syntax.
+--------------------------
+< connected: Crag. Total: 84 >
+Message 1130 on *Server-Hackers (#24451):
+Date:     Sat Aug 22 21:01:53 2009 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+Has anyone started a lambdamoo repo on github?
+--------------------------
+Message 1131 on *Server-Hackers (#24451):
+Date:     Sun Aug 23 02:11:05 2009 PDT
+From:     Kenny (#53595)
+To:       *Server-Hackers (#24451)
+
+We have a repo on http://codepoint.the-b.org/ for Codepoint that includes 64-bit integers (and, by extension, objnums) that's part of the general tree for our Unicode extensions. Most of it was written by hpa.
+--------------------------
+Message 1130 on *Server-Hackers (#24451):
+Date:     Sat Aug 22 21:01:53 2009 PDT
+From:     ThwartedEfforts (#69976)
+To:       *Server-Hackers (#24451)
+
+Has anyone started a lambdamoo repo on github?
+--------------------------
+Message 1129 on *Server-Hackers (#24451):
+Date:     Sun Jul 26 19:14:42 2009 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+That's an interesting idea, but you'd have to revisit the decision from the advent of FLOAT that intentionally does not permit automatic promotion.  If you introduced a BIGNUM type that couldn't mix with FLOAT or NUM you could end up with some atrocious syntax.
+--------------------------
+Message 1128 on *Server-Hackers (#24451):
+Date:     Sat Jul 25 12:01:51 2009 PDT
+From:     Crag (#58746)
+To:       *Server-Hackers (#24451)
+Subject:  Bigger NUMs
+
+As an armchair server hacker, it seems like it would be more graceful to add a new type BIGNUM and hook it into libgmp.  You wouldn't have to worry about breaking any MOO code which assumes NUMs wrap around at 2**31 (you know it's out there) and you would just be adding another pointer to the Var.v union so you don't have to worry about alignment.
+--------------------------
+Message 1127 on *Server-Hackers (#24451):
+Date:     Mon Jul 20 13:47:01 2009 PDT
+From:     Xeric (#112019)
+To:       *Server-Hackers (#24451)
+
+There are a lot of Vars in memory for a running server, which is why an effort was made to keep the size down.  You can make all of the int types (as you observed, you'll want to do ALL of them) into 64 bit at the cost of some memory.  At that point you could make float a non-ref type with no penalty.  The harder part is going to be finding all of the OTHER places in the server that say 'int32' when they mean 'type of Var.num', along with constant like MAXINT and so on.  So, for example, dbio_read_num() will load your "legacy" database full of 32 bit values, and then you might run fine, but until you modify something like dbio_write_num() to be 64 bit you won't be able to save your db if it has any 64-bit values.
+--------------------------
+I don't understand that.
+,aliases                 Rog (#4292)           r      {"Server-Hackers", "server"}
+-------------------------------- finished ---------------------------------

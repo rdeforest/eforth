@@ -1,0 +1,63 @@
+Welcome to the JHCore database.
+  Extracted March 31, 2013 (under LambdaMOO 1.8.3+?_ad_hoc_??)
+
+Type 'connect wizard' to log in.
+
+You will probably want to change this text, which is stored in $login.welcome_message.
+
+Before you do, though, please read `help core-copyright' (linked to `help copyright') for the exceedingly broad copyright on JHCore.
+
+You will also want to read `help getting-started' for some more information about starting a JHCore MOO.
+Automatic player creation is disabled.  Send email to  to request a character.
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The First Room
+This is all there is right now.
+Your previous connection was before we started keeping track.
+Before going anywhere, you might want to describe yourself; type `help describe' for information.
+Login Commands (#10) [ readable ]
+  Owned by Core-Wizard (#184).
+  Child of root class (#1).
+.welcome_message         Core-Wizard (#184)    r c    {"Welcome to the JHCore..
+.newt_registration_string Core-Wizard (#184)   r c    "Your character is temp..
+.registration_string     Core-Wizard (#184)    r c    0
+.registration_address    Core-Wizard (#184)    r c    ""
+.create_enabled          Core-Wizard (#184)    r c    0
+.bogus_command           Core-Wizard (#184)    r      "?"
+.blank_command           Core-Wizard (#184)    r      "help"
+.graylist                Core-Wizard (#184)           {{}, {}}
+.blacklist               Core-Wizard (#184)           {{}, {}}
+.redlist                 Core-Wizard (#184)           {{}, {}}
+.spooflist               Core-Wizard (#184)           {{}, {}}
+.bootlist                Core-Wizard (#184)           {}
+.newted                  Core-Wizard (#184)           {}
+.sitematch_guests        Core-Wizard (#184)    r c    1
+.testers                 Core-Wizard (#184)    r      {}
+.max_guests              Core-Wizard (#184)    r      4
+.registration_text       Core-Wizard (#184)    r c    0
+.who_enabled             Core-Wizard (#184)    r c    1
+.request_enabled         Core-Wizard (#184)    r c    0
+.preferred_registration_method Core-Wizard (#184) r c "any"
+-------------------------------- finished ---------------------------------
+=> 1
+Crag has connected.
+*Player-Creation-Log has just been sent new mail (re: Crag (#243)) by the security.
+New password set.
+Crag (#243) [ (player) ]
+  Child of generic player (#6).
+  Location first room (#70).
+-------------------------------- finished ---------------------------------
+=> 0
+=> 1
+=> 1
+You see no "$wizard" here.
+Wizard (#2) [ readable (player) programmer wizard ]
+  Child of generic wizard (#51).
+  Location first room (#70).
+-------------------------------- finished ---------------------------------
+Parent changed.
+generic wizard (#51) [ readable ]
+  Owned by Core-Wizard (#184).
+  Child of generic programmer (#52).
+  Location generic room (#3).
+-------------------------------- finished ---------------------------------
