@@ -1,0 +1,23 @@
+#!/usr/bin/env coffee
+
+{process, config, echo, warn, error, render} = require '../lib/cmdutils'
+{env, argv} = process
+
+[script, cmd, context, key, more...] = argv
+
+usage = """
+  Usage: #{cmd} get|set context key [value] [optionsJSON]
+"""
+
+switch cmd
+  when 'get'
+    [opts] = more
+    format = opts.format or 'shell'
+    value = (config.get context, key) or ''
+    echo render format, value
+
+  when 'set'
+    config.set context, key
+
+  else
+    error "Unknown request '#{cmd}'\n\n" + usage
