@@ -4,12 +4,14 @@ require './formatting' # extends String
 module.exports = info =
   girls: {}
   traits: {}
+  fans: {}
   install: ->
     _.extend root,
       info.girls
       info.traits
       info.utils
       __: _
+    info = global
 
 class Trait
   constructor: (@name, girl) ->
@@ -18,7 +20,6 @@ class Trait
     {traits} = info
 
     @girls = []
-    @fans = 0
 
     if traits[@name]
       realMe = traits[@name]
@@ -31,6 +32,8 @@ class Trait
     return realMe
 
   addGirl: (girl) -> @girls = _.union @girls, [girl]
+
+  fans: -> info.fans[@name]
 
 class Girl
   constructor: ({@name, @skill, @style, @traits}) ->
@@ -45,7 +48,20 @@ class Girl
 
     console.log @traits
     @traits = @traits.map (name) -> new Trait name, realMe
+    @items = []
   
+  fans: ->
+    @traits[0].fans() + @traits[1].fans()
+
+  followers: ->
+    total = @fans()
+
+    for toy in @items
+      if toy.trait
+        total += info.fans[toy.trait]
+
+    total
+
   pals: -> _.without (_.flatten _.pluck @traits, 'girls'), this
 
   pathsTo: (dest, seen = [this]) ->
