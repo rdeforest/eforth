@@ -5,11 +5,15 @@ module.exports =
   stdout: stdout = process.stdout
   stderr: stderr = process.stderr
 
-  echo: echo = (args...) -> stdout.write args.join ' '
-  warn: warn = (args...) -> stderr.write args.join ' '
+  write: write = (stream, args) -> stream.write args.join(' ') + '\n'
+  echo: echo = (args...) -> write stdout, args
+  warn: warn = (args...) -> write stderr, args
 
   error: error = (exitStatus, args...) ->
-    warn args...
+    if not args.length
+      throw new Error 'cmdutils#error called with insufficent args'
+
+    write stderr, args
     process.exit exitStatus
 
   config: config = require './config'

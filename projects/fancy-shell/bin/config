@@ -1,15 +1,26 @@
 #!/usr/bin/env coffee
 
+_ = require 'underscore'
+
 {process, config, echo, warn, error, render} = require '../lib/cmdutils'
 {env, argv} = process
 
-[script, cmd, context, key, more...] = argv
+[coffee, script, cmd, context, key, more...] = argv
 
 usage = """
   Usage: #{cmd} get|set context key [value] [optionsJSON]
 """
 
+if argv.length < 3
+  error 1, "No request specified\n\n" + usage
+
+if (_.intersection ['-h', '--help'], argv).length
+  cmd = 'help'
+
 switch cmd
+  when 'help'
+    echo usage
+
   when 'get'
     [opts] = more
     format = opts.format or 'shell'
@@ -20,4 +31,4 @@ switch cmd
     config.set context, key
 
   else
-    error "Unknown request '#{cmd}'\n\n" + usage
+    error 1, "Unknown request '#{cmd}'\n\n" + usage
