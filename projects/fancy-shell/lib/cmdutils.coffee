@@ -16,7 +16,7 @@ module.exports =
     write stderr, args
     process.exit exitStatus
 
-  config: config = require './config'
+  config: config = (require './config')()
 
   render: (format, data) ->
     switch format

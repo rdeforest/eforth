@@ -1,45 +1,97 @@
 fs = require 'fs'
 path = require 'path'
+process = require 'process'
+
+debug = (where, args, what..., fn) ->
+  console.log "config##{where}(#{args.join ', '}):", what...
+  ret = fn()
+  console.log "done"
+  ret
+
+write = (string, file...) ->
+  file = path.resolve file...
+
+  console.log 'writing to ' + file
+
+  fs.writeFileSync file, string
 
 read = (file...) ->
   file = path.resolve file...
 
   fs.readFileSync file
 
-config = null
+decompose = (path) ->
+  paths = [path]
+
+  while path isnt parent = path.resolve p, '..'
+    paths.unshift path = parent
+
+  paths
+
+isDir = (path) ->
+  debug 'isDir', [path], ->
+    paths = decompose path
+
+    not paths.find (p) ->
+      stat = fs.statSync p
+      not stat.isDirectory()
+
+deduceConfigDir = ->
+  paths = [
+      [process.env.FSH or '.', 'config']
+      [process.env.HOME, '.fsh', 'config']
+    ]
+
+  paths = paths.map (p) -> path.resolve p...
+  pick = paths.some (p) -> isDir p
+
+  return pick or
+    throw new Error "Couldn't deduce config dir"
+
+configs = {}
 
 isObj = (o) -> o and 'object' is typeof o
 
 module.exports = (dir) ->
-  config or
-    config =
-      data:
-        global: {}
+  if not dir
+    dir = deduceConfigDir()
 
-      get: (context, key) ->
-        if not isObj ctx = config.data[context]
-          ctx = config.data.global
-        ctx[key]
+  if config = configs[dir]
+    return config
 
-      set: (context, key, value) ->
-        if not context
-          context = config.data.global
-        else
-          context = config.data[context] or= {}
+  config =
+    data:
+      global: {}
 
-        context[key] = value
+    get: (context, key) ->
+      if not isObj ctx = config.data[context]
+        ctx = config.data.global
+      ctx[key]
 
-      load: (configJSON) ->
-        loading = JSON.parse configJSON
-        
-        for context, ctx of loading
-          _.extend config.data[context], ctx
+    set: (context, key, value) ->
+      if not context
+        context = config.data.global
+      else
+        context = config.data[context] or= {}
 
-      serialize: ->
-        JSON.stringify config.data
+      context[key] = value
 
-    for file in ['defaults', 'current']
-      try
-        config.load read dir, file
-      catch e
-        warn "Could not load config #{path.resolve dir, file}: #{e}"
+    save: ->
+      write config.serialize(), dir, 'current.json'
+
+    load: (configJSON) ->
+      loading = JSON.parse configJSON
+      
+      for context, ctx of loading
+        _.extend config.data[context], ctx
+
+    serialize: ->
+      JSON.stringify config.data
+
+  for file in ['defaults', 'current']
+    try
+      config.load read dir, file
+    catch e
+      console.log "Could not load config #{path.resolve dir, file}: #{e}"
+
+  return config
