@@ -30,5 +30,8 @@ switch cmd
   when 'set'
     config.set context, key
 
+  when 'shell_dump'
+    echo config.dump 'shell'
+
   else
     error 1, "Unknown request '#{cmd}'\n\n" + usage

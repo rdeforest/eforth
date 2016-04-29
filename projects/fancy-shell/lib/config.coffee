@@ -88,6 +88,16 @@ module.exports = (dir) ->
     serialize: ->
       JSON.stringify config.data
 
+    dump: (format) ->
+      # Currently ignoring 'format' because there is only one. Bleah.
+      dump = ''
+
+      for name, context of config.data
+        for k, v of context
+          dump += "fsh_#{name}_#{k}=#{JSON.stringify v}\n"
+
+      dump
+
   for file in ['defaults', 'current']
     try
       config.load read dir, file
