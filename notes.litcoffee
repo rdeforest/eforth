@@ -39,3 +39,7 @@ there's something to that.
 So what is the "parent" of an object in a world where the dumb class/instance
 dichotomy has been foisted on a prototypal system? Is Foo the parent of Bar?
 Is bar a descendent of Foo? _I don't know._
+
+Functionally speaking, the only post-construction inheritance is through
+Object.getPrototypeOf(). In that sense, the parent of bar is Bar.prototype.
+Presumably we're expected to call Bar the 'class' of bar, but... blarg.
