@@ -2,6 +2,10 @@
 
 Stuff like this is why Lisp programmers think they're so cool.
 
+    # global.geese = [ { white: -> true }, { white: -> false } ]
+    # all global.geese are 'white'
+    # => false
+
     inverseFn = (fn) -> not fn()
 
     all = (l, check) ->
@@ -11,6 +15,7 @@ Stuff like this is why Lisp programmers think they're so cool.
     are = (methodName) ->
       (o) ->
         o[methodName]()
+
 
 # Component
 
@@ -40,6 +45,7 @@ if online. The management of these states is handled elsewhere.
           @healthCheck  = -> true
         } = info
 
+
 ## State
 
       state: ->
@@ -57,6 +63,7 @@ if online. The management of these states is handled elsewhere.
           else
             'specified'
 
+
 I think this kind of thing is where CoffeeScript really shines:
 
       constructed: ->
@@ -64,6 +71,6 @@ I think this kind of thing is where CoffeeScript really shines:
         (all @dependencies are 'healthy')
 
       healthy: ->
-        (all @dependencies are 'healthy') and
-        (@healthCheck())                  and
-        (all @parts are 'healthy')
+        @constructed() and
+        @healthCheck() and
+        all @parts are 'healthy'
