@@ -43,3 +43,26 @@ Is bar a descendent of Foo? _I don't know._
 Functionally speaking, the only post-construction inheritance is through
 Object.getPrototypeOf(). In that sense, the parent of bar is Bar.prototype.
 Presumably we're expected to call Bar the 'class' of bar, but... blarg.
+
+# Constructor vs Prototype
+
+In my investigation I continue to be frustrated by the constructor vs
+prototype thing. I made a utility to help me examine this:
+
+    {ancestors, definerOf} = require './util'
+
+    pChainOne = ancestors 1
+    
+    assert pChainOne[0] is 1
+    assert pChainOne[1] is Number.prototype
+    assert pChainone[2] is Object.prototype
+
+
+
+# Notes inspired by Raine
+
+## Break down different language's versions of different concepts
+
+## Break down how/when one would use different models
+
+Class vs Instance, constructor vs prototype.
