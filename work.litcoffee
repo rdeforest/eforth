@@ -48,6 +48,8 @@ if online. The management of these states is handled elsewhere.
 
 ## State
 
+A component knows where in its lifecycle it currently is.
+
       state: ->
         if @requested()
           if @constructed()
@@ -74,3 +76,75 @@ I think this kind of thing is where CoffeeScript really shines:
         @constructed() and
         @healthCheck() and
         all @parts are 'healthy'
+
+
+Components default to being requested by virtue of having been instantiated.
+
+      requested: -> yes
+
+# Component extensions
+
+## Environment
+
+Environment is Amazon-speak for service, sortof. It's a collection of packages
+which knows how to install, upgrade and uninstall itself and knows how to
+combine its context with specifications to expose a relevant configuration.
+
+Its @parts are its stages: alpha, beta, gamma, prod.
+
+    class Environment extends Component
+      stage: (name) ->
+        @parts.find (p) -> p.name is name
+
+      stages: ->
+        ret = {}
+
+        for stage in @parts
+          ret[stage.name] = stage
+
+        ret
+
+      setStage: (stage) ->
+        if -1 is idx = stageIdx stage.name
+          return @parts.push stage
+
+        old = @parts[idx]
+
+        old.replacingWith? stage
+        stage.replacing? old
+
+        @parts[idx] = stage
+
+        old.replacedWith? stage
+        stage.replaced? old
+
+
+## Pipeline
+
+A Pipeline is a workflow. They were originally for building and deploying
+environments but I have ideas about how to use environments to manage larger
+systems such as Sites and Regions.
+
+Our model is a facade (or is it an adapter? proxy? :) in front of the existing
+Pipelines API
+
+
+    class Pipeline extends Component
+      # not yet implemented
+
+    class PipelineStep extends Component
+      # not yet implemented
+
+## HostClass
+
+A HostClass applies permissions to hosts and provides Apollo with a name for
+the collection of hosts it contains.
+
+
+## Package
+
+
+## VFI
+
+
+
