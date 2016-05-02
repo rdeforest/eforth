@@ -36,13 +36,11 @@ not realize that wisdom can address.
 
 # Some other stuff
 
-- 
-
-
-
-
-- one
- - two
-  - three
-   - four
-    - five
+- Use just enough structure and no more
+- Be liberal in what you accept and strict in what you produce
+- Learn from mistakes
+- Learn from successes
+- Anything can be programmable
+- Minimize friction for cooperation
+  - Sane defaults
+  - Optimize for laziness of all participants
