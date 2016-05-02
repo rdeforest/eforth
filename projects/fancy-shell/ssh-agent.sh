@@ -1,23 +1,16 @@
 # Reconnect or spin up new agent
 
-if [ -z "$FSH" -o ! -d "$FSH" ]; then
-  echo "Fancy Shell not setup?"
-  exit 1
-fi
+set -e
 
-source "$FSH/lib/utils.sh"
+source "${FSH:=~/.fsh}/lib/utils.sh"
 
 # detect usable agent
 
 agent_ok () {
-  if [ -e "$sock" ]; then
-    return quiet timeout -k 5 3 ssh-add -l
-  else
-    return 256
-  fi
+  quiet timeout -k 5 3 ssh-add -l
 }
 
-sock=$(set | grep ^SSH_AUTH_SOCK= | sed 's/^[^=]*=//')
+sock=$( (set; getConfig ssh-agent localAgent) | grep ^SSH_AUTH_SOCK= | sed 's/^[^=]*=//')
 for f in $sock /tmp/ssh*/agent*; do
   export SSH_AUTH_SOCK=$f
 
@@ -26,5 +19,6 @@ for f in $sock /tmp/ssh*/agent*; do
   fi
 done
 
-# if allowed, spin up new agent
-createAgent=$(config get ssh-agent startIfMissing)
+if getConfig ssh-agent startIfMissing; then
+  source <(ssh-agent)
+fi
