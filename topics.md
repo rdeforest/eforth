@@ -1,11 +1,52 @@
-# Personal
+# Matha
 
-## Past History
+## Thrivent
+
+## Promises
+
+## People
+
+## Financial
+
+## Inventing
+
+## Purpose
+
+- engineer or what?
+
+## Scheming
+
+## Friends
+
+# Robert
+
+## Personal
+
+### Past History
 
 - Martha's monastary story
 
-# Relationships
+## Relationships
 
-# Projects
+### Romantic
 
-# Entertainment
+### Friends
+
+### Business
+
+## Projects
+
+### Art
+
+## Entertainment
+
+### Internet
+
+### Music
+
+### 
+
+## Uncatagorized
+
+- Waterpoint/LambdaMOO/Topic signs
+
