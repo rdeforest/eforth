@@ -5,7 +5,6 @@ require './formatting' # extends String
 
 {gameGirls, gameItems, gameResources} = require './game-data'
 
-class Resource
 
 class Building
   constructor: (@maxTime = 4 * 60) ->
