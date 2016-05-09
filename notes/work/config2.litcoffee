@@ -1,3 +1,8 @@
+# The shoulders of giants...
+
+    _ = require 'underscore'
+    moment = require 'moment'
+
 # Everything should have a description
 
     class Described
@@ -10,18 +15,18 @@
       constructor: (info) ->
         super info
         {@parent} = info
-        @_Tree_kids = []
+        @_Tree = kids: = []
 
       hasAncestor: (ancestor) ->
         ancestor is this or @parent?.hasAncestor ancestor
 
       addChild: (kid) ->
-        if not (kid in @_Tree_kids)
-          @_Tree_kids.push kid
+        if not (kid in @_Tree.kids)
+          @_Tree.kids.push kid
 
       removeChild: (kid) ->
         if -1 < idx = @_Tree_kids.indexOf kid
-          @_Tree_kids.splice idx, 1
+          @_Tree.kids.splice idx, 1
 
       ancestors: ->
         if @parent
@@ -29,33 +34,47 @@
         else
           [this]
 
-# Trees of Keys
+      children: -> _.union [], @_Tree.kids
 
-Many key values are themselves members of hierarchies: locations, host type,
-team, etc. In that case, children of a key are the same as that key for
+      descendents: ->
+        kids = @children()
+        kids.concat _.flatten kids.map (kid) -> kid.children()
+
+# Trees of Named Things
+
+Many (most?) config selector values are nodes of hierarchies: locations, host
+types, team, etc. In that case, children of a key are the same as that key for
 matching purposes.
 
-    class ConfigKey extends Tree
+    class NameTree extends Tree
       constructor: (info) ->
         super info
 
         {@name} = info
 
-# Specific configurations inherit from more general ones
+# A configuration is a default map and overrides
 
-    class Configuration extends Tree
+    class Config extends Tree
       constructor: (info) ->
         super info
 
-        @_Configuration_data = {}
+        {basedOn = {}} = info
+
+        @_Config =
+          basedOn: basedOn
+          cachedBase: _.extend {}, basedOn.current(), fetched: moment()
+          overrides: {}
+
+      get: (key) ->
+        
 
 # Special cases override the match function
 
       matchesContext: (context) -> true
 
       get: (key, context) ->
-        if @matchesContext context and Object.hasOwnProperty @_Configuration_data, key
-          return @_Configuration_data[key]
+        if @matchesContext context and Object.hasOwnProperty @_Config_data, key
+          return @_Config_data[key]
 
         if @parent
           return @parent.get key, context
@@ -63,7 +82,7 @@ matching purposes.
         return undefined
 
       set: (key, value) ->
-        @_Configuration_data[key] = value
+        @_Config_data[key] = value
 
     class AspectedConfig extends Configuration
       constructor: (info) ->
@@ -74,3 +93,17 @@ matching purposes.
       matchesContext: (context) ->
         context[@aspect]?.hasAncestor @aspectKey
         
+# Usage...
+
+What would it look like to use this thing? heh.
+
+
+    # config = require 'this file'
+
+    {Config, ConfigTemplate} = config
+
+    Customer = ConfigTemplate.create
+      require:
+        name: "string"
+      optional:
+        consuming: [ "string" ]
