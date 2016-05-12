@@ -1,52 +1,109 @@
-# Matha
+# Martha's topic
 
-## Thrivent
+- Personal/Past history/Monastary story
+- Personal/Finding her voice/engineer or what?
+- Wellness
+ - physical, emotional, chemical
 
-## Promises
+# Robert's topics
 
-## People
+- Relationships/Work/How things are going I guess
+- Waterpoint topic sign
 
-## Financial
+# Ways of breaking own topics
 
-## Inventing
+## Matha's List
 
-## Purpose
+### Thrivent
+
+### Promises
+
+### People
+
+### Financial
+
+### Inventing
+
+- Trimonisha
+- That Could Be Me!
+- Income Expenses Assets Liabilities
+ - games for kids!
+
+### Purpose
 
 - engineer or what?
+ - duh
 
-## Scheming
+- Tutoring?
 
-## Friends
+### Scheming
 
-# Robert
-
-## Personal
-
-### Past History
-
-- Martha's monastary story
-
-## Relationships
-
-### Romantic
+- "Getting places on time"
 
 ### Friends
 
-### Business
+## Robert's list
 
-## Projects
+### Personal
 
-### Art
+#### Self improvement
 
-## Entertainment
+- Robert's therapy
+- Seven Habits
 
-### Internet
+##### Challenges
 
-### Music
+- Discipline
+- Focus
 
-### 
+##### Tools
 
-## Uncatagorized
+- Doing a thing within 15 minutes of identifying it as a worthwhile task
+
+#### Future plans
+
+- Motorcycle
+- Aikido
+
+#### Past History
+
+- Martha's monastary story
+
+### Relationships
+
+#### Romantic
+
+- Raine
+
+#### Friends
+
+- Al, T
+
+#### Business
+
+- SO ABOUT THAT WORK THOUGH
+
+### Projects
+
+#### Programming
+
+- CORVID with Raine
+- ops-dojo with Nicole
+- Story Project with Tamara
+- RightOnTime
+- node-astrolog
+
+#### Art
+
+- I wrote a song
+
+### Entertainment
+
+#### Internet
+
+#### Music
+
+### Uncatagorized
 
 - Waterpoint/LambdaMOO/Topic signs
 
