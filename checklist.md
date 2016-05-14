@@ -101,8 +101,7 @@
 
 ...
 
-- Things I've done
+- Things I've finished
  - 2: Fly to San Diego and back
- - 6: AS2 new region
+ - 6: AS2 in new region
  - 7: DataFax upgrade
- - 
