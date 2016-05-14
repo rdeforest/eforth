@@ -16,6 +16,13 @@
 
 ### Thrivent
 
+- Lessons
+ - "I wasn't working _correctly_"
+ - "I have social anxiety"
+  - It's non-existant when connected to a greater purpose
+  - But when unsure of objectives and motivations, anxiety is reasonable!
+
+
 ### Promises
 
 ### People
@@ -74,6 +81,10 @@
 #### Romantic
 
 - Raine
+
+#### Family
+
+- Leah
 
 #### Friends
 
