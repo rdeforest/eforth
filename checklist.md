@@ -88,3 +88,21 @@
 - Tooth brushing (a sawtooth function)
 
 # Round 2 - On The Move
+
+- Martha asking whether she's parenting well
+- Trajectory change in '84
+
+- Over-estimating her value to others?
+ - Did not dig in to hardware specs until necessary
+ - But if she had really dug in she could have been more involved earlier
+
+- $2000 project for six weeks
+ - Maybe could offset it
+
+...
+
+- Things I've done
+ - 2: Fly to San Diego and back
+ - 6: AS2 new region
+ - 7: DataFax upgrade
+ - 
