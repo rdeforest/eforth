@@ -105,3 +105,15 @@
  - 2: Fly to San Diego and back
  - 6: AS2 in new region
  - 7: DataFax upgrade
+
+# Round 3 - Lounging about
+
+"That could be me"
+  - Brand management
+   - Customer relationship development
+   - Website
+    - Characters
+    - Polling
+    - Stories
+  - Content
+   - "special projects coordinator"
