@@ -1,8 +1,8 @@
 _ = require 'underscore'
-math = require 'math.js'
-math.config
-  number: 'BigNumber'
-  precision: 64
+#math = require 'math.js'
+#math.config
+#  number: 'BigNumber'
+#  precision: 64
 
 memoize = (fn, name = 'unnamed') ->
   argsSeen = {}

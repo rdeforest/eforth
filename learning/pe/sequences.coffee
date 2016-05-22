@@ -1,5 +1,12 @@
 # Collection of sequence generators
 
+sequence = (generator) ->
+  i = 0
+  seq = []
+
+  loop
+    generator
+
 module.exports =
   even: even = ->
     n = 0
