@@ -6,16 +6,6 @@
     - Concrete item / 'anchor'
     - Poker chips?
     - sand timer
-  - take blood pressure
-    - add to mood app?
-    - get a health tracking wearable?
-
-- When I don't know what to do
-  - What is the question? What would it mean for this to not be a problem,
-    etc.
-  - "Should we talk about this more or should I talk to someone else?"
-  - Seek consensus
-  - (nothing new here)
 
 # new
 

@@ -1,13 +1,29 @@
 # Collection of sequence generators
 
 sequence = (generator) ->
-  i = 0
   seq = []
 
-  loop
-    generator
+  ->
+    i = 0
+    gen = generator()
+
+    loop
+      if i >= seq.length
+        yield seq[i++] = gen.next().value
+      else
+        yield seq[i++]
+
+    return
 
 module.exports =
+  squares: squares = sequence ->
+    n = 1
+
+    loop
+      yield (n++) ** 2
+
+    return
+
   even: even = ->
     n = 0
 
@@ -24,7 +40,7 @@ module.exports =
 
     return
 
-  fibonacci: fib = ->
+  fibonacci: fib = sequence ->
     [a, b] = [0, 1]
 
     loop
