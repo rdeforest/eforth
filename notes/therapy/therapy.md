@@ -19,6 +19,27 @@
 
 # new
 
+## 2016-05-24
+
+  - Status
+    - Halfway through my PIP, new manager still seems awesome
+    - Project Mongoose is hard but fun in its own way
+    - Bought a motorcycle
+      - Maybe I shouldn't ride when Vyvanse is wearing off?
+    - Raine's doing better
+    - Visited my sister two weeks ago
+    - Teaching Tamara and maybe Martha
+    - Working with Nicole
+  - How am I
+    - Overall, good
+    - Sleeping well, eating more regularly (except today)
+    - Frustrated about concentration but manager and co-workers happy
+    - Noticed yesterday that I didn't have both of one of my pills
+  - Progress
+    - Everything on hold until June 21st
+  - Questions
+    - ...
+
 ## 2016-04-05
 
   - Status
