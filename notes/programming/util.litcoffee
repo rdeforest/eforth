@@ -28,6 +28,7 @@ Which object controls this inherited object member?
 
         return undefined
 
+
 It's nice to pretty-print things sometimes:
 
       nativeDef: nativeDef = (name) -> "function #{name}() { [native code] }"
@@ -89,6 +90,7 @@ It's nice to pretty-print things sometimes:
           else
             renderParent parent
         ).join "\n\n"
+
 
 That's what we're doing here.
 

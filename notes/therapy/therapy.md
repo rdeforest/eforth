@@ -6,18 +6,29 @@
     - Concrete item / 'anchor'
     - Poker chips?
     - sand timer
-  - take blood pressure
-    - add to mood app?
-    - get a health tracking wearable?
-
-- When I don't know what to do
-  - What is the question? What would it mean for this to not be a problem,
-    etc.
-  - "Should we talk about this more or should I talk to someone else?"
-  - Seek consensus
-  - (nothing new here)
 
 # new
+
+## 2016-05-24
+
+  - Status
+    - Halfway through my PIP, new manager still seems awesome
+    - Project Mongoose is hard but fun in its own way
+    - Bought a motorcycle
+      - Maybe I shouldn't ride when Vyvanse is wearing off?
+    - Raine's doing better
+    - Visited my sister two weeks ago
+    - Teaching Tamara and maybe Martha
+    - Working with Nicole
+  - How am I
+    - Overall, good
+    - Sleeping well, eating more regularly (except today)
+    - Frustrated about concentration but manager and co-workers happy
+    - Noticed yesterday that I didn't have both of one of my pills
+  - Progress
+    - Everything on hold until June 21st
+  - Questions
+    - ...
 
 ## 2016-04-05
 
