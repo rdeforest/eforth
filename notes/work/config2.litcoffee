@@ -15,18 +15,16 @@
       constructor: (info) ->
         super info
         {@parent} = info
-        @_Tree = kids: = []
+        @_Tree = kids: new Set []
 
       hasAncestor: (ancestor) ->
         ancestor is this or @parent?.hasAncestor ancestor
 
       addChild: (kid) ->
-        if not (kid in @_Tree.kids)
-          @_Tree.kids.push kid
+        @_Tree.kids.add kid
 
       removeChild: (kid) ->
-        if -1 < idx = @_Tree_kids.indexOf kid
-          @_Tree.kids.splice idx, 1
+        @_Tree.kids.delete kid
 
       ancestors: ->
         if @parent
@@ -34,11 +32,21 @@
         else
           [this]
 
-      children: -> _.union [], @_Tree.kids
+      children: -> @_Tree.kids.values()
 
       descendents: ->
         kids = @children()
-        kids.concat _.flatten kids.map (kid) -> kid.children()
+        kids.concat _.flatten kids.map (kid) -> kid.descendents()
+        kids
+
+      traverse: (fn) ->
+        results = [fn this]
+        
+        for kid in @children()
+          results.push kid.traverse fn
+
+        results
+
 
 # Trees of Named Things
 
@@ -52,7 +60,7 @@ matching purposes.
 
         {@name} = info
 
-# A configuration is a default map and overrides
+A configuration is a default map and overrides
 
     class Config extends Tree
       constructor: (info) ->
@@ -62,13 +70,11 @@ matching purposes.
 
         @_Config =
           basedOn: basedOn
-          cachedBase: _.extend {}, basedOn.current(), fetched: moment()
+          cachedBase: _.extend {}, basedOn
+          cacheFetched: moment()
           overrides: {}
 
-      get: (key) ->
-        
-
-# Special cases override the match function
+Special cases override the match function
 
       matchesContext: (context) -> true
 
