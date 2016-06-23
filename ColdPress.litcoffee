@@ -33,6 +33,21 @@
         @objs.push o
         return o
 
+      lookupName: (name) ->
+        id = @names[name]
+
+        if 'number' isnt typeof id
+          throw new Error "~namenf"
+
+        @objs[id]
+
+      destroy: (o) ->
+        if not o instanceof ColdObject
+          throw Error "db.destroy called with non-object"
+
+        if not @objs[o.id]
+          throw Error "~objnf"
+
 ## Messages
 
 - sender, caller, definer, this, methodName, args

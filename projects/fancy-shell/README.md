@@ -5,12 +5,13 @@ things by default.
 
 # Features
 
+  - feature modules
   - autocompletion
-  - screen
+  - screen/tmux
   - ssh-agent
   - LANG
   - 256 colors
-  - prompt
+  - smarter prompt
   - config mgmt (small-projects/configs)
   - staged config separate from git repo
     - so that modifications don't show up in git status
