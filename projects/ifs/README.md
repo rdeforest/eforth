@@ -56,9 +56,10 @@ constant the vector members get multiplied by.
 class LinearIFunction extends IFunction
   constructor: ->
     super paramNames:
-      scale: {1,1}
-      skew: {0,0}
-      shift: {0,0}
+      scale: [1,1]
+      skew: [0,0]
+      shift: [0,0]
+      rotate: 0
 
 ```
 
