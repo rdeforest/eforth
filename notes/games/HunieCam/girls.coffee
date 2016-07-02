@@ -64,6 +64,10 @@ class Girl
 
   pals: -> _.without (_.flatten _.pluck @traits, 'girls'), this
 
+  level: -> @skill + @style - 2
+
+  cost: -> 2 ** @level()
+
   pathsTo: (dest, seen = [this]) ->
     paths = []
 

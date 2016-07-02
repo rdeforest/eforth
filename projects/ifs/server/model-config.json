@@ -43,5 +43,9 @@
   "IFSystem": {
     "dataSource": "db",
     "public": true
+  },
+  "ParameterDescription": {
+    "dataSource": "db",
+    "public": true
   }
 }

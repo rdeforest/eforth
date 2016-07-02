@@ -1,17 +1,20 @@
 # Iterated Function System toy
 
 A system is a colleciton of transforms. A transform is a function and some
-parameters. The transform applies
+parameters. The system applies each transform to the current data set then
+merges the results. The parameters modify the behavior of the function they're
+associated with. For example, one parameter might be 'scale' and it might be a
+constant the vector members get multiplied by.
 
 # Models
 
 ## IFunction
 
-  - does
-    - transformPoint {x, y, ...} -> {x1, y1, ...}
   - has
     - parameterNames
     - code
+  - does
+    - transform vector => newVector 
   - hasMany
     - Transorms
 
@@ -26,17 +29,19 @@ parameters. The transform applies
 ## PointTransform extends Transform
 
   - does
-    - transformPoint {x, y}
+    - transformPoint [x, y]
 
 ## ImageTransform extends Transform
 
+  - has
+    - ctx
   - does
-    - transformImage (ctx)
+    - transformImage
 
 ## IFSystem
 
   - does
-    - renderFrame
+    - iterate
   - has
     - name
   - hasMany
@@ -51,9 +56,10 @@ parameters. The transform applies
 class LinearIFunction extends IFunction
   constructor: ->
     super paramNames:
-      scale: {1,1}
-      skew: {0,0}
-      shift: {0,0}
+      scale: [1,1]
+      skew: [0,0]
+      shift: [0,0]
+      rotate: 0
 
 ```
 

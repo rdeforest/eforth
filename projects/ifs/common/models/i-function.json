@@ -19,7 +19,16 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "parameters": {
+      "type": "hasMany",
+      "model": "ParameterDescription"
+    },
+    "transforms": {
+      "type": "hasMany",
+      "model": "Transform"
+    }
+  },
   "acls": [],
   "methods": {}
 }

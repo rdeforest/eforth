@@ -1,0 +1,25 @@
+- Do as little as possible
+  - Automate what you can't stop doing
+  - Document what you can't automate
+- Humans are bad at
+  - consistency
+  - attention to detail
+  - thinking before we act
+  - doing things under pressure
+- Discoverability
+- Sane defaults
+- No settings duplicated
+- Define your terms
+- You can't improve what you don't measure
+- Be careful what you measure to avoid motivating unwanted actions
+- Fail safe
+- Test your assumptions
+- Plan your dive; dive your plan
+- Group things in sets of four or less
+  - "the two things" generalized to be more practical
+- Good intentions don't work; mechanisms work
+  - Develop mechanisms which trigger useful activities
+  - But be careful not to waste human energy or time
+  - Good: track document freshness and alert on stale docs
+  - Bad: reviewing docs more often than they are used
+  - Ugly: maintaining docs which are never used
