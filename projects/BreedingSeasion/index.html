@@ -11,19 +11,56 @@
 </head>
 <body>
 <div id="main">
+<!--
 <embed pluginspage="http://www.macromedia.com/go/getflashplayer"
   src="BreedingSeason.swf"
   type="application/x-shockwave-flash" >
+  -->
 </div>
+
 <script>
 $(function ($) {
-  var div = $("#main")[0];
-  div.style.position = "fixed";
+  var url = new URL(document.URL);
+  var version = url.hash.substr(1) || "current";
+  var div = $("#main");
+  var base = url.origin + url.pathname;
+  var el = createEmbed(base, version);
+  div.append(el);
+  div.css("position", "fixed");
+
+  function cacheBastion (op, memberName, ...args) {
+    if (op === "get")
+      return window.caches[memberName];
+
+    if (op !== "call")
+      return undefined;
+
+    return window.caches[memberName].apply(window.caches, args);
+  }
+
+  // debug:
+  window.debug = {
+      cacheBastion: cacheBastion,
+      createEmbed: createEmbed,
+      version: version,
+      base: base,
+      div: div,
+      url: url,
+      el: el,
+      adjustLayout: adjustLayout
+    };
 
   $(window).on("resize", adjustLayout);
   adjustLayout();
 
-  function adjustLayout () {
+  function createEmbed(base, version) {
+    var el  = $('<embed type="application/x-shockwave-flash">');
+    el[0].src  = base + "/versions/" + version + "/BreedingSeason.swf";
+    return el;
+  }
+
+  function adjustLayout() {
+    var div = $("#main")[0];
     var h = window.innerHeight;
     var w = window.innerWidth;
     var rightWidth = h * 4 / 3;
