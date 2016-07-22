@@ -14,6 +14,70 @@
   - the engine handles the network and tasks
   - bounding with persistence is just book-keeping
 
+# Different from ColdMUD
+
+- Object messages are asynchronous
+ - Data changed before message processing has resolved is not persisted or
+   exposed to other "threads"
+ - A "thread" is associated with an external event
+  - network, timeout, process signal, etc
+ - At the start of a message event, the event gets a unique ID and a pointer
+   to a version of the knowledge tree at the start of the thread
+ - Changes within the event (including outbound I/O) are saved up until it
+   reaches some sort of conclusion:
+   - timeout
+   - out of "ticks"
+   - originating Promise resolved or rejected
+
+    class ExternalMessageEvent
+      constructor: ({@db, @message, @timeout = 1000}) ->
+        @id = Symbol()
+        @worldView = @db.snapshot()
+        @changes = []
+        @rolledBack = @committed = false
+
+      start: ->
+        @timeoutTask = setTimeout @timedOut.bind(this), @timeout
+
+        @message.send via: this
+          .then      => @commit()
+          .catch (e) => @rollback e
+
+      commit: ->
+        if @timeoutTask
+          clearTimeout @timeoutTask
+          @timeoutTask = undefined
+
+        if @committed
+          return
+
+        if @rolledback
+          throw new Error "Can't commit, already rolled back"
+
+        try
+          newWorld = @db.logChanges @changes
+          @committed = true
+        catch e
+          @rollback e
+          return
+
+        try
+          @message.reply result: newWorld
+
+      rollback: (e) ->
+        if @rolledback
+          return
+
+        if @committed
+          throw new Error "Can't roll back, already committed"
+
+        @rolledBack = true
+        @message.reply error: e
+
+      timedOut: ->
+        @rollback new Error "Event ran out of processing time"
+
+
 # Meta-object protocol
 
 - Implement Cold's inheritance and data models
@@ -21,32 +85,40 @@
 
 ## DB
 
+The DB handles the object lifecycle, including persistence and versioning.
+
     class ColdDB
       constructor: ->
-        @objs = []
-        @names = {}
-        @nextId = 0
+        @log = []
+        @current = {}
         @_initMinimal()
 
+      _initMinimal: ->
+        sys = @create()
+        root = @create()
+
+        @addParent sys, root
+
+      snapshot: ->
+        snap = Object.assign {}, @current
+
       create: ->
-        o = new ColdObject @nextId++
-        @objs.push o
+        o = new ColdObject
+        @logChanges [ { newObject: o, id: o.id } ]
         return o
 
-      lookupName: (name) ->
-        id = @names[name]
+      lookup: (id) ->
+        if not o = @objs[id]
+          throw new Error "~objnf"
 
-        if 'number' isnt typeof id
-          throw new Error "~namenf"
+        return o
 
-        @objs[id]
+      destroy: (id) ->
+        o = @lookup id
+        @dieing[id] = o
+        @objs[id] = null
 
-      destroy: (o) ->
-        if not o instanceof ColdObject
-          throw Error "db.destroy called with non-object"
 
-        if not @objs[o.id]
-          throw Error "~objnf"
 
 ## Messages
 
@@ -100,6 +172,12 @@ reference so that the definer knows who the sender is.
 
 ## ColdObject
 
+ColdObject handles the MOP:
+- add/remove parent
+- add/remove objectVar
+- add/remove method
+- receive message
+
     class ColdObject
       constructor: (@id) ->
         @ownData = {}
@@ -151,27 +229,3 @@ method.
 - How to ensure children of different versions of a parent behave well?
  - engineering?
 
-## Database
-
-    class ColdDB
-      constructor: ->
-        @ready = false
-        @dbTop = 0
-        @objects = {}
-        @tasks = {}
-
-        @_initMinimal()
-
-      _initMinimal: ->
-        sys = @create()
-        root = @create()
-
-        @addParent sys, root
-
-      resumeFromDir: (dir) ->
-
-      create: ->
-        id = @dbTop++
-        @objects[id] = new ColdObject id
-
-      addParent: (subject, parent) ->
