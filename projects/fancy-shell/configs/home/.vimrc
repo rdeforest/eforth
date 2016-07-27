@@ -2,6 +2,9 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
+filetype plugin indent on
+autocmd FileType litcoffee runtime ftplugin/coffee.vim
+
 set   smartindent
 set   autoindent
 set   expandtab
@@ -14,7 +17,7 @@ set   softtabstop=2
 set   background=dark
 
 set   linebreak
-set   showbreak=\ 
+set   showbreak=\
 set   ts=2
 
 set   backspace=indent,eol,start
@@ -31,3 +34,4 @@ set tw=78
 set nofoldenable
 
 let g:vim_markdown_fenced_languages = ['coffee=coffee', 'vim=vim', 'c=c']
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
