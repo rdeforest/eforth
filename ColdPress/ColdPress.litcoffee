@@ -29,3 +29,17 @@ reference so that the definer knows who the sender is.
           self: @referred
           definer: @referred.matchMethod @referrer, methodName, args
 
+# Role Oriented Programming (ROP)
+
+ColdEngine is built on a ROP system such that, for example, ColdObject has the
+roles ColdInheritor and ColdMessageHandler. ColdMessageHandler has the roles
+ColdStateContainer, ColdMessageReceiver, ColdMethodDefiner and
+ColdMessageSender.
+
+## Roles, how do?
+
+# Cold vs CORVID
+
+ColdPress is the name of the CORVID Engine, its definitions and
+implementations.
+

@@ -29,7 +29,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export EDITOR=$(which vim)
-export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin:/sbin:/usr/sbin
 export PS1='\n\u@\h:\w\n\$ '
 
 alias vi=$EDITOR
