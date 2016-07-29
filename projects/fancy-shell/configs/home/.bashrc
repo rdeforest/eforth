@@ -1,4 +1,3 @@
-# If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 #. $HOME/bin/agent-mgr
@@ -34,8 +33,6 @@ export PATH=$PATH:~/bin
 export PS1='\n\u@\h:\w\n\$ '
 
 alias vi=$EDITOR
-
-export GOPATH=$HOME/goworkspace
 
 ulimit -c unlimited
 
