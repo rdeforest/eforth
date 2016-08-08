@@ -62,8 +62,21 @@ extension to CoffeeScript to support late var declarations.
 
 # Er, wait
 
+Deconstructors turn a value into a string which, when eval'd, produce
+something very like the value they were constructed with.
+
+To handle cycles and other traps we name every object we see when
+deconstructing a value so we can reference it later when composing a
+representation of it.
+
+For functions we use .toString() to get the code and we check for Object
+properties which we also generate code to restore.
+
+    indent = (list, width) -> list.map (el) -> " ".repeat(width) + el
+
+
     class Deconstructor
-      constructor: (@value, opts, @refs = new Map) ->
+      constructor: (@value, opts = {}, @refs = new Map) ->
         @opts = Object.assign {
             indent: 2
             extraParens: false
@@ -92,14 +105,16 @@ extension to CoffeeScript to support late var declarations.
           "var #{ref.name} = #{ref.wrapper};"
 
       toFunction: ->
+        functionBody =
+          @varsDecls()
+            .concat [
+                "return #{JSON.stringify @value};"
+              ]
+
         [ "(function () {"
-          (@varsDecls()
-            .concat [ "return ( #{JSON.stringify @value} )" ]
-            .map (l) -> " ".repeat indent)...
+          indent functionBody, @opts.indent
           "})()"
         ]
-
-      _indent: (list, width) -> list.map (el) -> " ".repeat(width) + el
 
       toList: (listSoFar = @ref) ->
         if @opts.extraParens
@@ -107,7 +122,7 @@ extension to CoffeeScript to support late var declarations.
             [ "( #{listSoFar[0]} )" ]
           else
             [ "( " + listSoFar[0]
-              @_indent listSoFar[1..], indent
+              indent listSoFar[1..], @opts.indent
               ")"
             ]
         else
@@ -118,6 +133,7 @@ extension to CoffeeScript to support late var declarations.
 
 
     class PrimDecon extends Deconstructor
+
 
     class ObjDecon extends Deconstructor
       constructor: (args...) ->
@@ -140,18 +156,35 @@ extension to CoffeeScript to support late var declarations.
         [
         ]
 
+
+XXX: Need to handle native code somehow
+XXX: Also need to decompile the JavaScript to find a bind references
+For example,
+
+    exampleValue = null
+
+    exampleFn = -> exampleValue
+
+The binding of exampleValue in the function to the one in the outer context
+can only be restored if the eval of the function code happens in the same
+context that exampleValue was defined in.
+
     class FnDecon extends ObjDecon
       constructor: (args...) ->
         super args...
         @code = @value.toString().split "\n"
 
       toList: ->
+        fnStr = "eval (" + @code + ")"
         objStr = super()
-        fnStr = "(" + @code + ")"
-        [ "function () {",
-          "  Object.assign #{fnStr}, #{objStr}"
-          "  return fn"
+
+        [ "(function () {",
+          "  fn = #{fnStr};"
+          "  Object.assign(fn, #{objStr});"
+          "  return fn;"
+          "})()"
         ]
+
 
     class SymDecon extends ObjDecon
       constructor: (args...) ->
