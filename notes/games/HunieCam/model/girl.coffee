@@ -1,5 +1,21 @@
-class Girl
-  constructor: ({@name, @skill, @style, @traits}) ->
+Backbone = require 'backbone'
+
+Girls = Backbone.Collection.extend
+  model: Girl
+
+Girl = Backbone.Model.extend
+  genes: [] # innate Traits
+  items:  []
+  followers: {} # traits + items
+  clock: require 'clock'
+
+  addItem: (item) ->
+
+  startTask: (building) ->
+
+###
+
+  initialize: ({@name, @skill, @style, @traits}) ->
     realMe = this
 
     {girls, traits} = info
@@ -45,7 +61,6 @@ class Girl
 
     return paths
 
-###
 class Hunie
   constructor: (@name, info = Hunie.gameGirls[@name]) ->
     {@traits, skill, style} = info
