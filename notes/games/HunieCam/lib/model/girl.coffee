@@ -1,17 +1,41 @@
 Backbone = require 'backbone'
+_        = require 'underscore'
 
 Girls = Backbone.Collection.extend
   model: Girl
 
+pointsToLevel = (points) ->
+  levels = [-Infinity, 25, 75, 150, 250, Infinity]
+
+  1 + levels.findIndex (required) -> points < required
+
 Girl = Backbone.Model.extend
+  initialize: (@town) ->
+
   genes: [] # innate Traits
-  items:  []
-  followers: {} # traits + items
-  clock: require 'clock'
+  items: []
+  stylePts: 0
+  skillPts: 0
 
+  # derived values
+  style:     -> pointsToLevel @style
+  skill:     -> pointsToLevel @skill
+
+  level:     -> @skill() + @style() - 2
+
+  traits:    -> genes.concat _.pluck items, 'trait'
+  fans:      -> _.sum @traits().map (t) -> @town.traitFans(t)
+
+  wage:      -> 2 ** @level * @town.wageDiffMod
+  camDraw:   -> @fans * @town.camUpgrade * (@skill + 1) / 4
+  photoDraw: -> @style * (@style + 4) * @town.photoUpgrade
+
+  # mutators
   addItem: (item) ->
+  delItem: (item) ->
 
-  startTask: (building) ->
+  addStyle: -> @style++
+  addSkill: -> @skill++
 
 ###
 
