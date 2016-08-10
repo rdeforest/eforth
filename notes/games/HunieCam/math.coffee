@@ -1,95 +1,31 @@
-_ = require 'underscore'
+{without, min, pluck, union} = require 'underscore'
 
-{unique, memoize, singleton} = require './singleton'
 require './formatting' # extends String
 
 {gameGirls, gameItems, gameResources} = require './game-data'
 
 
-class Building
-  constructor: (@maxTime = 4 * 60) ->
-    @uses = 0
-    @town = new Town
-
-  nextUseOutput: (girl) ->
-    output = {}
-
-    for name, resource in resourceNames
-      if 'function' is typeof this[fName = 'nextUse' + name]
-        output[resource.name] = this[fname] girl
-
-  nextUseTime: -> _.min [@maxTime, (Math.ceil(@uses / 2) + 1) * 15]
-
-  use: (girl) -> @uses++
-
-  click: -> # virtual method, but it's OK to not override it
-
-
-class TrainingBuilding extends Building
-  constructor: (@skill) ->
-    super undefined, 8
-
-  # Depends on girl's skill/style, don't know formula yet
-  nextUseTime: (girl) -> girl.attr[@skill].
-
-  click: (girl) ->
-    girl.attr[@skill].addPoints @town.gatherRate[@skill]
-
-
-class ResourceBuilding extends Building
-  constructor: (maxTime) ->
-    super undefined, maxTime
-
-
-class CamBuilding extends ResourceBuilding
-  constructor: ->
-    super 12
-
-  nextUseOutput: (girl) ->
-    _.extend super girl,
-      money: girl.camGross()
-      fans: girl.camFans()
-
-
-class PhotoBuilding extends ResourceBuilding
-  constructor: ->
-    super 8
-
-  nextUseOutput: (girl) ->
-    _.extend super girl,
-      fans: girl.photoFans()
-
-
+ignore: ->
 # There can be only one town, obviously.
-class Town
-  constructor: singleton ->
-    @cam = new CamBuilding
-    @photo = new PhotoBuilding
-    @hardMode = false
-    @girls = []
-    @worldClock = 0 # minutes
+  class Town
+    constructor: ->
+      if Town.singleton
+        return Town.singleton
+      Town.singleton = this
+      @cam = new CamBuilding
+      @photo = new PhotoBuilding
+      @hardMode = false
+      @girls = []
+      @worldClock = 0 # minutes
 
-  rockHard: @hardMode and 3 or 1
+    rockHard: @hardMode and 3 or 1
 
-  promoRates: -> # will return $ / fan
-
-
-class Trait
-  constructor: memoize (@name) ->
-    Trait.traits[@name] = this
-
-    @girls = []
-    @items = []
-    @fans = 0
-
-  # XXX: WELL NOW HERE'S A CODE SMELL
-  addGirl: (girl) -> @girls = _.union @girls, [girl]
-  addItem: (item) -> @items = _.union @items, [item]
+    promoRates: -> # will return $ / fan
 
 
 class HunieItem
   constructor: (@name, info = HunieItem.gameItems[@name]) ->
-    _.extend this, info
+    Object.assign this, info
 
 class HunieJob
   constructor: (@name, @building) ->
@@ -124,7 +60,7 @@ class Skill
 class Hunie
   constructor: (@name, info = Hunie.gameGirls[@name]) ->
     {@traits, skill, style} = info
-    @attr = _.extend {}, @startAttr =
+    @attr = Object.assign {}, @startAttr =
       skill: new Skill skill
       style: new Style style
     @items = []
@@ -133,9 +69,9 @@ class Hunie
     @time = 0
 
   allTraits: ->
-    @traits.concat _.pluck @items, 'trait'
+    @traits.concat pluck @items, 'trait'
 
-  fans: -> Math.sum _.pluck @allTraits(), 'fans'
+  fans: -> Math.sum pluck @allTraits(), 'fans'
     
   itemEffect: (n, valueName) ->
     n = item[valueName] n for item in @items when item[valueName]
@@ -161,8 +97,8 @@ class Hunie
     item.girls.push this
 
   itemLost: (item) ->
-    @items = _(@items).without item
-    item.girls = _(item.girls).without this
+    @items     = without @items     item
+    item.girls = without item.girls this
 
   level: -> @skill + @style - 2
 
@@ -173,6 +109,6 @@ class Hunie
   camNet: ->
     (@camGross()) - (@camPay(@town.cam.nextUseTime()))
 
-_(root).extend
+Object.assign global,
   Hunie: Hunie
   Town: Town

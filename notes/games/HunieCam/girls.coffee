@@ -1,3 +1,11 @@
+
+###
+
+----------------------------------------------
+        Hella deprecated
+----------------------------------------------
+        
+
 _ = require 'underscore'
 require './formatting' # extends String
 
@@ -6,7 +14,7 @@ module.exports = info =
   traits: {}
   fans: {}
   install: ->
-    _.extend root,
+    Object.assign global,
       info.girls
       info.traits
       info.utils
@@ -109,7 +117,7 @@ for name, girl of girlData
   console.log girl
   new Girl girl
 
-_.extend info,
+Object.assign info,
   Girl: Girl
   utils:
     palsOf: (pals) ->
@@ -138,7 +146,7 @@ _.extend info,
 
       return morePals
 
-_.extend info.utils,
+Object.assign info.utils,
     girls: info.girls
     traits: info.traits
     pickPosition: pickPosition = (x, y, cell) ->
@@ -185,10 +193,5 @@ _.extend info.utils,
           (traits.map (t) -> t in girl.traits)...
         ]
 
-
-###
-
-addFn = (name, fn) ->
-  info[name]
 
 ###

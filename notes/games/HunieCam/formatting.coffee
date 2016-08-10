@@ -1,6 +1,4 @@
-_ = require 'underscore'
-
-_.extend String.prototype,
+Object.assign String.prototype,
   left: (w) ->
     if w < @length
       return this.toString()
