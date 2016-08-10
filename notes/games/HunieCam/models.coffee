@@ -6,5 +6,5 @@ models =
   Building : "./building"
   Job      : "./job"
 
-for name, module of models
-  module.exports[name] = require module
+(require './bp') models, (models) ->
+  module.exports = models

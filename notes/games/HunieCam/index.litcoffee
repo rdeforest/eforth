@@ -1,6 +1,8 @@
 Doing this over right
 
-    module.exports =
+    libs =
       models: require './models'
-      sim: require './simulation'
+      # more to come obviously
 
+    (require './bp') libs, (libs) ->
+      module.exports = libs
