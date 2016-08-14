@@ -18,32 +18,33 @@ first cig/booze visit is 2.5h
 
 module.exports =
   townUpgradeEffects:
-    accounting   : [2?, 3?, 5, 10]
-    automation   : [15?, 12, 10]
-    training     : [2]
-    community    : [2, 3]
-    aesthetics   : [2]
+    accounting   : [2, 3, 5, 10, 20, 40, 80, 160, 250, 500]
+    automation   : [15, 12, 10, 8,    6,  4,  2]
+                 #   4   5   6  7.5  10  15  30
+    training     : [2, 3]
+    community    : [2, 3, 5, 8]
+    aesthetics   : [2, 3]
 
   townUpgradesCosts:
-    staffing     : [10, 25, 100]
-    accounting   : [20, 50, 100, 250]
-    capacity     : [50, 500]
-    inventory    : [50, 250, 2500]
-    productivity : [100, 1000, 10000, 100000]
-    automation   : [20, 50]
-    training     : [250]
-    community    : [50, 250]
-    aesthetics   : [250]
-    servers      : [50, 500, 5000, 50000]
-    hardware     : [50, 500, 5000, 50000]
-    advertising  : [100]
+    staffing     : [ 10,   25,  100, 250,      1000, 2500,       10000]
+    accounting   : [ 20,   50,  100, 250, 500, 1000, 2500, 5000, 10000]
+    capacity     : [ 50,        500,           5000,             10000, 25000, 50000]
+    inventory    : [ 50,        250,           2500]
+    productivity : [            100,           1000,             10000,               100000]
+    automation   : [ 20,   50,  150, 500,      2500,             10000, 25000]
+    training     : [            250,           1000]
+    community    : [ 50,        250,           1000,   4000]
+    aesthetics   : [            250,           1000]
+    servers      : [ 50,        500,           5000,             50000]
+    hardware     : [ 50,        500,           5000,             50000]
+    advertising  : [            100, 350,      1500,   5000,     10000]
 
   durations:
     # uncertain of effect of style and skill on these two
     photoShoot:   (style, visits, rockHard) -> 15 * Math.min 32, style + (visits - 1) >> 1
     camShoot:     (skill, visits, rockHard) -> 15 * Math.min 32, skill + (visits - 1) >> 1
-    shopping:     (style, rockHard) -> ([8])[style - 1]
-    stripping:    (skill, rockHard) -> ([8])[skill - 1]
+    shopping:     (style, rockHard) -> 8 + (style - 1) * 12
+    stripping:    (skill, rockHard) -> 8 + (skill - 1) * 12
     cigAndBooze:  (rockHard) -> 6
     talentSearch: (visits) -> 4 + Math.min(visits, 5) * 6
     toyStore:     (visits) -> Math.min(visits + 1, 4) * 8
