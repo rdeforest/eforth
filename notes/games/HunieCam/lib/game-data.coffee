@@ -1,4 +1,53 @@
+###
+
+resting is maybe 32 quarter hours * precent
+as in
+restTime = (stress) ->
+  quarters = Math.ceil(stress / 100 * 32)
+  hours: quarters >> 2, minutes: (quarters % 4) * 15
+
+-  8: 0:45 -  3
+- 17: 1:15 -  5
+- 20: 1:30 -  6
+- 31: 2:30 - 10
+- 96: 7:45 - 31
+
+first cig/booze visit is 2.5h
+
+###
+
 module.exports =
+  townUpgradeEffects:
+    accounting   : [2?, 3?, 5, 10]
+    automation   : [15?, 12, 10]
+    training     : [2]
+    community    : [2, 3]
+    aesthetics   : [2]
+
+  townUpgradesCosts:
+    staffing     : [10, 25, 100]
+    accounting   : [20, 50, 100, 250]
+    capacity     : [50, 500]
+    inventory    : [50, 250, 2500]
+    productivity : [100, 1000, 10000, 100000]
+    automation   : [20, 50]
+    training     : [250]
+    community    : [50, 250]
+    aesthetics   : [250]
+    servers      : [50, 500, 5000, 50000]
+    hardware     : [50, 500, 5000, 50000]
+    advertising  : [100]
+
+  durations:
+    # uncertain of effect of style and skill on these two
+    photoShoot:   (style, visits, rockHard) -> 15 * Math.min 32, style + (visits - 1) >> 1
+    camShoot:     (skill, visits, rockHard) -> 15 * Math.min 32, skill + (visits - 1) >> 1
+    shopping:     (style, rockHard) -> ([8])[style - 1]
+    stripping:    (skill, rockHard) -> ([8])[skill - 1]
+    cigAndBooze:  (rockHard) -> 6
+    talentSearch: (visits) -> 4 + Math.min(visits, 5) * 6
+    toyStore:     (visits) -> Math.min(visits + 1, 4) * 8
+
   gameResources:
     Time:     name: 'time',  unit: 'minute'
     Money:    name: 'money'  unit: 'dollar'
