@@ -38,17 +38,17 @@ I want three things:
 
 - Dynamic Safety: A low-friction process for negotiating the life-cycle of components of that minimum bar.
 
-- No additional expectations: The freedom to only meet the minimum bar and no other, without judgement or repercussions.
+- Social Safety: To be trusted by peers and leadership to drive my own ambitions at the pace I'm most comfortable with.
 
-This does not come from a not lack of ambition. It is how I manage my
-anxieties. For me, too much ambition is a far greater problem than not enough.
+This does not reflect a lack of ambition. It is how I manage my anxieties. For
+me, too much ambition is a far greater problem than not enough.
 
 # What I am _not_ asking for
 
 I am not asking that I be held to a lower standard than others. I _am_ asking
-that I not be held to a _higher_ standard. Someone once told me a story about a
-band leader in school who gave them lower grades than less capable students
-because he thought my this person weren't meeting their potential. This kind of
+that I not be held to a _higher_ standard. Someone once told me a story about
+a band leader in school who gave them lower grades than less capable students
+because he thought this person weren't meeting their potential. This kind of
 approach is extremely de-motivating for me.
 
 If I appear to not be applying myself or living up to my potential it is not
