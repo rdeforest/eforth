@@ -27,21 +27,42 @@ metrics to serve that estimation.
 
 I believe I actually work better within a framework which supports that
 objective. Rich may not like the degree to which it does not accurately
-reflect reality, and in a sense I agree with him, but I like to feel safe and
+reflect reality, and in a sense I agree with him, but I like to feel safe in
 knowing that "as long as I do X I'm safe" is a great comfort to me.
 
 # What I want
 
-I want three things:
+## Job Security
 
-- Static Safety: A well defined and easily tracked minimum bar I must meet to remain in good standing with Amazon.
+  - In the present: A well defined and easily tracked minimum bar I must meet to remain in good standing with Amazon.
+  - In the future: A low-friction process for negotiating the life-cycle of components of that minimum bar.
+  - Socially: To be trusted by peers and leadership to drive my own ambitions at the pace I'm most comfortable with.
 
-- Dynamic Safety: A low-friction process for negotiating the life-cycle of components of that minimum bar.
+This is not a lack of ambition. It is how I manage my anxieties. I already have
+too much and too many ambitions. Any added to that are detrimental.
 
-- Social Safety: To be trusted by peers and leadership to drive my own ambitions at the pace I'm most comfortable with.
+## To work side-by-side with others
 
-This does not reflect a lack of ambition. It is how I manage my anxieties. For
-me, too much ambition is a far greater problem than not enough.
+I can work independently, but I don't like it and I believe I'm more
+productive working in tandem with others. In Payments I worked with my
+co-workers to rearchitect our documentation, to address oppressive ticket
+load, to troubleshoot difficult problems, to test HSMs for suitability to our
+mobile payments encryption requirements, and to draw up a proposal to move the
+Payments Secure Zone into AWS. These were very productive adventures.
+
+At my previous position at Fred Hutch I was the only person on my team but I
+worked closely with other teams regularly. I almost never worked alone at
+Disney. Since coming to AWS it has been gratifying to be trusted to be
+productive in isolation, but it has been difficult in a non-technical way and
+I'm certain I could have been more productive working side-by-side with
+people.
+
+Rich and I have talked about this before and I know he understands and agrees,
+and I also know that his hands are somewhat tied in that there's nobody else
+on the team whose time would be better spent working with me. He's trying to
+hire engineers as fast as he can. but he is also competing with the rest of
+the company for talent as evidenced by the recent thread on
+systems-engineers@.
 
 # What I am _not_ asking for
 
@@ -51,5 +72,8 @@ a band leader in school who gave them lower grades than less capable students
 because he thought this person weren't meeting their potential. This kind of
 approach is extremely de-motivating for me.
 
-If I appear to not be applying myself or living up to my potential it is not
-the case.
+If I appear to not be "applying" myself or "living up to my potential" it is
+not the case. Whatever I accomplish is exactly what my potential actually was,
+even if it does not meet some people's expectations for me.
+
+#
