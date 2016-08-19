@@ -76,4 +76,3 @@ If I appear to not be "applying" myself or "living up to my potential" it is
 not the case. Whatever I accomplish is exactly what my potential actually was,
 even if it does not meet some people's expectations for me.
 
-#
