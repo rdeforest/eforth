@@ -10,29 +10,16 @@ patch" the core Node and JavaScript classes.
 
 A Model is a class with extra features.
 
-    Model = (info) ->
-      {name, has, hasMany, belongsTo, does} = info
-
-      if not name
-        throw new Error "Anonymous Model not supported."
+    Model = (name, info) ->
+      { prototype = {}
+        features  = -> false
+      } = info
 
       model = Object.assign Object.create(Model.prototype),
         constructor: this
-        {name}
+        {name, prototype, features}
 
-      for attrName, attrInfo of has or {}
-        MOP.addAttribute model, attrName, attrInfo
-
-      for relName, relInfo of hasMany or {}
-        MOP.addHasMany model, relName, relInfo
-
-      for relName, relInfo of belongsTo or {}
-        MOP.addBelongsTo model, relName, relInfo
-
-      for ifName, ifInfo of does or {}
-        MOP.addIFace model, ifName, ifInfo
-
-      model
+      Model.registered[name] = model
 
     Object.assign Model,
 
@@ -43,6 +30,9 @@ These are methods and properties of Model itself.
 These are the methods and properties for instances of Model, not the instance
 methods for instances of a given Model. Model() creates new models. (model =
 Model())() spawns an instance of model.
+
+Model::prototype is a function so that it can be used to create instances of
+models.
 
       prototype:
         (info) ->
@@ -55,37 +45,24 @@ Model())() spawns an instance of model.
             if 'object' is typeof ret
               instance = ret
 
+        addFeature: (feature) ->
+          @chkMethod fn for fName in feature.does
+          @addMethod fn for fName in feature.does
+
+        chkMethod: (fn) ->
+          if @protected[fn.name]
+            throw new Error "Cannot add method #{name}"
+
+        addMethod: (fn) ->
+          if fn.protected
+            @protected[fn.name] = fn
+
+          this[fn.name] = @constructor.features
+
     Object.assign Model.prototype,
-      does: (iface) ->
-        iface in @interfaces
 
 These are the default/minimum methods and properties on instances of instances
 of Model.
 
-      prototype:
-        does: (iface) -> @constructor.does iface
-
-# Model::instance::as iface, methodName, args...
-
-  Treat target as if it were an instance of 'iface'
-
-        as: (iface, methodName, args...) ->
-          if not iface.does methodName
-            throw new Error "#{methodName} is not a method of #{iface.name}"
-
-          if not @does iface
-            if not iface.worksOn this
-              throw new Error "target doesn't do #{iface.name}"
-
-            return iface.methods[methodName].apply this, args
-
-# Model::instance::create info
-
-        create: (info) ->
-
-# Model::instance::addBelongsTo otherClasses
-
-        addBelongsTo: (others) ->
-
-
+      prototype: {}
 

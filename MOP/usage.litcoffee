@@ -1,19 +1,20 @@
 
-    { Model, IFace, Channel, Attribute } =
-      MOP = require 'mop'
+    { Model, Feature, Validator } = MOP = require 'mop'
 
-    Named = IFace
-      name: 'Named'
+    Feature 'Named',
+      has:
+        name:
+          validator: Validator.string
 
-      receives:
-        nameStr:
-          args: []
-          results: Str
-          fn: -> #MOP.get this, 'name'
+      does:
+        nameStr: -> @get 'name'
 
-    Person = Model
-      name: 'Person'  # for tracebacks
+      initInstance: (info) ->
+        if name = info.name
+          @set 'name', name
 
+
+    Model 'Person',
       has:
         personName: String
 
