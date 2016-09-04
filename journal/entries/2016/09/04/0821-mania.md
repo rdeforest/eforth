@@ -1,3 +1,5 @@
+# Raine's concerns
+
 Raine is worried about me.  She is concerned by what she interprets as
 symptoms of hypomania. After looking into it further I think she is mistaken.
 
@@ -138,4 +140,33 @@ _Following quote not from Wikipedia_
 - I'm not going to get much better. I had been "this way" for almost fourty
   years when I started going to Dr. Roys. If I do get better it's not going to
   be because I'll lose Raine if I don't.
+
+# My concerns
+
+## Eggshells
+
+She's on egg shells, but I'm pretty sure she's also the only person who has
+left an argument in progress without negotiating it.
+
+Further, her attempts to not trigger me make it worse because it's so unusual
+for her to speak up that when she reacts emotionally it sounds like the end of
+the world.
+
+It's a little like how, when she hurts herself, her volume is inversely
+proportional to how serious the wound is. Case in point: when she asked for
+help with her beer spill it sounded like she was furious with me, but she
+didn't think she was angry or that I should have thought that she was. When I
+joked that she has alternate Tuesdays she said, "Do I though?" in a sarcastic
+tone. This was right after I had been at work past 9pm on a Tuesday.
+
+On the other hand, when she's really upset she'll barely talk to me at all and
+then very quietly and slowly.
+
+## How much more can I give?
+
+I gave her Sunday and Thursday nights every week. I've supported her through
+her education and health problems for 15 years. I build and move furniture. I
+encourage her to take care of herself, us and our friends. She does these
+thins, but still seems to look at me like I'm unreliable.
+
 
