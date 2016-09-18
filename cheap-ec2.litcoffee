@@ -63,24 +63,43 @@ This will depend heavily on the student's expectations.
 
 #### Lifecycle
 
+- startup
+- repeated updates to the 'last activity' flag (deadman switch)
+- tentative shutdown
+- actual shutdown
+
 At "startup", create a CloudWatch scheduled alert which triggers a deadman
 switch evaluation.
 
 Easily captured events (e.g. API calls) should update the deadman switch
 status.
 
-When the timer goes off, compare the "last update" value to the "too idle"
-value. If the system is not yet too idle, schedule the next wake-up for a
-little after when the system will have been too idle if nothing happens before
-then.
+When the CloudWatch timer goes off, compare now() - the "last update" value to
+the "too idle" value. If the system is not close to too idle, schedule the
+next wake-up for a little before when the system will have been too idle if
+nothing happens before then.
 
-If the idle checker wakes up and the flag is stale, a fallback check tests
-metrics which are expensive to update regularly, such as the 'w | head | awk
-...' thing.
+If the system _is_ close to too idle, start fallback tests for metrics which
+are expensive to update regularly, such as the 'w | head | awk ...' thing.
 
-If the system _still_ looks idle, send the student a notification which they
-can respond to within some amount of time to abort a shutdown.
+If those tests come up non-idle, update the deadman switch flag accordingly.
+
+Otherwise, send the student a notification which they can respond to within
+some amount of time to abort a shutdown.
 
 If the student doesn't respond, proceeed with shutdown.
 
-####
+#### What needs to be setup
+
+- Control interfaces
+ - Timeouts
+  - idle threshold
+  - last chance timer duration
+ - System config
+  - what 
+- triggers and guts for initiating startup
+ - config mgmt (snapshot of "current" config)
+- Idle checker
+- Shutdown machinery
+
+
