@@ -18,6 +18,7 @@ The meaning of "in use" or "go idle" will have to be partially in the studen't
 control.
 
 ### About the major elements
+
 #### 'In use' / 'Idle'
 
 There are three aspects of this:
@@ -57,3 +58,29 @@ which itself will be defined by the components the student spins up.
 #### Startup
 
 This will depend heavily on the student's expectations.
+
+### Implemetation details
+
+#### Lifecycle
+
+At "startup", create a CloudWatch scheduled alert which triggers a deadman
+switch evaluation.
+
+Easily captured events (e.g. API calls) should update the deadman switch
+status.
+
+When the timer goes off, compare the "last update" value to the "too idle"
+value. If the system is not yet too idle, schedule the next wake-up for a
+little after when the system will have been too idle if nothing happens before
+then.
+
+If the idle checker wakes up and the flag is stale, a fallback check tests
+metrics which are expensive to update regularly, such as the 'w | head | awk
+...' thing.
+
+If the system _still_ looks idle, send the student a notification which they
+can respond to within some amount of time to abort a shutdown.
+
+If the student doesn't respond, proceeed with shutdown.
+
+####
