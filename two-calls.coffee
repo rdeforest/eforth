@@ -111,6 +111,7 @@ classes =
       return el
 
 try
+  Example.run()
 
 catch e
   @log e.msg, e.stack
