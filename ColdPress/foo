@@ -1,0 +1,8 @@
+
+class = constructor + prototype
+instance =
+  .constructor -> constructor
+  Obj.getProto -> prototype
+
+Functions are Objects, but Objects aren't necessarily Functions
+
