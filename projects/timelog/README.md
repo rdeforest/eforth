@@ -14,3 +14,13 @@
     I was taskAlias at moment
 
 ```
+
+# Environment
+
+All env vars prefixed with HWO\_ (How We Operate). The following are listed
+without the prefix.
+
+ suffix | default    | meaning
+--------+------------+---------
+DIR     | $HOME/.hwo | where config and log are persisted
+
