@@ -32,7 +32,8 @@ module.exports = (function() {
   );
 
   var ourEval = function (code) {
-    vm.runInNewContext(code, sandbox, {filename: "sandbox", displayErrors: true});
+    vm.runInNewContext(code, sandbox, {
+      filename: "sandbox", displayErrors: true});
     return sent;
   };
 
