@@ -1,0 +1,78 @@
+[
+  {
+    "fullName": "Container",
+    "src": "(x) -> @__value = x"
+  },
+  {
+    "fullName": "Container.of",
+    "src": "(x) -> new Container x"
+  },
+  {
+    "fullName": "Container.prototype.map",
+    "src": "(f) -> Container.of f @__value"
+  },
+  {
+    "fullName": "autorun",
+    "src": "(g) -> (g[alias] = try require lib) for alias, lib of libs"
+  },
+  {
+    "fullName": "libs",
+    "src": "{\"R\":\"ramda\",\"_\":\"underscore\",\"utils\":\"utils\",\"moment\":\"moment\"}"
+  },
+  {
+    "fullName": "readFile",
+    "src": "(filename) -> new IO -> fs.readFileSync(filename, \"utf-8\")"
+  },
+  {
+    "fullName": "print",
+    "src": "(x) -> new IO -> console.log x; x"
+  },
+  {
+    "fullName": "IO",
+    "src": "(@unsafePerformIO) ->"
+  },
+  {
+    "fullName": "IO.prototype.join",
+    "src": "-> new IO => @.unsafePerformIO().unsafePerformIO()"
+  },
+  {
+    "fullName": "IO.of",
+    "src": "(x) -> new IO -> x"
+  },
+  {
+    "fullName": "IO.prototype.map",
+    "src": "(f) -> new IO R.compose f, @unsafePerformIO"
+  },
+  {
+    "fullName": "Maybe",
+    "src": "(@__value) ->"
+  },
+  {
+    "fullName": "Maybe.of",
+    "src": "(x) -> new Maybe x"
+  },
+  {
+    "fullName": "Maybe.prototype.join",
+    "src": "-> if @isNothing() then Maybe.of(null) else @__value"
+  },
+  {
+    "fullName": "Maybe.prototype.map",
+    "src": "(f) -> if @isNothing() then Maybe.of null else Maybe.of f @__value"
+  },
+  {
+    "fullName": "Maybe.prototype.isNothing",
+    "src": "-> @__value in [null, undefined]"
+  },
+  {
+    "fullName": "join",
+    "src": "(mma) -> mma.join()"
+  },
+  {
+    "fullName": "chain",
+    "src": "R.curry (f, m) -> m.map(f).join()"
+  },
+  {
+    "fullName": "Container.prototype.ap",
+    "src": "(other_container) -> other_container.map @__value"
+  }
+]
