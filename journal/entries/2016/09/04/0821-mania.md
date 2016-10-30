@@ -1,11 +1,9 @@
-# Raine's concerns
-
 Raine is worried about me.  She is concerned by what she interprets as
 symptoms of hypomania. After looking into it further I think she is mistaken.
 
 ## Symptoms, descriptions and my excuses
 
-_Quotes are from Wikipedia._
+_All info from Wikipedia._
 
 ### Pressured Speech
 
@@ -133,40 +131,25 @@ I cannot think of a single time in my life when I demonstrated this symptom.
 
 ## Conclusions
 
-_Following quote not from Wikipedia_
-
 > The conclusion is where you arrive when you stop thinking.
 
-- I'm not going to get much better. I had been "this way" for almost fourty
-  years when I started going to Dr. Roys. If I do get better it's not going to
-  be because I'll lose Raine if I don't.
+- I'm not going to get any better. I've shown some improvement but apparently
+  it does not justify the side-effects and risks.
 
-# My concerns
+- I had been happy but now it seems that was bad, so I prefer to go back to
+  what had been "working" for 39 years.
 
-## Eggshells
+- I am open to suggestions but I don't think Raine and I can salvage our
+  relationship.
 
-She's on egg shells, but I'm pretty sure she's also the only person who has
-left an argument in progress without negotiating it.
-
-Further, her attempts to not trigger me make it worse because it's so unusual
-for her to speak up that when she reacts emotionally it sounds like the end of
-the world.
-
-It's a little like how, when she hurts herself, her volume is inversely
-proportional to how serious the wound is. Case in point: when she asked for
-help with her beer spill it sounded like she was furious with me, but she
-didn't think she was angry or that I should have thought that she was. When I
-joked that she has alternate Tuesdays she said, "Do I though?" in a sarcastic
-tone. This was right after I had been at work past 9pm on a Tuesday.
-
-On the other hand, when she's really upset she'll barely talk to me at all and
-then very quietly and slowly.
-
-## How much more can I give?
-
-I gave her Sunday and Thursday nights every week. I've supported her through
-her education and health problems for 15 years. I build and move furniture. I
-encourage her to take care of herself, us and our friends. She does these
-thins, but still seems to look at me like I'm unreliable.
+    - When I try to explore solutions ("what can we do to increase your
+      safety") she reacts negatively. Actions speak louder than words, and my
+      actions have been supportive for the seven years before and eight years
+      since her symptoms showed up.
 
 
+Raine talks me into seeking therapy and then worries that my therapy is making
+me worse. I actually believe both drinking and therapy have been good for me,
+but I'm getting the feeling I can never satisfy Raine. She seems to think I'm
+going to follow in the footsteps of other men she has been close to (father,
+brothers)
