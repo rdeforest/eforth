@@ -1,0 +1,1 @@
+- should maybe think about Destroy All Software anTerminal?

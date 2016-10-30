@@ -32,6 +32,50 @@ Or perhaps more accurately, applying them to each other.
 
 ## StrongLoop app
 
+### How
+
+- Make a StrongLoop app, run it in AWS
+- Models
+  - Topic
+    - has
+      -    1 String      name
+      -    1 String      description
+      - 0..1 PriorityMod priorityMod
+      - 0..1 Topic       parent
+      - 0..n Topic       children
+      - 0..n Combination ingredientIn
+      - 0..n Activity    activities
+      - 0..n Issues      issues
+    - does
+      - getDerivedPriority
+  - Combination
+    - extends Topic
+    - 2..n Topics as components
+  - Activity
+    - extends Topic
+    - 1..n String 
+  - Issue
+    - extends Topic
+  - PriorityMod
+    - has
+      -    1 Boolean isAbsolute
+      -    1 ModType
+      -    1 Number  value
+  - DerivedPriority extends PriorityMod
+- Interface
+  - Authenticated Public web, preferably OAuth?
+  - Views
+    - Login
+    - Dashboard
+    - Topics
+    - Topic
+    - Combinations
+    - Combination
+    - Activities
+    - Activity
+    - Issues
+    - Issue
+
 ## Trello system
 
 ## Notebook of some sort
