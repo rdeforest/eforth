@@ -21,17 +21,23 @@ Response    |
 #### Client
 
     $ echo "value" | bin/client put "key"
-    $ bin/client | get "key"
+    $ bin/client get "key"
     value
     $ 
 
 #### Server
 
-    $ bin/server
-    Received 'key', size 6
-    Sent     'key', size 6
-    ^C
+    $ cat config.json | bin/server
+    config = {
+      "port": 8069,
+      "objectSizeLimit": 65535,
+      "keySizeLimit": 1023,
+      "objectCountLimit": 1023
+    }
+    events = [
+      { "put": "key", "size": "6" }
+      { "get": "key", "size": "6" }
+    (user hits ^C)
+    ]
     $ 
-
-
 

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+grep -cvE '^ *(#.*)?$' "$@" |
+  awk -F: '{print $2,$1}' |
+  sort -n |
+  column -t
