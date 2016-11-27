@@ -1,0 +1,4 @@
+#!/usr/bin/env coffee
+
+require('coffee-script/lib/coffee-script/command').run()
+require('./repl')()
