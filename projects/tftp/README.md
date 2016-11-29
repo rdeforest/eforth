@@ -7,14 +7,13 @@ Not much else to say!
 ### Models
 
 Name        | Description
-------------+------------
-Blob        | Transferable object
+------------+----------------------------
 Session     | A specific transfer attempt
 Client      | Initiator of a session
 Server      | Other end of a session
+Blob        | Transferable object
 ObjectStore | Mapping from names to blobs
-Request     | 
-Response    | 
+Message     | A packet
 
 ### User interface
 

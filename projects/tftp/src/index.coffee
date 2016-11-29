@@ -17,30 +17,19 @@ module.exports = (injectedRequire = require) ->
     log      = new Logger { stderr }
     action   = new Action { argv }
 
-    new (require './' + action.handler) (
-      # Only provide what is required
+    handler  = require './' + action.handler
+    key      = action.key
+    script   = process.argv[1]
+
+    # Only provide what is required
+    handlerArgs =
       switch action.handler
-        when 'server'
-          Session: require './session'
-          log:     log
+        when 'server' then { log, stdin, stdout      }
+        when 'get'    then { log, stdin, stdout, key }
+        when 'put'    then { log, stdin,         key }
+        else               { script,     stdout      }
 
-          Config:  require './config'
-        when 'get'
-          Session: require './session'
-          log:     log
-
-          key:     action.key
-          stdin:   stdin
-          stdin:   stdout
-        when 'put'
-          Session: require './session'
-          log:     log
-
-          key:     action.key
-          stdin:   stdin
-        else
-          stdout:  stdout
-          script:  process.argv[1]
+    handler handlerArgs
 
   catch e
     log "Last-chance error handler caught this:\n\n" + util.format e

@@ -1,3 +1,12 @@
+
+# This module does too much, needs to be split into
+#  - configuration as a concept
+#    - defaults
+#    - override with an object
+#    - validation
+#  - Reading JSON from a stream
+#  - "complaint" feature
+
 module.exports =
   class Config
     # Dependency injection for easier testing
