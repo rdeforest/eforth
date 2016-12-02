@@ -1,6 +1,8 @@
 OBJECT_KEY_REGEX = /^([^:/]*)(:(\d+))?\/(.*)$/
 MAX_SOCKET_BIND_ATTEMPTS = 10
 
+process = require 'process'
+
 parseKey = (key) ->
   matched = key.match OBJECT_KEY_REGEX
 
@@ -18,6 +20,7 @@ module.exports =
   class Session
     constructor: ({ key }) ->
       @retry = MAX_SOCKET_BIND_ATTEMPTS
+
       [ @host, @port = 69, @name ] =
         parseKey key
 
@@ -50,5 +53,6 @@ class Read extends Session
   fromMessage: ({ message, remoteInfo }) ->
 
 class Write extends Session
+  fromMessage: ({ message, remoteInfo }) ->
 
 Object.assign Session, { Read, Write }
