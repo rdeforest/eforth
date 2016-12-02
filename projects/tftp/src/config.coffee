@@ -9,8 +9,7 @@
 
 module.exports =
   class Config
-    # Dependency injection for easier testing
-    constructor: ({@help, @stdin, @log}) ->
+    constructor: ->
       # https://nodejs.org/api/dgram.html#dgram_dgram_createsocket_options_callback
       @protocol                 = 'udp4'
 
@@ -29,7 +28,8 @@ module.exports =
 
       @promise = new Promise (resolve, reject) ->
         input = new Buffer
-        @stdin
+        {stdin} = require 'process'
+        stdin
           .on 'data',  (data) => @receive  data
           .on 'end',          => @validate input, resolve, reject
           .on 'error', (err)  => @complain err
@@ -53,7 +53,7 @@ module.exports =
 
     finish: (config) ->
       if @complaints.length
+        (require './help')()
         reject new Error "There were problems:\n  " + @complaints.join "\n  "
-        @help()
       else
         resolve config

@@ -14,9 +14,7 @@ parseKey = (key) ->
 choosePort = ->
   Math.floor(Math.random() * (65535 - 1024) + 1024)
 
-module.exports = (injectedRequire = require) ->
-  require = injectedRequire
-
+module.exports =
   class Session
     constructor: ({ key }) ->
       @retry = MAX_SOCKET_BIND_ATTEMPTS
@@ -48,11 +46,9 @@ module.exports = (injectedRequire = require) ->
 
     send: (message) ->
 
-  class Read extends Session
-    fromMessage: ({ message, remoteInfo }) ->
+class Read extends Session
+  fromMessage: ({ message, remoteInfo }) ->
 
-  class Write extends Session
+class Write extends Session
 
-  Object.assign Session, { Read, Write }
-
-  Session
+Object.assign Session, { Read, Write }

@@ -1,39 +1,33 @@
-invokedAsModule = false
+try
+  process  = require 'process'
+  dgram    = require 'dgram'
 
-module.exports = (injectedRequire = require) ->
-  try
-    require = injectedRequire
-    invokedAsModule = true
+  { stdin, stdout, stderr, argv } = process
+  { createSocket } = dgram
 
-    process = require 'process'
-    dgram = require 'dgram'
+  Logger   = require './log'
+  Action   = require './action'
 
-    { stdin, stdout, stderr, argv } = process
-    { createSocket } = dgram
+  log      = new Logger { stderr }
+  action   = new Action { argv }
 
-    Logger   = require './log'
-    Action   = require './action'
+  action.start()
 
-    log      = new Logger { stderr }
-    action   = new Action { argv }
+  ###
+  require './' + action.handler
+  key      = action.key
+  script   = process.argv[1]
 
-    handler  = require './' + action.handler
-    key      = action.key
-    script   = process.argv[1]
+  # Only provide what is required
+  handlerArgs =
+    switch action.handler
+      when 'server' then { log, stdin, stdout      }
+      when 'get'    then { log, stdin, stdout, key }
+      when 'put'    then { log, stdin,         key }
+      else               { script,     stdout      }
 
-    # Only provide what is required
-    handlerArgs =
-      switch action.handler
-        when 'server' then { log, stdin, stdout      }
-        when 'get'    then { log, stdin, stdout, key }
-        when 'put'    then { log, stdin,         key }
-        else               { script,     stdout      }
+  handler handlerArgs
+  ###
 
-    handler handlerArgs
-
-  catch e
-    log "Last-chance error handler caught this:\n\n" + util.format e
-
-setImediate ->
-  if not invokedAsModule
-    module.exports()
+catch e
+  log "Last-chance error handler caught this:\n\n" + util.format e

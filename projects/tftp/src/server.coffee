@@ -1,17 +1,15 @@
-module.exports = (injectedRequire = require) ->
-  require = injectedRequire
+dgram        = require 'dgram'
+EventEmitter = require 'events'
+process      = require 'process'
 
-  dgram        = require 'dgram'
-  EventEmitter = require 'events'
-  process      = require 'process'
+Session      = require './session'
+Config       = require './config'
+Logger       = require './log'
+Message      = require './message'
 
-  Session      = require './session'
-  Config       = require './config'
-  Logger       = require './log'
-  Message      = require './message'
-  
-  log = new Logger
+log = new Logger
 
+module.exports =
   class Server
     constructor: ->
       @sessions = {} # indexed by session.id
