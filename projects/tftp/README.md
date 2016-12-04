@@ -6,14 +6,13 @@ Not much else to say!
 
 ### Models
 
-Name        | Description
-------------+----------------------------
-Session     | A specific transfer attempt
-Client      | Initiator of a session
-Server      | Other end of a session
-Blob        | Transferable object
-ObjectStore | Mapping from names to blobs
-Message     | A packet
+Name        | Description                 | Purpose
+------------+-----------------------------+------------------------------
+Session     | A specific transfer attempt | Hide network protocol details
+Server      | Listener for new sessions   |
+Blob        | Transferable object         | Handles chunking
+ObjectStore | Mapping from names to blobs | Associates names with Blobs
+Message     | A packet                    |
 
 ### User interface
 

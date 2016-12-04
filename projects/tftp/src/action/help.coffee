@@ -1,8 +1,12 @@
 alreadyHelped = false
 
+{ stdout } = require 'process'
+
 module.exports =
   class Help
-    constructor: ({stdout, script}) ->
+    constructor: (@why...) ->
+
+    start: ->
       unless alreadyHelped
         alreadyHelped = true
 
@@ -19,4 +23,10 @@ module.exports =
           To see this text again:
             #{script} help
         """
+
+        if @why.length
+          stdout.write "\nYou were shown this help because:\n  "
+
+      if @why.length
+        stdout.write @why.join "\n  "
 
