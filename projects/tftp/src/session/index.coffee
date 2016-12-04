@@ -3,10 +3,6 @@
 
 conf = new (require '../config')
 
-process = require 'process'
-
-{ Data, Acknowledge, ErrorMessage } = require '../message'
-
 module.exports =
   class Session
     @choosePort: ->
@@ -16,23 +12,26 @@ module.exports =
     constructor: (info = {}) ->
       { @key
         @buffer
-        @retry = Consts.BindRetry
-        @handshakeTimeout = Consts.HandshakeTimeout
-      }
+        @remoteInfo
+        @opts = conf.net.session
+      } = info
 
       if not @buffer
         throw new Error "Buffer parameter is required when constructing a Session."
 
       @lastACKdBlock = 0
 
-    makeSocket: (@remotePort, @localPort = Session.choosePort()->
+      @makeSocket()
+        .then => @start()
+
+    makeSocket: ->
       new Promise (resolve, reject) =>
         @socket = dgram.createSocket conf.net.proto
           .on 'message',   @receive.bind @
           .on 'error',     reject
           .on 'listening', resolve
 
-        @socket.bind @localPort
+        @socket.bind @localPort = Session.choosePort()
 
     # For when a server receives a request
     @fromMessage: ({ message, remoteInfo }) ->
@@ -50,28 +49,6 @@ module.exports =
     resendLast: ->
       @socket.send @lastSent.toBuffer(), @remotePort, @remoteAddress
 
-class Read extends Session
-  receive: ({ message, remoteInfo }) ->
-    switch
-      when message not instanceof Data
-        @reply new ErrorMessage.IllegalOperation message, remoteInfo
-
-      when remoteInfo.port isnt @remotePort
-        @reply new ErrorMessage.UnknownTransferID message, remoteInfo
-
-      when message.blockNumber isnt @lastACKdBlock + 1
-        @resendLast()
-
-      else
-        @lastACKdBlock++
-        offset = message.blockNumber * 512 # defined by RFC 1350
-        message.payload.copy @buffer, offset
-        @reply Acknowledgement.fromData message, remoteInfo
-
-class Write extends Session
-  receive: ({ message, remoteInfo }) ->
-    if not message.blockNumber
-      return @reply ErrorMessage.IllegalOperation message, remoteInfo
-      return @complain "Expected ACK, got #{message.name}"
-
-Object.assign Session, { Read, Write }
+Object.assign Session,
+  require './read'
+  require './write'
