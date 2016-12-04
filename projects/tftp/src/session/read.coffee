@@ -1,4 +1,4 @@
-Session = require './session'
+Session = require '.'
 
 { ReadRequest, Data, Acknowledge, ErrorMessage } = require '../message'
 
