@@ -1,58 +1,77 @@
-OBJECT_KEY_REGEX = /^([^:/]*)(:(\d+))?\/(.*)$/
-MAX_SOCKET_BIND_ATTEMPTS = 10
+# A Session manages the state associated with a multi-message transmission.
+# Message.Read receives a blob; Message.Write sends a blob.
+
+conf = new (require '../config')
 
 process = require 'process'
 
-parseKey = (key) ->
-  matched = key.match OBJECT_KEY_REGEX
-
-  if not matched
-    throw new Error "Key does not match host[:port]/name"
-
-  [ wholeKey, host, colon, port, name ] = matched
-
-  return [ host, port, name ]
-
-choosePort = ->
-  Math.floor(Math.random() * (65535 - 1024) + 1024)
+{ Data, Acknowledge, ErrorMessage } = require '../message'
 
 module.exports =
   class Session
-    constructor: ({ key }) ->
-      @retry = MAX_SOCKET_BIND_ATTEMPTS
+    @choosePort: ->
+      { low, high } = conf.net.clientPort
+      low + Math.floor(Math.random() * (high - low))
 
-      [ @host, @port = 69, @name ] =
-        parseKey key
+    constructor: (info = {}) ->
+      { @key
+        @buffer
+        @retry = Consts.BindRetry
+        @handshakeTimeout = Consts.HandshakeTimeout
+      }
 
-    makeSocket: ->
-      @localPort = choosePort()
-      @socket = dgram.createSocket 'udp4' # XXX: need to abstract 'udp4' out
-        .on 'message', @receive.bind @
-        .on 'error', =>
-          if @retry--
-            @makeSocket()
-          else
-        .on 'listening', =>
+      if not @buffer
+        throw new Error "Buffer parameter is required when constructing a Session."
+
+      @lastACKdBlock = 0
+
+    makeSocket: (@remotePort, @localPort = Session.choosePort()->
+      new Promise (resolve, reject) =>
+        @socket = dgram.createSocket conf.net.proto
+          .on 'message',   @receive.bind @
+          .on 'error',     reject
+          .on 'listening', resolve
+
+        @socket.bind @localPort
 
     # For when a server receives a request
-    fromMessage: ({ message, remoteInfo }) ->
-      if @constructor is Session
-        if klass = message?.newSessionClass
-          return klass.fromMessage { message, remoteInfo }
-        else
-          throw new Error "Session.fromMessage called with invalid message"
+    @fromMessage: ({ message, remoteInfo }) ->
+      if klass = message?.newSessionClass
+        return new klass.fromMessage { key: message.key, remoteInfo }
+      else
+        throw new Error "Session.fromMessage called with invalid message"
 
       @remotePort    = remoteInfo.port
       @remoteAddress = remoteInfo.address
 
-    receive: (message) ->
+    reply: (@lastSent) ->
+      @resendLast()
 
-    send: (message) ->
+    resendLast: ->
+      @socket.send @lastSent.toBuffer(), @remotePort, @remoteAddress
 
 class Read extends Session
-  fromMessage: ({ message, remoteInfo }) ->
+  receive: ({ message, remoteInfo }) ->
+    switch
+      when message not instanceof Data
+        @reply new ErrorMessage.IllegalOperation message, remoteInfo
+
+      when remoteInfo.port isnt @remotePort
+        @reply new ErrorMessage.UnknownTransferID message, remoteInfo
+
+      when message.blockNumber isnt @lastACKdBlock + 1
+        @resendLast()
+
+      else
+        @lastACKdBlock++
+        offset = message.blockNumber * 512 # defined by RFC 1350
+        message.payload.copy @buffer, offset
+        @reply Acknowledgement.fromData message, remoteInfo
 
 class Write extends Session
-  fromMessage: ({ message, remoteInfo }) ->
+  receive: ({ message, remoteInfo }) ->
+    if not message.blockNumber
+      return @reply ErrorMessage.IllegalOperation message, remoteInfo
+      return @complain "Expected ACK, got #{message.name}"
 
 Object.assign Session, { Read, Write }

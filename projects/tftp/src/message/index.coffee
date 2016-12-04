@@ -1,61 +1,33 @@
+{ ReadRequest, WriteRequest } = require './request'
+{ Data, Acknowledgement }     = require './transmission'
+{ ErrorMessage }              = require './error'
+
 module.exports =
   class Message
-    constructor: (@data) ->
+    # Defined by RFC 1350
+    @opcodes:
+      [ undefined, ReadRequest, WriteRequest, Data, Acknowledgement, ErrorMessage ]
 
-    fromBuffer: (buffer) ->
-      if not opClass = Message.opcodes[buffer[0]]
-        opClass = Message
+    constructor: -> # for creating new messages
 
-      return new opcode buffer
+    fromBuffer: (@data) -> # for wrapping received messages
+      opCode = @int16At 0
+
+      if not opClass = Message.opcodes[opCode]
+        throw new Error "Unknown opCode #{opCode}"
+
+      if @constructor isnt Message
+        return opClass.fromBuffer @data
+
+    int16At: (offset) -> @data.readInt16BE offset
 
     stringAt: (offset) ->
       break for end in [offset..@data.length - 1] when @data[end] is 0
 
-      Buffer.from @data, offset, end - offset
+      Buffer.from(@data, offset, end - offset).toString()
 
-    int16At: (offset) -> @data[offset] * 256 + @data[offset + 1]
+    toBuffer: -> @data
 
-    @fromFields: (fields) -> Object.assign @, fields
-
-    @opcodes:
-      [ undefined, ReadRequest, WriteRequest, Data, Acknowledgement, Error ]
-
-class ReadWriteRequest extends Message
-  constructor: (@data) ->
-    @filename = @stringAt 2
-    @mode = @stringAt (2 + @filename.length + 1)
-
-class ReadRequest extends ReadWriteRequest
-class WriteRequest extends ReadWriteRequest
-
-class Transmission extends Message
-  constructor: (@data) ->
-    @blockNumber = @int16At 2
-
-class Acknowledgement extends Transmission
-
-class Data extends Transmission
-  constructor: (@data) ->
-    super @data
-    @payload = Buffer.from @data, 4
-
-class Error extends Message
-  constructor: (@data, fields) ->
-    if fields
-      {@code, @message} = fields
-    else
-      @code = @int16At 2
-      @message = @stringAt 4
-
-    if @constructor is Error and codeClass = Error.codes[@code]
-      return new codeClass @data, fields
-
-  codes:
-    1: EFileNotFound
-    2: EAccessViolation
-    3: EAllocationExceeded
-    4: EIllegalOperation
-    5: EUnknownTransferID
-    6: EFileExists
-    7: ENoSuchUser     #??? TFTP doesn't have users, what is this
-
+for opClass, opCode in Message.opcodes when opClass
+  opClass.opCode = opCode
+  Message[opClass.name] = opClass

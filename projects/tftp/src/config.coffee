@@ -1,59 +1,66 @@
+# @promise = new Promise (resolve, reject) ->
+#   input = new Buffer
+#   {stdin} = require 'process'
+#   stdin
+#     .on 'data',  (data) => @receive  data
+#     .on 'end',          => @validate input, resolve, reject
+#     .on 'error', (err)  => @complain err
 
-# This module does too much, needs to be split into
-#  - configuration as a concept
-#    - defaults
-#    - override with an object
-#    - validation
-#  - Reading JSON from a stream
-#  - "complaint" feature
+# receive: (data) -> @input = @input.append data
+
+indentStr = (s, indent = '  ') -> s.split("\n").join("\n#{indent})")
 
 module.exports =
   class Config
     constructor: ->
-      # https://nodejs.org/api/dgram.html#dgram_dgram_createsocket_options_callback
-      @protocol                 = 'udp4'
+      @net =
+        # https://nodejs.org/api/dgram.html#dgram_dgram_createsocket_options_callback
+        proto: 'udp4'
 
-      # RFC 1350
-      @udpPort                  =    69
+        # RFC 1350
+        serverPort: 69
 
-      # But non-ephemeral ports require root privileges
-      @udpPort                  =  1069
+        clientPort: low: 32768, high: 65535
 
-      # Sane defaults to mitigate DoS risks
-      @maximumObjectSizeOctets  = 65536
-      @maximumKeySizeOctets     =  1024
-      @maximumObjectCount       =  1024
-      @sessionTimeoutSeconds    =   240
-      @receiveTimeoutSeconds    =    60
+        session:
+          retryDelayMS  :    100
+          backoffFactor :      2
+          expireMS      : 300000
 
-      @promise = new Promise (resolve, reject) ->
-        input = new Buffer
-        {stdin} = require 'process'
-        stdin
-          .on 'data',  (data) => @receive  data
-          .on 'end',          => @validate input, resolve, reject
-          .on 'error', (err)  => @complain err
+        handshake:
+          retryDelayMS  :    100
+          backoffFactor :      2
+          expireMS      : 300000
 
-    complain: (str) -> @complaints.push str
+      # Since non-ephemeral ports require root privileges...
+      @net.serverPort = 10069
 
-    receive: (data) -> @input = @input.append data
+      # Sane defaults to mitigate DoS risks:
+      #   Max memory usage not including overhead ~64M
+      @blobLimits =
+        octets    : 64535
+        keyOctets :  1024
+        objects   :  1024
 
-    validate: (input, resolve, reject) ->
+    applyOverides: (config) ->
+      if problems = @problemsInOverrides config
+        throw new Error "There were problems with the supplied overrides:\n  " +
+          problems
+            .map indentStr
+            .join "\n  "
+
+      Object.assign @, config
+
+    problemsInOverrides: (inputConfig) ->
+      problems = []
+      knownKeys = Object.getOwnPropertyNames @constructor::
+
       try
-        inputConfig = JSON.parse input
-
         for k, v of inputConfig
-          if not k in @
-            @complain new Error "Unknown config key '#{k}'"
-          else
-            @[k] = v
-        @finish config
-      catch e
-        @complain e
+          if not k in knownKeys
+            problems.push "Unknown config key '#{k}'"
 
-    finish: (config) ->
-      if @complaints.length
-        (require './help')()
-        reject new Error "There were problems:\n  " + @complaints.join "\n  "
-      else
-        resolve config
+      catch e
+        problems.push e.message + "\n" + e.stack
+
+      return problems if problems.length
