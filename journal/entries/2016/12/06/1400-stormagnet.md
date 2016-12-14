@@ -68,7 +68,7 @@ to each other and I don't know if she cares if I'm home or not.
 - She was particularly set off by
   - "Tuesday isn't one of your days"
 
-- She says my behavior changed around the winter of 2014-2014
+- She says my behavior changed around the winter of 2014-2015
 
 - We spent more time together when she was in school
 
