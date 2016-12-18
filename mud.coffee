@@ -23,8 +23,6 @@ class User
 
 # ...
 
-defaultKey = Symbol 'default key'
-
 MOP.enhance (
   class Session
     @has: [ Protocol, Connection ]
@@ -75,58 +73,9 @@ MOP.enhance (
     @has: [ [ Avatar ] ]
 
   class User
+    @isAn: [ Authenticated ]
     @composedOf: [ Player, SessionReceiver ]
 
   class UserDB
     @isA: [ Dictionary.of(User, (u) -> u.name) ]
-
-  class Dictionary
-    @of: ({@klass, keys}) ->
-      @addKey key for key in keys
-
-    constructor: ->
-      @keys = {}
-      @indexes = {}
-      @values = []
-      @dbTop = 0
-
-    addKey: (keyInfo) ->
-      if 'string' is typeof keyInfo
-        key = {}
-        key[defaultKey] = keyInfo
-        keyInfo = key
-
-      for name, key of keyInfo
-        if @keys[name]
-          if name is defaultKey
-            throw new Error "Already have a default key"
-          else
-            throw new Error "Already have a key named #{name}"
-
-        keyFn =
-          switch typeof key
-            when 'string'   then (o) -> o[key]
-            when 'function' then key
-            else
-              throw new Error "Unknown key type"
-
-        @keys[name] = key
-
-      @reindex name
-
-    lookupExact: (keyValue, keyName = defaultKey) ->
-      if not index = @indexes[keyName]
-        throw new Error "No such key"
-
-      if not found = index[keyValue]
-        throw new Error "Key value not found in index"
-
-      return found
-
-    reindex: (keyName) ->
-      key = @keys[keyName]
-      @indexes[keyName] = {}
-
-      for v, id in @values
-        @indexes[key v] = { id, v }
 )

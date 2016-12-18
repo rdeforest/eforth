@@ -2,10 +2,11 @@
 
 ## Kinds of OO
 
+- Isolation of interface from implementation
+- Messages instead of function calls
 - Polymorphism
 - Inherited state
 - Inhertied behavior
-- Isolation of interface from implementation
 - Type algebra nonsense
 - Templates?
 
