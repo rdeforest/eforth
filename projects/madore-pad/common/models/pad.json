@@ -6,9 +6,20 @@
     "validateUpsert": true
   },
   "properties": {
-    "hash": {
+    "fileName": {
       "type": "string",
-      "required": true
+      "required": false,
+      "default": "md5"
+    },
+    "digestAlgorithm": {
+      "type": "string",
+      "required": false,
+      "default": "md5"
+    },
+    "digestEncoding": {
+      "type": "string",
+      "required": false,
+      "default": "hex"
     },
     "data": {
       "type": "buffer",

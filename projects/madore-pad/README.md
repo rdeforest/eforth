@@ -20,6 +20,11 @@ protocol suggestion.
   - manage users
   - manage quotas
 
+And maybe some day
+
+- Power users can
+  - federate servers so they pass pads around randomly
+
 ## Client
 
 In addition to the above, the client provides these features:
