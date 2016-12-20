@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "pad": {
+    "dataSource": "db",
+    "public": true
+  },
+  "knownPadSet": {
+    "dataSource": "db",
+    "public": true
   }
 }

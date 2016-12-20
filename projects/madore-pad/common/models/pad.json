@@ -1,0 +1,22 @@
+{
+  "name": "pad",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "hash": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "buffer",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
