@@ -24,23 +24,93 @@ class User
 # ...
 
 MOP.enhance (
+  class PlainTextByLines extends Protocol
+    eventsToBuffer: (events) -> new Buffer
+    bufferToEvents: (buf) -> []
+    errorToEvent: (e) -> {}
+
   class Session
-    @has: [ Protocol, Connection ]
+    @isA: [ EventEmitter ]
+
+    @has: {
+      Socket
+    }
+
+    @protocol: PlainTextByLines
+
+    start: ->
+      @protocol = @constuctor.protocol
+      @socket
+        .on 'close',   @socketClosed.bind @, 'close'
+        .on 'end',     @socketClosed.bind @, 'end'
+        .on 'data',    @receive.bind      @
+        .on 'error',   @error.bind        @
+        .on 'timeout', @timeout.bind      @
+
+      
+    setTimeout:     (milliseconds) -> @socket.setTimeout milliseconds
+    socketClosed: (how, had_error) -> @emit 'end', {how, had_error}
+    error:                     (e) -> @emit (@protocol.errorToEvent e)...
+    shutdown:                      -> @socket.end()
+    send:                 (events) -> @socket.write @protocol.eventsToBuffer events
+    receive:              (buffer) -> (@emit event...) for event in @protocol.bufferToEvents buffer
+
+  class LoginProtocol extends Protocol
+    bufferToEvents: (buffer) ->
+      @buffer = Buffer.concat @buffer, buffer
+
+      return unless lineLen = @buffer.contains NEW_LINE
+
+      firstLine = @buffer.toString 'utf8', 0, lineLen
+      @buffer = Buffer.from @buffer, lineLen
+      @processCommand firstLine
+
+    login: (name, pass) ->
+      unless (user = @userDb.lookup name) and (user.chkPass pass)
+        return Buffer.from "Invalid password or user name"
+
+      return Buffer.from "Logging in..."
+
+    register: (name, pass, email) ->
+      @userDb.requestAccount name, pass, email, @
+      @write 
+
+    processCommand: (line) ->
+      line.replace /(^\s*)|(\s*$)/g, ''
+      [firstWord, rest...] = line.split /\s+/
+
+      switch firstWord
+        when 'login', 'connect' then @login    rest...
+        when 'register'         then @register rest...
+        when 'send'             then @sendPass rest...
+        else                         @help     rest...
 
   class SessionReceiver
-    @isA: [ Aspect ]
-    @has: [ [ Session ] ]
+    @isAn: [ Aspect ]
+    @has:
+      listeningOn: NetAddressInfo
+      sessionClass: isa: constructorOf: Session
+      server: Server
+
+    start: ->
+      @server = new Server
+        .listen @listeningOn.port
+        .on 'connection', @startSession.bind @
+
+    startSession: (socket) -> new @sessionClass { socket }
+
 
   # Privileged message
   class OperationRequest
     @isA: [ Owned ]
-    @has: [ name: 'string', sender: Object, definer: Object, args: Array ]
+    @has: { name: 'string', sender: Object, definer: Object, args: Array }
 
   class Permission
-    @has: [ owners      : 'function'
-            senders     : 'function'
-            targets     : 'function'
-            messageName : 'any'      ]
+    @has:
+      owners      : 'function'
+      senders     : 'function'
+      targets     : 'function'
+      messageName : 'string'
 
     permitted: ({owner, sender, target, message}) ->
       @owners(owner) and
@@ -56,7 +126,7 @@ MOP.enhance (
 
   class Owned
     @isAn: [ Aspect ]
-    @has: [ Owner, { operations } ]
+    @has: { Owner, operations: [ Operation ] }
 
     withPermission: (operation) ->
       if @my.operations(operation)

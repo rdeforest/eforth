@@ -3,13 +3,20 @@
 A word on multiple inheritance:
 
 A common complaint about MI is that a method name inherited from two parents is
-ambiguous. I solve that by prohibiting the situation. If you want an object two
+ambiguous. I solve that by prohibiting the situation. If you want an object to
 have two kinds of .name, use Aspects.
 
 ###
 
+# 'Member' is our word for 'attribute', 'variable', 'property', etc.
+
 class Member
-  constructor: (@definer, @name, @defaultValue, @initFn = -> @defaultValue) ->
+  constructor: (args...) ->
+    [ @definer
+      @name
+      @defaultValue
+      @initFn = -> @defaultValue
+    ] = args...
 
   toString: ->
     @definer.name + "[" + @name + "]"
