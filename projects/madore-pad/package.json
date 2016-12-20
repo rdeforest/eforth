@@ -27,6 +27,6 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
-  "description": "madore-pad"
+  "license": "MIT",
+  "description": "Pad Server for David Madore's protocol: http://www.madore.org/~david/misc/freespeech.html"
 }
