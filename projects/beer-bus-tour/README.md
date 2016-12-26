@@ -25,11 +25,12 @@ demand.
 
 - Trip
   - has
-    - PathLeg
+    - TourLeg
     - departureTime
   - consumes TripLog
   - calculates
-    - projectedArrivalTime
+    - projectedDuration
+    - projectedArrival
 
 - TripLog
   - has
@@ -44,14 +45,26 @@ demand.
 - Vehicle extends Location
   - has
     - TripLogEntry
-    - Velocity, normalized relative to expected
-    - Delay amount
+    - capacity
+    - remainingCapacity
+  - calculates
+    - progress
+  - does
+    - depart
+    - arrive
+    - passengersBoarded
+    - passenversDeboarded
 
 - Tourist
   - has
     - account (name, email, auth, billing, etc)
     - notes
     - Location
+    - request
+
+- Request
+  - belongsTo Tourist
+  - has
     - requestedStop
     - requestedTime
     - requestedSeats
