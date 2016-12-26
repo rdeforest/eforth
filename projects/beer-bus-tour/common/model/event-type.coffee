@@ -1,4 +1,1 @@
-Location = require './location'
-
-module.exports =
-  class EventType extends Location
+module.exports = class EventType extends NamedDescription = require './named-description'

@@ -2,4 +2,5 @@
 
 module.exports =
   model 'ScheduledJourney', new Schema
-    journeys: [Object]
+    depart: Object
+    arrive: Object

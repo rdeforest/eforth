@@ -1,3 +1,6 @@
+{ Schema, model } = require 'dynamoose'
+
 module.exports =
-  class NamedDescription
-    constructor: (@name, @description) ->
+  model 'NamedDescription', new Schema
+    name: String
+    description: String

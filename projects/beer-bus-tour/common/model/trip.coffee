@@ -5,16 +5,20 @@ tripLog = require './trip-log'
 } =
   require './config'
 
+{ Schema, model } = require 'dynamoose'
+
 # A Trip is a particular journey between two stops.
 module.exports =
-  class Trip
-    constructor: (@vehicle, @src, @dst) ->
-      @started = @ended = null
+  model 'Trip', new Schema
+    vehicle: Object
+    src: Object
+    dst: Object
 
+###
     started: ->
       @started = moment()
 
     ended: ->
       @ended = moment()
       tripLog.add @
-
+###
