@@ -6,14 +6,15 @@ demand.
 # Classes
 
 - Location
+  - has
+    - name
+    - description
 
 - Stop extends Location
-  - has
-    - description
   - belongsTo
-    - legs
+    - TourLegs
 
-- PathLeg
+- TourLeg
   - has
     - from Stop
     - to   Stop
