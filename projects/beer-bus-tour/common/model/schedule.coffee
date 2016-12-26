@@ -1,10 +1,10 @@
-Trip = require './trip'
+TourLeg = require './tour-leg'
 
 module.exports =
   class Schedule
     constructor: (@name) ->
-      @trips = []
+      @tourLegs = []
 
-    addTrip: (trip) ->
-      @trips.push trip
+    add: (tourLeg) ->
+      @trips.push tourLeg
       return @

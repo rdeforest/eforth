@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Bruce Felt <freakyFelt@gmail.com>, Robert de Forest <guitar.robot@gmail.com",
-  "license": "to be determined"
+  "license": "to be determined",
+  "dependencies": {
+    "dynamoose": "^0.7.0"
+  }
 }

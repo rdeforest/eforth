@@ -5,57 +5,62 @@ demand.
 
 # Classes
 
-- Location
+- NamedDescription extends Persisted
   - has
     - name
     - description
+
+- Location extends NamedDescription
 
 - Stop extends Location
   - belongsTo
     - TourLegs
 
-- TourLeg
+- EventType extends NamedDescription
+
+- ScheduledEvent
   - has
-    - from Stop
-    - to   Stop
+    - eventType
+    - time
+
+- ActualEvent
+  - has
+    - ScheduledEvent
+    - actualTime
+
+- ScheduledTrip _(needs a better name)_
+  - has
+    - ScheduledEvents depart, arrive
 
 - Schedule
   - has
-    - Trips
+    - ScheduledTrips
 
-- Trip
+- Journey
   - has
-    - TourLeg
-    - departureTime
+    - Vehicle
+    - ScheduledTrip
+    - ActualEvents depart, arrive
   - consumes TripLog
-  - calculates
-    - projectedDuration
-    - projectedArrival
 
-- TripLog
+- BeerEventLog extends DB
   - has
-    - TripLogEntries
-
-- TripLogEntry
-  - has
-    - Trip
-    - departed
-    - arrived
+    - BeerEvents
+  - does
+    - add
+    - find
 
 - Vehicle extends Location
   - has
-    - TripLogEntry
     - capacity
-    - remainingCapacity
-  - calculates
-    - progress
+    - passengerCount
   - does
-    - depart
-    - arrive
-    - passengersBoarded
-    - passenversDeboarded
+    - addPassengers    count
+    - removePassengers count
+    - departFor        destination
+    - arrive           destination
 
-- Tourist
+- Tourist extends NamedDescription
   - has
     - account (name, email, auth, billing, etc)
     - notes
