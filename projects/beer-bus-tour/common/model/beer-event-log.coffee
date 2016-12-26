@@ -1,17 +1,11 @@
-Trip = require './trip-log-entry'
-DB   = require './db'
+BeerEvent = require './beer-event'
+DB        = require './db'
 
-class TripLog extends DB
+class BeerEventLog extends DB
   constructor: ->
     super
+    @createOrMigrateTable BeerEvent
 
-    @createOrMigrateTable
-      trip:
-        schema:  Trip.schema
-        migrate: Trip.upgradeStorage
+  add: (event) -> super 'event', event
 
-  add: (trip) -> super 'trip', trip
-
-  # DB::find filter
-
-module.exports = new TripLog
+module.exports = new BeerEventLog
