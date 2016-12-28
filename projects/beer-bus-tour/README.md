@@ -15,20 +15,29 @@ demand.
 - Stop extends Location
   - belongsTo
     - TourLegs
+  - does
+    - getConnectedStops
 
-- EventType extends NamedDescription
+- BeerEventDescription extends NamedDescription
+
+- VehicalEventDescription extends BeerEventDescription
+  - has
+    - vehical
+    - from
+    - to
+    - change in departed, arrived, re-routed
 
 - ScheduledEvent
   - has
     - eventType
     - time
 
-- ActualEvent
+- ActualBeerEvent
   - has
     - ScheduledEvent
     - actualTime
 
-- ScheduledTrip _(needs a better name)_
+- ScheduledTrip
   - has
     - ScheduledEvents depart, arrive
 
@@ -36,19 +45,21 @@ demand.
   - has
     - ScheduledTrips
 
-- Journey
+- ActualTrip
   - has
     - Vehicle
     - ScheduledTrip
-    - ActualEvents depart, arrive
-  - consumes TripLog
+    - ActualBeerEvents depart, arrive
+  - uses BeerEventLog
 
-- BeerEventLog extends DB
+- DBTable
   - has
-    - BeerEvents
+    - persistedClass
   - does
     - add
     - find
+  - instances
+    - BeerEventLog = DBTable ActualBeerEvents
 
 - Vehicle extends Location
   - has
@@ -57,15 +68,22 @@ demand.
   - does
     - addPassengers    count
     - removePassengers count
-    - departFor        destination
-    - arrive           destination
+    - setDestination   destination
+    - reRoute          destination
+    - depart
+    - arriveAt
 
 - Tourist extends NamedDescription
   - has
-    - account (name, email, auth, billing, etc)
-    - notes
+    - account   (name, email, auth, billing, etc)
+    - notes     (used by support)
     - Location
     - request
+  - does
+    - placeRequest destination, time, seats
+    - cancelRequest
+    - board vehical
+    - debark stop
 
 - Request
   - belongsTo Tourist
