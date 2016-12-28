@@ -1,3 +1,4 @@
+#{ Schema, model } = require 'dynamoose'
 Location = require './location'
 
 module.exports =
