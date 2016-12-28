@@ -50,16 +50,6 @@ demand.
     - Vehicle
     - ScheduledTrip
     - ActualBeerEvents depart, arrive
-  - uses BeerEventLog
-
-- DBTable
-  - has
-    - persistedClass
-  - does
-    - add
-    - find
-  - instances
-    - BeerEventLog = DBTable ActualBeerEvents
 
 - Vehicle extends Location
   - has

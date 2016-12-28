@@ -1,7 +1,7 @@
 { Schema, model } = require 'dynamoose'
 
 module.exports =
-  model 'ActualEvent', new Schema
+  model 'ActualBeerEvent', new Schema
     scheduled:  String
     actualTime: String
 
