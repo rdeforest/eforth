@@ -8,8 +8,14 @@
   },
   "keywords": [],
   "author": "Bruce Felt <freakyFelt@gmail.com>, Robert de Forest <guitar.robot@gmail.com",
-  "license": "to be determined",
+  "license": "MIT",
   "dependencies": {
-    "dynamoose": "^0.7.0"
+    "coffee-script": "^1.12.2",
+    "dynamoose": "^0.7.0",
+    "dynogels": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.org/rdeforest/small-projects.git"
   }
 }

@@ -25,7 +25,7 @@ demand.
     - vehical
     - from
     - to
-    - change in departed, arrived, re-routed
+    - change in requested, scheduled, departed, arrived, re-routed
 
 - ScheduledEvent
   - has
