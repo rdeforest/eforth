@@ -1,7 +1,9 @@
-{ Schema, model } = require 'dynamoose'
+Joi      = require 'joi'
+dynogels = require 'dynogels'
 
 module.exports =
-  model 'ActualBeerEvent', new Schema
-    scheduled:  String
-    actualTime: String
+  ActualBeerEvent = dynogels.define 'ActualBeerEvent ',
+    schema:
+      scheduled:  Joi.date()
+      actualTime: Joi.date()
 

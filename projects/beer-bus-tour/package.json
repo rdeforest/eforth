@@ -12,7 +12,8 @@
   "dependencies": {
     "coffee-script": "^1.12.2",
     "dynamoose": "^0.7.0",
-    "dynogels": "^6.2.0"
+    "dynogels": "^6.2.0",
+    "joi": "^10.1.0"
   },
   "repository": {
     "type": "git",

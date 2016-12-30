@@ -1,8 +1,10 @@
-{ Schema, model } = require 'dynamoose'
+dynogels  = require 'dynogels'
 
 module.exports =
-  Request = model 'Request', new Schema
-    touristId: 'string'
-    stop:      'string'
-    time:      'string'
-    seats:     'number'
+  Request = dynogels.define 'Request',
+    schema:
+      touristId         : Joi.string()
+      seats             : Joi.number()
+      time              : Joi.date()
+      fromStopId        : Joi.string()
+      toStopId          : Joi.string()

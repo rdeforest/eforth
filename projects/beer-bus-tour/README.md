@@ -5,27 +5,18 @@ demand.
 
 # Classes
 
-- NamedDescription extends Persisted
-  - has
-    - name
-    - description
-
-- Location extends NamedDescription
-
-- Stop extends Location
+- Stop
   - belongsTo
     - TourLegs
   - does
     - getConnectedStops
 
-- BeerEventDescription extends NamedDescription
-
-- VehicalEventDescription extends BeerEventDescription
+- VehicalEventDescription
   - has
-    - vehical
-    - from
-    - to
-    - change in requested, scheduled, departed, arrived, re-routed
+    - Vehical
+    - Stop from
+    - Stop to
+    - change from [ requested, scheduled, departed, arrived, re-routed ]
 
 - ScheduledEvent
   - has
@@ -51,7 +42,7 @@ demand.
     - ScheduledTrip
     - ActualBeerEvents depart, arrive
 
-- Vehicle extends Location
+- Vehicle
   - has
     - capacity
     - passengerCount
@@ -63,12 +54,12 @@ demand.
     - depart
     - arriveAt
 
-- Tourist extends NamedDescription
+- Tourist
   - has
     - account   (name, email, auth, billing, etc)
     - notes     (used by support)
-    - Location
-    - request
+    - Stop|Vehical location
+    - Request
   - does
     - placeRequest destination, time, seats
     - cancelRequest

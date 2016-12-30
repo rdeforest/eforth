@@ -1,5 +1,8 @@
-moment       = require 'moment'
-beerEventLog = require './beer-event-log'
+dynogels  = require 'dynogels'
+moment    = require 'moment'
+
+actualBeerEvent =
+            require './actual-beer-event'
 
 ACTUAL_EVENT_NAMES = [
     'requested'
@@ -12,22 +15,16 @@ ACTUAL_EVENT_NAMES = [
     're-routed'
   ]
 
-{ Schema, model } = require 'dynamoose'
-
-# An ActualTrip is a particular journey between two stops.
+# An ActualTrip is a particular journey between two stops. Everything about it
+# is captured in the events which reference it.
 module.exports =
-  ActualTrip = model 'ActualTrip', new Schema
-    vehicleId: 'string'
-    srcStopId: 'string'
-    dstStopId: 'string'
-    scheduledTripId: 'string'
+  ActualTrip = dynogels.define 'ActualTrip',
+    schema:
+      vehicalId: Joi.string()
 
-  ActualTrip::createEvent (change, time = moment()) = ->
-    new VehicalEventDescription {
-      time, change
-      vehicalId: @id()
-      @scheduledTripId
+  ActualTrip::_createEvent (change, time = moment()) = ->
+    new VehicalEventDescription { time, change, @vehicalId, trip: @id }
 
   for change in VEHICAL_EVENT_NAMES
-    ActualTrip::[change] = (time = moment()) -> @createEvent change, time
+    ActualTrip::[change] = (time = moment()) -> @_createEvent change, time
 
