@@ -1,9 +1,5 @@
-Joi      = require 'joi'
-dynogels = require 'dynogels'
-
-module.exports =
-  ActualBeerEvent = dynogels.define 'ActualBeerEvent ',
+module.exports = ({make}) ->
+  make 'ActualBeerEvent',
     schema:
-      scheduled:  Joi.date()
-      actualTime: Joi.date()
-
+      scheduled:  'string'
+      actualTime: 'date'

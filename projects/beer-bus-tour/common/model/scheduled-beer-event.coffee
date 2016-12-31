@@ -1,6 +1,5 @@
-{ Schema, model } = require 'dynamoose'
-
-module.exports =
-  model 'ScheduledBeerEvent', new Schema
-    eventType:     String
-    scheduledTime: Object
+module.exports = ({make}) ->
+  make 'ScheduledBeerEvent',
+    schema:
+      eventType:     String
+      scheduledTime: Object
