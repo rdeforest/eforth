@@ -1,3 +1,52 @@
+# User stories
+
+## As a Tourist I want
+
+- to know
+ - where I can go on a single trip from 'here'
+ - how long it will take to get to a given destination
+ - what my current request is, if any
+ - when I should expect to arrive at my destination
+ - whether my announcements have been heard
+  - and what is being done about them
+
+- to announce
+ - my transport didn't show
+ - I have more/fewer people with me than I thought
+ - I want
+  - transport for me and 0 or more others to another stop
+  - to cancel a previous request
+
+## As a Driver I want
+
+- to know
+ - about a Vehicle I'm expected to be responsible for
+   - where it is
+   - how to identify it
+   - its current disposition (transfer from other driver, pickup from lot)
+   - where it is expected to be next
+   - when my it is scheduled to depart
+   - whether I have all the passengers who requested a ride
+   - when it is expected to arrive
+
+- to announce
+ - I have
+  - received passengers
+  - delivered passengers
+  - departed from a location
+  - arrived at a location
+  - encountered an exceptional circumstance
+
+## As a Stop I want
+
+- to say
+ - what I have to offer
+ - what transportation options are available
+- to know
+ - who is arriving
+ - who is currently here
+ - who is leaving
+
 # Models
 
 ## Undescribed
