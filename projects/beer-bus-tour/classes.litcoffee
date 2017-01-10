@@ -3,15 +3,17 @@
 ## As a Tourist I want
 
 - to know
- - where I can go on a single trip from 'here'
- - how long it will take to get to a given destination
- - what my current request is, if any
- - when I should expect to arrive at my destination
- - whether my announcements have been heard
-  - and what is being done about them
+ - options
+  - where I can go on a single trip from 'here'
+  - how long it will take to get to a given destination
+  - how long the wait for a given trip will be
+ - situation
+  - what my current request is, if any
+  - when I should expect to arrive at my destination
+  - whether my announcements have been heard
+   - and what is being done about them
 
 - to announce
- - my transport didn't show
  - I have more/fewer people with me than I thought
  - I want
   - transport for me and 0 or more others to another stop
@@ -31,21 +33,20 @@
 
 - to announce
  - I have
+  - taken posession of a vehicle
   - received passengers
   - delivered passengers
   - departed from a location
   - arrived at a location
-  - encountered an exceptional circumstance
 
-## As a Stop I want
+## As an EventHost I want
 
-- to say
+- to announce
  - what I have to offer
- - what transportation options are available
 - to know
- - who is arriving
+ - who is inbound
  - who is currently here
- - who is leaving
+ - who wants to leave
 
 # Models
 
