@@ -96,7 +96,9 @@ These classes have all the above in addition to what is listed.
   - licensePlate
   - fleetVehicalId
   - capacity
-- VehicleController
+  - location
+ - belongsTo
+  - ActualTrips
  - calculates
   - availableSeats
  - does
@@ -110,7 +112,6 @@ These classes have all the above in addition to what is listed.
   - account  (name, email, auth, billing, etc)
   - notes   (used by support)
   - location is a Stop or Vehical
-- TouristController
  - does
   - placeRequest destination, time, seats
   - cancelRequest
@@ -139,8 +140,6 @@ available vehicle.
   - Vehicle
   - Status
   - seatCount
-
-# Controllers
 
 # Attempting a diagram...
 
@@ -176,10 +175,16 @@ available vehicle.
           for name, info of propDict
             @hasProp name, info
 
+      # 1:1
       has: (propName, model) ->
         @hasRelations[propName] = model
         model.belongsTo @
 
+      # 1:n
+      hasMany: (model) ->
+        model.belongsTo @
+
+      # n:1
       belongsTo: (model, propName = "#{model.name.toLowerCase}Id") ->
         @belongsToRelations[propName] = model
 
@@ -199,14 +204,13 @@ available vehicle.
 
     a 'NamedAndDescribed', ->
       .hasProps
-        shortName  : String
-        displayName: String
-        desc       : String
+        shortName   : String
+        displayName : String
+        desc        : String
 
     a 'Tourist', ->
-      .is a NamedAndDescribed
+      .is a 'NamedAndDescribed'
       .hasProps
-        name   : String
         email  : String
         notes  : String
         auth   : Object
@@ -217,12 +221,10 @@ available vehicle.
         .has Date   'departureTime'
         .has Number 'requestedSeats'
 
-    a 'Reservation', ->
-      .has a 'Request'
-      .has a 'Trip', ->
-
     a 'Vehicle', ->
+      .is a 'NamedAndDescribed'
       .has a 'Reservation', ->
+        .belongsTo a 'Request'
         .has a 'SchedledTrip'
           .has a 'Trip', ->
             .has a 'Stop' 'from'

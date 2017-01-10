@@ -2,6 +2,6 @@
 NamedDescription = require 'named-description'
 
 module.exports =
-  class VehicalEventDescription extends NamedDescription
-    tripId:    'string'
-    change:    'string'
+  class VehicalEvent extends NamedDescription
+    tripId: 'string'
+    change: 'string'

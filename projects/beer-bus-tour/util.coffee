@@ -1,6 +1,7 @@
-config   = require '../config'
 Joi      = require 'joi'
 dynogels = require 'dynogels'
+
+config   = require './config'
 
 module.exports = Object.assign {Joi, dynogels, config},
   # usage
@@ -15,9 +16,15 @@ module.exports = Object.assign {Joi, dynogels, config},
     if not description.hashKey
       description.hashKey = 'id'
       (description.schema ?= {})
-        .id ?= dynogels.types.uuid()`
+        .id ?= dynogels.types.uuid()
 
-    for prop, desc of description.schema?
+    { isa, schema } = description
+
+    if isa?::
+      for k, v of isa::
+
+
+    for prop, desc of schema?
       tName =
         switch desc
           when Object, String, Boolean, Number, Array, Date

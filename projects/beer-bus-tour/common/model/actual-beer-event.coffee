@@ -1,5 +1,5 @@
 module.exports = ({make}) ->
   make 'ActualBeerEvent',
     schema:
-      scheduled:  'string'
+      scheduled : 'string'
       actualTime: 'date'

@@ -1,7 +1,7 @@
 dynogels  = require 'dynogels'
 
-module.exports =
-  Request = dynogels.define 'Request',
+module.exports = ({make, Joi}) ->
+  make 'Request',
     schema:
       touristId         : Joi.string()
       seats             : Joi.number()
