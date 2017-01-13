@@ -1,3 +1,8 @@
+# extra notes
+
+- A 'Guest' is an individual who is tagging along with a 'Tourist'
+- A 'Tourist' is a member, has the app and can generate QR codes on the app
+
 # User stories
 
 ## As a Tourist I want
@@ -221,6 +226,7 @@ available vehicle.
         .has Stop   'destination'
         .has Date   'departureTime'
         .has Number 'requestedSeats'
+      .has a 'Guest'
 
     a 'Vehicle', ->
       .is a 'NamedAndDescribed'

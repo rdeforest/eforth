@@ -1,4 +1,3 @@
-Location     = require './location'
 VehicleEvent = require './vehicle-event'
 Reservation  = require './reservation'
 Status       = require './status'
@@ -10,38 +9,41 @@ statusPromise =
 module.exports = ({make}) ->
   Vehicle = make 'Vehicle',
     schema:
-      location      : 'string'
-      licensePlate  : 'string'
-      fleetVehicleId: 'string'
-      seatCapacity  : 'number'
+      location      : String # A Stop or Trip
+      seatCapacity  : Number
+      seatsInUse    : Number
+      seatsReserved : Number
 
-  Vehicle::activeReservations = ->
-    new Promise (resolve, reject) ->
-      statusPromise.then (status) ->
-        Reservation
-          .query 'vehicleId'
-          .eq @id
-          .and 'status'
-          .eq status.reservation.accepted
-          .exec (err, reservations) ->
-            if err
-              reject err
-            else
-              resolve reservations
+  Object.assign Vehicle::,
+    activeReservations: ->
+      new Promise (resolve, reject) ->
+        statusPromise.then (status) ->
+          Reservation
+            .query 'vehicleId'
+            .eq @id
+            .and 'status'
+            .eq status.reservation.accepted
+            .exec (err, reservations) ->
+              if err
+                reject err
+              else
+                resolve reservations
 
-  Vehicle::reservedSeats = ->
-    @activeReservations
-      .then (res) ->
-        .map (res) -> res.seatCount
-        .reduce (a, b) -> a + b
+    reservedSeats: ->
+      @activeReservations
+        .then (res) ->
+          res
+            .map (res) -> res.seatCount
+            .reduce (a, b) -> a + b
 
-  Vehicle::seatsRemaining = ->
-    @reservedSeats()
-      .then (reserved) -> @seatCapacity - reserved
+    seatsRemaining: ->
+      @reservedSeats()
+        .then (reserved) ->
+          @seatCapacity - reserved - @SeatsInUse
 
-  Vehicle::acceptReservation = (reservation, seats = Math.min @seatsRemaining, reservation.seatCount) ->
-    if seats < 1
-      throw new Error "vehicle is full"
+    acceptReservation: (reservation, seats = Math.min @seatsRemaining, reservation.seatCount) ->
+      if seats < 1
+        throw new Error "vehicle is full"
 
     reservation.acceptedBy @
 

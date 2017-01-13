@@ -1,22 +1,18 @@
-Joi      = require 'joi'
-dynogels = require 'dynogels'
+Request = './request'
 
-module.exports =
-  Tourist = dynogels.define 'Tourist ',
+module.exports = ({make, Joi}) ->
+  Tourist = make 'Tourist',
     schema:
-      account:  Joi.string()
-      notes:    Joi.string()
-      location: Joi.string()
-      request:  Joi.string()
+      account:  String
+      location: String
+      request:  String
+      notes:    String
 
-Tourist::placeRequest = (destination, time, seats) ->
-  throw new Error 'not implemented'
+  Object.assign Tourist::,
+    placeRequest: (destination, time, guests) ->
+      @request = (new Request {seats, time, destination}).id
 
-Tourist::cancelRequest = ->
-  throw new Error 'not implemented'
-
-Tourist::board = (vehical) ->
-  throw new Error 'not implemented'
-
-Tourist::debark = (stop) ->
-  throw new Error 'not implemented'
+    cancelRequest: ->
+      if @request
+        Request.find id: @request
+          .cancel()
