@@ -1,5 +1,5 @@
-#{ Schema, model } = require 'dynamoose'
-Location = require './location'
 
-module.exports =
-  class Stop extends Location
+module.exports = ({make}) ->
+  make 'Stop',
+    schema:
+

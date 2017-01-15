@@ -1,17 +1,24 @@
+# extra notes
+
+- A 'Guest' is an individual who is tagging along with a 'Tourist'
+- A 'Tourist' is a member, has the app and can generate QR codes on the app
+
 # User stories
 
 ## As a Tourist I want
 
 - to know
- - where I can go on a single trip from 'here'
- - how long it will take to get to a given destination
- - what my current request is, if any
- - when I should expect to arrive at my destination
- - whether my announcements have been heard
-  - and what is being done about them
+ - options
+  - where I can go on a single trip from 'here'
+  - how long it will take to get to a given destination
+  - how long the wait for a given trip will be
+ - situation
+  - what my current request is, if any
+  - when I should expect to arrive at my destination
+  - whether my announcements have been heard
+   - and what is being done about them
 
 - to announce
- - my transport didn't show
  - I have more/fewer people with me than I thought
  - I want
   - transport for me and 0 or more others to another stop
@@ -31,21 +38,20 @@
 
 - to announce
  - I have
+  - taken posession of a vehicle
   - received passengers
   - delivered passengers
   - departed from a location
   - arrived at a location
-  - encountered an exceptional circumstance
 
-## As a Stop I want
+## As an EventHost I want
 
-- to say
+- to announce
  - what I have to offer
- - what transportation options are available
 - to know
- - who is arriving
+ - who is inbound
  - who is currently here
- - who is leaving
+ - who wants to leave
 
 # Models
 
@@ -96,7 +102,9 @@ These classes have all the above in addition to what is listed.
   - licensePlate
   - fleetVehicalId
   - capacity
-- VehicleController
+  - location
+ - belongsTo
+  - ActualTrips
  - calculates
   - availableSeats
  - does
@@ -110,7 +118,6 @@ These classes have all the above in addition to what is listed.
   - account  (name, email, auth, billing, etc)
   - notes   (used by support)
   - location is a Stop or Vehical
-- TouristController
  - does
   - placeRequest destination, time, seats
   - cancelRequest
@@ -139,8 +146,6 @@ available vehicle.
   - Vehicle
   - Status
   - seatCount
-
-# Controllers
 
 # Attempting a diagram...
 
@@ -176,10 +181,16 @@ available vehicle.
           for name, info of propDict
             @hasProp name, info
 
+      # 1:1
       has: (propName, model) ->
         @hasRelations[propName] = model
         model.belongsTo @
 
+      # 1:n
+      hasMany: (model) ->
+        model.belongsTo @
+
+      # n:1
       belongsTo: (model, propName = "#{model.name.toLowerCase}Id") ->
         @belongsToRelations[propName] = model
 
@@ -199,14 +210,13 @@ available vehicle.
 
     a 'NamedAndDescribed', ->
       .hasProps
-        shortName  : String
-        displayName: String
-        desc       : String
+        shortName   : String
+        displayName : String
+        desc        : String
 
     a 'Tourist', ->
-      .is a NamedAndDescribed
+      .is a 'NamedAndDescribed'
       .hasProps
-        name   : String
         email  : String
         notes  : String
         auth   : Object
@@ -216,13 +226,12 @@ available vehicle.
         .has Stop   'destination'
         .has Date   'departureTime'
         .has Number 'requestedSeats'
-
-    a 'Reservation', ->
-      .has a 'Request'
-      .has a 'Trip', ->
+      .has a 'Guest'
 
     a 'Vehicle', ->
+      .is a 'NamedAndDescribed'
       .has a 'Reservation', ->
+        .belongsTo a 'Request'
         .has a 'SchedledTrip'
           .has a 'Trip', ->
             .has a 'Stop' 'from'
