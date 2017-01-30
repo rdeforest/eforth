@@ -1,12 +1,13 @@
 { Persisted } = require './persistence'
+{ needs, combines } = require './aspect'
 
 VR = {}
 
 defineVr = (klass) ->
   VR[klass.constructor.name] =
-    new Persisted klass
+    new Persisted
 
-defineVr class Thing extends Aspected
+defineVr class Thing
   constructor: (aspects...) ->
     super aspects..., Container, Located, Observable
 

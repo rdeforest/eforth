@@ -1,36 +1,27 @@
+{ needs, combines } = require './aspect'
+
 class ObjStore
-  fetch: (id) -> # virtual
-  create: (persisted) -> # virtual
+  fetch: (key) ->
+    throw new Error "virtual method not implemented"
+
+  create: (persisted) ->
+    throw new Error "virtual method not implemented"
 
 class InMemoryDB extends ObjStore
   constructor: ->
     @nextId = 0
     @store  = []
 
+  update: (o) ->
+    @store[o.id] = o.freeze()
+
+  create: (o) ->
+    o.asPersisted.storeTo db: @, id: @nextId++
+    @update o.asPersisted
+
   fetch: (id)  ->
-    if frozen = @store[id]
-      frozen.klass.thaw frozen
+    (frozen = @store[id])
+      .klass.thaw frozen
 
-  add: (o) ->
-    if o.id
-      throw new Error "Object already has an ID?!"
+module.exports = { InMemoryDB }
 
-    o._db = @
-    @store[o.id = @nextId++] = o.freeze()
-
-class Persisted
-  constructor: (@db, @implementation) ->
-    @db = db.add @
-
-  freeze: ->
-    frozen =
-      klass: @constructor
-      id:    @id
-
-    for name, aspect in @_aspects?()?
-      frozen[name] = aspect.freeze()
-
-  thaw: (frozen) ->
-    throw new Error "#{@constructor.name} and its parents do not implement the ::thaw virtual method."
-
-module.exports = { Persisted }

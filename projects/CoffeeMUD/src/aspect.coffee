@@ -1,20 +1,24 @@
 ###
 
-About the "asFoo" pattern of mixins
+"X delegates to Y and Z"
+- combines X, Y, Z
 
-- entity.asAspect is an instance of an Aspect which refers to its delegator as @these
-- Aspects refering to other objects should reference the other objects' aspects, not their ".these"
-- If an aspect needs to address its aggregation's other aspects it should capture them in its contructor
+"Y expects X to delegate to Z"
+- needs Y, Z
 
 ###
 
-class Aspected
-  constructor: (aspects...) ->
+module.exports =
+  combines: (subject, aspects...) ->
     for aspect in aspects
-      @["as#{aspect.name}"] = new aspect @
+      subject["as#{aspect.name}"] = new aspect subject
 
-  _needs: (aspects...) ->
+    return subject
+
+  needs: (delegate, aspects...) ->
     for aspect in aspects
       name = aspect.name
-      @["our#{name}"] = @these["as#{name}"]
+      delegate["our#{name}"] = delegate.these["as#{name}"]
+
+    return delegate
 
