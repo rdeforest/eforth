@@ -2,110 +2,137 @@
 
 ###
 
-inputs are streams of already-storted strings. They should be merged in sorted
-order and written to stdout.
+Names of streams of already-storted strings passed in on argv are merged and
+written to stdout sorted.
 
 ###
 
 fs = require 'fs'
-{argv, stderr} = require 'process'
-{Readable} = require 'stream'
+{argv, stderr, stdout} = require 'process'
+{Readable, Transform, Writable} = require 'stream'
 {format} = require 'util'
 
 logStream = fs.createWriteStream 'log'
 
 log = (args...) -> false and stderr.write format(args...) + "\n"
 
-class SortableStream
-  constructor: (fileName) ->
-    @bufferStream = fs.createReadStream fileName
-    @buffer = Buffer.from ""
-    @lines = []
-    @done = false
-    @ready = false
+class LineStreamMerger extends Readable
+  constructor: (streams...) ->
+    #console.log "LineStreamManager: ", streams
+    #(require 'process').exit()
 
-    @bufferStream
-      .on 'data', (d) -> @receive d
-      .on 'finish', ->
-        @lines.push @buffer.toString()
-        @buffer = null
+    switch streams.length
+      when 0 then return new Readable read: -> null
 
-  receive: (d) ->
-    @buffer = Buffer.concat [@buffer, d]
-    seen = 0
+      when 1 then return streams[0]
 
-    loop
-      if -1 is idx = @buffer.indexOf '\n', seen
-        @ready = @lines.length > 0
-        return @buffer = @buffer.splice seen
+      when 2
+        super objectMode: true
 
-      @lines.push @buffer.splice seen, idx - seen
-      seen = idx + 1
+        [left, right] = streams
+        @streams = @prepareStreams {left, right}
 
-  getOne: ->
-    one    = @lines.shift()
-    @ready = @lines.length > 0
-    @done  = @buffer is null and not @ready
-
-    return one
-
-  cmp: (other) ->
-    return other if not @ready()
-    return @     if not other.ready()
-
-    @lines[0].localeCompare other.lines[0]
-
-class SortedStreamMerger extends Readable
-  constructor: (@a, @b) ->
-    @pending = a: null, b: null
-    @merged  = null
-
-    receive = (which) ->
-      (d) ->
-        @[which].pause()
-        @pending[which] = d
-        @maybeMerge()
-
-    @a.on 'data', receive 'a'
-    @b.on 'data', receive 'b'
-
-  maybeMerge: ->
-    if @pending.a and @pending.b and not @merged
-      if a.cmp(b) > 0
-        @merge 'b'
       else
-        @merge 'a'
+        middle = streams.length >> 1
+        left  = new @constructor streams[0..middle]...
+        right = new @constructor streams[   middle + 1..]...
 
-  merge: (which) ->
-    @emit 'readable'
-    @merged = @pending[which]
-    @pending[which] = null
-    @[which].unpause()
+        return new @constructor left, right
+
+  prepareStreams: (streams) ->
+    for side, stream of streams
+      nextRecord = null
+      streamInfo = {side, stream, nextRecord}
+      stream
+        .on 'data', (record) => @receive streamInfo, record
+        .on 'end', => @sideFinished streamInfo
+        .resume()
+      streamInfo
+
+  receive: (streamInfo, record) ->
+    if streamInfo.nextRecord
+      throw new Error "Logic error: we already have a record for stream #{streamInfo.side}"
+
+    streamInfo.nextRecord = record
+    stream.pause()
+    @mergeOne()
+
+  sideFinished: (streamInfo) ->
+    if (other = streams[0]) is streamInfo
+      other = streams[1]
+
+    if rec = streamInfo.nextRecord
+      @push rec
+
+    if not rec = other.nextRecord
+      return # all done
+
+    @push rec
+
+    other
+      .stream
+      .pipe stdout
+      .resume()
+
+  pushOne: (streamInfo) ->
+    {nextRecord, stream} = streamInfo
+
+    @push nextRecord
+    streamInfo.nextRecord = null
+    
+    stream.resume()
 
   _read: ->
-    @push @merged
-    @merged = null
+    [a, b] = @streams
 
-combine = (streams) ->
-  switch streams.length
-    when 1 then streams[0]
-    when 2 then new SortedStreamMerger streams...
-    else
-      middle = Math.ceil streams.length / 2
-      new SortedStreamManager combine(streams[..middle - 1]), combine(streams[middle..])
+    unless a.nextRecord and b.nextRecord
+      throw new Error "BUG: _read before ready"
+
+    @pushOne (streams.sort (a, b) -> a.nextRecord.localeCompare b.nextRecord)[0]
+
+class StreamToLines extends Transform
+  constructor: (options = {}) ->
+    super Object.assign {},
+          options,
+          readableObjectMode: true
+
+    @pending = Buffer.from ''
+
+  lineTerminator: '\n'
+
+  _flush: (callback) ->
+    callback null, @pending.toString @encoding
+
+  _transform: (chunk, ignored, callback) ->
+    chunk = Buffer.concat [@pending, chunk]
+    from = 0
+    
+    while -1 < (idx = chunk.indexOf @lineTerminator)
+      @push chunk.slice(from, idx).toString()
+      from = idx + @lineTerminator.length
+
+    @pending = chunk.slice from
+
+    callback null
+
+class LinePrinter extends Writable
+  constructor: (outputStream) ->
+    super objectMode: true
+
+  _write: (line, encoding, callback) ->
+    outputStream.write Buffer.from (line + "\n"), encoding
 
 [coffee, script, files...] = argv
 
-streams = null
+fs.createReadStream files[0]
+  .pipe new StreamToLines
+  .pipe new LineStreamMerger
+  .pipe new LinePrinter
 
-maybeMerge ->
-  while (least = streams.reduce((a,b) -> a.cmp b)).length
-    console.log least.getOne()
+if false
+  console.log (new LineStreamMerger (files.map (fName) ->
+    (fs.createReadStream fName).pipe new StreamToLines
+  )...)
 
-    if least.done
-      streams = streams.filter (s) -> not s.done()
+# .pipe LinePrinter stdout
 
-      if not streams.length
-        return
-
-streams = (new SortableStream f for f in files)
