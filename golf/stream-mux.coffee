@@ -5,53 +5,44 @@ fs = require 'fs'
 
 debug = (args...) -> false and console.log args...
 
+tree = null
+spew = -> console.log l while l = tree.getLine()
+
 class StreamBox
   constructor: (@fName) ->
     @buf = Buffer.from ''
 
     (@s = fs.createReadStream(@fName))
-      .on 'end', =>
-        debug "END: #{@fName}"
-        @done = true
-        streams.update @
+      .on 'end', => @done = true; spew()
       .on 'data', (more) =>
-        debug "DATA: #{@fName}"
-        @buf = Buffer.concat [@buf, more]
-        streams.update @
+        @buf = Buffer.concat [@buf, more]; spew()
 
   getLine: ->
     switch
       when -1 < (idx = @buf.indexOf '\n')
-        [l, @buf] = [@buf.slice(0, idx).toString(), @buf.slice idx + 1]
+        [l, @buf] = [@buf.slice(0, idx).toString(), @buf.slice idx + 1]; l
       when @done and @buf
-        [l, @buf] = [@buf.toString(), null]
-      else
-        debug "NOLINE #{@fName}"
-        return
+        [l, @buf] = [@buf.toString(), null]; l
+
+class Merger extends (require 'stream').Readable
+  constructor: (@streams) ->
+    return @streams[0] unless m = (l = @streams.length) >> 1
+    super objectMode: true
+    @lines = [null, null]
+    unless l is 2
+      @streams = [new Merger(@streams[..m]), new Merger(@streams[m + 1..])]
+
+  least: ->
+    if null in @lines then return
+    if @lines[0] < @lines[1] then 0 else 1
+
+  getLine: ->
+    (@lines[i] = s.getLine()) for s, i in @streams when @lines[i] is null
+    least = @least()
+    return if least is undefined
+
+    [l, @lines[least]] = [@lines[least], null]
+
     return l
 
-streams = argv[2..]
-  .map (fName) -> new StreamBox fName
-
-streams.update = (s) ->
-  return unless s is streams[0]
-
-  gotLine = true
-
-  while streams.length and gotLine
-    if gotLine = (s = streams.shift()).getLine()
-      console.log gotLine
-
-      if not s.buf
-        debug "DONE: #{s}"
-        continue
-      
-    if s.buf
-      switch idx = (streams.findIndex ({buf: other}) -> (Buffer.compare s.buf, other) < 1)
-        when -1
-          streams.push s
-        when 0
-          streams.unshift s
-        else
-          debug "INSERT: #{idx}\nSTREAMS: #{streams}"
-          streams.splice idx, 0, s
+tree = new Merger argv[2..].map (fName) -> new StreamBox fName
