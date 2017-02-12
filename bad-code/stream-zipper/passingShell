@@ -1,0 +1,8 @@
+#!/bin/bash
+
+a=$1; b=$2
+
+cat $a |(
+    while read a; do
+        
+        echo [$a,$b]
