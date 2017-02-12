@@ -1,10 +1,10 @@
 module.exports =
   class Store
     constructor: (config = {}) ->
-      throw new Error "class Store is abstract"
+      @dbTop = 0
 
     append: (fact) ->
-      throw new Error "class Store is abstract"
 
+    getScanner: (batchSize, lastScanned = 0) ->
 
-
+    nextId: -> @dbTop

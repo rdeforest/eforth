@@ -1,3 +1,3 @@
 module.exports =
   class Fact
-    constructor: (@data) ->
+    constructor: (@id, @document) ->

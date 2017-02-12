@@ -1,8 +1,7 @@
 module.exports =
   class View
     constructor: ({@journal}) ->
-      throw new Error "class View is abstract"
+      @lastFactId = -1
 
     add: (fact) ->
-      throw new Error "class View is abstract"
-
+      @lastFactId = fact.id
