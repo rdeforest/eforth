@@ -1,10 +1,21 @@
 module.exports =
   class Store
     constructor: (config = {}) ->
-      @dbTop = 0
+      throw new Error "class Store is abstract"
 
     append: (fact) ->
+      throw new Error "class Store is abstract"
 
-    getScanner: (batchSize, lastScanned = 0) ->
+    getScanner: (n) ->
+      n = 1 unless 'number' is typeof n and n > 1
+      n = Math.floor n
+      cursor = 0
 
-    nextId: -> @dbTop
+      scanner = ->
+        if cursor.length is @facts.length
+          []
+        else
+          [@facts[cursor..(cursor+=n) - 1]]
+
+
+
