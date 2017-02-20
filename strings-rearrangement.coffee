@@ -2,35 +2,43 @@
 # the strings in such a way that after the rearrangement the strings at
 # consecutive positions would differ by exactly one character.
 
+concat = (a, b) -> a.concat b
+
+unique = (a, b) -> if a[0] is b then a else [b, a...]
+
+diff0 = (a, b) -> a.length is 0 or a[0] is b[0] and diff0 a[1..], b[1..]
+
+diff1 = (a, b) ->
+  undefined in [a, b] or not a.length or
+    (if a[0] is b[0] then diff1 else diff0) a[1..], b[1..]
+
+threadAndNeedle = (word, idx, words) ->
+  words = [words...]
+  [ words.splice(idx, 1), words]
+
+threadings = ([word, words]) ->
+  arrangements words
+    .filter ([first, rest...]) -> diff1 word, first
+    .map ([words]) -> [word, words...]
+
+arrangements = (words) ->
+  return [words] if words.length is 1
+
+  words
+    .map    threadAndNeedle
+    .map    threadings
+    .reduce concat, []
+
+
 stringsRearrangement = (inputArray) ->
-  return not not findArrangement inputArray
+  arrangements inputArray
+    .length > 0
 
-findArrangements = (inputArray) ->
-  if inputArray.length < 2
-    return [inputArray]
 
-  if inputArray.length is 2
-    return (
-        if (diff inputArray...) is 1
-          [inputArray]
-        else
-          undefined
-      )
-
-  [head, tail...] = inputArray
-
-  arrangements = []
-  
-  if sortedTails = findArrangements tail
-    if diff s, head is 1
-      arrangements.push [s, sortedTail...]
-
-    for s, i of sortedTail[0..-2]
-      if (diff s, head is 1) and (diff sortedTail[i+1], head is 1)
-        arrangements.push [sortedTail...].splice i, 0, s
-
-  if diff s, head is 1
-    arrangements.push [sortedTail..., s]
-
-  return arrangements
+module.exports = {
+  concat, unique
+  arrangements, threadings, threadAndNeedle
+  diff0, diff1
+  stringsRearrangement
+}
 
