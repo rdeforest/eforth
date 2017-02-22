@@ -1,44 +1,62 @@
-{Writable} = require 'stream'
+#fs = require 'fs'
+
+#dict = '/usr/share/dict/words'
+#words = fs.readFileSync(dict).split /\n/
 
 module.exports =
-  test: ->
-    global.dict = '/usr/share/dict/words'
-    global.read = (f) -> fs.createReadStream f
-    global.BPA  = prefix.bestPrefixArea
+  class Trie
+    constructor: ->
+      @t = {}
 
-  bestPrefixArea: class extends Writable
-    constructor: (@n, cb) ->
-      super
+    add: (s, at = @t) ->
+      if s.length is 0
+        at[''] = true
+        return
 
-      @competing = {}
-      @prev = ''
-      @topN = []
-      @buffer = Buffer.of()
+      [front, rest...] = s
 
-      @on 'finish', =>
-        @lines.push @buffer.toString()
-        @reduceTopN()
-        cb @topN
+      @add rest, (at[front] ?= {})
 
-    reduceTopN: ->
-      return unless @topN.length > @n
-      @topN = (@topN.sort (a, b) -> b.score - a.score)[0..@n - 1]
+    have: (s, at = @t) ->
+      if s.length is 0
+        return at[''] is true
 
-    _write: (chunk, encoding, callback) =>
-      ridx = Buffer.
-      most = 0
+      return at[s[0]] and @have s[1..], at[s[0]]
 
-      if 'function' isnt typeof word.startsWith
-        console.log word
-        return callback null
+    getAll: (s, at = @t) ->
+      if s.length
+        if from = at[s[0]]
+          @getAll(s[1..], from).map (str) -> s[0] + str
+        else
+          []
+      else
+        (if at[''] then [''] else [])
+          .concat Object.keys(at).map (k) => @getAll('', at[k]).map (s) -> k + s
+          .reduce ((a, b) -> a.concat b), []
 
-      for pfx, soFar of @competing when word.startsWith pfx
-        soFar.push word
-        soFar.score += pfx.length
+    deepest: (at = @t) ->
+      return undefined unless keys = Object.keys at
 
-      @topN.push (@competing[word] = []).score = word.length
+      if keys.length is 1 and keys[0] is ''
+        return ''
 
-      unless word.startsWith @prev
-        @reduceTopN()
+      keys.filter (k) -> k isnt ''
+        .map (k) => @deepest at[k]
 
+      return "not done"
 
+    width: (s, at = @t) ->
+      if s.length is 0
+        (Object
+          .keys at
+          .map (k) => @width '', at[k]
+          .reduce ((a, b) -> a + b), 0
+        ) + if at[''] then 1 else 0
+      else
+        if not at[s[0]]
+          0
+        else
+          @width s[1..], at[s[0]]
+
+    score: (pfx) ->
+      pfx.length * @getAll(pfx).length**2

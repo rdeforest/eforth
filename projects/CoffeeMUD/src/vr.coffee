@@ -8,18 +8,18 @@ defineVr = (klass) ->
     new Persisted
 
 defineVr class Thing
-  constructor: (aspects...) ->
-    super aspects..., Container, Located, Observable
+  constructor: ->
+    combines @, Container, Located, Observable
 
 defineVr class Actor extends Thing
   constructor: (aspects...) ->
-    super aspects..., Observer, Initiator
+    combines @, Observer, Initiator
 
-defineVr class Observable extends Aspected
+defineVr class Observable
   constructor: (@these) ->
-    super Visible, Audible, Tactile, Fragrant, Flavored
+    combines @, Visible, Audible, Tactile, Fragrant, Flavored
 
-    @_needs Located, Container
+    needs @, Located, Container
 
 defineVr class Container
   constructor:   (@these)      -> @contents = []
