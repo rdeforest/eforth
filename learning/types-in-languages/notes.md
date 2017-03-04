@@ -101,7 +101,12 @@ name. In other words, two procedures may have the same name if their
 
 The point as I understand it is that the move method can be extended to accept
 or return new types without breaking its interface. I do not see this as a
-good feature. I prefer method names to be unique.
+good feature.
+
+When I need a verb to mean different things in different contexts, I don't
+mind making that explicit in the verb's definition. More to the point, giving
+different behaviors the same name is unnecessary and violates the principle of
+least surprise.
 
 ```coffee
     class Location extends Vector
@@ -112,11 +117,39 @@ good feature. I prefer method names to be unique.
         @add path
 
       applyVelocity: (v, dt) ->
-        path = new Vector @length
-          .copyFrom v
-          .multiplyBy dt
+        path =
 
-        @move path
+        @move (new Vector @length
+                .copyFrom v
+                .multiplyBy dt)
+
+    class Location2 extends Vector
+      move: (destPathOrVelocity, dt) ->
+        switch
+          when (dest = destPathOrVelocity) instanceof Location2
+            return @copyFrom dest
+
+          when (path = destPathOrVelocity) instanceof Path
+            return @add path
+
+          when (vel  = destPathOrVelocity) instanceof Velocity
+            return @add(
+              new Path @length
+                .copyFrom vel
+                .multiplyBy dt
+            )
+```
+
+```super coffee
+    class Location extends Vector
+      move: (destination: Location) ->
+        @copyFrom destination
+
+      move: (path: Path) ->
+        @add path
+
+      move: (v: Velocity, dt: TimeSpan) ->
+        @move v.multiplyBy dt
 ```
 
 There _is_ one feature of type annotation which I find useful. If it is
@@ -161,7 +194,7 @@ unpleasantly surprising behaviors.
 
 # My expectations
 
-#e Everything except 'return' and 'throw' are expressions
+## Everything except 'return' and 'throw' are expressions
 
 ## Variables are not values
 
@@ -266,3 +299,54 @@ me since I don't use operators more than one way. That is, I don't add strings
 with '+' and I don't expect 'x' * 3 to evaluate to 'xxx'. Perl has the
 preferable behavior: the math operators (+, -, ==) coerce their args to
 numbers. The string operators (., eq, gt) coerce their args to strings.
+
+## Compilers should infer as much as is safe to infer and no more
+
+It's ok with me if
+
+```
+    1 + "1"
+```
+
+is a syntax error. It's also fine with me if (as in Perl) "+" is strictly
+numeric addition in which case
+
+```
+    1 + "one"
+```
+
+can be a syntax error.
+
+## Operator overloading is not important to me
+
+If I want a more flexible kind of "addition", I will put "add" methods on all
+the objects I want to add in this flexible way.
+
+```
+    String::add = (m) ->
+      if isNumeric(@) and isNumeric(m)
+        @ + m
+      else
+        throw TypeError "Cannot add #{n} and #{m} numerically"
+
+    String::append = (suffix) -> "#{@}#{suffix.toString()}"
+
+    Number::add = (m) ->
+      if isNumeric(m) -.
+        @ + m
+      else
+        throw TypeError "Cannot add #{n} and #{m} numerically"
+
+    Number::append = ->
+      throw TypeError "Cannot append anything to numbers"
+```
+
+# References
+
+## http://www.rubyfleebie.com/ruby-is-dynamically-and-strongly-typed/
+
+Says:
+- type strict = little or no type coercion
+- static typing = vars have types which constrain their contents
+
+
