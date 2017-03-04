@@ -1,25 +1,9 @@
+_ = require 'lodash'
 curry = require 'lodash/curry'
 
-MakerMaker = (ctor, proto) ->
-  Object.create proto, Object.assign, {}, ctor, of: (x) ->
-    Object.create
+class Maybe
+  constructor: (@__value) ->
 
-class MetaContainer
-  constructor: (name, maker) ->
-    made = Object.assign {}, maker
-
-    made.of = (x) -> Object.create
-
-    return made
-
-Container =
-  new MetaContainer class
-    constructor: (x) ->
-      @__value = x
-
-    map: (f) -> @constructor.of f @__value
-
-class Maybe extends Container
   @of: (x) -> new Maybe x
 
   isNothing: -> @__value in [null, undefined]
@@ -30,12 +14,25 @@ map = curry (f, functor) -> functor.map f
 
 maybe = curry (x, f, m) -> if m.isNothing then x else f m.__value
 
-Either = Container
+prop = _.property
 
-class Left extends Either
-  map: -> @
+class Left
+  constructor: (@__value) ->
+  @of: (x) -> new Left x
+  map: (f) -> @
 
-class Right extends Either
+class Right
+  constructor: (@__value) ->
+  @of: (x) -> new Right x
+  map: (f) -> Right.of f @__value
 
+getAge = curry (now, user) ->
+  birthdate = moment user.birthdate, 'YYYY-MM-DD'
+  if not birthdate.isValid()
+    Left.of 'Invalid birthdate'
+  else
+    Right.of now.diff birthdate, 'years'
 
-Object.assign global, {Container, Maybe, Either, Left, Right}
+fortune = compose concat(), add 1
+
+Object.assign global, {Maybe, Left, Right, map, maybe, curry, prop, _, getAge}
