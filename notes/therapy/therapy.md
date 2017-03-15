@@ -1,4 +1,4 @@
-# Current advice
+# Previous advice
 
 - If I don't organize my time, I'm not organizing my time
  - write out the plan in advance
@@ -12,6 +12,7 @@
 ## 2016-07-19
 
 - Status
+ - 
  - Opening the valve
   - Been recovering, making excuses
   -...

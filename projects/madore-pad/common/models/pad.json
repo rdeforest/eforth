@@ -1,0 +1,33 @@
+{
+  "name": "pad",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "fileName": {
+      "type": "string",
+      "required": false,
+      "default": "md5"
+    },
+    "digestAlgorithm": {
+      "type": "string",
+      "required": false,
+      "default": "md5"
+    },
+    "digestEncoding": {
+      "type": "string",
+      "required": false,
+      "default": "hex"
+    },
+    "data": {
+      "type": "buffer",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
