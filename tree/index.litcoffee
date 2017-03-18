@@ -2,7 +2,7 @@
 
     _ =
       flatten: (lists) ->
-        if 'object' isnt typeof lists or not lists.length
+        if not Array.isArray(lists)
           return lists
         else if 'object' isnt typeof lists[0]
           return [lists[0]].concat _.flatten lists.splice 1

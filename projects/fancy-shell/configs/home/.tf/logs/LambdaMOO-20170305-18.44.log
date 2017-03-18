@@ -1,0 +1,72 @@
+                          ***************************
+                          *  Welcome to LambdaMOO!  *
+                          ***************************
+                                       
+                     Running Version 1.8.3+47 of LambdaMOO
+
+PLEASE NOTE:
+   LambdaMOO is a new kind of society, where thousands of people voluntarily
+come together from all over the world.  What these people say or do may not
+always be to your liking; as when visiting any international city, it is wise
+to be careful who you associate with and what you say.
+   The operators of LambdaMOO have provided the materials for the buildings of
+this community, but are not responsible for what is said or done in them.  In
+particular, you must assume responsibility if you permit minors or others to
+access LambdaMOO through your facilities.  The statements and viewpoints
+expressed here are not necessarily those of the wizards, Pavel Curtis,
+or Roger Crew, and those parties disclaim any responsibility for them.
+
+NOTICE FOR JOURNALISTS AND RESEARCHERS:
+  The citizens of LambdaMOO request that you ask for permission from all
+direct participants before quoting any material collected here.
+
+For assistance either now or later, type `help'.
+The lag is approximately 6 seconds; there are 66 connected.
+*** Connected ***
+Storage room
+Boxes, crates scrapes of stuff, and the desicated remains of a rat are all strewn about this small room. There is dusteverywhere... at least you hope that's dust. There's a hammock strung between two walls and a single 60 watt bulb casts a dim light.
+
+You note that the 60 watt incandescent bulb implies that the owner ther doesn't care about the environment, or hasn't changed anything since incandescent lights became hard to come by.
+There is new activity on the following lists:
+    *Server-Hackers (#24451)             1 new message
+    *Core-DB-Issues (#8175)              1 new message
+Last connected Fri Aug 19 07:58:26 2016 PDT from 24.19.59.52
+Message 1181 on *Server-Hackers (#24451):
+Date:     Mon Feb 27 15:20:31 2017 PST
+From:     Sleeper (#98232)
+To:       *Server-Hackers (#24451)
+
+Some mild lag has returned.  I know about the commands to list the various lags, but does the server have the ability to identify what the higher impact verbs are?
+--------------------------
+< connected: Crag. Total: 67 >
+One each 5 seconds, oldest to newest: 0 0 6 0 0 0 5 0 0 0 5 0
+Message 5136 on *Core-DB-Issues (#8175):
+Date:     Tue Aug 23 07:40:04 2016 PDT
+From:     Diopter (#98842)
+To:       *Core-DB-Issues (#8175)
+Subject:  re: help me add a new mail option
+
+What you want to do is ``@refuse flames from #41111'', but right now the @refuse command won't work with anything other than a player. I think there are some Player Classes that offer a customized @refuse that'll let you do this. Here's a patch for the core that allows you to @refuse anything if you use the ``@refuse!'' command.
+
+*** refuse-orig 
+--- refuse-new  
+***************
+*** 1,2 ****
+! @verb $frand_class:"@ref*use" any any any
+! @program $frand_class:@refuse
+--- 1,2 ----
+! @verb $frand_class:"@ref*use!" any any any
+! @program $frand_class:@refuse!
+***************
+*** 9,12 ****
+  if (stuff)
+!   if (((typeof(who = stuff[1]) == OBJ) && (who != $nothing)) && (!is_player(who)))
+      player:tell("You must give the name of some player.");
+    else
+--- 9,13 ----
+  if (stuff)
+!   if (((verb != "@refuse!") && ((typeof(who = stuff[1]) == OBJ) && (who != $nothing))) && (!is_player(who)))
+      player:tell("You must give the name of some player.");
++     player:tell("If you're sure you want to refuse an object, type ``@refuse! ", argstr, "''");
+    else
+--------------------------

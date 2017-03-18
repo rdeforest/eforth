@@ -1,0 +1,163 @@
+Waterpoint: lawfully satisfying[328]
+
+*** Connected ***
+#$#mcp version: 2.1 to: 2.1
+The Coastal Path
+A relatively smooth path along the coast.  The ocean rolls against the rocky coast.  It is dark out and the stars are shining.  It is cold.  The coastal path continues to the southeast and north.
+Last connected Sat Jul 11 15:13:44 2015 PDT from 63.224.54.239
+There is new news.  Type `news all' to read all news or `news' to read just new news.
+There is new activity on the following lists:
+    *Bug-reports                3 new messages
+    *welcome-messages           2 new messages
+    *News                       3 new messages
+#$#mcp-negotiate-can 327523417 package: mcp-negotiate min-version: 1.0 max-version: 2.0
+#$#mcp-negotiate-can 327523417 package: mcp-cord min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-org-mud-moo-simpleedit min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-ping min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-widget min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-eliza min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-turtleback-browse min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-visual min-version: 1.0 max-version: 1.1
+#$#mcp-negotiate-can 327523417 package: dns-com-ben-tfstatus min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-buddy min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-status min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-att-research-twin-window min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-nowhere-hello min-version: 0.1 max-version: 0.1
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-rehash min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-ispell min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-desktop min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-edumacation-im min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-edumacation-racko min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-getset min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-displayurl min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-edumacation-update min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-jtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-edumacation-song min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-nop-sqmoo-objlist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-nop-sqmoo-verblist min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-serverinfo min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-timezone min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-awns-googlewhack min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-fyigm-mypkg min-version: 1.5 max-version: 2.0
+#$#mcp-negotiate-can 327523417 package: dns-com-nop-sqmoo-verbtext min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-can 327523417 package: dns-com-fyigm-lex min-version: 1.0 max-version: 1.0
+#$#mcp-negotiate-end 327523417
+Message 977 on *Bug-reports:
+Date:     Fri Jun 12 12:12:49 2015 PDT
+From:     Rob
+To:       *Bug-reports
+Subject:  Small vulnerability potential in use of crypt()
+
+[For some reason I wasn't allowed to send this to *security]
+
+The string returned by crypt() is case-sensitive, and should only be compared using equal() or strcmp().
+
+Unfortunately, $login:connect uses != to compare the result of crypt() with a player's saved password hash. This could allow someone to connect as the player using any string that happens to have a similar hash, differing only in case.
+
+Although the crypt() password keyspace is 72,057,594,037,927,936 in size, I estimate this reduces the effective keyspace to at most 70,368,744,177,664. I could be off.
+--------------------------
+Message 978 on *Bug-reports:
+Date:     Tue Jul 21 08:42:11 2015 PDT
+From:     Kenny
+To:       *Bug-reports
+Subject:  Help system doesn't match all verbs
+
+When you have a verb name on a feature like #750:@pw*xml the help system will not match "help @pw" against it.
+--------------------------
+Message 979 on *Bug-reports:
+Date:     Fri Feb 26 13:02:00 2016 PST
+From:     Rob
+To:       *Bug-reports
+Subject:  Core extraction failure
+
+Core extraction failed:
+#3497:dcd_2 (this == #7653), line 88: Could not access dark_wizard (#2).authorized_keys.
+... called from #3497:dcd_1 (this == #7653), line 72
+... called from #3459:http_GET, line 10
+(End of traceback)
+--------------------------
+Message 267 on *welcome-messages:
+Date:     Thu Jun 20 08:47:46 2013 PDT
+From:     Ken
+To:       *welcome-messages
+
+Waterpoint: nondescript distinctiveness
+
+--------------------------
+Message 268 on *welcome-messages:
+Date:     Wed Aug 14 13:45:17 2013 PDT
+From:     Ben
+To:       *welcome-messages
+
+Waterpoint: lawfully satisfying
+
+--------------------------
+Message 70 on *News:
+Date:     Mon Jun  3 18:08:39 2013 PDT
+From:     Xythian
+To:       *News
+Subject:  "move"
+
+The Waterpoint move Saturday was from one Linode in the Dallas data center (768M, Ubuntu 11.04 32-bit) to another Linode in the same data center (1G, Ubuntu 12.04.2 LTS 64-bit).
+
+A while back Linode doubled all Linode sizes and upgraded their hardware. This move takes advantage of that update moving down to the cheaper 1G plan rather than going to the overkill 1.5G plan. Linode could have migrated the old VPS automatically, but that would've migrated the obsolete 11.04 install as well as taking a lot longer.
+
+The MOO server is compiled 32-bit.
+
+WP stayed at the same IP address (I set up the new VPS and then swapped the IP with the old VPS) for the move.
+
+At the same time, I repackaged the HTTP proxy and updated it to run on Go 1.1, and switched from Apache to Nginx for the static site. I also began setting up the short URL domain (wtpt.org) on the same box (it's currently hosted on Dreamhost). When it moves to this box it'll proxy /tu to the MOO rather than redirecting. (All other URLs will redirect.) That'll save one redirect when using the short URL redirector.
+
+It's now also encrypting/backing up the database to S3 in addition to its other backup targets.
+--------------------------
+Message 71 on *News:
+Date:     Tue Jan 14 12:08:28 2014 PST
+From:     Ken
+To:       *News
+Subject:  Waterpoint outage
+
+Linode took the hypervisor node that is on down with no warning. It was an unsafe shutdown and we lost everything since the last checkpoint. Way to go, Linode.
+
+--------------------------
+Message 72 on *News:
+Date:     Fri Jan 17 09:32:21 2014 PST
+From:     Ken
+To:       *News
+Subject:  another day, another linode emergency
+
+The latest crash (they called it "emergency maintenance" but an unclean shutdown is a crash) is courtesy Linode. They migrated this instance to another physical host, so in theory there should be more stability now.
+
+It's probably time to start exploring other options, but I am not sure they will be any better. Relying on a single instance basically means things will break sometimes.
+--------------------------
+No News (is news)
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Xythian        Tent                          143 days                          
+Kyle           Eastern edge of the pine for  24 days                           
+Matthew        Coastal path                  6 days                            
+Eclipse        Field of the Lonesome Pine    5 days      nerdboat &c           
+Kenny          Field of the Lonesome Pine    5 days      Conspiracy            
+wedge          Little point                  2 days                            
+Charkes        Field of the Lonesome Pine    a day       Workin'               
+keith          Field of the Lonesome Pine    a day       even if I wanted to   
+Ken            Field of the Lonesome Pine    a day                             
+Mac            Field of the Lonesome Pine    22 hours                          
+stucky         Field of the Lonesome Pine    12 hours                          
+Chris          Field of the Lonesome Pine    11 hours                          
+Tobin          Cape Toad                     10 hours                          
+Jim            Field of the Lonesome Pine    4 hours                           
+Rob            Nature trail                  2 hours                           
+Wayne          Field of the Lonesome Pine    2 hours                           
+Roy            Field of the Lonesome Pine    an hour                           
+Barry          Field of the Lonesome Pine    an hour     relax and stuff       
+pj             Field of the Lonesome Pine    32 minutes                        
+Marn           Field of the Lonesome Pine    28 minutes                        
+Crag           Coastal path                  0 seconds                         
+
+Total: 21 people, 1 of whom has been active recently.
+Name           Location                      Idle Time   Doing/Idle            
+----           --------                      ---------   ----------            
+Kenny          Field of the Lonesome Pine    5 days      Conspiracy            
+
+Total: 1 person, who has not been active recently.
+That is not a valid command.

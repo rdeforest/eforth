@@ -1,0 +1,110 @@
+                IP, David Bowie, Alan Rickman, and Glenn Frey.                 
+
+There's a pair of handcuffs by the bed. They're surrounded by empty Chinese
+food cartons, an empty bottle of wine, and two wine glasses. One of the
+glasses has fallen over, leaving a red stain on the carpet which slowly
+creeps towards the handcuffs.
+
+The alarm clock went off an hour ago, but the room's inhabitants have shut
+it off, preferring the warmth of their shared bed to the cold of the real
+world.
+
+                       This is OpalMOO.  Welcome to it.                        
+                    Wizards: Briar, Opal, Min, Fox, and Lyn                    
+                        Number of connected players: 1                         
+
+     +-----------------------------+      To register a character,
+     | connect <player> <password> |      log in as a guest
+     | connect Guest               |      and type:
+     +-----------------------------+            help @request
+
+            Ox's programmer repeatedly turns into Panda's manager.             
+Either that player does not exist, or has a different password.
+I don't understand that.  Valid commands at this point are:
+   WELCOME, Who, COnnect, CReate, Quit, UPtime, Version, or Help
+Either that player does not exist, or has a different password.
+Either that player does not exist, or has a different password.
+Either that player does not exist, or has a different password.
+SUMMARY OF LOGIN COMMANDS
+=========================
+There are only a few commands one may use when logging in.  Help is available
+on them with the syntax `help <command>'. They are:
+
+connect: to connect to a pre-existing (or Guest) character
+create:  to attempt to create a new character
+quit:    to disconnect from the MOO
+uptime:  to see how long the server has been running
+version: to see what server and core versions the moo is running
+help:    to get help
+
+For a list of all help topics, try `help full-index'.
+Logging you in as `Envy'
+*** Connected ***
+The Hallway
+You're standing in the hallway of what looks to be a run-down apartment building. The hall is illuminated by a small forty-watt bulb which threatens to end its young life at any minute. As you survey your surroundings, you see a cockroach scurry from your view and disappear in some crack in the stairwell. In front of you (to the north), a door has a small paper with the number Twelve written on it. Behind you (to the south), a door labelled Eleven stands closed. Steps, rickety but functional, lead back down as well. There is a ladder here, leading up into what appears to be the attic. You also know, though, that you can go out to the street. 
+The apartment mailboxes are battered and recessed into the wall, but still lock. The OpalMOO Christmas/Holiday Tree stands before you. Its lights blink on and off annoyingly. Please feel free to create an ornament and hang it on the green, scented branches. You see a pleasant bit of mistletoe hanging on the wall. 
+You see the OpalMOO Theme, the OpalMOO Rules, and a newspaper here.
+The last checkpoint, 15 minutes ago, was 24,687,564 bytes (23.5M).  The checkpoint took 1 second.  The checkpoint rate is 24108.95 K/sec.
+Don't forget to take a look at the newspaper.  Type 'news' to see it.
+Player name     Connected    Idle time    Location
+-----------     ---------    ---------    --------
+Envy (#132)     7 seconds    0 seconds    The Hallway
+Kenny (#1148)   5 days       5 days       Top of a wooden windmill
+
+Total: 2 players, 1 of whom has been active recently.
+Player name     Connected    Idle time    Location
+-----------     ---------    ---------    --------
+Envy (#132)     4 minutes    0 seconds    The Hallway
+Kenny (#1148)   5 days       5 days       Top of a wooden windmill
+
+Total: 2 players, 1 of whom has been active recently.
+Sorry, but no help is available on `wizards'.
+Help is available on the following general topics:
+
+introduction -- what's going on here and some basic commands
+index -- index into the help system
+
+players -- setting characteristics of yourself
+movement -- moving yourself between rooms
+communication -- communicating with other players
+manipulation -- moving or using other objects
+miscellaneous -- commands that don't fit anywhere else
+manners -- important tips on socially acceptable behavior
+
+building -- extending the MOO
+programming -- writing code in the MOO programming language
+editors -- editing text and code in the MOO
+
+@pagelength -- what to do if lines scroll off your screen too fast
+@linelength -- what to do if lines are truncated
+tinymud -- a list of equivalences between MOO and TinyMUD concepts/commands
+
+Type 'help <topic>' for information on a particular topic.
+
+Sorry, but no help is available on `topics'.
+Sorry, but no help is available on `wizards'.
+Sorry, but no help is available on `$wizard'.
+;: I don't understand that.
+From the bell tower, you hear: BONG BONG BONG BONG BONG BONG BONG BONG BONG BONG
+Player name         Last logout                   Location
+-----------         -----------                   --------
+Blackbriar (#110)   Sat Jan 21 15:48:37 2017 EST  Bedroom
+
+Total: 1 player, who has not been active recently.
+Player name   Last logout                   Location
+-----------   -----------                   --------
+Opal (#72)    Thu Jan 14 14:57:30 2016 EST  Opal's Office
+
+Total: 1 player, who has not been active recently.
+Player name     Connected    Idle time    Location
+-----------     ---------    ---------    --------
+Envy (#132)     5 minutes    0 seconds    The Hallway
+Kenny (#1148)   5 days       5 days       Top of a wooden windmill
+
+Total: 2 players, 1 of whom has been active recently.
+Kenny
+A young man close to 7.  His blonde hair is cut extremely short on top and shaved off on the sides.  The blue eyes glow slightly as if lit by an inner light.  The bulges in his clothes indicate he is very fit ... er, those are just tumors.  Sorry.
+"I just said: up yours, baby!" -- Richard Roundtree, Shaft (1971)  He is wearing Official Boy Toy Button.  He has a black band wrapped around his arm.  He is wearing large overcoat.  
+He is carrying: Map of OpalMOO, Stuff, Lucy in the Sky with Diamonds, a mace, and a sex pistol.
+He is awake, but has been staring off into space for 5 days.
+He is in perfect health.  He wields sex pistol.
