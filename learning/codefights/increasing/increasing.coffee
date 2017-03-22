@@ -1,6 +1,11 @@
 increasing = (l) ->
-  return l.length < 2 or
-         (l[0] < l[1] and increasing l[1..])
+  n = l[0]
+  l = l.slice 1
+
+  while l.length and n < l[0]
+    n = l.shift()
+
+  return l.length is 0
 
 almostIncreasingSequence = (l) ->
   return true if l.length < 3
@@ -10,14 +15,10 @@ almostIncreasingSequence = (l) ->
   if n0 < n1 < n2
     return almostIncreasingSequence l[1..]
 
-  #console.log "ai:", l
-
   if n0 < n2
-    #console.log "remove #{n1}"
     return increasing l[2..]
 
   if n1 < n2
-    #console.log "remove #{n0}"
     return increasing l[1..]
 
   if n0 < n1 > n2

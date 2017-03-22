@@ -1,9 +1,11 @@
 increasing = (l) ->
-  n = l.shift()
+  n = l[0]
+  l = l.slice 1
 
-  n = m while n < m = l.shift() and l.length
+  while l.length and n < l[0]
+    n = l.shift()
 
-  not l.length
+  return l.length is 0
 
 almostIncreasingSequence = (seq) ->
   return true if seq.length < 3

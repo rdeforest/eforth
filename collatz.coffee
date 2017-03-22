@@ -1,4 +1,18 @@
-collatz = (n) -> if n % 2 then n * 3 + 1 else n / 2
-icollatz = (n) -> (yield n = collatz n) while n > 1
+prev = (n) ->
+  switch n % 4
+    when 1 then ...
+    when 3 then ...
+    else ...
 
-module.exports = {collatz, icollatz}
+
+next = (n) ->
+  m = 3 * n + 1
+  m /= 2 while not (m & 1)
+  i = m >> 1
+  if not prev[i]
+    prev[i] = n
+  else
+    prev[i] = Math.min n, prev[i]
+  m
+
+module.exports = {prev, next}
