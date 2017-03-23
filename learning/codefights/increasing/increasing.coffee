@@ -1,6 +1,6 @@
 increasing = (l) ->
   n = l[0]
-  l = l.slice 1
+  l = l.slice
 
   while l.length and n < l[0]
     n = l.shift()
