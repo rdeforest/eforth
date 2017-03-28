@@ -2,48 +2,56 @@
 # the strings in such a way that after the rearrangement the strings at
 # consecutive positions would differ by exactly one character.
 
-Array.prototype.without = (idx) ->
-  switch idx
-    when 0            then @[1..]
-    when @length - 1  then @[..-2]
-    else (ll = @slice()).splice(idx, 1); ll
-
 offByOne = (a, b) ->
+  unless a and b
+    console.log "falsy things match everything", a, b
+    return true
+
   count = 0
 
   for l, i in a.split ''
     count++ if b[i] isnt l
-    return false if count > 1
+
+  console.log "#{a} and #{b} have #{count} differences"
 
   return count is 1
 
-hasSolution = (remaining, soFar = []) ->
-  if not remaining.length
-    return true
+solutions = (word, words...) ->
+  console.log "sol: #{word}", words
 
-  if not soFar.length
-    for s, i in remaining
-      if solution = hasSolution remaining.without(i), soFar.concat [s]
-        return solution
-  else
-    [firstWord, rest..., lastWord] = soFar
-    (lastWord = firstWord) if soFar.length is 1
+  if not words.length
+    return [[word]]
 
-    for s, i in remaining
-      if offByOne s, lastWord
-        if solution = hasSolution remaining.without(i), soFar.concat [s]
-          return solution
+  succeeded = []
+  failed = []
 
-      if offByOne s, firstWord
-        if solution = hasSolution remaining.without(i), [s].concat soFar
-          return solution
+  sol = solutions words
 
-  return false
+  for path in sol.succeeded
+    for position in [0..path.length]
+      if offByOne(word, path[position - 1]) and offByOne(word, path[position])
+        console.log "Extending [#{path.join ", "}] by inserting #{word} at #{position}"
+        extended = Array.from path
+        extended.splice position, 0, word
+        succeeded.push extended
+      else
+        failed.push {path, word}
+
+  for failure in sol.failed
+    for 
+
+  {succeeded, failed}
 
 stringsRearrangement = (inputArray) ->
-  not not hasSolution inputArray
+  console.log found = solutions inputArray...
+  found.succeeded.length > 0
 
-require('./test-sa') stringsRearrangement
+(require './genericTester') [
+  [ [[ "aa",  "ab",  "bb"]], true]
+  [ [[ "ab",  "bb",  "aa"]], true]
+  [ [["aba", "bbb", "bab"]], false]
+  [ [[  "q",   "q"       ]], false]
+], stringsRearrangement
 
-module.exports = {hasSolution, offByOne}
-
+module.exports =
+  { stringsRearrangement, solutions }
