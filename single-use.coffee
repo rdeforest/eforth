@@ -1,9 +1,13 @@
-# Single use permission
+# Single use function
 
-module.exports = (fn, overUse) ->
-  usedUp = overUse or -> throw new Error 'Attempt to re-use single-use permission'
-  use = fn
-  return (args...) ->
-    use = usedUp
-    fn args...
+module.exports = (fn) ->
+  usable = true
+
+  (args...) ->
+    if usable
+      usable = false
+      fn args...
+    else
+      throw new Error 'Attempt to re-use single-use function'
+
 
