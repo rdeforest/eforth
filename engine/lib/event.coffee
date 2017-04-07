@@ -1,19 +1,21 @@
 class Event
-  @REJECTED   : Symbol 'Event.REJECTED'
-  @ACCEPTED   : Symbol 'Event.ACCEPTED'
-  @PENDING    : Symbol 'Event.PENDING'
   @DISPATCHED : Symbol 'Event.DISPATCHED'
+  @PENDING    : Symbol 'Event.PENDING'
+  @ACCEPTED   : Symbol 'Event.ACCEPTED'
+  @REJECTED   : Symbol 'Event.REJECTED'
 
   constructor: (@parent, @origin, @receiver, @details = {}) ->
-    @changes = []
-    @status = null
+    @changes   = []
+    @status    = null
     @readyWhen = []
 
-  accept: (changes = []) -> # destination     happy
+  _result: (r) ->
     if @status isnt Event.REJECTED
-      @status = Event.ACCEPTED
+       @status   =  r
 
-    @changes = @changes.concat changes
+  accept: (changes = []) -> # destination     happy
+    if @_result Event.ACCEPTED
+      @changes = @changes.concat changes
 
   reject: (message)  -> # destination not happy
     @childFailed @, message

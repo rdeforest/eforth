@@ -7,6 +7,61 @@ defs = []
 
 ourGlobal = null
 
+makeHandlerMethod = (real, methodName = real.name) ->
+  (target, args...) ->
+    ret = real args...
+    @saveChange methodName, target, args...
+
+
+class Persister
+  @defaultHandler:
+    defineProperty: makeHandlerMethod Object.defineProperty
+    deleteProperty: makeHandlerMethod Object.deleteProperty
+    setPrototypeOf: makeHandlerMethod Object.setPrototypeOf
+    set:
+      makeHandlerMethod set = (target, prop, value, receiver) ->
+        if receiver is target
+          target[prop] = value
+
+  constructor: (@cfg) ->
+    @proxied = new Map
+    @handler = Persister.defaultHandler
+    @symbols = {}
+    @nextSymId = 0
+
+  idSymbol: (sym) ->
+    @symbols[sym] ?= @nextSymId++
+
+  propNames: (target) ->
+    Object
+      .getOwnPropertyNames(target)
+      .concat Object.getOwnPropertySymbols target
+
+  save: (target, args...) ->
+    proto = Object.getPrototypeOf target
+    ctor = target.contructor
+    props = {}
+    methods = {}
+
+    for name in @propNames
+      desc = Object.getOwnPropertyDescriptor target, name
+      desc.sname = @serialize propName name
+
+      if 'function' is typeof desc.value
+        methods[name] = @serializeMethod desc
+      else
+        props[name] = @serializeProperty desc
+
+    @write @proxied[target].file, JSON.stringify {
+      ctor, proto, props, methods
+    }
+
+  create: (klass, args...) ->
+    target = new klass args...
+    proxy = new Proxy (), @handler
+    file = @assignFileName info = {target, proxy, @handler, file}
+    @proxied.set target, info
+    proxy
 
 parseName = (name, mustNotExist) ->
   tgt = ourGlobal

@@ -9,11 +9,17 @@ which will be made official once all event propagation completes.
 
 ## Event
 
+An event starts as an hypothosis, then is accepted, revised or rejected
+
 An event has
  - parent event aggregating sub-event results or null for ticks
  - source participant
  - destination participant
  - zero or more changes which will come about if the whole event tree succeeds
+
+An event does
+ - dispatch
+ - handle "yeah but" responses from subscribers
 
 ## Participant
 

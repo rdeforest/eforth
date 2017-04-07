@@ -1,18 +1,23 @@
 {Participant, Event} = require '../lib'
 
-arena = width: 100, height: 100
+WORLD_SIZE = 100
+
+arena = width: WORLD_SIZE, height: WORLD_SIZE
 
 balls = null
 
 class Ball extends Participant
   constructor: ->
     super
-    [@x, @y] = [0, 1].map -> Math.random() * 100
+    [@x, @y] = [0, 1].map -> Math.random() * WORLD_SIZE
     [@dx, @dy] = [0, 0]
 
   receiveEvent: (event) ->
+    dt = event.dt || 1
+
     if event instanceof Event.Tick
-      dest = 
+      possibleDest = [@x + @dx * dt, @y + @dy * dt]
+      emit MoveEvent
 
 balls =
   [0..2]
