@@ -38,3 +38,12 @@ An Actor is a Participant which subscribes to tick events.
 A change is a function called when an event chain succeeds.
 
 # Usage
+
+# Design
+
+Haven't decided between
+  - visitor pattern: event traverses tree of interested parties 
+  - observer pattern: interested parties subscribe to events
+
+I'm leaning towards observer because it should be easier to isolate state in
+that pattern.

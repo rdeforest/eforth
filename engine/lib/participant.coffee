@@ -1,7 +1,7 @@
 Event = require './event'
 
 class Participant
-  constructor: (@name) ->
+  constructor: (@name, @world) ->
     @subscribers = []
     @emitted = []
 
@@ -34,11 +34,17 @@ class Participant.World extends Participant
   start: ->
     loop
       tick = new Event.Tick
+      @shadow = new Participant.World.Shadow realWorld: @, tickEvent: tick
       emit tick, Event.Tick, tick: @history.length
 
       if tick.status is Event.FAILED
         console.log "Event failed, stopping"
         return
+
+class Participant.World.Shadow extends Participant.World
+  constructor: (info, tickEvent) ->
+    super
+    @real = info.realWorld
 
 module.exports = {Participant}
 

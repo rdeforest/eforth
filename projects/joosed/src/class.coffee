@@ -31,6 +31,8 @@ meta = (o) -> o[jSym]
 
 module.exports =
   class MetaClass
+    @startDefining: (name) ->
+
     constructor: (@klass) ->
       if meta @klass
         throw new Error "#{@klass.name} already has a MetaClass"

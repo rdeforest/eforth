@@ -1,13 +1,25 @@
+{Change} = require './change'
+
 class Event
   @DISPATCHED : Symbol 'Event.DISPATCHED'
   @PENDING    : Symbol 'Event.PENDING'
   @ACCEPTED   : Symbol 'Event.ACCEPTED'
   @REJECTED   : Symbol 'Event.REJECTED'
 
-  constructor: (@parent, @origin, @receiver, @details = {}) ->
+  constructor: (info = {}) ->
+    { @name
+      @parent
+      @receiver
+      @details = {}
+      @origin  = @parent?.receiver
+    } = info
+
     @changes   = []
     @status    = null
     @readyWhen = []
+    @addChange = Change.factory @receiver.worlds,
+      (fn, ready) ->
+      @changes.push 
 
   _result: (r) ->
     if @status isnt Event.REJECTED
@@ -19,6 +31,9 @@ class Event
 
   reject: (message)  -> # destination not happy
     @childFailed @, message
+
+  spawn: (@details) ->
+    recipients = @receiver.listeners
 
   ready: ->
     (@readyWhen =

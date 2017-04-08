@@ -1,61 +1,49 @@
 MetaClass        = require './class'
 MethodDescriptor = require './method'
 
-defining = null
+objects = {}
 
-verbs =
+class Definition
+  constructor: (@name, @definer) ->
+    @$ =
+      @props = {}
+      @methods = {}
+      @before = {}
+      @after = {}
+      @parents = new Set
+
+    if exists = objects[@name]
+    @resume exists
+
+    @definer()
+    return @finish()
+
+  finish: ->
+    method = if objects[@name] then "enhance" else "create"
+    objects[@name] = Joose[method] @
+
   # isa Foo, Bar, Etc
   isa: (parents...) ->
-    defining.addParent parent for parent in parents
+    @parents.add parent for parent in parents
 
   # has propName: is: 'rw', isa: 'string'
   has: (propertyInfo) ->
     for propName, info of propertyInfo
-      definition.has[propName] = grokPropertyInfo info
-
-  # does methName: fn: -> blah
+      @props[propName] = info
   does: (methodInfo) ->
     for methodName, info of methodInfo
-      method = new MethodDesriptor Object.assign name: methodName, info
-      defining.addMethod method
+      @addMethod new MethodDesriptor Object.assign name: methodName, info
 
   before: (methodName, fn) ->
-    defining.beforeMethod methodName, fn
+    @before[methodName] = fn
 
   after: (methodName, fn) ->
-    defining.afterMethod methodName, fn
+    @before[methodName] = fn
+    @afterMethod methodName, fn
 
-# See, this is what's neat about functional programming:
-usage = ->
-  throw new Error "Joosed verbs like #{verb} only work inside a JClass declaration"
+module.exports =
+  define: (definitions = {}) ->
+    for name, definer of definitions
+      sandbox.defining = objects[name] ?= MetaClass.startDefining name
+      sandbox.run definer
 
-for verb, def of verbs
-  verbs[verb] = (args...) ->
-    if defining is null
-      usage verb
-
-    def args...
-
-JClass = (fn, reDefining = null) ->
-  if defining isnt null
-    throw new Error "Assumptions violated: JClass definition function must be synchronous"
-
-  if reDefining
-    defining = reDefining[jSym]
-  else
-    defining = new MetaClass defining
-
-  ctx =
-    Object.assign {}, verbs, self: reDefining
-
-  (fn.bind ctx)()
-
-  defining = null
-  return defining
-
-JClass.andThen = (klass, fn) -> JClass fn, klass
-
-# Until I'm sure this isn't needed...
-JClass.demandMetaAccess = (klass) -> klass[jSym]
-
-export JClass
