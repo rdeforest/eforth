@@ -8,7 +8,8 @@ class Dispatcher
     @nextId     = 0
     @callbacks  = {}
     @pending    = {}
-    @dispatched = {}
+    @handled    = {}
+    @dispatching
 
   send: (name, data) ->
     @dispatch new Event @, name, data
@@ -19,17 +20,11 @@ class Dispatcher
         .push callback
 
   dispatch: (event) ->
-    Promise.all(
-      for w from @callbacks
-        do (w, event) ->
-          new Promise (resolve, reject) ->
-            setImmediate ->
-              try
-                resolve w.receiveEvent event
-              catch e
-                reject e
-    ).then ->
-      @_updateWaiters event.id
+    for w from @callbacks
+      try
+        w.receiveEvent event
+      catch e
+        if event.
 
   register: (callback) ->
     if @callbacks.has worker
