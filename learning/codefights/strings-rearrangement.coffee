@@ -2,9 +2,15 @@
 # the strings in such a way that after the rearrangement the strings at
 # consecutive positions would differ by exactly one character.
 
+minLevel = 3
+
+debug = (level, args...) -> console.log args... if level >= minLevel
+
+Array::last = -> @[@length - 1]
+
 offByOne = (a, b) ->
   unless a and b
-    console.log "falsy things match everything", a, b
+    debug 0, "falsy things match everything", a, b
     return true
 
   count = 0
@@ -12,39 +18,45 @@ offByOne = (a, b) ->
   for l, i in a.split ''
     count++ if b[i] isnt l
 
-  console.log "#{a} and #{b} have #{count} differences"
+  debug 0, "#{a} and #{b} have #{count} differences"
 
   return count is 1
 
 solutions = (word, words...) ->
-  console.log "sol: #{word}", words
+  debug 0, "sol: #{word}", words
 
-  if not words.length
-    return [[word]]
-
-  succeeded = []
   failed = []
 
-  sol = solutions words
+  if not words.length
+    return {succeeded: [[word]], failed}
 
-  for path in sol.succeeded
-    for position in [0..path.length]
-      if offByOne(word, path[position - 1]) and offByOne(word, path[position])
-        console.log "Extending [#{path.join ", "}] by inserting #{word} at #{position}"
-        extended = Array.from path
-        extended.splice position, 0, word
-        succeeded.push extended
-      else
-        failed.push {path, word}
+  {succeeded, failed} = solutions words...
 
-  for failure in sol.failed
-    for 
+  stillFailing = []
 
-  {succeeded, failed}
+  for path in succeeded
+    for attempting in [word, failed...]
+      fail = true
+
+      if offByOne word, path[0]
+        succeeded.push [attempting, path...]
+        fail = false
+
+      if offByOne word, path.last()
+        succeeded.push [path..., attempting]
+        fail = false
+
+      if fail
+        stillFailing.push attempting
+
+  {succeeded, failed: stillFailing}
 
 stringsRearrangement = (inputArray) ->
-  console.log found = solutions inputArray...
-  found.succeeded.length > 0
+  debug 3, "found", found = solutions inputArray...
+  found
+    .succeeded
+    .filter (s) -> s.length is inputArray.length
+    .length > 0
 
 (require './genericTester') [
   [ [[ "aa",  "ab",  "bb"]], true]
