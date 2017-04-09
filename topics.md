@@ -14,7 +14,7 @@
 - Relationships/Work/How things are going I guess
 - Waterpoint topic sign
 
-# Ways of breaking own topics
+# Ways of breaking down topics
 
 ## Matha's List
 
@@ -61,6 +61,10 @@
 
 - Robert's therapy
 - Seven Habits
+- diet
+- exercise
+- hygene, self-care
+
 
 ##### Challenges
 
@@ -88,8 +92,6 @@
 
 #### Family
 
-- Leah
-
 #### Friends
 
 - Al, T
@@ -103,6 +105,8 @@
 #### Programming
 
 - CORVID with Raine
+ - Short-term colab / experiment MOO
+ - tech research (flux, graph dbs, etc)
 - ops-dojo with Nicole
 - Story Project with Tamara
 - RightOnTime
