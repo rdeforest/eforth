@@ -1,108 +1,59 @@
-# Given an array of equal-length strings, check if it is possible to rearrange
-# the strings in such a way that after the rearrangement the strings at
-# consecutive positions would differ by exactly one character.
-
-Array::flattenOnce = ->
-  @reduce (
-    (acc, e) ->
-      if Array.isArray e
-        acc.concat e
-      else
-        acc.push e
-  ), []
-
-Array::flatten = ->
-  @reduce (
-    (acc, e) ->
-      if Array.isArray e
-        acc.concat(e).flatten()
-      else
-        acc.push e
-        acc
-  ), []
-
-Array::is = (other) ->
+offByN = (a, b, n) ->
   switch
-    when @length isnt other.length then false
-    when not @length               then true
-    else
-      other.length is @length and @_is other
+    when a.length is 0 then n is 0
+    when a[0] is b[0]  then offByN a[1..], b[1..], n
+    when n > 0         then offByN a[1..], b[1..], n - 1
 
-Array::_is = ([x, xs...]) ->
-  not @length or x is @[0] and xs is @[1..]
+offByOne = (a, b) -> offByN a, b, 1
 
-offByOne = (a, b) ->
-  unless a and b
-    return true
+without = (graph, node) -> graph.filter ([n]) -> n isnt node
 
-  count = 0
+connected = ([[node, neighbors], graph...]) ->
+  console.log arguments[0]
 
-  for l, i in a.split ''
-    count++ if b[i] isnt l
+  return [[], [node]] unless graph.length
 
-  return count is 1
+  [paths, failed] = connected graph
 
-validInsert = (a, b, c) -> offByOne(a, b) and offByOne b, c
+  if not neighbors.length
+    return [paths, failed.concat [node]
 
-class SolutionInProgress
-  constructor: (@inProgress = [], @unused = []) ->
+  end = paths[0].length - 1
 
-  solved: -> @unused.length is 0
+  extended = []
 
-  # self, string, list of string -> list of progress
-  makeProgress: (word, unused = []) ->
-    progress =
-      for right, i in @inProgress when validInsert @inProgress[i - 1], word, right
-        [left, right] = [
-          if i then @inProgress[..i - 1] else []
-          @inProgress[i..]
-        ]
+  for path in paths
+    for neighbor in neighbors when -1 < idx = (path.indexOf neighbor)
+      if idx is 0   then extended.push [node, path...]
+      if idx is end then extended.push [path..., node]
 
-        new SolutionInProgress(
-          [left..., word, right...]
-          unused
-        )
+  if extended.length
+    return extended
 
-    if not progress.length
-      progress = [new SolutionInProgress @inProgress, [@unused..., word]]
+  false
 
-    loop
-      progress = progress.concat moreProgress
-      moreProgress = (progress.map (sol) -> sol.retryUnused()).flatten()
-      break unless moreProgress.length
+makeGraph = (words) ->
+  graph = words.map (w, i) -> [i, []]
 
-    progress
+  for [w, wEdges], i in graph
+    for [x, xEdges], j in graph when j > i and offByOne words[i], words[j]
+      wEdges.push j
+      xEdges.push i
 
-  retryUnused: ->
-    @unused
-      .map (word, i) ->
-        @makeProgress word, @unused[..i - 1].concat @unused[i + 1..]
-      .flatten()
-
-found = null
-
-addWord = (progress, word) ->
-  console.log "addWord",
-    progress = progress
-      .map (sol) -> sol.makeProgress word
-  progress .flatten()
+  graph
 
 stringsRearrangement = (inputArray) ->
-  found = [ new SolutionInProgress ]
-
-  for word in inputArray
-    found = addWord found, word
-
-  return found.filter((sol) -> sol.solved()).length
+  not not connected makeGraph inputArray
 
 Object.assign global,
-  module.exports = { SolutionInProgress, stringsRearrangement, found, addWord }
+  module.exports = { stringsRearrangement, connected, without, offByOne, offByN, makeGraph }
 
-if false
+if true
   (require './genericTester') [
     [ [[ "aa",  "ab",  "bb"]], true]
     [ [[ "ab",  "bb",  "aa"]], true]
     [ [["aba", "bbb", "bab"]], false]
     [ [[  "q",   "q"       ]], false]
+    [ [["ab", "ad", "ef", "eg"]], false]
   ], stringsRearrangement
 
