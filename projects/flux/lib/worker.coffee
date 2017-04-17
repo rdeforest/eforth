@@ -2,10 +2,14 @@ EventEmitter = require 'events'
 
 module.exports.Worker =
   class Worker
-    constructor: (@dispatcher, @changeEvent = 'change') ->
-      @id = @dispatcher.register @receiveEvent.bind @
+    constructor: (@dispatcher, @name, @changeEvent = 'change') ->
+      @name ||= @constructor.name
+      receive = (event) => @receiveEvent event
+      receive.name = @name
+      @id = @dispatcher.register
       @emitter = new EventEmitter
       @changed = false
+      @recentEvents = new Array 10
 
     addListener: (callback) ->
       @emitter.on @changeEvent, callback
@@ -25,6 +29,7 @@ module.exports.Worker =
 
     receiveEvent: (event) ->
       {name, data} = event
+      @recentEvents = @recentEvents[1..].push event
 
       @changed = false
       @processEvent event
