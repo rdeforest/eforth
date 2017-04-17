@@ -28,6 +28,7 @@ What I wrote to Bruce:
   - she is loud for quiet things and quiet for loud things
   - She said she felt me withrdraw, but
     - I felt pushed away starting from when she cut off her mom
+    - Or possibly after our Tokyo trip...
   - I'm too often wrong about what she's thinking or feeling, good or bad
   - Alcohol is an excuse/facilitator, not a cause
   - She gives me the same hostile treatment she gives people she doesn't like
