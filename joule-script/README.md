@@ -54,16 +54,15 @@ Taken from the manual:
 
 Our version (maybe) looks like:
 
-		Server Dispatcher:
-      '': (input, outs) ->
-				input @fwd 'msgs' # tell 'input' to forward to 'msgs'
+		Server Dispatcher: (input, outs) ->
+      input.out.fwd 'msgs' # tell 'input' to forward to 'msgs'
 
-				@forAll msgs: (message)  ->
-				  @define size:  (outs)  -> outs.count
-					@define index: (size)  -> Random.below size
-					@define out:   (index) -> outs.get @b 'index', out
+      @forAll msgs: (message)  ->
+        @define size:  (outs)  -> outs.count
+        @define index: (size)  -> Random.below size
+        @define out:   (index) -> outs.get @b 'index', out
 
-					@o out: message
+        @o out: message
 
 So ... that.
 

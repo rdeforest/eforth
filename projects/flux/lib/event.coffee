@@ -1,5 +1,3 @@
-module.exports =
+module.exports.Event =
   class Event
-    constructor: (@dispatcher, @name, @data->
-
-    dispatcher: require './dispatcher'
+    constructor: (@dispatcher, @name, @data) ->

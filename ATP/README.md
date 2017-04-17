@@ -20,23 +20,28 @@ And yes, this is partly inspired by Joule and other flow-based languages.
 
 The old way:
 
-    matcher = (pattern) -> (s) -> not not s.match pattern
+    matcher =
+      (pattern) ->
+        (s) ->
+          not not s.match pattern
 
-    grep = (pattern, lineSource) ->
-      filter = matcher pattern
-
+    grep = (filter, lineSource) ->
       for line from lineSource when filter
         yield line
 
+    grep matcher(/foo/), lineIterator
+
 The new way:
 
-    filter = (pattern) -> (s, dest) ->
+    matcher = (pattern) -> (s, dest) ->
       if s.match pattern then dest s
 
-    grep = (pattern, lineSource, dest) ->
-      forwarder = filter pattern
-
+    grep = (filter, lineSource, dest) ->
       for line from lineSource
-        forwarder line, dest
+        filter line, dest
 
-But... but that's more code... :(
+    grep matcher(/foo/), lineIterator, someConsumer
+
+But... but that's more code... :( I think I got the design wrong.
+
+
