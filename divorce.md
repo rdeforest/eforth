@@ -1,3 +1,20 @@
+# Goals for next session with Dr.P
+
+- Define the situation
+- Identify goals
+
+# options
+
+- medical dependent? care taker?
+- housing
+  - subscribe to for-sale@, maybe send out a request
+  - help with moving costs would be up to my leadership
+  - maybe get work to pay for travel?
+
+See also https://inside.amazon.com/en/Employment/USBenefits/eap/pages/default.aspx
+
+# ...
+
 What I wrote to Bruce:
 
     Raine and I went to Ike's and then to Canterbury. We were having a great
