@@ -2,7 +2,7 @@ util = require 'util'
 
 module.exports =
   tester = (tests, toBeTested) ->
-    for [input, want] in tests
+    for [input..., want] in tests
       result = JSON.stringify toBeTested input...
 
       if result isnt JSON.stringify want
