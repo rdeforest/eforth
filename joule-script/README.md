@@ -79,3 +79,12 @@ handled with the given block.
 When a pipe is in CoffeeScript scope, such as 'message' above, regular method
 invocation is a shortcut for the equivalent @o call.
 
+# Semantics
+
+## Server
+
+## Channel
+
+## Acceptor
+
+## Distributor
