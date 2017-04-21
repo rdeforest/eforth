@@ -5,6 +5,21 @@
 #  - reference counting
 #  - double-pointers allow objects to move behind the scenes
 
+class BlobOwner
+  constructor: ->
+    @blobs []
+
+
+class StrongRef
+  constructor: (@owner, @size) ->
+
+  copyForWrite: (@owner, @offset, @length) ->
+
+class WeakRef extends StrongRef
+  constructor: (@owner, @size, @sourceRef, @offset) ->
+
+  copyForWrite: (@owner, @offset, @length) ->
+
 class AllocatedChunk
   constructor: (@pool, @offset, @size) ->
 
