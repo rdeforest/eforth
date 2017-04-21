@@ -10,5 +10,16 @@
  - send two teams to events when possible
  - send top 5 as one team when 10 not available
 
+# Phases of development
 
+Learn to
+- play
+- play well
+- play as a team
+- play against other teams
+ - learn to adapt to surprises
+ - learn to create surprises
 
+## Not sure where it fits in the phases:
+
+- flanking

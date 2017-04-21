@@ -1,49 +1,89 @@
 ###
 
-Trying to think of the ColdMUD object model in terms of containment.
+COP = ColdMUD Object Protocol
 
-A child delegates to its parents, so ignoring the disallow_overrides mechanism
-it's like the method lookup goes
+COP objects only public members are methods and even those are wrappers which
+enforce the COP method semantics. Methods run in their own sandboxes which are
+reset on each invocation. COP objects can only be mutated by themselves or
+an owner. Etc.
+
+Protocol operations
+
+- Object mutation
+  - add/update/list/remove method(s)
+  - add/update/list/remove fields(s)
+- Method invocation
+  - sandbox construction
+    - fields, vars, globals
+  - stack frame life cycle
+
+About the method context (sandbox)
+
+- its globals are not the Node globals
+  - Object and Reflect are stripped down
+    - setPrototypeOf doesn't exist
+  - require() doesn't exist
+  - etc
+- custom COP globals
+  - global functions
+    - $foo are read-only methods and vars like $sender, $caller, $definer, $this
+  - global objects
+    - are all wrapped so that invoking methods on them maintains the stack frames
+    - $root, $sys are like the ones in ColdMUD
+- the context object's prototype is the instance's field dictionary
+  - changes are detected by comparing the sandbox to its prototype
+  - __proto__ and getPrototypeOf are disabled so no way to trick the system
 
 ###
 
-  MOP.methodsOf = (o) -> o.methods
-  MOP.parentsOf = (o) -> o.parents
 
-  MOP.getParentInstance = (o, p) ->
+
+
+
+
+
+###
+#
+# A previous attempt...
+
+  COP.methodsOf = (o) -> o.methods
+  COP.parentsOf = (o) -> o.parents
+
+  COP.getParentInstance = (o, p) ->
     if o is p or o.constructor is p
       return o
 
-    for a in MOP.parentsOf o
-      if found = MOP.getParentInstance a, p
+    for a in COP.parentsOf o
+      if found = COP.getParentInstance a, p
         return found
 
-  MOP.ancestorData = (o, p) ->
+  COP.ancestorData = (o, p) ->
     ancestor = @getParentInstance o, p
     ancestor.data
 
-  MOP.dataOf = (o) ->
+  COP.dataOf = (o) ->
     data = {}
 
-    for p in MOP.ancestors o
-      data[p.name] = MOP.ancestorData o, p
+    for p in COP.ancestors o
+      data[p.name] = COP.ancestorData o, p
 
     data
 
-  MOP.getMethod = (o, methodName) ->
+  COP.getMethod = (o, methodName) ->
     if Object.hasOwnProperty o.methods, methodName
       return o.methods[methodName]
 
-  MOP.findMethod = (receiver, methodName) ->
-    if found = MOP.getMethod receiver, methodName
+  COP.findMethod = (receiver, methodName) ->
+    if found = COP.getMethod receiver, methodName
       return found
 
-    for p in MOP.parentsOf receiver
-      if found = MOP.findMethod p, methodName
+    for p in COP.parentsOf receiver
+      if found = COP.findMethod p, methodName
         return found
 
     throw new ColdError.methodnf receiver: receiver, methodName: methodName
 
+###
 ###
 
 This also doesn't take into account the distinction between data and methods.
@@ -52,6 +92,7 @@ So, data! Each parent then is also an instance:
 
 ###
 
+###
     class Foo
       constructor: (info) ->
         {fooData} = info
@@ -68,4 +109,4 @@ So, data! Each parent then is also an instance:
         {childData} = info
         @data = child: childData
 
-
+###
