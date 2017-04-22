@@ -18,8 +18,8 @@ mixin = (base, mixins...) ->
       throw new Error msg
   
   for m in mixins
-    Object.assign base.prototype, m.prototype
     base.mixins[m.name] = m
+    Object.assign base.prototype, m.prototype
 
 mixin.define = ({name, proto}) ->
   newMixin = Object.create proto

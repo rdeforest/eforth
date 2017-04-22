@@ -7,6 +7,9 @@ ColdObject handles the MOP:
 - add/remove method
 - receive message
 
+It exists outside the context of ColdPress methods which interact through
+proxies.
+
     mixin = require './non-cold/mixin'
 
     Inheritor = require './inheritor'
@@ -14,10 +17,14 @@ ColdObject handles the MOP:
     MessageReceiver = require './msg-receiver'
 
     class ColdObject
+      constructor: (@db, parent) ->
+        @storage = @db.create()
+        @setParent parent
 
-    mixin ColdObject, Inheritor, ColdVars, MessageReciver
 
-      addChild: (child) ->
+    mixin ColdObject, Inheritor, ColdVars, MessageReciver,
+
+      setParent: (parent) ->
 
       parentMethodCollisions: (parent) ->
         _.intersection @allMethods(), parent.allMethods()
