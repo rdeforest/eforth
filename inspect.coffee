@@ -1,12 +1,10 @@
 module.exports = inspect =
   inferedName: (o) ->
-    if typeof o in ['object', 'function']
-      if name = o.name
-        return name
+    if 'string' is typeof o?.name
+      return name
 
-      for name, value of o
-        if value is o
-          return name
+    for k, v of global when v is o
+      return k
 
   props: (o) ->
     Object.getOwnPropertyNames o
