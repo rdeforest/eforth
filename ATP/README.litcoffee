@@ -1,6 +1,6 @@
 # ATP: All Transmission Programming
 
-Functional programming to the MAX!!
+Functional programming to the MAX!?
 
 # Huh?
 
