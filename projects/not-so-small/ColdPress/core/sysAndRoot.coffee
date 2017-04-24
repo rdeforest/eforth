@@ -1,5 +1,3 @@
-$sys = $root = null
-
 # Depends on COP.addMethod setting up wrappers which define functions which
 # setup the instance-specific environments.
 
