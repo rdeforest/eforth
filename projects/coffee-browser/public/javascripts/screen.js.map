@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "screen.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/screen.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAM;IACS,gBAAC,MAAD;MAAC,IAAC,CAAA,SAAD;MACZ,IAAC,CAAA,GAAD,GAAO,IAAC,CAAA,MAAM,CAAC,UAAR,CAAmB,IAAnB;IADI;;;;;AADf"
+}

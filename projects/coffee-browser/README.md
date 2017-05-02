@@ -1,6 +1,6 @@
 # Coffee Browser: a more friendly and convenient CoffeeScript REPL?
 
-The purpose of this project is to bring the joy of 1980's BASIC programming to
+The purpose of this project is to bring the joy of 1980's BASIC programming
 into the 21st century.
 
 # Vision
