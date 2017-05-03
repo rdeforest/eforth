@@ -11,7 +11,7 @@ result sent.
 
 # What ... what does that even mean?
 
-We're changing callbacks from the exception to the norm. We're also brining
+We're changing callbacks from the exception to the norm. We're also bringing
 Unix shell patterns to programming _full force_.
 
 And yes, this is partly inspired by Joule and other flow-based languages.
