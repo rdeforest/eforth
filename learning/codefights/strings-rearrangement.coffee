@@ -23,33 +23,8 @@ offByOne = (a, b) ->
   return count is 1
 
 solutions = (word, words...) ->
-  debug 0, "sol: #{word}", words
-
-  failed = []
-
   if not words.length
-    return {succeeded: [[word]], failed}
-
-  {succeeded, failed} = solutions words...
-
-  stillFailing = []
-
-  for path in succeeded
-    for attempting in [word, failed...]
-      fail = true
-
-      if offByOne word, path[0]
-        succeeded.push [attempting, path...]
-        fail = false
-
-      if offByOne word, path.last()
-        succeeded.push [path..., attempting]
-        fail = false
-
-      if fail
-        stillFailing.push attempting
-
-  {succeeded, failed: stillFailing}
+    return ...
 
 stringsRearrangement = (inputArray) ->
   debug 3, "found", found = solutions inputArray...
