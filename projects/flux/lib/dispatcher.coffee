@@ -1,49 +1,75 @@
-singleton = null
+#{Event} = require './event'
 
-class Dispatcher
-  constructor: ->
-    unless singleton is null
-      return singleton
+module.exports.Dispatcher =
+  class Dispatcher
+    constructor: ->
+      @nextId       = 0
+      @callbacks   = []
+      @isPending   = []
+      @isHandled   = []
+      @dispatching = false
 
-    @nextId     = 0
-    @callbacks  = {}
-    @pending    = {}
-    @handled    = {}
-    @dispatching
+    isDispatching: -> @dispatching
 
-  send: (name, data) ->
-    @dispatch new Event @, name, data
+    send: (name, data) ->
+      @dispatch {name, data} # new Event @, name, data
 
-  waitFor: (eventIds, callback) ->
-    for eventId in eventIds
-      (@waiters[eventId] ?= [])
-        .push callback
+    waitFor: (ids) ->
+      if not @dispatching
+        throw new Error "Can only ::waitFor during a dispatch in progress"
 
-  dispatch: (event) ->
-    for w from @callbacks
+      for id in ids
+        switch
+          when not @callbacks[id] then throw new Error "No such callback #{id}"
+          when not @isPending[id] then @dispatchTo id
+          when not @isHandled[id] then throw new Error "dependency loop waiting for #{id}"
+
+    startDispatching: (event) ->
+      if @dispatching
+        throw new Error "Multiple concurrent or nested dispatches not allowed"
+
+      @event = event
+
+      @isPending = {}
+      @isHandled = {}
+
+      @dispatching = true
+
+    stopDispatching: ->
+      if not @dispatching
+        throw new Error "Dispatching ended twice?!"
+
+      for id, state of @isPending when state and not @isHandled[id]
+        console.warn "#{id} still pending after dispatch?!"
+        #throw new Error "#{id} still pending after dispatch?!"
+
+      for id, state of @isHandled when not state
+        console.warn "#{id} netiher handled nor pending after dispatch?!"
+        #throw new Error "#{id} netiher handled nor pending after dispatch?!"
+
+      @dispatching = false
+
+    dispatchTo: (id) ->
+      @isPending[id] = true
+
+      if 'function' isnt typeof @callbacks[id]
+        return console.warn "Unknown callback #{id}"
+      else
+        @callbacks[id] @event
+
+      @isHandled[id] = true
+
+    dispatch: (event) ->
       try
-        w.receiveEvent event
-      catch e
-        if event.
+        @startDispatching event
 
-  register: (callback) ->
-    if @callbacks.has worker
-      return @callbacks.get worker
+        @dispatchTo id for fn, id in @callbacks when not @isPending[id]
+      finally
+        @stopDispatching event
 
-    @callbacks.set worker, id = @nextId++
-    id
+    register: (callback) ->
+      @callbacks[id = @nextId++] = callback
+      return id
 
-  unregister: (worker) ->
-    @callbacks.remove worker
-
-  _updateWaiters: (eventId) ->
-    if @waiters.has eventId
-      for waiter in @waiters.get eventId
-        (remaining = @waitingOn
-          .get waiter)
-          .delete eventId
-
-        if 0 is remaining.size
-          waiter()
-
-module.exports = singleton = new Dispatcher
+    unregister: (id) ->
+      @callbacks[id] = undefined

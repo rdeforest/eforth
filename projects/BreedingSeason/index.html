@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Breeding Season</title>
+<script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+<style>
+  embed {
+    width: 98%;
+    height: 98%;
+  }
+</style>
+</head>
+<body>
+<div id="main">
+<!--
+<embed pluginspage="http://www.macromedia.com/go/getflashplayer"
+  src="BreedingSeason.swf"
+  type="application/x-shockwave-flash" >
+  -->
+</div>
+
+<script>
+$(function ($) {
+  var url = new URL(document.URL);
+  var version = url.hash.substr(1) || "current";
+  var div = $("#main");
+  var base = url.origin + url.pathname;
+  var el = createEmbed(base, version);
+  div.append(el);
+  div.css("position", "fixed");
+
+  function cacheBastion (op, memberName, ...args) {
+    if (op === "get")
+      return window.caches[memberName];
+
+    if (op !== "call")
+      return undefined;
+
+    return window.caches[memberName].apply(window.caches, args);
+  }
+
+  // debug:
+  window.debug = {
+      cacheBastion: cacheBastion,
+      createEmbed: createEmbed,
+      version: version,
+      base: base,
+      div: div,
+      url: url,
+      el: el,
+      adjustLayout: adjustLayout
+    };
+
+  $(window).on("resize", adjustLayout);
+  adjustLayout();
+
+  function createEmbed(base, version) {
+    var el  = $('<embed type="application/x-shockwave-flash">');
+    el[0].src  = base + "/versions/" + version + "/BreedingSeason.swf";
+    return el;
+  }
+
+  function adjustLayout() {
+    var div = $("#main")[0];
+    var h = window.innerHeight;
+    var w = window.innerWidth;
+    var rightWidth = h * 4 / 3;
+    var rightHeight = w * 3 / 4;
+
+    if (rightWidth > w) {
+      div.style.width = "";
+      div.style.height = rightHeight + "px";
+      div.style.left = ""
+      div.style.top = (h - rightHeight) / 2 + "px"
+    } else {
+      div.style.height = "";
+      div.style.width = rightWidth + "px";
+      div.style.top = ""
+      div.style.left = (w - rightWidth) / 2 + "px"
+    }
+  }
+});
+</script>
+</body>
+</html>
