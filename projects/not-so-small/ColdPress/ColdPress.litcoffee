@@ -38,8 +38,3 @@ ColdMessageSender.
 
 ## Roles, how do?
 
-# Cold vs CORVID
-
-ColdPress is the name of the CORVID Engine, its definitions and
-implementations.
-

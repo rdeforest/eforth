@@ -1,5 +1,5 @@
 # This 'core' is more of a minimal-core initializer. It requires the
-# underlying to db be empty.
+# underlying db to be new.
 
 assert = require 'assert'
 fs     = require 'fs'

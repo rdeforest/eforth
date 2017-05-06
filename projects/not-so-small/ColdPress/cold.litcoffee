@@ -1,6 +1,6 @@
 COP = ColdMUD Object Protocol
 
-COP objects only public members are methods and even those are wrappers which
+COP objects' only public members are methods and even those are wrappers which
 enforce the COP method semantics. Methods run in their own sandboxes which are
 reset on each invocation. COP objects can only be mutated by themselves or
 an owner. Etc.
