@@ -4,7 +4,7 @@
 
 - We're mostly on the same page
 
-- Complicated relationship relationship with alcohol
+- Complicated relationship with alcohol
  - can put distance between us
 
 - Level of committment to the relationship
