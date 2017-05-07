@@ -1,9 +1,11 @@
-    module.exports = (COP) ->
+    module.exports = ({COP}) ->
       vm           = require 'vm'
 
       CoffeeScript = require 'coffee-script'
+      csNodes      = require 'coffee-script/lib/coffee-script/nodes'
+
       { Call, Value, Identifier, Block
-      }            = require 'coffee-script/lib/coffee-script/nodes'
+      }            = csNodes
 
 ## transformNodes
 
@@ -59,7 +61,6 @@ The ColdMethod class is the first of these.
 
         match: (name, args) -> name is @name
 
-
         call: (stack, args) ->
           {receiver, definer} = stack.top
 
@@ -67,4 +68,22 @@ The ColdMethod class is the first of these.
             $root: value: COP.lookupId 1
             $sys:  value: COP.lookupId 0
             $call: value: COP.invokeMethod.bind sandbox, stack
+
+
+#### addMethod
+
+... is particularly important as the method wrapper has a lot of work to do:
+
+- at time of add
+ - create sandbox
+ - compile CoffeeScript to AST
+ - modify AST
+  - modify Call nodes to turn 'foo args...' into $call foo args...
+- before wrapped function
+ - update stack
+ - init sandbox
+  - set $caller et al
+- after wrapped function
+ - find and save field changes
+ - update stack
 

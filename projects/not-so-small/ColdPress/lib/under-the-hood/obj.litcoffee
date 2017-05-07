@@ -1,6 +1,6 @@
 ## ColdObject
 
-ColdObject handles the MOP:
+ColdObject handles the MOP actions:
 
 - add/remove parent
 - add/remove objectVar

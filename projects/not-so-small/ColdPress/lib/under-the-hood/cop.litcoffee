@@ -1,59 +1,33 @@
 # ColdPress Object Protocol
 
-    module.exports = ({db, createObject, createMethod}) ->
-      COP =
+    module.exports = ({getDb, createObject, createMethod}) ->
+      COP = ColdPressObjectProtocol =
         $: $ = Symbol 'ColdPress Object Protocol'
-        db: db
+        db: db = getDb()
 
 ## Object mutation
 
 ### Life cycle, inheritance
 
-        lookupId: (id) -> db.lookupId id
+        lookupId    : (id) -> db.lookupId id
 
-        create: (parent = COP.$root ?= COP.lookup '$root') ->
-          o = createObject db, parent
+        create      : (parent = COP.$root ?= COP.lookup '$root') -> o = createObject db, parent
+        destroy     : (o) -> o[$].destroy()
 
-        getParent: (o) -> o.getParent()
-
-        setParent: (o, parent) -> o.setParent parent
-
-        getChildren: (o) -> o.getChildren()
-
-        destroy: (o) -> o.destroy()
+        getParent   : (o) -> o[$].getParent()
+        setParent   : (o, parent) -> o[$].setParent parent
+        getChildren : (o) -> o[$].getChildren()
 
 ### Properties
 
-        addProp: (o, name) -> o.addProp name
-
-        getProp: (o, name) -> o.getProp name
-
-        listProps: (o) -> o.listProps()
-
-        delProp: (o, name) -> o.delProp name
+        getProp     : (o, name) -> o[$].getProp name
+        addProp     : (o, name) -> o[$].addProp name
+        delProp     : (o, name) -> o[$].delProp name
+        listProps   : (o) -> o[$].listProps()
 
 ### Methods
 
-#### addMethod
-
-... is particularly important as the method wrapper has a lot of work to do:
-
-- at time of add
- - create sandbox
- - compile CoffeeScript to AST
- - modify AST
-  - modify Call nodes to turn 'foo args...' into $call foo args...
-- before wrapped function
- - update stack
- - init sandbox
-  - set $caller et al
-- after wrapped function
- - find and save field changes
- - update stack
-
-        addMethod: (o, name, code) ->
-          m = createMethod o, name, code
-          o.methods[name] = m
+        addMethod: (o, name, code) -> o[$].addMethod name, code
 
         listMethods: (o) ->
 
@@ -70,3 +44,4 @@
 
         invokeMethod: (stack, method, args) ->
 
+      return {COP, ColdPressObjectProtocol}
