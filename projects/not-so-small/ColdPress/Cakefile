@@ -1,0 +1,8 @@
+defaults =
+  src:  'src'
+  test: 'test'
+
+option '-w', '--watch', 'stay alive and re-exec when files in src dir change'
+
+task 'test', 'run the tests', (options) ->
+  

@@ -7,6 +7,11 @@ class Library
   constructor: ->
     @modules = {}
 
+  addModule: (path) ->
+    mod = new Module path, @
+
+  finishLoading: ->
+
 class Module
   constructor: (@path, @library) ->
     @loadingStarted = false
