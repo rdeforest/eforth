@@ -34,6 +34,9 @@ which were missing.
 
       if not imports then return {imports}
 
+If the function does return this way the loader will re-invoke it when it has
+the missing dependencies or throw an error if it detects a loop.
+
 The success return value of the function is an object whose members are the
 actual exports. It may also be a Promise which resolves to the exports.
 

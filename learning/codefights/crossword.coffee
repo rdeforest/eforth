@@ -19,11 +19,11 @@ class Scrabble
     add = right - @width
 
 charLocations = (word, c) ->
-  from = -1
+  from = 0
 
-  while -1 < i = word.indexOf c, from + 1
+  while -1 < i = word.indexOf c, from
     yield i
-    from = i
+    from = i + 1
 
   return
 
@@ -34,33 +34,14 @@ permute = (items) ->
 
   for word, i in items
     rest = items.slice()
-    rest.splice(i,1)
+    rest.splice i, 1
 
     for tail from permute rest
       yield [word, tail...]
 
   return
 
-addDown = (across, down, after = -1) ->
-  for c, x in across when x > after
-    for y from charLocations down, c
-      yield {across, down, x, y}
+findIntersections = (a, b, after = -1) ->
+  for c, i in a when i > after
 
-addBottom = (top, left, right, bottom, leftX, leftY, rightX, rightY) ->
-  maxY = Math.max leftY + left.length, rightY + right.length
-  topY = Math.max leftY, rightY
 
-  for y in [topY + 2..maxY]
-    rightChar = right[y - rightY]
-    for bottomIdx charLocations bottom, c
-      bottomX = leftX - bottomIdx
-
-      if rightChar is c
-        if bottomX < 0
-          topX = -bottomX
-          bottomX = 0
-        else
-          topX = bottomX - leftX
-
-        yield {
-        }
