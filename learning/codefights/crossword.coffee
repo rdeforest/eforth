@@ -1,4 +1,3 @@
-
 Array::without = (i) -> (l = @slice()).splice i, 1; l
 Object.defineProperties Number::, spaces: get: -> ' '.repeat Math.abs @
 
@@ -110,7 +109,6 @@ module.exports =
       y++
       break if y >= left.length
 
-  times: []
   words: 'crossword square formation something'.split ' '
   memoize: memoize = (name, fn) ->
     console.log "memoizing #{name}"
@@ -118,12 +116,6 @@ module.exports =
 
     module.exports[name] = (args...) ->
       memory[JSON.stringify args] or= fn args...
-
-# for name, fn of module.exports
-#   if 'function' is typeof fn
-#     memoize name, fn
-#   else
-#     console.log "not memoizing #{name}"
 
 memoize 'intersections', intersections
 
