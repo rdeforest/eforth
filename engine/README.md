@@ -9,7 +9,7 @@ which will be made official once all event propagation completes.
 
 ## Event
 
-An event starts as an hypothosis, then is accepted, revised or rejected
+An event starts as a hypothosis, then is accepted, revised or rejected
 
 An event has
  - parent event aggregating sub-event results or null for ticks

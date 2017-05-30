@@ -4,52 +4,44 @@
 # class MyClass
 #   ...
 #
-# new Builder MyClass, foo: {}, bar: {}
+# new Builder MyClass,
+#   foo: default: 'foo'
+#   bar: validator: -> true
+#   etc: {}
 # 
-# (MyClass.builder()
-#   .foo 'foo'
-#   .bar 'bar')()
+# built = (MyClass.builder()
+#   .bar 'bar'
+#   .etc 'etc'
+# )()
 #
+# built.foo is 'foo'
+# => true
+
+
 defines = (obj, name) -> Object.hasOwnProperty obj, name
 
 class Builder
-  constructor: (@klass, @fields, buildWith = @defaultBuildWith.bind @) ->
-    @klass.builder = @makeBuilder.bind @
-    @fields[name].validator = (v) -> v for name, {validator} of @fields when not validator
-    @idDefaults()
+  constructor: (@klass, @fields) ->
+    @klass.builder = @_makeBuilder()
 
-  idDefaults: ->
-    @defaults = Object.assign {},
-      (for name, info of @fields when defines info, 'default'
-        if 'function' isnt typeof def = info.default
-          def = -> def)...
+    for name, {validator} of @fields when not validator
+      @fields[name].validator = (v) -> v
 
-  defaultBuildWith: (built) ->
-    builtProps = Object.getOwnProperyNames built
+  _makeBuilder: ->
+    provided = {}
+    realBuilder = => @_finish provided
 
-    for fName, defFn of @defaults when not defines builtProps, fName
-      built[fName] = fInfo.default built
-
-    new @klass built
-    
-  makeBuilder: (args...) ->
-    builder = -> buider._buildWith builder.built
-
-    Object.assign builder,
-      _built: {}
-      _fields: @fields
-      _defaults: @_defaults
-      _add: @_add
-
-      (for name of @fields
-        "#{f.name}": (value) -> @_add builder._fields[name], value
-      )...
-
+    builder = new Proxy {},
+      get: (target, property, receiver) =>
+        (value) => provided[property] = validator value
+          
     builder
 
-  _add: (fieldInfo, value) ->
-    {name, validator} = fieldInfo
-    @_built[name] = validator value
-    @
+  _finish: (provided) ->
+    for name, {default: def} of @fields when def and provided[name] is undefined
+      provided[name] = def
+
+    new @klass provided
+
 
 module.exports = {Builder}
