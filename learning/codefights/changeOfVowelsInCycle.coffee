@@ -1,11 +1,19 @@
 changeOfVowelsInCycle = (cycle, text) ->
-  vowels = []; n = 0
+  letters = text.split('').reverse()
+  vowels = letters.filter (c) -> c in "aeiouAEIOU"
 
-  text.split ''
-    .reverse()
-    .map (c) -> console.log c; c
-    .map (c, i) -> vowels.push c if c in "aeiou"; c
-    .map (c, i) -> if c not in "aeiou" then c else vowels[(n += cycle) % vowels.length]
-    .join ''
+  if not cycle = (cycle * vowels.length - cycle) % vowels.length
+    return text.split('').reverse().join('')
 
+  console.log cycle.toString() + "\n", vowels, "\n",
+    vowels = vowels[cycle ..].concat vowels[.. cycle - 1]
 
+  letters
+      .map (c, i) -> if c not in "aeiouAEIOU" then c else vowels.shift()
+      .join ''
+
+# (require './test') [
+#   [ 1, 'potato', 'ototap' ]
+#   [ 3, 'this test is of potato', 'itetip fo sa tsot soht']
+#   [10, 'Ojf lsnelI UFlsn Eeiuo nnky Ynak jhA', 'ahj konY yknn uieEU nslFI elOnsl fjA' ]
+# ], changeOfVowelsInCycle
