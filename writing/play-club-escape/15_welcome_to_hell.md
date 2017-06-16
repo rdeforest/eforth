@@ -1,6 +1,6 @@
-## Welcome to Hell
+## Welcome to Heaven?
 
-### Introduction
+### The Physical Interview
 
 Rinko rises from the booth and looks at William expectantly. William stands
 and asks, "do you need to pay a bill or anything?"
@@ -78,5 +78,33 @@ his fingers and pulled her skirt up to reveal she wore no underwear.
 "What the hell kind of job interview is this?!" William joked. Rinko pulled
 herself off his cock just long enough to say, "the kind you deserver,
 William!" and then plunged his cock back into her face for more ministrations.
+
+At this point William was starting to feel more at ease, or at least horny
+enough to let things slide, so to speak, and he started to get into the
+moment. He pulled Rinko's skirt up past her hips and start feeling her thigh
+and ass while his dick swelled in her mouth.
+
+Rinko was no amateur. When she detected William's skepticism was sufficiently
+attenuated, she adjusted her techniques to work him more directly. William's
+blood flow was sufficiently re-directed that Rinko was able to position him
+however she wanted and William was happy to see where it led. She stretched
+him out on the long comfy bench of the car and positioned herself over him,
+obtaining complete control. William was in the throws of physical bliss by
+this time, his skepticism drowned out by the demands of his hind-brain.
+
+Rinko set about fucking William's cock head with her throat while also tracing
+a moist finger from his balls, down his taint, to his puckered anus. William
+was not as experienced as he would have liked to think, and tensed a little as
+Rinko worked, but she knew what she was doing and had a finger inside him
+before he knew it. She already knew where to go with that finger and seconds
+later he was screaming and emptying his balls into her face.
+
+Rinko was by no means surprised by this. On the contrary, she had already
+retrieved a receptacle for his ejaculate and held it under her chin as he came
+in her mouth with vigor and ecstasy. William was so stimulated he had no idea
+what was going on, but Rinko was operating on him with practiced, clinical
+precision. She drained his balls of everything they held and drooled them into
+the cup she held. William's last spasm of joy was also his ultimate moment of
+relaxation, as he immediately passed out.
 
 
