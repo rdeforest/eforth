@@ -2,12 +2,10 @@
 
 # Syntactic elements
 
-NIL = [] # '()
-T = Symbol 'T' # T
+NIL = []        # '()
+T = Symbol 'T'  # T
 
 dictionary = {}
-
-
 
 defun = (name, args, def) ->
   if 'string' is typeof name
@@ -46,7 +44,7 @@ atom = (x) -> if x?.constructor is Array then NIL else T
 
 car = (l) -> if atom l then NIL else l[0]
 
-car = (l) -> if atom l then NIL else l[1]
+cdr = (l) -> if atom l then NIL else l[1..]
 
 quote = (l) -> l
 
@@ -56,12 +54,12 @@ cond = (conds) ->
   if atom conds or (not conds.length) or atom conds[0]
     return NIL
 
-  [[pred, result], tests] = conds
+  [[pred, result], conds] = conds
 
   if EVAL pred
-    result
+    eval result
   else
-    cond tests
+    cond conds
 
 # Now http://ep.yimg.com/ty/cdn/paulgraham/jmc.lisp
 # except we use _ instead of '.' when a symbol conflicts with JavaScript or
@@ -89,6 +87,24 @@ pair = (x, y) ->
     [andDot [[notDot x], []],
     [],
   ]]
+
+subst = (x, y, z) ->
+  if atom z
+    if z is y
+      x
+    else
+      z
+  else
+    subst x, y, z[0]
+      .concat subst x, y, z[1..]
+
+subst = (x, y, z) ->
+  return x if z is y
+
+  z.map (e) -> subst x, y, e
+
+assoc_ = [defun 'assoc_', ['x', 'y'],
+  cond [eq [caar y] x] [cadar y]], [T, [assoc_ x, cdr y]]
 
 ###
 
@@ -158,6 +174,19 @@ pair = (x, y) ->
   (cond ((null. m) '())
         ('t (cons (eval.  (car m) a)
                   (evlis. (cdr m) a)))))
+
+
+
+Lisp
+
+(foo (bar a b c))
+(foo '(bar a b c))
+
+Coffee
+
+foo bar a, b, c
+
+foo sexpr ["bar", "a", "b", "c"].map strToSymbol
 
 
 ###
