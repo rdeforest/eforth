@@ -15,7 +15,7 @@ while read -p "$testData > " newTestData; do
 
   coffee -r "./$topic.coffee" \
     -e "console.log JSON.stringify ($topic $testData), 0, 2 " &&
-  coffee -p -b "$topic.coffee" | pbcopy
+      pbcopy < $topic.coffee
 
   #coffee -r "./$topic.coffee" \
   #  -e "
