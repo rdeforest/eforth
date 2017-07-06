@@ -1,32 +1,77 @@
 module.exports =
-  shift: shift = (path, dir) ->
-    return path unless dir
+  shiftLeft: ([first, rest...]) -> rest.concat first
+  shiftRight: ([rest..., last]) -> [last].concat rest
 
-    if dir > 0
-      path[dir..].concat path[0..dir - 1]
+  top:    (matrix, reverse) ->
+    [row0, [upperLeft, cells..., upperRight], rows...] = matrix
+
+    if reverse
+      row0.pop()
+      row0.unshift upperLeft
     else
-      path[..path.length + dir - 1].concat path[path.length + dir..]
+      row0.shift()
+      row0.push upperRight
 
-  concat: concat = (a, b) -> a.concat b
+    row0
 
-  contoursShifting: contoursShifting = (matrix) ->
-    length = matrix.length
+  bottom: (matrix, reverse) ->
+    [rows..., [lowerLeft, cells..., lowerRight], rowN] = matrix
+
+    if reverse
+      rowN.shift()
+      rowN.push lowerRight
+    else
+      rownN.pop()
+      rowN.unshift lowerLeft
+
+  middle: (matrix, reverse) ->
+    [[upperLeft, top..., upperRight], middle..., [lowerLeft, bottom..., lowerRight] = matrix
+
+    left = []
+    inner = []
+    right = []
+
+    for [first, others..., last] in middle
+      left.push first
+      inner.push others
+      right.push last
+
+    if reverse
+      left.shift()
+      left.push lowerLeft
+      right.pop()
+      right.unshift upperRight
+    else
+      left.pop()
+      left.unshift upperLeft
+      right.shift()
+      right.push lowerRight
+
+    countoursShifting inner, not reverse
+      .map (row, y) -> [left[y], row..., right[y]]
+
+  contoursShifting: contoursShifting = (matrix, reverse) ->
+    height = matrix.length
     width  = matrix[0].length
 
-    top    = (i) ->  [i     .. width  - i    ].map (x) -> [i, x]
-    right  = (i) ->  [i + 1 .. height - i - 1].map (y) -> [y, width - i]
-    bottom = (i) -> ([i     .. width  - i    ].map (x) -> [height - i, x]).reverse()
-    left   = (i) -> ([i + 1 .. height - i - 1].map (y) -> [y, i]).reverse()
+    if height + length < 3
+      return matrix
 
-    iContour = (i) ->
-      [].concat (
-        top    i
-        left   i
-        right  i
-        bottom i
+    if height is 1
+      row = matrix[0]
+      [ if reverse
+          shiftRight row
+        else
+          shiftLeft row
+      ]
+    else if width is 1
+      if reverse
+        shiftRight matrix
+      else
+        shiftLeft matrix
+    else
+      [].concat(
+        top    matrix, reverse
+        middle matrix, reverse
+        bottom matrix, reverse
       )
-
-    for k in [0..Math.min(length, width)
-
-    Object.assign global, {top, left, right, bottom, iContour, matrix, length, width}
-
