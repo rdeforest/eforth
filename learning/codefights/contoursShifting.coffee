@@ -1,13 +1,52 @@
+class Matrix
+  constructor: (@rows) ->
+    if @height = @rows.length
+      @width = @rows[0].length
+
+  contour: (k) ->
+    if k is 1
+      @_contour()
+    else
+      @_inner()
+
+  inner: (k) ->
+    if k is 1
+      @_inner()
+    else
+      @_inner().inner k - 1
+
+  _contour: ->
+    if not @height
+      return []
+
+    top = @rows[0]
+    left = []
+    right = []
+    bottom = []
+
+    if @height > 1
+      bottom = @rows[-1..][0].reverse()
+
+    if @height > 2
+      lr = @rows[1..-2].map ([l, i..., r]) -> {l, r}
+      left = (l.map ([l, r]) -> l).reverse()
+      right = l.map ([l, r]) -> r
+
+    new Contour {top, right, bottom, left}
+
+  _inner: ->
+    new Matrix @rows[1..-2].map ([l, i..., r]) -> i
+
 module.exports =
   shiftLeft  : ([first,   rest...]) -> rest.concat first
   shiftRight : ([rest..., last   ]) -> [last].concat rest
 
   peel: (matrix) ->
+    [top, rest..., bottom] = matrix
+
     left  = []
     inner = []
     right = []
-
-    [top, rest..., bottom] = matrix
 
     for row in rest
       [l, i..., r] = row
