@@ -2,8 +2,8 @@ require "sdl"
 
 module Worm
   class App
-    def initialize(@tickHandler)
-      SDL.init      SDL::Init::VIDEO   ; at_exit { SDL.quit }
+    def initialize(@tickHandler : ->(x : Int64))
+      SDL.init      SDL::Init::VIDEO   ; at_exit { SDL.quit      }
       SDL::IMG.init SDL::IMG::Init::PNG; at_exit { SDL::IMG.quit }
 
       @window = SDL::Window.new "Worm version #{VERSION}", 640, 480
@@ -26,7 +26,6 @@ module Worm
         end
 
         @tickHandler @frame++
-
       end
     end
   end
