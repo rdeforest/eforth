@@ -4,3 +4,7 @@ shards:
     github: ysbaddaden/sdl.cr
     commit: d40de3177809ac2f71b5980632b422565eb0a3b4
 
+  vector:
+    github: ayazhafiz/crystal-vector
+    commit: 0eae7014f4e496dff2b80aacbd66c2efe53f78bd
+
