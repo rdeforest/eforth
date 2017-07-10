@@ -1,49 +1,52 @@
 module.exports =
   starRotation = (matrix, width, center, t) ->
-    return matrix unless t = t % 8
+    t = t + 64 while t < -64
+    t = t +  8 while t <   0
+
+    return matrix unless (t = t % 8) > 0
+
+    cos = [1,  1,  0, -1, -1, -1,  0,  1]
+    sin = [0,  1,  1,  1,  0, -1, -1, -1]
+
+    angleOf = (x, y) ->
+      a = 0
+
+      if y < 0 or (y is 0 and x < 0)
+        y = -y
+        x = -x
+        a += 4
+
+      if y > 0
+        a++
+        if x <= 0 then a++
+        if x <  0 then a++
+
+      a
+
+    rotate = (dx, dy, t) ->
+      r = Math.max dx, dy, -dx, -dy
+      a = angleOf dx, dy
+
+      a = (64 + a + t) % 8
+
+      [r * cos[a], r * sin[a]]
+
+    Object.assign global, {angleOf, rotate, starRotation, sin, cos}
+
+    newmatrix = matrix.map (row) -> row.slice()
 
     radius = width >> 1
-    [cx, cy] = center
+
+    [cy, cx] = center
+
+    for dy1 in [-radius .. radius]
+      for dx1 in [-radius .. radius] when (dx1 or dy1) and ((0 in [dx1, dy1]) or dx1 in [dy1, -dy1])
+        [dx2, dy2] = rotate dx1, dy1, t
+
+        [x1, y1] = [dx1 + cx, dy1 + cy]
+        [x2, y2] = [dx2 + cx, dy2 + cy]
+
+        newmatrix[y2][x2] =
+           matrix[y1][x1]
     
-    justSign = (n) -> if n then n / Math.abs(n) else 0
-
-    angles = [[5, 6, 7]
-              [4, 8, 0]
-              [3, 2, 1]]
-
-    cart2rad = (x, y) ->
-      [dx, dy] = [x - cx, y - cy]
-      r = Math.abs Math.max dx, dy
-      angle =
-        if (Math.abs(dx) > radius) or
-           (Math.abs(dy) > radius) or
-           dx and dy and dx not in [-dy, dy]
-          8
-        else
-          angles[1 + justSign dy][1 + justSign dx]
-      ret = [angle, r]
-      #console.log "x #{x}, y #{y} -> angle #{angle}, r #{r}"
-      ret
-    
-    sin = [0, 1, 1, 1, 0, -1, -1, -1]
-    cos = sin[2..].concat sin[0..1]
-
-    rad2cart = (angle, r) ->
-      [dx, dy] = [r * cos[angle], r * sin[angle]]
-      console.log "angle #{angle}, r #{r} -> dx #{dx}, dy #{dy}"
-      ret = [cx + dx, cy + dy]
-
-    ret = matrix
-      .map (row, y) ->
-        row.map (cell, x) ->
-          [angle, r] = cart2rad x, y
-
-          if angle is 8 then return cell
-
-          fromAngle = (6 + angle + t) % 8
-
-          [x2, y2] = rad2cart fromAngle, r
-          matrix[y2][x2]
-
-    console.log ret.map((row) -> row.join " ").join "\n"
-    #ret
+    newmatrix

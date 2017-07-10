@@ -1,77 +1,60 @@
 module.exports =
-  shiftLeft: ([first, rest...]) -> rest.concat first
-  shiftRight: ([rest..., last]) -> [last].concat rest
+  shiftLeft  : ([first,   rest...]) -> rest.concat first
+  shiftRight : ([rest..., last   ]) -> [last].concat rest
 
-  top:    (matrix, reverse) ->
-    [row0, [upperLeft, cells..., upperRight], rows...] = matrix
-
-    if reverse
-      row0.pop()
-      row0.unshift upperLeft
-    else
-      row0.shift()
-      row0.push upperRight
-
-    row0
-
-  bottom: (matrix, reverse) ->
-    [rows..., [lowerLeft, cells..., lowerRight], rowN] = matrix
-
-    if reverse
-      rowN.shift()
-      rowN.push lowerRight
-    else
-      rownN.pop()
-      rowN.unshift lowerLeft
-
-  middle: (matrix, reverse) ->
-    [[upperLeft, top..., upperRight], middle..., [lowerLeft, bottom..., lowerRight] = matrix
-
-    left = []
+  peel: (matrix) ->
+    left  = []
     inner = []
     right = []
 
-    for [first, others..., last] in middle
-      left.push first
-      inner.push others
-      right.push last
+    [top, rest..., bottom] = matrix
 
-    if reverse
-      left.shift()
-      left.push lowerLeft
-      right.pop()
-      right.unshift upperRight
-    else
-      left.pop()
-      left.unshift upperLeft
-      right.shift()
-      right.push lowerRight
+    for row in rest
+      [l, i..., r] = row
+      left.push  l
+      inner.push i if i.length
+      right.push r if row.length > 1
 
-    countoursShifting inner, not reverse
-      .map (row, y) -> [left[y], row..., right[y]]
+    contour = [].concat top, right, bottom.reverse(), left
+    {contour, inner}
 
+  unpeel: (contour, inner) ->
+    height = inner.length
+    width = inner[0].length
+
+    upperRight = width + 1
+    lowerRight = upperRight + height + 1
+    lowerLeft  = lowerRight + width + 2
+
+    console.log width, height, upperRight, lowerRight, lowerLeft
+
+    top    = contour[..upperRight]
+    right  = contour[upperRight + 1..lowerRight]
+    bottom = contour[lowerRight + 1..lowerLeft].reverse()
+    left   = contour[lowerLeft + 1..]
+
+    middle = inner.map (row, i) -> [].concat left[i], row, right[i]
+
+    [].concat (
+      top
+      middle
+      bottom
+    )
+
+  ###
   contoursShifting: contoursShifting = (matrix, reverse) ->
-    height = matrix.length
-    width  = matrix[0].length
+    width = matrix[0].length
 
-    if height + length < 3
-      return matrix
-
-    if height is 1
-      row = matrix[0]
-      [ if reverse
-          shiftRight row
-        else
-          shiftLeft row
-      ]
-    else if width is 1
-      if reverse
-        shiftRight matrix
+    switch height = matrix.length
+      when 1
+      when 2
       else
-        shiftLeft matrix
-    else
-      [].concat(
-        top    matrix, reverse
-        middle matrix, reverse
-        bottom matrix, reverse
-      )
+        {contour, inner} = peel matrix
+        inner = contoursShifting inner, not reverse
+
+    contour =
+      if reverse
+        shiftLeft contour
+      else
+        shiftRight contour
+  ###
