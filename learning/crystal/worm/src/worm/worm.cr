@@ -1,8 +1,14 @@
-require './segment'
+require "./segment"
+
+# A collection of Segments with a current direction.
+#   ::new requires at least a display object to submit drawing commands to
+#   ::move adds a segment to the front and removes a segment from the back
+#   ::turn randomly changes the current direction
 
 module Worm
   class Worm
     def initialize(
+        @display,
         @length    = 30,
         @width     = 10.0,
         @spacing   = 0.3,
@@ -24,7 +30,7 @@ module Worm
     end
 
     def addSegment(location = nextLocation)
-      @setments.push Segment.new @width, location
+      @setments.push Segment.new @display, @width, location
     end
 
     def tickHandler(screen : Screen)
@@ -40,7 +46,7 @@ module Worm
     end
 
     def makeSegment(v : Vector)
-      Segment.new width: @width, v
+      Segment.new v, @width
     end
 
     def makeSegment(x = 0, y = 0)
