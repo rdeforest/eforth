@@ -1,0 +1,13 @@
+name: shape
+version: 0.1.0
+
+authors:
+  - Robert de Forest <forestr@amazon.com>
+
+crystal: 0.23.0
+
+license: MIT
+
+dependencies:
+  vector:
+    github: ayazhafiz/crystal-vector

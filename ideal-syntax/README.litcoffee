@@ -3,15 +3,17 @@
 - What makes a programming syntax good?
  - Unambiguous
  - Familiar
+  - depends on individual experience
  - Succinct
 
 - What are the fundamental statements?
  - Declarations - "Data with this shape is called 'foo' and its contracts are..."
-  - Structures
+  - Structures/Shapes
    - Concatonation (array of...)
    - Composition (struct of...)
    - Extension (like parent but also...)
   - Interface definitions/contracts
+   - What to expect when you're expecting a callback :)
 
  - Definitions - "When this contract is invoked, this is how to execute it..."
   - Map
@@ -20,9 +22,17 @@
   - Reduce
    - Combine   - sum, concat
    - Summarize - count, group
-  - Alias
+  - Alias?
    - typedefs, constants, etc
    - actually a kind of map, but for code
+
+- What are some smaller concepts a language represents?
+ - Literal objects (numbers, strings, sets...)
+ - Operations (messages)
+ - Quoted operations
+ - Capture of execution contexts
+ - templates (string interpolation, macros...)
+ - patterns (regexps, globs, code patterns...)
 
 # Surprises
 
