@@ -14,13 +14,7 @@ while read -p "$testData > " newTestData; do
   fi
 
   coffee -r "./$topic.coffee" \
-    -e "console.log JSON.stringify ($topic $testData), 0, 2 " &&
+    -r "./checker.coffee" \
+    -e "checker.test $topic, $testData" &&
       pbcopy < $topic.coffee
-
-  #coffee -r "./$topic.coffee" \
-  #  -e "
-  #for [args..., expect] in ($topic.tests or= []).push $testData
-  #  result = $topic args...
-  #  console.log [args, expect, result].map(JSON.strinigfy).join '\n'
-  #"
 done

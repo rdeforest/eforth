@@ -1,48 +1,27 @@
-class Matrix
-  constructor: (@rows) ->
-    if @height = @rows.length
-      @width = @rows[0].length
-
-  contour: (k) ->
-    if k is 1
-      @_contour()
-    else
-      @_inner()
-
-  inner: (k) ->
-    if k is 1
-      @_inner()
-    else
-      @_inner().inner k - 1
-
-  _contour: ->
-    if not @height
-      return []
-
-    top = @rows[0]
-    left = []
-    right = []
-    bottom = []
-
-    if @height > 1
-      bottom = @rows[-1..][0].reverse()
-
-    if @height > 2
-      lr = @rows[1..-2].map ([l, i..., r]) -> {l, r}
-      left = (l.map ([l, r]) -> l).reverse()
-      right = l.map ([l, r]) -> r
-
-    new Contour {top, right, bottom, left}
-
-  _inner: ->
-    new Matrix @rows[1..-2].map ([l, i..., r]) -> i
-
 module.exports =
-  shiftLeft  : ([first,   rest...]) -> rest.concat first
-  shiftRight : ([rest..., last   ]) -> [last].concat rest
+  contoursShifting = (matrix, reverse) ->
+    if matrix.length is 1
+      return [(shiftEither reverse) matrix[0]]
 
-  peel: (matrix) ->
+    {contour, inner} = peel matrix
+
+    shifted = (if reverse then shiftLeft else shiftRight) contour
+
+    if inner.length > 1
+      inner = contoursShifting inner, not reverse
+
+    unpeel shifted, inner
+
+Object.assign module.exports,
+  shiftLeft   : shiftLeft   = ([first,   rest...]) -> rest.concat first
+  shiftRight  : shiftRight  = ([rest..., last   ]) -> [last].concat rest
+  shiftEither : shiftEither = (reversed) -> if reversed then shiftRight else shiftLeft
+
+  peel: peel = (matrix) ->
     [top, rest..., bottom] = matrix
+
+    if not bottom
+      throw new Error "invalid matrix passed to peel: " + JSON.stringify matrix
 
     left  = []
     inner = []
@@ -57,43 +36,25 @@ module.exports =
     contour = [].concat top, right, bottom.reverse(), left
     {contour, inner}
 
-  unpeel: (contour, inner) ->
-    height = inner.length
-    width = inner[0].length
+  unpeel: unpeel = (contour, inner) ->
+    width = 0
+
+    if height = inner.length
+      width = inner[0].length
 
     upperRight = width + 1
     lowerRight = upperRight + height + 1
-    lowerLeft  = lowerRight + width + 2
+    lowerLeft  = lowerRight + width + 1
 
-    console.log width, height, upperRight, lowerRight, lowerLeft
+    #console.log {width, height, upperRight, lowerRight, lowerLeft}
 
     top    = contour[..upperRight]
-    right  = contour[upperRight + 1..lowerRight]
-    bottom = contour[lowerRight + 1..lowerLeft].reverse()
-    left   = contour[lowerLeft + 1..]
+    middle = inner.map (row, rIdx) -> [contour[contour.length - rIdx - 1], row..., contour[upperRight + rIdx + 1]]
+    bottom = contour[lowerRight..lowerLeft].reverse()
 
-    middle = inner.map (row, i) -> [].concat left[i], row, right[i]
+    if middle.length
+      [top, middle..., bottom]
+    else
+      [top, bottom]
 
-    [].concat (
-      top
-      middle
-      bottom
-    )
-
-  ###
-  contoursShifting: contoursShifting = (matrix, reverse) ->
-    width = matrix[0].length
-
-    switch height = matrix.length
-      when 1
-      when 2
-      else
-        {contour, inner} = peel matrix
-        inner = contoursShifting inner, not reverse
-
-    contour =
-      if reverse
-        shiftLeft contour
-      else
-        shiftRight contour
-  ###
+  contoursShifting: contoursShifting
