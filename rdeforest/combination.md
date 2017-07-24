@@ -6,7 +6,7 @@ Or perhaps more accurately, applying them to each other.
 
 - Ability to "program" my organization system
   - Combine orthogonal entities
-    - Life Cycle + Self => Personal improvement
+    - Life Cycle + Self   => Personal development
     - Life Cycle + Guitar => Music hobbie
     - Communication + Friends + Tools => Chat, Email, etc
 - Combinations may themselves be abstract and combinable
