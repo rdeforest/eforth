@@ -1,16 +1,25 @@
 module.exports =
   contoursShifting = (matrix, reverse) ->
+    if matrix.length is 0 or matrix[0].length is 0
+      return matrix
+
+    row1 = matrix[0]
+
     if matrix.length is 1
-      return [(shiftEither reverse) matrix[0]]
+      if row1.length < 2
+        return matrix
+
+      return [(shiftEither reverse) row1]
+
+    if matrix[0].length is 1
+      return shiftEither reverse matrix
 
     {contour, inner} = peel matrix
 
-    shifted = (if reverse then shiftLeft else shiftRight) contour
+    shiftedContour = (shiftEither reverse) contour
+    shiftedInner   = contoursShifting inner, not reverse
 
-    if inner.length > 1
-      inner = contoursShifting inner, not reverse
-
-    unpeel shifted, inner
+    unpeel shiftedContour, shiftedInner
 
 Object.assign module.exports,
   shiftLeft   : shiftLeft   = ([first,   rest...]) -> rest.concat first
