@@ -10,7 +10,7 @@ module Worm
       SDL::IMG.init SDL::IMG::Init::PNG; at_exit { SDL::IMG.quit }
 
       @window = SDL::Window.new "Worm version #{VERSION}", 640, 480
-      @renderer = SDL::Renderer.new window,
+      @renderer = SDL::Renderer.new @window,
         SDL::Renderer::Flags::ACCELERATED |
         SDL::Renderer::Flags::PRESENTING
 

@@ -82,4 +82,4 @@ sun | 07/16 |      | Intense workout dedicated to Marco
     | 07/26 | down | date with Lauren is a bust
     | 07/28 |  up  | Somebody at Linda's tells me Bree comes in for brunch a lot
     | 07/29 | down | Somebody tells me Bree is in a serious relationship
-
+    | 08/01 | ???? | 1008 Republican party
