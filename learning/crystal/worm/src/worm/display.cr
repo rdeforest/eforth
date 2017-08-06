@@ -42,8 +42,11 @@ module Worm
   end
 
   class Console < Display
+    @@circles = [] of Circle
+
     class Circle
       def initialize(@location, @width)
+        @@circles.push self
       end
 
       def to_s
@@ -51,15 +54,36 @@ module Worm
       end
     end
 
-    @@circles = [] of Circle
 
     def initialize
-      @@circles.push self
       puts "+ #{to_s}"
     end
 
     def finalize
       puts "- #{to_s}"
+    end
+
+    def drawCircle(circle, color)
+      case color
+      when @white
+        color_name = "white"
+      when @black
+        color_name = "black"
+      else
+        color_name = color.to_s
+      end
+
+      puts "-> #{circle.to_s} in #{colorName}"
+    end
+
+    def addCircle(location, width)
+      circle = Circle.new location, width
+      puts "+o #{circle.to_s}"
+    end
+
+    def removeCircle()
+      circle = @@circles.shift()
+      puts "-o #{circle.to_s}"
     end
   end
 end

@@ -1,4 +1,5 @@
 require "sdl"
+require "sdl/src/image"
 require "./display"
 
 module Worm
@@ -10,9 +11,9 @@ module Worm
       SDL::IMG.init SDL::IMG::Init::PNG; at_exit { SDL::IMG.quit }
 
       @window = SDL::Window.new "Worm version #{VERSION}", 640, 480
-      @renderer = SDL::Renderer.new window,
+      @renderer = SDL::Renderer.new @window,
         SDL::Renderer::Flags::ACCELERATED |
-        SDL::Renderer::Flags::PRESENTING
+        SDL::Renderer::Flags::PRESENTVSYNC
 
       @frame = 0
     end
@@ -22,6 +23,8 @@ module Worm
     end
 
     def run
+      ret = 0
+
       loop do
         case event = SDL::Event.poll
           when SDL::Event::Quit
@@ -31,9 +34,9 @@ module Worm
             break
         end
 
-        @tickHandlers.each ...
-
-        ret = @tickHandler.call @frame, @renderer
+        @tickHandlers.each { | tickHandler |
+          ret ||= tickHandler.call @frame, @renderer
+        }
 
         if ret
           break
