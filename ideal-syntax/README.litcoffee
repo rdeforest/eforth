@@ -5,17 +5,17 @@
  - Familiar
   - depends on individual experience
  - Succinct
+ - Consistent
 
 - What are the fundamental statements?
- - Declarations - "Data with this shape is called 'foo' and its contracts are..."
+ - Interfaces
   - Structures/Shapes
    - Concatonation (array of...)
    - Composition (struct of...)
    - Extension (like parent but also...)
   - Interface definitions/contracts
    - What to expect when you're expecting a callback :)
-
- - Definitions - "When this contract is invoked, this is how to execute it..."
+ - Implementations - "When this contract is invoked, this is a way to satisfy it..."
   - Map
    - Transform - "turn strings into their lengths"
    - Associate - "turn strings into objects with matching names"
@@ -25,11 +25,12 @@
   - Alias?
    - typedefs, constants, etc
    - actually a kind of map, but for code
+  - I/O
 
 - What are some smaller concepts a language represents?
- - Literal objects (numbers, strings, sets...)
+ - Literal values (numbers, strings, sets...)
  - Operations (messages)
- - Quoted operations
+ - Quoted code
  - Capture of execution contexts
  - templates (string interpolation, macros...)
  - patterns (regexps, globs, code patterns...)
@@ -38,7 +39,7 @@
 
 Dictionaries/hashes/objects are a map from keys to values
 
-Conditionals map from true/false results to expressions
+Conditionals map true/false values to expressions
 
     myIf = (pred, yep, nope) ->
       {true: yep, false: nope}[pred]
@@ -63,4 +64,6 @@ sequences can be accomplished with recursion:
 Though in Node v7.10.0 and CoffeeScript 1.12.4, yield from doesn't optimize
 for tail recursion, so there actually is a limit on this form of iteration.
 
+# Is there something wrong with CoffeeScript?
 
+Maybe not? If we're concerned about performance we could probably compile it

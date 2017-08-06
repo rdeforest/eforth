@@ -6,7 +6,7 @@ Ordered by astrological sign for now
 
 - what is your life story?
 
-## Taurus, 7-14: security, posessions, comfort
+## Taurus, 7-14: personal resources, security, comfort
 
 - preferences/opionions: how do you feel about
  - astrology?
@@ -35,6 +35,20 @@ Tell me about your bands?
 
 ## Virgo, 35-42: partnership, service to another
 
+- what are you looking for in a relationship (or relationships)?
+ - how much of your time do you want to spend with a partner?
+ - are there things you 
+
+# Group
+
+## Libra, 42-49: balance, justice
+
+- Politics/philosophy?
+
+## Scorpio, 49-56: shared resources, information, group security
+
+## Sagitarius, 56-63: 
+
 # Other
 
 - misc
@@ -51,7 +65,3 @@ Tell me about your bands?
  - is there another state in the union you want to visit and/or move to?
  -
 - thoughts on the bay area?
-- what are you looking for in a relationship (or relationships)?
- - how much of your time do you want to spend with a partner?
- - are there things you 
-- 

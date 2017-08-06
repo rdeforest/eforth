@@ -1,0 +1,22 @@
+name: dots
+version: 0.1.0
+
+authors:
+  - Robert de Forest <forestr@amazon.com>
+
+targets:
+  dots:
+    main: src/dots.cr
+
+crystal: 0.23.0
+
+license: MIT
+
+dependencies:
+  sdl:
+    github: ysbaddaden/sdl.cr
+    branch: master
+  vector:
+    github: ayazhafiz/crystal-vector
+  chipmunk:
+    github: oprypin/crystal-chipmunk 
