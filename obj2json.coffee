@@ -68,4 +68,33 @@ module.exports = (o) ->
 
 Object.assign module.exports, { applyBrackets, flattenOnce, obj2json, arr2json, keyValueRep, addComma, addCommas, indent }
 
-global.data = [ { "alarmCustomer" : "S3", "metrics" : [ { "id" : 44, "label" : "Requests by Operation" } ] }, { "alarmCustomer" : "Router-Info", "metrics" : [ { "id" : 307, "label" : "Router to NFC host info" } ],              "suppressingMetrics": [ { "id" : 1633, "label" : "SNMP BytesIn by Interface and Host" } ], "suppressingCutoff": 60000000 }, { "alarmCustomer" : "Border-NetFlow", "metricCustomers" : [ "Border-Incoming", "Border- Outgoing" ], "metrics" : [ { "id" : 1198, "label" : "Border-Incoming-SrcIp-Packets" }, { "id" : 1199, "label" : "Border-Outgoing-DestIp-Packets" } ], "suppressingMetrics": [ { "id" : 1633, "label" : "SNMP        BytesIn by Interface and Host" } ], "suppressingCutoff": 60000000 }, { "alarmCustomer" : "Health", "metrics" : [ { "id" : 140012, "label" : "Health-SrcIp-Packets-Lossless-BOM" } ] }, { "alarmCustomer" : "DC-NetFlow", "metricCustomers" : [ "EC2-Incoming", "EC2-Outgoing", "S3-NetFlow-Outgoing", "S3-NetFlow-Incoming" ], "metrics" : [ { "id" : 74, "label" : "Packets by Source IP" }, { "id" : 46, "label" : "Packets by Source IP" } ], "suppressingMetrics": [ { "id" : 1633, "label" : "SNMP BytesIn by Interface and Host" } ], "suppressingCutoff": 60000000 }, { "alarmCustomer" : "S3-EventBus", "metrics" : [ { "id" : 1591, "label" : "Top agent hosts" } ] } ]
+global.data = [
+  { "alarmCustomer" : "S3"
+    "metrics" : [
+      "id" : 44
+      "label" : "Requests by Operation" ]
+  }
+  { "alarmCustomer" : "Router-Info"
+    "metrics" : [ {
+      "id" : 307
+      "label" : "Router to NFC host info" } ]
+    "suppressingMetrics": [ {
+      "id" : 1633
+      "label" : "SNMP BytesIn by Interface and Host" } ]
+    "suppressingCutoff": 60000000
+  }
+  { "alarmCustomer" : "Border-NetFlow"
+    "metricCustomers" : [
+      "Border-Incoming"
+      "Border- Outgoing"
+    ]
+    "metrics" : [
+      { "id" : 1198, "label" : "Border-Incoming-SrcIp-Packets" }
+      { "id" : 1199, "label" : "Border-Outgoing-DestIp-Packets" }
+    ]
+    "suppressingMetrics": [ {
+      "id" : 1633
+      "label" : "SNMP        BytesIn by Interface and Host" } ]
+    "suppressingCutoff": 60000000
+  }
+  { "alarmCustomer" : "Health", "metrics" : [ { "id" : 140012, "label" : "Health-SrcIp-Packets-Lossless-BOM" } ] }, { "alarmCustomer" : "DC-NetFlow", "metricCustomers" : [ "EC2-Incoming", "EC2-Outgoing", "S3-NetFlow-Outgoing", "S3-NetFlow-Incoming" ], "metrics" : [ { "id" : 74, "label" : "Packets by Source IP" }, { "id" : 46, "label" : "Packets by Source IP" } ], "suppressingMetrics": [ { "id" : 1633, "label" : "SNMP BytesIn by Interface and Host" } ], "suppressingCutoff": 60000000 }, { "alarmCustomer" : "S3-EventBus", "metrics" : [ { "id" : 1591, "label" : "Top agent hosts" } ] } ]

@@ -1,4 +1,6 @@
 
+# https://codefights.com/arcade/code-arcade/waterfall-of-integration/LfP67YRDw2rxoLmeP
+
 class MatrixRow
   constructor: (@cells) ->
     @width = @cells.length
@@ -15,56 +17,75 @@ class Matrix
     if @height = @rows.length
       @width = @rows[0].width
 
-      if -1 isnt @rows[1..].findIndex (row) -> row.length isnt @width
-        throw new Error "invalid matrix, blah blah"
+      if -1 isnt @rows[1..].findIndex ((row) -> row.length isnt @width)
+        throw new Error "non-rectangular matrix"
+
+    {@coutour, inner} = peel @rows
+
+    if inner.length and inner[0].length
+      @inner = new Matrix inner
 
   toString: ->
     @rows.map @_rowToString
          .join '\n'
 
-class Contour extends Contour
+  shiftLeft   : ([first,   rest...]) -> [rest..., first]
+  shiftRight  : ([rest..., last   ]) -> [last,  rest...]
 
-
-fmtRow = (cellWidth) -> (row) ->
-  spaces = " ".repeat cellWidth
-
-  row.map (cell) -> (spaces + cell.toString())[-cellWidth..]
-     .join ''
-
-showMatrix = (cellWidth, matrix) ->
-  fn = (matrix) ->
-    console.log matrix.map(fmtRow cellWidth).join '\n'
-
-  if arguments.length > 1
-    fn matrix
-  else
-    fn
+  shift: (shiftLeft) ->
+    (({ false : @shiftRight
+        true  : @shiftLeft
+    })[not not shiftLeft]).call @
 
 showContour = (contour, width, height) ->
   inner = [1..height].map -> [1..width].map -> '.'
   showMatrix 4, unpeel contour, inner
 
+class Contour extends Matrix
+  constructor: (@top, @middle, @bottom) ->
+    @cells  = top
+    @height = 1
+    @width  = top.length
 
-# de/re-construct
+    middle  = false unless middle?.length
+    bottom  = false unless bottom?.length
 
-peel = (matrix) ->
-  [top, rest..., bottom] = matrix
+    if middle
+      @height += middle.length
+      @cells = @cells.concat middle.map (r) -> r[-1..][0]
 
-  if not bottom
-    throw new Error "invalid matrix passed to peel: " + JSON.stringify matrix
+    if bottom
+      @cells = @cells.concat bottom.reverse()
+      @height++
 
-  left  = []
-  inner = []
-  right = []
+    if middle
+      @cells = @cells.concat middle.reverse().map (r) -> r[0]
 
-  for row in rest
-    [l, i..., r] = row
-    left.unshift l
-    inner.push i if i.length
-    right.push r if row.length > 1
+  toString: ->
+    rows = [@top]
 
-  contour = [].concat top, right, bottom.reverse(), left
-  {contour, inner}
+    if @middle
+      rows = rows.concat
+
+  @peel: (matrix) ->
+    [top, middle..., bottom] = matrix
+
+    if not bottom
+      return new Contour top
+    else
+
+    left  = []
+    inner = []
+    right = []
+
+    for row in rest
+      [l, i..., r] = row
+      left.unshift l
+      inner.push i if i.length
+      right.push r if row.length > 1
+
+    contour = [].concat top, right, bottom.reverse(), left
+    {contour, inner}
 
 unpeel = (contour, inner) ->
   width = 0
@@ -76,8 +97,6 @@ unpeel = (contour, inner) ->
   lowerRight = upperRight + height + 1
   lowerLeft  = lowerRight + width + 1
 
-  #console.log {width, height, upperRight, lowerRight, lowerLeft}
-
   top    = contour[..upperRight]
   middle = inner.map (row, rIdx) -> [contour[contour.length - rIdx - 1], row..., contour[upperRight + rIdx + 1]]
   bottom = contour[lowerRight..lowerLeft].reverse()
@@ -87,11 +106,9 @@ unpeel = (contour, inner) ->
   else
     [top, bottom]
 
-# rotation
+# de/re-construct
 
-shiftLeft   = ([first,   rest...]) -> [rest..., first]
-shiftRight  = ([rest..., last   ]) -> [last,  rest...]
-shiftEither = (reversed) -> if reversed then shiftRight else shiftLeft
+# rotation
 
 # implementation
 

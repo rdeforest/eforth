@@ -14,6 +14,14 @@ Object.assign module.exports, {
   getProp    : getProp     = (propname) -> (o) -> o[propname]
   setProp    : setProp     = (propname) -> (value) -> (o) -> o[propname] = value
 
+  fnAsProp   : fnAsProp    = (o, pname, fn) ->
+    Object.defineProperties o,
+      "#{pname}":
+        get:         -> fn.call o
+        set: (value) -> fn.call o, value
+}
+
+###
   deepCompare: deepCompare = (a, b) ->
     switch
       when typeof a isnt typeof b then return false
@@ -120,4 +128,4 @@ Map::deepCopy = WeakMap::deepCopy = ->
   for [k, v] from @entries()
     s.set deepCopy(k), deepCopy v
 
-  s
+###s
