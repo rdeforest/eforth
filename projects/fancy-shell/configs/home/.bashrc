@@ -41,4 +41,5 @@ function retitle() {
 }
 
 export TERM=$(echo $TERM | sed 's/screen.//')
-
+export SCREENDIR=$HOME/.screen
+export SCREENRC=$SCREENDIR/screenrc

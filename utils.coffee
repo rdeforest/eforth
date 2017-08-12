@@ -1,7 +1,10 @@
 # Let's try this again...
 
+isNaN = Number.isNaN
+
 Object.assign module.exports, {
   gopn       : gopn        = Object.getOwnPropertyNames
+  gops       : gops        = Object.getOwnPropertySymbols
 
   hasOwnProp : hasOwnProp  = (propname) -> (o) -> propname in gopn o
   getOwnProp : getOwnProp  = (propname) -> (o) ->
@@ -24,18 +27,19 @@ Object.assign module.exports, {
 ###
   deepCompare: deepCompare = (a, b) ->
     switch
-      when typeof a isnt typeof b then return false
-      when        a is          b then return true
-      when    not a               then return false
+      when isNaN  a and isNaN   b then true
+      when        a is          b then true
+      when    not a               then false
+      when 'object' isnt typeof a then false
+      when 'object' isnt typeof b then false
       else a.deepCompare b
 
-Number::deepCompare = (v) -> @ is v or Number.isNaN(@) and Number.isNaN v
 
 Object::deepCompare = (v) ->
   switch
-    when     'object' isnt typeof v      then v is @
     when @constructor isnt v.constructor then false
     when not gopn(@).deepCompare gopn(v) then false
+    when not gops(@).deepCompare gops(v) then false
     else
       for k, e of @ when v[k] isnt e and not deepCompare e, v[k]
         return false
@@ -47,15 +51,16 @@ Array::deepCompare = (v) ->
     when not Array.isArray v   then false
     when @length isnt v.length then false
     else
-      for e, i in @ when v[i] isnt e and not deepCompare e, v[i]
+      for e, i in @ when v[i] isnt e or not deepCompare v[i], e
         return false
 
       true
 
-Array::deepHas = (v) ->
-  v in @ or -1 < @findIndex (e) -> deepCompare v, e
+#Array::deepHas = (v) ->
+#  v in @ or -1 < @findIndex (e) -> deepCompare v, e
 
 Map::deepCompare = WeakMap::deepCompare = (v) ->
+  return false unless v instanceof @constructor
   return false unless @size is v.size
   return false for k, e from a when not b.deepHas k, e
   true
