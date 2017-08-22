@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# "...what a day it's been, Dear Diary..."
+
+(
+  root=$(dirname $0)
+  dir="$(date +$root/journal/entries/%Y/%m/%d)"
+  file="$dir/$(date +%H%M.md)"
+
+  mkdir -p "$dir"
+  touch "$file"
+
+  if [ -e "$root/latest" ]; then
+    rm -f "$root/previous"
+    mv "$root/latest" "$root/previous"
+  fi
+
+  ln -s $file "$root/latest"
+  vi    $file
+)

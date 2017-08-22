@@ -1,0 +1,30 @@
+#!/bin/bash
+
+prefix="$(dirname $0)/$(date +%Y-%m-%d)"
+template="$(dirname $0)/template"
+
+function file() {
+  if [ "$1" ]; then
+    echo "$prefix-$1.md"
+  else
+    echo "$prefix.md"
+  fi
+}
+
+if [ -e "$(file)" ]; then
+  n=1
+  while [ -e "$(file $n)" ]; do
+    n=$[ $n + 1 ]
+  done
+
+  m=$n
+  n=$[ $n - 1 ]
+  while [ $n -gt 0 ]; do
+    mv "$(file $n)" "$(file $m)"
+    n=$[ $n - 1 ]
+    m=$n
+  done
+fi
+
+cp $template "$(file)"
+vi "$(file)"
