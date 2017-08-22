@@ -4,8 +4,6 @@ Self-management project
 
 # Customer: me!
 
-Also Raine?
-
 ## Opportunities
 
 Improve recurring tasks in some way
@@ -54,7 +52,6 @@ Improve recurring tasks in some way
 # Potential non-programmed steps forward
 
 - Resume use of HabitRPG
-- 
 
 # Sub-projects
 
