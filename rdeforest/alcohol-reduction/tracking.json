@@ -1,7 +1,17 @@
 {
-  "healed": 0,
-  "healing": [ 3, 3, 6, 3, 3, 3, 3 ],
-  "unspent": 4,
+  "healed": {
+    "current": 0,
+    "max": 27,
+    "rampingDownDays": 16,
+    "rampingDownRate": 1
+  },
+  "unspent": {
+    "current": 4,
+    "max": 7,
+    "rampingDownDays": 3,
+    "rampingDownRate": 1
+  },
+  "healing": [ 3, 3, 5, 3, 3, 3, 3 ],
   "spent": 0
 }
 

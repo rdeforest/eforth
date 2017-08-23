@@ -29,6 +29,25 @@ class module.exports.Rotator
         console.log err
         process.exit 1
 
+  @defaultHealed:
+    current: 0
+    max: 14
+    rampingDownDays: 0
+    rampingDownRate: 1
+
+  @defaultUnspent:
+    current: 0
+    max: 4
+    rampingDownDays: 0
+    rampingDownRate: 1
+
+  @defaultHealing: ->
+    tokensPerDay = Math.floor Rotator.defaultHealed.max / 7
+    [0..6].map -> tokensToDistribute
+
+  toString: ->
+    JSON.stringify @, 0, 2
+
   load: ->
     readFile @filePath
       .then (buf) =>
@@ -38,14 +57,26 @@ class module.exports.Rotator
           throw "failed to parse content of #{@filePath}: #{e.message}"
 
         { @lastRotationMs = Date.now() - MILLISECONDS_PER_DAY
-          @healed         = 7
-          @healing        = [0..6].map -> 1
-          @unspent        = 0
+          @healed         = Rotator.defaultHealed
+          @healing        = Rotator.defaultHealing()
+          @unspent        = Rotator.defaultUnspent
           @spent          = 0
           @prompt         = true
         } = data
 
         @lastRotationDate = new Date @lastRotationMs
+
+        if 0 > extraTokens = @healed.max - @tokensInSystem()
+          throw "token shortage?\n#{@}"
+
+        @healed.current += extraTokens
+
+  tokensInSystem: ->
+    [ @healed .current
+      @unspent.current
+      @spent
+      @healing...
+    ].reduce (a, b) -> a + b
 
   rotatableDays: ->
     msSinceLast = Date.now() - @lastRotationMs
@@ -74,7 +105,7 @@ class module.exports.Rotator
   addHealed: ->
     if healed = @healing[@dayNum]
       change : =>
-        @healed += healed
+        @healed.current += healed
         @healing[@dayNum] = 0
       desc   : "Heal #{healed} points."
 
@@ -87,11 +118,11 @@ class module.exports.Rotator
 
   refillUnspent: ->
     if 0 < needed = @maxUnspent - @unspent
-      replenished = Math.min needed, @healed
+      replenished = Math.min needed, @healed.current
 
       change : =>
-        @unspent += replenished
-        @healed  -= replenished
+        @unspent         += replenished
+        @healed.current  -= replenished
       desc: "Refill #{replenished} points."
 
   updateLastRotated: ->
