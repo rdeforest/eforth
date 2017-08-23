@@ -13,21 +13,16 @@ MILLISECONDS_PER_DAY =
     60 * # minutes
     24   # hours
 
-class module.exports.Rotator
+Object.assign module.exports, {
+    Tracker
+    Rotator
+  }
+
+class Tracker
   constructor: (dir, fileName) ->
     @filePath = path.resolve dir, fileName
     @today    = new Date
     @dayNum   = @today.getDay()
-
-  rotate: ->
-    @load()
-      .then (loaded) =>
-        @calculateChanges()
-        @confirm()
-      .then => @commit()
-      .catch (err) =>
-        console.log err
-        process.exit 1
 
   @defaultHealed:
     current: 0
@@ -56,15 +51,16 @@ class module.exports.Rotator
         catch e
           throw "failed to parse content of #{@filePath}: #{e.message}"
 
-        { @lastRotationMs = Date.now() - MILLISECONDS_PER_DAY
-          @healed         = Rotator.defaultHealed
-          @healing        = Rotator.defaultHealing()
-          @unspent        = Rotator.defaultUnspent
-          @spent          = 0
-          @prompt         = true
+        { @lastRotationMs    = Date.now() - MILLISECONDS_PER_DAY
+          @healed            = Rotator.defaultHealed
+          @healing           = Rotator.defaultHealing()
+          @unspent           = Rotator.defaultUnspent
+          @spent             = 0
+          @prompt            = true
+          @lastDrinkFinished = Date.now()
         } = data
 
-        @lastRotationDate = new Date @lastRotationMs
+        @lastRotationDate    = new Date @lastRotationMs
 
         if 0 > extraTokens = @healed.max - @tokensInSystem()
           throw "token shortage?\n#{@}"
@@ -78,14 +74,50 @@ class module.exports.Rotator
       @healing...
     ].reduce (a, b) -> a + b
 
+  commit: (changes) ->
+    changes.forEach ({change}) -> change()
+    copy @filePath, backup = @filePath + "-old"
+      .catch (err) => throw "backup of #{@filePath} failed: #{err.message}"
+      .then => writeFile (tmp = @filePath + "-new"), @
+      .catch (err) =>
+        msg = "write to #{tmp} failed: #{err.message}"
+        (unlink tmp
+          .then        -> unlink backup
+          .catch (err) -> throw msg + "\n\nAnd then cleanup failed: #{err.message}"
+          .then        -> throw msg)
+      .then => copy tmp, @filePath
+      .catch (err) =>
+        msg = "copy from #{tmp} to #{@filePath} failed: #{err}"
+        (unlink tmp
+      .then => unlink backup
+      .then =>
+        rename tmp, 
+      .catch (err) ->
+        unlink tmp
+        throw err
+
+class Rotator
+  constructor: (@tracker) ->
+
+  rotate: ->
+    @tracker.load()
+      .then (loaded) =>
+        @calculateChanges()
+        @confirm()
+      .then => @tracker.commit @changes
+      .catch (err) =>
+        console.log err
+        process.exit 1
+      .then -> console.log 'done'
+
   rotatableDays: ->
-    msSinceLast = Date.now() - @lastRotationMs
+    msSinceLast = Date.now() - @tracker.lastRotationMs
     days = Math.floor msSinceLast / MILLISECONDS_PER_DAY
 
     if 7 <= days
       throw "More than a week since last rotation (#{days} days)?"
     else if days > 0
-      [@lastRotationDate.getDay()..@dayNum - 1]
+      [@tracker.lastRotationDate.getDay()..@tracker.dayNum - 1]
     else
       []
 
@@ -100,36 +132,36 @@ class module.exports.Rotator
       ].filter (change) -> change
 
     if @changes.length
-      @changes.push @updateLastRotated()
+      @changes.push @tracker.updateLastRotated Date.now()
 
   addHealed: ->
-    if healed = @healing[@dayNum]
+    if healed = @tracker.healing[@tracker.dayNum]
       change : =>
-        @healed.current += healed
-        @healing[@dayNum] = 0
+        @tracker.healed.current += healed
+        @tracker.healing[@tracker.dayNum] = 0
       desc   : "Heal #{healed} points."
 
   emptySpent: ->
-    if @spent
+    if @tracker.spent
       change : =>
-        @healing[@dayNum] = @spent
-        @spent = 0
-      desc   : "Queue #{@spent} points for healing."
+        @tracker.healing[@tracker.dayNum] = @tracker.spent
+        @tracker.spent = 0
+      desc   : "Queue #{@tracker.spent} points for healing."
 
   refillUnspent: ->
-    if 0 < needed = @maxUnspent - @unspent
-      replenished = Math.min needed, @healed.current
+    if 0 < needed = @tracker.maxUnspent - @tracker.unspent
+      replenished = Math.min needed, @tracker.healed.current
 
       change : =>
-        @unspent         += replenished
-        @healed.current  -= replenished
+        @tracker.unspent         += replenished
+        @tracker.healed.current  -= replenished
       desc: "Refill #{replenished} points."
 
   updateLastRotated: ->
-    newDate = Math.min @lastRotated + MILLISECONDS_PER_DAY, Date.now()
+    newDate = Math.min @tracker.lastRotated + MILLISECONDS_PER_DAY, Date.now()
     newDateStr = (new Date newDate).toString()
 
-    change : => @lastRotated = newDate
+    change : => @tracker.lastRotated = newDate
     desc   : "Change last rotation time to #{newDateStr}"
 
   confirm: ->
@@ -139,7 +171,7 @@ class module.exports.Rotator
 
       @showChanges
 
-      if not @prompt
+      if not @tracker.prompt
         return resolve()
 
       rl = readline.createInterface
@@ -158,7 +190,4 @@ class module.exports.Rotator
       .join "\n  "
     ) + "\n Proceed (Y/n)? "
 
-  commit: ->
-    @changes.forEach ({change}) -> change()
-    writeFile @filePath, JSON.stringify @
-    throw "done"
+
