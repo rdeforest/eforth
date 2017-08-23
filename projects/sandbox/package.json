@@ -1,0 +1,11 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "coffee test/index.coffee --joe-reporter=list"
+  },
+  "author": "Robert de Forest <robert@defore.st>",
+  "license": "WTFPL"
+}
