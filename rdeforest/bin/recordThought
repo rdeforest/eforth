@@ -29,3 +29,7 @@ fi
 
 cp $template "$(file)"
 vi "$(file)"
+
+if diff -q "$(file)" "$template"; then
+  rm "$(file)"
+fi
