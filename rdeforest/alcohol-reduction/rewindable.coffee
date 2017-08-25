@@ -1,18 +1,24 @@
-Object.assign module.exports, {
-    Step
-    RewindableStepSequence
-  }
+###
+
+Current effort: simplify by removing "rollbackErrorIsFatal" and "rollbackOnOwnError"
+
+The contract for a Step is that when it fails, it has already cleaned up after
+itself, and when it can't clean up other steps still get a chance to try to
+clean up.
+
+Or to put it another way: 
+
+- failure of a step indicates it made no changes.
+- failure to roll back is meaningless.
+
+###
 
 class Step
   constructor: (info) ->
-    { @desc
-      @forward              = ->
-      @reverse              = ->
-      @rollbackOnOwnError   = false
-      @rollbackErrorIsFatal = false
+    { @forward = ->
+      @reverse = ->
+      @desc    = @forward.name
     } = info
-
-    @desc ?= @forward.name ? @forward.toString()
 
   start    : -> Promise.resolve @forward()
   rollback : -> Promise.resolve @reverse()
@@ -66,7 +72,7 @@ class RewindableStepSequence
     @
 
   execute: (steps = @steps, completed = []) ->
-    [step, pending...] = steps.pop()
+    [step, pending...] = steps
 
     step.start()
       .catch (err) => @startRollback step, err, completed
@@ -79,15 +85,12 @@ class RewindableStepSequence
         completed
 
   startRollback: (step, err, completed) ->
-    @log """
+    console.log """
         Execution failed on step '#{step.desc}' after #{completed.length} successful steps.
         The failure reason was '#{err?.message? or err}'
 
         Starting rollback.
       """
-
-    if step.rollbackOnOwnError
-      completed.push step
 
     @rollback completed
       .catch (errors) => @finishRollback { errors }
@@ -96,18 +99,13 @@ class RewindableStepSequence
   rollback: (pending, rollbackErrors = []) ->
     [step, pending...] = pending
 
-    step
-      .rollback()
-      .catch (err) =>
-        if step.rollbackErrorIsFatal
-          throw err
-
-        rollbackErrors.push err
-      .then =>
-        if pending.length is 0
-          return rollbackErrors
-
-        @rollback pending, rollbackErrors
+    step.rollback()
+        .catch (err) => rollbackErrors.push err
+        .then =>
+          if pending.length > 0
+            @rollback pending, rollbackErrors
+          else
+            rollbackErrors
 
   finishRollback: ({errors}) ->
     if errors
@@ -116,7 +114,12 @@ class RewindableStepSequence
         errors.map ({err}) -> err
               .join "\n  "
 
-      return @log "Rollback #{if aborted then "aborted" else "finished"} #{errListStr}"
+      return console.log "Rollback #{if aborted then "aborted" else "finished"} #{errListStr}"
 
-    @log "Rollback finished without further errors."
+    console.log "Rollback finished without further errors."
+
+Object.assign module.exports, {
+    Step
+    RewindableStepSequence
+  }
 

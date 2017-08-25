@@ -1,17 +1,18 @@
 {
+  "healing": [ 3, 3, 4, 0, 0, 3, 3 ],
   "healed": {
-    "current": 0,
-    "max": 27,
-    "rampingDownDays": 16,
+    "current": 3,
+    "max": 26,
+    "rampingDownDays": 15,
     "rampingDownRate": 1
   },
   "unspent": {
     "current": 4,
     "max": 7,
-    "rampingDownDays": 3,
+    "rampingDownDays": 0,
     "rampingDownRate": 1
   },
-  "healing": [ 3, 3, 5, 3, 3, 3, 3 ],
-  "spent": 0
+  "spent": 3,
+  "drinking": false
 }
 

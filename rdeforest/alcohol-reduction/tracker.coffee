@@ -13,13 +13,8 @@ MILLISECONDS_PER_DAY =
     60 * # minutes
     24   # hours
 
-Object.assign module.exports, {
-    Tracker
-    Rotator
-  }
-
-class Tracker
-  constructor: (dir, fileName) ->
+class module.exports.Tracker
+  constructor: (dir = __dirname, fileName = "test.json") ->
     @filePath = path.resolve dir, fileName
     @today    = new Date
     @dayNum   = @today.getDay()
@@ -42,6 +37,32 @@ class Tracker
 
   toString: ->
     JSON.stringify @, 0, 2
+
+  orderDrink: ->
+    if @unspent.current < 1
+      throw new Error "Tokens exhausted"
+
+    if @drinking
+      throw new Error "You haven't finished your last drink."
+
+    if Date.now() - @lastDrinkStarted < @msBetweenDrinks
+      throw new Error "It hasn't been long enough since your last drink."
+
+    @lastDrinkOrdered = Date.now()
+    @drinking = true
+    @unspent.current--
+
+    @commit()
+
+  finishDrink: ->
+    if not @drinking
+      throw new Error "You already finished your last drink."
+
+    @lastDrinkFinished = Date.now()
+    @drinking = false
+    @spent++
+
+    @commit()
 
   load: ->
     readFile @filePath
@@ -74,29 +95,34 @@ class Tracker
       @healing...
     ].reduce (a, b) -> a + b
 
-  commit: (changes) ->
+  commit: (changes = []) ->
     changes.forEach ({change}) -> change()
-    copy @filePath, backup = @filePath + "-old"
-      .catch (err) => throw "backup of #{@filePath} failed: #{err.message}"
-      .then => writeFile (tmp = @filePath + "-new"), @
-      .catch (err) =>
-        msg = "write to #{tmp} failed: #{err.message}"
-        (unlink tmp
-          .then        -> unlink backup
-          .catch (err) -> throw msg + "\n\nAnd then cleanup failed: #{err.message}"
-          .then        -> throw msg)
-      .then => copy tmp, @filePath
-      .catch (err) =>
-        msg = "copy from #{tmp} to #{@filePath} failed: #{err}"
-        (unlink tmp
-      .then => unlink backup
-      .then =>
-        rename tmp, 
-      .catch (err) ->
-        unlink tmp
-        throw err
 
-class Rotator
+    copy @filePath, backup = @filePath + "-old"
+      .catch  (err) => throw "backup of #{@filePath} failed: #{err.message}"
+      .then         =>
+        writeFile (tmp = @filePath + "-new"), @
+          .catch  (err) =>
+            msg = "write to #{tmp} failed: #{err.message}"
+ 
+            unlink tmp
+              .then        -> unlink backup
+              .catch (err) -> throw msg + "\n\nAnd then cleanup failed: #{err.message}"
+              .then        -> throw msg
+          .then =>
+            copy tmp, @filePath
+              .catch (err) =>
+                msg = "copy from #{tmp} to #{@filePath} failed: #{err}"
+                (unlink tmp
+              .then =>
+                unlink backup
+                  .then =>
+                    rename tmp, 
+                  .catch (err) ->
+                    unlink tmp
+                    throw err
+
+module.exports.Rotator = class Rotator
   constructor: (@tracker) ->
 
   rotate: ->
