@@ -13,7 +13,8 @@ MILLISECONDS_PER_DAY =
     60 * # minutes
     24   # hours
 
-class module.exports.Tracker
+module.exports.Tracker =
+class Tracker
   constructor: (dir = __dirname, fileName = "test.json") ->
     @filePath = path.resolve dir, fileName
     @today    = new Date
@@ -122,7 +123,8 @@ class module.exports.Tracker
                     unlink tmp
                     throw err
 
-module.exports.Rotator = class Rotator
+module.exports.Rotator =
+class Rotator
   constructor: (@tracker) ->
 
   rotate: ->

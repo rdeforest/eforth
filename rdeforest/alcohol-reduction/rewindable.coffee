@@ -1,15 +1,5 @@
 ###
 
-Current effort: simplify by removing "rollbackErrorIsFatal" and "rollbackOnOwnError"
-
-The contract for a Step is that when it fails, it has already cleaned up after
-itself, and when it can't clean up other steps still get a chance to try to
-clean up.
-
-Or to put it another way: 
-
-- failure of a step indicates it made no changes.
-- failure to roll back is meaningless.
 
 ###
 
