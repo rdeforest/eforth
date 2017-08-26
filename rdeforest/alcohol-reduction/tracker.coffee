@@ -7,6 +7,8 @@ util      = require 'util'
 readFile  = util.promisify fs.readFile
 writeFile = util.promisify fs.writeFile
 
+{ RewindableStepSequence } = require './rewindable'
+
 MILLISECONDS_PER_DAY =
   1000 * # milliseconds
     60 * # seconds
@@ -97,31 +99,22 @@ class Tracker
     ].reduce (a, b) -> a + b
 
   commit: (changes = []) ->
-    changes.forEach ({change}) -> change()
-
-    copy @filePath, backup = @filePath + "-old"
-      .catch  (err) => throw "backup of #{@filePath} failed: #{err.message}"
-      .then         =>
-        writeFile (tmp = @filePath + "-new"), @
-          .catch  (err) =>
-            msg = "write to #{tmp} failed: #{err.message}"
- 
-            unlink tmp
-              .then        -> unlink backup
-              .catch (err) -> throw msg + "\n\nAnd then cleanup failed: #{err.message}"
-              .then        -> throw msg
-          .then =>
-            copy tmp, @filePath
-              .catch (err) =>
-                msg = "copy from #{tmp} to #{@filePath} failed: #{err}"
-                (unlink tmp
-              .then =>
+    (new RewindableStepSequence)
+      .addStep desc: 'make changes',
+            forward: -> changes.forEach ({change}) -> change()
+            reverse: -> console.log "Commit failed"
+      .addStep desc: 'backup current',
+            forward: => copy @filePath, backup = @filePath + "-old"
+      .addStep desc: 'write to new',
+            forward: => writeFile (tmp = @filePath + "-new"), @
+            reverse: => unlink tmp
+      .addStep desc: 'copy new to current',
+            forward: => copy tmp, @filePath
+      .addStep desc: 'cleanup',
+            forward: =>
+              try
                 unlink backup
-                  .then =>
-                    rename tmp, 
-                  .catch (err) ->
-                    unlink tmp
-                    throw err
+                unlink tmp
 
 module.exports.Rotator =
 class Rotator

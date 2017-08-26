@@ -5,10 +5,12 @@
 
 class Step
   constructor: (info) ->
-    { @forward = ->
-      @reverse = ->
-      @desc    = @forward.name
+    { @forward = (->)
+      @reverse = (->)
+      @desc
     } = info
+
+  #throw new Error "Description is required" unless @desc
 
   start    : -> Promise.resolve @forward()
   rollback : -> Promise.resolve @reverse()
@@ -52,7 +54,11 @@ class RewindableStepSequence
         Step 'Is that all': undefined
   """
 
-  constructor: -> @steps = []
+  constructor: (deps = {}) ->
+    { @log = @log
+    } = deps
+
+    @steps = []
 
   addStep: (step) ->
     unless step instanceof Step
@@ -61,21 +67,30 @@ class RewindableStepSequence
     @steps.push step
     @
 
-  execute: (steps = @steps, completed = []) ->
+  execute: ->
+    @executeNextStep @steps
+      .then =>
+        @log "executeNextSteps finished without error"
+      .catch (info) =>
+        {step, err, completed} = info
+        @startRollback step, err, completed
+
+  executeNextStep: (steps, completed = []) ->
+    return completed unless steps.length
+
     [step, pending...] = steps
 
-    step.start()
-      .catch (err) => @startRollback step, err, completed
+    step
+      .start()
       .then  (ret) =>
         completed.push {step, ret}
 
-        if pending.length
-          return @execute pending, completed
-
-        completed
+        @executeNextStep pending, completed
+      .catch (err) =>
+        throw {step, err, completed}
 
   startRollback: (step, err, completed) ->
-    console.log """
+    @log """
         Execution failed on step '#{step.desc}' after #{completed.length} successful steps.
         The failure reason was '#{err?.message? or err}'
 
@@ -87,15 +102,14 @@ class RewindableStepSequence
       .then (results) => @finishRollback {        }
 
   rollback: (pending, rollbackErrors = []) ->
-    [step, pending...] = pending
+    return rollbackErrors unless pending.length
+
+    [{step}, pending...] = pending
 
     step.rollback()
         .catch (err) => rollbackErrors.push err
         .then =>
-          if pending.length > 0
-            @rollback pending, rollbackErrors
-          else
-            rollbackErrors
+          @rollback pending, rollbackErrors
 
   finishRollback: ({errors}) ->
     if errors
@@ -104,9 +118,9 @@ class RewindableStepSequence
         errors.map ({err}) -> err
               .join "\n  "
 
-      return console.log "Rollback #{if aborted then "aborted" else "finished"} #{errListStr}"
+      return @log "Rollback #{if aborted then "aborted" else "finished"} #{errListStr}"
 
-    console.log "Rollback finished without further errors."
+    @log "Rollback finished without further errors."
 
 Object.assign module.exports, {
     Step
