@@ -365,7 +365,7 @@ from squeaky door at A site).
  - G2 plants, takes mouse down to just ropz and he can't clutch it
 
 - Round 4: 3/1 Mouse
- - ropz clutches it with trigger discipline and situational awareness
+ - [HIGHLIGHT} ropz clutches it with trigger discipline and situational awareness
 
 - Round 5: 4/1
  - 4v4 by 1:25
