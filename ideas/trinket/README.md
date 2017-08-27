@@ -67,15 +67,8 @@ An interface identifier and version:
         description: "The Hello World trinket"
 
         version: "1.0"
-        parameters: ...
 
-        dependencies:
-          "trinket.thatsnice.org":
-            Trinket:
-              IO: streamWriter: "1.0"
-              Value: "UTF-8 data": "1.0"
-
-        instanceParamaters:
+        paramaters:
           stdout:
             required: true
             Trinket: IO: streamWriter: "1.0"
@@ -84,7 +77,7 @@ An interface identifier and version:
             Trinket: Value: "UTF-8 data": "1.0"
 
         implementation: [
-          { invoke: stdout: args: "greeting" }
+          { stdout: "greeting" }
         ]
 
 ```
@@ -103,15 +96,15 @@ To use HelloTrinket from another Trinket:
         dependencies:
           "trinket.thatsnice.org":
             Trinket:
-              sys: console: stdout: "1.0"
-              HelloTrinket: "1.0"
+              sys: console: stdout: "1.0": "stdout"
+              HelloTrinket: "1.0": "hello"
 
         instanceConstants:
           hello:  Trinket: HelloTrinket: "1.0"
           stdout: Trinket: sys: console: stdout: "1.0"
 
         implementation: [
-          { invoke: "hello" }
+          { hello: [] }
         ]
 
 ```
@@ -140,3 +133,9 @@ $
 ```
 
 The 'trinket' command will be the CLI tool for invoking trinkets.
+
+## Details
+
+### Trinket resolution
+
+Dependencies map a trinket name (URN or otherwise) to an alias
