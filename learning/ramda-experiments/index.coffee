@@ -1,5 +1,6 @@
 Object.assign global, require 'ramda'
 cs = require 'coffee-script'
+R = require 'ramda'
 
 # Time to practice some point-free programming
 
@@ -10,14 +11,45 @@ cs = require 'coffee-script'
 
 nonWordString = /\s+/
 
+isFunctionDef = R.match /// ^ \s* ( [(] [^)]* [)] \s*)?  -> ///
+
+compileFunction = R.curry cs.eval
+
+addHandler = R.assoc k, R.prop(k, __), handlers
+
+addHandlers = R.mergeAll R.map addHandler, R.keys
+
 handlers = {}
 
-commands = []
+handlers = addHandlers
+  addHandler: R.ifElse
+    
+  ([cmd, name, colon, def]) ->
+    compiled = cs.eval def
+
+    handlers[name] = compiled
+    console.log "Added/edited handler '#{name}'"
+
+  addCommand: ([cmd, inputPattern, colon, handlerName]) ->
+    if not handler = handlers[handlerName]
+      return console.log "No handler named '#{handlerName}' exists"
+
+    if -1 < (idx = commands.findIndex (cmd) -> cmd.inputPattern is inputPattern)
+      commands[idx].handler = handler
+      return console.log "updated handler"
+    else
+      commands.push {inputPattern, handler}
+      return console.log "Added command pattern for handler '#{handlerName}'"
+
+commands = [
+  { inputPattern: "addHandler *: *", handler: addHandler }
+  { inputPattern: "addCommand *: *", handler: addCommand }
+]
 
 sortIntentsByConfidence =
   sortWith [
       R.descend length prop 'resolved'
-      R.ascend  length prop 'unresolved'
+      R. ascend length prop 'unresolved'
     ]
 
 cmdToItents =
@@ -106,8 +138,7 @@ dispatcher = """
       for parent in parents when (found = parent arguments)
         found.self = fn
 
-        if justResolve
-          return found
+        return found if justResolve
 
         break
 
@@ -121,26 +152,26 @@ FNFactoryBuilder = (name, info = {}) ->
   { methods = {}
     methodNotFound = ->
     parents = []
+    self = {}
   } = info
 
   resolve = Symbol()
-
-  self = {}
 
   fn = cs.eval dispatcher
   fn.name = name
   fn
 
-FNExample = FNFactoryBuilder "FNExample",
-  methods:
-    toString: -> "new OOExample #{JSON.stringify @}"
 
-  (message, args...) ->
-    console.log "Method '#{method}' not defined"
-
-fnInstance = FNExample()
-
-fnInstance 'toString'
 
 # That's better :)
+# Though I wonder if there's a way to do that point-free...
+
+methodSetToFactory = (methods) ->
+  for k, v of methods when 'function' isnt typeof v
+    throw new Error 'non-function method not supported'
+
+  methods = Object.assign {}, methods
+
+  dispatcher = (method, args...) ->
+    if method
 
