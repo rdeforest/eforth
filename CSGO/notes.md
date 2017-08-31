@@ -23,3 +23,17 @@ Learn to
 ## Not sure where it fits in the phases:
 
 - flanking
+
+# Changing the meta game
+
+## What if Ts practiced taking a site with a full CT defense?
+
+Say you're Ts on Inferno
+- Go straigh A
+- one watches banana
+- 2 go apts
+- 2 go mid
+
+If all 5 CTs are at A, they're peaking mid via diggity and arch, and via Pansy
+and library. All of these can be traded well. Admittedly, Ts need utility to
+work this angle.

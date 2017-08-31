@@ -102,9 +102,9 @@ class Tracker
     (new RewindableStepSequence)
       .addStep desc: 'make changes',
             forward: -> changes.forEach ({change}) -> change()
-            reverse: -> console.log "Commit failed"
       .addStep desc: 'backup current',
             forward: => copy @filePath, backup = @filePath + "-old"
+            reverse: => unlink backup
       .addStep desc: 'write to new',
             forward: => writeFile (tmp = @filePath + "-new"), @
             reverse: => unlink tmp
