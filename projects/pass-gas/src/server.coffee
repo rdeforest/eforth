@@ -2,60 +2,41 @@ app   = require './app'
 debug = require('debug')('pass-gas:server')
 http  = require 'http'
 
-port  = normalizePort(process.env.PORT || '3000')
-app.set 'port', port
+class Port
+  constructor: (@supplied) ->
+    @value =
+      switch
+        when @isPipe = isNaN @portNum = parseInt @supplied, 10 then @supplied
+        when @portNum >= 0 then @portNum
+        else false
 
-var server = http.createServer(app)
+  toString: -> (if @isPipe then 'Pipe ' else 'Port ') + @value.toString()
 
-server.listen(port)
-server.on('error', onError)
-server.on('listening', onListening)
+  valueOf: -> @value
 
-function normalizePort(val) {
-  var port = parseInt(val, 10)
+module.exports = ->
+  onError = (error) ->
+    throw error if error.syscall isnt 'listen'
 
-  if (isNaN(port)) {
-    // named pipe
-    return val
-  }
+    switch error.code
+      when 'EACCES'
+        console.error "#{port} requires elevated privileges"
+        process.exit 1
+      when 'EADDRINUSE'
+        console.error "#{port} is already in use"
+        process.exit 1
+      else
+        throw error
 
-  if (port >= 0) {
-    // port number
-    return port
-  }
+  onListening = ->
+    addr = server.address()
+    debug "Listening on #{port.toString().toLowerCase()}"
 
-  return false
-}
+  port = new Port process.env.PORT || '3000'
+  app.set 'port', port.valueOf()
 
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error
-  }
-
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port
-
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges')
-      process.exit(1)
-      break
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use')
-      process.exit(1)
-      break
-    default:
-      throw error
-  }
-}
-
-function onListening() {
-  var addr = server.address()
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port
-  debug('Listening on ' + bind)
-}
+  (server = http.createServer app)
+    .on 'error'    , onError
+    .on 'listening', onListening
+    .listen app.get 'port'
 
