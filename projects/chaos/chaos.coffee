@@ -1,4 +1,4 @@
-/*
+###
 
 Implement the old Chaos interpreter on top of JavaScript.
 
@@ -17,36 +17,30 @@ Chaos:
     * 'member obj .       // obj.member
     * 'block do           // block(...)       ... depends on args of block
 
-
 Examples:
 
     { "hello world" 'log console . } 'hello set
     hello
 
-*/
+###
 
-var ChaosParser = function (stream, receiver) {
-  this.buffer = '';
-  this.stream = stream;
-  this.receiver = receiver;
+class ChaosParser
+  constructor: (@stream, @receiver) ->
+    @buffer = ''
 
-  stream.on('data', function (d) {
-    this.buffer = this.buffer + d;
-    this.tokenizer();
-  });
-}
+    stream.on 'data', (d) ->
+      @buffer = @buffer + d
+      @tokenizer()
 
-ChaosParser.prototype = {
-  pullToken: function () {
-    if (this.buffer[0] === "'") return this.pullSymbol();
-    if ("0" <= this.buffer[0] &&  this.buffer[0] <= "9") return this.pullNumber();
-  },
+  pullToken: ->
+    if @buffer[0] == '\''
+      return @pullSymbol()
 
-  tokenizer: function () {
-    var nextToken;
+    if '0' <= @buffer[0] and @buffer[0] <= '9'
+      return @pullNumber()
 
-    while (nextToken = this.pullToken()) {
-      this.receiver(nextToken);
-    }
-  },
-};
+  tokenizer: ->
+    nextToken = undefined
+
+    while nextToken = @pullToken()
+      @receiver nextToken
