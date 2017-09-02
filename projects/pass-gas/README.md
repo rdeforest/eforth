@@ -33,3 +33,30 @@ to fill in forms.
 - A Cakefile exists (eventually) to build the project into build/
 - Unbuilt, the project can be run in the usual way (DEBUG=pass-gas:server ./bin/www)
 
+# Design
+
+## Components
+
+- plug-in
+ - identifies and fills in forms
+- store
+ - protects secrets
+- shuttle
+ - facilitates keeping multiple stores in sync
+
+## Ideas
+
+### How to expose encrypted DB publicly
+
+Use [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing)
+to break a protected store into pieces we're comfortable exposing to the
+public Internet. Post them to multiple independent services to ensure we can
+assemble the store when some portion of our locations are unreachable for some
+reason. Each piece should still be gated by unique credentials to raise the
+cost to an adversary of re-assembling the parts.
+
+For example:
+
+    PW DB is ~1Mb of 
+
+
