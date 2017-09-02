@@ -1,18 +1,14 @@
 # core lib is responsible for persistence
 
-class CoreObject
-  constructor: (info) ->
-    { @id
-      @core
-    } = info
+{ CoreObject } = require './core-object'
 
 class Core
-  constructor: (frozenIterator) ->
+  constructor: (frozenIterator, @store) ->
     @dbTop = 0
     @initMinimal()
+    @db = []
 
-    if frozenIterator
-      @load frozenIterator
+    @load frozenIterator if frozenIterator
 
   initMinimal: ->
     sys  = @create {}
@@ -21,4 +17,12 @@ class Core
     @chparent sys, root
 
   create: (info = {}) ->
-    o = new CoreObject Object.assign info, id: @dbTop++, core: @
+    @db[id] = new CoreObject {info, id, core: @}
+    id = @dbTop++
+    @
+
+  chparent: (child, parent) ->
+
+  startHypothetical: (target, message, args) ->
+
+    
