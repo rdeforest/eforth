@@ -1,3 +1,6 @@
 startup_message off
-utf8 on
-defscrollback 100000
+defscrollback 10000
+defutf8 on
+
+attrcolor b ".I"
+defbce "on"

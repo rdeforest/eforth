@@ -1,45 +1,35 @@
-[ -z "$PS1" ] && return
+#!/bin/bash
 
-#. $HOME/bin/agent-mgr
+shEnvCfgDir=$HOME/.config/shellEnv
 
-HISTCONTROL=ignoreboth
-
-shopt -s histappend
-
-HISTSIZE=1000000
-HISTFILESIZE=2000000
-
-shopt -s checkwinsize
-
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-unset color_prompt force_color_prompt
-
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+if [ -e  $shEnvCfgDir/boot ]; then
+  source $shEnvCfgDir/boot
+else
+  shEnvGreeting=".bashrc started..."
+  shEnvLibDir="$HOME/.lib"
+  shEnvTmp="$shEnvLibDir/.tmp"
 fi
 
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+mkdir -p $shEnvTmp
 
-export EDITOR=$(which vim)
-export PATH=$PATH:~/bin:/sbin:/usr/sbin
-export PS1='\n\u@\h:\w\n\$ '
+#echo "$shEnvGreeting"
 
-alias vi=$EDITOR
+for module in $(ls -1 "$shEnvLibDir" | grep -E '^[0-9]+_'); do
+  file="$shEnvLibDir/$module"
 
-ulimit -c unlimited
+  if [ ! -d "$file" ]; then
+    order=$(echo   "$module" | sed 's/^\([0-9]\{1,\}\)_.*/\1/')
+    modName=$(echo "$module" | sed 's/^\([0-9]*\)_//')
 
-function retitle() {
-  screen -X title "$1"
-}
+    #echo  "  ($order) $modName"
+    source "$file"
+  fi
+done
 
-export TERM=$(echo $TERM | sed 's/screen.//')
-export SCREENDIR=$HOME/.screen
-export SCREENRC=$SCREENDIR/screenrc
+#echo "done"
+
+# shouldn't be necessary, but whatever...
+export NODE_PATH=/usr/local/lib/node_modules:.
+
+# Yes, yes, I know...
+export PATH=~/bin:$PATH

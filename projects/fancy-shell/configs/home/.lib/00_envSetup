@@ -1,0 +1,44 @@
+#!/bin/bash
+
+shopt -s histappend
+
+stty sane
+stty stop ''
+
+export HISTFILESIZE=10000000
+export HISTSIZE=10000
+
+if false; then
+  export LANG="en_US.UTF-8"
+  export LC_CTYPE="$LANG"
+  export LC_NUMERIC="$LANG"
+  export LC_TIME="$LANG"
+  export LC_COLLATE="$LANG"
+  export LC_MONETARY="$LANG"
+  export LC_MESSAGES="$LANG"
+  export LC_PAPER="$LANG"
+  export LC_NAME="$LANG"
+  export LC_ADDRESS="$LANG"
+  export LC_TELEPHONE="$LANG"
+  export LC_MEASUREMENT="$LANG"
+  export LC_IDENTIFICATION="$LANG"
+  export LC_ALL="$LANG"
+fi
+
+# 'source' required to export SSH_ vars
+export PROMPT_COMMAND="source $HOME/.lib/prompt_command"
+export PS1='\n\D{%Y-%m-%d %H:%M:%S}\n\u@\H:\w\n\$ '
+export EDITOR=vim
+export VISUAL=$EDITOR
+export HOMEBREW_GITHUB_API_TOKEN="def75be2f407285d1777d65a56e6cbaf19a2629f"
+
+BTPT=/apollo/env/BrazilThirdPartyTool
+alias brazil-third-party-tool="$BTPT/bin/brazil-third-party-tool"
+
+alias vi=vim
+alias bb=brazil-build
+alias bre=brazil-runtime-environment
+
+# AWS CLI Auto Complete
+complete -C aws_completer aws
+

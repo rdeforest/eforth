@@ -1,0 +1,10 @@
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+sudo xcode-select --install
+sudo xcode-select --install
+ssh forestr.aka.corp.amazon.com
+sudo xcode-select --install
+ssh dev
+ssh forestr.aka.corp.amazon.com
+sudo xcode-select --install
+sudo xcode-select --install
+sudo xcode-select --install

@@ -1,0 +1,38 @@
+#!/usr/bin/env perl
+# vim: syntax=perl
+
+use strict;
+use warnings;
+
+my @path = ();
+
+if (@ARGV and $ARGV[0] ne '-c') {
+  @path = split(/:/, $ENV{PATH});
+}
+
+while (<>) {
+  chomp;
+  my ($dir, $disposition) = split;
+
+  next unless $dir;
+
+  @path = grep { $_ ne $dir } @path;
+
+  if (prefixMatch($disposition, "remove")) {
+    next;
+  } elsif (prefixMatch($disposition, "prepend")) {
+    unshift @path, $dir;
+  } else {
+    push @path, $dir;
+  }
+}
+
+print join(":", @path);
+
+sub prefixMatch {
+  my ($prefix, $fullStr) = @_;
+
+      defined($prefix)
+  and length($prefix) 
+  and $prefix eq substr($fullStr, 0, length($prefix));
+}
