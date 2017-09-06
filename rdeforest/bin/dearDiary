@@ -3,7 +3,7 @@
 # "...what a day it's been, Dear Diary..."
 
 (
-  root=$(dirname $0)
+  root=$(realpath $(dirname $0)/..)
   dir="$(date +$root/journal/entries/%Y/%m/%d)"
   file="$dir/$(date +%H%M.md)"
 
