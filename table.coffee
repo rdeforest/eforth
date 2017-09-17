@@ -1,73 +1,64 @@
-addEither = (which) ->
-  whichs     = which + "s"
-  Which      = which[0].toUpperCase + which[1..]
+R = require 'ramda'
 
-  firstWhich = "first" + Which
-  lastWhich  = "last"  + Which
+class Axis
+  constructor: (@table) ->
+    @members = []
+    @minIdx  =
+    @maxIdx  = null
+    @cursor  = null
 
-  (title, idx = @[whichs].length) ->
-    if @[firstWhich] is null
-      @[firstWhich] =
-      @[lastWhich]  = idx
-    else
-      @[firstWhich] = Math.min @[firstWhich], idx
-      @[lastWhich]  = Math.min @[ lastWhich], idx
+  axisName: -> @constructor.name
 
-    @[whichs][idx] =
-      title: title
-      cells: new Set
+  extend: (idx) ->
+    if @minIdx is null
+      return @minIdx = @maxIdx = idx
+    
+    if idx < @minIdx
+      for i in [idx .. @minIdx]
+        @members[i] = new @constructor.memberClass
 
-module.exports = class Table
+  exists: (idx) ->
+
+class AxisMember extends Formatted
+  constructor: (@axis) ->
+    @cells = new Set
+
+(class Rows    extends Axis).memberClass = class Row     extends AxisMember
+(class Sheets  extends Axis).memberClass = class Sheet   extends AxisMember
+(class Columns extends Axis).memberClass = class Column  extends AxisMember
+
+module.exports.Table =
+class Table
   constructor: ->
-    @firstRow    =
-    @lastRow     =
-    @firstColumn =
-    @lastColumn  = null
+    @axes = [ new Sheets  @
+              new Columns @
+              new Rows    @ ]
 
-    @columns     = []
-    @row         = []
-    @cells       = new Set
+    [sheets, columns, rows] = @axes
+    Object.assign @axes, sheets, columns, rows
 
-  addRow   : addEither 'row'
-  addColumn: addEither 'column'
+    @cells = new Set
 
-  clearCells: (x1, y1, x2, y2) ->
-    for cell in @cells
-      if  ( x1 <= cell.x1 <= x2  or
-            x1 <= cell.x2 <= x2) and
-          ( y1 <= cell.y1 <= y2  or
-            y1 <= cell.y2 <= y2)
+  selectAxisMember: (axisName, index) ->
+    @axes[axisName].select index
 
-        for axis in Array.from(cell.rows).concat Array.from(cell.columns)
-          axis.cells.delete cell
+  selectCell: (coordinates...) ->
+    areNumbers = (n) ->
+      'number' is typeof n or
+      n instanceof Number
 
-        @cells.delete cell
+    if R.all areNumbers, coordinates
+      if (got = coordinates.length) isnt (needed = @axes.length)
+        throw new Error "Cannot address cell with #{got} numeric indexes, need exactly #{needed}"
 
-  setCells: (x1, y1, x2, y2, contents) ->
-    @clearCells x1, y1, x2, y2
+      coordinates.forEach (n, i) ->
+        @axes[i].select n
+    else if 'object' is typeof indexes = coordinates[0]
+      for axis, index of indexex
+        @axes[axis].select index
+    else
+      methodStr = (JSON.stringify coordinates)[1..-2]
 
-    @cells.add = cell = {x1, y1, x2, y2, contents}
+      methodStr = methodStr[..27] + "..." if methodStr.length > 30
 
-    (@addColumn '') while x1 > @columns.length
-    (@addRow    '') while y1 >    @rows.length
-
-    for x in [x1..x2]
-      (@columns[x] ? addColumn("", x))
-        .cells
-        .add cell
-
-    for y in [y1..y2]
-      (@rows[y] ? addRow("", y))
-        .cells
-        .add cell
-
-    cell.columns = new Set @columns[x1..x2]
-    cell.rows    = new Set @rows   [y1..y2]
-
-  toGrid: (x1, y1, x2, y2) ->
-    return "" unless @firstRow
-
-    body =
-      @rows[@firstRow..@lastRow]
-        .map (row, rowIdx) ->
-
+      throw new Error "Indexes provided (#{methodStr}) not recognized. Expected single object or multiple numbers"

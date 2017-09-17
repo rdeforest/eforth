@@ -3,7 +3,6 @@
 main = ->
   install() if runAsScript
 
-
 favoritePackages =
   cs: cs = require 'coffee-script'
   R : R  = require 'ramda'
@@ -49,17 +48,11 @@ Object.assign module.exports, publishable = {
     Object.assign namespace, publishable
 
     Object.assign String::,
-      chars: -> @.split ''
+      chars: -> @split ''
 
-      words: -> @.split /\W+/g
-
-      el: (attributes) ->
-        if attributes
-          "<#{@toLowerCase()} #{
-            ("#{HTML.quote k.toLowerCase()}=\"#{HTML.quote v}\"" for k, v of attributes).join ' '
-          }>"
+      words: -> @split /\W+/g
 
     for method in qw 'every filter find findIndex forEach map'
-      String::[method] ?= (args...) -> @chars[method] args...
+      String::[method] ?= (args...) -> @chars()[method] args...
 
 main()
