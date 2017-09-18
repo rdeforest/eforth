@@ -32,3 +32,10 @@ class MOPEventEmitter
 
     mixinMOPEmitter @
 
+module.exports.proxyThroughCallback = (target, cb) ->
+  hProxy = new Proxy {},
+    get: (target, property, receiver) ->
+      (args...) ->
+        cb {target, property, args}
+
+  new Proxy target, hProxy
