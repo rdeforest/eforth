@@ -7,6 +7,8 @@ class Axis
     @maxIdx  = null
     @cursor  = null
 
+  indexMapper: ({int, str}) -> (int or str).toString()
+
   axisName: -> @constructor.name
 
   extend: (idx) ->
@@ -26,6 +28,27 @@ class AxisMember extends Formatted
 (class Rows    extends Axis).memberClass = class Row     extends AxisMember
 (class Sheets  extends Axis).memberClass = class Sheet   extends AxisMember
 (class Columns extends Axis).memberClass = class Column  extends AxisMember
+
+errMsg = (details) -> "invalid index: " + details
+
+Columns::indexMapper = ({int, str}) ->
+  switch
+    when not str and not int then throw new Error errMsg "both .str and .int were falsy"
+    when     str and     int then throw new Error errMsg "both .str and .int were non-falsy"
+    when int and int < 1     then throw new Error errMsg ".int must be a positive integer"
+    when str.match /[^a-z]/i then throw new Error errMsg ".str must be contain only letters"
+      ( while int > 0
+          int--
+          digit = int % 26
+          int = (int - digit) / 26
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[digit]
+      ).reverse().join ''
+
+    else
+      str .toUpperCase()
+          .split  ''
+          .map    (c) -> c.charCodeAt(0) - 64
+          .reduce (t, d) -> t * 26 + d
 
 module.exports.Table =
 class Table
@@ -53,9 +76,11 @@ class Table
 
       coordinates.forEach (n, i) ->
         @axes[i].select n
+
     else if 'object' is typeof indexes = coordinates[0]
-      for axis, index of indexex
+      for axis, index of indexes
         @axes[axis].select index
+
     else
       methodStr = (JSON.stringify coordinates)[1..-2]
 

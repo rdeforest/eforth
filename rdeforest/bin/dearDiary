@@ -2,19 +2,18 @@
 
 # "...what a day it's been, Dear Diary..."
 
-(
-  root=$(realpath $(dirname $0)/..)
+( root=$(realpath $(dirname $0)/..)
   dir="$(date +$root/journal/entries/%Y/%m/%d)"
   file="$dir/$(date +%H%M.md)"
 
   mkdir -p "$dir"
   touch "$file"
 
-  if [ -e "$root/latest" ]; then
-    rm -f "$root/previous"
-    mv "$root/latest" "$root/previous"
+  if [ -e "$root/latest.md" ]; then
+    rm -f "$root/previous.md"
+    mv "$root/latest.md" "$root/previous.md"
   fi
 
-  ln -s $file "$root/latest"
+  ln -s $file "$root/latest.md"
   vi    $file
 )
