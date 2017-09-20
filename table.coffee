@@ -1,15 +1,41 @@
 R = require 'ramda'
 
+###
+
+Table:
+  has: Cells, Rows, Columns
+  does: get, set, iterate over cells
+  delegates: iterate over columns or rows
+
+Selection:
+  does: contains?, iterate, 
+
+###
+
+class Coordinate
+  constructor: (@axis, @idx) ->
+
+class Coordinates
+  constructor: (@coords...) ->
+
+class Location
+  constructor: (@table, @coordinates) ->
+
+class Selection
+  constructor: (@table, @start, @end) ->
+    throw argError unless (@start instanceof Location) and
+                           @end   instanceof Location
+
+  contains: (location) ->
+    return false unless @location.inTable @table
+
 class Axis
   constructor: (@table) ->
     @members = []
     @minIdx  =
     @maxIdx  = null
-    @cursor  = null
 
-  indexMapper: ({int, str}) -> (int or str).toString()
-
-  axisName: -> @constructor.name
+  name: -> @constructor.name
 
   extend: (idx) ->
     if @minIdx is null
@@ -20,6 +46,8 @@ class Axis
         @members[i] = new @constructor.memberClass
 
   exists: (idx) ->
+
+  select: (@cursor) ->
 
 class AxisMember extends Formatted
   constructor: (@axis) ->
@@ -53,12 +81,11 @@ Columns::indexMapper = ({int, str}) ->
 module.exports.Table =
 class Table
   constructor: ->
-    @axes = [ new Sheets  @
-              new Columns @
+    [columns, rows] =
+    @axes = [ new Columns @
               new Rows    @ ]
 
-    [sheets, columns, rows] = @axes
-    Object.assign @axes, sheets, columns, rows
+    Object.assign @axes, columns, rows
 
     @cells = new Set
 
