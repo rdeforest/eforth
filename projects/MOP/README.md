@@ -8,4 +8,4 @@ I want to make it easier for me to follow my own standards when developing.
 
 - .comment on every class/module
 - every module exported as an object rather than a single class or function
-
+- Use CoffeeScript to write CoffeeScript
