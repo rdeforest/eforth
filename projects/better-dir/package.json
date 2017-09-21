@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "joe": "^2.0.2",
+    "joe-reporter-console": "^2.0.1",
     "native-readdir": "^1.0.1"
   }
 }
