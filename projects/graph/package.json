@@ -1,5 +1,5 @@
 {
-  "name": "better-dir",
+  "name": "graph",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "joe": "^2.0.2",
-    "joe-reporter-console": "^2.0.1",
-    "native-readdir": "^1.0.1"
+    "bitfield": "^1.1.2",
+    "js-yaml": "^3.10.0",
+    "moment": "^2.18.1"
   }
 }

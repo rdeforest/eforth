@@ -1,5 +1,6 @@
 Sometimes people complain about not having any access control in ECMAScript.
-Now that we have Symbol, maybe we can fix that?
+Now that we have Symbol, maybe we can fix that? (Previously we had namespace
+collision problems with strings).
 
 # Use cases
 
@@ -34,31 +35,39 @@ Yes. Yes there is. We don't even need a Symbol yet.
 
 ## Ok, but what about other kinds of private and protected members?
 
-Suppose we want to dynamically add a restricted method to a class. We're
-building an IDE and it's implemented in ECMAScript or something. We want the
-user to be able to interact with instances of their objects under development,
-including being able to add a private method to a class. That private method
-should only be visible to instances of that class.
+We want to add a method to instances of a class which has limited visibility.
+We can't keep a caller from proxying calls, but that's true anyway.
 
-Presumably, public methods will use such a private method as a utility
-function or something.
+### Private = Only self and children can invoke it
 
-We can use scope to create the private method, but how do we maintain a
-reference to it so that the public methods, defined later, have access to it?
+    parentSymbols = new Map
 
-    privateInstanceMembers = {}
+    ParentSymbol = Symbol()
 
-    classSym = Symbol()
+    class Parent
+      constructor: (opts = {}) ->
+        @setParentSymbol Parent, ParentSymbol
 
-    our = makeOur Symbol()
-    
-    makeOur = (classSym) ->
-      (member, value) ->
-        if arguments.length > 1
-          @[classSym][member] = value
-          @
-        else
-          @[classSym][member]
+    Parent::[ParentSymbol].privateMethod = (args...) ->
 
-    class PrivateRyan
-      constructor: (args...) ->
+    callPrivate = (self, method, args...) ->
+      self[parentSymbols.get self.constructor.__super__][method]
+        .apply self, args
+
+    ChildSymbol = Symbol()
+
+    class Child extends Parent
+      setParentSymbol: (parent, sym) ->
+        if @ not instanceof parent
+          throw new Error 'wat'
+
+        parentSymbols.set parent, sym
+
+      constructor: (opts = {}) ->
+        super
+        @set
+
+      someMethod: ->
+        callPrivate @, 'privateMethod', args: 'some args'
+
+This is clearly workable, but a huge pain. Time to go back to the MOP...

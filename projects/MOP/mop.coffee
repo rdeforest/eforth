@@ -3,8 +3,8 @@
 A word on multiple inheritance:
 
 A common complaint about MI is that a method name inherited from two parents is
-ambiguous. I solve that by prohibiting the situation. If you want an object to
-have two kinds of .name, use Aspects.
+ambiguous. I intend to solve that by prohibiting the situation. If you want an
+object to have two kinds of .name, use Aspects.
 
 ###
 
