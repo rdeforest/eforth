@@ -14,29 +14,46 @@ becoming.
 
 ## Re-formatted
 
-[spoken in a British accent, music building in Am/Em/F/Bb]
+[long-ish instrumental lead-up]
 
+[spoken, music building in Am/Dm/C/Em]:
+
+       Em
 If you trace
+    F
  a wire
+          C
  inside a city
 
+Em
+
+     Am
 To a room
+ F
  ...
+            E
  with quiet screens
 
+        Am    F
 You may slip
+          C
  into the realm
+ G  F
  ...
- of information
+
+    F     E  Am             D6 Am D6
+The realm of information...
 
 [music builds towards a crescendo, then drops off abruptly]
 
-[sung acapella]:
+[sung with minimal backup]:
 
 A
 This realm
- A          D
- has higher contrast
+ A
+ has higher
+D
+Contrast
  D        A
  than our own
 
@@ -44,8 +61,10 @@ F, E
 
      A
 It's governed
-        Dm
- by the light
+ by the
+
+Dm
+light
             A
  and by the dark
 
@@ -55,12 +74,12 @@ F, G
 Where tiny pulses
  F        C
  of e-lec-tricity
-      Em        Am
+      Em        C
  Form words and images...
 
-D
+F, D
 
-F
+C
 Those who keep the balance
          Em
  are the monks
@@ -69,32 +88,62 @@ Those who keep the balance
 
 ...
 
+A
 On the street
+ D
  they could be
+ A
  anyone
 
-You might notice them
- by their
- silence
+F, E
 
+A
+You
+ might
+ D
+ notice them
+ 
+         Gb
+by their silence
+
+Bm... E
+
+C                   Dm
 Attuned to noise as failure
+     E
  the monks prefer
+   Am      C
    austere living
- They order sound
-   into music
+C
+They order sound
+      Bb
+ into music
+       F
    and pauses
 
 [long rest, maybe with light cymbal?]
 
+A
 At night
+        D
  if you listen
+      A
  closely
-you may hear
- a monk
- practicing
 
-her trade...
-  (Her trade...)
+F, E
+
+A       Dm
+you may hear
+   A
+ a monk
+ 
+ Db
+ practicing
+    Gbm
+    her trade...
+    (her trade...)
+    (her trade...)
+    (her trade...)
 
 guitar
  or flute
