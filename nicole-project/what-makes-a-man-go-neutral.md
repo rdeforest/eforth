@@ -14,26 +14,101 @@ becoming.
 
 ## Re-formatted
 
+[spoken in a British accent, music building in Am/Em/F/Bb]
+
 If you trace
  a wire
  inside a city
 
 To a room
+ ...
  with quiet screens
- you may slip
 
-Into the realm of information
+You may slip
+ into the realm
+ ...
+ of information
 
+[music builds towards a crescendo, then drops off abruptly]
+
+[sung acapella]:
+
+A
 This realm
- being higer contrast
+ A          D
+ has higher contrast
+ D        A
  than our own
 
-Is governed
- by light
- and by dark
+F, E
 
-Where tiny
- pulses
- of electricity
+     A
+It's governed
+        Dm
+ by the light
+            A
+ and by the dark
 
-Form words
+F, G
+
+      C
+Where tiny pulses
+ F        C
+ of e-lec-tricity
+      Em        Am
+ Form words and images...
+
+D
+
+F
+Those who keep the balance
+         Em
+ are the monks
+              Am          D/D6/D Am/D/etc
+ the monks of neutrality
+
+...
+
+On the street
+ they could be
+ anyone
+
+You might notice them
+ by their
+ silence
+
+Attuned to noise as failure
+ the monks prefer
+   austere living
+ They order sound
+   into music
+   and pauses
+
+[long rest, maybe with light cymbal?]
+
+At night
+ if you listen
+ closely
+you may hear
+ a monk
+ practicing
+
+her trade...
+  (Her trade...)
+
+guitar
+ or flute
+ or saxiphone
+
+The monks
+ always
+ practice
+
+But never perform
+
+For that is their prayer
+
+To always
+ be...
+ becoming.
+
