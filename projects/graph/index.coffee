@@ -1,5 +1,6 @@
 moment   = require 'moment'
 Bitfield = require 'bitfield'
+yaml     = require 'js-yaml'
 
 looped   = Symbol 'looped'
 
@@ -26,7 +27,18 @@ class Identified
 
     Identified.known[@id] = @
 
+  toTree: ->
+    tree = {}
+    ctor = @constructor
+
+    loop
+      tree[ctor.name] = ctor.toTree? @
+
+      if ctor is next = ctor.__proto__.constructor
+        return tree
+
   toString: ->
+    yaml.
     @_addToString '{}',
       Identified: {@id}
 
@@ -38,8 +50,9 @@ class Identified
 class Vertex extends Identified
   @comment: 'I am the source or destination of a relation'
 
-
   constructor: (info = {}) ->
+    super arguments...
+
     { @name
       @description
       @created = moment()
@@ -47,8 +60,6 @@ class Vertex extends Identified
 
     @in  = new Bitfield 64, grow: Infinity
     @out = new Bitfield 64, grow: Infinity
-
-    super arguments...
 
   inbound:  -> (@lookupId id) for id from @in
   outbound: -> (@lookupId id) for id from @out
