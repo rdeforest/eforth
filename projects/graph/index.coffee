@@ -32,18 +32,16 @@ class Identified
     ctor = @constructor
 
     loop
-      tree[ctor.name] = ctor.toTree? @
+      if ctorTree = ctor.toTree? @
+        Object.assign tree, "#{ctor.name}": ctorTree
 
       if ctor is next = ctor.__proto__.constructor
         return tree
 
   toString: ->
-    yaml.
-    @_addToString '{}',
-      Identified: {@id}
+    yaml.safeDump @toTree()
 
-  _addToString: (parents, self) ->
-    JSON.stringify Object.assign JSON.parse(parents), self
+  @toTree: -> { @id }
 
   lookupId: (id) -> Identified.known[id]
 
@@ -166,10 +164,18 @@ makeEdge.comment = """
     In makeVertex this partial application is called 'edgeBuilder'.
   """
 
+Object.assign module.exports, {makeEdge, makeVertex, Identified, Vertex, Edge}
+
+###
+console.log "definitions complete"
+
 fruit  = makeVertex 'fruit'
 banana = makeVertex 'banana'
 isa    = makeEdge   'isa'
 
 banana isa fruit
 
-Identified.known.forEach((i) -> console.log JSON.parse i.toString())
+console.log "graph created"
+
+console.log Identified.known
+###
