@@ -4,6 +4,8 @@ yaml     = require 'js-yaml'
 
 looped   = Symbol 'looped'
 
+{ Identified } = require './identified'
+
 Bitfield::length = ->
   len = 8 * @buffer.length
 
@@ -12,38 +14,6 @@ Bitfield::length = ->
 
 Bitfield::[Symbol.iterator] = ->
   yield idx for idx in [0..@length()] when @get idx
-
-class Identified
-  @comment: 'I have a unique ID and my peers can look me up by it, no matter what their class'
-
-  @nextId: 1
-  @known: []
-
-  constructor: (info = {}) ->
-    { @id = Identified.nextId
-    } = info
-
-    Identified.nextId = Math.max(@id, Identified.nextId) + 1
-
-    Identified.known[@id] = @
-
-  toTree: ->
-    tree = {}
-    ctor = @constructor
-
-    loop
-      if ctorTree = ctor.toTree? @
-        Object.assign tree, "#{ctor.name}": ctorTree
-
-      if ctor is next = ctor.__proto__.constructor
-        return tree
-
-  toString: ->
-    yaml.safeDump @toTree()
-
-  @toTree: -> { @id }
-
-  lookupId: (id) -> Identified.known[id]
 
 class Vertex extends Identified
   @comment: 'I am the source or destination of a relation'
