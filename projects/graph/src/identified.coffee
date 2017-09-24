@@ -31,22 +31,11 @@ class Identified
 
     Identified.known[@id] = @
 
-  toTree: ->
-    tree = {}
-    ctor = @constructor
+  destroy: ->
+    Identified.known[@id] = undefined
+    @id = -@id
 
-    loop
-      if ctorTree = ctor.toTree? @
-        Object.assign tree, "#{ctor.name}": ctorTree
-
-      if ctor is next = ctor.__proto__.constructor
-        return tree
-
-  toString: ->
-    yaml.safeDump @toTree()
-
-  @toTree: -> { @id }
+  destroyed: -> @id < 0
 
   lookupId: (id) -> Identified.known[id]
-
 
