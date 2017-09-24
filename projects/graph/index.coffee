@@ -4,6 +4,8 @@ yaml     = require 'js-yaml'
 
 looped   = Symbol 'looped'
 
+{ Identified } = require './identified'
+
 Bitfield::length = ->
   len = 8 * @buffer.length
 
@@ -12,40 +14,6 @@ Bitfield::length = ->
 
 Bitfield::[Symbol.iterator] = ->
   yield idx for idx in [0..@length()] when @get idx
-
-class Identified
-  @comment: 'I have a unique ID and my peers can look me up by it, no matter what their class'
-
-  @nextId: 1
-  @known: []
-
-  constructor: (info = {}) ->
-    { @id = Identified.nextId
-    } = info
-
-    Identified.nextId = Math.max(@id, Identified.nextId) + 1
-
-    Identified.known[@id] = @
-
-  toTree: ->
-    tree = {}
-    ctor = @constructor
-
-    loop
-      tree[ctor.name] = ctor.toTree? @
-
-      if ctor is next = ctor.__proto__.constructor
-        return tree
-
-  toString: ->
-    yaml.
-    @_addToString '{}',
-      Identified: {@id}
-
-  _addToString: (parents, self) ->
-    JSON.stringify Object.assign JSON.parse(parents), self
-
-  lookupId: (id) -> Identified.known[id]
 
 class Vertex extends Identified
   @comment: 'I am the source or destination of a relation'
@@ -166,10 +134,18 @@ makeEdge.comment = """
     In makeVertex this partial application is called 'edgeBuilder'.
   """
 
+Object.assign module.exports, {makeEdge, makeVertex, Identified, Vertex, Edge}
+
+###
+console.log "definitions complete"
+
 fruit  = makeVertex 'fruit'
 banana = makeVertex 'banana'
 isa    = makeEdge   'isa'
 
 banana isa fruit
 
-Identified.known.forEach((i) -> console.log JSON.parse i.toString())
+console.log "graph created"
+
+console.log Identified.known
+###
