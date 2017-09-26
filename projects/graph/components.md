@@ -2,6 +2,19 @@ Teasing apart the separations of concerns...
 
 (because not invented here?)
 
+
+
+- Identifier
+ - exists to
+  - allow objects to refer to each other
+  - in a consistent way
+  - which serializes well
+ - has
+  - unique key
+  - identified object
+ - does
+  - lookup related by id
+
 - storable freeze/thaw
  - does
   - freeze
