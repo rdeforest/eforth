@@ -12,6 +12,7 @@ primes = [2, 3]
 memoize = (name, fn) ->
   if not name
     throw new Error "name is required now"
+
   argsSeen = {}
 
   (args...) ->
