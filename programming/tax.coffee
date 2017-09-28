@@ -21,26 +21,25 @@ tax = (income) ->
 
   (income - deduct) * rate
 
-removeSubCents = (n) -> Math.floor(n * 100) / 100
-offset = (diff, rate) -> removeSubCents Math.abs (diff + diff * rate)
+floor = (n, factor = 4) -> Math.floor(n * factor) / factor
+
+offset = (diff, rate) -> floor Math.abs (diff + diff * rate)
 
 toTakeHome = (goal, margin = 1000) ->
   income = goal
  
   for round in [1..10]
-    income = removeSubCents income
-
     switch
-      when (diff = removeSubCents(takeHome(income) - goal)) > margin
+      when (diff = floor(takeHome(income) - goal)) > margin
         console.log "to solve for #{diff}, reducing from #{income} to #{
-        income -= offset diff, rate
+        income = floor (income - offset diff, rate)
         }"
 
-      when diff < -margin
+      when diff < 0
         [cap, deduct, rate] = findBracket income
 
         console.log "to solve for #{diff}, raising from #{income} to #{
-        income += offset diff, rate
+        income = floor (income + offset diff, rate)
         }"
 
       else break
@@ -48,6 +47,6 @@ toTakeHome = (goal, margin = 1000) ->
   return income
 
 takeHome = (income) ->
-  income - tax income
+  floor (income - tax income)
 
 Object.assign module.exports, {rates, tax, toTakeHome, takeHome}
