@@ -6,4 +6,5 @@ joe.suite 'Array extensions', (suite, test) ->
   require (path.resolve '..', '..', 'lib', 'array'), Array
 
   test 'extends []', ->
+    assert 
 

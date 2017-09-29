@@ -59,13 +59,6 @@ isGenerator = (n, verbose) ->
 
   true
 
-Array::cmp = (other) ->
-  if  @length and other.length
-     (@[0]     -  other[0]) or
-      @[1..] .cmp other[1..]
-  else
-      @length  -  other.length
-
 total       =
 count       =
 lastUpdate  =
