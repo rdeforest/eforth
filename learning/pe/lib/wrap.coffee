@@ -10,16 +10,21 @@ Usage:
 
 ###
 
-module.exports.wrap = wrap = (obj, method, what) ->
-  chain = and: (method, what) -> wrap obj, method, what
+module.exports.wrap =
+wrap =
+(obj, method, {before, after}) ->
+  chain       = and: (method, what) -> wrap obj, method, what
 
-  {before, after} = what
+  addBefore   = 'function' is typeof before
+  addAfter    = 'function' is typeof after
 
-  wrapped     = obj[method]
+  unwrapped   = obj[method]
 
-  wrapped     = wrapped (before args...)... if before
-  wrapped     = after wrapped (       args   )... if after
-
-  obj[method] = wrapped
+  obj[method] =
+    switch
+      when addBefore and addAfter then (args...) -> after unwrapped (before args...)...
+      when addBefore              then (args...) ->       unwrapped (before args...)...
+      when               addAfter then (args...) -> after unwrapped         args...
+      else                             (args...) ->       unwrapped         args...
 
   chain

@@ -2,17 +2,22 @@
 #
 #   require('number')(Number)
 
+primes = [2, 3, 5, 7]
+
 module.exports = (Number) ->
   R = require 'ramda'
 
-  primes = [2, 3, 5, 7]
+  Number::divides  = (n)    -> 0 is (n % @)
+  Number::factors  = (uniq) -> factorsOf  @valueOf(), uniq
+  Number::divisors =        -> divisorsOf @valueOf()
+  Number::isPrime  =        -> isPrime @
 
-  Number::divides = (n) -> 0 is (n % @)
-
-  divides = (numerator) -> (denominator) -> denominator.divides numerator
-
+  Number.primes =
   primeGen = (fromLargest) ->
-    for p in primes
+    i = 0
+
+    while i < primes.length
+      p = primes[i++]
       yield p unless fromLargest
 
     q = p
@@ -21,16 +26,26 @@ module.exports = (Number) ->
       q += 2
 
       unless primes[1..].find divides q
-        primes.push q
+        nth = primes.push q
         yield q
 
-  Number::isPrime = ->
-    return undefined if @ < 2
+  isPrime = (n) ->
+    console.log "#{n}.isPrime..."
 
-    for p from primeGen(true) when p > @
-      break
+    switch
+      when     n  < 2 then (console.log "too small" ; undefined )
+      when     n is 2 then (console.log "is 2"      ; true      )
+      when not n  & 1 then (console.log "is even"   ; false     )
+      else
+        console.log "Primeness based on #{n} being in #{primes}"
+        gen = primeGen true
+        p = 0
+        p = gen.next.value while p < n / 2
 
-    @valueOf() in primes
+        n in primes
+
+
+  divides = (numerator) -> (denominator) -> denominator.divides numerator
 
   factorsOf = R.memoize (n, uniq) ->
     factors = []
@@ -47,20 +62,11 @@ module.exports = (Number) ->
 
     factors
 
-  Number::factors = (uniq) -> factorsOf @valueOf(), uniq
-
-#console.log 271.factors()
-
-  _divisorsOf = R.memoize (n) ->
+  divisorsOf = R.memoize (n) ->
     return [] if n is 1
 
     R.uniq R.sort ((a, b) -> a - b),
-      R.flatten ([n, _divisorsOf(n/p)...] for p in n.factors())
+      R.flatten ([n, divisorsOf(n/p)...] for p in n.factors())
 
-  divisorsOf = _divisorsOf # (n) -> [1, _divisorsOf(n)...]
-
-  Number::divisors = -> divisorsOf @valueOf()
-
-#console.log (2*3*4*5).divisors()
-
+  Object.defineProperty Number, 'primes', get: -> primeGen()
 

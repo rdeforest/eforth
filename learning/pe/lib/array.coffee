@@ -3,48 +3,43 @@ module.exports = (Array) ->
 
   DUPE_SCAN_CUTOFF = 100
 
-  hasDupe = (unsortedList) ->
-    seen = new Set unsortedList[..DUPE_SCAN_CUTOFF - 1]
+  hasDupe = (markUnsortedList) ->
+    seen = new Set markUnsortedList[..DUPE_SCAN_CUTOFF - 1]
 
-    if unsortedList.length <= DUPE_SCAN_CUTOFF
-      return seen.length is unsortedList.length
+    if markUnsortedList.length <= DUPE_SCAN_CUTOFF
+      return seen.length is markUnsortedList.length
 
     return false unless seen.length is DUPE_SCAN_CUTOFF
 
-    for el in unsortedList[DUPE_SCAN_CUTOFF..]
+    for el in markUnsortedList[DUPE_SCAN_CUTOFF..]
       return false if seen.has el
 
       seen.add el
 
     true
 
-  sortedHasDupe = (sortedList) ->
-    -1 < sortedList.findIndex (e, i, l) -> l[i+1] is e
+  markSortedHasDupe = (sortedList) ->
+    -1 < markSortedList.findIndex (e, i, l) -> l[i+1] is e
 
-  setFlag = (name, clear)
-    value = not clear
+  flagSetter = (name, value) ->
+    (ret) -> Object.assign ret, "#{name}": value
 
-    (args...) ->
-      ret = super args...
-      ret[flag] = value
-      ret
-
-  sorted = setFlag 'sorted'
-  unsorted = setFlag 'sorted', true
+  markSorted   = flagSetter 'sorted', true
+  markUnsorted = flagSetter 'sorted', false
 
   Array::hasDupe = (sorted = @sorted) ->
-    ( if isSorted
-        sortedHasDupe
+    ( if @isSorted
+        markSortedHasDupe
       else
         hasDupe
     ) @
 
-  wrap Array, 'sort'     , after:   sorted
-         .and 'pop'      , after: unsorted
-         .and 'push'     , after: unsorted
-         .and 'shift'    , after: unsorted
-         .and 'splice'   , after: unsorted
-         .and 'unshift'  , after: unsorted
+  wrap Array::, 'sort'    , after: markSorted
+           .and 'pop'     , after: markUnsorted
+           .and 'push'    , after: markUnsorted
+           .and 'shift'   , after: markUnsorted
+           .and 'splice'  , after: markUnsorted
+           .and 'unshift' , after: markUnsorted
 
   Array::cmp = (other) ->
     if  @length and other.length
@@ -54,3 +49,10 @@ module.exports = (Array) ->
         @length  -  other.length
 
 
+  Array::find = (cmp) ->
+    return undefined unless @length
+
+    switch cmp @[midx = @length >> 1]
+      when -1 then midx + @[  midx..  ].find cmp
+      when  1 then midx - @[..midx - 1].find cmp
+      else midx

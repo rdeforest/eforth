@@ -1,48 +1,42 @@
-###
+CELL_SIZE = 32
 
-Efficient (read and write) storage of an array of true/false values
-
-...
-
-[
-  before
-  from
-  value
-  to
-  after
-]
-
-class RangeMap
-  constructor: (@before, @from, @value, @to, @after) ->
-    [@before, @value, @after] =
-      for f in [@before, @value, @after]
-        if typeof f is 'function'
-          f
-        else
-          -> f
-
-  lookup: (n) ->
-    return @before n if n < @from
-    return @after  n if n > @to
-    return @value  n
-
-  set: (n, value) ->
-    if n < @from
-      @before = new RangeMap @before, n, value, n, @before
-
-###
-
+module.exports =
 class BitField
-  constructor: (@default = false) ->
-    @toggled = {}
+  constructor: (@size = CELL_SIZE) ->
+    @_field = Buffer.alloc @size / CELL_SIZE, 0
 
-  set: (n) ->
-    @toggled[n] = not @default
+  addressOf: (n) ->
+    throw new Error "negative indexes not supported" if n < 0
 
-  clear: (n) ->
-    @toggled[n] =     @default
+    cell = n >> CELL_SIZE
+    bit  = n  % CELL_SIZE
+    mask = 1 << bit
+    {cell, bit, mask}
 
-  test: (n) ->
-    if @toggled[n] then not @default else @default
+  _resize: (offset) ->
+    @_field = Buffer.from @_field, 0, @size + offset
 
+  set:       (n) ->
+    {cell, mask} = @addressOf n
+
+    @_resize needed if 0 < needed = cell - @_field.length
+
+    @_field[cell] |= mask
+
+  clear:     (n) ->
+    [cell, mask] = @addressOf n
+
+    return if cell >= @_field.length
+
+    @_field[cell] &= ~mask
+
+  toggle:    (n) ->
+    if @test n
+      @clear n
+    else
+      @set n
+
+  test:      (n) ->
+    [cell, mask] = @addressOf n
+    @_field[cell] & mask
 
