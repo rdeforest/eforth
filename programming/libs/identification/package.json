@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "joe": "^2.0.2",
+    "joe-reporter-console": "^2.0.1"
+  }
 }
