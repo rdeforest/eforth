@@ -7,5 +7,8 @@
     "test": "coffee test/index.coffee --joe-reporter=list"
   },
   "author": "Robert de Forest <robert@defore.st>",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "dependencies": {
+    "coffeescript": "^2.0.1"
+  }
 }
