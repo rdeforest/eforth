@@ -135,3 +135,115 @@ Usage
 
 Why? Because MetaClass::whatever is accessible as ChildClass.whatever
 
+# Granting access to stuff
+
+Classes which cooperate may want to give each other access to their properties.
+
+
+    subjects = {}
+
+    sym = Symbol 'Cooperator'
+
+    class Cooperator
+      constructor: (subjectOrToken, cb) ->
+        switch
+          when not new.target
+            return new @constructor arguments...
+
+          when 'symbol' is typeof subjToken = subjectOrToken
+            self = subjects[subjToken]
+
+            if self.token isnt subjToken
+              throw new Error "Access violation"
+
+            return self
+
+          when 'object' is typeof subjectOrKey
+            if 'function' isnt typeof cb
+              throw new Error "Callback missing or not a function"
+
+            @subject = subjectOrKey
+            @grants  = {}
+            @props   = {}
+            @token   = Symbol()
+
+            subjects[@token] =
+            @subject[sym] = @
+
+            cb @token
+
+          else
+            throw new Error "Class or Callback required"
+
+      access: (instance, grantor) ->
+        if instance not instanceof grantor
+          throw new Error "That object does not inherit from that class"
+
+        return new Cooperator.Accessor @token, instance, grantor
+
+      grant: (grants) ->
+        for propName, grantees of grants
+          (if Array.isArray grantees
+            grantees
+          else
+            [grantees]
+          ) .forEach (grantee) ->
+              unless grantee[sym]
+                throw new Error "Grantee is not cooperative"
+
+              grants = grantee[sym].grants[@token] ?= {}
+              grants[propName] = true
+
+        return @
+
+    class Cooperator.Accessor
+      constructor: (token, @target, @grantor) ->
+        throw new Error "Invalid token" unless @subject = subjects[token]
+        throw new Error "Access denied" unless @grants()
+
+        @props = (@target[sym] ?= {})[@grantor[sym].token] ?= {}
+
+      grants: -> @subject[sym].grants.get @grantor
+
+      get: (name) ->
+        throw new Error "Access denied" unless @grants()[name]
+
+        @props[name] ?= @grantor[sym].props[name]
+
+      set: (name, value) ->
+        throw new Error "Access denied" unless @grants()[name]
+
+        @props[name] = value
+        return @
+
+Usage:
+
+    fooKey = barKey = null
+
+    accessFoo = (self) -> Cooperator(fooKey).instance self
+    n = 0
+
+    class Foo
+      constructor: ->
+        accessFoo set: n: n++
+
+    Cooperator Foo, (key) -> fooKey = key
+
+    class Bar
+      accessFooN: (instance) ->
+        Cooperator barKey
+          .access instance, Foo
+          .get 'n'
+ 
+    Cooperator Bar, (key) -> barKey = key
+
+    Cooperator fooKey
+      .addProps n: 'value' #, ...
+      .grant    n: Bar
+
+    someFoos = [1..5].map -> new Foo
+    someBar = new Bar
+  
+    console.log someBar.accessFooN someFoos[4]
+    # => 4
+
