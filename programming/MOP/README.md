@@ -15,14 +15,14 @@ I want to make it easier for me to follow my own standards when developing.
 ## DSL for working with MOP-enhanced objects
 
 ```coffee
-    spawn Parent called 'Child'
+
+    create Child: Parent,
       public:
         methodName: (args...) -> # code
 
       private:
         someVar:  'some starting value'
 
-      afterSuper: (opts = {}) ->
 ```
 
 # Questions
