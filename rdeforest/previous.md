@@ -1,1 +1,1 @@
-/Users/forestr/github/small-projects/rdeforest/journal/entries/2017/09/18/1441.md
+/Users/forestr/github/small-projects/rdeforest/journal/entries/2017/10/04/1129.md
