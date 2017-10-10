@@ -1,11 +1,22 @@
+###
+
+This library should put Robert de Forest in his comfort zone. That is...
+
+    require 'rdf'
+
+means
+
+    "it's going to be fine"
+
+###
+
 e = {}
 
 ###
 
 "making it all right"
 
-A no holds barred library for making the V8 engine useful to me,
-specifically.
+A no holds barred library for bending NodeJS to my will.
 
 Principles:
 
@@ -15,9 +26,9 @@ Principles:
  - Evaluate lazily
  - Contain side-effects
 
-- Meta operations defined on meta objects
- - instead of $.root.create details
- - use $.sys.create parent: $.root, details
+- Introspection is documentation
+ - d object
+ - d object, '.'
 
 - Separate inheritance/composition from namespace
  - $.meta.whatever isn't necessarily a child of $meta
@@ -39,7 +50,6 @@ define Root: {}
 - HandlerMap
  - has
   - methods : Namespace <handlerName : String, handler : Function>
-
 
 ###
 
