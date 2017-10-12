@@ -47,3 +47,15 @@
 
 # Who's going to get what
 
+Income
+- Raine
+ - $4000/mo + 2%/year
+ - In the event that Raine obtains Social Security or taxable income
+  - Adjust monthly rate by half of the new income
+  - If her income reaches the adjusted level, support ends
+- Robert
+ - Whatever's left over
+
+Property
+- Already done
+ - I keep investments and motorcycle
