@@ -13,6 +13,8 @@ suite "Private", (suite, test) ->
     assert.equal 'function', typeof priv
 
   class TestPriv
+    constructor: ->
+
   Object.defineProperty TestPriv::, 'priv',
     get: priv
 
@@ -30,6 +32,10 @@ suite "Private", (suite, test) ->
 
   test "Returned object is not shared among objects", ->
     assert.notEqual a.priv, b.priv
+    assert.equal b.priv.mutation, undefined
+
+  test "Mutations remain after creating new accessors", ->
+    assert.equal a.priv.mutation, true
 
   test "Data is not stored on instances", ->
     # This isn't exactly the real requirement. The requirement is that the
