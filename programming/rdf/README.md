@@ -1,4 +1,4 @@
-# RDF: Really Damn Fine
+# RDF: Required Damn Features
 
 Name is a work in progress.
 
@@ -11,27 +11,59 @@ Name is a work in progress.
 - String
 - Array
 
-## Sideways Objects
+## Standard libraries
 
-Example:
+- ramda
+
+## Private data
+
+See (require 'lib/private').Private.comment for details.
+
+## Progress reporting to console or other stream
 
 ```coffee
 
-hidden = null
+{ Progress } = require 'lib/progress'
+progress = new Progress
+  maxDelay: 10000,
+  minDelay:  1000,
+  writer: console.log
 
-class HasComment
-  comment: (comment) ->
-    [comment, hidden().comment] = [hidden().comment, comment]
-    return comment
-    
-Sideways HasComment, (fn) -> hidden = fn
+for record, n from iterator()
+  progress.update "count: #{n + 1}, current: #{record.id}"
+  # do something with record
 
-HasComment Object
-  .comment "Almost every object's ultimate ancestor"
+powers = (exponent) ->
+  n = 1
 
-class Inspector extends Sideways
-  toString: ->
+  loop
+    yield n
+    n *= exponent
 
 ```
 
+This will write the current count and record id to the console no more than 10
+seconds after the last update and no sooner than 1 second after the last
+update. If record N takes 2^N milliseconds to process and has that id as well,
+then output would look something like:
 
+    count: 1, current: 2
+    count: 9, current: 512
+    count: 11, current: 2048
+    count: 12, current: 4096
+    count: 13, current: 8192
+    count: 14, current: 16384
+    count: 14, current: 16384
+    count: 15, current: 32768
+    count: 15, current: 32768
+    count: 15, current: 32768
+
+etc.
+
+## Identified objects
+
+## Table manipulation and rendering
+
+## Sane defaults
+
+- setup-testing

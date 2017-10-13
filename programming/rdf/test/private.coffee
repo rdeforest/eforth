@@ -9,7 +9,7 @@ suite "Private", (suite, test) ->
 
   priv = Private()
 
-  test "Private() returns an accessor", ->
+  test "Private() returns an accessor which treates 'this' as a key", ->
     assert.equal 'function', typeof priv
 
   class TestPriv
