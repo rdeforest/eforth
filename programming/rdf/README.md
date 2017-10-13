@@ -9,11 +9,17 @@ Name is a work in progress.
 ## Extending Boxed Types
 
 - String
+ - "foo bar".qw returns ['foo', 'bar']
 - Array
+ - Remembers whether it has been mutated since it was the result of a sort
+  - adds 'insertSorted' and 'deleteSorted'
+  - default sort is default of Array.sort()
+  - can be overriden by setting .sortWith to a comparator function
 
 ## Standard libraries
 
 - ramda
+- debug
 
 ## Private data
 

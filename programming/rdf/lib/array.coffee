@@ -1,5 +1,7 @@
 module.exports = (Array) ->
-  { wrap } = require './wrap'
+  UnsortedArrayPrototype = Array::
+
+  (Array::) = Object.create UnsortedArrayPrototype
 
   DUPE_SCAN_CUTOFF = 100
 
@@ -34,12 +36,45 @@ module.exports = (Array) ->
         hasDupe
     ) @
 
-  wrap Array::, 'sort'    , after: markSorted
-           .and 'pop'     , after: markUnsorted
-           .and 'push'    , after: markUnsorted
-           .and 'shift'   , after: markUnsorted
-           .and 'splice'  , after: markUnsorted
-           .and 'unshift' , after: markUnsorted
+  wrappedMutator = (args...) -> markUnsorted super args...
+
+  stringCompare = (a, b) ->
+    switch
+      when a  < b then -1
+      when a  > b then  1
+      else              0
+
+  Object.assign Array::,
+    sort:    (comparator = @sortWith) ->
+      @sortWith = comparator ? stringCompare
+      markSorted super.sort arguments...
+
+    pop:     wrappedMutator
+    push:    wrappedMutator
+    shift:   wrappedMutator
+    splice:  wrappedMutator
+    unshift: wrappedMutator
+
+    insert: (value) ->
+      cmp = @sortWith or 
+      idx = (@length - 1) >> 1
+      dist = idx >> 1
+
+      if not @length or cmp value, @[@length - 1] < 0
+        return markSorted @push v
+
+      if cmp value, @[0] >= 0
+        return markSorted @unshift value
+
+      while dist and diff = cmp value, @[idx]
+        if cmp > 0
+          idx -= dist
+        else
+          idx += dist
+
+        dist >> 1
+
+      markSorted @splice idx, 0, value
 
   Array::cmp = (other) ->
     if  @length and other.length
@@ -56,3 +91,36 @@ module.exports = (Array) ->
       when -1 then midx + @[  midx..  ].find cmp
       when  1 then midx - @[..midx - 1].find cmp
       else midx
+
+
+  # What about a decorated Array instead...
+
+  class SortedArray extends Proxy
+    @overrides:
+      sort: -> ...
+      # etc
+
+    @handlers:
+      set: (target, property, value, receiver) ->
+        if 'number' is typeof property and 0 <= property
+          insertInto target, value
+          return value
+        else
+          target[property] = value
+
+      get: (target, property, receiver) ->
+        if 'number'   isnt typeof property and
+           'function' is   typeof fn = SortedArray.overrides[property]
+          fn
+        else
+          target[property]
+
+    constructor: (@target) ->
+      super @target, SortedArray.handlers
+
+  keepSorted = (target, sortBy = stringCompare) ->
+    sorted = new SortedArray target
+
+
+
+
