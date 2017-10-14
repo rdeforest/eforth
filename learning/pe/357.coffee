@@ -14,8 +14,8 @@ log = (args...) ->
     console.log args...
     lastUpdate = Date.now()
 
-require('./lib/number') Number
-require('./lib/array')  Array
+require('rdf/lib/number') Number
+require('rdf/lib/array')  Array
 
 knownGenerators    = new Set
 knownNonGenerators = new Set

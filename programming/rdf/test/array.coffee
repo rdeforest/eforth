@@ -1,7 +1,4 @@
-path    = require 'path'
-assert  = require 'assert'
-{suite} =
-joe     = require 'joe'
+{ assert, suite } = require 'joe'
 
 class TestArray extends Array
 
@@ -16,7 +13,3 @@ suite 'Array extensions', (suite, test) ->
     numeric = (a, b) -> a - b
     (l = [1..5]).sortWith = numeric
     l = l.sort()
-
-
-
-
