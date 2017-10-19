@@ -15,7 +15,6 @@ log = (args...) ->
     lastUpdate = Date.now()
 
 require('rdf/lib/number') Number
-require('rdf/lib/array')  Array
 
 knownGenerators    = new Set
 knownNonGenerators = new Set
@@ -24,9 +23,11 @@ isGenerator = (n) ->
   console.log "checking #{n}"
 
   halfN = n >> 1
+  pd = 0
 
   for d in n.divisors()
-    break if d >= halfN
+    break if pd and pd > d
+    pd = d
 
     unless (divided = d + (n / d)).isPrime()
       console.log "Disqualified #{n}: #{d} + (#{n}/#{d}) = #{divided}, which isn't prime"

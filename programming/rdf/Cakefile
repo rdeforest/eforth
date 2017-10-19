@@ -1,0 +1,21 @@
+fs        = require 'fs'
+path      = require 'path'
+
+{ find }  = require './find'
+
+hasSuffix = (suffix) -> ({fileName}) -> fileName.endsWith suffix
+
+task "test::coverage", ->
+  process.chdir 'lib'
+
+  try
+    missing = []
+
+    find predicate: hasSuffix 'coffee', receiver: (info) ->
+      {relativePath} = info
+
+      if not (fs.stat testPath = path.resolve '..', 'test', relativePath).isFile()
+        missing.push testPath
+
+  finally
+    process.chdir '..'

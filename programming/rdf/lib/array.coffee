@@ -1,7 +1,7 @@
 module.exports = (Array) ->
   UnsortedArrayPrototype = Array::
 
-  (Array::) = Object.create UnsortedArrayPrototype
+  Array:: = Object.create UnsortedArrayPrototype
 
   DUPE_SCAN_CUTOFF = 100
 

@@ -1,5 +1,9 @@
-(require 'process')
-  .env
-  .JOE_REPORTER ?= 'console'
+modules = {}
+(modules[mod] = require mod) for mod in 'fs assert path events process'.split ' '
+{env} = modules.process
 
-Object.assign module.exports, require('joe'), assert: require 'assert'
+env.JOE_REPORTER ?= 'console'
+env.NODE_PATH    += ':' if env.NODE_PATH
+env.NODE_PATH    += '../lib'
+
+Object.assign module.exports, require('joe'), modules
