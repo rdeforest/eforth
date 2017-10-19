@@ -1,9 +1,9 @@
-{ assert, suite, ourRequire } = require '.'
+{ assert, suite, lib } = require '.'
 
 class TestArray extends Array
 
 suite 'Array extensions', (suite, test) ->
-  (ourRequire 'array' ) TestArray
+  (lib 'array') TestArray
 
   test 'extends passed object', ->
     assert undefined is       Array::hasDupe

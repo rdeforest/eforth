@@ -2,8 +2,8 @@ Object.assign module.exports, require '../lib/setup-testing'
 
 {fs, path} = module.exports
 
-module.exports.ourRequire =
-ourRequire =
+module.exports.lib =
+lib =
   (name) -> require path.resolve __dirname, '..', 'lib', name
 
 unless module.parent
@@ -14,6 +14,7 @@ unless module.parent
   fs.readdirSync(__dirname)
     .filter otherFile
     .forEach (name) ->
-      console.log "attempting to load '#{name}'"
-      ourRequire name
+      qualified = path.join __dirname, name
+      console.log "attempting to load '#{qualified}'"
+      require qualified
 

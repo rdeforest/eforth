@@ -43,20 +43,25 @@ module.exports = (Array) ->
       when a  > b then  1
       else              0
 
-  wrappedMutator = Array::pop = (args...) -> markUnsorted super args...
+  wrappedMutator = (name) ->
+    orig = Array::[name]
+
+    (args...) ->
+      markUnsorted orig.apply @, args
 
   Object.assign Array::,
     sort:    (comparator = @sortWith) ->
       @sortWith = comparator ? stringCompare
-      markSorted super.sort arguments...
+      markSorted Array::sort.apply @, Array.from arguments
 
+    pop:     wrappedMutator
     push:    wrappedMutator
     shift:   wrappedMutator
     splice:  wrappedMutator
     unshift: wrappedMutator
 
     insert: (value) ->
-      cmp = @sortWith or 
+      cmp = @sortWith or
       idx = (@length - 1) >> 1
       dist = idx >> 1
 
