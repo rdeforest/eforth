@@ -36,7 +36,6 @@ module.exports = (Array) ->
         hasDupe
     ) @
 
-  wrappedMutator = (args...) -> markUnsorted super args...
 
   stringCompare = (a, b) ->
     switch
@@ -44,12 +43,13 @@ module.exports = (Array) ->
       when a  > b then  1
       else              0
 
+  wrappedMutator = Array::pop = (args...) -> markUnsorted super args...
+
   Object.assign Array::,
     sort:    (comparator = @sortWith) ->
       @sortWith = comparator ? stringCompare
       markSorted super.sort arguments...
 
-    pop:     wrappedMutator
     push:    wrappedMutator
     shift:   wrappedMutator
     splice:  wrappedMutator
@@ -97,7 +97,7 @@ module.exports = (Array) ->
 
   class SortedArray extends Proxy
     @overrides:
-      sort: -> ...
+      sort: -> # ...
       # etc
 
     @handlers:
