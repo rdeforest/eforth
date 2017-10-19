@@ -140,6 +140,20 @@ validMasterGuesses = (history) ->
 
   return candidates
 
+rankedCandidates = (history) ->
+  candidates = validMasterGuesses history
+  splits = {}
+  for word, idx in candidates
+    splits[word] =
+      matchingLetters: 0
+      misplacedLetters: 0
+
+    for otherWord in candidates[idx + 1..]
+      editedWord = word
+
+      for l in otherWord
+
+
 minigame = (line) ->
   if line.contains 'master'
     firstLetter = (line.replace /master|!|\s/g, '')[0]
@@ -168,8 +182,7 @@ minigame = (line) ->
        }
          Top 10 recommendations:
        #{
-         candidates = validMasterGuesses history
-         (rankedCandidates history, candidates)[..9]
+         (rankedCandidates history)[..9]
            .map ([candidate, rank]) -> "#{rank.padStart 3} #{candidate}"
        }
        > """
