@@ -1,9 +1,9 @@
 fs        = require 'fs'
 path      = require 'path'
 
-{ find }  = require './find'
+{ find }  = require './lib/find'
 
-task "test::modules", ->
+task "test", ->
   require './test'
 
 task "test::coverage", ->

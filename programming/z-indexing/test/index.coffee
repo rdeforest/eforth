@@ -1,1 +1,0 @@
-../node_modules/rdf/lib/setup-testing.coffee
