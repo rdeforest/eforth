@@ -8,6 +8,10 @@ letters =
     .split ''
     .concat 'qu'
 
+attacksToShow = 10
+
+filters = null
+
 tileValue    = {}
 tileValue[l] = 1 for l in letters
 tileValue[l] = 2 for l in ['f',  'h', 'm', 'p', 'v', 'w']
@@ -22,6 +26,7 @@ wordToTiles = (word) ->
     .replace /qu/g, 'q'
     .split ''
     .map qToQu
+    .filter validTile
 
 validWord = (word) ->
   wordTiles = wordToTiles word
@@ -56,15 +61,25 @@ console.log "Found #{words.length} valid words."
 tiles = []
 needed = -> 16 - tiles.length
 
-validAttack = (word) ->
+validAttack = (word, filters) ->
   word.toLowerCase()
 
   remaining = Array.from tiles
+  wordsTiles = wordTiles[word]
 
-  for tile in [].concat wordTiles[word]
+  for tile in wordsTiles
     return false if -1 is idx = remaining.indexOf tile
 
     remaining.splice idx, 1
+
+  if filters
+    for tile in filters.required  when tile not in wordsTiles
+      console.log "excluding #{word} for lacking #{tile}"
+      return false
+
+    for tile in filters.prohibited when tile in wordsTiles
+      console.log "excluding #{word} for having #{tile}"
+      return false
 
   return remaining
 
@@ -83,9 +98,9 @@ showTiles = ->
         .join ' '
     .join '\n'
 
-topAttacks = (max = 10) ->
+topAttacks = (max = 10, filters) ->
   found = 0
-  ( for word in words when validAttack word
+  ( for word in words when validAttack word, filters
       break unless found++ < max
       "#{wordScore(word).toString().padEnd 2} #{word}"
   ) .join "\n"
@@ -93,11 +108,17 @@ topAttacks = (max = 10) ->
 # console.log "#{attacks.length} likely valid attacks found\n"
 
 makePrompt = ->
-  "Tiles:\n#{showTiles()}\n" +
-    if (howMany = needed()) > 0
-      "Need #{howMany} more letters  > "
-    else
-      "Top 10:\n#{topAttacks 10}\nattack > "
+  sections = [ "Tiles:\n#{showTiles()}" ]
+
+  if (howMany = needed()) > 0
+    sections.push "Need #{howMany} more letters  > "
+  else
+    if filters
+      sections.push "Filters require #{filters.required} and prohibit #{filters.prohibited}"
+
+    sections.push "Top #{attacksToShow} attacks:\n#{topAttacks attacksToShow}\nattack > "
+
+  sections.join '\n'
 
 
 addTiles = (line) ->
@@ -140,9 +161,12 @@ validMasterGuesses = (history) ->
 
   return candidates
 
+###
+
 rankedCandidates = (history) ->
   candidates = validMasterGuesses history
   splits = {}
+
   for word, idx in candidates
     splits[word] =
       matchingLetters: 0
@@ -153,6 +177,7 @@ rankedCandidates = (history) ->
 
       for l in otherWord
 
+###
 
 minigame = (line) ->
   if line.contains 'master'
@@ -187,10 +212,32 @@ minigame = (line) ->
        }
        > """
 
+setFilters = (line) ->
+  filters =
+    required: []
+    prohibited: []
+
+  mode = 'required'
+
+  for char in line
+    switch char
+      when '+' then mode = 'required'
+      when '-' then mode = 'prohibited'
+      else filters[mode] = filters[mode].concat wordToTiles(char)
+
+setAttacksToShow = (line) ->
+  if matched = line.match /\d+/
+    if 0 < n = parseInt matched[0]
+      attacksToShow = n
+    else
+      attacksToShow = 10
+
 processLine = (line) ->
   line = line.toString()
 
   switch
+    when line.startsWith '#'        then setAttacksToShow line
+    when line.startsWith '?'        then setFilters line
     when line.startsWith '!'        then minigame line
     when match = line.match /=(.*)/ then setTiles match[1]
     when needed()                   then addTiles line
@@ -215,20 +262,28 @@ if require.main is module
 
   setPrompt()
 
-module.exports = {
-  letters
-  tileValue
-  validTile
-  validWord
-  words
-  tiles
-  needed
-  validAttack
-  wordScore
-  showTiles
-  sortWords
-  topAttacks
-  makePrompt
-  setPrompt
-  processLine
-}
+Object.defineProperty module.exports, 'addTiles',           get: -> addTiles
+Object.defineProperty module.exports, 'fiveLetterWords',    get: -> fiveLetterWords
+Object.defineProperty module.exports, 'letters',            get: -> letters
+Object.defineProperty module.exports, 'makePrompt',         get: -> makePrompt
+Object.defineProperty module.exports, 'minigame',           get: -> minigame
+Object.defineProperty module.exports, 'needed',             get: -> needed
+Object.defineProperty module.exports, 'processAttack',      get: -> processAttack
+Object.defineProperty module.exports, 'processLine',        get: -> processLine
+Object.defineProperty module.exports, 'qToQu',              get: -> qToQu
+Object.defineProperty module.exports, 'rankedCandidates',   get: -> rankedCandidates
+Object.defineProperty module.exports, 'setPrompt',          get: -> setPrompt
+Object.defineProperty module.exports, 'setTiles',           get: -> setTiles
+Object.defineProperty module.exports, 'showTiles',          get: -> showTiles
+Object.defineProperty module.exports, 'sortWords',          get: -> sortWords
+Object.defineProperty module.exports, 'tileValue',          get: -> tileValue
+Object.defineProperty module.exports, 'tiles',              get: -> tiles
+Object.defineProperty module.exports, 'topAttacks',         get: -> topAttacks
+Object.defineProperty module.exports, 'validAttack',        get: -> validAttack
+Object.defineProperty module.exports, 'validMasterGuesses', get: -> validMasterGuesses
+Object.defineProperty module.exports, 'validTile',          get: -> validTile
+Object.defineProperty module.exports, 'validWord',          get: -> validWord
+Object.defineProperty module.exports, 'wordScore',          get: -> wordScore
+Object.defineProperty module.exports, 'wordTiles',          get: -> wordTiles
+Object.defineProperty module.exports, 'wordToTiles',        get: -> wordToTiles
+Object.defineProperty module.exports, 'words',              get: -> words
