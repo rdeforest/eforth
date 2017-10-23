@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "coffee-script": "^1.12.7",
+    "coffeescript": "^2.0.1",
     "joe": "^2.0.2",
     "joe-reporter-console": "^2.0.1"
   }

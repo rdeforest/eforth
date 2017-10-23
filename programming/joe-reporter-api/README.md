@@ -14,3 +14,8 @@ Events:
 When these events happen, if the reporter's property of the event name is
 defined, it is invoked with the args after the colons above. Args other than
 exitCode and reason are objects.
+
+# Identified
+
+## ::[eventName](args..)
+

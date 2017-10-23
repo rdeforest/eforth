@@ -11,8 +11,8 @@ suite 'ZIndex', (suite, test) ->
     test 'has no entries by default', ->
       zIndex = ZIndex.create
         dimensions:
-          x: type: 'numeric', from: 0, to: 255
-          y: type: 'numeric', from: 0, to: 255
+          x: to: 255
+          y: to: 255
 
       assert.equal 0, zIndex.size
 

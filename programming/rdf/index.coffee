@@ -10,7 +10,7 @@ means
 
 ###
 
-e = {}
+require 'rdf'
 
 ###
 
@@ -25,15 +25,11 @@ Principles:
 - Favor functional over object-oriented.
  - Evaluate lazily
  - Contain side-effects
+ - Use objects as namespaces/contexts/"this one time"
 
 - Introspection is documentation
  - d object
  - d object, '.'
-
-- Separate inheritance/composition from namespace
- - $.meta.whatever isn't necessarily a child of $meta
- - 'global' namespace is how objects interact with their context
- - All objects constructed with a namespace
 
 Objects:
 
@@ -50,6 +46,8 @@ define Root: {}
 - HandlerMap
  - has
   - methods : Namespace <handlerName : String, handler : Function>
+ - does
+  - get/set/list/delete handler
 
 ###
 

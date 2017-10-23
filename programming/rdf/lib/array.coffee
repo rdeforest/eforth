@@ -1,4 +1,6 @@
 module.exports = (Array) ->
+  (require 'object') Object
+
   UnsortedArrayPrototype = Array::
 
   Array:: = Object.create UnsortedArrayPrototype
@@ -83,7 +85,7 @@ module.exports = (Array) ->
 
   Array::cmp = (other) ->
     if  @length and other.length
-       (@[0]     -  other[0]) or
+      Object.cmp(@[0], other[0]) or
         @[1..] .cmp other[1..]
     else
         @length  -  other.length
