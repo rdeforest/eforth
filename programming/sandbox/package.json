@@ -9,6 +9,7 @@
   "author": "Robert de Forest <robert@defore.st>",
   "license": "WTFPL",
   "dependencies": {
-    "coffeescript": "^2.0.1"
+    "coffeescript": "^2.0.1",
+    "jquery": "^3.2.1"
   }
 }
