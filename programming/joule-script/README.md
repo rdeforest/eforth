@@ -54,22 +54,24 @@ Taken from the manual:
 
 Our version (maybe) looks like:
 
-		Server Dispatcher: (input, outs) ->
-      input.out.fwd 'msgs' # tell 'input' to forward to 'msgs'
+```coffee
 
-      @forAll msgs: (message)  ->
-        @define size:  (outs)  -> outs.count
-        @define index: (size)  -> Random.below size
-        @define out:   (index) -> outs.get @b 'index', out
+		Server Dispatcher: (input, outs) ->
+      input.fwd 'msgs' # tell 'input' to forward to 'msgs'
+
+      @forAll msgs: (message) ->
+        @define
+          size:  (outs,  size ) -> @o outs,   count: null, size
+          index: (size,  index) -> @o Random, below: size, index
+          out:   (index, out  ) -> @o outs,   get:   index, out
 
         @o out: message
+```
 
 So ... that.
 
 @o is a 'send' operation taking a single-key object whose key is the name of a
-bound Port. The send will happen when 'out' exists.
-
-@b 'symbol' returns the associated pipe
+bound Port.
 
 @forAll declares that whenever something comes in for 'msgs' that it should be
 handled with the given block.
@@ -78,6 +80,21 @@ handled with the given block.
 
 When a pipe is in CoffeeScript scope, such as 'message' above, regular method
 invocation is a shortcut for the equivalent @o call.
+
+# Syntax
+
+```coffee
+    @o port: message: arg, args...
+
+    @define port: (inputs...) ->
+      # create a port only visible in this scope
+
+    @forAll port: (message) ->
+      # create a port on the outside of the current scope whose messages are
+      # handled by the function provided
+
+    Server name: (
+```
 
 # Semantics
 

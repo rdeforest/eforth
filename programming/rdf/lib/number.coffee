@@ -3,16 +3,52 @@
 #   require('number')(Number)
 
 primes = [2, 3, 5, 7]
+factors = {}
 
 module.exports = (Number) ->
   R = require 'ramda'
 
+  Number::gcd      = (n)    -> if n is 0 then @ else n.gcd @ % n
   Number::divides  = (n)    -> 0 is (n % @)
   Number::factors  = (uniq) -> factorsOf  @valueOf(), uniq
   Number::divisors =        -> divisorsOf @valueOf()
   Number::isPrime  =        -> isPrime @
+  Number::divMod   = (d)    ->
+    if @ < d then return [0, d]
 
-  Number.primes =
+    q = 0
+    m = d
+    m = mm while n > mm = m << 1
+
+    while m >= p
+      if m <= n
+        n -= m
+        q = (q << 1) + 1
+      else if m > 1
+        q = (q << 1)
+
+      m >>= 1
+
+    [q, n]
+
+  Number::expMod   = (exp, mod) ->
+    # base^exp % mod
+    if not exp then return 1
+
+    n = @
+
+    while exp
+      n = (n * (
+        if exp & 2
+          exp -= 1
+          @
+        else
+          exp >>= 1
+          n
+      )) % mod
+
+    n
+
   primeGen = (fromLargest) ->
     i = 0
 

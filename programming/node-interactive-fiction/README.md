@@ -58,9 +58,4 @@ By example:
 
           menu:
             menu.minimum andAlso:
-              
-            
-            
-          
-        
-
+```
