@@ -8,10 +8,10 @@ root =
 
 class Session
   constructor: (info = {}) ->
+    @settings = Object.assign {}, Session.defaults
+
     @canvas  = $('<canvas>')
     @ctx     = @canvas[0].getContext '2d'
-
-    (@[k] = info[k] or v) for k, v of Session.defaults
 
     @body
       .empty()
@@ -44,29 +44,52 @@ class Session
 
     @greeting()
 
-  greeting: ->
-    background = "rgb(0,   0, 255)"
-    foreground = "rgb(0, 255, 255)"
-
-    @clearText()
-    @emitLine "Welcome to SandBox!"
-
-  emitLine: (line) ->
-    @insertLineAboveCursor line
-
-  insertLineAboveCursor: (line) ->
-    insertLineAbove @cursor
-    @row[@cursor[1]][..line.length - 1] = line.split ''
-    @moveCursor 0, 1
-
-  moveCursor: (dx, dy) ->
-    @cursor = [@cursor[0] + dx, @cursor[1] + dy]
-
   @defaults:
+    name: 'main'
+    pixels: null
+    penInfo:
+      x: 0, y: 0
+      foreground: 'white'
+      background: 'black'
+
     charWidth:   8, charHeight:  8
     textWidth: 160, textHeight: 50
 
-  pixels: null
+  everyTick: (tickNum) ->
+
+  pen: (cmdAndArg) ->
+    for cmd, value of cmdAndArg
+      switch cmd
+        when 'color'
+          @pen foreground: value[0]
+          @pen background: value[1]
+
+        when 'foreground', 'background', 'x', 'y'
+          @penInfo[cmd] = value
+          @penInfo = @penInfo # trigger persistence
+
+  ops: {}
+  greeting: ->
+    @pen colors: ["blue", "cyan"]
+    @clearText()
+    @emitLines "Welcome to SandBox!", ""
+
+  emitLines: (lines...) -> @emitLine line for line in lines
+
+  emitLine: (line) ->
+    @insertLineAtCursor line
+
+  insertLineAtCursor: (line) ->
+    insertLineAt @cursor
+    @emit line
+    @moveCursor 0, 1
+
+  emit: (text) ->
+    @row[@cursor[1]][..line.length - 1] = line.split ''
+    @cursor[0] += line.length
+
+  moveCursor: (dx, dy) ->
+    @cursor = [@cursor[0] + dx, @cursor[1] + dy]
 
   resize: ->
     @canvas.width  '100%'
@@ -98,6 +121,14 @@ class Session
     @pixels = new ImageData @xPixels, @yPixels
     @
 
+  restore: (type) ->
+    key = @[type + "Key"]
+    @settings = JSON.parse localStorage.getItem key
+
+  update: (type) ->
+    key = @[type + "Key"]
+    localStorage.setItem key, JSON.stringify @settings
+
 Object.defineProperties Session::,
   xPixels:      get: -> @charWidth  * @textWidth
   yPixels:      get: -> @charHeight * @textWidth
@@ -107,6 +138,94 @@ Object.defineProperties Session::,
 
   body:         get: -> $(document.body)
 
+  saveKey:      get: -> "#{@constructor.name}_save_#{@name}"
+  liveKey:      get: -> "#{@constructor.name}_live_#{@name}"
+
+for k of Session.defaults
+  Object.defineProperty Session::, k,
+    get: -> @settings[k]
+    set: (v) ->
+      @settings[k] = v
+      @update 'live'
+
+typeListCheck = (typeInfo) ->
+  checks = typeInfo.map (type) -> typeNameCheck type
+
+  (arg) ->
+    for check in checks
+      {err, value} = checked = check args[idx]
+
+      return checked unless err
+
+hexToColor = (hex) ->
+  if hex.length in [3, 4]
+    hex =
+      hex.split ''
+         .map (d) -> d + d
+         .join ''
+
+parseColor = (cStr) ->
+  return value if value = Session.namedColors[cStr]
+
+  if matched = cStr.match /^#([0-9a-f]{3,8})$/
+    if matched[1].length in [5, 7]
+      err: 'hex colors must be 3, 4, 6 or 8 digits long'
+    else
+      value: hexToColor matched[1]
+  else
+    error: 'color not recognized'
+
+  #if matched = cStr.match /^rgb(a?)\(([ 0-9,]*)\)$/
+  #  nums = matched[2].split ///\s*,\s*///
+
+typeNameCheck = (typeName) ->
+  switch typeName
+    when 'any', 'string'  then (x) -> {value: x}
+    when 'color'          then parseColor
+    when 'number'
+      (x) ->
+        return {value: n} if (n = parseInt x) or (n is 0)
+        return {err: 'not a number'}
+
+makeCheck = (typeInfo) ->
+  if Array.isArray typeInfo
+    return typeListCheck typeInfo
+
+  typeNameCheck
+
+makeValidator = (params) ->
+  checkers = []
+
+  for p in params
+    switch typeof p
+      when 'string'
+        checkers.push makeCheck p
+
+      when 'object'
+        for pName, pInfo of p
+          checkers.push makeCheck pInfo
+
+makeOps = (namesAndDefs) ->
+  for name, def of namesAndDefs
+    {params = [], impl} = def
+
+    Session::ops[name] = (args...) ->
+      if valid = validateArgs params, args
+        impl valid
+      else
+        error
+
+makeOps
+  background: args: [ 'color' ], impl: (color) -> @pen background: color
+  foreground: args: [ 'color' ], impl: (color) -> @pen foreground: color
+
+  colors:
+    args: [ foreground: 'color', background: 'color' ]
+    impl: (foreground, background) ->
+      Object.assign @pen, {foreground, background}
+
+  clear: impl: -> @clear()
+  reset: impl: -> @reset()
+
 $ ->
   root.rdf = new Session
-
