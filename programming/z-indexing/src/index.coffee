@@ -27,8 +27,7 @@ Object.assign module.exports,
       maxCoordRange = Math.max dimensions.map(({from, to}) -> to - from)...
       coordBits = Math.floor Math.log2 maxCoordRange
 
-      # Default coords makes sense because every coordinate has a default
-      # value.
+      # coords = {} is ok because every coordinate has a default value
       (coords = {}) ->
         coords = Object.assign {}, coords
 
