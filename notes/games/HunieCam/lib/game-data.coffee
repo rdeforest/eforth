@@ -50,11 +50,11 @@ module.exports =
     toyStore:     (visits) -> Math.min(visits + 1, 4) * 8
 
   gameResources:
-    Time:     name: 'time',  unit: 'minute'
-    Money:    name: 'money'  unit: 'dollar'
-    Skill:    name: 'skill'  unit: 'note'
-    Style:    name: 'style'  unit: 'bow'
-    Fans:     name: 'fans'   unit: 'fan'
+    Time:     name: 'time'  , unit: 'minute'
+    Money:    name: 'money' , unit: 'dollar'
+    Skill:    name: 'skill' , unit: 'note'
+    Style:    name: 'style' , unit: 'bow'
+    Fans:     name: 'fans'  , unit: 'fan'
 
   gameItems:
     pig:      income:   (income)     -> n / 2
