@@ -32,3 +32,38 @@ some sort of gear attached to it to facilitate this.
 - manual override
 - exposure
 
+## Control
+
+- Each unit will connect to the McMenamins network and
+ - negotiate who serves the UI
+ - negotiate who controls persistence
+ - update router to update
+  - DNS
+  - config server
+  - etc
+
+- Website (http://sixarms/blinds)
+ - Authenticated against SXA administration's chosen authz/authn infrastructure
+ - Access levels
+  - admin
+   - policy, permissions
+  - staff
+   - sensible overrides within policy constraints
+   - read-only 
+  - guest
+   - read-only access (why is the blind down/up?)
+   - feedback (blind should be lower/higher)
+
+- Actuators
+ - queries
+  - current light
+  - configured location
+  - blind height
+  - movement state (in motion up/down vs stopped)
+ - operations
+  - request notification (event, callback)
+   - blind location
+   - light value
+   - config change
+   - state change (moving, not moving, power level/change)
+
