@@ -1,3 +1,11 @@
+hasInit  = (klass) ->
+  'function' is typeof klass::init
+
+callInit = (klass, self, definition, rest) ->
+  klass::init.call @, definition, rest...
+
+listToObject = (entries) -> Object.assign {}, entries...
+
 defaultCode = ((args...) -> {this: this, args}).toString()
 
 functionRegexp = ///

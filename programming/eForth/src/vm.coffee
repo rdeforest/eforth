@@ -1,16 +1,5 @@
 module.exports = (injected) ->
-  { Memory, Processor
-    Macro, Opcode, Register
-    ConstantValue, DirectReference
-  } = injected
-
-  hasInit  = (klass) ->
-    'function' is typeof klass::init
-
-  callInit = (klass, self, definition, rest) ->
-    klass::init.call @, definition, rest...
-
-  listToObject = (entries) -> Object.assign {}, entries...
+  { Memory, InputOutput, Processor } = injected
 
   Register IP: {}
   Register WP: {}
@@ -26,8 +15,9 @@ module.exports = (injected) ->
 
   Macro $NEXT: LODSW, Opcode.JMP Register.AX
 
-  NativeWord doLIST: [
-# ( a -- )   # Run address list in a colon word.
+  # These should be in kernel.coffee or something
+  NativeWord doLIST:
+  [ # ( a -- ) # Run address list in a colon word.
     XCHG BP,SP # exchange pointers
     PUSH SI    # push return stack
     XCHG BP,SP # restore the pointers
@@ -35,7 +25,8 @@ module.exports = (injected) ->
     $NEXT
   ]
 
-  NativeWord EXIT: [     # Terminate a colon definition.
+  NativeWord EXIT:
+  [            # Terminate a colon definition.
     XCHG BP,SP # exchange pointers
     POP  SI    # pop return stack
     XCHG BP,SP # restore the pointers
