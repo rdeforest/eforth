@@ -27,9 +27,17 @@ extractFunctionDefinition = (fn) ->
 
 class Primitive extends Function
   @comment: """
-    My derivatives are DSL verbs and identifiers.
+    Derivatives of Primitive are DSL verbs and identifiers.
 
+    I'm trying a couple of
+    new things on this class:
 
+     - Instances are tracked on their constructor.
+     - The constructor doesn't need to be called with 'new'.
+     - The constructor args must start with a single-key object.
+      - The key is used as the name of the instance
+      - The value is used as the first arg to 'init' calls
+      - The constructor calls class::init with the afore mentioned args
     
     The default verb behavior is to return {this, args}.
     Verbs definitions may override the default by starting with a function:
