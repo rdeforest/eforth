@@ -11,12 +11,15 @@
     "debug": "~2.6.3",
     "express": "~4.15.2",
     "mocha": "^3.5.0",
+    "moment": "^2.19.2",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
+    "rdf": "file:../rdf",
     "serve-favicon": "~2.4.2",
-    "sssa-js": "0.0.1"
+    "sssa-js": "0.0.1",
+    "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "coffeescript": "^2.0.0-beta4"
+    "coffeescript": "^2.0.2"
   }
 }
