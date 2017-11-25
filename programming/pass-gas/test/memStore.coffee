@@ -24,3 +24,13 @@ suite 'MemStore', ->
       [ key, value ] = [ Math.random(), Math.random() ]
       store.put key, value
       store.put key, value
+
+  test 'Correctly reports its size', ->
+    store = new MemStore
+
+    for i in [0 .. max = Math.ceil 2 + Math.random()*10]
+      [ key, value ] = [ Math.random(), Math.random() ]
+      store.put i, value
+      continue
+
+    assert.equal store.size, max + 1
