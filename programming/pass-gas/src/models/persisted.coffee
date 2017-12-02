@@ -29,6 +29,9 @@ class Persisted
     if @uuid
       return @store.get @uuid
 
+  checkMutable: ->
+    throw new Error "Cannot modify persisted objects." if @uuid
+
   commit: ->
     if @uuid
       throw new Error "Cannot re-write persisted objects."

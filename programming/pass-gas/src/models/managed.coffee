@@ -17,7 +17,7 @@ class Managed extends Persisted
       throw new Error "Predecessor '#{o}' not found in store\n" +
                       "Cross-store references not yet supported."
 
-    @description = '' if @description in [null, undefined]
+    @description = '' unless @description
 
     if typeof @description not in ['string', 'buffer']
       throw new Error "Description must be a string or buffer"
@@ -45,6 +45,10 @@ class Managed extends Persisted
     succ
 
   createNext: ->
+    new @constructor Object.assign {},
+      @
+      uuid: undefined
+      previous: @uuid
 
 Object.assign module.exports, { Managed }
 

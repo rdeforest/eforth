@@ -84,7 +84,7 @@ Optional (nullable) fields indicated with ? after type.
 
 ### Children of Managed
 
-- TreeOf(UUID)
+- TreeOf(type, subtreesName, membersName)
   - TreeOf           subtrees[]
   - UUID             members[]
 
