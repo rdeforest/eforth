@@ -1,8 +1,5 @@
-# Memories
 
-    2012-2015 - payments
-    2015-2016 - DRT
-    2016-2018 - Lookout
+vim: nocindent
 
 # https://www.astrologyzone.com/forecasts/pisces-horoscope-december-2017/
 
@@ -16,9 +13,15 @@
     experienced people to sharpen your game. When Saturn first came to your
     tenth house of honors, awards, and achievement on December 23, 2014, you
     began your course of training. Think back to where you were then, and
-    where you are now.  See how far you’ve come, and how much valuable
+    where you are now. See how far you’ve come, and how much valuable
     experience you’ve gained. You are very close to being able to put that
     knowledge to very good use.
+
+Um, yeah...
+
+- 2012-2015 - payments
+- 2015-2016 - DRT
+- 2016-2018 - Lookout
 
     Saturn is leaving his position in Sagittarius this month on December 19 or
     20 (depending on your time zone) and is not due to return until 2044.
@@ -37,12 +40,16 @@
     almost everything else in the most important career sector of your chart,
     but with Saturn on an angle, he also acted with double strength.
 
+...at the expense of my marriage, perhaps...
+
     My point in telling you this is that your life about to become smoother,
     easier, and less stressful when Saturn moves off that angle and into a
     gentler part of your solar chart. Saturn never sends rewards while the
     course of training is ongoing, but only after it is over. With Saturn
     leaving this month, you will receive your material or spiritual gift from
     Saturn as thanks to you for dealing with his vigorous training.
+
+I wrote my "New Year, New Me" thing on Dec 3rd.
 
     The reason I feel you will not be quite get instant professional relief is
     that the powerful new moon of December 18 in the very same area of the
@@ -54,14 +61,29 @@
     industry. There would be a lot of work to do, so keep that in mind when
     you state your fee.
 
+Jason told me on the 4th that he has the head count situation taken care of
+and is setting up the internal interview loop to get me to SysDE.
+
+The new responsibility is that I will, without quesiton, be the most senior
+engineer on the team. I may have more experience than the next two most
+experienced engineers combined.
+
     You have your solar tenth house of honors, awards, and achievement packed
     with planets, with the Sun, Saturn, Venus, and Mercury, plus the Sun and
-    new moon.  Venus’ presence ensures everyone loves you, so go for the gold,
+    new moon. Venus’ presence ensures everyone loves you, so go for the gold,
     because doors will swing open for you. The offer is likely to come to you
-    this month, within days or weeks of the new moon, and you may also get
-    much publicity as well.  You earned the acclaim you will receive now for
-    all you learned and work you’ve done over the years working in your
-    specialty. You are due for reward – this new assignment may be it.
+    this month,
+
+I specifically told Jason I want to transition before the end of the year and
+he said he could make it happen.
+    
+    within days or weeks of the new moon, and you may also get much publicity
+    as well. You earned the acclaim you will receive now for all you learned
+    and work you’ve done over the years working in your specialty. You are due
+    for reward – this new assignment may be it.
+
+I'm not quite sure what to make of this yet but it will probably become clear
+soon.
 
     Last month Jupiter entered your ninth house of international places and
     relationships, and this is where the golden nuggets lie. Keep developing
@@ -73,11 +95,16 @@
     You could not wish for a better situation. Mars will remain in your ninth
     house from December 9 to January 26.
 
+I was _already_ planning to travel after accepting Jason's offer. Now I have
+to. :)
+
     If you don’t do any work with executives in foreign countries, there are
     other areas that are percolating along and could be equally profitable for
-    you.  Those include any work having to do with academia, whether you are
+    you. Those include any work having to do with academia, whether you are
     going back to school to get your advanced degree or catering to the
     college market.
+
+See afore-mentioned New Me doc.
 
 ## Page 2
 
@@ -92,14 +119,21 @@
     Capricorn. (The next field to go through the throws of change, requiring
     sweeping adjustment, will be the banking industry, ruled by Capricorn.)
 
+Not about me specifically, but: net neutrality and blockchain currencies
+anyone?
+
     If you are a lawyer or regularly do legal moves (such as to file a
     trademark, in your own country or overseas), you will do well too. All
     legal matters will favor you because you have such benefic aspects.
+
+Time to get that separation paperwork underway...
 
     Two days I would like you to keep on your radar are January 5 and 6 when
     Mars and Jupiter will combine forces in conjunction. If you hope to
     travel, I would love you to be on foreign shores on at least one of those
     two days.
+
+I think that can be arranged. Perhaps a trip back to Puerta Vajarta?
 
     This month Mercury will be retrograde from December 3 to 22 in the sign of
     Sagittarius in your tenth house of career reputation. For this reason, I
@@ -110,12 +144,18 @@
     the wind is changing direction, and for now, there’s no indication of
     which way things are headed.
 
+Oh noes!
+
     There is one exception to the rule not to give a final answer to any new
     offers while Mercury is retrograde, and that is if you hear from a person
     or company that you used to work with in the past, who wants to reconnect
     with you and do something together now. If that should happen, you are
     free to move forward. You are not starting a new relationship, but rather
     continuing one started previously, which apparently was very successful.
+
+Oh, it's fine then. I talked with a previous manager of InfAuto about moving
+to the team but ended up going to Edge instead. Then there's the whole Bruce
+connection too.
 
     Or, it may be you impressed a top level person a long time ago but somehow
     the offer didn’t work out for any number of reasons, but now you may
