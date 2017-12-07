@@ -13,3 +13,7 @@ Kristen and Mariah's names as the managers on duty on Wednesday.
   - I ordered the club on sourdough and the Two Towns Bad Apple cider.
 - 15:44 : Started writing this log and the notes.
 - 16:40 : finished eating
+- 16:50 : waiting for Kristen to not be busy with customers
+- 16:51 : started inventory
+- 17:38 : ended inventory, started going over notes
+  - Checking to see if there's anything else I need to know
