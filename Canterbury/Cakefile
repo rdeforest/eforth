@@ -13,5 +13,4 @@ main = ->
   { opts, remaining } = processArgv argv
 
 processArgv = (argv, optDef) ->
-
   for arg, i in argv
