@@ -26,9 +26,11 @@
  - Software changes
  - Policy/training?
 
-
-
 # Random thoughts
 
 - Borrow wire staple gun from Raine?
  - Not much point in buying one.
+
+# Lessons learned
+
+- Bring something to temporarily label objects with
