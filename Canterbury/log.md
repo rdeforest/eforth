@@ -12,3 +12,4 @@ Kristen and Mariah's names as the managers on duty on Wednesday.
   - She offered me food and drink (I hadn't eaten all day).
   - I ordered the club on sourdough and the Two Towns Bad Apple cider.
 - 15:44 : Started writing this log and the notes.
+- 16:40 : finished eating
