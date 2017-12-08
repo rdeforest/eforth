@@ -3,66 +3,12 @@
 fs      = require 'fs'
 process = require 'process'
 path    = require 'path'
+assert  = require 'assert'
 
-# Note to functional programming enthusiasts:
-#
-# This module uses mutation because it seems more intuitive in this context. A
-# re-write without mutation might be worth taking a look at later.
+{ Expect } = require './expectations'
 
-class Expect
-  constructor: (nameAndApply) ->
-    unless 1 is Object.keys(nameAndMangler).length
-      throw new Error 'Expect requires an object with a single key'
-
-    for name, @apply of nameAndApply
-      if 'function' isnt typeof @apply
-        throw new Error 'Value must be a function'
-
-      Expect[name] = @
-
-  define: (namesAndApplies) ->
-    for name, apply of namesAndApplies
-      new Expect "#{name}": apply
-
-Expect.define
-  increments: (args) ->
-    {options, option} = args
-    options[option] ?= 0
-    options[option]++
-
-  toggle: (args) ->
-    # May be useful for options-within-options:
-    #
-    # $ foo --toggled with toggle --toggled without toggle
-
-    {options, option} = args
-    options[option] = not (options[option] ?= false)
-
-  true: (args) ->
-    {options, option} = args
-    options[option] = true
-
-  oneValue: (args) ->
-    {options, option, value, logger: {warn}, nextArg} = args
-
-    unless 'string' is typeof value ?= nextArg().value
-      warn "Expected value for --#{option} not found"
-      return
-
-    if options[options]
-      warn "Ignoring --#{option}=#{value}: already set"
-      return
-    
-    options[option] = value
-
-  accumulatesValues: (args) ->
-    {options, option, value, logger: {warn}, nextArg} = args
-
-    unless 'string' is typeof value ?= nextArg().value
-      warn "Expected value for --#{option} not found"
-      return
-
-    (options[option] ?= []).push value
+merge   = Object.assign
+nop     = ->
 
 defaultLog =
   log:   console.log
@@ -70,72 +16,67 @@ defaultLog =
   warn:  console.warn
   error: console.error
 
-Objet.assign exports, fs, process, path,
-  makeGetOpts: (opts) ->
-    { logger = defaultLogger } = opts
+makeGetOpts = ({logger = defaultLogger}) ->
+  optionDefs    = {}
+  optionLetters = {}
 
-    optionDefs    = {}
-    optionLetters = {}
+  getOpts =
+    option: (letter, name, expectations...) ->
+      isDupe = (type, name) -> "An option with the #{type} '#{name}' has already been defined."
 
-    ret =
-      option: (letter, name, expectations...) ->
-        isDupe = (type, name) -> "An option with the #{type} '#{name}' has already been defined."
+      if optionDefs   [name]   then throw new Error isDupe 'name',   name
+      if optionLetters[letter] then throw new Error isDupe 'letter', letter
 
-        if optionDefs[name]
-          throw new Error isDupe 'name',   name
+      for expectation in expectations when err = expecation.validate? letter, name
+        throw new Error "Error defining #{name}: #{err}"
 
-        if optionLetters[letter]
-          throw new Error isDupe 'letter', letter
+      optionDefs   [name]   =
+      optionLetters[letter] =
+        {name, letter, expectations}
 
-        for expectation in expectations when err = expecation.validate? letter, name
-          throw new Error "Error defining #{name}: #{err}"
+    processArgv: (argv) ->
+      leftovers = []
+      options   = {}
+      nextArg   = argv[Symbol.iterator]().next
 
-        optionDefs   [name]   =
-        optionLetters[letter] =
-          {name, letter, expectations}
+      endOfArgs = ({options, leftovers}) ->
+        leftovers = leftovers.concat(value until ({value, done} = nextArg()).done)
 
-      processArgv: (argv) ->
-        leftovers = []
-        options   = {}
-        nextArg   = argv[Symbol.iterator]().next
+      longArg = ({arg: option, options, leftovers}) ->
+        value = null
 
-        endOfArgs = ({options, leftovers}) ->
-          leftovers = leftovers.concat(value until ({value, done} = nextArg()).done)
+        if matched = option.match /(.*)=(.*)/
+          [all, option, value] = matched
 
-        longArg = ({arg: option, options, leftovers}) ->
-          value = null
+        if not def = optionDefs[arg]
+          arg = "--#{arg}"
+          logger.warn "Treating unknown option '--#{arg}' as leftovers"
+          options = options.concat arg
+        else
+          (e.apply {option, value, options, leftovers, nextArg, logger}) for e in def.expectations
 
-          if matched = option.match /(.*)=(.*)/
-            [all, option, value] = matched
-
-          if not def = optionDefs[arg]
-            arg = "--#{arg}"
-            logger.warn "Treating unknown option '--#{arg}' as leftovers"
-            options = options.concat arg
+      shortArgs = ({arg: letters, options, leftovers}) ->
+        for letter, letterIdx in letters
+          if not def = optionLetters[letter]
+            logger.warn "Ignoring unknown option '-#{option}'"
+            continue
           else
-            (e.apply {option, value, options, leftovers, nextArg, logger}) for e in def.expectations
+            for e in def.expectations
+              e.processArg {letters, letterIdx, option, options, leftovers, nextArg}
 
-        shortArgs = ({arg: letters, options, leftovers}) ->
-          for letter, letterIdx in letters
-            if not def = optionLetters[letter]
-              logger.warn "Ignoring unknown option '-#{option}'"
-              continue
-            else
-              for e in def.expectations
-                e.processArg {letters, letterIdx, option, options, leftovers, nextArg}
+      extraArg = ({arg, options, leftovers}) ->
 
-        extraArg = ({arg, options, leftovers}) ->
-
-        until ({value: arg, done} = nextArg()).done
-          argType =
-            switch
-              when arg is '--'         then endOfArgs
-              when arg.startsWith '--' then arg = arg[2..]; longArg
-              when arg.startsWith '-'  then arg = arg[1..]; shortArgs
-              else                          extraArg
-
-          {options, leftovers}
-            = argType {arg: value, options, leftovers, logger}
+      until ({value: arg, done} = nextArg()).done
+        argType =
+          switch
+            when arg is '--'         then endOfArgs
+            when arg.startsWith '--' then arg = arg[2..]; longArg
+            when arg.startsWith '-'  then arg = arg[1..]; shortArgs
+            else                          extraArg
 
         {options, leftovers}
+          = argType {arg: value, options, leftovers, logger}
+
+      {options, leftovers}
+
 
