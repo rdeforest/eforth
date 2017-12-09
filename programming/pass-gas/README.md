@@ -140,3 +140,9 @@ public Internet. Post them to multiple independent services to ensure we can
 assemble the store when some portion of our locations are unreachable for some
 reason. Each piece should still be gated by unique credentials to raise the
 cost to an adversary of re-assembling the parts.
+
+# Todo
+
+## LATER
+
+- Create SquirrelCache package

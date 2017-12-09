@@ -1,12 +1,15 @@
-class Store
-  constructor: ->
-    if @constructor is Store
-      throw new Error "Cannot instantiate abstract class 'Store'"
+{ abstract } = require './abstractClass'
 
-  get: (uuid) -> throw new Error "Virtual method 'get' not overriden in #{@constructor.name}"
-  put: (uuid) -> throw new Error "Virtual method 'put' not overriden in #{@constructor.name}"
-  has: (uuid) -> throw new Error "Virtual method 'has' not overriden in #{@constructor.name}"
-  ids:        -> throw new Error "Virtual method 'ids' not overriden in #{@constructor.name}"
+virtualMethods = 'get put has ids'.split ' '
 
-Object.assign module.exports, { Store }
+warned = {}
 
+warn = (args...) ->
+  unless warned args[0]
+    console.warn args...
+    warned[args[0]] = true
+
+[ exports.Store ] = abstract Store: virtualMethods
+  class Store
+    init: (self, [@opts = {}]) ->
+      warn "Class #{@constructor} has no .init"
