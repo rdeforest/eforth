@@ -20,7 +20,7 @@ Since a constructor can return an already constructed object, this is trivial:
 
 However, a poorly trained or insane user of this class might be tempted to
 inspect or modify the Singleton.singeltons class variable. Is there a way to
-protect them from themselves
+protect them from themselves...
 
     singletons = new Map
 
