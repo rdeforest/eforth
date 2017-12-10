@@ -1,11 +1,9 @@
-###
-
-###
 
 Meta = Symbol 'Meta'
 
 class MetaClass
-  @comment: """
+  @comment:
+    """
       - obj[Meta]
        - a .classView (default is ClassView)
        - owned by MetaClass
@@ -19,7 +17,6 @@ class MetaClass
       - obj[obj[Meta].sym] is controlled by obj
 
       - obj(child) exposes obj[Class(obj).sym]
-
     """
 
   classView: ClassView

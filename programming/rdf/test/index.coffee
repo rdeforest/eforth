@@ -1,20 +1,18 @@
-Object.assign module.exports, require '../lib/setup-testing'
+{fs, path, debug} = Object.assign module.exports, require '../lib/setup-testing'
 
-{fs, path} = module.exports
+libDir = path.resolve __dirname, '..', 'lib'
+lib = (name) -> require path.resolve libDir, name
 
-module.exports.lib =
-lib =
-  (name) -> require path.resolve __dirname, '..', 'lib', name
+Object.assign exports {lib}
 
-unless module.parent
-  otherFile = (name) ->
-    name isnt __filename and
-    name.endsWith 'coffee'
+otherFile = (name) ->
+  name.endsWith 'coffee' and
+  name isnt __filename
 
-  fs.readdirSync(__dirname)
-    .filter otherFile
-    .forEach (name) ->
-      qualified = path.join __dirname, name
-      console.log "attempting to load '#{qualified}'"
-      require qualified
+fs.readdirSync __dirname
+  .filter otherFile
+  .forEach (name) ->
+    qualified = path.join __dirname, name
+    console.log "attempting to load '#{qualified}'"
+    require qualified
 

@@ -8,6 +8,8 @@ same as the 'real' global, and expose that inner global for manipulation.
 So we can do things like
 
     ->
+      fakeGlobal = foo: Symbol()
+
       example = exposed fakeGlobal, (args...) ->
         foo is fakeGlobal.foo # => true
 

@@ -3,6 +3,8 @@ path      = require 'path'
 
 { find }  = require './lib/find'
 
+setup     = require './lib/setup-testing'
+
 task "test", ->
   require './test'
 
