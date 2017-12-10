@@ -47,7 +47,9 @@ In practice, there are packages which can be trusted not to export any
 surprises. In fact, some modules (chai.js, for example) "monkey patch" global
 objects to extend the language/VM.
 
-This is _slightly_ more
+This is _slightly_ more invasive than I want. I kinda like how Perl, Ruby and
+Crystal do it, where imports of arbitrary exports only modify the _current_
+namespace.
 
 # How
 
