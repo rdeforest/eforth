@@ -1,6 +1,3 @@
-#sqlite3 = require 'sqlite3'
-#db = new sqlite3.Database
-
 gcd = (a, b) -> if b is 0 then a else gcd b, a % b
 
 # base^exp % mod
