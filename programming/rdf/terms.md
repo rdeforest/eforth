@@ -8,8 +8,8 @@ context within which they are used.
 ## Instance
 
 An object which does a thing. It may be a Class or not. If it's a class, one
-of the things it does is create more instances. The instances it creates may
-themselves be Classes.
+of the things it does is create instances of some sort. The instances it
+creates may themselves be Classes, who knows.
 
 ## Class
 
@@ -18,17 +18,6 @@ themselves be Classes.
 - Class : cookie cutter :: Instance : cookie
 
 A class is also an instance of the concept of a class.
-
-To address an object as a class:
-
-```coffee
-
-class Example
-
-Class Example
-  .doClassThing()
-
-```
 
 ## Inheritance
 

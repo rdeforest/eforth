@@ -4,17 +4,17 @@ Name is a work in progress.
 
 # Mission
 
+To bring to CoffeeScript on Node what has been in Perl for 20 years or more...
+:P
+
 # Features
 
-## Extending Boxed Types
+## Some REALLY HANDY globals
 
-- String
- - "foo bar".qw returns ['foo', 'bar']
-- Array
- - Remembers whether it has been mutated since it was the result of a sort
-  - adds 'insertSorted' and 'deleteSorted'
-  - default sort is default of Array.sort()
-  - can be overriden by setting .sortWith to a comparator function
+```coffee
+    console.log qw('foo bar baz').length
+    # => 3
+```
 
 ## Standard libraries
 
@@ -27,8 +27,9 @@ See (require 'lib/private').Private.comment for details.
 
 ## Progress reporting to console or other stream
 
-```coffee
+AKA 'spinners'
 
+```coffee
 { Progress } = require 'lib/progress'
 progress = new Progress
   maxDelay: 10000,
@@ -45,7 +46,6 @@ powers = (exponent) ->
   loop
     yield n
     n *= exponent
-
 ```
 
 This will write the current count and record id to the console no more than 10
@@ -66,10 +66,6 @@ then output would look something like:
 
 etc.
 
-## Identified objects
-
-## Table manipulation and rendering
-
 ## Sane defaults
 
-- setup-testing
+### setup-testing
