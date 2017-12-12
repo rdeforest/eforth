@@ -22,7 +22,7 @@ I could use Underscore, lodash or Ramda, but don't want to add a dependency.
       categories
 
     categorize = (items) ->
-      objectFromEntries reduce items, {}, placeInCategory
+      reduce items, {}, placeInCategory
 
     class PickyCustomer extends Error
       constructor: ({name, category}) ->
@@ -48,8 +48,8 @@ I could use Underscore, lodash or Ramda, but don't want to add a dependency.
 
       return merge kitchen, editedCategory
 
-    createMenus = (diners, dishes) ->
-      dinersByCategory = categorize dishes
+    makeMenus = (diners, dishes) ->
+      dinersByCategory = categorize diners
       dishesByCategory = categorize dishes
 
       for category, dishes of dishesByCategory
@@ -63,7 +63,7 @@ I could use Underscore, lodash or Ramda, but don't want to add a dependency.
         return _createMenus diners, dishesByCategory
 
       catch e
-        return [] if e instanceOf PickyCustomer
+        return [] if e instanceof PickyCustomer
 
         throw e
 
@@ -79,7 +79,8 @@ I could use Underscore, lodash or Ramda, but don't want to add a dependency.
         subMenus = []
 
         if diners.length
-          subMenus = createMenus(withoutDish(dish, dishes), diners
+          subMenus = createMenus(withoutDish(dish, dishes), diners)
 
         subMenus = [Object.assign {}, soFar, "#{diner.name}": dish.name]
 
+    module.exports.makeMenus = makeMenus
