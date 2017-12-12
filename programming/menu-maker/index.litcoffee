@@ -1,86 +1,103 @@
-# Description
+# Shouldn't have to brute force this, it's a combinatorics problem.
 
-Find permutations of categorized menu items which meet the requirements of
-diners.
+keys   = Object.keys
 
-Both dishes and customers are an object with a name and category.
+reduce = (l, acc, fn) -> l.reduce fn, acc
 
-I could use Underscore, lodash or Ramda, but don't want to add a dependency.
+categorize = (items) -> reduce items, {},
+  (acc, {name, category}) ->
+    (cat = acc[category] ?= {})[name] = (cat[name] ? 0) + 1; acc
 
-    reduce = (list, acc, merger) -> list.reduce merger, acc
+calculateDemand = (inventory, table) ->
+  for category, diners of table
+    if not avail = inventory[category]
+      throw new Error "Diners are requesting unknown dish type '#{category}'"
 
-    sum    = (l, ls...) -> l.reduce(((a, b) -> a + b), 0) + if ls.length then sum ls... else 0
+    if keys(inventory[category]).length < wanted = (keys diners).length
+      throw new Error "Cannot satisfy demand for #{wanted} dishes of type #{category}"
 
-    merge  =
-    objectFromEntries =
-      (entries) -> Object.assign {}, entries...
+    "#{category}": wanted
 
-    placeInCategory = (categories, {name, category}) ->
-      (categories[category] ?= [])
-        .push name
+calculateChoices = (diners, inventory) ->
+  diners.map ({name, category}) ->
+    name:    name
+    choices: inventory[category]
 
-      categories
+makeChoices = (dishes, diners) ->
+  inventory = categorize dishes
+  table     = categorize diners
+  choices   = calculateChoices diners, inventory
 
-    categorize = (items) ->
-      reduce items, {}, placeInCategory
 
-    class PickyCustomer extends Error
-      constructor: ({name, category}) ->
-        super "#{name}'s preference for #{category} cannot be satisfied"
+_makeMenus = (choices) ->
+  noMenu  = Object.assign [], reserved: {}
+  menus   = [noMenu]
 
-    class ToughCrowd extends Error
-      constructor: (diners, category, available) ->
-        wanted = diners.length
-        super "More diners want '#{category}' (#{wanted}) than we can provide (#{available})"
+  for choice in choices
+    console.log "choice:", choice
+    {name: dinerName, choices: dinerChoices} = choice
 
-    listToCounts = (list) ->
-      list.reduce ((counts, el) ->
-          counts[el] ?= 0
-          counts[el]++
-          counts
-        ), {}
+    menus = [].concat (
+      menus.map (menu) ->
+        console.log "menu:",         menu
+        console.log "dinerChoices:", dinerChoices
 
-    kitchenWithoutDish = (dish, kitchen) ->
-      {name, category} = dish
+        for dishName, count of dinerChoices
+          if not menu.reserved
+            throw new Error "missing reservations"
 
-      unEditedCategory = kitchen[dish.category]
-      editedCategory   = unEditedCategory.filter (item) -> item.name is name
+          reserved = menu.reserved[dishName] ?= 0
 
-      return merge kitchen, editedCategory
+          unless avail = count - reserved
+            console.log "#{dishName} left: #{avail}"
+            continue
 
-    makeMenus = (diners, dishes) ->
-      dinersByCategory = categorize diners
-      dishesByCategory = categorize dishes
+          ((extended = menu.concat {dinerName, dishName})
+            .reserved = Object.assign {}, menu.reserved)[dishName]++
 
-      for category, dishes of dishesByCategory
-        (dishesByCategory[category] = counts = listToCounts dishes)
+          extended
+    )...
+  menus
 
-      for category, diners of dinersByCategory
-        if diners.length > (avail = sum disheByCategory[category]?) or 0
-          throw new ToughCrowd diners, category, avail
+makeMenus = (dishes, diners) ->
+  _makeMenus makeChoices dishes, diners
+    .map (menu) ->
+      menu
+        .map ({dinerName, dishName}) ->
+          "#{dinerName}: #{dishName}"
+        .join '\n'
 
-      try
-        return _createMenus diners, dishesByCategory
+decategorize = (categorized) ->
+  items = []
 
-      catch e
-        return [] if e instanceof PickyCustomer
+  [].concat (
+      for catName, category of categorized
+        [].concat (
+          for itemName, count of category
+            [1..count].map -> {name: itemName, category: catName}
+        )...
+    )...
 
-        throw e
+testDishes =
+  decategorize
+    italian:  lasagna:    1, spaghetti:  1
+    mexican:  enchiladas: 1, quesadilla: 1, burrito: 1
+    american: burger:     1, pizza:      1
+    salad:    garden:     1, aztec:      1
 
-    _createMenus = (diners, dishes, soFar = {}) ->
-      if dishes.length < diners.length
-        return []
+testDiners =
+  decategorize
+    italian: Alice: 1, Bob: 1
+    mexican: Robert: 1
+    american: Barkley: 1
+    salad: Nicole: 1
 
-      [diner, diners...] = diners
+Object.assign exports, {
+  categorize, decategorize
+  calculateDemand, calculateChoices
+  makeMenus, makeChoices
+  testDiners, testDishes
+  _makeMenus
+  test: -> makeMenus testDishes, testDiners
+}
 
-      menus = []
-
-      for dish in dishesByCategory[diner.category] ? []
-        subMenus = []
-
-        if diners.length
-          subMenus = createMenus(withoutDish(dish, dishes), diners)
-
-        subMenus = [Object.assign {}, soFar, "#{diner.name}": dish.name]
-
-    module.exports.makeMenus = makeMenus
