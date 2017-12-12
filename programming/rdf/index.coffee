@@ -20,16 +20,15 @@ A no holds barred library for bending NodeJS to my will.
 
 Principles:
 
-- One object, one job
-- Favor composition over inhertiance
-- Favor functional over object-oriented.
- - Evaluate lazily
- - Contain side-effects
- - Use objects as namespaces/contexts/"this one time"
+- style/best practices
+ - One object, one job
+ - Favor composition over inhertiance
+ - Favor functional over object-oriented.
+  - Evaluate lazily
+  - Contain side-effects
+  - Use objects as namespaces/contexts/"this one time"
 
-- Introspection is documentation
- - d object
- - d object, '.'
+ - Introspection is documentation
 
 Objects:
 
@@ -158,7 +157,7 @@ nameOf = (o) ->
   o.name ? "(instance of #{o.constructor.name})"
 
 e.methodnf = ({instance, messageName, args}) ->
-   "Couldn't find a method matching #{nameOf instance}.#{mssageName}" 
+   "Couldn't find a method matching #{nameOf instance}.#{mssageName}"
 
 class MessageDispatcher
   constructor: ->
@@ -290,7 +289,7 @@ Verb usage
  - 'unset'   disassociates an entity from a key
 
  - 'match'   groups the members of a collection by match quality
- - 'lookup'  is 
+ - 'lookup'  is
 
  - 'fetch'   has latency and resource cost
 

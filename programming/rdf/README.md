@@ -12,8 +12,13 @@ To bring to CoffeeScript on Node what has been in Perl for 20 years or more...
 ## Some REALLY HANDY globals
 
 ```coffee
-    console.log qw('foo bar baz').length
-    # => 3
+    print (
+      qw 'foo bar baz'
+              .map (s) -> last s
+              .join ''
+    )
+
+    # => orz
 ```
 
 ## Standard libraries
