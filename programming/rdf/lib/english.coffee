@@ -16,7 +16,11 @@ plural = (kind) ->
 
   fn.bind @
 
-module.exports.English =
+Object.assign exports, {English},
+  comment: """
+  """
+
+English =
   list: (items, opts = {}) ->
     { separator   = ','
       space       = ' '
