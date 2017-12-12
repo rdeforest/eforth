@@ -20,8 +20,9 @@ vim: nocindent
 Um, yeah...
 
 - 2012-2015 - payments
-- 2015-2016 - DRT
-- 2016-2018 - Lookout
+- 2015-2015 - DRT
+- 2016-2017 - Lookout
+- 2018-     - ?
 
     Saturn is leaving his position in Sagittarius this month on December 19 or
     20 (depending on your time zone) and is not due to return until 2044.
@@ -170,6 +171,8 @@ connection too.
     too much when other retailers are selling that product for substantially
     less.
 
+That's fine. I'll just skip it entirely.
+
     There are so many reasons to hold off your purchase until the very last
     week of December or until January. If you would like to know more about
     Mercury retrograde, you can read my essay, All You Need to Know About
@@ -191,6 +194,8 @@ connection too.
     a group, working to help raise funds and awareness for a humanitarian goal
     or one that involves a charity, or you may work in more of a one-on-one
     way, to help a dear friend.
+
+Huh...
 
     You may soon notice your friend is suddenly going through a difficult
     patch and will need your support. This will be especially apparent at the
@@ -242,6 +247,8 @@ connection too.
     supported by Mars in Scorpio, Jupiter in Scorpio, and Neptune in Pisces –
     three trifecta planets that will boost your magnetism sky high. It’s an
     exciting time to be you!
+
+If you say so...
 
     Summary
 

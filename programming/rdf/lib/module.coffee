@@ -1,9 +1,15 @@
 comment = """
-  Goals:
-    * low-friction
-      * dependency injection
-      * self-documentation
-"""
+    Goals:
+      * low-friction
+        * dependency injection
+        * self-documentation
+        * principle of least surprise
+
+    Conforming modules
+      * respect community expectations up to a point:
+        * ('rdf/module').require 'module' returns something "normal"
+
+  """
 
 usage = """
   require('rdf/lib/module').defineModule
@@ -12,7 +18,7 @@ usage = """
     optionalPreDefine = ({require, options}) ->
 """
 
-defineModule = (opts, make, prepare = ->) ->
+exports = (opts, make, prepare = ->) ->
   if 'function' is typeof opts
     [make, prepare = ->] = [opts, make]
 
@@ -27,8 +33,19 @@ defineModule = (opts, make, prepare = ->) ->
     finalOptions = merge options, userOptions
     make imports, finalOptions
 
+  expression if predicate
+
+  expression for varname      in iterable
+             for varname, idx in iterable
+             for varname, idx from iterable
+
+  iterable[Symbol.iterator] isnt undefined
+
+
+  expression while predicate
+
 Object.assign exports,
   { usage
     comment
-    defineModule
+    exports
   }
