@@ -1,8 +1,0 @@
-#!/bin/bash
-
-[ -e csfifo ] || mkfifo csfifo
-
-grep -E '^    |^$' | tee >(coffee -s > csfifo)
-
-sed 's/^/stdout> /' csfifo
-
