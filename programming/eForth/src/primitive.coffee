@@ -33,4 +33,30 @@ class Primitive extends Function
             etc
   """
 
+  constructor: (def, rest...) ->
+    unless 'object' is typeof def and Object.keys(def).length is 1
+      throw 'definition must be a single-key object'
+
+    code = defaultCode
+
+    ( for name, definition of def
+        if 'function' is typeof definition
+          code = definition.toString()
+
+        {argNames, body} = extractFunctionDefinition code
+
+        super argNames..., body
+
+        klass = @constructor
+
+        while klass isnt Primitive
+          currentKlass = klass
+          klass = klass.constructor
+          currentKlass
+    ) .reverse()
+      .filter  hasInit
+      .forEach (klass) -> callInit klass, @, definition, rest
+
+    @constructor[@name] = @
+
 
