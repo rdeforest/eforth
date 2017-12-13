@@ -8,7 +8,9 @@ better:
   - change a function's def
   - enhance a function
   - class versions of above
+
 - More shell-like
   - mass changes
+
 - Safety and stuff
   - revision control

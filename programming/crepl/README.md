@@ -13,6 +13,12 @@ Automatic improvement via noodling.
 ## Persistence
 
 - Re-writing a method should be persisted immediately
+- Use a command to invoke an editor
+- Participating functions and objects
+ - have a repl symbol property containing
+ - metadata
+ - options?
+ - history?
 
 ## Versioning
 
