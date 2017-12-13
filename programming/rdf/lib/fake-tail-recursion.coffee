@@ -1,28 +1,28 @@
-fakeTailRecursion = (block, loopStarted) ->
-  recurse = (block) ->
-    [null, block]
+recurse = (block, loopStarted) ->
+  `var recurse`
 
-  finish = (value) ->
-    [value]
+  recurse  = (block) -> [null, block]
+  finish   = (value) -> [value]
 
   nextCall = block
 
   loop
     [finished, nextCall] = ret = nextCall recurse, finish
 
-    if ret.length is 1
-      return finished
+    return finished if ret.length is 1
 
-example = (lines) ->
-  fakeTailRecursion (recurse, finish) ->
-    showNext = ([line, lines...]) ->
+example = (lines, modulo = 256) ->
+  recurse (recurse, finish) ->
+    showNext = ([line, lines...], sum = 0) ->
       console.log line
 
+      sum = (sum + line.length or 0) % modulo
+
       if lines.length
-        recurse -> showNext lines
+        recurse -> showNext lines, sum
       else
-        finish null
+        finish sum
 
     recurse -> showNext lines
 
-Object.assign exports, {fakeTailRecursion, example}
+Object.assign exports, {recurse, example}
