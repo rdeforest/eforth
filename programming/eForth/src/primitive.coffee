@@ -1,3 +1,9 @@
+hasInit  = (klass) ->
+  'function' is typeof klass::init
+
+callInit = (klass, self, definition, rest) ->
+  klass::init.call @, definition, rest...
+
 class Primitive extends Function
   @comment: """
     Derivatives of Primitive are DSL verbs and identifiers.
@@ -59,4 +65,4 @@ class Primitive extends Function
 
     @constructor[@name] = @
 
-
+Object.assign exports, {Primitive}
