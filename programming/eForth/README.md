@@ -15,6 +15,7 @@ the context in which it matters.
 
 The VM encapsulates the protocol which is 'normally' implemented in hardware.
 It implements the processor, memory, I/O, etc., of a physical computer.
+Version 1 will be CoffeeScript/JavaScript. Version 2 will be WebAssembly.
 
 ### CPU
 
