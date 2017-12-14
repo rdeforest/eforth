@@ -73,9 +73,6 @@ class Namespace
   constructor: (@name, @parent) ->
     @prototype = {}
 
-    if @parent and @parent not instanceof Namespace
-      @parent[@name] = @
-
   _get:      ( key        ) -> @prototype[key]
   _set:      ( key, value ) -> @prototype[key] = value
   _del:      ( key        ) -> @prototype[key] = undefined

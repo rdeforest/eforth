@@ -3,66 +3,37 @@
 # NOTE: This module does not follow the usual Node module pattern. Its export
 # is a function whose only parameter is a callback which is called with the AO
 # namespace as its only parameter.
+#
+# Also, modules under ./ao export a function which takes a namespace and
+# install themselves into it.
 
-{resolve} =
-path      = require 'path'
+{ exit }   = require 'process'
 
-makeDebug = require 'debug'
+debug      = (require 'debug') 'ActiveObject'
 
-debug     = makeDebug 'AO'
-AO        = null
+loadMod    = require './loader'
 
-debug "dir: #{__dirname}, file: #{__filename}"
+capitalize = (s) -> s[0].toUpperCase() + s[1..]
 
-path.toNamespacedPath ?= (pathStr) ->
-  pathStr.split path.sep
-
-initMod   = (modName, dir = __dirname) ->
-  debug "Attempting to initialize #{modName}"
-
-  aoPath =
-    ['AO'].concat (path.toNamespacedPath modName)
-        .map (part) ->
-          part[0].toUpperCase() +
-          part[1..]
-        .join '::'
-
-  modPath = resolve dir, modName
-
-  (require resolve modPath) AO, debug aoPath
+AO         = null
 
 module.exports = (callback) ->
-  if not callback
+  if 'function' isnt typeof callback
     throw new Error "AO module requires a callback."
 
   if AO
+    debug "required more than once"
     callback AO
     return
 
-  {resolve}     = require 'path'
-  {exit}        = require 'process'
-  {promisify}   = require 'util'
-
-  readdir       = promisify (require 'fs').readdir
-  { namespace } = require resolve __dirname, 'namespace'
-  { Namespace } = new require './namespace'
-  AO            = Namespace 'AO'
-  AO::Namespace = Namespace
-
-  readdir __dirname
-    .catch (err) ->
-      console.log "Error searching #{resolve __dirname} for libraries: " +
-        err.message + err.stack
-
-    .then (entries) ->
-      entries
-        .filter (name) ->
-          return false if name.startsWith '.'
-          return false if resolve(__dirname, name) is __filename
-
-          name.endsWith 'coffee'
-
-        .forEach (name) ->
-          initMod name
-
+  loadMod './ao'
+    .then (loaded) ->
+      AO = loaded
+      debug "AO created"
       callback AO
+    .catch (err) ->
+      debug "load failed"
+
+      console.error "Failed to load ActiveObject library: " + err.message + "\n\n" + err.stack
+
+      exit -1
