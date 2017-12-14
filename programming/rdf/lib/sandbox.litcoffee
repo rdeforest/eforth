@@ -67,7 +67,6 @@ namespace.
         super()
 
         vm.createContext @
-        @global = @
 
         for name, def of definitions
           if 'function' is typeof def
@@ -75,6 +74,9 @@ namespace.
 
           else
             @[name] = def
+
+        @realGlobal = global
+        @global = @
 
     Sandbox::[_addFn] = (name, fn, options = {}) ->
       switch typeof fn
