@@ -101,20 +101,32 @@ class Code              extends Primitive
       if op not instanceof Operation
         throw new Error "Code may only contain Operations"
 
-      @ops = @ops.concat op.expanded 
+      @ops = @ops.concat op.expanded()
 
   exec: (machine) ->
+
+  expanded: -> @
 
 # Code which is injected
 # Maybe more like 'inline'?
 class Macro             extends Code
+  expanded: -> @ops
 
+# Code associated with the dictionary?
+class Word              extends Code
+
+# Word implemented directly in Java/Coffee script
+class NativeWord        extends Word
+
+# An machine register client
 class Register          extends OpArg
 
+# An indirect reference (such as IP + 1 or IP + AX)
 class RegisterReference extends Register
   constructor: (def, rest...) ->
     def[Object.keys(def)[0]] =
       (offset = 0) -> {this: this, offset}
+
 
 class ConstantNumber    extends OpArg
   init: (@value) ->
