@@ -1,14 +1,19 @@
-comment = """
-My children represent the structure and behavior of an AO model.
-"""
+EventEmitter = require 'events'
 
-{ EventEmitter } = require 'events'
+{ AO } = require './ao'
 
-{ ASchema } = require './schema'
+class AO::AModel extends EventEmitter
+  @comment: """
+      My children represent the structure and behavior of an AO model.
+    """
 
-exports.AO = AModel: class AModel extends EventEmitter
-  @comment: comment
   constructor: (@parent = null) ->
     @symbol = Symbol()
-    @schema = new ASchema
+    @schema = new AO::ASchema
 
+  create: ->
+    # Creates an instance of the model
+    return
+
+  addProp: (name, defaultValue) ->
+    @schema.addProp name, defaultValue
