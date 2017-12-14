@@ -79,7 +79,7 @@ class Namespace
   _have:     ( key        ) -> undefined isnt @_get key
   _isBranch: ( key        ) -> @_get(key) instanceof Namespace
 
-  get:   ( key, keys... ) ->
+  get:       ( key, keys... ) ->
     v = @_get key
 
     switch
@@ -113,7 +113,27 @@ class Namespace
 
     @_set key, value
 
-  set: (value, key, keys...) ->
+  set: (value, keys...) ->
+    keys = @_normalize keys
+
+    ns = @
+    for key in keys[..-2]
+      if exists = ns._get key
+        if exists instanceof Namespace
+          ns = exists
+          continue
+
+        throw new KeyExists ns.fullPath, key
+
+      ns = ns._set key, new Namespace key, ns
+
+  _normalize: (keys) ->
+    return [] unless keys.length
+
+    [].concat (
+      for key in keys
+        key.split '::'
+    )...
 
   del: (key, keys...) ->
     if not keys.length

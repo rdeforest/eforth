@@ -26,7 +26,7 @@ module.exports = (callback) ->
     callback AO
     return
 
-  loadMod './ao'
+  loadMod './AO'
     .then (loaded) ->
       AO = loaded
       debug "AO created"

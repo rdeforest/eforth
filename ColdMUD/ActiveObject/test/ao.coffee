@@ -1,16 +1,15 @@
 {assert} = main = require '.'
 
-exports = ({suite, test, done} = {}) ->
-  suite __filename, (suite, test) ->
-    test '', (done) ->
+exports = ({suite, test} = {}) ->
+  suite __filename, (suite, test, done) ->
+    suite 'lib', (suite, test, done) ->
       (require '../lib') (AO) ->
-        assert AO, "something returned"
-        assert AO::, "it has a prototype"
-        assert ns = AO::Namespace, "AO::Namespace exists"
-        assert AO.constructor instanceof ns, "AO isA AO::Namespace"
+        test "something returned"     -> assert       AO
+        test "with the right name"    -> assert.equal AO.name, 'AO'
+        test "and a prototype"        -> assert       AO::
+        test "and ::Namespace exists" -> assert ns =  AO::Namespace
+        test "and AO is one"          -> assert       AO.constructor instanceof ns
         done()
 
-  done() if done
+    done()
 
-if require.main is module
-  exports main
