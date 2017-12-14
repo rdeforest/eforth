@@ -27,6 +27,10 @@ class CommandMapping
     matched = input.match @pattern
 
 class CommandParser
+  @comment: """
+    Translate from input to request
+  """
+
   constructor: (commandMappings) ->
     @commands = []
     @mappings = []
