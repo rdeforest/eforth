@@ -1,19 +1,18 @@
 EventEmitter = require 'events'
 
-{ AO } = require './ao'
+module.exports = (AO, debug) ->
+  class AO::AModel extends EventEmitter
+    @comment: """
+        My children represent the structure and behavior of an AO model.
+      """
 
-class AO::AModel extends EventEmitter
-  @comment: """
-      My children represent the structure and behavior of an AO model.
-    """
+    constructor: (@parent = null) ->
+      @symbol = Symbol()
+      @schema = new AO::ASchema
 
-  constructor: (@parent = null) ->
-    @symbol = Symbol()
-    @schema = new AO::ASchema
+    create: ->
+      # Creates an instance of the model
+      return
 
-  create: ->
-    # Creates an instance of the model
-    return
-
-  addProp: (name, defaultValue) ->
-    @schema.addProp name, defaultValue
+    addProp: (name, defaultValue) ->
+      @schema.addProp name, defaultValue

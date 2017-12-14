@@ -21,6 +21,7 @@ NotABranch        = makeError 'NotABranch'        , ['fullPath', 'key' ], "'\#{f
 
 identifier = /[a-zA-Z_$][a-zA-Z0-9_$]*/
 
+exports.Namespace =
 class Namespace
   @comment: '''
     I exploit the :: shortcut of CoffeeScript to provide namespaces using :: as
@@ -59,7 +60,7 @@ class Namespace
   '''
 
   @pathFromString: (str) ->
-    unless str.match /// ^ #{identifier} ( :: #{identifier} )* $ ///x
+    unless str.match /// ^ #{identifier} ( :: #{identifier} )* $ ///
       throw new InvalidIdentifier str
     
     parts = str.split '::'
@@ -72,7 +73,7 @@ class Namespace
   constructor: (@name, @parent) ->
     @prototype = {}
 
-    if @parent not instanceof Namespace
+    if @parent and @parent not instanceof Namespace
       @parent[@name] = @
 
   _get:      ( key        ) -> @prototype[key]
@@ -116,7 +117,6 @@ class Namespace
     @_set key, value
 
   set: (value, key, keys...) ->
-    if @prototype
 
   del: (key, keys...) ->
     if not keys.length

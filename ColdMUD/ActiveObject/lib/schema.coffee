@@ -1,14 +1,13 @@
-debug = (require 'debug') 'AO.ASchema'
+module.exports = (AO, debug) ->
+  { EventEmitter } = require 'events'
 
-{ EventEmitter } = require 'events'
+  class AO::Schema extends EventEmitter
+    @comment: """
+        My children represent the internal structure of instances of an AModel.
+      """
 
-exports.AO = ASchema: class ASchema extends EventEmitter
-  @comment: """
-      My children represent the internal structure of instances of an AModel.
-    """
-
-  constructor: (@definingModel) ->
-    unless @definingModel instanceof AModel
-      
-    @symbol = Symbol()
-    @propDefs = {}
+    constructor: (@definingModel) ->
+      unless @definingModel instanceof AModel
+        
+      @symbol = Symbol()
+      @propDefs = {}
