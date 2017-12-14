@@ -19,8 +19,6 @@ InvalidIdentifier = makeError 'InvalidIdentifier' , ['identifier'      ], "Ident
 UnknownNamespace  = makeError 'UnknownNamespace'  , ['namespace'       ], "Unknown namespace '\#{namespace}'"
 NotABranch        = makeError 'NotABranch'        , ['fullPath', 'key' ], "'\#{fullPath}::\#{key}' is not a Namespace branch"
 
-comment =
-
 identifier = /[a-zA-Z_$][a-zA-Z0-9_$]*/
 
 class Namespace
@@ -73,6 +71,9 @@ class Namespace
 
   constructor: (@name, @parent) ->
     @prototype = {}
+
+    if @parent not instanceof Namespace
+      @parent[@name] = @
 
   _get:      ( key        ) -> @prototype[key]
   _set:      ( key, value ) -> @prototype[key] = value
