@@ -1,5 +1,10 @@
-{Command: {c} } = require './commandParser'
+{ c, commands, simpleCommands } = require './commandParser'
 
-Object.assign exports,
-  '^help ': c help: '', (args...) ->
+helpOn = (input) ->
+
+module.exports = (UI) ->
+  cmd =
+    simpleCommands
+      help: (input) ->
+        UI.response input, helpOn input
 

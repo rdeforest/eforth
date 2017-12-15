@@ -58,4 +58,31 @@ class CommandParser
     for pattern, command of namesAndInfo
       @addCommandMapping new CommandMapping pattern, command
 
-Object.assign exports, {Command, CommandMapping, CommandParser}
+mapOneEntry = (obj, fn) ->
+  unless ([k] = Object.keys(obj)).length is 1
+    throw new Error "one command per 'c' please"
+
+  fn k, obj[k]
+
+c = (nameAndDesc, impl) ->
+  mapOneEntry nameAndDesc,
+    (name, desc) ->
+      new Command name, desc, impl
+
+commands = (patternsAndCommands) ->
+  mapOneEntry patternsAndCommands,
+    (pattern, command) ->
+      new CommandPattern pattern, command
+
+simpleCommands = (namesAndImpls) ->
+  commands =
+    Object
+      .entries namesAndImpls
+      .map (name, impl) -> "^#{name} ": new Command name, '', impl)...
+
+  Object.assign {}, commands...
+
+Object.assign exports, {
+  Command, CommandMapping, CommandParser
+  c,       commands,       simpleCommands
+}

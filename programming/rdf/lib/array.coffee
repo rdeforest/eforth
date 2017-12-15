@@ -1,9 +1,23 @@
 module.exports = (Array) ->
-  (require 'object') Object
+  flatten = ([element, array...]) ->
+    flat = []
+
+    loop
+      while Array.isArray array[0]
+        array = array[0].concat array
+
+      [element, array...] = array
+      flat.push element
+
+      return flat unless array.length
+
+  flattenOnce = (array) -> [].concat array...
+
+  (require './object') ourObject = Object.assign {}, Object
 
   UnsortedArrayPrototype = Array::
 
-  Array:: = Object.create UnsortedArrayPrototype
+  Array:: = ourObject.create UnsortedArrayPrototype
 
   DUPE_SCAN_CUTOFF = 100
 
@@ -26,7 +40,7 @@ module.exports = (Array) ->
     -1 < markSortedList.findIndex (e, i, l) -> l[i+1] is e
 
   flagSetter = (name, value) ->
-    (ret) -> Object.assign ret, "#{name}": value
+    (ret) -> ourObject.assign ret, "#{name}": value
 
   markSorted   = flagSetter 'sorted', true
   markUnsorted = flagSetter 'sorted', false
@@ -51,7 +65,7 @@ module.exports = (Array) ->
     (args...) ->
       markUnsorted orig.apply @, args
 
-  Object.assign Array::,
+  ourObject.assign Array::,
     sort:    (comparator = @sortWith) ->
       @sortWith = comparator ? stringCompare
       markSorted Array::sort.apply @, Array.from arguments
@@ -84,12 +98,11 @@ module.exports = (Array) ->
       markSorted @splice idx, 0, value
 
   Array::cmp = (other) ->
-    if  @length and other.length
-      Object.cmp(@[0], other[0]) or
+    if @length and other.length
+      ourObject.cmp(@[0], other[0]) or
         @[1..] .cmp other[1..]
     else
-        @length  -  other.length
-
+      ourObject.cmp @length, other.length
 
   Array::find = (cmp) ->
     return undefined unless @length
@@ -98,7 +111,6 @@ module.exports = (Array) ->
       when -1 then midx + @[  midx..  ].find cmp
       when  1 then midx - @[..midx - 1].find cmp
       else midx
-
 
   # What about a decorated Array instead...
 
