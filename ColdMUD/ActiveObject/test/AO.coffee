@@ -19,7 +19,4 @@ exports = ({assert, suite, test, lib} = {}) ->
 
     done()
 
-  test "am I crazy", ->
-    # maybe
-
 exports require '.' if require.main is module
