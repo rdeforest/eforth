@@ -4,6 +4,8 @@ PAGE 62,132	;62 lines per page, 132 characters per line
 
 ;===============================================================
 ;
+; vim: ts=8
+;
 ;	eForth 1.0 by Bill Muench and C. H. Ting, 1990
 ;	Much of the code is derived from the following sources:
 ;		8086 figForth by Thomas Newman, 1981 and Joe smith, 1983
