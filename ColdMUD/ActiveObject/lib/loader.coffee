@@ -10,26 +10,50 @@ readdir       = util.promisify fs.readdir
 debug         = (require 'debug') '::loader'
 
 { Namespace } = require './Namespace'
+{ qw }        = require './shared'
 
-suffixes      = ''' coffee js json '''.split /\s+/
+SUFFIXES      = qw ' .coffee .litcoffee .js .json '
 
 module.exports =
-loadMod = (modPath, ns = basename modPath) ->
-  debug "Loading #{modPath}"
-
-  unless nsOrNsName instanceof Namespace
-    ns = new Namespace ns
+loadMod = (modPath, ns) ->
+  debug "Loading #{modPath} into #{ns?.name or ns or basename modPath}}"
 
   if fs.statSync(modPath).isDirectory()
-    return loadModDir modPath, ns
+    loadModDir modPath, ns
+  else
+    Promise.resolve require modPath
+      .then (module) ->
+        if ns instanceof Namespace
+          ns.set module, basename modPath
 
-  Promise.resolve require modPath
-    .then (module) -> ns.set module, module.name
+loadable = (name) ->
+  return false if name.startsWith '.'
+
+  return -1 isnt SUFFIXES.find (suffix) -> name.endsWith suffix
+
+# The provided 'ns' is the _parent_ namespace the directory contents are to be
+# loaded into.
+loadModDir = (modPath, ns) ->
+  debug "scanning #{modPath}"
+
+  readdir modPath
+    .then (entries) ->
+      debug "found #{entries.join ", "}"
+
+      Promise.all(
+        entries
+          .filter  loadable
+          .forEach (mod) ->
+            loadMod (resolve modPath, mod), ns
+      )
+
+    .catch (err) ->
+      console.log msg = "Error searching #{resolve modPath} for libraries: " + err.message + err.stack
+      debug msg
 
 loadMod.comment = """
-  I 'load' a module by require()ing it into a namespace. I recurse through
-  directories. If the provided namespace is a string, I create a namespace
-  with the given name.
+  I 'load' a module by require()ing it into a namespace, if such is provided.
+  I recurse through directories.
 
   Given a directory tree like
 
@@ -46,24 +70,4 @@ loadMod.comment = """
   I return a Promise whose .then provides the root namespace.
 """
 
-loadable = (name) ->
-  return false if name.startsWith '.'
 
-  for suffix in suffixes when name.endsWith suffix
-    return true
-
-  false
-
-Object.assign loadModDir = (modPath, ns) ->
-  readdir modPath
-    .then (entries) ->
-      Promise.all(
-        entries
-          .filter  loadable
-          .forEach (mod) ->
-            loadMod (resolve modPath, mod), ns
-      )
-
-    .catch (err) ->
-      console.log "Error searching #{resolve modPath} for libraries: " +
-        err.message + err.stack

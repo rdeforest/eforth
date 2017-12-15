@@ -7,15 +7,16 @@
 # Also, modules under ./ao export a function which takes a namespace and
 # install themselves into it.
 
-{ exit }   = require 'process'
+{ resolve } = require 'path'
+{ exit }    = require 'process'
 
-debug      = (require 'debug') 'ActiveObject'
+debug       = (require 'debug') 'ActiveObject'
 
-loadMod    = require './loader'
+loadMod     = require './loader'
 
-capitalize = (s) -> s[0].toUpperCase() + s[1..]
+capitalize  = (s) -> s[0].toUpperCase() + s[1..]
 
-AO         = null
+AO          = null
 
 module.exports = (callback) ->
   if 'function' isnt typeof callback
@@ -26,7 +27,7 @@ module.exports = (callback) ->
     callback AO
     return
 
-  loadMod './AO'
+  loadMod resolve __dirname, 'AO'
     .then (loaded) ->
       AO = loaded
       debug "AO created"

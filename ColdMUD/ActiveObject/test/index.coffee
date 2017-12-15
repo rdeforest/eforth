@@ -1,10 +1,15 @@
-Object.assign exports, require 'rdf/lib/setup-testing'
+Object.assign exports,
+  require 'rdf/lib/setup-testing'
 
 {
   path: { resolve, dirname, basename },
   fs:   { readdir }
   suite
 } = exports
+
+libDir = resolve __dirname, '..', 'lib'
+
+exports.lib = lib = (name) -> require resolve libDir, name
 
 if require.main is module
   suite 'ActiveObject', (suite, test, done) ->
@@ -18,5 +23,3 @@ if require.main is module
             { suite, test, done }
 
       done()
-
-      

@@ -7,7 +7,5 @@ module.exports = (AO, debug) ->
       """
 
     constructor: (@definingModel) ->
-      unless @definingModel instanceof AModel
-        
       @symbol = Symbol()
       @propDefs = {}

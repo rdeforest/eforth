@@ -1,25 +1,12 @@
-keys = Object.keys
-
-makeError = (name, argNames, message) ->
-  argStr = argNames.join ', '
-  argExpr = "[$][(](#{argNames.join '|'})[)]"
-  message = "`#{message.replace new RegExp(argExpr),
-    (all, parts...) -> "$(#{parts[1]})"}`"
-
-  eval """
-    class #{name} extends Error {
-      constructor(#{argStr}) {
-        super(#{message});
-      }
-    }
-  """
+{ keys, makeError, identRegExp
+} = require './shared'
 
 KeyExists         = makeError 'KeyExists'         , ['fullPath', 'key' ], "Key '\#{fullPath}::\#{key}' already exists"
-InvalidIdentifier = makeError 'InvalidIdentifier' , ['identifier'      ], "Identifier '\#{identifier}' is invalid"
+InvalidIdentifier = makeError 'InvalidIdentifier' , ['identRegExp'     ], "Identifier '\#{identRegExp}' is invalid"
 UnknownNamespace  = makeError 'UnknownNamespace'  , ['namespace'       ], "Unknown namespace '\#{namespace}'"
 NotABranch        = makeError 'NotABranch'        , ['fullPath', 'key' ], "'\#{fullPath}::\#{key}' is not a Namespace branch"
 
-identifier = /[a-zA-Z_$][a-zA-Z0-9_$]*/
+identRegExp = /[a-zA-Z_$][a-zA-Z0-9_$]*/
 
 exports.Namespace =
 class Namespace
@@ -60,7 +47,7 @@ class Namespace
   '''
 
   @pathFromString: (str) ->
-    unless str.match /// ^ #{identifier} ( :: #{identifier} )* $ ///
+    unless str.match /// ^ #{identRegExp} ( :: #{identRegExp} )* $ ///
       throw new InvalidIdentifier str
     
     parts = str.split '::'
@@ -83,9 +70,9 @@ class Namespace
     v = @_get key
 
     switch
-      when not v           then throw new KeyNotFound @fullPath, key
-      when not keys.length then v
-      when not _isBranch v then throw new NotABranch @fullPath, key
+      when not v            then throw new KeyNotFound @fullPath, key
+      when not keys.length  then v
+      when not @_isBranch v then throw new NotABranch @fullPath, key
       else                      v.get keys...
 
   has:   ( key, keys... ) ->
@@ -102,30 +89,31 @@ class Namespace
 
     branch.isBranch keys...
 
-  add: (value, key, keys...) ->
-    if keys.length
-      branch = (@prototype[name] ?= new Namespace name, @)
-      branch.add value, keys...
-      return @
-    
-    if @_have key
-      throw new KeyExists fullPath, key
+  add: (value, keys...) ->
+    keys = @_normalize keys
 
-    @_set key, value
+    if @has keys
+      throw new KeyExists @fullPath, keys[-1..][0]
+
+    @set value, keys...
 
   set: (value, keys...) ->
     keys = @_normalize keys
 
     ns = @
+
     for key in keys[..-2]
-      if exists = ns._get key
-        if exists instanceof Namespace
-          ns = exists
-          continue
+      if undefined is exists = ns._get key
+        ns = ns._set key, new Namespace key, ns
+        continue
 
-        throw new KeyExists ns.fullPath, key
+      if exists instanceof Namespace
+        ns = exists
+        continue
 
-      ns = ns._set key, new Namespace key, ns
+      throw new KeyExists ns.fullPath, key
+
+    ns._set keys[-1..][0], value
 
   _normalize: (keys) ->
     return [] unless keys.length
