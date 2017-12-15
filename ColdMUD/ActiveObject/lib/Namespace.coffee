@@ -1,6 +1,8 @@
 { keys, makeError, identRegExp
 } = require './shared'
 
+debug = (require 'debug') 'AO::Namespace'
+
 KeyExists         = makeError 'KeyExists'         , ['fullPath', 'key' ], "Key '\#{fullPath}::\#{key}' already exists"
 InvalidIdentifier = makeError 'InvalidIdentifier' , ['identRegExp'     ], "Identifier '\#{identRegExp}' is invalid"
 UnknownNamespace  = makeError 'UnknownNamespace'  , ['namespace'       ], "Unknown namespace '\#{namespace}'"
@@ -46,17 +48,17 @@ class Namespace
     Note that methods prefixed with underscore are direct operations (no branch traversal).
   '''
 
-  @pathFromString: (str) ->
-    unless str.match /// ^ #{identRegExp} ( :: #{identRegExp} )* $ ///
-      throw new InvalidIdentifier str
-    
-    parts = str.split '::'
-
-    try
-      root = eval "#{parts[0]}"
-    catch e
-      throw new UnknownNamespace parts
-
+#   @pathFromString: (str) ->
+#     unless str.match /// ^ #{identRegExp} ( :: #{identRegExp} )* $ ///
+#       throw new InvalidIdentifier str
+#     
+#     parts = str.split '::'
+# 
+#     try
+#       root = eval "#{parts[0]}"
+#     catch e
+#       throw new UnknownNamespace parts
+# 
   constructor: (@name, @parent) ->
     @prototype = {}
 
@@ -98,11 +100,11 @@ class Namespace
     @set value, keys...
 
   set: (value, keys...) ->
-    keys = @_normalize keys
+    [keys..., key] = @_normalize keys
 
     ns = @
 
-    for key in keys[..-2]
+    for key in keys
       if undefined is exists = ns._get key
         ns = ns._set key, new Namespace key, ns
         continue
@@ -113,7 +115,9 @@ class Namespace
 
       throw new KeyExists ns.fullPath, key
 
-    ns._set keys[-1..][0], value
+    debug "Assigning to #{ns.fullPath}::#{key}"
+
+    ns._set key, value
 
   _normalize: (keys) ->
     return [] unless keys.length

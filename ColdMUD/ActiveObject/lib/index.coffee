@@ -30,7 +30,8 @@ module.exports = (callback) ->
   loadMod resolve __dirname, 'AO'
     .then (loaded) ->
       AO = loaded
-      debug "AO created"
+      AO.set (require './Namespace').Namespace, 'Namespace'
+      debug "AO created: " + JSON.stringify AO
       callback AO
     .catch (err) ->
       debug "load failed"
