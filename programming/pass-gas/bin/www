@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-# vim: ft=sh
-
-root="$(cd $(dirname $0)/..; pwd)"
-coffee="$root/node_modules/coffeescript/bin/coffee"
-
-$coffee -r "$root/lib/server" -e "server()"

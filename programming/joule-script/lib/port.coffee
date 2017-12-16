@@ -1,4 +1,0 @@
-class Port
-  constructor: ->
-    @queue = []
-

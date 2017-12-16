@@ -1,9 +1,0 @@
-{
-  "Container": "(x) -> @__value = x",
-  "Container.of": "(x) -> new Container x",
-  "Container.prototype.map": "(f) -> Container.of f @__value",
-  "Maybe": "(x) -> @__value",
-  "Maybe.of": "(x) -> new Maybe x",
-  "Maybe.prototype.isNothing": "(x) -> x is null or x is undefined",
-  "Maybe.prototype.map": "(f) -> if @isNothing() then Maybe.of null else Maybe.of f @__value"
-}

@@ -1,9 +1,0 @@
-{
-  "generator-node": {
-    "promptValues": {
-      "authorName": "Robert de Forest",
-      "authorEmail": "robert@defore.st",
-      "authorUrl": "http://defore.st"
-    }
-  }
-}

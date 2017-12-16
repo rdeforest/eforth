@@ -1,4 +1,0 @@
-(require './lib') ->
-  Server grep: ->
-
-

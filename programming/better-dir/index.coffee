@@ -1,3 +1,0 @@
-DirReader = require 'native-readdir'
-
-

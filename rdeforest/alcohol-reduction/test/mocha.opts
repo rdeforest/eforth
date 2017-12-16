@@ -1,3 +1,0 @@
---ui exports
---compilers coffee:coffee-script/register
---reporter dot

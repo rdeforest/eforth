@@ -1,4 +1,0 @@
-#!/usr/bin/env coffee
-
-process = require 'process'
-console.log process.argv
