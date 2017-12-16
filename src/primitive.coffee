@@ -2,7 +2,11 @@
   listToObject, defaultCode
   functionRegexp, readOnly
   extractFunctionDefinition
+  virtualFns
 } = require './unrelated'
+
+# In the forth world, 'CODE' means "here's some assembly to be added to the
+# dictionary."
 
 readOnly Primative, Symbol.species, Function
 
@@ -12,19 +16,63 @@ hasInit  = (klass) ->
 callInit = (klass, self, definition, rest) ->
   klass::init.call @, definition, rest...
 
-class Primitive         extends Function
+class Verb
+  # The constructor for instances of children of Verb.
+  # It should not be overriden.
+
+  constructor: (def, rest) ->
+    if Verb is klass = @constructor
+      throw new Error "Cannot instantiate abstract class 'Verb'."
+
+    @impl = defaultCode
+
+    name = null
+    for name, definition of def when name isnt null
+      throw 'definition must be a single-key object'
+
+    if 'function' is typeof definition
+      @impl = definition
+
+    ( while klass isnt Verb
+        currentKlass = klass
+        klass = klass.constructor
+        currentKlass
+    ) .reverse()
+      .filter  hasInit
+      .forEach (klass) -> callInit klass, @, definition, rest
+
+  # Define a descendant of Verb.
+  #
+  # @param def  name and implementation
+  # @param rest args to definition
+  # @returns    a function which constructs the class this was called on
+  @define: (def, rest...) ->
+    verb = new @ def, rest
+
+    Object.defineProperties verb,
+      name: value: name, configurable: true
+
+    verb
+
+  expand: (args...) -> @impl args...
+  invoke: (args...) -> @impl args...
+
   @comment: """
-    Derivatives of Primitive are DSL verbs and identifiers.
+    Verbs are DSL verbs and identifiers.
 
     I'm trying a couple of
     new things on this class:
 
-     - The constructor doesn't need to be called with 'new'.
+     - The 'new Klass' is called by Klass.verb
      - The constructor args must start with a single-key object.
       - The key is used as the 'name' of the instance
        - meaning of which is defined elsewhere
       - The value is used as the first arg to 'init' calls
       - The constructor calls class::init with the afore mentioned args
+
+    Verb.define creates children of Verb which
+     - are functions
+     - which create instances
     
     Example use:
       
@@ -34,12 +82,12 @@ class Primitive         extends Function
     The default verb behavior is to return {self: this, args}.
     Verbs definitions may override the default by starting with a function:
     
-        Primitive example: (args...) -> body...
+        PExample myPExample: ((args...) -> body...), more, args
 
     If the primitive class takes additional args the function has to be
     wrapped in parens and followed by a comma:
 
-        SpecializedPrimitive anotherExample: (
+        SpecializedVerb anotherExample: (
             (args...) -> body...
           ),
             [1..3].map doThreeThings
@@ -47,51 +95,24 @@ class Primitive         extends Function
             etc
   """
 
-  constructor: (def, rest...) ->
-    unless 'object' is typeof def and Object.keys(def).length is 1
-      throw 'definition must be a single-key object'
-
-    code = defaultCode
-
-    ( for name, definition of def
-        if 'function' is typeof definition
-          code = definition.toString()
-
-        {argNames, body} = extractFunctionDefinition code
-
-        super argNames..., body
-
-        klass = @constructor
-
-        while klass isnt Primitive
-          currentKlass = klass
-          klass = klass.constructor
-          currentKlass
-    ) .reverse()
-      .filter  hasInit
-      .forEach (klass) -> callInit klass, @, definition, rest
-
-    @constructor[@name] = @
-
 # Implements opcodes like LODSW and MOV
-class Opcode            extends Primitive
+class Opcode            extends Verb
   init: (@implementation) ->
 
-  exec: (machine, args...) ->
-    @implementation (
-      args.map (arg) ->
-        arg.exec machine
-    )
+  expand: -> @
 
 # A constant, register, reference, etc
 class OpArg             extends Opcode
 
 # An instruction with optional parameters
-class Operation         extends Primitive
+class Operation         extends Verb
   init: (@opcode, @args...) ->
 
+  exec: (machine) ->
+    @implementation @args.map (arg) -> arg.exec machine
+
 # A labeled collection of instructions
-class Code              extends Primitive
+class Code              extends Verb
   init: (definition, rest...) ->
     ops = [definition, rest...]
 
@@ -101,16 +122,14 @@ class Code              extends Primitive
       if op not instanceof Operation
         throw new Error "Code may only contain Operations"
 
-      @ops = @ops.concat op.expanded()
+      @ops = @ops.concat op.compile()
 
-  exec: (machine) ->
-
-  expanded: -> @
+  compile: -> @ops
 
 # Code which is injected
 # Maybe more like 'inline'?
 class Macro             extends Code
-  expanded: -> @ops
+  compile: -> @ops
 
 # Code associated with the dictionary?
 class Word              extends Code
@@ -137,6 +156,6 @@ class ConstantNumber    extends OpArg
 class DirectReference   extends ConstantNumber
 
 Object.assign exports, {
-  Primitive, Macro, Opcode, Register
+  Verb, Macro, Opcode, Register
   ConstantNumber, DirectReference
 }

@@ -2,16 +2,13 @@
   ConstantValue, DirectReference
 } = require './primitives'
 
-{ listToObject } = require './shared'
+{ listToObject } = require './unrelated'
 
 assembleWord = (ops) ->
   assembled = []
 
   ops.forEach (op, i, ops) ->
-    assembled = op.appendTo assembled
-
-    switch
-      when op instanceof Macro assembled = assembled.concat op
+    assembled = assembled.concat op.expand()
 
 module.exports.assemble = (namesAndCode) ->
   return listToObject (

@@ -1,6 +1,6 @@
 listToObject = (entries) -> Object.assign {}, entries...
 
-defaultCode = ((args...) -> {this: this, args}).toString()
+defaultCode = ((args...) -> {this: @, args}).toString()
 
 functionRegexp = ///
     ^ function \s*
@@ -30,8 +30,21 @@ extractFunctionDefinition = (fn) ->
 readOnly = (obj, nameOrSymbol, value) ->
   Object.defineProperty obj, nameOrSymbol, get: -> value
 
+virtualFns = (obj, nameAndExample) ->
+  if @ instanceof obj
+    sep = "::"
+  else
+    sep = "."
+
+  for name, example of nameAndExample
+    args = (extractFunctionDefinition example).join ", "
+    emsg = "Virtual function #{sep}#{name}(#{args}) not implemented on #{@constructor}"
+
+    obj[name] = -> throw new Error emsg
+
 Object.assign exports, {
   listToObject, defaultCode
   functionRegexp, readOnly
   extractFunctionDefinition
+  virtualFns
 }

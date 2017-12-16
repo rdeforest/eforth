@@ -28,4 +28,30 @@ various ways memory is accessed.
 Traditional I/O is the same as memory except that writing has real-world
 side-effects and the outside world can change the result of a read.
 
+# The plan
+
+## Use cases
+
+### Bootstrapping from source
+
+```sh
+    bin/create [options] path/to/workspace
+    path/to/workspace/bin/start
+```
+
+#### bin/create
+
+Options will be for overriding paths to definitions and libraries.
+
+#### $workspace/bin/start
+
+Starts or resumes a session.
+
+## Workspace layout
+
+- bin/start
+- lib/
+  - immutable base (VM, 31 primitives)
+- memory/
+  - files
 
