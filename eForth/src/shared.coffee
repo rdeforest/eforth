@@ -1,0 +1,3 @@
+listToObject = (entries) -> Object.assign {}, entries...
+
+Object.assing module.exports, { listToObject }
