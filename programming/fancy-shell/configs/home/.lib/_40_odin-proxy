@@ -1,9 +1,0 @@
-#!/bin/bash
-
-pidfile="$shEnvTmp/.tmp/odin-forwarder.pid"
-if [ -e "$pidFile" ] &&
-  ps -p $(cat "$pidFile") >& /dev/null; then
-  say "Odin forwarder is alive"
-else
-  ssh -L 2009:localhost:2009 dev -f -N
-fi
