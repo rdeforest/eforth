@@ -46,43 +46,44 @@ Opcode
 
 ###
 
-Code
-  $NEXT:  (machine) ->
-    machine.jump machine.register.SW.value
+module.exports = (machine) ->
+  Macro
+    $NEXT:  ->
+      machine.jump machine.register.SW.value
 
-Code
-  doList: (machine) ->
-    machine.push machine.stack.return, machine.register.IP
-    $NEXT machine
+  Code
+    doList: ->
+      machine.push machine.stack.return, machine.register.IP
+      $NEXT machine
 
-Word
-  exit:   XCHG    BP, SP
-          POP     SI
-          XCHG    BP, SP
-          $NEXT
+  Word
+    exit:   XCHG    BP, SP
+            POP     SI
+            XCHG    BP, SP
+            $NEXT
 
-Word
-  bye:    HALT
+  Word
+    bye:    HALT
 
-Word
-  "?RX":  GETCHAR
-          $NEXT
+  Word
+    "?RX":  GETCHAR
+            $NEXT
 
-Word
-  "TX!":  PUTCHAR
-          $NEXT
+  Word
+    "TX!":  PUTCHAR
+            $NEXT
 
-Word
-  "EXECUTE": POP BX
-             JMP BX
+  Word
+    "EXECUTE": POP BX
+               JMP BX
 
-Word
-  "doLIT": LODSW
-           PUSH AX
-           $NEXT
+  Word
+    "doLIT": LODSW
+             PUSH AX
+             $NEXT
 
-Word
-  next:   SUB 
-  
+  Word
+    next:   SUB 
+    
 
 # vim: sts=10
